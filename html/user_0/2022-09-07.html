@@ -1,0 +1,841 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>secure</h2>
+<h3>Title: Accelerating Polynomial Multiplication for Homomorphic Encryption on GPUs. (arXiv:2209.01290v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01290">http://arxiv.org/abs/2209.01290</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01290] Accelerating Polynomial Multiplication for Homomorphic Encryption on GPUs](http://arxiv.org/abs/2209.01290)</code></li>
+<li>Summary: <p>Homomorphic Encryption (HE) enables users to securely outsource both the
+storage and computation of sensitive data to untrusted servers. Not only does
+HE offer an attractive solution for security in cloud systems, but
+lattice-based HE systems are also believed to be resistant to attacks by
+quantum computers. However, current HE implementations suffer from
+prohibitively high latency. For lattice-based HE to become viable for
+real-world systems, it is necessary for the key bottlenecks - particularly
+polynomial multiplication - to be highly efficient.
+</p></li>
+</ul>
+
+<p>In this paper, we present a characterization of GPU-based implementations of
+polynomial multiplication. We begin with a survey of modular reduction
+techniques and analyze several variants of the widely-used Barrett modular
+reduction algorithm. We then propose a modular reduction variant optimized for
+64-bit integer words on the GPU, obtaining a 1.8x speedup over the existing
+comparable implementations. Next, we explore the following GPU-specific
+improvements for polynomial multiplication targeted at optimizing latency and
+throughput: 1) We present a 2D mixed-radix, multi-block implementation of NTT
+that results in a 1.85x average speedup over the previous state-of-the-art. 2)
+We explore shared memory optimizations aimed at reducing redundant memory
+accesses, further improving speedups by 1.2x. 3) Finally, we fuse the Hadamard
+product with neighboring stages of the NTT, reducing the twiddle factor memory
+footprint by 50%. By combining our NTT optimizations, we achieve an overall
+speedup of 123.13x and 2.37x over the previous state-of-the-art CPU and GPU
+implementations of NTT kernels, respectively.
+</p>
+
+<h2>security</h2>
+<h3>Title: Person Monitoring by Full Body Tracking in Uniform Crowd Environment. (arXiv:2209.01274v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01274">http://arxiv.org/abs/2209.01274</a></li>
+<li>Code URL: <a href="https://github.com/qiuyuezhibo/kandora-and-abaya-uniform-tracking-dataset">https://github.com/qiuyuezhibo/kandora-and-abaya-uniform-tracking-dataset</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01274] Person Monitoring by Full Body Tracking in Uniform Crowd Environment](http://arxiv.org/abs/2209.01274)</code></li>
+<li>Summary: <p>Full body trackers are utilized for surveillance and security purposes, such
+as person-tracking robots. In the Middle East, uniform crowd environments are
+the norm which challenges state-of-the-art trackers. Despite tremendous
+improvements in tracker technology documented in the past literature, these
+trackers have not been trained using a dataset that captures these
+environments. In this work, we develop an annotated dataset with one specific
+target per video in a uniform crowd environment. The dataset was generated in
+four different scenarios where mainly the target was moving alongside the
+crowd, sometimes occluding with them, and other times the camera's view of the
+target is blocked by the crowd for a short period. After the annotations, it
+was used in evaluating and fine-tuning a state-of-the-art tracker. Our results
+have shown that the fine-tuned tracker performed better on the evaluation
+dataset based on two quantitative evaluation metrics, compared to the initial
+pre-trained tracker.
+</p></li>
+</ul>
+
+<h3>Title: Security Best Practices: A Critical Analysis Using IoT as a Case Study. (arXiv:2209.01285v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01285">http://arxiv.org/abs/2209.01285</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01285] Security Best Practices: A Critical Analysis Using IoT as a Case Study](http://arxiv.org/abs/2209.01285)</code></li>
+<li>Summary: <p>Academic research has highlighted the failure of many Internet of Things
+(IoT) product manufacturers to follow accepted practices, while IoT security
+best practices have recently attracted considerable attention worldwide from
+industry and governments. Given current examples of security advice, confusion
+is evident from guidelines that conflate desired outcomes with security
+practices to achieve those outcomes. We explore a surprising lack of clarity,
+and void in the literature, on what (generically) best practice means,
+independent of identifying specific individual practices or highlighting
+failure to follow best practices. We consider categories of security advice,
+and analyze how they apply over the lifecycle of IoT devices. For concreteness
+in discussion, we use iterative inductive coding to code and systematically
+analyze a set of 1013 IoT security best practices, recommendations, and
+guidelines collated from industrial, government, and academic sources. Among
+our findings, of all analyzed items, 68% fail to meet our definition of an
+(actionable) practice, and 73% of all actionable advice relates to the software
+development lifecycle phase, highlighting the critical position of
+manufacturers and developers. We hope that our work provides a basis for the
+community to better understand best practices, identify and reach consensus on
+specific practices, and find ways to motivate relevant stakeholders to follow
+them.
+</p></li>
+</ul>
+
+<h3>Title: Don't CWEAT It: Toward CWE Analysis Techniques in Early Stages of Hardware Design. (arXiv:2209.01291v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01291">http://arxiv.org/abs/2209.01291</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01291] Don't CWEAT It: Toward CWE Analysis Techniques in Early Stages of Hardware Design](http://arxiv.org/abs/2209.01291)</code></li>
+<li>Summary: <p>To help prevent hardware security vulnerabilities from propagating to later
+design stages where fixes are costly, it is crucial to identify security
+concerns as early as possible, such as in RTL designs. In this work, we
+investigate the practical implications and feasibility of producing a set of
+security-specific scanners that operate on Verilog source files. The scanners
+indicate parts of code that might contain one of a set of MITRE's common
+weakness enumerations (CWEs). We explore the CWE database to characterize the
+scope and attributes of the CWEs and identify those that are amenable to static
+analysis. We prototype scanners and evaluate them on 11 open source designs - 4
+system-on-chips (SoC) and 7 processor cores - and explore the nature of
+identified weaknesses. Our analysis reported 53 potential weaknesses in the
+OpenPiton SoC used in Hack@DAC-21, 11 of which we confirmed as security
+concerns.
+</p></li>
+</ul>
+
+<h3>Title: Model-Free Deep Reinforcement Learning in Software-Defined Networks. (arXiv:2209.01490v1 [cs.AI])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01490">http://arxiv.org/abs/2209.01490</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01490] Model-Free Deep Reinforcement Learning in Software-Defined Networks](http://arxiv.org/abs/2209.01490)</code></li>
+<li>Summary: <p>This paper compares two deep reinforcement learning approaches for cyber
+security in software defined networking. Neural Episodic Control to Deep
+Q-Network has been implemented and compared with that of Double Deep
+Q-Networks. The two algorithms are implemented in a format similar to that of a
+zero-sum game. A two-tailed T-test analysis is done on the two game results
+containing the amount of turns taken for the defender to win. Another
+comparison is done on the game scores of the agents in the respective games.
+The analysis is done to determine which algorithm is the best in game performer
+and whether there is a significant difference between them, demonstrating if
+one would have greater preference over the other. It was found that there is no
+significant statistical difference between the two approaches.
+</p></li>
+</ul>
+
+<h2>privacy</h2>
+<h3>Title: Differential Privacy on Dynamic Data. (arXiv:2209.01387v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01387">http://arxiv.org/abs/2209.01387</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01387] Differential Privacy on Dynamic Data](http://arxiv.org/abs/2209.01387)</code></li>
+<li>Summary: <p>A fundamental problem in differential privacy is to release a privatized data
+structure over a dataset that can be used to answer a class of linear queries
+with small errors. This problem has been well studied in the static case. In
+this paper, we consider the dynamic setting where items may be inserted into or
+deleted from the dataset over time, and we need to continually release data
+structures so that queries can be answered at any time instance. We present
+black-box constructions of such dynamic differentially private mechanisms from
+static ones with only a polylogarithmic degradation in the utility. For the
+fully-dynamic case, this is the first such result. For the insertion-only case,
+similar constructions are known, but we improve them for sparse update streams.
+</p></li>
+</ul>
+
+<h3>Title: Age-Dependent Differential Privacy. (arXiv:2209.01466v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01466">http://arxiv.org/abs/2209.01466</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01466] Age-Dependent Differential Privacy](http://arxiv.org/abs/2209.01466)</code></li>
+<li>Summary: <p>The proliferation of real-time applications has motivated extensive research
+on analyzing and optimizing data freshness in the context of \textit{age of
+information}. However, classical frameworks of privacy (e.g., differential
+privacy (DP)) have overlooked the impact of data freshness on privacy
+guarantees, which may lead to unnecessary accuracy loss when trying to achieve
+meaningful privacy guarantees in time-varying databases. In this work, we
+introduce \textit{age-dependent DP}, taking into account the underlying
+stochastic nature of a time-varying database. In this new framework, we
+establish a connection between classical DP and age-dependent DP, based on
+which we characterize the impact of data staleness and temporal correlation on
+privacy guarantees. Our characterization demonstrates that \textit{aging},
+i.e., using stale data inputs and/or postponing the release of outputs, can be
+a new strategy to protect data privacy in addition to noise injection in the
+traditional DP framework. Furthermore, to generalize our results to a
+multi-query scenario, we present a sequential composition result for
+age-dependent DP under any publishing and aging policies. We then characterize
+the optimal tradeoffs between privacy risk and utility and show how this can be
+achieved. Finally, case studies show that to achieve a target of an arbitrarily
+small privacy risk in a single-query case, combing aging and noise injection
+only leads to a bounded accuracy loss, whereas using noise injection only (as
+in the benchmark case of DP) will lead to an unbounded accuracy loss.
+</p></li>
+</ul>
+
+<h3>Title: Randomized Privacy Budget Differential Privacy. (arXiv:2209.01468v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01468">http://arxiv.org/abs/2209.01468</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01468] Randomized Privacy Budget Differential Privacy](http://arxiv.org/abs/2209.01468)</code></li>
+<li>Summary: <p>While pursuing better utility by discovering knowledge from the data,
+individual's privacy may be compromised during an analysis. To that end,
+differential privacy has been widely recognized as the state-of-the-art privacy
+notion. By requiring the presence of any individual's data in the input to only
+marginally affect the distribution over the output, differential privacy
+provides strong protection against adversaries in possession of arbitrary
+background. However, the privacy constraints (e.g., the degree of
+randomization) imposed by differential privacy may render the released data
+less useful for analysis, the fundamental trade-off between privacy and utility
+(i.e., analysis accuracy) has attracted significant attention in various
+settings. In this report we present DP mechanisms with randomized parameters,
+i.e., randomized privacy budget, and formally analyze its privacy and utility
+and demonstrate that randomizing privacy budget in DP mechanisms will boost the
+accuracy in a humongous scale.
+</p></li>
+</ul>
+
+<h2>protect</h2>
+<h2>defense</h2>
+<h2>attack</h2>
+<h3>Title: Are Attribute Inference Attacks Just Imputation?. (arXiv:2209.01292v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01292">http://arxiv.org/abs/2209.01292</a></li>
+<li>Code URL: <a href="https://github.com/bargavj/EvaluatingDPML">https://github.com/bargavj/EvaluatingDPML</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01292] Are Attribute Inference Attacks Just Imputation?](http://arxiv.org/abs/2209.01292)</code></li>
+<li>Summary: <p>Models can expose sensitive information about their training data. In an
+attribute inference attack, an adversary has partial knowledge of some training
+records and access to a model trained on those records, and infers the unknown
+values of a sensitive feature of those records. We study a fine-grained variant
+of attribute inference we call \emph{sensitive value inference}, where the
+adversary's goal is to identify with high confidence some records from a
+candidate set where the unknown attribute has a particular sensitive value. We
+explicitly compare attribute inference with data imputation that captures the
+training distribution statistics, under various assumptions about the training
+data available to the adversary. Our main conclusions are: (1) previous
+attribute inference methods do not reveal more about the training data from the
+model than can be inferred by an adversary without access to the trained model,
+but with the same knowledge of the underlying distribution as needed to train
+the attribute inference attack; (2) black-box attribute inference attacks
+rarely learn anything that cannot be learned without the model; but (3)
+white-box attacks, which we introduce and evaluate in the paper, can reliably
+identify some records with the sensitive value attribute that would not be
+predicted without having access to the model. Furthermore, we show that
+proposed defenses such as differentially private training and removing
+vulnerable records from training do not mitigate this privacy risk. The code
+for our experiments is available at
+\url{https://github.com/bargavj/EvaluatingDPML}.
+</p></li>
+</ul>
+
+<h2>robust</h2>
+<h3>Title: Cross-Camera Deep Colorization. (arXiv:2209.01211v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01211">http://arxiv.org/abs/2209.01211</a></li>
+<li>Code URL: <a href="https://github.com/indigopurple/ccdc">https://github.com/indigopurple/ccdc</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01211] Cross-Camera Deep Colorization](http://arxiv.org/abs/2209.01211)</code></li>
+<li>Summary: <p>In this paper, we consider the color-plus-mono dual-camera system and propose
+an end-to-end convolutional neural network to align and fuse images from it in
+an efficient and cost-effective way. Our method takes cross-domain and
+cross-scale images as input, and consequently synthesizes HR colorization
+results to facilitate the trade-off between spatial-temporal resolution and
+color depth in the single-camera imaging system. In contrast to the previous
+colorization methods, ours can adapt to color and monochrome cameras with
+distinctive spatial-temporal resolutions, rendering the flexibility and
+robustness in practical applications. The key ingredient of our method is a
+cross-camera alignment module that generates multi-scale correspondences for
+cross-domain image alignment. Through extensive experiments on various datasets
+and multiple settings, we validate the flexibility and effectiveness of our
+approach. Remarkably, our method consistently achieves substantial
+improvements, i.e., around 10dB PSNR gain, upon the state-of-the-art methods.
+Code is at: https://github.com/IndigoPurple/CCDC
+</p></li>
+</ul>
+
+<h3>Title: Multimodal and Crossmodal AI for Smart Data Analysis. (arXiv:2209.01308v1 [cs.AI])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01308">http://arxiv.org/abs/2209.01308</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01308] Multimodal and Crossmodal AI for Smart Data Analysis](http://arxiv.org/abs/2209.01308)</code></li>
+<li>Summary: <p>Recently, the multimodal and crossmodal AI techniques have attracted the
+attention of communities. The former aims to collect disjointed and
+heterogeneous data to compensate for complementary information to enhance
+robust prediction. The latter targets to utilize one modality to predict
+another modality by discovering the common attention sharing between them.
+Although both approaches share the same target: generate smart data from
+collected raw data, the former demands more modalities while the latter aims to
+decrease the variety of modalities. This paper first discusses the role of
+multimodal and crossmodal AI in smart data analysis in general. Then, we
+introduce the multimodal and crossmodal AI framework (MMCRAI) to balance the
+abovementioned approaches and make it easy to scale into different domains.
+This framework is integrated into xDataPF (the cross-data platform
+https://www.xdata.nict.jp/). We also introduce and discuss various applications
+built on this framework and xDataPF.
+</p></li>
+</ul>
+
+<h3>Title: Towards Accurate Binary Neural Networks via Modeling Contextual Dependencies. (arXiv:2209.01404v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01404">http://arxiv.org/abs/2209.01404</a></li>
+<li>Code URL: <a href="https://github.com/sense-gvt/bcdnet">https://github.com/sense-gvt/bcdnet</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01404] Towards Accurate Binary Neural Networks via Modeling Contextual Dependencies](http://arxiv.org/abs/2209.01404)</code></li>
+<li>Summary: <p>Existing Binary Neural Networks (BNNs) mainly operate on local convolutions
+with binarization function. However, such simple bit operations lack the
+ability of modeling contextual dependencies, which is critical for learning
+discriminative deep representations in vision models. In this work, we tackle
+this issue by presenting new designs of binary neural modules, which enables
+BNNs to learn effective contextual dependencies. First, we propose a binary
+multi-layer perceptron (MLP) block as an alternative to binary convolution
+blocks to directly model contextual dependencies. Both short-range and
+long-range feature dependencies are modeled by binary MLPs, where the former
+provides local inductive bias and the latter breaks limited receptive field in
+binary convolutions. Second, to improve the robustness of binary models with
+contextual dependencies, we compute the contextual dynamic embeddings to
+determine the binarization thresholds in general binary convolutional blocks.
+Armed with our binary MLP blocks and improved binary convolution, we build the
+BNNs with explicit Contextual Dependency modeling, termed as BCDNet. On the
+standard ImageNet-1K classification benchmark, the BCDNet achieves 72.3% Top-1
+accuracy and outperforms leading binary methods by a large margin. In
+particular, the proposed BCDNet exceeds the state-of-the-art ReActNet-A by 2.9%
+Top-1 accuracy with similar operations. Our code is available at
+https://github.com/Sense-GVT/BCDN
+</p></li>
+</ul>
+
+<h3>Title: A comprehensive survey on recent deep learning-based methods applied to surgical data. (arXiv:2209.01435v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01435">http://arxiv.org/abs/2209.01435</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01435] A comprehensive survey on recent deep learning-based methods applied to surgical data](http://arxiv.org/abs/2209.01435)</code></li>
+<li>Summary: <p>Minimally invasive surgery is highly operator dependant with lengthy
+procedural times causing fatigue and risk to patients. In order to mitigate
+these risks, real-time systems can help assist surgeons to navigate and track
+tools, by providing clear understanding of scene and avoid miscalculations
+during operation. While several efforts have been made in this direction, a
+lack of diverse datasets, as well as very dynamic scenes and its variability in
+each patient entails major hurdle in accomplishing robust systems. In this
+work, we present a systematic review of recent machine learning-based
+approaches including surgical tool localisation, segmentation, tracking and 3D
+scene perception. Furthermore, we present current gaps and directions of these
+invented methods and provide rational behind clinical integration of these
+approaches.
+</p></li>
+</ul>
+
+<h3>Title: Neural Sign Reenactor: Deep Photorealistic Sign Language Retargeting. (arXiv:2209.01470v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01470">http://arxiv.org/abs/2209.01470</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01470] Neural Sign Reenactor: Deep Photorealistic Sign Language Retargeting](http://arxiv.org/abs/2209.01470)</code></li>
+<li>Summary: <p>In this paper, we introduce a neural rendering pipeline for transferring the
+facial expressions, head pose and body movements of one person in a source
+video to another in a target video. We apply our method to the challenging case
+of Sign Language videos: given a source video of a sign language user, we can
+faithfully transfer the performed manual (e.g. handshape, palm orientation,
+movement, location) and non-manual (e.g. eye gaze, facial expressions, head
+movements) signs to a target video in a photo-realistic manner. To effectively
+capture the aforementioned cues, which are crucial for sign language
+communication, we build upon an effective combination of the most robust and
+reliable deep learning methods for body, hand and face tracking that have been
+introduced lately. Using a 3D-aware representation, the estimated motions of
+the body parts are combined and retargeted to the target signer. They are then
+given as conditional input to our Video Rendering Network, which generates
+temporally consistent and photo-realistic videos. We conduct detailed
+qualitative and quantitative evaluations and comparisons, which demonstrate the
+effectiveness of our approach and its advantages over existing approaches. Our
+method yields promising results of unprecedented realism and can be used for
+Sign Language Anonymization. In addition, it can be readily applicable to
+reenactment of other types of full body activities (dancing, acting
+performance, exercising, etc.), as well as to the synthesis module of Sign
+Language Production systems.
+</p></li>
+</ul>
+
+<h3>Title: Meta-Learning with Less Forgetting on Large-Scale Non-Stationary Task Distributions. (arXiv:2209.01501v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01501">http://arxiv.org/abs/2209.01501</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01501] Meta-Learning with Less Forgetting on Large-Scale Non-Stationary Task Distributions](http://arxiv.org/abs/2209.01501)</code></li>
+<li>Summary: <p>The paradigm of machine intelligence moves from purely supervised learning to
+a more practical scenario when many loosely related unlabeled data are
+available and labeled data is scarce. Most existing algorithms assume that the
+underlying task distribution is stationary. Here we consider a more realistic
+and challenging setting in that task distributions evolve over time. We name
+this problem as Semi-supervised meta-learning with Evolving Task diStributions,
+abbreviated as SETS. Two key challenges arise in this more realistic setting:
+(i) how to use unlabeled data in the presence of a large amount of unlabeled
+out-of-distribution (OOD) data; and (ii) how to prevent catastrophic forgetting
+on previously learned task distributions due to the task distribution shift. We
+propose an OOD Robust and knowleDge presErved semi-supeRvised meta-learning
+approach (ORDER), to tackle these two major challenges. Specifically, our ORDER
+introduces a novel mutual information regularization to robustify the model
+with unlabeled OOD data and adopts an optimal transport regularization to
+remember previously learned knowledge in feature space. In addition, we test
+our method on a very challenging dataset: SETS on large-scale non-stationary
+semi-supervised task distributions consisting of (at least) 72K tasks. With
+extensive experiments, we demonstrate the proposed ORDER alleviates forgetting
+on evolving task distributions and is more robust to OOD data than related
+strong baselines.
+</p></li>
+</ul>
+
+<h3>Title: Data-Driven Deep Supervision for Skin Lesion Classification. (arXiv:2209.01527v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01527">http://arxiv.org/abs/2209.01527</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01527] Data-Driven Deep Supervision for Skin Lesion Classification](http://arxiv.org/abs/2209.01527)</code></li>
+<li>Summary: <p>Automatic classification of pigmented, non-pigmented, and depigmented
+non-melanocytic skin lesions have garnered lots of attention in recent years.
+However, imaging variations in skin texture, lesion shape, depigmentation
+contrast, lighting condition, etc. hinder robust feature extraction, affecting
+classification accuracy. In this paper, we propose a new deep neural network
+that exploits input data for robust feature extraction. Specifically, we
+analyze the convolutional network's behavior (field-of-view) to find the
+location of deep supervision for improved feature extraction. To achieve this,
+first, we perform activation mapping to generate an object mask, highlighting
+the input regions most critical for classification output generation. Then the
+network layer whose layer-wise effective receptive field matches the
+approximated object shape in the object mask is selected as our focus for deep
+supervision. Utilizing different types of convolutional feature extractors and
+classifiers on three melanoma detection datasets and two vitiligo detection
+datasets, we verify the effectiveness of our new method.
+</p></li>
+</ul>
+
+<h3>Title: Phishing URL Detection: A Network-based Approach Robust to Evasion. (arXiv:2209.01454v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01454">http://arxiv.org/abs/2209.01454</a></li>
+<li>Code URL: <a href="https://github.com/taerikkk/bpe">https://github.com/taerikkk/bpe</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01454] Phishing URL Detection: A Network-based Approach Robust to Evasion](http://arxiv.org/abs/2209.01454)</code></li>
+<li>Summary: <p>Many cyberattacks start with disseminating phishing URLs. When clicking these
+phishing URLs, the victim's private information is leaked to the attacker.
+There have been proposed several machine learning methods to detect phishing
+URLs. However, it still remains under-explored to detect phishing URLs with
+evasion, i.e., phishing URLs that pretend to be benign by manipulating
+patterns. In many cases, the attacker i) reuses prepared phishing web pages
+because making a completely brand-new set costs non-trivial expenses, ii)
+prefers hosting companies that do not require private information and are
+cheaper than others, iii) prefers shared hosting for cost efficiency, and iv)
+sometimes uses benign domains, IP addresses, and URL string patterns to evade
+existing detection methods. Inspired by those behavioral characteristics, we
+present a network-based inference method to accurately detect phishing URLs
+camouflaged with legitimate patterns, i.e., robust to evasion. In the network
+approach, a phishing URL will be still identified as phishy even after evasion
+unless a majority of its neighbors in the network are evaded at the same time.
+Our method consistently shows better detection performance throughout various
+experimental tests than state-of-the-art methods, e.g., F-1 of 0.89 for our
+method vs. 0.84 for the best feature-based method.
+</p></li>
+</ul>
+
+<h3>Title: Better Peer Grading through Bayesian Inference. (arXiv:2209.01242v1 [cs.AI])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01242">http://arxiv.org/abs/2209.01242</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01242] Better Peer Grading through Bayesian Inference](http://arxiv.org/abs/2209.01242)</code></li>
+<li>Summary: <p>Peer grading systems aggregate noisy reports from multiple students to
+approximate a true grade as closely as possible. Most current systems either
+take the mean or median of reported grades; others aim to estimate students'
+grading accuracy under a probabilistic model. This paper extends the state of
+the art in the latter approach in three key ways: (1) recognizing that students
+can behave strategically (e.g., reporting grades close to the class average
+without doing the work); (2) appropriately handling censored data that arises
+from discrete-valued grading rubrics; and (3) using mixed integer programming
+to improve the interpretability of the grades assigned to students. We show how
+to make Bayesian inference practical in this model and evaluate our approach on
+both synthetic and real-world data obtained by using our implemented system in
+four large classes. These extensive experiments show that grade aggregation
+using our model accurately estimates true grades, students' likelihood of
+submitting uninformative grades, and the variation in their inherent grading
+error; we also characterize our models' robustness.
+</p></li>
+</ul>
+
+<h3>Title: Noise-Robust Bidirectional Learning with Dynamic Sample Reweighting. (arXiv:2209.01334v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01334">http://arxiv.org/abs/2209.01334</a></li>
+<li>Code URL: <a href="https://github.com/chenchenzong/bldr">https://github.com/chenchenzong/bldr</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01334] Noise-Robust Bidirectional Learning with Dynamic Sample Reweighting](http://arxiv.org/abs/2209.01334)</code></li>
+<li>Summary: <p>Deep neural networks trained with standard cross-entropy loss are more prone
+to memorize noisy labels, which degrades their performance. Negative learning
+using complementary labels is more robust when noisy labels intervene but with
+an extremely slow model convergence speed. In this paper, we first introduce a
+bidirectional learning scheme, where positive learning ensures convergence
+speed while negative learning robustly copes with label noise. Further, a
+dynamic sample reweighting strategy is proposed to globally weaken the effect
+of noise-labeled samples by exploiting the excellent discriminatory ability of
+negative learning on the sample probability distribution. In addition, we
+combine self-distillation to further improve the model performance. The code is
+available at \url{https://github.com/chenchenzong/BLDR}.
+</p></li>
+</ul>
+
+<h3>Title: A Scalable Data-Driven Technique for Joint Evacuation Routing and Scheduling Problems. (arXiv:2209.01535v1 [cs.AI])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01535">http://arxiv.org/abs/2209.01535</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01535] A Scalable Data-Driven Technique for Joint Evacuation Routing and Scheduling Problems](http://arxiv.org/abs/2209.01535)</code></li>
+<li>Summary: <p>Evacuation planning is a crucial part of disaster management where the goal
+is to relocate people to safety and minimize casualties. Every evacuation plan
+has two essential components: routing and scheduling. However, joint
+optimization of these two components with objectives such as minimizing average
+evacuation time or evacuation completion time, is a computationally hard
+problem. To approach it, we present MIP-LNS, a scalable optimization method
+that combines heuristic search with mathematical optimization and can optimize
+a variety of objective functions. We use real-world road network and population
+data from Harris County in Houston, Texas, and apply MIP-LNS to find evacuation
+routes and schedule for the area. We show that, within a given time limit, our
+proposed method finds better solutions than existing methods in terms of
+average evacuation time, evacuation completion time and optimality guarantee of
+the solutions. We perform agent-based simulations of evacuation in our study
+area to demonstrate the efficacy and robustness of our solution. We show that
+our prescribed evacuation plan remains effective even if the evacuees deviate
+from the suggested schedule upto a certain extent. We also examine how
+evacuation plans are affected by road failures. Our results show that MIP-LNS
+can use information regarding estimated deadline of roads to come up with
+better evacuation plans in terms evacuating more people successfully and
+conveniently.
+</p></li>
+</ul>
+
+<h2>biometric</h2>
+<h2>steal</h2>
+<h2>extraction</h2>
+<h3>Title: TogetherNet: Bridging Image Restoration and Object Detection Together via Dynamic Enhancement Learning. (arXiv:2209.01373v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01373">http://arxiv.org/abs/2209.01373</a></li>
+<li>Code URL: <a href="https://github.com/yz-wang/togethernet">https://github.com/yz-wang/togethernet</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01373] TogetherNet: Bridging Image Restoration and Object Detection Together via Dynamic Enhancement Learning](http://arxiv.org/abs/2209.01373)</code></li>
+<li>Summary: <p>Adverse weather conditions such as haze, rain, and snow often impair the
+quality of captured images, causing detection networks trained on normal images
+to generalize poorly in these scenarios. In this paper, we raise an intriguing
+question - if the combination of image restoration and object detection, can
+boost the performance of cutting-edge detectors in adverse weather conditions.
+To answer it, we propose an effective yet unified detection paradigm that
+bridges these two subtasks together via dynamic enhancement learning to discern
+objects in adverse weather conditions, called TogetherNet. Different from
+existing efforts that intuitively apply image dehazing/deraining as a
+pre-processing step, TogetherNet considers a multi-task joint learning problem.
+Following the joint learning scheme, clean features produced by the restoration
+network can be shared to learn better object detection in the detection
+network, thus helping TogetherNet enhance the detection capacity in adverse
+weather conditions. Besides the joint learning architecture, we design a new
+Dynamic Transformer Feature Enhancement module to improve the feature
+extraction and representation capabilities of TogetherNet. Extensive
+experiments on both synthetic and real-world datasets demonstrate that our
+TogetherNet outperforms the state-of-the-art detection approaches by a large
+margin both quantitatively and qualitatively. Source code is available at
+https://github.com/yz-wang/TogetherNet.
+</p></li>
+</ul>
+
+<h3>Title: A Variational Approach for Joint Image Recovery and Features Extraction Based on Spatially Varying Generalised Gaussian Models. (arXiv:2209.01375v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01375">http://arxiv.org/abs/2209.01375</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01375] A Variational Approach for Joint Image Recovery and Features Extraction Based on Spatially Varying Generalised Gaussian Models](http://arxiv.org/abs/2209.01375)</code></li>
+<li>Summary: <p>The joint problem of reconstruction / feature extraction is a challenging
+task in image processing. It consists in performing, in a joint manner, the
+restoration of an image and the extraction of its features. In this work, we
+firstly propose a novel nonsmooth and nonconvex variational formulation of the
+problem. For this purpose, we introduce a versatile generalised Gaussian prior
+whose parameters, including its exponent, are space-variant. Secondly, we
+design an alternating proximal-based optimisation algorithm that efficiently
+exploits the structure of the proposed nonconvex objective function. We also
+analyze the convergence of this algorithm. As shown in numerical experiments
+conducted on joint segmentation/deblurring tasks, the proposed method provides
+high-quality results.
+</p></li>
+</ul>
+
+<h3>Title: Vision Transformers and YoloV5 based Driver Drowsiness Detection Framework. (arXiv:2209.01401v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01401">http://arxiv.org/abs/2209.01401</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01401] Vision Transformers and YoloV5 based Driver Drowsiness Detection Framework](http://arxiv.org/abs/2209.01401)</code></li>
+<li>Summary: <p>Human drivers have distinct driving techniques, knowledge, and sentiments due
+to unique driving traits. Driver drowsiness has been a serious issue
+endangering road safety; therefore, it is essential to design an effective
+drowsiness detection algorithm to bypass road accidents. Miscellaneous research
+efforts have been approached the problem of detecting anomalous human driver
+behaviour to examine the frontal face of the driver and automobile dynamics via
+computer vision techniques. Still, the conventional methods cannot capture
+complicated driver behaviour features. However, with the origin of deep
+learning architectures, a substantial amount of research has also been executed
+to analyze and recognize driver's drowsiness using neural network algorithms.
+This paper introduces a novel framework based on vision transformers and YoloV5
+architectures for driver drowsiness recognition. A custom YoloV5 pre-trained
+architecture is proposed for face extraction with the aim of extracting Region
+of Interest (ROI). Owing to the limitations of previous architectures, this
+paper introduces vision transformers for binary image classification which is
+trained and validated on a public dataset UTA-RLDD. The model had achieved
+96.2\% and 97.4\% as it's training and validation accuracies respectively. For
+the further evaluation, proposed framework is tested on a custom dataset of 39
+participants in various light circumstances and achieved 95.5\% accuracy. The
+conducted experimentations revealed the significant potential of our framework
+for practical applications in smart transportation systems.
+</p></li>
+</ul>
+
+<h3>Title: STAD: Self-Training with Ambiguous Data for Low-Resource Relation Extraction. (arXiv:2209.01431v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01431">http://arxiv.org/abs/2209.01431</a></li>
+<li>Code URL: <a href="https://github.com/jjyunlp/stad">https://github.com/jjyunlp/stad</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01431] STAD: Self-Training with Ambiguous Data for Low-Resource Relation Extraction](http://arxiv.org/abs/2209.01431)</code></li>
+<li>Summary: <p>We present a simple yet effective self-training approach, named as STAD, for
+low-resource relation extraction. The approach first classifies the
+auto-annotated instances into two groups: confident instances and uncertain
+instances, according to the probabilities predicted by a teacher model. In
+contrast to most previous studies, which mainly only use the confident
+instances for self-training, we make use of the uncertain instances. To this
+end, we propose a method to identify ambiguous but useful instances from the
+uncertain instances and then divide the relations into candidate-label set and
+negative-label set for each ambiguous instance. Next, we propose a set-negative
+training method on the negative-label sets for the ambiguous instances and a
+positive training method for the confident instances. Finally, a joint-training
+method is proposed to build the final relation extraction system on all data.
+Experimental results on two widely used datasets SemEval2010 Task-8 and
+Re-TACRED with low-resource settings demonstrate that this new self-training
+approach indeed achieves significant and consistent improvements when comparing
+to several competitive self-training systems. Code is publicly available at
+https://github.com/jjyunlp/STAD
+</p></li>
+</ul>
+
+<h2>membership infer</h2>
+<h2>federate</h2>
+<h3>Title: Federated XGBoost on Sample-Wise Non-IID Data. (arXiv:2209.01340v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01340">http://arxiv.org/abs/2209.01340</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01340] Federated XGBoost on Sample-Wise Non-IID Data](http://arxiv.org/abs/2209.01340)</code></li>
+<li>Summary: <p>Federated Learning (FL) is a paradigm for jointly training machine learning
+algorithms in a decentralized manner which allows for parties to communicate
+with an aggregator to create and train a model, without exposing the underlying
+raw data distribution of the local parties involved in the training process.
+Most research in FL has been focused on Neural Network-based approaches,
+however Tree-Based methods, such as XGBoost, have been underexplored in
+Federated Learning due to the challenges in overcoming the iterative and
+additive characteristics of the algorithm. Decision tree-based models, in
+particular XGBoost, can handle non-IID data, which is significant for
+algorithms used in Federated Learning frameworks since the underlying
+characteristics of the data are decentralized and have risks of being non-IID
+by nature. In this paper, we focus on investigating the effects of how
+Federated XGBoost is impacted by non-IID distributions by performing
+experiments on various sample size-based data skew scenarios and how these
+models perform under various non-IID scenarios. We conduct a set of extensive
+experiments across multiple different datasets and different data skew
+partitions. Our experimental results demonstrate that despite the various
+partition ratios, the performance of the models stayed consistent and performed
+close to or equally well against models that were trained in a centralized
+manner.
+</p></li>
+</ul>
+
+<h3>Title: FedAR+: A Federated Learning Approach to Appliance Recognition with Mislabeled Data in Residential Buildings. (arXiv:2209.01338v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01338">http://arxiv.org/abs/2209.01338</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01338] FedAR+: A Federated Learning Approach to Appliance Recognition with Mislabeled Data in Residential Buildings](http://arxiv.org/abs/2209.01338)</code></li>
+<li>Summary: <p>With the enhancement of people's living standards and rapid growth of
+communication technologies, residential environments are becoming smart and
+well-connected, increasing overall energy consumption substantially. As
+household appliances are the primary energy consumers, their recognition
+becomes crucial to avoid unattended usage, thereby conserving energy and making
+smart environments more sustainable. An appliance recognition model is
+traditionally trained at a central server (service provider) by collecting
+electricity consumption data, recorded via smart plugs, from the clients
+(consumers), causing a privacy breach. Besides that, the data are susceptible
+to noisy labels that may appear when an appliance gets connected to a
+non-designated smart plug. While addressing these issues jointly, we propose a
+novel federated learning approach to appliance recognition, called FedAR+,
+enabling decentralized model training across clients in a privacy preserving
+way even with mislabeled training data. FedAR+ introduces an adaptive noise
+handling method, essentially a joint loss function incorporating weights and
+label distribution, to empower the appliance recognition model against noisy
+labels. By deploying smart plugs in an apartment complex, we collect a labeled
+dataset that, along with two existing datasets, are utilized to evaluate the
+performance of FedAR+. Experimental results show that our approach can
+effectively handle up to $30\%$ concentration of noisy labels while
+outperforming the prior solutions by a large margin on accuracy.
+</p></li>
+</ul>
+
+<h3>Title: Suppressing Noise from Built Environment Datasets to Reduce Communication Rounds for Convergence of Federated Learning. (arXiv:2209.01417v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01417">http://arxiv.org/abs/2209.01417</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01417] Suppressing Noise from Built Environment Datasets to Reduce Communication Rounds for Convergence of Federated Learning](http://arxiv.org/abs/2209.01417)</code></li>
+<li>Summary: <p>Smart sensing provides an easier and convenient data-driven mechanism for
+monitoring and control in the built environment. Data generated in the built
+environment are privacy sensitive and limited. Federated learning is an
+emerging paradigm that provides privacy-preserving collaboration among multiple
+participants for model training without sharing private and limited data. The
+noisy labels in the datasets of the participants degrade the performance and
+increase the number of communication rounds for convergence of federated
+learning. Such large communication rounds require more time and energy to train
+the model. In this paper, we propose a federated learning approach to suppress
+the unequal distribution of the noisy labels in the dataset of each
+participant. The approach first estimates the noise ratio of the dataset for
+each participant and normalizes the noise ratio using the server dataset. The
+proposed approach can handle bias in the server dataset and minimizes its
+impact on the participants' dataset. Next, we calculate the optimal weighted
+contributions of the participants using the normalized noise ratio and
+influence of each participant. We further derive the expression to estimate the
+number of communication rounds required for the convergence of the proposed
+approach. Finally, experimental results demonstrate the effectiveness of the
+proposed approach over existing techniques in terms of the communication rounds
+and achieved performance in the built environment.
+</p></li>
+</ul>
+
+<h2>fair</h2>
+<h3>Title: Exploiting Fairness to Enhance Sensitive Attributes Reconstruction. (arXiv:2209.01215v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01215">http://arxiv.org/abs/2209.01215</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01215] Exploiting Fairness to Enhance Sensitive Attributes Reconstruction](http://arxiv.org/abs/2209.01215)</code></li>
+<li>Summary: <p>In recent years, a growing body of work has emerged on how to learn machine
+learning models under fairness constraints, often expressed with respect to
+some sensitive attributes. In this work, we consider the setting in which an
+adversary has black-box access to a target model and show that information
+about this model's fairness can be exploited by the adversary to enhance his
+reconstruction of the sensitive attributes of the training data. More
+precisely, we propose a generic reconstruction correction method, which takes
+as input an initial guess made by the adversary and corrects it to comply with
+some user-defined constraints (such as the fairness information) while
+minimizing the changes in the adversary's guess. The proposed method is
+agnostic to the type of target model, the fairness-aware learning method as
+well as the auxiliary knowledge of the adversary. To assess the applicability
+of our approach, we have conducted a thorough experimental evaluation on two
+state-of-the-art fair learning methods, using four different fairness metrics
+with a wide range of tolerances and with three datasets of diverse sizes and
+sensitive attributes. The experimental results demonstrate the effectiveness of
+the proposed approach to improve the reconstruction of the sensitive attributes
+of the training set.
+</p></li>
+</ul>
+
+<h2>interpretability</h2>
+<h3>Title: Interpretable Fake News Detection with Topic and Deep Variational Models. (arXiv:2209.01536v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01536">http://arxiv.org/abs/2209.01536</a></li>
+<li>Code URL: <a href="https://github.com/marjan-hosseini/ldavae">https://github.com/marjan-hosseini/ldavae</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01536] Interpretable Fake News Detection with Topic and Deep Variational Models](http://arxiv.org/abs/2209.01536)</code></li>
+<li>Summary: <p>The growing societal dependence on social media and user generated content
+for news and information has increased the influence of unreliable sources and
+fake content, which muddles public discourse and lessens trust in the media.
+Validating the credibility of such information is a difficult task that is
+susceptible to confirmation bias, leading to the development of algorithmic
+techniques to distinguish between fake and real news. However, most existing
+methods are challenging to interpret, making it difficult to establish trust in
+predictions, and make assumptions that are unrealistic in many real-world
+scenarios, e.g., the availability of audiovisual features or provenance. In
+this work, we focus on fake news detection of textual content using
+interpretable features and methods. In particular, we have developed a deep
+probabilistic model that integrates a dense representation of textual news
+using a variational autoencoder and bi-directional Long Short-Term Memory
+(LSTM) networks with semantic topic-related features inferred from a Bayesian
+admixture model. Extensive experimental studies with 3 real-world datasets
+demonstrate that our model achieves comparable performance to state-of-the-art
+competing models while facilitating model interpretability from the learned
+topics. Finally, we have conducted model ablation studies to justify the
+effectiveness and accuracy of integrating neural embeddings and topic features
+both quantitatively by evaluating performance and qualitatively through
+separability in lower dimensional embeddings.
+</p></li>
+</ul>
+
+<h3>Title: Deep Stable Representation Learning on Electronic Health Records. (arXiv:2209.01321v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01321">http://arxiv.org/abs/2209.01321</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01321] Deep Stable Representation Learning on Electronic Health Records](http://arxiv.org/abs/2209.01321)</code></li>
+<li>Summary: <p>Deep learning models have achieved promising disease prediction performance
+of the Electronic Health Records (EHR) of patients. However, most models
+developed under the I.I.D. hypothesis fail to consider the agnostic
+distribution shifts, diminishing the generalization ability of deep learning
+models to Out-Of-Distribution (OOD) data. In this setting, spurious statistical
+correlations that may change in different environments will be exploited, which
+can cause sub-optimal performances of deep learning models. The unstable
+correlation between procedures and diagnoses existed in the training
+distribution can cause spurious correlation between historical EHR and future
+diagnosis. To address this problem, we propose to use a causal representation
+learning method called Causal Healthcare Embedding (CHE). CHE aims at
+eliminating the spurious statistical relationship by removing the dependencies
+between diagnoses and procedures. We introduce the Hilbert-Schmidt Independence
+Criterion (HSIC) to measure the degree of independence between the embedded
+diagnosis and procedure features. Based on causal view analyses, we perform the
+sample weighting technique to get rid of such spurious relationship for the
+stable learning of EHR across different environments. Moreover, our proposed
+CHE method can be used as a flexible plug-and-play module that can enhance
+existing deep learning models on EHR. Extensive experiments on two public
+datasets and five state-of-the-art baselines unequivocally show that CHE can
+improve the prediction accuracy of deep learning models on out-of-distribution
+data by a large margin. In addition, the interpretability study shows that CHE
+could successfully leverage causal structures to reflect a more reasonable
+contribution of historical records for predictions.
+</p></li>
+</ul>
+
+<h3>Title: Learning the Dynamics of Particle-based Systems with Lagrangian Graph Neural Networks. (arXiv:2209.01476v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01476">http://arxiv.org/abs/2209.01476</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01476] Learning the Dynamics of Particle-based Systems with Lagrangian Graph Neural Networks](http://arxiv.org/abs/2209.01476)</code></li>
+<li>Summary: <p>Physical systems are commonly represented as a combination of particles, the
+individual dynamics of which govern the system dynamics. However, traditional
+approaches require the knowledge of several abstract quantities such as the
+energy or force to infer the dynamics of these particles. Here, we present a
+framework, namely, Lagrangian graph neural network (LGnn), that provides a
+strong inductive bias to learn the Lagrangian of a particle-based system
+directly from the trajectory. We test our approach on challenging systems with
+constraints and drag -- LGnn outperforms baselines such as feed-forward
+Lagrangian neural network (Lnn) with improved performance. We also show the
+zero-shot generalizability of the system by simulating systems two orders of
+magnitude larger than the trained one and also hybrid systems that are unseen
+by the model, a unique feature. The graph architecture of LGnn significantly
+simplifies the learning in comparison to Lnn with ~25 times better performance
+on ~20 times smaller amounts of data. Finally, we show the interpretability of
+LGnn, which directly provides physical insights on drag and constraint forces
+learned by the model. LGnn can thus provide a fillip toward understanding the
+dynamics of physical systems purely from observable quantities.
+</p></li>
+</ul>
+
+<h3>Title: Learning Differential Operators for Interpretable Time Series Modeling. (arXiv:2209.01491v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2209.01491">http://arxiv.org/abs/2209.01491</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2209.01491] Learning Differential Operators for Interpretable Time Series Modeling](http://arxiv.org/abs/2209.01491)</code></li>
+<li>Summary: <p>Modeling sequential patterns from data is at the core of various time series
+forecasting tasks. Deep learning models have greatly outperformed many
+traditional models, but these black-box models generally lack explainability in
+prediction and decision making. To reveal the underlying trend with
+understandable mathematical expressions, scientists and economists tend to use
+partial differential equations (PDEs) to explain the highly nonlinear dynamics
+of sequential patterns. However, it usually requires domain expert knowledge
+and a series of simplified assumptions, which is not always practical and can
+deviate from the ever-changing world. Is it possible to learn the differential
+relations from data dynamically to explain the time-evolving dynamics? In this
+work, we propose an learning framework that can automatically obtain
+interpretable PDE models from sequential data. Particularly, this framework is
+comprised of learnable differential blocks, named $P$-blocks, which is proved
+to be able to approximate any time-evolving complex continuous functions in
+theory. Moreover, to capture the dynamics shift, this framework introduces a
+meta-learning controller to dynamically optimize the hyper-parameters of a
+hybrid PDE model. Extensive experiments on times series forecasting of
+financial, engineering, and health data show that our model can provide
+valuable interpretability and achieve comparable performance to
+state-of-the-art models. From empirical studies, we find that learning a few
+differential operators may capture the major trend of sequential dynamics
+without massive computational complexity.
+</p></li>
+</ul>
+
+<h2>exlainability</h2>
+<h2>watermark</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>

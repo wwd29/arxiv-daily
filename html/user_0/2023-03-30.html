@@ -1,0 +1,1685 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>secure</h2>
+<h3>Title: ACFA: Secure Runtime Auditing &amp; Guaranteed Device Healing via Active Control Flow Attestation. (arXiv:2303.16282v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16282">http://arxiv.org/abs/2303.16282</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16282] ACFA: Secure Runtime Auditing &amp; Guaranteed Device Healing via Active Control Flow Attestation](http://arxiv.org/abs/2303.16282) #secure</code></li>
+<li>Summary: <p>Low-end embedded devices are increasingly used in various smart applications
+and spaces. They are implemented under strict cost and energy budgets, using
+microcontroller units (MCUs) that lack security features available in
+general-purpose processors. In this context, Remote Attestation (RA) was
+proposed as an inexpensive security service to enable a verifier (Vrf) to
+remotely detect illegal modifications to a software binary installed on a
+low-end prover MCU (Prv). Since attacks that hijack the software's control flow
+can evade RA, Control Flow Attestation (CFA) augments RA with information about
+the exact order in which instructions in the binary are executed, enabling
+detection of control flow attacks. We observe that current CFA architectures
+can not guarantee that Vrf ever receives control flow reports in case of
+attacks. In turn, while they support exploit detection, they provide no means
+to pinpoint the exploit origin. Furthermore, existing CFA requires either
+binary instrumentation, incurring significant runtime overhead and code size
+increase, or relatively expensive hardware support, such as hash engines. In
+addition, current techniques are neither continuous (only meant to attest
+self-contained operations) nor active (offer no secure means to remotely
+remediate detected compromises). To jointly address these challenges, we
+propose ACFA: a hybrid (hardware/software) architecture for Active CFA. ACFA
+enables continuous monitoring of all control flow transfers in the MCU and does
+not require binary instrumentation. It also leverages the recently proposed
+concept of Active Roots-of-Trust to enable secure auditing of vulnerability
+sources and guaranteed remediation when a compromise is detected. We provide an
+open-source reference implementation of ACFA on top of a commodity low-end MCU
+(TI MSP430) and evaluate it to demonstrate its security and cost-effectiveness.
+</p></li>
+</ul>
+
+<h3>Title: Remote attestation of SEV-SNP confidential VMs using e-vTPMs. (arXiv:2303.16463v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16463">http://arxiv.org/abs/2303.16463</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16463] Remote attestation of SEV-SNP confidential VMs using e-vTPMs](http://arxiv.org/abs/2303.16463) #secure</code></li>
+<li>Summary: <p>Departing from "your data is safe with us" model where the cloud
+infrastructure is trusted, cloud tenants are shifting towards a model in which
+the cloud provider is not part of the trust domain. Both silicon and cloud
+vendors are trying to address this shift by introducing confidential computing</li>
+<li>an umbrella term that provides mechanisms for protecting the data in-use
+through encryption below the hardware boundary of the CPU, e.g., Intel Software
+Guard Extensions (SGX), AMD secure encrypted virtualization (SEV), Intel trust
+domain extensions (TDX), etc.
+</p></li>
+</ul>
+
+<p>In this work, we design and implement a virtual trusted platform module
+(vTPM) that virtualizes the hardware root-of-trust without requiring to trust
+the cloud provider. To ensure the security of a vTPM in a provider-controlled
+environment, we leverage unique isolation properties of the SEV-SNP hardware
+and a novel approach to ephemeral TPM state management. Specifically, we
+develop a stateless ephemeral vTPM that supports remote attestation without
+persistent state. This allows us to pair each confidential VM with a private
+instance of a vTPM that is completely isolated from the provider-controlled
+environment and other VMs. We built our prototype entirely on open-source
+components - Qemu, Linux, and Keylime. Though our work is AMD-specific, a
+similar approach could be used to build remote attestation protocol on other
+trusted execution environments (TEE).
+</p>
+
+<h2>security</h2>
+<h3>Title: Building a Knowledge Graph of Distributed Ledger Technologies. (arXiv:2303.16528v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16528">http://arxiv.org/abs/2303.16528</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16528] Building a Knowledge Graph of Distributed Ledger Technologies](http://arxiv.org/abs/2303.16528) #security</code></li>
+<li>Summary: <p>Distributed ledger systems have become more prominent and successful in
+recent years, with a focus on blockchains and cryptocurrency. This has led to
+various misunderstandings about both the technology itself and its
+capabilities, as in many cases blockchain and cryptocurrency is used
+synonymously and other applications are often overlooked. Therefore, as a
+whole, the view of distributed ledger technology beyond blockchains and
+cryptocurrencies is very limited. Existing vocabularies and ontologies often
+focus on single aspects of the technology, or in some cases even just on one
+product. This potentially leads to other types of distributed ledgers and their
+possible use cases being neglected. In this paper, we present a knowledge graph
+and an ontology for distributed ledger technologies, which includes security
+considerations to model aspects such as threats and vulnerabilities,
+application domains, as well as relevant standards and regulations. Such a
+knowledge graph improves the overall understanding of distributed ledgers,
+reveals their strengths, and supports the work of security personnel, i.e.
+analysts and system architects. We discuss potential uses and follow semantic
+web best practices to evaluate and publish the ontology and knowledge graph.
+</p></li>
+</ul>
+
+<h3>Title: FineIBT: Fine-grain Control-flow Enforcement with Indirect Branch Tracking. (arXiv:2303.16353v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16353">http://arxiv.org/abs/2303.16353</a></li>
+<li>Code URL: <a href="https://gitlab.com/brown-ssl/fineibt">https://gitlab.com/brown-ssl/fineibt</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16353] FineIBT: Fine-grain Control-flow Enforcement with Indirect Branch Tracking](http://arxiv.org/abs/2303.16353) #security</code></li>
+<li>Summary: <p>We present the design, implementation, and evaluation of FineIBT: a CFI
+enforcement mechanism that improves the precision of hardware-assisted CFI
+solutions, like Intel IBT and ARM BTI, by instrumenting program code to reduce
+the valid/allowed targets of indirect forward-edge transfers. We study the
+design of FineIBT on the x86-64 architecture, and implement and evaluate it on
+Linux and the LLVM toolchain. We designed FineIBT's instrumentation to be
+compact, and incur low runtime and memory overheads, and generic, so as to
+support a plethora of different CFI policies. Our prototype implementation
+incurs negligible runtime slowdowns ($\approx$0%-1.94% in SPEC CPU2017 and
+$\approx$0%-1.92% in real-world applications) outperforming Clang-CFI. Lastly,
+we investigate the effectiveness/security and compatibility of FineIBT using
+the ConFIRM CFI benchmarking suite, demonstrating that our nimble
+instrumentation provides complete coverage in the presence of modern software
+features, while supporting a wide range of CFI policies (coarse- vs. fine- vs.
+finer-grain) with the same, predictable performance.
+</p></li>
+</ul>
+
+<h3>Title: Cyber Security aboard Micro Aerial Vehicles: An OpenTitan-based Visual Communication Use Case. (arXiv:2303.16554v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16554">http://arxiv.org/abs/2303.16554</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16554] Cyber Security aboard Micro Aerial Vehicles: An OpenTitan-based Visual Communication Use Case](http://arxiv.org/abs/2303.16554) #security</code></li>
+<li>Summary: <p>Autonomous Micro Aerial Vehicles (MAVs), with a form factor of 10cm in
+diameter, are an emerging technology thanks to the broad applicability enabled
+by their onboard intelligence. However, these platforms are strongly limited in
+the onboard power envelope for processing, i.e., less than a few hundred mW,
+which confines the onboard processors to the class of simple microcontroller
+units (MCUs). These MCUs lack advanced security features opening the way to a
+wide range of cyber security vulnerabilities, from the communication between
+agents of the same fleet to the onboard execution of malicious code. This work
+presents an open source System on Chip (SoC) design that integrates a 64 bit
+Linux capable host processor accelerated by an 8 core 32 bit parallel
+programmable accelerator. The heterogeneous system architecture is coupled with
+a security enclave based on an open source OpenTitan root of trust. To
+demonstrate our design, we propose a use case where OpenTitan detects a
+security breach on the SoC aboard the MAV and drives its exclusive GPIOs to
+start a LED blinking routine. This procedure embodies an unconventional visual
+communication between two palm sized MAVs: the receiver MAV classifies the LED
+state of the sender (on or off) with an onboard convolutional neural network
+running on the parallel accelerator. Then, it reconstructs a high-level message
+in 1.3s, 2.3 times faster than current commercial solutions.
+</p></li>
+</ul>
+
+<h3>Title: Exploring placement of intrusion detection systems in rpl-based internet of things. (arXiv:2303.16561v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16561">http://arxiv.org/abs/2303.16561</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16561] Exploring placement of intrusion detection systems in rpl-based internet of things](http://arxiv.org/abs/2303.16561) #security</code></li>
+<li>Summary: <p>Intrusion detection is an indispensable part of RPL security due to its
+nature opening to attacks from insider attackers. While there are a good deal
+of studies that analyze different types of attack and propose intrusion
+detection systems based on various techniques that are proposed in the
+literature, how to place such intrusion detection systems on RPL topology is
+not investigated. This is the main contribution of this study, and three
+intrusion detection architectures based on central and distributed placement of
+intrusion detection nodes are analyzed rigorously against different types of
+attacks and attackers at various locations in the RPL topology and evaluated
+from different aspects including their effectiveness, cost, and security.
+</p></li>
+</ul>
+
+<h3>Title: Model Checking Access Control Policies: A Case Study using Google Cloud IAM. (arXiv:2303.16688v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16688">http://arxiv.org/abs/2303.16688</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16688] Model Checking Access Control Policies: A Case Study using Google Cloud IAM](http://arxiv.org/abs/2303.16688) #security</code></li>
+<li>Summary: <p>Authoring access control policies is challenging and prone to
+misconfigurations. Access control policies must be conflict-free. Hence,
+administrators should identify discrepancies between policy specifications and
+their intended function to avoid violating security principles. This paper aims
+to demonstrate how to formally verify access control policies. Model checking
+is used to verify access control properties against policies supported by an
+access control model. The authors consider Google's Cloud Identity and Access
+Management (IAM) as a case study and follow NIST's guidelines to verify access
+control policies automatically. Automated verification using model checking can
+serve as a valuable tool and assist administrators in assessing the correctness
+of access control policies. This enables checking violations against security
+principles and performing security assessments of policies for compliance
+purposes. The authors demonstrate how to define Google's IAM underlying
+role-based access control (RBAC) model, specify its supported policies, and
+formally verify a set of properties through three examples.
+</p></li>
+</ul>
+
+<h3>Title: Graph Neural Networks for Hardware Vulnerability Analysis -- Can you Trust your GNN?. (arXiv:2303.16690v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16690">http://arxiv.org/abs/2303.16690</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16690] Graph Neural Networks for Hardware Vulnerability Analysis -- Can you Trust your GNN?](http://arxiv.org/abs/2303.16690) #security</code></li>
+<li>Summary: <p>The participation of third-party entities in the globalized semiconductor
+supply chain introduces potential security vulnerabilities, such as
+intellectual property piracy and hardware Trojan (HT) insertion. Graph neural
+networks (GNNs) have been employed to address various hardware security
+threats, owing to their superior performance on graph-structured data, such as
+circuits. However, GNNs are also susceptible to attacks. This work examines the
+use of GNNs for detecting hardware threats like HTs and their vulnerability to
+attacks. We present BadGNN, a backdoor attack on GNNs that can hide HTs and
+evade detection with a 100% success rate through minor circuit perturbations.
+Our findings highlight the need for further investigation into the security and
+robustness of GNNs before they can be safely used in security-critical
+applications.
+</p></li>
+</ul>
+
+<h2>privacy</h2>
+<h3>Title: Facial recognition technology can expose political orientation from facial images even when controlling for demographics and self-presentation. (arXiv:2303.16343v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16343">http://arxiv.org/abs/2303.16343</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16343] Facial recognition technology can expose political orientation from facial images even when controlling for demographics and self-presentation](http://arxiv.org/abs/2303.16343) #privacy</code></li>
+<li>Summary: <p>A facial recognition algorithm was used to extract face descriptors from
+carefully standardized images of 591 neutral faces taken in the laboratory
+setting. Face descriptors were entered into a cross-validated linear regression
+to predict participants' scores on a political orientation scale (Cronbach's
+alpha=.94) while controlling for age, gender, and ethnicity. The model's
+performance exceeded r=.20: much better than that of human raters and on par
+with how well job interviews predict job success, alcohol drives
+aggressiveness, or psychological therapy improves mental health. Moreover, the
+model derived from standardized images performed well (r=.12) in a sample of
+naturalistic images of 3,401 politicians from the U.S., UK, and Canada,
+suggesting that the associations between facial appearance and political
+orientation generalize beyond our sample. The analysis of facial features
+associated with political orientation revealed that conservatives had larger
+lower faces, although political orientation was only weakly associated with
+body mass index (BMI). The predictability of political orientation from
+standardized images has critical implications for privacy, regulation of facial
+recognition technology, as well as the understanding the origins and
+consequences of political orientation.
+</p></li>
+</ul>
+
+<h3>Title: The Need for Inherently Privacy-Preserving Vision in Trustworthy Autonomous Systems. (arXiv:2303.16408v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16408">http://arxiv.org/abs/2303.16408</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16408] The Need for Inherently Privacy-Preserving Vision in Trustworthy Autonomous Systems](http://arxiv.org/abs/2303.16408) #privacy</code></li>
+<li>Summary: <p>Vision is a popular and effective sensor for robotics from which we can
+derive rich information about the environment: the geometry and semantics of
+the scene, as well as the age, gender, identity, activity and even emotional
+state of humans within that scene. This raises important questions about the
+reach, lifespan, and potential misuse of this information. This paper is a call
+to action to consider privacy in the context of robotic vision. We propose a
+specific form privacy preservation in which no images are captured or could be
+reconstructed by an attacker even with full remote access. We present a set of
+principles by which such systems can be designed, and through a case study in
+localisation demonstrate in simulation a specific implementation that delivers
+an important robotic capability in an inherently privacy-preserving manner.
+This is a first step, and we hope to inspire future works that expand the range
+of applications open to sighted robotic systems.
+</p></li>
+</ul>
+
+<h3>Title: LLM for Patient-Trial Matching: Privacy-Aware Data Augmentation Towards Better Performance and Generalizability. (arXiv:2303.16756v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16756">http://arxiv.org/abs/2303.16756</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16756] LLM for Patient-Trial Matching: Privacy-Aware Data Augmentation Towards Better Performance and Generalizability](http://arxiv.org/abs/2303.16756) #privacy</code></li>
+<li>Summary: <p>The process of matching patients with suitable clinical trials is essential
+for advancing medical research and providing optimal care. However, current
+approaches face challenges such as data standardization, ethical
+considerations, and a lack of interoperability between Electronic Health
+Records (EHRs) and clinical trial criteria. In this paper, we explore the
+potential of large language models (LLMs) to address these challenges by
+leveraging their advanced natural language generation capabilities to improve
+compatibility between EHRs and clinical trial descriptions. We propose an
+innovative privacy-aware data augmentation approach for LLM-based patient-trial
+matching (LLM-PTM), which balances the benefits of LLMs while ensuring the
+security and confidentiality of sensitive patient data. Our experiments
+demonstrate a 7.32% average improvement in performance using the proposed
+LLM-PTM method, and the generalizability to new data is improved by 12.12%.
+Additionally, we present case studies to further illustrate the effectiveness
+of our approach and provide a deeper understanding of its underlying
+principles.
+</p></li>
+</ul>
+
+<h3>Title: Non-Asymptotic Lower Bounds For Training Data Reconstruction. (arXiv:2303.16372v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16372">http://arxiv.org/abs/2303.16372</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16372] Non-Asymptotic Lower Bounds For Training Data Reconstruction](http://arxiv.org/abs/2303.16372) #privacy</code></li>
+<li>Summary: <p>We investigate semantic guarantees of private learning algorithms for their
+resilience to training Data Reconstruction Attacks (DRAs) by informed
+adversaries. To this end, we derive non-asymptotic minimax lower bounds on the
+adversary's reconstruction error against learners that satisfy differential
+privacy (DP) and metric differential privacy (mDP). Furthermore, we demonstrate
+that our lower bound analysis for the latter also covers the high dimensional
+regime, wherein, the input data dimensionality may be larger than the
+adversary's query budget. Motivated by the theoretical improvements conferred
+by metric DP, we extend the privacy analysis of popular deep learning
+algorithms such as DP-SGD and Projected Noisy SGD to cover the broader notion
+of metric differential privacy.
+</p></li>
+</ul>
+
+<h3>Title: Visual Content Privacy Protection: A Survey. (arXiv:2303.16552v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16552">http://arxiv.org/abs/2303.16552</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16552] Visual Content Privacy Protection: A Survey](http://arxiv.org/abs/2303.16552) #privacy</code></li>
+<li>Summary: <p>Vision is the most important sense for people, and it is also one of the main
+ways of cognition. As a result, people tend to utilize visual content to
+capture and share their life experiences, which greatly facilitates the
+transfer of information. Meanwhile, it also increases the risk of privacy
+violations, e.g., an image or video can reveal different kinds of
+privacy-sensitive information. Researchers have been working continuously to
+develop targeted privacy protection solutions, and there are several surveys to
+summarize them from certain perspectives. However, these surveys are either
+problem-driven, scenario-specific, or technology-specific, making it difficult
+for them to summarize the existing solutions in a macroscopic way. In this
+survey, a framework that encompasses various concerns and solutions for visual
+privacy is proposed, which allows for a macro understanding of privacy concerns
+from a comprehensive level. It is based on the fact that privacy concerns have
+corresponding adversaries, and divides privacy protection into three
+categories, based on computer vision (CV) adversary, based on human vision (HV)
+adversary, and based on CV \&amp; HV adversary. For each category, we analyze the
+characteristics of the main approaches to privacy protection, and then
+systematically review representative solutions. Open challenges and future
+directions for visual privacy protection are also discussed.
+</p></li>
+</ul>
+
+<h3>Title: TraVaG: Differentially Private Trace Variant Generation Using GANs. (arXiv:2303.16704v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16704">http://arxiv.org/abs/2303.16704</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16704] TraVaG: Differentially Private Trace Variant Generation Using GANs](http://arxiv.org/abs/2303.16704) #privacy</code></li>
+<li>Summary: <p>Process mining is rapidly growing in the industry. Consequently, privacy
+concerns regarding sensitive and private information included in event data,
+used by process mining algorithms, are becoming increasingly relevant.
+State-of-the-art research mainly focuses on providing privacy guarantees, e.g.,
+differential privacy, for trace variants that are used by the main process
+mining techniques, e.g., process discovery. However, privacy preservation
+techniques for releasing trace variants still do not fulfill all the
+requirements of industry-scale usage. Moreover, providing privacy guarantees
+when there exists a high rate of infrequent trace variants is still a
+challenge. In this paper, we introduce TraVaG as a new approach for releasing
+differentially private trace variants based on \text{Generative Adversarial
+Networks} (GANs) that provides industry-scale benefits and enhances the level
+of privacy guarantees when there exists a high ratio of infrequent variants.
+Moreover, TraVaG overcomes shortcomings of conventional privacy preservation
+techniques such as bounding the length of variants and introducing fake
+variants. Experimental results on real-life event data show that our approach
+outperforms state-of-the-art techniques in terms of privacy guarantees, plain
+data utility preservation, and result utility preservation.
+</p></li>
+</ul>
+
+<h2>protect</h2>
+<h3>Title: Exploring celebrity influence on public attitude towards the COVID-19 pandemic: social media shared sentiment analysis. (arXiv:2303.16759v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16759">http://arxiv.org/abs/2303.16759</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16759] Exploring celebrity influence on public attitude towards the COVID-19 pandemic: social media shared sentiment analysis](http://arxiv.org/abs/2303.16759) #protect</code></li>
+<li>Summary: <p>The COVID-19 pandemic has introduced new opportunities for health
+communication, including an increase in the public use of online outlets for
+health-related emotions. People have turned to social media networks to share
+sentiments related to the impacts of the COVID-19 pandemic. In this paper we
+examine the role of social messaging shared by Persons in the Public Eye (i.e.
+athletes, politicians, news personnel) in determining overall public discourse
+direction. We harvested approximately 13 million tweets ranging from 1 January
+2020 to 1 March 2022. The sentiment was calculated for each tweet using a
+fine-tuned DistilRoBERTa model, which was used to compare COVID-19
+vaccine-related Twitter posts (tweets) that co-occurred with mentions of People
+in the Public Eye. Our findings suggest the presence of consistent patterns of
+emotional content co-occurring with messaging shared by Persons in the Public
+Eye for the first two years of the COVID-19 pandemic influenced public opinion
+and largely stimulated online public discourse. We demonstrate that as the
+pandemic progressed, public sentiment shared on social networks was shaped by
+risk perceptions, political ideologies and health-protective behaviours shared
+by Persons in the Public Eye, often in a negative light.
+</p></li>
+</ul>
+
+<h2>defense</h2>
+<h3>Title: Quantitative Measurement of Cyber Resilience: Modeling and Experimentation. (arXiv:2303.16307v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16307">http://arxiv.org/abs/2303.16307</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16307] Quantitative Measurement of Cyber Resilience: Modeling and Experimentation](http://arxiv.org/abs/2303.16307) #defense</code></li>
+<li>Summary: <p>Cyber resilience is the ability of a system to resist and recover from a
+cyber attack, thereby restoring the system's functionality. Effective design
+and development of a cyber resilient system requires experimental methods and
+tools for quantitative measuring of cyber resilience. This paper describes an
+experimental method and test bed for obtaining resilience-relevant data as a
+system (in our case -- a truck) traverses its route, in repeatable, systematic
+experiments. We model a truck equipped with an autonomous cyber-defense system
+and which also includes inherent physical resilience features. When attacked by
+malware, this ensemble of cyber-physical features (i.e., "bonware") strives to
+resist and recover from the performance degradation caused by the malware's
+attack. We propose parsimonious mathematical models to aid in quantifying
+systems' resilience to cyber attacks. Using the models, we identify
+quantitative characteristics obtainable from experimental data, and show that
+these characteristics can serve as useful quantitative measures of cyber
+resilience.
+</p></li>
+</ul>
+
+<h2>attack</h2>
+<h3>Title: A Pilot Study of Query-Free Adversarial Attack against Stable Diffusion. (arXiv:2303.16378v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16378">http://arxiv.org/abs/2303.16378</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16378] A Pilot Study of Query-Free Adversarial Attack against Stable Diffusion](http://arxiv.org/abs/2303.16378) #attack</code></li>
+<li>Summary: <p>Despite the record-breaking performance in Text-to-Image (T2I) generation by
+Stable Diffusion, less research attention is paid to its adversarial
+robustness. In this work, we study the problem of adversarial attack generation
+for Stable Diffusion and ask if an adversarial text prompt can be obtained even
+in the absence of end-to-end model queries. We call the resulting problem
+'query-free attack generation'. To resolve this problem, we show that the
+vulnerability of T2I models is rooted in the lack of robustness of text
+encoders, e.g., the CLIP text encoder used for attacking Stable Diffusion.
+Based on such insight, we propose both untargeted and targeted query-free
+attacks, where the former is built on the most influential dimensions in the
+text embedding space, which we call steerable key dimensions. By leveraging the
+proposed attacks, we empirically show that only a five-character perturbation
+to the text prompt is able to cause the significant content shift of
+synthesized images using Stable Diffusion. Moreover, we show that the proposed
+target attack can precisely steer the diffusion model to scrub the targeted
+image content without causing much change in untargeted image content.
+</p></li>
+</ul>
+
+<h3>Title: Assessing the Impact of Mobile Attackers on RPL-based Internet of Things. (arXiv:2303.16499v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16499">http://arxiv.org/abs/2303.16499</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16499] Assessing the Impact of Mobile Attackers on RPL-based Internet of Things](http://arxiv.org/abs/2303.16499) #attack</code></li>
+<li>Summary: <p>The Internet of Things (IoT) is becoming ubiquitous in our daily life. IoT
+networks that are made up of devices low power, low memory, and low computing
+capability appears in many applications such as healthcare, home, agriculture.
+IPv6 Routing Protocol for Low Power and Lossy Network (RPL) has become a
+standardized routing protocol for such low-power and lossy networks in IoT. RPL
+establishes the best routes between devices according to the requirements of
+the application, which is achieved by the Objective Function (OF). Even though
+some security mechanisms are defined for external attackers in its RFC, RPL is
+vulnerable to attacks coming from inside. Moreover, the same attacks could has
+different impacts on networks with different OFs. Therefore, an analysis of
+such attacks becomes important in order to develop suitable security solutions
+for RPL. This study analyze RPL-specific attacks on networks using RPL's
+default OFs, namely Objective Function Zero (OF0) and the Minimum Rank with
+Hysteresis Objective Function (MRHOF). Moreover, mobile attackers could affect
+more nodes in a network due to their mobility. While the security solutions
+proposed in the literature assume that the network is static, this study takes
+into account mobile attackers.
+</p></li>
+</ul>
+
+<h3>Title: Targeted Adversarial Attacks on Wind Power Forecasts. (arXiv:2303.16633v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16633">http://arxiv.org/abs/2303.16633</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16633] Targeted Adversarial Attacks on Wind Power Forecasts](http://arxiv.org/abs/2303.16633) #attack</code></li>
+<li>Summary: <p>In recent years, researchers proposed a variety of deep learning models for
+wind power forecasting. These models predict the wind power generation of wind
+farms or entire regions more accurately than traditional machine learning
+algorithms or physical models. However, latest research has shown that deep
+learning models can often be manipulated by adversarial attacks. Since wind
+power forecasts are essential for the stability of modern power systems, it is
+important to protect them from this threat. In this work, we investigate the
+vulnerability of two different forecasting models to targeted, semitargeted,
+and untargeted adversarial attacks. We consider a Long Short-Term Memory (LSTM)
+network for predicting the power generation of a wind farm and a Convolutional
+Neural Network (CNN) for forecasting the wind power generation throughout
+Germany. Moreover, we propose the Total Adversarial Robustness Score (TARS), an
+evaluation metric for quantifying the robustness of regression models to
+targeted and semi-targeted adversarial attacks. It assesses the impact of
+attacks on the model's performance, as well as the extent to which the
+attacker's goal was achieved, by assigning a score between 0 (very vulnerable)
+and 1 (very robust). In our experiments, the LSTM forecasting model was fairly
+robust and achieved a TARS value of over 0.81 for all adversarial attacks
+investigated. The CNN forecasting model only achieved TARS values below 0.06
+when trained ordinarily, and was thus very vulnerable. Yet, its robustness
+could be significantly improved by adversarial training, which always resulted
+in a TARS above 0.46.
+</p></li>
+</ul>
+
+<h2>robust</h2>
+<h3>Title: Data Efficient Contrastive Learning in Histopatholgy using Active Sampling. (arXiv:2303.16247v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16247">http://arxiv.org/abs/2303.16247</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16247] Data Efficient Contrastive Learning in Histopatholgy using Active Sampling](http://arxiv.org/abs/2303.16247) #robust</code></li>
+<li>Summary: <p>Deep Learning based diagnostics systems can provide accurate and robust
+quantitative analysis in digital pathology. Training these algorithms requires
+large amounts of annotated data which is impractical in pathology due to the
+high resolution of histopathological images. Hence, self-supervised methods
+have been proposed to learn features using ad-hoc pretext tasks. The
+self-supervised training process is time consuming and often leads to subpar
+feature representation due to a lack of constrain on the learnt feature space,
+particularly prominent under data imbalance. In this work, we propose to
+actively sample the training set using a handful of labels and a small proxy
+network, decreasing sample requirement by 93% and training time by 99%.
+</p></li>
+</ul>
+
+<h3>Title: CryoFormer: Continuous Reconstruction of 3D Structures from Cryo-EM Data using Transformer-based Neural Representations. (arXiv:2303.16254v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16254">http://arxiv.org/abs/2303.16254</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16254] CryoFormer: Continuous Reconstruction of 3D Structures from Cryo-EM Data using Transformer-based Neural Representations](http://arxiv.org/abs/2303.16254) #robust</code></li>
+<li>Summary: <p>High-resolution heterogeneous reconstruction of 3D structures of proteins and
+other biomolecules using cryo-electron microscopy (cryo-EM) is essential for
+understanding fundamental processes of life. However, it is still challenging
+to reconstruct the continuous motions of 3D structures from hundreds of
+thousands of noisy and randomly oriented 2D cryo-EM images. Existing methods
+based on coordinate-based neural networks show compelling results to model
+continuous conformations of 3D structures in the Fourier domain, but they
+suffer from a limited ability to model local flexible regions and lack
+interpretability. We propose a novel approach, cryoFormer, that utilizes a
+transformer-based network architecture for continuous heterogeneous cryo-EM
+reconstruction. We for the first time directly reconstruct continuous
+conformations of 3D structures using an implicit feature volume in the 3D
+spatial domain. A novel deformation transformer decoder further improves
+reconstruction quality and, more importantly, locates and robustly tackles
+flexible 3D regions caused by conformations. In experiments, our method
+outperforms current approaches on three public datasets (1 synthetic and 2
+experimental) and a new synthetic dataset of PEDV spike protein. The code and
+new synthetic dataset will be released for better reproducibility of our
+results. Project page: https://cryoformer.github.io.
+</p></li>
+</ul>
+
+<h3>Title: Domain Adaptive Semantic Segmentation by Optimal Transport. (arXiv:2303.16435v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16435">http://arxiv.org/abs/2303.16435</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16435] Domain Adaptive Semantic Segmentation by Optimal Transport](http://arxiv.org/abs/2303.16435) #robust</code></li>
+<li>Summary: <p>Scene segmentation is widely used in the field of autonomous driving for
+environment perception, and semantic scene segmentation (3S) has received a
+great deal of attention due to the richness of the semantic information it
+contains. It aims to assign labels to pixels in an image, thus enabling
+automatic image labeling. Current approaches are mainly based on convolutional
+neural networks (CNN), but they rely on a large number of labels. Therefore,
+how to use a small size of labeled data to achieve semantic segmentation
+becomes more and more important. In this paper, we propose a domain adaptation
+(DA) framework based on optimal transport (OT) and attention mechanism to
+address this issue. Concretely, first we generate the output space via CNN due
+to its superiority of feature representation. Second, we utilize OT to achieve
+a more robust alignment of source and target domains in output space, where the
+OT plan defines a well attention mechanism to improve the adaptation of the
+model. In particular, with OT, the number of network parameters has been
+reduced and the network has been better interpretable. Third, to better
+describe the multi-scale property of features, we construct a multi-scale
+segmentation network to perform domain adaptation. Finally, in order to verify
+the performance of our proposed method, we conduct experimental comparison with
+three benchmark and four SOTA methods on three scene datasets, and the mean
+intersection-over-union (mIOU) has been significant improved, and visualization
+results under multiple domain adaptation scenarios also show that our proposed
+method has better performance than compared semantic segmentation methods.
+</p></li>
+</ul>
+
+<h3>Title: Multi-View Azimuth Stereo via Tangent Space Consistency. (arXiv:2303.16447v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16447">http://arxiv.org/abs/2303.16447</a></li>
+<li>Code URL: <a href="https://github.com/xucao-42/mvas">https://github.com/xucao-42/mvas</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16447] Multi-View Azimuth Stereo via Tangent Space Consistency](http://arxiv.org/abs/2303.16447) #robust</code></li>
+<li>Summary: <p>We present a method for 3D reconstruction only using calibrated multi-view
+surface azimuth maps. Our method, multi-view azimuth stereo, is effective for
+textureless or specular surfaces, which are difficult for conventional
+multi-view stereo methods. We introduce the concept of tangent space
+consistency: Multi-view azimuth observations of a surface point should be
+lifted to the same tangent space. Leveraging this consistency, we recover the
+shape by optimizing a neural implicit surface representation. Our method
+harnesses the robust azimuth estimation capabilities of photometric stereo
+methods or polarization imaging while bypassing potentially complex zenith
+angle estimation. Experiments using azimuth maps from various sources validate
+the accurate shape recovery with our method, even without zenith angles.
+</p></li>
+</ul>
+
+<h3>Title: Visibility Aware Human-Object Interaction Tracking from Single RGB Camera. (arXiv:2303.16479v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16479">http://arxiv.org/abs/2303.16479</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16479] Visibility Aware Human-Object Interaction Tracking from Single RGB Camera](http://arxiv.org/abs/2303.16479) #robust</code></li>
+<li>Summary: <p>Capturing the interactions between humans and their environment in 3D is
+important for many applications in robotics, graphics, and vision. Recent works
+to reconstruct the 3D human and object from a single RGB image do not have
+consistent relative translation across frames because they assume a fixed
+depth. Moreover, their performance drops significantly when the object is
+occluded. In this work, we propose a novel method to track the 3D human,
+object, contacts between them, and their relative translation across frames
+from a single RGB camera, while being robust to heavy occlusions. Our method is
+built on two key insights. First, we condition our neural field reconstructions
+for human and object on per-frame SMPL model estimates obtained by pre-fitting
+SMPL to a video sequence. This improves neural reconstruction accuracy and
+produces coherent relative translation across frames. Second, human and object
+motion from visible frames provides valuable information to infer the occluded
+object. We propose a novel transformer-based neural network that explicitly
+uses object visibility and human motion to leverage neighbouring frames to make
+predictions for the occluded frames. Building on these insights, our method is
+able to track both human and object robustly even under occlusions. Experiments
+on two datasets show that our method significantly improves over the
+state-of-the-art methods. Our code and pretrained models are available at:
+https://virtualhumans.mpi-inf.mpg.de/VisTracker
+</p></li>
+</ul>
+
+<h3>Title: AnyFlow: Arbitrary Scale Optical Flow with Implicit Neural Representation. (arXiv:2303.16493v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16493">http://arxiv.org/abs/2303.16493</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16493] AnyFlow: Arbitrary Scale Optical Flow with Implicit Neural Representation](http://arxiv.org/abs/2303.16493) #robust</code></li>
+<li>Summary: <p>To apply optical flow in practice, it is often necessary to resize the input
+to smaller dimensions in order to reduce computational costs. However,
+downsizing inputs makes the estimation more challenging because objects and
+motion ranges become smaller. Even though recent approaches have demonstrated
+high-quality flow estimation, they tend to fail to accurately model small
+objects and precise boundaries when the input resolution is lowered,
+restricting their applicability to high-resolution inputs. In this paper, we
+introduce AnyFlow, a robust network that estimates accurate flow from images of
+various resolutions. By representing optical flow as a continuous
+coordinate-based representation, AnyFlow generates outputs at arbitrary scales
+from low-resolution inputs, demonstrating superior performance over prior works
+in capturing tiny objects with detail preservation on a wide range of scenes.
+We establish a new state-of-the-art performance of cross-dataset generalization
+on the KITTI dataset, while achieving comparable accuracy on the online
+benchmarks to other SOTA methods.
+</p></li>
+</ul>
+
+<h3>Title: AVFormer: Injecting Vision into Frozen Speech Models for Zero-Shot AV-ASR. (arXiv:2303.16501v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16501">http://arxiv.org/abs/2303.16501</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16501] AVFormer: Injecting Vision into Frozen Speech Models for Zero-Shot AV-ASR](http://arxiv.org/abs/2303.16501) #robust</code></li>
+<li>Summary: <p>Audiovisual automatic speech recognition (AV-ASR) aims to improve the
+robustness of a speech recognition system by incorporating visual information.
+Training fully supervised multimodal models for this task from scratch, however
+is limited by the need for large labelled audiovisual datasets (in each
+downstream domain of interest). We present AVFormer, a simple method for
+augmenting audio-only models with visual information, at the same time
+performing lightweight domain adaptation. We do this by (i) injecting visual
+embeddings into a frozen ASR model using lightweight trainable adaptors. We
+show that these can be trained on a small amount of weakly labelled video data
+with minimum additional training time and parameters. (ii) We also introduce a
+simple curriculum scheme during training which we show is crucial to enable the
+model to jointly process audio and visual information effectively; and finally
+(iii) we show that our model achieves state of the art zero-shot results on
+three different AV-ASR benchmarks (How2, VisSpeech and Ego4D), while also
+crucially preserving decent performance on traditional audio-only speech
+recognition benchmarks (LibriSpeech). Qualitative results show that our model
+effectively leverages visual information for robust speech recognition.
+</p></li>
+</ul>
+
+<h3>Title: HybridPoint: Point Cloud Registration Based on Hybrid Point Sampling and Matching. (arXiv:2303.16526v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16526">http://arxiv.org/abs/2303.16526</a></li>
+<li>Code URL: <a href="https://github.com/liyih/hybridpoint">https://github.com/liyih/hybridpoint</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16526] HybridPoint: Point Cloud Registration Based on Hybrid Point Sampling and Matching](http://arxiv.org/abs/2303.16526) #robust</code></li>
+<li>Summary: <p>Patch-to-point matching has become a robust way of point cloud registration.
+However, previous patch-matching methods employ superpoints with poor
+localization precision as nodes, which may lead to ambiguous patch partitions.
+In this paper, we propose a HybridPoint-based network to find more robust and
+accurate correspondences. Firstly, we propose to use salient points with
+prominent local features as nodes to increase patch repeatability, and
+introduce some uniformly distributed points to complete the point cloud, thus
+constituting hybrid points. Hybrid points not only have better localization
+precision but also give a complete picture of the whole point cloud.
+Furthermore, based on the characteristic of hybrid points, we propose a
+dual-classes patch matching module, which leverages the matching results of
+salient points and filters the matching noise of non-salient points.
+Experiments show that our model achieves state-of-the-art performance on
+3DMatch, 3DLoMatch, and KITTI odometry, especially with 93.0% Registration
+Recall on the 3DMatch dataset. Our code and models are available at
+https://github.com/liyih/HybridPoint.
+</p></li>
+</ul>
+
+<h3>Title: Robust Tumor Detection from Coarse Annotations via Multi-Magnification Ensembles. (arXiv:2303.16533v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16533">http://arxiv.org/abs/2303.16533</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16533] Robust Tumor Detection from Coarse Annotations via Multi-Magnification Ensembles](http://arxiv.org/abs/2303.16533) #robust</code></li>
+<li>Summary: <p>Cancer detection and classification from gigapixel whole slide images of
+stained tissue specimens has recently experienced enormous progress in
+computational histopathology. The limitation of available pixel-wise annotated
+scans shifted the focus from tumor localization to global slide-level
+classification on the basis of (weakly-supervised) multiple-instance learning
+despite the clinical importance of local cancer detection. However, the worse
+performance of these techniques in comparison to fully supervised methods has
+limited their usage until now for diagnostic interventions in domains of
+life-threatening diseases such as cancer. In this work, we put the focus back
+on tumor localization in form of a patch-level classification task and take up
+the setting of so-called coarse annotations, which provide greater training
+supervision while remaining feasible from a clinical standpoint. To this end,
+we present a novel ensemble method that not only significantly improves the
+detection accuracy of metastasis on the open CAMELYON16 data set of sentinel
+lymph nodes of breast cancer patients, but also considerably increases its
+robustness against noise while training on coarse annotations. Our experiments
+show that better results can be achieved with our technique making it
+clinically feasible to use for cancer diagnosis and opening a new avenue for
+translational and clinical research.
+</p></li>
+</ul>
+
+<h3>Title: Latent Feature Relation Consistency for Adversarial Robustness. (arXiv:2303.16697v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16697">http://arxiv.org/abs/2303.16697</a></li>
+<li>Code URL: <a href="https://github.com/liuxingbin/lfrc">https://github.com/liuxingbin/lfrc</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16697] Latent Feature Relation Consistency for Adversarial Robustness](http://arxiv.org/abs/2303.16697) #robust</code></li>
+<li>Summary: <p>Deep neural networks have been applied in many computer vision tasks and
+achieved state-of-the-art performance. However, misclassification will occur
+when DNN predicts adversarial examples which add human-imperceptible
+adversarial noise to natural examples. This limits the application of DNN in
+security-critical fields. To alleviate this problem, we first conducted an
+empirical analysis of the latent features of both adversarial and natural
+examples and found the similarity matrix of natural examples is more compact
+than those of adversarial examples. Motivated by this observation, we propose
+\textbf{L}atent \textbf{F}eature \textbf{R}elation \textbf{C}onsistency
+(\textbf{LFRC}), which constrains the relation of adversarial examples in
+latent space to be consistent with the natural examples. Importantly, our LFRC
+is orthogonal to the previous method and can be easily combined with them to
+achieve further improvement. To demonstrate the effectiveness of LFRC, we
+conduct extensive experiments using different neural networks on benchmark
+datasets. For instance, LFRC can bring 0.78\% further improvement compared to
+AT, and 1.09\% improvement compared to TRADES, against AutoAttack on CIFAR10.
+Code is available at https://github.com/liuxingbin/LFRC.
+</p></li>
+</ul>
+
+<h3>Title: Multi-View Keypoints for Reliable 6D Object Pose Estimation. (arXiv:2303.16833v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16833">http://arxiv.org/abs/2303.16833</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16833] Multi-View Keypoints for Reliable 6D Object Pose Estimation](http://arxiv.org/abs/2303.16833) #robust</code></li>
+<li>Summary: <p>6D Object pose estimation is a fundamental component in robotics enabling
+efficient interaction with the environment. It is particularly challenging in
+bin-picking applications, where many objects are low-feature and reflective,
+and self-occlusion between objects of the same type is common. We propose a
+novel multi-view approach leveraging known camera transformations from an
+eye-in-hand setup to combine heatmap and keypoint estimates into a probability
+density map over 3D space. The result is a robust approach that is scalable in
+the number of views. It relies on a confidence score composed of keypoint
+probabilities and point-cloud alignment error, which allows reliable rejection
+of false positives. We demonstrate an average pose estimation error of
+approximately 0.5mm and 2 degrees across a variety of difficult low-feature and
+reflective objects in the ROBI dataset, while also surpassing the state-of-art
+correct detection rate, measured using the 10% object diameter threshold on ADD
+error.
+</p></li>
+</ul>
+
+<h3>Title: Robust Dancer: Long-term 3D Dance Synthesis Using Unpaired Data. (arXiv:2303.16856v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16856">http://arxiv.org/abs/2303.16856</a></li>
+<li>Code URL: <a href="https://github.com/bfeng14/robustdancer">https://github.com/bfeng14/robustdancer</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16856] Robust Dancer: Long-term 3D Dance Synthesis Using Unpaired Data](http://arxiv.org/abs/2303.16856) #robust</code></li>
+<li>Summary: <p>How to automatically synthesize natural-looking dance movements based on a
+piece of music is an incrementally popular yet challenging task. Most existing
+data-driven approaches require hard-to-get paired training data and fail to
+generate long sequences of motion due to error accumulation of autoregressive
+structure. We present a novel 3D dance synthesis system that only needs
+unpaired data for training and could generate realistic long-term motions at
+the same time. For the unpaired data training, we explore the disentanglement
+of beat and style, and propose a Transformer-based model free of reliance upon
+paired data. For the synthesis of long-term motions, we devise a new
+long-history attention strategy. It first queries the long-history embedding
+through an attention computation and then explicitly fuses this embedding into
+the generation pipeline via multimodal adaptation gate (MAG). Objective and
+subjective evaluations show that our results are comparable to strong baseline
+methods, despite not requiring paired training data, and are robust when
+inferring long-term music. To our best knowledge, we are the first to achieve
+unpaired data training - an ability that enables to alleviate data limitations
+effectively. Our code is released on https://github.com/BFeng14/RobustDancer
+</p></li>
+</ul>
+
+<h3>Title: Beyond Empirical Risk Minimization: Local Structure Preserving Regularization for Improving Adversarial Robustness. (arXiv:2303.16861v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16861">http://arxiv.org/abs/2303.16861</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16861] Beyond Empirical Risk Minimization: Local Structure Preserving Regularization for Improving Adversarial Robustness](http://arxiv.org/abs/2303.16861) #robust</code></li>
+<li>Summary: <p>It is broadly known that deep neural networks are susceptible to being fooled
+by adversarial examples with perturbations imperceptible by humans. Various
+defenses have been proposed to improve adversarial robustness, among which
+adversarial training methods are most effective. However, most of these methods
+treat the training samples independently and demand a tremendous amount of
+samples to train a robust network, while ignoring the latent structural
+information among these samples. In this work, we propose a novel Local
+Structure Preserving (LSP) regularization, which aims to preserve the local
+structure of the input space in the learned embedding space. In this manner,
+the attacking effect of adversarial samples lying in the vicinity of clean
+samples can be alleviated. We show strong empirical evidence that with or
+without adversarial training, our method consistently improves the performance
+of adversarial robustness on several image classification datasets compared to
+the baselines and some state-of-the-art approaches, thus providing promising
+direction for future research.
+</p></li>
+</ul>
+
+<h3>Title: ALUM: Adversarial Data Uncertainty Modeling from Latent Model Uncertainty Compensation. (arXiv:2303.16866v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16866">http://arxiv.org/abs/2303.16866</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16866] ALUM: Adversarial Data Uncertainty Modeling from Latent Model Uncertainty Compensation](http://arxiv.org/abs/2303.16866) #robust</code></li>
+<li>Summary: <p>It is critical that the models pay attention not only to accuracy but also to
+the certainty of prediction. Uncertain predictions of deep models caused by
+noisy data raise significant concerns in trustworthy AI areas. To explore and
+handle uncertainty due to intrinsic data noise, we propose a novel method
+called ALUM to simultaneously handle the model uncertainty and data uncertainty
+in a unified scheme. Rather than solely modeling data uncertainty in the
+ultimate layer of a deep model based on randomly selected training data, we
+propose to explore mined adversarial triplets to facilitate data uncertainty
+modeling and non-parametric uncertainty estimations to compensate for the
+insufficiently trained latent model layers. Thus, the critical data uncertainty
+and model uncertainty caused by noisy data can be readily quantified for
+improving model robustness. Our proposed ALUM is model-agnostic which can be
+easily implemented into any existing deep model with little extra computation
+overhead. Extensive experiments on various noisy learning tasks validate the
+superior robustness and generalization ability of our method. The code is
+released at https://github.com/wwzjer/ALUM.
+</p></li>
+</ul>
+
+<h3>Title: ViewRefer: Grasp the Multi-view Knowledge for 3D Visual Grounding with GPT and Prototype Guidance. (arXiv:2303.16894v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16894">http://arxiv.org/abs/2303.16894</a></li>
+<li>Code URL: <a href="https://github.com/ziyuguo99/viewrefer3d">https://github.com/ziyuguo99/viewrefer3d</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16894] ViewRefer: Grasp the Multi-view Knowledge for 3D Visual Grounding with GPT and Prototype Guidance](http://arxiv.org/abs/2303.16894) #robust</code></li>
+<li>Summary: <p>Understanding 3D scenes from multi-view inputs has been proven to alleviate
+the view discrepancy issue in 3D visual grounding. However, existing methods
+normally neglect the view cues embedded in the text modality and fail to weigh
+the relative importance of different views. In this paper, we propose
+ViewRefer, a multi-view framework for 3D visual grounding exploring how to
+grasp the view knowledge from both text and 3D modalities. For the text branch,
+ViewRefer leverages the diverse linguistic knowledge of large-scale language
+models, e.g., GPT, to expand a single grounding text to multiple
+geometry-consistent descriptions. Meanwhile, in the 3D modality, a transformer
+fusion module with inter-view attention is introduced to boost the interaction
+of objects across views. On top of that, we further present a set of learnable
+multi-view prototypes, which memorize scene-agnostic knowledge for different
+views, and enhance the framework from two perspectives: a view-guided attention
+module for more robust text features, and a view-guided scoring strategy during
+the final prediction. With our designed paradigm, ViewRefer achieves superior
+performance on three benchmarks and surpasses the second-best by +2.8%, +1.2%,
+and +0.73% on Sr3D, Nr3D, and ScanRefer. Code will be released at
+https://github.com/ZiyuGuo99/ViewRefer3D.
+</p></li>
+</ul>
+
+<h3>Title: Zero-Shot Generalizable End-to-End Task-Oriented Dialog System using Context Summarization and Domain Schema. (arXiv:2303.16252v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16252">http://arxiv.org/abs/2303.16252</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16252] Zero-Shot Generalizable End-to-End Task-Oriented Dialog System using Context Summarization and Domain Schema](http://arxiv.org/abs/2303.16252) #robust</code></li>
+<li>Summary: <p>Task-oriented dialog systems empower users to accomplish their goals by
+facilitating intuitive and expressive natural language interactions.
+State-of-the-art approaches in task-oriented dialog systems formulate the
+problem as a conditional sequence generation task and fine-tune pre-trained
+causal language models in the supervised setting. This requires labeled
+training data for each new domain or task, and acquiring such data is
+prohibitively laborious and expensive, thus making it a bottleneck for scaling
+systems to a wide range of domains. To overcome this challenge, we introduce a
+novel Zero-Shot generalizable end-to-end Task-oriented Dialog system, ZS-ToD,
+that leverages domain schemas to allow for robust generalization to unseen
+domains and exploits effective summarization of the dialog history. We employ
+GPT-2 as a backbone model and introduce a two-step training process where the
+goal of the first step is to learn the general structure of the dialog data and
+the second step optimizes the response generation as well as intermediate
+outputs, such as dialog state and system actions. As opposed to
+state-of-the-art systems that are trained to fulfill certain intents in the
+given domains and memorize task-specific conversational patterns, ZS-ToD learns
+generic task-completion skills by comprehending domain semantics via domain
+schemas and generalizing to unseen domains seamlessly. We conduct an extensive
+experimental evaluation on SGD and SGD-X datasets that span up to 20 unique
+domains and ZS-ToD outperforms state-of-the-art systems on key metrics, with an
+improvement of +17% on joint goal accuracy and +5 on inform. Additionally, we
+present a detailed ablation study to demonstrate the effectiveness of the
+proposed components and training mechanism
+</p></li>
+</ul>
+
+<h3>Title: Meeting Action Item Detection with Regularized Context Modeling. (arXiv:2303.16763v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16763">http://arxiv.org/abs/2303.16763</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16763] Meeting Action Item Detection with Regularized Context Modeling](http://arxiv.org/abs/2303.16763) #robust</code></li>
+<li>Summary: <p>Meetings are increasingly important for collaborations. Action items in
+meeting transcripts are crucial for managing post-meeting to-do tasks, which
+usually are summarized laboriously. The Action Item Detection task aims to
+automatically detect meeting content associated with action items. However,
+datasets manually annotated with action item detection labels are scarce and in
+small scale. We construct and release the first Chinese meeting corpus with
+manual action item annotations. In addition, we propose a Context-Drop approach
+to utilize both local and global contexts by contrastive learning, and achieve
+better accuracy and robustness for action item detection. We also propose a
+Lightweight Model Ensemble method to exploit different pre-trained models.
+Experimental results on our Chinese meeting corpus and the English AMI corpus
+demonstrate the effectiveness of the proposed approaches.
+</p></li>
+</ul>
+
+<h3>Title: Language Models Trained on Media Diets Can Predict Public Opinion. (arXiv:2303.16779v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16779">http://arxiv.org/abs/2303.16779</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16779] Language Models Trained on Media Diets Can Predict Public Opinion](http://arxiv.org/abs/2303.16779) #robust</code></li>
+<li>Summary: <p>Public opinion reflects and shapes societal behavior, but the traditional
+survey-based tools to measure it are limited. We introduce a novel approach to
+probe media diet models -- language models adapted to online news, TV
+broadcast, or radio show content -- that can emulate the opinions of
+subpopulations that have consumed a set of media. To validate this method, we
+use as ground truth the opinions expressed in U.S. nationally representative
+surveys on COVID-19 and consumer confidence. Our studies indicate that this
+approach is (1) predictive of human judgements found in survey response
+distributions and robust to phrasing and channels of media exposure, (2) more
+accurate at modeling people who follow media more closely, and (3) aligned with
+literature on which types of opinions are affected by media consumption.
+Probing language models provides a powerful new method for investigating media
+effects, has practical applications in supplementing polls and forecasting
+public opinion, and suggests a need for further study of the surprising
+fidelity with which neural language models can predict human responses.
+</p></li>
+</ul>
+
+<h3>Title: Accelerated wind farm yaw and layout optimisation with multi-fidelity deep transfer learning wake models. (arXiv:2303.16274v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16274">http://arxiv.org/abs/2303.16274</a></li>
+<li>Code URL: <a href="https://github.com/soanagno/wakenet">https://github.com/soanagno/wakenet</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16274] Accelerated wind farm yaw and layout optimisation with multi-fidelity deep transfer learning wake models](http://arxiv.org/abs/2303.16274) #robust</code></li>
+<li>Summary: <p>Wind farm modelling has been an area of rapidly increasing interest with
+numerous analytical as well as computational-based approaches developed to
+extend the margins of wind farm efficiency and maximise power production. In
+this work, we present the novel ML framework WakeNet, which can reproduce
+generalised 2D turbine wake velocity fields at hub-height over a wide range of
+yaw angles, wind speeds and turbulence intensities (TIs), with a mean accuracy
+of 99.8% compared to the solution calculated using the state-of-the-art wind
+farm modelling software FLORIS. As the generation of sufficient high-fidelity
+data for network training purposes can be cost-prohibitive, the utility of
+multi-fidelity transfer learning has also been investigated. Specifically, a
+network pre-trained on the low-fidelity Gaussian wake model is fine-tuned in
+order to obtain accurate wake results for the mid-fidelity Curl wake model. The
+robustness and overall performance of WakeNet on various wake steering control
+and layout optimisation scenarios has been validated through power-gain
+heatmaps, obtaining at least 90% of the power gained through optimisation
+performed with FLORIS directly. We also demonstrate that when utilising the
+Curl model, WakeNet is able to provide similar power gains to FLORIS, two
+orders of magnitude faster (e.g. 10 minutes vs 36 hours per optimisation case).
+The wake evaluation time of wakeNet when trained on a high-fidelity CFD dataset
+is expected to be similar, thus further increasing computational time gains.
+These promising results show that generalised wake modelling with ML tools can
+be accurate enough to contribute towards active yaw and layout optimisation,
+while producing realistic optimised configurations at a fraction of the
+computational cost, hence making it feasible to perform real-time active yaw
+control as well as robust optimisation under uncertainty.
+</p></li>
+</ul>
+
+<h3>Title: Provable Robustness for Streaming Models with a Sliding Window. (arXiv:2303.16308v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16308">http://arxiv.org/abs/2303.16308</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16308] Provable Robustness for Streaming Models with a Sliding Window](http://arxiv.org/abs/2303.16308) #robust</code></li>
+<li>Summary: <p>The literature on provable robustness in machine learning has primarily
+focused on static prediction problems, such as image classification, in which
+input samples are assumed to be independent and model performance is measured
+as an expectation over the input distribution. Robustness certificates are
+derived for individual input instances with the assumption that the model is
+evaluated on each instance separately. However, in many deep learning
+applications such as online content recommendation and stock market analysis,
+models use historical data to make predictions. Robustness certificates based
+on the assumption of independent input samples are not directly applicable in
+such scenarios. In this work, we focus on the provable robustness of machine
+learning models in the context of data streams, where inputs are presented as a
+sequence of potentially correlated items. We derive robustness certificates for
+models that use a fixed-size sliding window over the input stream. Our
+guarantees hold for the average model performance across the entire stream and
+are independent of stream size, making them suitable for large data streams. We
+perform experiments on speech detection and human activity recognition tasks
+and show that our certificates can produce meaningful performance guarantees
+against adversarial perturbations.
+</p></li>
+</ul>
+
+<h3>Title: Are Data-driven Explanations Robust against Out-of-distribution Data?. (arXiv:2303.16390v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16390">http://arxiv.org/abs/2303.16390</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16390] Are Data-driven Explanations Robust against Out-of-distribution Data?](http://arxiv.org/abs/2303.16390) #robust</code></li>
+<li>Summary: <p>As black-box models increasingly power high-stakes applications, a variety of
+data-driven explanation methods have been introduced. Meanwhile, machine
+learning models are constantly challenged by distributional shifts. A question
+naturally arises: Are data-driven explanations robust against
+out-of-distribution data? Our empirical results show that even though predict
+correctly, the model might still yield unreliable explanations under
+distributional shifts. How to develop robust explanations against
+out-of-distribution data? To address this problem, we propose an end-to-end
+model-agnostic learning framework Distributionally Robust Explanations (DRE).
+The key idea is, inspired by self-supervised learning, to fully utilizes the
+inter-distribution information to provide supervisory signals for the learning
+of explanations without human annotation. Can robust explanations benefit the
+model's generalization capability? We conduct extensive experiments on a wide
+range of tasks and data types, including classification and regression on image
+and scientific tabular data. Our results demonstrate that the proposed method
+significantly improves the model's performance in terms of explanation and
+prediction robustness against distributional shifts.
+</p></li>
+</ul>
+
+<h3>Title: Hard Regularization to Prevent Collapse in Online Deep Clustering without Data Augmentation. (arXiv:2303.16521v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16521">http://arxiv.org/abs/2303.16521</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16521] Hard Regularization to Prevent Collapse in Online Deep Clustering without Data Augmentation](http://arxiv.org/abs/2303.16521) #robust</code></li>
+<li>Summary: <p>Online deep clustering refers to the joint use of a feature extraction
+network and a clustering model to assign cluster labels to each new data point
+or batch as it is processed. While faster and more versatile than offline
+methods, online clustering can easily reach the collapsed solution where the
+encoder maps all inputs to the same point and all are put into a single
+cluster. Successful existing models have employed various techniques to avoid
+this problem, most of which require data augmentation or which aim to make the
+average soft assignment across the dataset the same for each cluster. We
+propose a method that does not require data augmentation, and that, differently
+from existing methods, regularizes the hard assignments. Using a Bayesian
+framework, we derive an intuitive optimization objective that can be
+straightforwardly included in the training of the encoder network. Tested on
+four image datasets, we show that it consistently avoids collapse more robustly
+than other methods and that it leads to more accurate clustering. We also
+conduct further experiments and analyses justifying our choice to regularize
+the hard cluster assignments.
+</p></li>
+</ul>
+
+<h3>Title: Supervised Learning for Table Tennis Match Prediction. (arXiv:2303.16776v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16776">http://arxiv.org/abs/2303.16776</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16776] Supervised Learning for Table Tennis Match Prediction](http://arxiv.org/abs/2303.16776) #robust</code></li>
+<li>Summary: <p>Machine learning, classification and prediction models have applications
+across a range of fields. Sport analytics is an increasingly popular
+application, but most existing work is focused on automated refereeing in
+mainstream sports and injury prevention. Research on other sports, such as
+table tennis, has only recently started gaining more traction. This paper
+proposes the use of machine learning to predict the outcome of table tennis
+single matches. We use player and match statistics as features and evaluate
+their relative importance in an ablation study. In terms of models, a number of
+popular models were explored. We found that 5-fold cross-validation and
+hyperparameter tuning was crucial to improve model performance. We investigated
+different feature aggregation strategies in our ablation study to demonstrate
+the robustness of the models. Different models performed comparably, with the
+accuracy of the results (61-70%) matching state-of-the-art models in comparable
+sports, such as tennis. The results can serve as a baseline for future table
+tennis prediction models, and can feed back to prediction research in similar
+ball sports.
+</p></li>
+</ul>
+
+<h3>Title: Randomly Projected Convex Clustering Model: Motivation, Realization, and Cluster Recovery Guarantees. (arXiv:2303.16841v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16841">http://arxiv.org/abs/2303.16841</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16841] Randomly Projected Convex Clustering Model: Motivation, Realization, and Cluster Recovery Guarantees](http://arxiv.org/abs/2303.16841) #robust</code></li>
+<li>Summary: <p>In this paper, we propose a randomly projected convex clustering model for
+clustering a collection of $n$ high dimensional data points in $\mathbb{R}^d$
+with $K$ hidden clusters. Compared to the convex clustering model for
+clustering original data with dimension $d$, we prove that, under some mild
+conditions, the perfect recovery of the cluster membership assignments of the
+convex clustering model, if exists, can be preserved by the randomly projected
+convex clustering model with embedding dimension $m = O(\epsilon^{-2}\log(n))$,
+where $0 < \epsilon < 1$ is some given parameter. We further prove that the
+embedding dimension can be improved to be $O(\epsilon^{-2}\log(K))$, which is
+independent of the number of data points. Extensive numerical experiment
+results will be presented in this paper to demonstrate the robustness and
+superior performance of the randomly projected convex clustering model. The
+numerical results presented in this paper also demonstrate that the randomly
+projected convex clustering model can outperform the randomly projected K-means
+model in practice.
+</p></li>
+</ul>
+
+<h3>Title: Physical Deep Reinforcement Learning Towards Safety Guarantee. (arXiv:2303.16860v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16860">http://arxiv.org/abs/2303.16860</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16860] Physical Deep Reinforcement Learning Towards Safety Guarantee](http://arxiv.org/abs/2303.16860) #robust</code></li>
+<li>Summary: <p>Deep reinforcement learning (DRL) has achieved tremendous success in many
+complex decision-making tasks of autonomous systems with high-dimensional state
+and/or action spaces. However, the safety and stability still remain major
+concerns that hinder the applications of DRL to safety-critical autonomous
+systems. To address the concerns, we proposed the Phy-DRL: a physical deep
+reinforcement learning framework. The Phy-DRL is novel in two architectural
+designs: i) Lyapunov-like reward, and ii) residual control (i.e., integration
+of physics-model-based control and data-driven control). The concurrent
+physical reward and residual control empower the Phy-DRL the (mathematically)
+provable safety and stability guarantees. Through experiments on the inverted
+pendulum, we show that the Phy-DRL features guaranteed safety and stability and
+enhanced robustness, while offering remarkably accelerated training and
+enlarged reward.
+</p></li>
+</ul>
+
+<h2>biometric</h2>
+<h2>steal</h2>
+<h2>extraction</h2>
+<h3>Title: NerVE: Neural Volumetric Edges for Parametric Curve Extraction from Point Cloud. (arXiv:2303.16465v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16465">http://arxiv.org/abs/2303.16465</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16465] NerVE: Neural Volumetric Edges for Parametric Curve Extraction from Point Cloud](http://arxiv.org/abs/2303.16465) #extraction</code></li>
+<li>Summary: <p>Extracting parametric edge curves from point clouds is a fundamental problem
+in 3D vision and geometry processing. Existing approaches mainly rely on
+keypoint detection, a challenging procedure that tends to generate noisy
+output, making the subsequent edge extraction error-prone. To address this
+issue, we propose to directly detect structured edges to circumvent the
+limitations of the previous point-wise methods. We achieve this goal by
+presenting NerVE, a novel neural volumetric edge representation that can be
+easily learned through a volumetric learning framework. NerVE can be seamlessly
+converted to a versatile piece-wise linear (PWL) curve representation, enabling
+a unified strategy for learning all types of free-form curves. Furthermore, as
+NerVE encodes rich structural information, we show that edge extraction based
+on NerVE can be reduced to a simple graph search problem. After converting
+NerVE to the PWL representation, parametric curves can be obtained via
+off-the-shelf spline fitting algorithms. We evaluate our method on the
+challenging ABC dataset. We show that a simple network based on NerVE can
+already outperform the previous state-of-the-art methods by a great margin.
+Project page: https://dongdu3.github.io/projects/2023/NerVE/.
+</p></li>
+</ul>
+
+<h3>Title: Understanding and Improving Features Learned in Deep Functional Maps. (arXiv:2303.16527v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16527">http://arxiv.org/abs/2303.16527</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16527] Understanding and Improving Features Learned in Deep Functional Maps](http://arxiv.org/abs/2303.16527) #extraction</code></li>
+<li>Summary: <p>Deep functional maps have recently emerged as a successful paradigm for
+non-rigid 3D shape correspondence tasks. An essential step in this pipeline
+consists in learning feature functions that are used as constraints to solve
+for a functional map inside the network. However, the precise nature of the
+information learned and stored in these functions is not yet well understood.
+Specifically, a major question is whether these features can be used for any
+other objective, apart from their purely algebraic role in solving for
+functional map matrices. In this paper, we show that under some mild
+conditions, the features learned within deep functional map approaches can be
+used as point-wise descriptors and thus are directly comparable across
+different shapes, even without the necessity of solving for a functional map at
+test time. Furthermore, informed by our analysis, we propose effective
+modifications to the standard deep functional map pipeline, which promote
+structural properties of learned features, significantly improving the matching
+results. Finally, we demonstrate that previously unsuccessful attempts at using
+extrinsic architectures for deep functional map feature extraction can be
+remedied via simple architectural changes, which encourage the theoretical
+properties suggested by our analysis. We thus bridge the gap between intrinsic
+and extrinsic surface-based learning, suggesting the necessary and sufficient
+conditions for successful shape matching. Our code is available at
+https://github.com/pvnieo/clover.
+</p></li>
+</ul>
+
+<h3>Title: Zero-shot Entailment of Leaderboards for Empirical AI Research. (arXiv:2303.16835v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16835">http://arxiv.org/abs/2303.16835</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16835] Zero-shot Entailment of Leaderboards for Empirical AI Research](http://arxiv.org/abs/2303.16835) #extraction</code></li>
+<li>Summary: <p>We present a large-scale empirical investigation of the zero-shot learning
+phenomena in a specific recognizing textual entailment (RTE) task category,
+i.e. the automated mining of leaderboards for Empirical AI Research. The prior
+reported state-of-the-art models for leaderboards extraction formulated as an
+RTE task, in a non-zero-shot setting, are promising with above 90% reported
+performances. However, a central research question remains unexamined: did the
+models actually learn entailment? Thus, for the experiments in this paper, two
+prior reported state-of-the-art models are tested out-of-the-box for their
+ability to generalize or their capacity for entailment, given leaderboard
+labels that were unseen during training. We hypothesize that if the models
+learned entailment, their zero-shot performances can be expected to be
+moderately high as well--perhaps, concretely, better than chance. As a result
+of this work, a zero-shot labeled dataset is created via distant labeling
+formulating the leaderboard extraction RTE task.
+</p></li>
+</ul>
+
+<h3>Title: End-to-End $n$-ary Relation Extraction for Combination Drug Therapies. (arXiv:2303.16886v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16886">http://arxiv.org/abs/2303.16886</a></li>
+<li>Code URL: <a href="https://github.com/bionlproc/end-to-end-combdrugext">https://github.com/bionlproc/end-to-end-combdrugext</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16886] End-to-End $n$-ary Relation Extraction for Combination Drug Therapies](http://arxiv.org/abs/2303.16886) #extraction</code></li>
+<li>Summary: <p>Combination drug therapies are treatment regimens that involve two or more
+drugs, administered more commonly for patients with cancer, HIV, malaria, or
+tuberculosis. Currently there are over 350K articles in PubMed that use the
+"combination drug therapy" MeSH heading with at least 10K articles published
+per year over the past two decades. Extracting combination therapies from
+scientific literature inherently constitutes an $n$-ary relation extraction
+problem. Unlike in the general $n$-ary setting where $n$ is fixed (e.g.,
+drug-gene-mutation relations where $n=3$), extracting combination therapies is
+a special setting where $n \geq 2$ is dynamic, depending on each instance.
+Recently, Tiktinsky et al. (NAACL 2022) introduced a first of its kind dataset,
+CombDrugExt, for extracting such therapies from literature. Here, we use a
+sequence-to-sequence style end-to-end extraction method to achieve an F1-Score
+of $66.7\%$ on the CombDrugExt test set for positive (or effective)
+combinations. This is an absolute $\approx 5\%$ F1-score improvement even over
+the prior best relation classification score with spotted drug entities (hence,
+not end-to-end). Thus our effort introduces a state-of-the-art first model for
+end-to-end extraction that is already superior to the best prior non end-to-end
+model for this task. Our model seamlessly extracts all drug entities and
+relations in a single pass and is highly suitable for dynamic $n$-ary
+extraction scenarios.
+</p></li>
+</ul>
+
+<h3>Title: Neuro-symbolic Rule Learning in Real-world Classification Tasks. (arXiv:2303.16674v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16674">http://arxiv.org/abs/2303.16674</a></li>
+<li>Code URL: <a href="https://github.com/kittykg/neural-dnf-tmc">https://github.com/kittykg/neural-dnf-tmc</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16674] Neuro-symbolic Rule Learning in Real-world Classification Tasks](http://arxiv.org/abs/2303.16674) #extraction</code></li>
+<li>Summary: <p>Neuro-symbolic rule learning has attracted lots of attention as it offers
+better interpretability than pure neural models and scales better than symbolic
+rule learning. A recent approach named pix2rule proposes a neural Disjunctive
+Normal Form (neural DNF) module to learn symbolic rules with feed-forward
+layers. Although proved to be effective in synthetic binary classification,
+pix2rule has not been applied to more challenging tasks such as multi-label and
+multi-class classifications over real-world data. In this paper, we address
+this limitation by extending the neural DNF module to (i) support rule learning
+in real-world multi-class and multi-label classification tasks, (ii) enforce
+the symbolic property of mutual exclusivity (i.e. predicting exactly one class)
+in multi-class classification, and (iii) explore its scalability over large
+inputs and outputs. We train a vanilla neural DNF model similar to pix2rule's
+neural DNF module for multi-label classification, and we propose a novel
+extended model called neural DNF-EO (Exactly One) which enforces mutual
+exclusivity in multi-class classification. We evaluate the classification
+performance, scalability and interpretability of our neural DNF-based models,
+and compare them against pure neural models and a state-of-the-art symbolic
+rule learner named FastLAS. We demonstrate that our neural DNF-based models
+perform similarly to neural networks, but provide better interpretability by
+enabling the extraction of logical rules. Our models also scale well when the
+rule search space grows in size, in contrast to FastLAS, which fails to learn
+in multi-class classification tasks with 200 classes and in all multi-label
+settings.
+</p></li>
+</ul>
+
+<h2>membership infer</h2>
+<h2>federate</h2>
+<h3>Title: Fair Federated Medical Image Segmentation via Client Contribution Estimation. (arXiv:2303.16520v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16520">http://arxiv.org/abs/2303.16520</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16520] Fair Federated Medical Image Segmentation via Client Contribution Estimation](http://arxiv.org/abs/2303.16520) #federate</code></li>
+<li>Summary: <p>How to ensure fairness is an important topic in federated learning (FL).
+Recent studies have investigated how to reward clients based on their
+contribution (collaboration fairness), and how to achieve uniformity of
+performance across clients (performance fairness). Despite achieving progress
+on either one, we argue that it is critical to consider them together, in order
+to engage and motivate more diverse clients joining FL to derive a high-quality
+global model. In this work, we propose a novel method to optimize both types of
+fairness simultaneously. Specifically, we propose to estimate client
+contribution in gradient and data space. In gradient space, we monitor the
+gradient direction differences of each client with respect to others. And in
+data space, we measure the prediction error on client data using an auxiliary
+model. Based on this contribution estimation, we propose a FL method, federated
+training via contribution estimation (FedCE), i.e., using estimation as global
+model aggregation weights. We have theoretically analyzed our method and
+empirically evaluated it on two real-world medical datasets. The effectiveness
+of our approach has been validated with significant performance improvements,
+better collaboration fairness, better performance fairness, and comprehensive
+analytical studies.
+</p></li>
+</ul>
+
+<h3>Title: A Byzantine-Resilient Aggregation Scheme for Federated Learning via Matrix Autoregression on Client Updates. (arXiv:2303.16668v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16668">http://arxiv.org/abs/2303.16668</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16668] A Byzantine-Resilient Aggregation Scheme for Federated Learning via Matrix Autoregression on Client Updates](http://arxiv.org/abs/2303.16668) #federate</code></li>
+<li>Summary: <p>In this work, we propose FLANDERS, a novel federated learning (FL)
+aggregation scheme robust to Byzantine attacks. FLANDERS considers the local
+model updates sent by clients at each FL round as a matrix-valued time series.
+Then, it identifies malicious clients as outliers of this time series by
+comparing actual observations with those estimated by a matrix autoregressive
+forecasting model. Experiments conducted on several datasets under different FL
+settings demonstrate that FLANDERS matches the robustness of the most powerful
+baselines against Byzantine clients. Furthermore, FLANDERS remains highly
+effective even under extremely severe attack scenarios, as opposed to existing
+defense strategies.
+</p></li>
+</ul>
+
+<h3>Title: Communication-Efficient Vertical Federated Learning with Limited Overlapping Samples. (arXiv:2303.16270v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16270">http://arxiv.org/abs/2303.16270</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16270] Communication-Efficient Vertical Federated Learning with Limited Overlapping Samples](http://arxiv.org/abs/2303.16270) #federate</code></li>
+<li>Summary: <p>Federated learning is a popular collaborative learning approach that enables
+clients to train a global model without sharing their local data. Vertical
+federated learning (VFL) deals with scenarios in which the data on clients have
+different feature spaces but share some overlapping samples. Existing VFL
+approaches suffer from high communication costs and cannot deal efficiently
+with limited overlapping samples commonly seen in the real world. We propose a
+practical vertical federated learning (VFL) framework called \textbf{one-shot
+VFL} that can solve the communication bottleneck and the problem of limited
+overlapping samples simultaneously based on semi-supervised learning. We also
+propose \textbf{few-shot VFL} to improve the accuracy further with just one
+more communication round between the server and the clients. In our proposed
+framework, the clients only need to communicate with the server once or only a
+few times. We evaluate the proposed VFL framework on both image and tabular
+datasets. Our methods can improve the accuracy by more than 46.5\% and reduce
+the communication cost by more than 330$\times$ compared with state-of-the-art
+VFL methods when evaluated on CIFAR-10. Our code will be made publicly
+available at \url{https://nvidia.github.io/NVFlare/research/one-shot-vfl}.
+</p></li>
+</ul>
+
+<h3>Title: On the Local Cache Update Rules in Streaming Federated Learning. (arXiv:2303.16340v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16340">http://arxiv.org/abs/2303.16340</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16340] On the Local Cache Update Rules in Streaming Federated Learning](http://arxiv.org/abs/2303.16340) #federate</code></li>
+<li>Summary: <p>In this study, we address the emerging field of Streaming Federated Learning
+(SFL) and propose local cache update rules to manage dynamic data distributions
+and limited cache capacity. Traditional federated learning relies on fixed data
+sets, whereas in SFL, data is streamed, and its distribution changes over time,
+leading to discrepancies between the local training dataset and long-term
+distribution. To mitigate this problem, we propose three local cache update
+rules - First-In-First-Out (FIFO), Static Ratio Selective Replacement (SRSR),
+and Dynamic Ratio Selective Replacement (DRSR) - that update the local cache of
+each client while considering the limited cache capacity. Furthermore, we
+derive a convergence bound for our proposed SFL algorithm as a function of the
+distribution discrepancy between the long-term data distribution and the
+client's local training dataset. We then evaluate our proposed algorithm on two
+datasets: a network traffic classification dataset and an image classification
+dataset. Our experimental results demonstrate that our proposed local cache
+update rules significantly reduce the distribution discrepancy and outperform
+the baseline methods. Our study advances the field of SFL and provides
+practical cache management solutions in federated learning.
+</p></li>
+</ul>
+
+<h2>fair</h2>
+<h3>Title: Implicit Visual Bias Mitigation by Posterior Estimate Sharpening of a Bayesian Neural Network. (arXiv:2303.16564v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16564">http://arxiv.org/abs/2303.16564</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16564] Implicit Visual Bias Mitigation by Posterior Estimate Sharpening of a Bayesian Neural Network](http://arxiv.org/abs/2303.16564) #fair</code></li>
+<li>Summary: <p>The fairness of a deep neural network is strongly affected by dataset bias
+and spurious correlations, both of which are usually present in modern
+feature-rich and complex visual datasets. Due to the difficulty and variability
+of the task, no single de-biasing method has been universally successful. In
+particular, implicit methods not requiring explicit knowledge of bias variables
+are especially relevant for real-world applications. We propose a novel
+implicit mitigation method using a Bayesian neural network, allowing us to
+leverage the relationship between epistemic uncertainties and the presence of
+bias or spurious correlations in a sample. Our proposed posterior estimate
+sharpening procedure encourages the network to focus on core features that do
+not contribute to high uncertainties. Experimental results on three benchmark
+datasets demonstrate that Bayesian networks with sharpened posterior estimates
+perform comparably to prior existing methods and show potential worthy of
+further exploration.
+</p></li>
+</ul>
+
+<h3>Title: Fairlearn: Assessing and Improving Fairness of AI Systems. (arXiv:2303.16626v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16626">http://arxiv.org/abs/2303.16626</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16626] Fairlearn: Assessing and Improving Fairness of AI Systems](http://arxiv.org/abs/2303.16626) #fair</code></li>
+<li>Summary: <p>Fairlearn is an open source project to help practitioners assess and improve
+fairness of artificial intelligence (AI) systems. The associated Python
+library, also named fairlearn, supports evaluation of a model's output across
+affected populations and includes several algorithms for mitigating fairness
+issues. Grounded in the understanding that fairness is a sociotechnical
+challenge, the project integrates learning resources that aid practitioners in
+considering a system's broader societal context.
+</p></li>
+</ul>
+
+<h2>interpretability</h2>
+<h3>Title: Self-positioning Point-based Transformer for Point Cloud Understanding. (arXiv:2303.16450v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16450">http://arxiv.org/abs/2303.16450</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16450] Self-positioning Point-based Transformer for Point Cloud Understanding](http://arxiv.org/abs/2303.16450) #interpretability</code></li>
+<li>Summary: <p>Transformers have shown superior performance on various computer vision tasks
+with their capabilities to capture long-range dependencies. Despite the
+success, it is challenging to directly apply Transformers on point clouds due
+to their quadratic cost in the number of points. In this paper, we present a
+Self-Positioning point-based Transformer (SPoTr), which is designed to capture
+both local and global shape contexts with reduced complexity. Specifically,
+this architecture consists of local self-attention and self-positioning
+point-based global cross-attention. The self-positioning points, adaptively
+located based on the input shape, consider both spatial and semantic
+information with disentangled attention to improve expressive power. With the
+self-positioning points, we propose a novel global cross-attention mechanism
+for point clouds, which improves the scalability of global self-attention by
+allowing the attention module to compute attention weights with only a small
+set of self-positioning points. Experiments show the effectiveness of SPoTr on
+three point cloud tasks such as shape classification, part segmentation, and
+scene segmentation. In particular, our proposed model achieves an accuracy gain
+of 2.6% over the previous best models on shape classification with
+ScanObjectNN. We also provide qualitative analyses to demonstrate the
+interpretability of self-positioning points. The code of SPoTr is available at
+https://github.com/mlvlab/SPoTr.
+</p></li>
+</ul>
+
+<h3>Title: LMDA-Net:A lightweight multi-dimensional attention network for general EEG-based brain-computer interface paradigms and interpretability. (arXiv:2303.16407v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16407">http://arxiv.org/abs/2303.16407</a></li>
+<li>Code URL: <a href="https://github.com/TNTLFreiburg/braindecode">https://github.com/TNTLFreiburg/braindecode</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16407] LMDA-Net:A lightweight multi-dimensional attention network for general EEG-based brain-computer interface paradigms and interpretability](http://arxiv.org/abs/2303.16407) #interpretability</code></li>
+<li>Summary: <p>EEG-based recognition of activities and states involves the use of prior
+neuroscience knowledge to generate quantitative EEG features, which may limit
+BCI performance. Although neural network-based methods can effectively extract
+features, they often encounter issues such as poor generalization across
+datasets, high predicting volatility, and low model interpretability. Hence, we
+propose a novel lightweight multi-dimensional attention network, called
+LMDA-Net. By incorporating two novel attention modules designed specifically
+for EEG signals, the channel attention module and the depth attention module,
+LMDA-Net can effectively integrate features from multiple dimensions, resulting
+in improved classification performance across various BCI tasks. LMDA-Net was
+evaluated on four high-impact public datasets, including motor imagery (MI) and
+P300-Speller paradigms, and was compared with other representative models. The
+experimental results demonstrate that LMDA-Net outperforms other representative
+methods in terms of classification accuracy and predicting volatility,
+achieving the highest accuracy in all datasets within 300 training epochs.
+Ablation experiments further confirm the effectiveness of the channel attention
+module and the depth attention module. To facilitate an in-depth understanding
+of the features extracted by LMDA-Net, we propose class-specific neural network
+feature interpretability algorithms that are suitable for event-related
+potentials (ERPs) and event-related desynchronization/synchronization
+(ERD/ERS). By mapping the output of the specific layer of LMDA-Net to the time
+or spatial domain through class activation maps, the resulting feature
+visualizations can provide interpretable analysis and establish connections
+with EEG time-spatial analysis in neuroscience. In summary, LMDA-Net shows
+great potential as a general online decoding model for various EEG tasks.
+</p></li>
+</ul>
+
+<h3>Title: Local Interpretability of Random Forests for Multi-Target Regression. (arXiv:2303.16506v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16506">http://arxiv.org/abs/2303.16506</a></li>
+<li>Code URL: <a href="https://github.com/intelligence-csd-auth-gr/xmtr">https://github.com/intelligence-csd-auth-gr/xmtr</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16506] Local Interpretability of Random Forests for Multi-Target Regression](http://arxiv.org/abs/2303.16506) #interpretability</code></li>
+<li>Summary: <p>Multi-target regression is useful in a plethora of applications. Although
+random forest models perform well in these tasks, they are often difficult to
+interpret. Interpretability is crucial in machine learning, especially when it
+can directly impact human well-being. Although model-agnostic techniques exist
+for multi-target regression, specific techniques tailored to random forest
+models are not available. To address this issue, we propose a technique that
+provides rule-based interpretations for instances made by a random forest model
+for multi-target regression, influenced by a recent model-specific technique
+for random forest interpretability. The proposed technique was evaluated
+through extensive experiments and shown to offer competitive interpretations
+compared to state-of-the-art techniques.
+</p></li>
+</ul>
+
+<h3>Title: Multi-View Clustering via Semi-non-negative Tensor Factorization. (arXiv:2303.16748v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16748">http://arxiv.org/abs/2303.16748</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16748] Multi-View Clustering via Semi-non-negative Tensor Factorization](http://arxiv.org/abs/2303.16748) #interpretability</code></li>
+<li>Summary: <p>Multi-view clustering (MVC) based on non-negative matrix factorization (NMF)
+and its variants have received a huge amount of attention in recent years due
+to their advantages in clustering interpretability. However, existing NMF-based
+multi-view clustering methods perform NMF on each view data respectively and
+ignore the impact of between-view. Thus, they can't well exploit the
+within-view spatial structure and between-view complementary information. To
+resolve this issue, we present semi-non-negative tensor factorization
+(Semi-NTF) and develop a novel multi-view clustering based on Semi-NTF with
+one-side orthogonal constraint. Our model directly performs Semi-NTF on the
+3rd-order tensor which is composed of anchor graphs of views. Thus, our model
+directly considers the between-view relationship. Moreover, we use the tensor
+Schatten p-norm regularization as a rank approximation of the 3rd-order tensor
+which characterizes the cluster structure of multi-view data and exploits the
+between-view complementary information. In addition, we provide an optimization
+algorithm for the proposed method and prove mathematically that the algorithm
+always converges to the stationary KKT point. Extensive experiments on various
+benchmark datasets indicate that our proposed method is able to achieve
+satisfactory clustering performance.
+</p></li>
+</ul>
+
+<h2>explainability</h2>
+<h2>watermark</h2>
+<h2>diffusion</h2>
+<h3>Title: Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation. (arXiv:2303.16280v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16280">http://arxiv.org/abs/2303.16280</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16280] Rethinking CycleGAN: Improving Quality of GANs for Unpaired Image-to-Image Translation](http://arxiv.org/abs/2303.16280) #diffusion</code></li>
+<li>Summary: <p>An unpaired image-to-image (I2I) translation technique seeks to find a
+mapping between two domains of data in a fully unsupervised manner. While the
+initial solutions to the I2I problem were provided by the generative
+adversarial neural networks (GANs), currently, diffusion models (DM) hold the
+state-of-the-art status on the I2I translation benchmarks in terms of FID. Yet,
+they suffer from some limitations, such as not using data from the source
+domain during the training, or maintaining consistency of the source and
+translated images only via simple pixel-wise errors. This work revisits the
+classic CycleGAN model and equips it with recent advancements in model
+architectures and model training procedures. The revised model is shown to
+significantly outperform other advanced GAN- and DM-based competitors on a
+variety of benchmarks. In the case of Male2Female translation of CelebA, the
+model achieves over 40% improvement in FID score compared to the
+state-of-the-art results. This work also demonstrates the ineffectiveness of
+the pixel-wise I2I translation faithfulness metrics and suggests their
+revision. The code and trained models are available at
+https://github.com/LS4GAN/uvcgan2
+</p></li>
+</ul>
+
+<h3>Title: Implicit Diffusion Models for Continuous Super-Resolution. (arXiv:2303.16491v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16491">http://arxiv.org/abs/2303.16491</a></li>
+<li>Code URL: <a href="https://github.com/ree1s/idm">https://github.com/ree1s/idm</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16491] Implicit Diffusion Models for Continuous Super-Resolution](http://arxiv.org/abs/2303.16491) #diffusion</code></li>
+<li>Summary: <p>Image super-resolution (SR) has attracted increasing attention due to its
+wide applications. However, current SR methods generally suffer from
+over-smoothing and artifacts, and most work only with fixed magnifications.
+This paper introduces an Implicit Diffusion Model (IDM) for high-fidelity
+continuous image super-resolution. IDM integrates an implicit neural
+representation and a denoising diffusion model in a unified end-to-end
+framework, where the implicit neural representation is adopted in the decoding
+process to learn continuous-resolution representation. Furthermore, we design a
+scale-controllable conditioning mechanism that consists of a low-resolution
+(LR) conditioning network and a scaling factor. The scaling factor regulates
+the resolution and accordingly modulates the proportion of the LR information
+and generated features in the final output, which enables the model to
+accommodate the continuous-resolution requirement. Extensive experiments
+validate the effectiveness of our IDM and demonstrate its superior performance
+over prior arts.
+</p></li>
+</ul>
+
+<h3>Title: HOLODIFFUSION: Training a 3D Diffusion Model using 2D Images. (arXiv:2303.16509v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16509">http://arxiv.org/abs/2303.16509</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16509] HOLODIFFUSION: Training a 3D Diffusion Model using 2D Images](http://arxiv.org/abs/2303.16509) #diffusion</code></li>
+<li>Summary: <p>Diffusion models have emerged as the best approach for generative modeling of
+2D images. Part of their success is due to the possibility of training them on
+millions if not billions of images with a stable learning objective. However,
+extending these models to 3D remains difficult for two reasons. First, finding
+a large quantity of 3D training data is much more complex than for 2D images.
+Second, while it is conceptually trivial to extend the models to operate on 3D
+rather than 2D grids, the associated cubic growth in memory and compute
+complexity makes this infeasible. We address the first challenge by introducing
+a new diffusion setup that can be trained, end-to-end, with only posed 2D
+images for supervision; and the second challenge by proposing an image
+formation model that decouples model memory from spatial memory. We evaluate
+our method on real-world data, using the CO3D dataset which has not been used
+to train 3D generative models before. We show that our diffusion models are
+scalable, train robustly, and are competitive in terms of sample quality and
+fidelity to existing approaches for 3D generative modeling.
+</p></li>
+</ul>
+
+<h3>Title: WordStylist: Styled Verbatim Handwritten Text Generation with Latent Diffusion Models. (arXiv:2303.16576v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16576">http://arxiv.org/abs/2303.16576</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16576] WordStylist: Styled Verbatim Handwritten Text Generation with Latent Diffusion Models](http://arxiv.org/abs/2303.16576) #diffusion</code></li>
+<li>Summary: <p>Text-to-Image synthesis is the task of generating an image according to a
+specific text description. Generative Adversarial Networks have been considered
+the standard method for image synthesis virtually since their introduction;
+today, Denoising Diffusion Probabilistic Models are recently setting a new
+baseline, with remarkable results in Text-to-Image synthesis, among other
+fields. Aside its usefulness per se, it can also be particularly relevant as a
+tool for data augmentation to aid training models for other document image
+processing tasks. In this work, we present a latent diffusion-based method for
+styled text-to-text-content-image generation on word-level. Our proposed method
+manages to generate realistic word image samples from different writer styles,
+by using class index styles and text content prompts without the need of
+adversarial training, writer recognition, or text recognition. We gauge system
+performance with Frechet Inception Distance, writer recognition accuracy, and
+writer retrieval. We show that the proposed model produces samples that are
+aesthetically pleasing, help boosting text recognition performance, and gets
+similar writer retrieval score as real data.
+</p></li>
+</ul>
+
+<h3>Title: 4D Facial Expression Diffusion Model. (arXiv:2303.16611v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16611">http://arxiv.org/abs/2303.16611</a></li>
+<li>Code URL: <a href="https://github.com/zoukaifeng/4dfm">https://github.com/zoukaifeng/4dfm</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16611] 4D Facial Expression Diffusion Model](http://arxiv.org/abs/2303.16611) #diffusion</code></li>
+<li>Summary: <p>Facial expression generation is one of the most challenging and long-sought
+aspects of character animation, with many interesting applications. The
+challenging task, traditionally having relied heavily on digital craftspersons,
+remains yet to be explored. In this paper, we introduce a generative framework
+for generating 3D facial expression sequences (i.e. 4D faces) that can be
+conditioned on different inputs to animate an arbitrary 3D face mesh. It is
+composed of two tasks: (1) Learning the generative model that is trained over a
+set of 3D landmark sequences, and (2) Generating 3D mesh sequences of an input
+facial mesh driven by the generated landmark sequences. The generative model is
+based on a Denoising Diffusion Probabilistic Model (DDPM), which has achieved
+remarkable success in generative tasks of other domains. While it can be
+trained unconditionally, its reverse process can still be conditioned by
+various condition signals. This allows us to efficiently develop several
+downstream tasks involving various conditional generation, by using expression
+labels, text, partial sequences, or simply a facial geometry. To obtain the
+full mesh deformation, we then develop a landmark-guided encoder-decoder to
+apply the geometrical deformation embedded in landmarks on a given facial mesh.
+Experiments show that our model has learned to generate realistic, quality
+expressions solely from the dataset of relatively small size, improving over
+the state-of-the-art methods. Videos and qualitative comparisons with other
+methods can be found at https://github.com/ZOUKaifeng/4DFM. Code and models
+will be made available upon acceptance.
+</p></li>
+</ul>
+
+<h3>Title: MDP: A Generalized Framework for Text-Guided Image Editing by Manipulating the Diffusion Path. (arXiv:2303.16765v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16765">http://arxiv.org/abs/2303.16765</a></li>
+<li>Code URL: <a href="https://github.com/qianwangx/mdp-diffusion">https://github.com/qianwangx/mdp-diffusion</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16765] MDP: A Generalized Framework for Text-Guided Image Editing by Manipulating the Diffusion Path](http://arxiv.org/abs/2303.16765) #diffusion</code></li>
+<li>Summary: <p>Image generation using diffusion can be controlled in multiple ways. In this
+paper, we systematically analyze the equations of modern generative diffusion
+networks to propose a framework, called MDP, that explains the design space of
+suitable manipulations. We identify 5 different manipulations, including
+intermediate latent, conditional embedding, cross attention maps, guidance, and
+predicted noise. We analyze the corresponding parameters of these manipulations
+and the manipulation schedule. We show that some previous editing methods fit
+nicely into our framework. Particularly, we identified one specific
+configuration as a new type of control by manipulating the predicted noise,
+which can perform higher-quality edits than previous work for a variety of
+local and global edits.
+</p></li>
+</ul>
+
+<h3>Title: Physics-Driven Diffusion Models for Impact Sound Synthesis from Videos. (arXiv:2303.16897v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16897">http://arxiv.org/abs/2303.16897</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16897] Physics-Driven Diffusion Models for Impact Sound Synthesis from Videos](http://arxiv.org/abs/2303.16897) #diffusion</code></li>
+<li>Summary: <p>Modeling sounds emitted from physical object interactions is critical for
+immersive perceptual experiences in real and virtual worlds. Traditional
+methods of impact sound synthesis use physics simulation to obtain a set of
+physics parameters that could represent and synthesize the sound. However, they
+require fine details of both the object geometries and impact locations, which
+are rarely available in the real world and can not be applied to synthesize
+impact sounds from common videos. On the other hand, existing video-driven deep
+learning-based approaches could only capture the weak correspondence between
+visual content and impact sounds since they lack of physics knowledge. In this
+work, we propose a physics-driven diffusion model that can synthesize
+high-fidelity impact sound for a silent video clip. In addition to the video
+content, we propose to use additional physics priors to guide the impact sound
+synthesis procedure. The physics priors include both physics parameters that
+are directly estimated from noisy real-world impact sound examples without
+sophisticated setup and learned residual parameters that interpret the sound
+environment via neural networks. We further implement a novel diffusion model
+with specific training and inference strategies to combine physics priors and
+visual information for impact sound synthesis. Experimental results show that
+our model outperforms several existing systems in generating realistic impact
+sounds. More importantly, the physics-based representations are fully
+interpretable and transparent, thus enabling us to perform sound editing
+flexibly.
+</p></li>
+</ul>
+
+<h3>Title: A Unified Single-stage Learning Model for Estimating Fiber Orientation Distribution Functions on Heterogeneous Multi-shell Diffusion-weighted MRI. (arXiv:2303.16376v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2303.16376">http://arxiv.org/abs/2303.16376</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2303.16376] A Unified Single-stage Learning Model for Estimating Fiber Orientation Distribution Functions on Heterogeneous Multi-shell Diffusion-weighted MRI](http://arxiv.org/abs/2303.16376) #diffusion</code></li>
+<li>Summary: <p>Diffusion-weighted (DW) MRI measures the direction and scale of the local
+diffusion process in every voxel through its spectrum in q-space, typically
+acquired in one or more shells. Recent developments in micro-structure imaging
+and multi-tissue decomposition have sparked renewed attention to the radial
+b-value dependence of the signal. Applications in tissue classification and
+micro-architecture estimation, therefore, require a signal representation that
+extends over the radial as well as angular domain. Multiple approaches have
+been proposed that can model the non-linear relationship between the DW-MRI
+signal and biological microstructure. In the past few years, many deep
+learning-based methods have been developed towards faster inference speed and
+higher inter-scan consistency compared with traditional model-based methods
+(e.g., multi-shell multi-tissue constrained spherical deconvolution). However,
+a multi-stage learning strategy is typically required since the learning
+process relied on various middle representations, such as simple harmonic
+oscillator reconstruction (SHORE) representation. In this work, we present a
+unified dynamic network with a single-stage spherical convolutional neural
+network, which allows efficient fiber orientation distribution function (fODF)
+estimation through heterogeneous multi-shell diffusion MRI sequences. We study
+the Human Connectome Project (HCP) young adults with test-retest scans. From
+the experimental results, the proposed single-stage method outperforms prior
+multi-stage approaches in repeated fODF estimation with shell dropoff and
+single-shell DW-MRI sequences.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>

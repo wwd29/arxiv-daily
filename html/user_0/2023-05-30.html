@@ -1,0 +1,912 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>secure</h2>
+<h2>security</h2>
+<h2>privacy</h2>
+<h3>Title: Improved Privacy-Preserving PCA Using Space-optimized Homomorphic Matrix Multiplication. (arXiv:2305.17341v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17341">http://arxiv.org/abs/2305.17341</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17341] Improved Privacy-Preserving PCA Using Space-optimized Homomorphic Matrix Multiplication](http://arxiv.org/abs/2305.17341) #privacy</code></li>
+<li>Summary: <p>Principal Component Analysis (PCA) is a pivotal technique in the fields of
+machine learning and data analysis. In this study, we present a novel approach
+for privacy-preserving PCA using an approximate numerical arithmetic
+homomorphic encryption scheme. We build our method upon a proposed PCA routine
+known as the PowerMethod, which takes the covariance matrix as input and
+produces an approximate eigenvector corresponding to the first principal
+component of the dataset. Our method surpasses previous approaches (e.g.,
+Pandas CSCML 21) in terms of efficiency, accuracy, and scalability.
+</p></li>
+</ul>
+
+<p>To achieve such efficiency and accuracy, we have implemented the following
+optimizations: (i) We optimized a homomorphic matrix multiplication technique
+(Jiang et al. SIGSAC 2018) that will play a crucial role in the computation of
+the covariance matrix. (ii) We devised an efficient homomorphic circuit for
+computing the covariance matrix homomorphically. (iii) We designed a novel and
+efficient homomorphic circuit for the PowerMethod that incorporates a
+systematic strategy for homomorphic vector normalization enhancing both its
+accuracy and practicality.
+</p>
+<p>Our matrix multiplication optimization reduces the minimum rotation key space
+required for a $128\times 128$ homomorphic matrix multiplication by up to 64\%,
+enabling more extensive parallel computation of multiple matrix multiplication
+instances. Our homomorphic covariance matrix computation method manages to
+compute the covariance matrix of the MNIST dataset ($60000\times 256$) in 51
+minutes. Our privacy-preserving PCA scheme based on our new homomorphic
+PowerMethod circuit successfully computes the top 8 principal components of
+datasets such as MNIST and Fashion-MNIST in approximately 1 hour, achieving an
+r2 accuracy of 0.7 to 0.9, achieving an average speed improvement of over 4
+times and offers higher accuracy compared to previous approaches.
+</p>
+
+<h2>protect</h2>
+<h3>Title: Differentially private low-dimensional representation of high-dimensional data. (arXiv:2305.17148v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17148">http://arxiv.org/abs/2305.17148</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17148] Differentially private low-dimensional representation of high-dimensional data](http://arxiv.org/abs/2305.17148) #protect</code></li>
+<li>Summary: <p>Differentially private synthetic data provide a powerful mechanism to enable
+data analysis while protecting sensitive information about individuals.
+However, when the data lie in a high-dimensional space, the accuracy of the
+synthetic data suffers from the curse of dimensionality. In this paper, we
+propose a differentially private algorithm to generate low-dimensional
+synthetic data efficiently from a high-dimensional dataset with a utility
+guarantee with respect to the Wasserstein distance. A key step of our algorithm
+is a private principal component analysis (PCA) procedure with a near-optimal
+accuracy bound that circumvents the curse of dimensionality. Different from the
+standard perturbation analysis using the Davis-Kahan theorem, our analysis of
+private PCA works without assuming the spectral gap for the sample covariance
+matrix.
+</p></li>
+</ul>
+
+<h2>defense</h2>
+<h3>Title: Rethinking Adversarial Policies: A Generalized Attack Formulation and Provable Defense in Multi-Agent RL. (arXiv:2305.17342v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17342">http://arxiv.org/abs/2305.17342</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17342] Rethinking Adversarial Policies: A Generalized Attack Formulation and Provable Defense in Multi-Agent RL](http://arxiv.org/abs/2305.17342) #defense</code></li>
+<li>Summary: <p>Most existing works consider direct perturbations of victim's state/action or
+the underlying transition dynamics to show vulnerability of reinforcement
+learning agents under adversarial attacks. However, such direct manipulation
+may not always be feasible in practice. In this paper, we consider another
+common and realistic attack setup: in a multi-agent RL setting with
+well-trained agents, during deployment time, the victim agent $\nu$ is
+exploited by an attacker who controls another agent $\alpha$ to act
+adversarially against the victim using an \textit{adversarial policy}. Prior
+attack models under such setup do not consider that the attacker can confront
+resistance and thus can only take partial control of the agent $\alpha$, as
+well as introducing perceivable ``abnormal'' behaviors that are easily
+detectable. A provable defense against these adversarial policies is also
+lacking. To resolve these issues, we introduce a more general attack
+formulation that models to what extent the adversary is able to control the
+agent to produce the adversarial policy. Based on such a generalized attack
+framework, the attacker can also regulate the state distribution shift caused
+by the attack through an attack budget, and thus produce stealthy adversarial
+policies that can exploit the victim agent. Furthermore, we provide the first
+provably robust defenses with convergence guarantee to the most robust victim
+policy via adversarial training with timescale separation, in sharp contrast to
+adversarial training in supervised learning which may only provide {\it
+empirical} defenses.
+</p></li>
+</ul>
+
+<h2>attack</h2>
+<h3>Title: NASimEmu: Network Attack Simulator &amp; Emulator for Training Agents Generalizing to Novel Scenarios. (arXiv:2305.17246v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17246">http://arxiv.org/abs/2305.17246</a></li>
+<li>Code URL: <a href="https://github.com/jaromiru/nasimemu">https://github.com/jaromiru/nasimemu</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17246] NASimEmu: Network Attack Simulator &amp; Emulator for Training Agents Generalizing to Novel Scenarios](http://arxiv.org/abs/2305.17246) #attack</code></li>
+<li>Summary: <p>Current frameworks for training offensive penetration testing agents with
+deep reinforcement learning struggle to produce agents that perform well in
+real-world scenarios, due to the reality gap in simulation-based frameworks and
+the lack of scalability in emulation-based frameworks. Additionally, existing
+frameworks often use an unrealistic metric that measures the agents'
+performance on the training data. NASimEmu, a new framework introduced in this
+paper, addresses these issues by providing both a simulator and an emulator
+with a shared interface. This approach allows agents to be trained in
+simulation and deployed in the emulator, thus verifying the realism of the used
+abstraction. Our framework promotes the development of general agents that can
+transfer to novel scenarios unseen during their training. For the simulation
+part, we adopt an existing simulator NASim and enhance its realism. The
+emulator is implemented with industry-level tools, such as Vagrant, VirtualBox,
+and Metasploit. Experiments demonstrate that a simulation-trained agent can be
+deployed in emulation, and we show how to use the framework to train a general
+agent that transfers into novel, structurally different scenarios. NASimEmu is
+available as open-source.
+</p></li>
+</ul>
+
+<h2>robust</h2>
+<h3>Title: GVdoc: Graph-based Visual Document Classification. (arXiv:2305.17219v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17219">http://arxiv.org/abs/2305.17219</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17219] GVdoc: Graph-based Visual Document Classification](http://arxiv.org/abs/2305.17219) #robust</code></li>
+<li>Summary: <p>The robustness of a model for real-world deployment is decided by how well it
+performs on unseen data and distinguishes between in-domain and out-of-domain
+samples. Visual document classifiers have shown impressive performance on
+in-distribution test sets. However, they tend to have a hard time correctly
+classifying and differentiating out-of-distribution examples. Image-based
+classifiers lack the text component, whereas multi-modality transformer-based
+models face the token serialization problem in visual documents due to their
+diverse layouts. They also require a lot of computing power during inference,
+making them impractical for many real-world applications. We propose, GVdoc, a
+graph-based document classification model that addresses both of these
+challenges. Our approach generates a document graph based on its layout, and
+then trains a graph neural network to learn node and graph embeddings. Through
+experiments, we show that our model, even with fewer parameters, outperforms
+state-of-the-art models on out-of-distribution data while retaining comparable
+performance on the in-distribution test set.
+</p></li>
+</ul>
+
+<h3>Title: Im-Promptu: In-Context Composition from Image Prompts. (arXiv:2305.17262v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17262">http://arxiv.org/abs/2305.17262</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17262] Im-Promptu: In-Context Composition from Image Prompts](http://arxiv.org/abs/2305.17262) #robust</code></li>
+<li>Summary: <p>Large language models are few-shot learners that can solve diverse tasks from
+a handful of demonstrations. This implicit understanding of tasks suggests that
+the attention mechanisms over word tokens may play a role in analogical
+reasoning. In this work, we investigate whether analogical reasoning can enable
+in-context composition over composable elements of visual stimuli. First, we
+introduce a suite of three benchmarks to test the generalization properties of
+a visual in-context learner. We formalize the notion of an analogy-based
+in-context learner and use it to design a meta-learning framework called
+Im-Promptu. Whereas the requisite token granularity for language is well
+established, the appropriate compositional granularity for enabling in-context
+generalization in visual stimuli is usually unspecified. To this end, we use
+Im-Promptu to train multiple agents with different levels of compositionality,
+including vector representations, patch representations, and object slots. Our
+experiments reveal tradeoffs between extrapolation abilities and the degree of
+compositionality, with non-compositional representations extending learned
+composition rules to unseen domains but performing poorly on combinatorial
+tasks. Patch-based representations require patches to contain entire objects
+for robust extrapolation. At the same time, object-centric tokenizers coupled
+with a cross-attention module generate consistent and high-fidelity solutions,
+with these inductive biases being particularly crucial for compositional
+generalization. Lastly, we demonstrate a use case of Im-Promptu as an intuitive
+programming interface for image generation.
+</p></li>
+</ul>
+
+<h3>Title: Robust Lane Detection through Self Pre-training with Masked Sequential Autoencoders and Fine-tuning with Customized PolyLoss. (arXiv:2305.17271v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17271">http://arxiv.org/abs/2305.17271</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17271] Robust Lane Detection through Self Pre-training with Masked Sequential Autoencoders and Fine-tuning with Customized PolyLoss](http://arxiv.org/abs/2305.17271) #robust</code></li>
+<li>Summary: <p>Lane detection is crucial for vehicle localization which makes it the
+foundation for automated driving and many intelligent and advanced driving
+assistant systems. Available vision-based lane detection methods do not make
+full use of the valuable features and aggregate contextual information,
+especially the interrelationships between lane lines and other regions of the
+images in continuous frames. To fill this research gap and upgrade lane
+detection performance, this paper proposes a pipeline consisting of self
+pre-training with masked sequential autoencoders and fine-tuning with
+customized PolyLoss for the end-to-end neural network models using
+multi-continuous image frames. The masked sequential autoencoders are adopted
+to pre-train the neural network models with reconstructing the missing pixels
+from a random masked image as the objective. Then, in the fine-tuning
+segmentation phase where lane detection segmentation is performed, the
+continuous image frames are served as the inputs, and the pre-trained model
+weights are transferred and further updated using the backpropagation mechanism
+with customized PolyLoss calculating the weighted errors between the output
+lane detection results and the labeled ground truth. Extensive experiment
+results demonstrate that, with the proposed pipeline, the lane detection model
+performance on both normal and challenging scenes can be advanced beyond the
+state-of-the-art, delivering the best testing accuracy (98.38%), precision
+(0.937), and F1-measure (0.924) on the normal scene testing set, together with
+the best overall accuracy (98.36%) and precision (0.844) in the challenging
+scene test set, while the training time can be substantially shortened.
+</p></li>
+</ul>
+
+<h3>Title: DynaShare: Task and Instance Conditioned Parameter Sharing for Multi-Task Learning. (arXiv:2305.17305v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17305">http://arxiv.org/abs/2305.17305</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17305] DynaShare: Task and Instance Conditioned Parameter Sharing for Multi-Task Learning](http://arxiv.org/abs/2305.17305) #robust</code></li>
+<li>Summary: <p>Multi-task networks rely on effective parameter sharing to achieve robust
+generalization across tasks. In this paper, we present a novel parameter
+sharing method for multi-task learning that conditions parameter sharing on
+both the task and the intermediate feature representations at inference time.
+In contrast to traditional parameter sharing approaches, which fix or learn a
+deterministic sharing pattern during training and apply the same pattern to all
+examples during inference, we propose to dynamically decide which parts of the
+network to activate based on both the task and the input instance. Our approach
+learns a hierarchical gating policy consisting of a task-specific policy for
+coarse layer selection and gating units for individual input instances, which
+work together to determine the execution path at inference time. Experiments on
+the NYU v2, Cityscapes and MIMIC-III datasets demonstrate the potential of the
+proposed approach and its applicability across problem domains.
+</p></li>
+</ul>
+
+<h3>Title: Entailment as Robust Self-Learner. (arXiv:2305.17197v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17197">http://arxiv.org/abs/2305.17197</a></li>
+<li>Code URL: <a href="https://github.com/luohongyin/entst">https://github.com/luohongyin/entst</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17197] Entailment as Robust Self-Learner](http://arxiv.org/abs/2305.17197) #robust</code></li>
+<li>Summary: <p>Entailment has been recognized as an important metric for evaluating natural
+language understanding (NLU) models, and recent studies have found that
+entailment pretraining benefits weakly supervised fine-tuning. In this work, we
+design a prompting strategy that formulates a number of different NLU tasks as
+contextual entailment. This approach improves the zero-shot adaptation of
+pretrained entailment models. Secondly, we notice that self-training
+entailment-based models with unlabeled data can significantly improve the
+adaptation performance on downstream tasks. To achieve more stable improvement,
+we propose the Simple Pseudo-Label Editing (SimPLE) algorithm for better
+pseudo-labeling quality in self-training. We also found that both pretrained
+entailment-based models and the self-trained models are robust against
+adversarial evaluation data. Experiments on binary and multi-class
+classification tasks show that SimPLE leads to more robust self-training
+results, indicating that the self-trained entailment models are more efficient
+and trustworthy than large language models on language understanding tasks.
+</p></li>
+</ul>
+
+<h3>Title: CODET: A Benchmark for Contrastive Dialectal Evaluation of Machine Translation. (arXiv:2305.17267v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17267">http://arxiv.org/abs/2305.17267</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17267] CODET: A Benchmark for Contrastive Dialectal Evaluation of Machine Translation](http://arxiv.org/abs/2305.17267) #robust</code></li>
+<li>Summary: <p>Neural machine translation (NMT) systems exhibit limited robustness in
+handling source-side linguistic variations. Their performance tends to degrade
+when faced with even slight deviations in language usage, such as different
+domains or variations introduced by second-language speakers. It is intuitive
+to extend this observation to encompass dialectal variations as well, but the
+work allowing the community to evaluate MT systems on this dimension is
+limited. To alleviate this issue, we compile and release \dataset, a
+contrastive dialectal benchmark encompassing 882 different variations from nine
+different languages. We also quantitatively demonstrate the challenges large MT
+models face in effectively translating dialectal variants. We are releasing all
+code and data.
+</p></li>
+</ul>
+
+<h3>Title: On convex conceptual regions in deep network representations. (arXiv:2305.17154v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17154">http://arxiv.org/abs/2305.17154</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17154] On convex conceptual regions in deep network representations](http://arxiv.org/abs/2305.17154) #robust</code></li>
+<li>Summary: <p>The current study of human-machine alignment aims at understanding the
+geometry of latent spaces and the correspondence to human representations.
+G\"ardenfors' conceptual spaces is a prominent framework for understanding
+human representations. Convexity of object regions in conceptual spaces is
+argued to promote generalizability, few-shot learning, and intersubject
+alignment. Based on these insights, we investigate the notion of convexity of
+concept regions in machine-learned latent spaces. We develop a set of tools for
+measuring convexity in sampled data and evaluate emergent convexity in layered
+representations of state-of-the-art deep networks. We show that convexity is
+robust to basic re-parametrization, hence, meaningful as a quality of
+machine-learned latent spaces. We find that approximate convexity is pervasive
+in neural representations in multiple application domains, including models of
+images, audio, human activity, text, and brain data. We measure convexity
+separately for labels (i.e., targets for fine-tuning) and other concepts.
+Generally, we observe that fine-tuning increases the convexity of label
+regions, while for more general concepts, it depends on the alignment of the
+concept with the fine-tuning objective. We find evidence that pre-training
+convexity of class label regions predicts subsequent fine-tuning performance.
+</p></li>
+</ul>
+
+<h3>Title: An Improved Model Ensembled of Different Hyper-parameter Tuned Machine Learning Algorithms for Fetal Health Prediction. (arXiv:2305.17156v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17156">http://arxiv.org/abs/2305.17156</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17156] An Improved Model Ensembled of Different Hyper-parameter Tuned Machine Learning Algorithms for Fetal Health Prediction](http://arxiv.org/abs/2305.17156) #robust</code></li>
+<li>Summary: <p>Fetal health is a critical concern during pregnancy as it can impact the
+well-being of both the mother and the baby. Regular monitoring and timely
+interventions are necessary to ensure the best possible outcomes. While there
+are various methods to monitor fetal health in the mother's womb, the use of
+artificial intelligence (AI) can improve the accuracy, efficiency, and speed of
+diagnosis. In this study, we propose a robust ensemble model called ensemble of
+tuned Support Vector Machine and ExtraTrees (ETSE) for predicting fetal health.
+Initially, we employed various data preprocessing techniques such as outlier
+rejection, missing value imputation, data standardization, and data sampling.
+Then, seven machine learning (ML) classifiers including Support Vector Machine
+(SVM), XGBoost (XGB), Light Gradient Boosting Machine (LGBM), Decision Tree
+(DT), Random Forest (RF), ExtraTrees (ET), and K-Neighbors were implemented.
+These models were evaluated and then optimized by hyperparameter tuning using
+the grid search technique. Finally, we analyzed the performance of our proposed
+ETSE model. The performance analysis of each model revealed that our proposed
+ETSE model outperformed the other models with 100% precision, 100% recall, 100%
+F1-score, and 99.66% accuracy. This indicates that the ETSE model can
+effectively predict fetal health, which can aid in timely interventions and
+improve outcomes for both the mother and the baby.
+</p></li>
+</ul>
+
+<h3>Title: Improved Sales Forecasting using Trend and Seasonality Decomposition with LightGBM. (arXiv:2305.17201v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17201">http://arxiv.org/abs/2305.17201</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17201] Improved Sales Forecasting using Trend and Seasonality Decomposition with LightGBM](http://arxiv.org/abs/2305.17201) #robust</code></li>
+<li>Summary: <p>Retail sales forecasting presents a significant challenge for large retailers
+such as Walmart and Amazon, due to the vast assortment of products,
+geographical location heterogeneity, seasonality, and external factors
+including weather, local economic conditions, and geopolitical events. Various
+methods have been employed to tackle this challenge, including traditional time
+series models, machine learning models, and neural network mechanisms, but the
+difficulty persists. Categorizing data into relevant groups has been shown to
+improve sales forecast accuracy as time series from different categories may
+exhibit distinct patterns. In this paper, we propose a new measure to indicate
+the unique impacts of the trend and seasonality components on a time series and
+suggest grouping time series based on this measure. We apply this approach to
+Walmart sales data from 01/29/2011 to 05/22/2016 and generate sales forecasts
+from 05/23/2016 to 06/19/2016. Our experiments show that the proposed strategy
+can achieve improved accuracy. Furthermore, we present a robust pipeline for
+conducting retail sales forecasting.
+</p></li>
+</ul>
+
+<h3>Title: Rotational Optimizers: Simple &amp; Robust DNN Training. (arXiv:2305.17212v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17212">http://arxiv.org/abs/2305.17212</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17212] Rotational Optimizers: Simple &amp; Robust DNN Training](http://arxiv.org/abs/2305.17212) #robust</code></li>
+<li>Summary: <p>The training dynamics of modern deep neural networks depend on complex
+interactions between the learning rate, weight decay, initialization, and other
+hyperparameters. These interactions can give rise to Spherical Motion Dynamics
+in scale-invariant layers (e.g., normalized layers), which converge to an
+equilibrium state, where the weight norm and the expected rotational update
+size are fixed. Our analysis of this equilibrium in AdamW, SGD with momentum,
+and Lion provides new insights into the effects of different hyperparameters
+and their interactions on the training process. We propose rotational variants
+(RVs) of these optimizers that force the expected angular update size to match
+the equilibrium value throughout training. This simplifies the training
+dynamics by removing the transient phase corresponding to the convergence to an
+equilibrium. Our rotational optimizers can match the performance of the
+original variants, often with minimal or no tuning of the baseline
+hyperparameters, showing that these transient phases are not needed.
+Furthermore, we find that the rotational optimizers have a reduced need for
+learning rate warmup and improve the optimization of poorly normalized
+networks.
+</p></li>
+</ul>
+
+<h3>Title: Fourier-DeepONet: Fourier-enhanced deep operator networks for full waveform inversion with improved accuracy, generalizability, and robustness. (arXiv:2305.17289v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17289">http://arxiv.org/abs/2305.17289</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17289] Fourier-DeepONet: Fourier-enhanced deep operator networks for full waveform inversion with improved accuracy, generalizability, and robustness](http://arxiv.org/abs/2305.17289) #robust</code></li>
+<li>Summary: <p>Full waveform inversion (FWI) infers the subsurface structure information
+from seismic waveform data by solving a non-convex optimization problem.
+Data-driven FWI has been increasingly studied with various neural network
+architectures to improve accuracy and computational efficiency. Nevertheless,
+the applicability of pre-trained neural networks is severely restricted by
+potential discrepancies between the source function used in the field survey
+and the one utilized during training. Here, we develop a Fourier-enhanced deep
+operator network (Fourier-DeepONet) for FWI with the generalization of seismic
+sources, including the frequencies and locations of sources. Specifically, we
+employ the Fourier neural operator as the decoder of DeepONet, and we utilize
+source parameters as one input of Fourier-DeepONet, facilitating the resolution
+of FWI with variable sources. To test Fourier-DeepONet, we develop two new and
+realistic FWI benchmark datasets (FWI-F and FWI-L) with varying source
+frequencies and locations. Our experiments demonstrate that compared with
+existing data-driven FWI methods, Fourier-DeepONet obtains more accurate
+predictions of subsurface structures in a wide range of source parameters.
+Moreover, the proposed Fourier-DeepONet exhibits superior robustness when
+dealing with noisy inputs or inputs with missing traces, paving the way for
+more reliable and accurate subsurface imaging across diverse real conditions.
+</p></li>
+</ul>
+
+<h3>Title: Hierarchical Deep Counterfactual Regret Minimization. (arXiv:2305.17327v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17327">http://arxiv.org/abs/2305.17327</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17327] Hierarchical Deep Counterfactual Regret Minimization](http://arxiv.org/abs/2305.17327) #robust</code></li>
+<li>Summary: <p>Imperfect Information Games (IIGs) offer robust models for scenarios where
+decision-makers face uncertainty or lack complete information. Counterfactual
+Regret Minimization (CFR) has been one of the most successful family of
+algorithms for tackling IIGs. The integration of skill-based strategy learning
+with CFR could potentially enhance learning performance for complex IIGs. For
+this, a hierarchical strategy needs to be learnt, wherein low-level components
+represent specific skills and the high-level component manages the transition
+between skills. This hierarchical approach also enhances interpretability,
+helping humans pinpoint scenarios where the agent is struggling and intervene
+with targeted expertise. This paper introduces the first hierarchical version
+of Deep CFR (HDCFR), an innovative method that boosts learning efficiency in
+tasks involving extensively large state spaces and deep game trees. A notable
+advantage of HDCFR over previous research in this field is its ability to
+facilitate learning with predefined (human) expertise and foster the
+acquisition of transferable skills that can be applied to similar tasks. To
+achieve this, we initially construct our algorithm on a tabular setting,
+encompassing hierarchical CFR updating rules and a variance-reduced Monte-Carlo
+sampling extension, and offer its essential theoretical guarantees. Then, to
+adapt our algorithm for large-scale applications, we employ neural networks as
+function approximators and suggest deep learning objectives that coincide with
+those in the tabular setting while maintaining the theoretical outcomes.
+</p></li>
+</ul>
+
+<h2>biometric</h2>
+<h2>steal</h2>
+<h2>extraction</h2>
+<h3>Title: Super-Resolution of License Plate Images Using Attention Modules and Sub-Pixel Convolution Layers. (arXiv:2305.17313v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17313">http://arxiv.org/abs/2305.17313</a></li>
+<li>Code URL: <a href="https://github.com/valfride/lpr-rsr-ext">https://github.com/valfride/lpr-rsr-ext</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17313] Super-Resolution of License Plate Images Using Attention Modules and Sub-Pixel Convolution Layers](http://arxiv.org/abs/2305.17313) #extraction</code></li>
+<li>Summary: <p>Recent years have seen significant developments in the field of License Plate
+Recognition (LPR) through the integration of deep learning techniques and the
+increasing availability of training data. Nevertheless, reconstructing license
+plates (LPs) from low-resolution (LR) surveillance footage remains challenging.
+To address this issue, we introduce a Single-Image Super-Resolution (SISR)
+approach that integrates attention and transformer modules to enhance the
+detection of structural and textural features in LR images. Our approach
+incorporates sub-pixel convolution layers (also known as PixelShuffle) and a
+loss function that uses an Optical Character Recognition (OCR) model for
+feature extraction. We trained the proposed architecture on synthetic images
+created by applying heavy Gaussian noise to high-resolution LP images from two
+public datasets, followed by bicubic downsampling. As a result, the generated
+images have a Structural Similarity Index Measure (SSIM) of less than 0.10. Our
+results show that our approach for reconstructing these low-resolution
+synthesized images outperforms existing ones in both quantitative and
+qualitative measures. Our code is publicly available at
+https://github.com/valfride/lpr-rsr-ext/
+</p></li>
+</ul>
+
+<h2>membership infer</h2>
+<h2>federate</h2>
+<h3>Title: Federated Learning for Semantic Parsing: Task Formulation, Evaluation Setup, New Algorithms. (arXiv:2305.17221v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17221">http://arxiv.org/abs/2305.17221</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17221] Federated Learning for Semantic Parsing: Task Formulation, Evaluation Setup, New Algorithms](http://arxiv.org/abs/2305.17221) #federate</code></li>
+<li>Summary: <p>This paper studies a new task of federated learning (FL) for semantic
+parsing, where multiple clients collaboratively train one global model without
+sharing their semantic parsing data. By leveraging data from multiple clients,
+the FL paradigm can be especially beneficial for clients that have little
+training data to develop a data-hungry neural semantic parser on their own. We
+propose an evaluation setup to study this task, where we re-purpose widely-used
+single-domain text-to-SQL datasets as clients to form a realistic heterogeneous
+FL setting and collaboratively train a global model. As standard FL algorithms
+suffer from the high client heterogeneity in our realistic setup, we further
+propose a novel LOss Reduction Adjusted Re-weighting (Lorar) mechanism to
+mitigate the performance degradation, which adjusts each client's contribution
+to the global model update based on its training loss reduction during each
+round. Our intuition is that the larger the loss reduction, the further away
+the current global model is from the client's local optimum, and the larger
+weight the client should get. By applying Lorar to three widely adopted FL
+algorithms (FedAvg, FedOPT and FedProx), we observe that their performance can
+be improved substantially on average (4%-20% absolute gain under MacroAvg) and
+that clients with smaller datasets enjoy larger performance gains. In addition,
+the global model converges faster for almost all the clients.
+</p></li>
+</ul>
+
+<h2>fair</h2>
+<h2>interpretability</h2>
+<h2>explainability</h2>
+<h2>watermark</h2>
+<h2>diffusion</h2>
+<h3>Title: Contrast, Attend and Diffuse to Decode High-Resolution Images from Brain Activities. (arXiv:2305.17214v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17214">http://arxiv.org/abs/2305.17214</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17214] Contrast, Attend and Diffuse to Decode High-Resolution Images from Brain Activities](http://arxiv.org/abs/2305.17214) #diffusion</code></li>
+<li>Summary: <p>Decoding visual stimuli from neural responses recorded by functional Magnetic
+Resonance Imaging (fMRI) presents an intriguing intersection between cognitive
+neuroscience and machine learning, promising advancements in understanding
+human visual perception and building non-invasive brain-machine interfaces.
+However, the task is challenging due to the noisy nature of fMRI signals and
+the intricate pattern of brain visual representations. To mitigate these
+challenges, we introduce a two-phase fMRI representation learning framework.
+The first phase pre-trains an fMRI feature learner with a proposed
+Double-contrastive Mask Auto-encoder to learn denoised representations. The
+second phase tunes the feature learner to attend to neural activation patterns
+most informative for visual reconstruction with guidance from an image
+auto-encoder. The optimized fMRI feature learner then conditions a latent
+diffusion model to reconstruct image stimuli from brain activities.
+Experimental results demonstrate our model's superiority in generating
+high-resolution and semantically accurate images, substantially exceeding
+previous state-of-the-art methods by 39.34% in the 50-way-top-1 semantic
+classification accuracy. Our research invites further exploration of the
+decoding task's potential and contributes to the development of non-invasive
+brain-machine interfaces.
+</p></li>
+</ul>
+
+<h3>Title: COMCAT: Towards Efficient Compression and Customization of Attention-Based Vision Models. (arXiv:2305.17235v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17235">http://arxiv.org/abs/2305.17235</a></li>
+<li>Code URL: <a href="https://github.com/jinqixiao/ComCAT">https://github.com/jinqixiao/ComCAT</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17235] COMCAT: Towards Efficient Compression and Customization of Attention-Based Vision Models](http://arxiv.org/abs/2305.17235) #diffusion</code></li>
+<li>Summary: <p>Attention-based vision models, such as Vision Transformer (ViT) and its
+variants, have shown promising performance in various computer vision tasks.
+However, these emerging architectures suffer from large model sizes and high
+computational costs, calling for efficient model compression solutions. To
+date, pruning ViTs has been well studied, while other compression strategies
+that have been widely applied in CNN compression, e.g., model factorization, is
+little explored in the context of ViT compression. This paper explores an
+efficient method for compressing vision transformers to enrich the toolset for
+obtaining compact attention-based vision models. Based on the new insight on
+the multi-head attention layer, we develop a highly efficient ViT compression
+solution, which outperforms the state-of-the-art pruning methods. For
+compressing DeiT-small and DeiT-base models on ImageNet, our proposed approach
+can achieve 0.45% and 0.76% higher top-1 accuracy even with fewer parameters.
+Our finding can also be applied to improve the customization efficiency of
+text-to-image diffusion models, with much faster training (up to $2.6\times$
+speedup) and lower extra storage cost (up to $1927.5\times$ reduction) than the
+existing works.
+</p></li>
+</ul>
+
+<h3>Title: Flow Matching for Scalable Simulation-Based Inference. (arXiv:2305.17161v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17161">http://arxiv.org/abs/2305.17161</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17161] Flow Matching for Scalable Simulation-Based Inference](http://arxiv.org/abs/2305.17161) #diffusion</code></li>
+<li>Summary: <p>Neural posterior estimation methods based on discrete normalizing flows have
+become established tools for simulation-based inference (SBI), but scaling them
+to high-dimensional problems can be challenging. Building on recent advances in
+generative modeling, we here present flow matching posterior estimation (FMPE),
+a technique for SBI using continuous normalizing flows. Like diffusion models,
+and in contrast to discrete flows, flow matching allows for unconstrained
+architectures, providing enhanced flexibility for complex data modalities. Flow
+matching, therefore, enables exact density evaluation, fast training, and
+seamless scalability to large architectures--making it ideal for SBI. We show
+that FMPE achieves competitive performance on an established SBI benchmark, and
+then demonstrate its improved scalability on a challenging scientific problem:
+for gravitational-wave inference, FMPE outperforms methods based on comparable
+discrete flows, reducing training time by 30% with substantially improved
+accuracy. Our work underscores the potential of FMPE to enhance performance in
+challenging inference scenarios, thereby paving the way for more advanced
+applications to scientific problems.
+</p></li>
+</ul>
+
+<h2>noise learning</h2>
+<h2>data-free</h2>
+<h2>transformer</h2>
+<h3>Title: Do We Really Need a Large Number of Visual Prompts?. (arXiv:2305.17223v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17223">http://arxiv.org/abs/2305.17223</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17223] Do We Really Need a Large Number of Visual Prompts?](http://arxiv.org/abs/2305.17223) #transformer</code></li>
+<li>Summary: <p>Due to increasing interest in adapting models on resource-constrained edges,
+parameter-efficient transfer learning has been widely explored. Among various
+methods, Visual Prompt Tuning (VPT), prepending learnable prompts to input
+space, shows competitive fine-tuning performance compared to training of full
+network parameters. However, VPT increases the number of input tokens,
+resulting in additional computational overhead. In this paper, we analyze the
+impact of the number of prompts on fine-tuning performance and self-attention
+operation in a vision transformer architecture. Through theoretical and
+empirical analysis we show that adding more prompts does not lead to linear
+performance improvement. Further, we propose a Prompt Condensation (PC)
+technique that aims to prevent performance degradation from using a small
+number of prompts. We validate our methods on FGVC and VTAB-1k tasks and show
+that our approach reduces the number of prompts by ~70% while maintaining
+accuracy.
+</p></li>
+</ul>
+
+<h3>Title: Radar Enlighten the Dark: Enhancing Low-Visibility Perception for Automated Vehicles with Camera-Radar Fusion. (arXiv:2305.17318v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17318">http://arxiv.org/abs/2305.17318</a></li>
+<li>Code URL: <a href="https://github.com/purduedigitaltwin/redformer">https://github.com/purduedigitaltwin/redformer</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17318] Radar Enlighten the Dark: Enhancing Low-Visibility Perception for Automated Vehicles with Camera-Radar Fusion](http://arxiv.org/abs/2305.17318) #transformer</code></li>
+<li>Summary: <p>Sensor fusion is a crucial augmentation technique for improving the accuracy
+and reliability of perception systems for automated vehicles under diverse
+driving conditions. However, adverse weather and low-light conditions remain
+challenging, where sensor performance degrades significantly, exposing vehicle
+safety to potential risks. Advanced sensors such as LiDARs can help mitigate
+the issue but with extremely high marginal costs. In this paper, we propose a
+novel transformer-based 3D object detection model "REDFormer" to tackle low
+visibility conditions, exploiting the power of a more practical and
+cost-effective solution by leveraging bird's-eye-view camera-radar fusion.
+Using the nuScenes dataset with multi-radar point clouds, weather information,
+and time-of-day data, our model outperforms state-of-the-art (SOTA) models on
+classification and detection accuracy. Finally, we provide extensive ablation
+studies of each model component on their contributions to address the
+above-mentioned challenges. Particularly, it is shown in the experiments that
+our model achieves a significant performance improvement over the baseline
+model in low-visibility scenarios, specifically exhibiting a 31.31% increase in
+rainy scenes and a 46.99% enhancement in nighttime scenes.The source code of
+this study is publicly available.
+</p></li>
+</ul>
+
+<h3>Title: Zero-TPrune: Zero-Shot Token Pruning through Leveraging of the Attention Graph in Pre-Trained Transformers. (arXiv:2305.17328v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17328">http://arxiv.org/abs/2305.17328</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17328] Zero-TPrune: Zero-Shot Token Pruning through Leveraging of the Attention Graph in Pre-Trained Transformers](http://arxiv.org/abs/2305.17328) #transformer</code></li>
+<li>Summary: <p>Deployment of Transformer models on the edge is increasingly challenging due
+to the exponentially growing model size and inference cost that scales
+quadratically with the number of tokens in the input sequence. Token pruning is
+an emerging solution to address this challenge due to its ease of deployment on
+various Transformer backbones. However, most token pruning methods require a
+computationally-expensive fine-tuning process after or during pruning, which is
+not desirable in many cases. Some recent works explore pruning of off-the-shelf
+pre-trained Transformers without fine-tuning. However, they only take the
+importance of tokens into consideration. In this work, we propose Zero-TPrune,
+the first zero-shot method that considers both the importance and similarity of
+tokens in performing token pruning. Zero-TPrune leverages the attention graph
+of pre-trained Transformer models to produce an importance rank for tokens and
+removes the less informative tokens. The attention matrix can be thought of as
+an adjacency matrix of a directed graph, to which a graph shift operator can be
+applied iteratively to obtain the importance score distribution. This
+distribution guides the partition of tokens into two groups and measures
+similarity between them. Due to the elimination of the fine-tuning overhead,
+Zero-TPrune can easily prune large models and perform hyperparameter tuning
+efficiently. We evaluate the performance of Zero-TPrune on vision tasks by
+applying it to various vision Transformer backbones. Compared with
+state-of-the-art pruning methods that require fine-tuning, Zero-TPrune not only
+eliminates the need for fine-tuning after pruning, but does so with only around
+0.3% accuracy loss. Compared with state-of-the-art fine-tuning-free pruning
+methods, Zero-TPrune reduces accuracy loss by up to 45% on medium-sized models.
+</p></li>
+</ul>
+
+<h3>Title: Multi-label Video Classification for Underwater Ship Inspection. (arXiv:2305.17338v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17338">http://arxiv.org/abs/2305.17338</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17338] Multi-label Video Classification for Underwater Ship Inspection](http://arxiv.org/abs/2305.17338) #transformer</code></li>
+<li>Summary: <p>Today ship hull inspection including the examination of the external coating,
+detection of defects, and other types of external degradation such as corrosion
+and marine growth is conducted underwater by means of Remotely Operated
+Vehicles (ROVs). The inspection process consists of a manual video analysis
+which is a time-consuming and labor-intensive process. To address this, we
+propose an automatic video analysis system using deep learning and computer
+vision to improve upon existing methods that only consider spatial information
+on individual frames in underwater ship hull video inspection. By exploring the
+benefits of adding temporal information and analyzing frame-based classifiers,
+we propose a multi-label video classification model that exploits the
+self-attention mechanism of transformers to capture spatiotemporal attention in
+consecutive video frames. Our proposed method has demonstrated promising
+results and can serve as a benchmark for future research and development in
+underwater video inspection applications.
+</p></li>
+</ul>
+
+<h3>Title: Slide, Constrain, Parse, Repeat: Synchronous SlidingWindows for Document AMR Parsing. (arXiv:2305.17273v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17273">http://arxiv.org/abs/2305.17273</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17273] Slide, Constrain, Parse, Repeat: Synchronous SlidingWindows for Document AMR Parsing](http://arxiv.org/abs/2305.17273) #transformer</code></li>
+<li>Summary: <p>The sliding window approach provides an elegant way to handle contexts of
+sizes larger than the Transformer's input window, for tasks like language
+modeling. Here we extend this approach to the sequence-to-sequence task of
+document parsing. For this, we exploit recent progress in transition-based
+parsing to implement a parser with synchronous sliding windows over source and
+target. We develop an oracle and a parser for document-level AMR by expanding
+on Structured-BART such that it leverages source-target alignments and
+constrains decoding to guarantee synchronicity and consistency across
+overlapping windows. We evaluate our oracle and parser using the Abstract
+Meaning Representation (AMR) parsing 3.0 corpus. On the Multi-Sentence
+development set of AMR 3.0, we show that our transition oracle loses only 8\%
+of the gold cross-sentential links despite using a sliding window. In practice,
+this approach also results in a high-quality document-level parser with
+manageable memory requirements. Our proposed system performs on par with the
+state-of-the-art pipeline approach for document-level AMR parsing task on
+Multi-Sentence AMR 3.0 corpus while maintaining sentence-level parsing
+performance.
+</p></li>
+</ul>
+
+<h3>Title: Diagnostic Spatio-temporal Transformer with Faithful Encoding. (arXiv:2305.17149v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17149">http://arxiv.org/abs/2305.17149</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17149] Diagnostic Spatio-temporal Transformer with Faithful Encoding](http://arxiv.org/abs/2305.17149) #transformer</code></li>
+<li>Summary: <p>This paper addresses the task of anomaly diagnosis when the underlying data
+generation process has a complex spatio-temporal (ST) dependency. The key
+technical challenge is to extract actionable insights from the dependency
+tensor characterizing high-order interactions among temporal and spatial
+indices. We formalize the problem as supervised dependency discovery, where the
+ST dependency is learned as a side product of multivariate time-series
+classification. We show that temporal positional encoding used in existing ST
+transformer works has a serious limitation in capturing higher frequencies
+(short time scales). We propose a new positional encoding with a theoretical
+guarantee, based on discrete Fourier transform. We also propose a new ST
+dependency discovery framework, which can provide readily consumable diagnostic
+information in both spatial and temporal directions. Finally, we demonstrate
+the utility of the proposed model, DFStrans (Diagnostic Fourier-based
+Spatio-temporal Transformer), in a real industrial application of building
+elevator control.
+</p></li>
+</ul>
+
+<h3>Title: Hardware-Efficient Transformer Training via Piecewise Affine Operations. (arXiv:2305.17190v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17190">http://arxiv.org/abs/2305.17190</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17190] Hardware-Efficient Transformer Training via Piecewise Affine Operations](http://arxiv.org/abs/2305.17190) #transformer</code></li>
+<li>Summary: <p>Multiplications are responsible for most of the computational cost involved
+in neural network training and inference. Recent research has thus looked for
+ways to reduce the cost associated with them. Inspired by Mogami (2020), we
+replace multiplication with a cheap piecewise affine approximation that is
+achieved by adding the bit representation of the floating point numbers
+together as integers. We show that transformers can be trained with the
+resulting modified matrix multiplications on both vision and language tasks
+with little to no performance impact, and without changes to the training
+hyperparameters. We further replace all non-linearities in the networks making
+them fully and jointly piecewise affine in both inputs and weights. Finally, we
+show that we can eliminate all multiplications in the entire training process,
+including operations in the forward pass, backward pass and optimizer update,
+demonstrating the first successful training of modern neural network
+architectures in a fully multiplication-free fashion.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Benchmarking Diverse-Modal Entity Linking with Generative Models. (arXiv:2305.17337v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17337">http://arxiv.org/abs/2305.17337</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17337] Benchmarking Diverse-Modal Entity Linking with Generative Models](http://arxiv.org/abs/2305.17337) #generative</code></li>
+<li>Summary: <p>Entities can be expressed in diverse formats, such as texts, images, or
+column names and cell values in tables. While existing entity linking (EL)
+models work well on per modality configuration, such as text-only EL, visual
+grounding, or schema linking, it is more challenging to design a unified model
+for diverse modality configurations. To bring various modality configurations
+together, we constructed a benchmark for diverse-modal EL (DMEL) from existing
+EL datasets, covering all three modalities including text, image, and table. To
+approach the DMEL task, we proposed a generative diverse-modal model (GDMM)
+following a multimodal-encoder-decoder paradigm. Pre-training \Model with rich
+corpora builds a solid foundation for DMEL without storing the entire KB for
+inference. Fine-tuning GDMM builds a stronger DMEL baseline, outperforming
+state-of-the-art task-specific EL models by 8.51 F1 score on average.
+Additionally, extensive error analyses are conducted to highlight the
+challenges of DMEL, facilitating future research on this task.
+</p></li>
+</ul>
+
+<h3>Title: Functional Flow Matching. (arXiv:2305.17209v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17209">http://arxiv.org/abs/2305.17209</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17209] Functional Flow Matching](http://arxiv.org/abs/2305.17209) #generative</code></li>
+<li>Summary: <p>In this work, we propose Functional Flow Matching (FFM), a function-space
+generative model that generalizes the recently-introduced Flow Matching model
+to operate directly in infinite-dimensional spaces. Our approach works by first
+defining a path of probability measures that interpolates between a fixed
+Gaussian measure and the data distribution, followed by learning a vector field
+on the underlying space of functions that generates this path of measures. Our
+method does not rely on likelihoods or simulations, making it well-suited to
+the function space setting. We provide both a theoretical framework for
+building such models and an empirical evaluation of our techniques. We
+demonstrate through experiments on synthetic and real-world benchmarks that our
+proposed FFM method outperforms several recently proposed function-space
+generative models.
+</p></li>
+</ul>
+
+<h3>Title: GC-Flow: A Graph-Based Flow Network for Effective Clustering. (arXiv:2305.17284v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17284">http://arxiv.org/abs/2305.17284</a></li>
+<li>Code URL: <a href="https://github.com/xztcwang/gcflow">https://github.com/xztcwang/gcflow</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17284] GC-Flow: A Graph-Based Flow Network for Effective Clustering](http://arxiv.org/abs/2305.17284) #generative</code></li>
+<li>Summary: <p>Graph convolutional networks (GCNs) are \emph{discriminative models} that
+directly model the class posterior $p(y|\mathbf{x})$ for semi-supervised
+classification of graph data. While being effective, as a representation
+learning approach, the node representations extracted from a GCN often miss
+useful information for effective clustering, because the objectives are
+different. In this work, we design normalizing flows that replace GCN layers,
+leading to a \emph{generative model} that models both the class conditional
+likelihood $p(\mathbf{x}|y)$ and the class prior $p(y)$. The resulting neural
+network, GC-Flow, retains the graph convolution operations while being equipped
+with a Gaussian mixture representation space. It enjoys two benefits: it not
+only maintains the predictive power of GCN, but also produces well-separated
+clusters, due to the structuring of the representation space. We demonstrate
+these benefits on a variety of benchmark data sets. Moreover, we show that
+additional parameterization, such as that on the adjacency matrix used for
+graph convolutions, yields additional improvement in clustering.
+</p></li>
+</ul>
+
+<h2>large language model</h2>
+<h3>Title: Generating Images with Multimodal Language Models. (arXiv:2305.17216v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17216">http://arxiv.org/abs/2305.17216</a></li>
+<li>Code URL: <a href="https://github.com/kohjingyu/gill">https://github.com/kohjingyu/gill</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17216] Generating Images with Multimodal Language Models](http://arxiv.org/abs/2305.17216) #large language model</code></li>
+<li>Summary: <p>We propose a method to fuse frozen text-only large language models (LLMs)
+with pre-trained image encoder and decoder models, by mapping between their
+embedding spaces. Our model demonstrates a wide suite of multimodal
+capabilities: image retrieval, novel image generation, and multimodal dialogue.
+Ours is the first approach capable of conditioning on arbitrarily interleaved
+image and text inputs to generate coherent image (and text) outputs. To achieve
+strong performance on image generation, we propose an efficient mapping network
+to ground the LLM to an off-the-shelf text-to-image generation model. This
+mapping network translates hidden representations of text into the embedding
+space of the visual models, enabling us to leverage the strong text
+representations of the LLM for visual outputs. Our approach outperforms
+baseline generation models on tasks with longer and more complex language. In
+addition to novel image generation, our model is also capable of image
+retrieval from a prespecified dataset, and decides whether to retrieve or
+generate at inference time. This is done with a learnt decision module which
+conditions on the hidden representations of the LLM. Our model exhibits a wider
+range of capabilities compared to prior multimodal language models. It can
+process image-and-text inputs, and produce retrieved images, generated images,
+and generated text -- outperforming non-LLM based generation models across
+several text-to-image tasks that measure context dependence.
+</p></li>
+</ul>
+
+<h3>Title: Heterogeneous Value Evaluation for Large Language Models. (arXiv:2305.17147v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17147">http://arxiv.org/abs/2305.17147</a></li>
+<li>Code URL: <a href="https://github.com/zowiezhang/a2ehv">https://github.com/zowiezhang/a2ehv</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17147] Heterogeneous Value Evaluation for Large Language Models](http://arxiv.org/abs/2305.17147) #large language model</code></li>
+<li>Summary: <p>The emergent capabilities of Large Language Models (LLMs) have made it
+crucial to align their values with those of humans. Current methodologies
+typically attempt alignment with a homogeneous human value and requires human
+verification, yet lack consensus on the desired aspect and depth of alignment
+and resulting human biases. In this paper, we propose A2EHV, an Automated
+Alignment Evaluation with a Heterogeneous Value system that (1) is automated to
+minimize individual human biases, and (2) allows assessments against various
+target values to foster heterogeneous agents. Our approach pivots on the
+concept of value rationality, which represents the ability for agents to
+execute behaviors that satisfy a target value the most. The quantification of
+value rationality is facilitated by the Social Value Orientation framework from
+social psychology, which partitions the value space into four categories to
+assess social preferences from agents' behaviors. We evaluate the value
+rationality of eight mainstream LLMs and observe that large models are more
+inclined to align neutral values compared to those with strong personal values.
+By examining the behavior of these LLMs, we contribute to a deeper
+understanding of value alignment within a heterogeneous value system.
+</p></li>
+</ul>
+
+<h3>Title: Large Language Models Can be Lazy Learners: Analyze Shortcuts in In-Context Learning. (arXiv:2305.17256v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17256">http://arxiv.org/abs/2305.17256</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17256] Large Language Models Can be Lazy Learners: Analyze Shortcuts in In-Context Learning](http://arxiv.org/abs/2305.17256) #large language model</code></li>
+<li>Summary: <p>Large language models (LLMs) have recently shown great potential for
+in-context learning, where LLMs learn a new task simply by conditioning on a
+few input-label pairs (prompts). Despite their potential, our understanding of
+the factors influencing end-task performance and the robustness of in-context
+learning remains limited. This paper aims to bridge this knowledge gap by
+investigating the reliance of LLMs on shortcuts or spurious correlations within
+prompts. Through comprehensive experiments on classification and extraction
+tasks, we reveal that LLMs are "lazy learners" that tend to exploit shortcuts
+in prompts for downstream tasks. Additionally, we uncover a surprising finding
+that larger models are more likely to utilize shortcuts in prompts during
+inference. Our findings provide a new perspective on evaluating robustness in
+in-context learning and pose new challenges for detecting and mitigating the
+use of shortcuts in prompts.
+</p></li>
+</ul>
+
+<h3>Title: Chain-of-Thought Hub: A Continuous Effort to Measure Large Language Models' Reasoning Performance. (arXiv:2305.17306v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2305.17306">http://arxiv.org/abs/2305.17306</a></li>
+<li>Code URL: <a href="https://github.com/franxyao/chain-of-thought-hub">https://github.com/franxyao/chain-of-thought-hub</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2305.17306] Chain-of-Thought Hub: A Continuous Effort to Measure Large Language Models' Reasoning Performance](http://arxiv.org/abs/2305.17306) #large language model</code></li>
+<li>Summary: <p>As large language models (LLMs) are continuously being developed, their
+evaluation becomes increasingly important yet challenging. This work proposes
+Chain-of-Thought Hub, an open-source evaluation suite on the multi-step
+reasoning capabilities of large language models. We are interested in this
+setting for two reasons: (1) from the behavior of GPT and PaLM model family, we
+observe that complex reasoning is likely to be a key differentiator between
+weaker and stronger LLMs; (2) we envisage large language models to become the
+next-generation computational platform and foster an ecosystem of LLM-based new
+applications, this naturally requires the foundation models to perform complex
+tasks that often involve the composition of linguistic and logical operations.
+Our approach is to compile a suite of challenging reasoning benchmarks to track
+the progress of LLMs. Our current results show that: (1) model scale clearly
+correlates with reasoning capabilities; (2) As of May 2023, Claude-v1.3 and
+PaLM-2 are the only two models that are comparable with GPT-4, while
+open-sourced models still lag behind; (3) LLaMA-65B performs closely to
+code-davinci-002, indicating that with successful further development such as
+reinforcement learning from human feedback (RLHF), it has great potential to be
+close to GPT-3.5-Turbo. Our results also suggest that for the open-source
+efforts to catch up, the community may focus more on building better base
+models and exploring RLHF.
+</p></li>
+</ul>
+
+<h2>segmentation</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
