@@ -11,9 +11,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
@@ -35,3 +32,13 @@ jobs:
           git add .
           git commit -m "update"
           git push --force origin main
+
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'static.yml',
+              ref: 'main',
+            })
