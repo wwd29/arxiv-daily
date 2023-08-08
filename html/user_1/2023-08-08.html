@@ -1,0 +1,415 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Degeneration-Tuning: Using Scrambled Grid shield Unwanted Concepts from Stable Diffusion. (arXiv:2308.02552v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02552">http://arxiv.org/abs/2308.02552</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02552]] Degeneration-Tuning: Using Scrambled Grid shield Unwanted Concepts from Stable Diffusion(http://arxiv.org/abs/2308.02552)</code></li>
+<li>Summary: <p>Owing to the unrestricted nature of the content in the training data, large
+text-to-image diffusion models, such as Stable Diffusion (SD), are capable of
+generating images with potentially copyrighted or dangerous content based on
+corresponding textual concepts information. This includes specific intellectual
+property (IP), human faces, and various artistic styles. However, Negative
+Prompt, a widely used method for content removal, frequently fails to conceal
+this content due to inherent limitations in its inference logic. In this work,
+we propose a novel strategy named \textbf{Degeneration-Tuning (DT)} to shield
+contents of unwanted concepts from SD weights. By utilizing Scrambled Grid to
+reconstruct the correlation between undesired concepts and their corresponding
+image domain, we guide SD to generate meaningless content when such textual
+concepts are provided as input. As this adaptation occurs at the level of the
+model's weights, the SD, after DT, can be grafted onto other conditional
+diffusion frameworks like ControlNet to shield unwanted concepts. In addition
+to qualitatively showcasing the effectiveness of our DT method in protecting
+various types of concepts, a quantitative comparison of the SD before and after
+DT indicates that the DT method does not significantly impact the generative
+quality of other contents. The FID and IS scores of the model on COCO-30K
+exhibit only minor changes after DT, shifting from 12.61 and 39.20 to 13.04 and
+38.25, respectively, which clearly outperforms the previous methods.
+</p></li>
+</ul>
+
+<h3>Title: ConceptLab: Creative Generation using Diffusion Prior Constraints. (arXiv:2308.02669v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02669">http://arxiv.org/abs/2308.02669</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02669]] ConceptLab: Creative Generation using Diffusion Prior Constraints(http://arxiv.org/abs/2308.02669)</code></li>
+<li>Summary: <p>Recent text-to-image generative models have enabled us to transform our words
+into vibrant, captivating imagery. The surge of personalization techniques that
+has followed has also allowed us to imagine unique concepts in new scenes.
+However, an intriguing question remains: How can we generate a new, imaginary
+concept that has never been seen before? In this paper, we present the task of
+creative text-to-image generation, where we seek to generate new members of a
+broad category (e.g., generating a pet that differs from all existing pets). We
+leverage the under-studied Diffusion Prior models and show that the creative
+generation problem can be formulated as an optimization process over the output
+space of the diffusion prior, resulting in a set of "prior constraints". To
+keep our generated concept from converging into existing members, we
+incorporate a question-answering model that adaptively adds new constraints to
+the optimization problem, encouraging the model to discover increasingly more
+unique creations. Finally, we show that our prior constraints can also serve as
+a strong mixing mechanism allowing us to create hybrids between generated
+concepts, introducing even more flexibility into the creative process.
+</p></li>
+</ul>
+
+<h3>Title: Sketch and Text Guided Diffusion Model for Colored Point Cloud Generation. (arXiv:2308.02874v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02874">http://arxiv.org/abs/2308.02874</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02874]] Sketch and Text Guided Diffusion Model for Colored Point Cloud Generation(http://arxiv.org/abs/2308.02874)</code></li>
+<li>Summary: <p>Diffusion probabilistic models have achieved remarkable success in text
+guided image generation. However, generating 3D shapes is still challenging due
+to the lack of sufficient data containing 3D models along with their
+descriptions. Moreover, text based descriptions of 3D shapes are inherently
+ambiguous and lack details. In this paper, we propose a sketch and text guided
+probabilistic diffusion model for colored point cloud generation that
+conditions the denoising process jointly with a hand drawn sketch of the object
+and its textual description. We incrementally diffuse the point coordinates and
+color values in a joint diffusion process to reach a Gaussian distribution.
+Colored point cloud generation thus amounts to learning the reverse diffusion
+process, conditioned by the sketch and text, to iteratively recover the desired
+shape and color. Specifically, to learn effective sketch-text embedding, our
+model adaptively aggregates the joint embedding of text prompt and the sketch
+based on a capsule attention network. Our model uses staged diffusion to
+generate the shape and then assign colors to different parts conditioned on the
+appearance prompt while preserving precise shapes from the first stage. This
+gives our model the flexibility to extend to multiple tasks, such as appearance
+re-editing and part segmentation. Experimental results demonstrate that our
+model outperforms recent state-of-the-art in point cloud generation.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Can Self-Supervised Representation Learning Methods Withstand Distribution Shifts and Corruptions?. (arXiv:2308.02525v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02525">http://arxiv.org/abs/2308.02525</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02525]] Can Self-Supervised Representation Learning Methods Withstand Distribution Shifts and Corruptions?(http://arxiv.org/abs/2308.02525)</code></li>
+<li>Summary: <p>Self-supervised learning in computer vision aims to leverage the inherent
+structure and relationships within data to learn meaningful representations
+without explicit human annotation, enabling a holistic understanding of visual
+scenes. Robustness in vision machine learning ensures reliable and consistent
+performance, enhancing generalization, adaptability, and resistance to noise,
+variations, and adversarial attacks. Self-supervised paradigms, namely
+contrastive learning, knowledge distillation, mutual information maximization,
+and clustering, have been considered to have shown advances in invariant
+learning representations. This work investigates the robustness of learned
+representations of self-supervised learning approaches focusing on distribution
+shifts and image corruptions in computer vision. Detailed experiments have been
+conducted to study the robustness of self-supervised learning methods on
+distribution shifts and image corruptions. The empirical analysis demonstrates
+a clear relationship between the performance of learned representations within
+self-supervised paradigms and the severity of distribution shifts and
+corruptions. Notably, higher levels of shifts and corruptions are found to
+significantly diminish the robustness of the learned representations. These
+findings highlight the critical impact of distribution shifts and image
+corruptions on the performance and resilience of self-supervised learning
+methods, emphasizing the need for effective strategies to mitigate their
+adverse effects. The study strongly advocates for future research in the field
+of self-supervised representation learning to prioritize the key aspects of
+safety and robustness in order to ensure practical applicability. The source
+code and results are available on GitHub.
+</p></li>
+</ul>
+
+<h3>Title: A Symbolic Character-Aware Model for Solving Geometry Problems. (arXiv:2308.02823v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02823">http://arxiv.org/abs/2308.02823</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02823]] A Symbolic Character-Aware Model for Solving Geometry Problems(http://arxiv.org/abs/2308.02823)</code></li>
+<li>Summary: <p>AI has made significant progress in solving math problems, but geometry
+problems remain challenging due to their reliance on both text and diagrams. In
+the text description, symbolic characters such as "$\triangle$ABC" often serve
+as a bridge to connect the corresponding diagram. However, by simply tokenizing
+symbolic characters into individual letters (e.g., 'A', 'B' and 'C'), existing
+works fail to study them explicitly and thus lose the semantic relationship
+with the diagram. In this paper, we develop a symbolic character-aware model to
+fully explore the role of these characters in both text and diagram
+understanding and optimize the model under a multi-modal reasoning framework.
+In the text encoder, we propose merging individual symbolic characters to form
+one semantic unit along with geometric information from the corresponding
+diagram. For the diagram encoder, we pre-train it under a multi-label
+classification framework with the symbolic characters as labels. In addition,
+we enhance the geometry diagram understanding ability via a self-supervised
+learning method under the masked image modeling auxiliary task. By integrating
+the proposed model into a general encoder-decoder pipeline for solving geometry
+problems, we demonstrate its superiority on two benchmark datasets, including
+GeoQA and Geometry3K, with extensive experiments. Specifically, on GeoQA, the
+question-solving accuracy is increased from 60.0\% to 64.1\%, achieving a new
+state-of-the-art accuracy; on Geometry3K, we reduce the question average
+solving steps from 6.9 down to 6.0 with marginally higher solving accuracy.
+</p></li>
+</ul>
+
+<h3>Title: SimTeG: A Frustratingly Simple Approach Improves Textual Graph Learning. (arXiv:2308.02565v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02565">http://arxiv.org/abs/2308.02565</a></li>
+<li>Code URL: https://github.com/vermouthdky/simteg</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02565]] SimTeG: A Frustratingly Simple Approach Improves Textual Graph Learning(http://arxiv.org/abs/2308.02565)</code></li>
+<li>Summary: <p>Textual graphs (TGs) are graphs whose nodes correspond to text (sentences or
+documents), which are widely prevalent. The representation learning of TGs
+involves two stages: (i) unsupervised feature extraction and (ii) supervised
+graph representation learning. In recent years, extensive efforts have been
+devoted to the latter stage, where Graph Neural Networks (GNNs) have dominated.
+However, the former stage for most existing graph benchmarks still relies on
+traditional feature engineering techniques. More recently, with the rapid
+development of language models (LMs), researchers have focused on leveraging
+LMs to facilitate the learning of TGs, either by jointly training them in a
+computationally intensive framework (merging the two stages), or designing
+complex self-supervised training tasks for feature extraction (enhancing the
+first stage). In this work, we present SimTeG, a frustratingly Simple approach
+for Textual Graph learning that does not innovate in frameworks, models, and
+tasks. Instead, we first perform supervised parameter-efficient fine-tuning
+(PEFT) on a pre-trained LM on the downstream task, such as node classification.
+We then generate node embeddings using the last hidden states of finetuned LM.
+These derived features can be further utilized by any GNN for training on the
+same task. We evaluate our approach on two fundamental graph representation
+learning tasks: node classification and link prediction. Through extensive
+experiments, we show that our approach significantly improves the performance
+of various GNNs on multiple graph benchmarks.
+</p></li>
+</ul>
+
+<h3>Title: Personalization of Stress Mobile Sensing using Self-Supervised Learning. (arXiv:2308.02731v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02731">http://arxiv.org/abs/2308.02731</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02731]] Personalization of Stress Mobile Sensing using Self-Supervised Learning(http://arxiv.org/abs/2308.02731)</code></li>
+<li>Summary: <p>Stress is widely recognized as a major contributor to a variety of health
+issues. Stress prediction using biosignal data recorded by wearables is a key
+area of study in mobile sensing research because real-time stress prediction
+can enable digital interventions to immediately react at the onset of stress,
+helping to avoid many psychological and physiological symptoms such as heart
+rhythm irregularities. Electrodermal activity (EDA) is often used to measure
+stress. However, major challenges with the prediction of stress using machine
+learning include the subjectivity and sparseness of the labels, a large feature
+space, relatively few labels, and a complex nonlinear and subjective
+relationship between the features and outcomes. To tackle these issues, we
+examine the use of model personalization: training a separate stress prediction
+model for each user. To allow the neural network to learn the temporal dynamics
+of each individual's baseline biosignal patterns, thus enabling personalization
+with very few labels, we pre-train a 1-dimensional convolutional neural network
+(CNN) using self-supervised learning (SSL). We evaluate our method using the
+Wearable Stress and Affect prediction (WESAD) dataset. We fine-tune the
+pre-trained networks to the stress prediction task and compare against
+equivalent models without any self-supervised pre-training. We discover that
+embeddings learned using our pre-training method outperform supervised
+baselines with significantly fewer labeled data points: the models trained with
+SSL require less than 30% of the labels to reach equivalent performance without
+personalized SSL. This personalized learning method can enable precision health
+systems which are tailored to each subject and require few annotations by the
+end user, thus allowing for the mobile sensing of increasingly complex,
+heterogeneous, and subjective outcomes such as stress.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h2>generative</h2>
+<h3>Title: Learning to Generate Training Datasets for Robust Semantic Segmentation. (arXiv:2308.02535v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02535">http://arxiv.org/abs/2308.02535</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02535]] Learning to Generate Training Datasets for Robust Semantic Segmentation(http://arxiv.org/abs/2308.02535)</code></li>
+<li>Summary: <p>Semantic segmentation techniques have shown significant progress in recent
+years, but their robustness to real-world perturbations and data samples not
+seen during training remains a challenge, particularly in safety-critical
+applications. In this paper, we propose a novel approach to improve the
+robustness of semantic segmentation techniques by leveraging the synergy
+between label-to-image generators and image-to-label segmentation models.
+Specifically, we design and train Robusta, a novel robust conditional
+generative adversarial network to generate realistic and plausible perturbed or
+outlier images that can be used to train reliable segmentation models. We
+conduct in-depth studies of the proposed generative model, assess the
+performance and robustness of the downstream segmentation network, and
+demonstrate that our approach can significantly enhance the robustness of
+semantic segmentation techniques in the face of real-world perturbations,
+distribution shifts, and out-of-distribution samples. Our results suggest that
+this approach could be valuable in safety-critical applications, where the
+reliability of semantic segmentation techniques is of utmost importance and
+comes with a limited computational budget in inference. We will release our
+code shortly.
+</p></li>
+</ul>
+
+<h3>Title: Learning Implicit Entity-object Relations by Bidirectional Generative Alignment for Multimodal NER. (arXiv:2308.02570v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02570">http://arxiv.org/abs/2308.02570</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02570]] Learning Implicit Entity-object Relations by Bidirectional Generative Alignment for Multimodal NER(http://arxiv.org/abs/2308.02570)</code></li>
+<li>Summary: <p>The challenge posed by multimodal named entity recognition (MNER) is mainly
+two-fold: (1) bridging the semantic gap between text and image and (2) matching
+the entity with its associated object in image. Existing methods fail to
+capture the implicit entity-object relations, due to the lack of corresponding
+annotation. In this paper, we propose a bidirectional generative alignment
+method named BGA-MNER to tackle these issues. Our BGA-MNER consists of
+\texttt{image2text} and \texttt{text2image} generation with respect to
+entity-salient content in two modalities. It jointly optimizes the
+bidirectional reconstruction objectives, leading to aligning the implicit
+entity-object relations under such direct and powerful constraints.
+Furthermore, image-text pairs usually contain unmatched components which are
+noisy for generation. A stage-refined context sampler is proposed to extract
+the matched cross-modal content for generation. Extensive experiments on two
+benchmarks demonstrate that our method achieves state-of-the-art performance
+without image input during inference.
+</p></li>
+</ul>
+
+<h3>Title: Generation of Realistic Synthetic Raw Radar Data for Automated Driving Applications using Generative Adversarial Networks. (arXiv:2308.02632v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02632">http://arxiv.org/abs/2308.02632</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02632]] Generation of Realistic Synthetic Raw Radar Data for Automated Driving Applications using Generative Adversarial Networks(http://arxiv.org/abs/2308.02632)</code></li>
+<li>Summary: <p>The main approaches for simulating FMCW radar are based on ray tracing, which
+is usually computationally intensive and do not account for background noise.
+This work proposes a faster method for FMCW radar simulation capable of
+generating synthetic raw radar data using generative adversarial networks
+(GAN). The code and pre-trained weights are open-source and available on
+GitHub. This method generates 16 simultaneous chirps, which allows the
+generated data to be used for the further development of algorithms for
+processing radar data (filtering and clustering). This can increase the
+potential for data augmentation, e.g., by generating data in non-existent or
+safety-critical scenarios that are not reproducible in real life. In this work,
+the GAN was trained with radar measurements of a motorcycle and used to
+generate synthetic raw radar data of a motorcycle traveling in a straight line.
+For generating this data, the distance of the motorcycle and Gaussian noise are
+used as input to the neural network. The synthetic generated radar chirps were
+evaluated using the Frechet Inception Distance (FID). Then, the Range-Azimuth
+(RA) map is calculated twice: (1\textsuperscript{st}) based on synthetic data
+using this GAN and (2\textsuperscript{nd}) based on real data. Based on these
+RA maps, an algorithm with adaptive threshold and edge detection is used for
+object detection. The results have shown that the data is realistic in terms of
+coherent radar reflections of the motorcycle and background noise based on the
+comparison of chirps, the RA maps and the object detection results. Thus, the
+proposed method in this work has shown to minimize the simulation-to-reality
+gap for the generation of radar data.
+</p></li>
+</ul>
+
+<h3>Title: CoSMo: A constructor specification language for Abstract Wikipedia's content selection process. (arXiv:2308.02539v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02539">http://arxiv.org/abs/2308.02539</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02539]] CoSMo: A constructor specification language for Abstract Wikipedia's content selection process(http://arxiv.org/abs/2308.02539)</code></li>
+<li>Summary: <p>Representing snippets of information abstractly is a task that needs to be
+performed for various purposes, such as database view specification and the
+first stage in the natural language generation pipeline for generative AI from
+structured input, i.e., the content selection stage to determine what needs to
+be verbalised. For the Abstract Wikipedia project, requirements analysis
+revealed that such an abstract representation requires multilingual modelling,
+content selection covering declarative content and functions, and both classes
+and instances. There is no modelling language that meets either of the three
+features, let alone a combination. Following a rigorous language design process
+inclusive of broad stakeholder consultation, we created CoSMo, a novel {\sc
+Co}ntent {\sc S}election {\sc Mo}deling language that meets these and other
+requirements so that it may be useful both in Abstract Wikipedia as well as
+other contexts. We describe the design process, rationale and choices, the
+specification, and preliminary evaluation of the language.
+</p></li>
+</ul>
+
+<h3>Title: Evaluating ChatGPT and GPT-4 for Visual Programming. (arXiv:2308.02522v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02522">http://arxiv.org/abs/2308.02522</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02522]] Evaluating ChatGPT and GPT-4 for Visual Programming(http://arxiv.org/abs/2308.02522)</code></li>
+<li>Summary: <p>Generative AI and large language models have the potential to drastically
+improve the landscape of computing education by automatically generating
+personalized feedback and content. Recent works have studied the capabilities
+of these models for different programming education scenarios; however, these
+works considered only text-based programming, in particular, Python
+programming. Consequently, they leave open the question of how well these
+models would perform in visual programming domains popularly used for K-8
+programming education. The main research question we study is: Do
+state-of-the-art generative models show advanced capabilities in visual
+programming on par with their capabilities in text-based Python programming? In
+our work, we evaluate two models, ChatGPT (based on GPT-3.5) and GPT-4, in
+visual programming domains for various scenarios and assess performance using
+expert-based annotations. In particular, we base our evaluation using reference
+tasks from the domains of Hour of Code: Maze Challenge by Code-dot-org and
+Karel. Our results show that these models perform poorly and struggle to
+combine spatial, logical, and programming skills crucial for visual
+programming. These results also provide exciting directions for future work on
+developing techniques to improve the performance of generative models in visual
+programming.
+</p></li>
+</ul>
+
+<h3>Title: A Review of Change of Variable Formulas for Generative Modeling. (arXiv:2308.02652v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02652">http://arxiv.org/abs/2308.02652</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02652]] A Review of Change of Variable Formulas for Generative Modeling(http://arxiv.org/abs/2308.02652)</code></li>
+<li>Summary: <p>Change-of-variables (CoV) formulas allow to reduce complicated probability
+densities to simpler ones by a learned transformation with tractable Jacobian
+determinant. They are thus powerful tools for maximum-likelihood learning,
+Bayesian inference, outlier detection, model selection, etc. CoV formulas have
+been derived for a large variety of model types, but this information is
+scattered over many separate works. We present a systematic treatment from the
+unifying perspective of encoder/decoder architectures, which collects 28 CoV
+formulas in a single place, reveals interesting relationships between seemingly
+diverse methods, emphasizes important distinctions that are not always clear in
+the literature, and identifies surprising gaps for future research.
+</p></li>
+</ul>
+
+<h3>Title: A generative model for surrogates of spatial-temporal wildfire nowcasting. (arXiv:2308.02810v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02810">http://arxiv.org/abs/2308.02810</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02810]] A generative model for surrogates of spatial-temporal wildfire nowcasting(http://arxiv.org/abs/2308.02810)</code></li>
+<li>Summary: <p>Recent increase in wildfires worldwide has led to the need for real-time fire
+nowcasting. Physics-driven models, such as cellular automata and computational
+fluid dynamics can provide high-fidelity fire spread simulations but they are
+computationally expensive and time-consuming. Much effort has been put into
+developing machine learning models for fire prediction. However, these models
+are often region-specific and require a substantial quantity of simulation data
+for training purpose. This results in a significant amount of computational
+effort for different ecoregions. In this work, a generative model is proposed
+using a three-dimensional Vector-Quantized Variational Autoencoders to generate
+spatial-temporal sequences of unseen wildfire burned areas in a given
+ecoregion. The model is tested in the ecoregion of a recent massive wildfire
+event in California, known as the Chimney fire. Numerical results show that the
+model succeed in generating coherent and structured fire scenarios, taking into
+account the impact from geophysical variables, such as vegetation and slope.
+Generated data are also used to train a surrogate model for predicting wildfire
+dissemination, which has been tested on both simulation data and the real
+Chimney fire event.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Meta-Analysis and Systematic Review for Anomaly Network Intrusion Detection Systems: Detection Methods, Dataset, Validation Methodology, and Challenges. (arXiv:2308.02805v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.02805">http://arxiv.org/abs/2308.02805</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.02805]] Meta-Analysis and Systematic Review for Anomaly Network Intrusion Detection Systems: Detection Methods, Dataset, Validation Methodology, and Challenges(http://arxiv.org/abs/2308.02805)</code></li>
+<li>Summary: <p>Intrusion detection systems (IDSs) built on artificial intelligence (AI) are
+presented as latent mechanisms for actively detecting fresh attacks over a
+complex network. Although review papers are used the systematic review or
+simple methods to analyse and criticize the anomaly NIDS works, the current
+review uses a traditional way as a quantitative description to find current
+gaps by synthesizing and summarizing the data comparison without considering
+algorithms performance. This paper presents a systematic and meta-analysis
+study of AI for network intrusion detection systems (NIDS) focusing on deep
+learning (DL) and machine learning (ML) approaches in network security. Deep
+learning algorithms are explained in their structure, and data intrusion
+network is justified based on an infrastructure of networks and attack types.
+By conducting a meta-analysis and debating the validation of the DL and ML
+approach by effectiveness, used dataset, detected attacks, classification task,
+and time complexity, we offer a thorough benchmarking assessment of the current
+NIDS-based publications-based systematic approach. The proposed method is
+considered reviewing works for the anomaly-based network intrusion detection
+system (anomaly-NIDS) models. Furthermore, the effectiveness of proposed
+algorithms and selected datasets are discussed for the recent direction and
+improvements of ML and DL to the NIDS. The future trends for improving an
+anomaly-IDS for continuing detection in the evolution of cyberattacks are
+highlighted in several research studies.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
