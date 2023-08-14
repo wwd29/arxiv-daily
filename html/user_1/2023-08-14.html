@@ -1,0 +1,554 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: YOLOrtho -- A Unified Framework for Teeth Enumeration and Dental Disease Detection. (arXiv:2308.05967v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.05967">http://arxiv.org/abs/2308.05967</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.05967]] YOLOrtho -- A Unified Framework for Teeth Enumeration and Dental Disease Detection(http://arxiv.org/abs/2308.05967)</code></li>
+<li>Summary: <p>Detecting dental diseases through panoramic X-rays images is a standard
+procedure for dentists. Normally, a dentist need to identify diseases and find
+the infected teeth. While numerous machine learning models adopting this
+two-step procedure have been developed, there has not been an end-to-end model
+that can identify teeth and their associated diseases at the same time. To fill
+the gap, we develop YOLOrtho, a unified framework for teeth enumeration and
+dental disease detection. We develop our model on Dentex Challenge 2023 data,
+which consists of three distinct types of annotated data. The first part is
+labeled with quadrant, and the second part is labeled with quadrant and
+enumeration and the third part is labeled with quadrant, enumeration and
+disease. To further improve detection, we make use of Tufts Dental public
+dataset. To fully utilize the data and learn both teeth detection and disease
+identification simultaneously, we formulate diseases as attributes attached to
+their corresponding teeth. Due to the nature of position relation in teeth
+enumeration, We replace convolution layer with CoordConv in our model to
+provide more position information for the model. We also adjust the model
+architecture and insert one more upsampling layer in FPN in favor of large
+object detection. Finally, we propose a post-process strategy for teeth layout
+that corrects teeth enumeration based on linear sum assignment. Results from
+experiments show that our model exceeds large Diffusion-based model.
+</p></li>
+</ul>
+
+<h3>Title: Zero-shot Text-driven Physically Interpretable Face Editing. (arXiv:2308.05976v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.05976">http://arxiv.org/abs/2308.05976</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.05976]] Zero-shot Text-driven Physically Interpretable Face Editing(http://arxiv.org/abs/2308.05976)</code></li>
+<li>Summary: <p>This paper proposes a novel and physically interpretable method for face
+editing based on arbitrary text prompts. Different from previous
+GAN-inversion-based face editing methods that manipulate the latent space of
+GANs, or diffusion-based methods that model image manipulation as a reverse
+diffusion process, we regard the face editing process as imposing vector flow
+fields on face images, representing the offset of spatial coordinates and color
+for each image pixel. Under the above-proposed paradigm, we represent the
+vector flow field in two ways: 1) explicitly represent the flow vectors with
+rasterized tensors, and 2) implicitly parameterize the flow vectors as
+continuous, smooth, and resolution-agnostic neural fields, by leveraging the
+recent advances of implicit neural representations. The flow vectors are
+iteratively optimized under the guidance of the pre-trained Contrastive
+Language-Image Pretraining~(CLIP) model by maximizing the correlation between
+the edited image and the text prompt. We also propose a learning-based one-shot
+face editing framework, which is fast and adaptable to any text prompt input.
+Our method can also be flexibly extended to real-time video face editing.
+Compared with state-of-the-art text-driven face editing methods, our method can
+generate physically interpretable face editing results with high identity
+consistency and image quality. Our code will be made publicly available.
+</p></li>
+</ul>
+
+<h3>Title: Masked-Attention Diffusion Guidance for Spatially Controlling Text-to-Image Generation. (arXiv:2308.06027v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06027">http://arxiv.org/abs/2308.06027</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06027]] Masked-Attention Diffusion Guidance for Spatially Controlling Text-to-Image Generation(http://arxiv.org/abs/2308.06027)</code></li>
+<li>Summary: <p>Text-to-image synthesis has achieved high-quality results with recent
+advances in diffusion models. However, text input alone has high spatial
+ambiguity and limited user controllability. Most existing methods allow spatial
+control through additional visual guidance (e.g, sketches and semantic masks)
+but require additional training with annotated images. In this paper, we
+propose a method for spatially controlling text-to-image generation without
+further training of diffusion models. Our method is based on the insight that
+the cross-attention maps reflect the positional relationship between words and
+pixels. Our aim is to control the attention maps according to given semantic
+masks and text prompts. To this end, we first explore a simple approach of
+directly swapping the cross-attention maps with constant maps computed from the
+semantic regions. Moreover, we propose masked-attention guidance, which can
+generate images more faithful to semantic masks than the first approach.
+Masked-attention guidance indirectly controls attention to each word and pixel
+according to the semantic regions by manipulating noise images fed to diffusion
+models. Experiments show that our method enables more accurate spatial control
+than baselines qualitatively and quantitatively.
+</p></li>
+</ul>
+
+<h3>Title: Diverse Data Augmentation with Diffusions for Effective Test-time Prompt Tuning. (arXiv:2308.06038v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06038">http://arxiv.org/abs/2308.06038</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06038]] Diverse Data Augmentation with Diffusions for Effective Test-time Prompt Tuning(http://arxiv.org/abs/2308.06038)</code></li>
+<li>Summary: <p>Benefiting from prompt tuning, recent years have witnessed the promising
+performance of pre-trained vision-language models, e.g., CLIP, on versatile
+downstream tasks. In this paper, we focus on a particular setting of learning
+adaptive prompts on the fly for each test sample from an unseen new domain,
+which is known as test-time prompt tuning (TPT). Existing TPT methods typically
+rely on data augmentation and confidence selection. However, conventional data
+augmentation techniques, e.g., random resized crops, suffers from the lack of
+data diversity, while entropy-based confidence selection alone is not
+sufficient to guarantee prediction fidelity. To address these issues, we
+propose a novel TPT method, named DiffTPT, which leverages pre-trained
+diffusion models to generate diverse and informative new data. Specifically, we
+incorporate augmented data by both conventional method and pre-trained stable
+diffusion to exploit their respective merits, improving the models ability to
+adapt to unknown new test data. Moreover, to ensure the prediction fidelity of
+generated data, we introduce a cosine similarity-based filtration technique to
+select the generated data with higher similarity to the single test sample. Our
+experiments on test datasets with distribution shifts and unseen categories
+demonstrate that DiffTPT improves the zero-shot accuracy by an average of
+5.13\% compared to the state-of-the-art TPT method. Our code and models will be
+publicly released.
+</p></li>
+</ul>
+
+<h3>Title: Head Rotation in Denoising Diffusion Models. (arXiv:2308.06057v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06057">http://arxiv.org/abs/2308.06057</a></li>
+<li>Code URL: https://github.com/asperti/head-rotation</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06057]] Head Rotation in Denoising Diffusion Models(http://arxiv.org/abs/2308.06057)</code></li>
+<li>Summary: <p>Denoising Diffusion Models (DDM) are emerging as the cutting-edge technology
+in the realm of deep generative modeling, challenging the dominance of
+Generative Adversarial Networks. However, effectively exploring the latent
+space's semantics and identifying compelling trajectories for manipulating and
+editing important attributes of the generated samples remains challenging,
+primarily due to the high-dimensional nature of the latent space. In this
+study, we specifically concentrate on face rotation, which is known to be one
+of the most intricate editing operations. By leveraging a recent embedding
+technique for Denoising Diffusion Implicit Models (DDIM), we achieve, in many
+cases, noteworthy manipulations encompassing a wide rotation angle of $\pm
+30^o$, preserving the distinct characteristics of the individual. Our
+methodology exploits the computation of trajectories approximating clouds of
+latent representations of dataset samples with different yaw rotations through
+linear regression. Specific trajectories are obtained by restricting the
+analysis to subsets of data sharing significant attributes with the source
+image. One of these attributes is the light provenance: a byproduct of our
+research is a labeling of CelebA, categorizing images into three major groups
+based on the illumination direction: left, center, and right.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion-based Visual Counterfactual Explanations -- Towards Systematic Quantitative Evaluation. (arXiv:2308.06100v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06100">http://arxiv.org/abs/2308.06100</a></li>
+<li>Code URL: https://github.com/cairo-thws/dbvce_eval</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06100]] Diffusion-based Visual Counterfactual Explanations -- Towards Systematic Quantitative Evaluation(http://arxiv.org/abs/2308.06100)</code></li>
+<li>Summary: <p>Latest methods for visual counterfactual explanations (VCE) harness the power
+of deep generative models to synthesize new examples of high-dimensional images
+of impressive quality. However, it is currently difficult to compare the
+performance of these VCE methods as the evaluation procedures largely vary and
+often boil down to visual inspection of individual examples and small scale
+user studies. In this work, we propose a framework for systematic, quantitative
+evaluation of the VCE methods and a minimal set of metrics to be used. We use
+this framework to explore the effects of certain crucial design choices in the
+latest diffusion-based generative models for VCEs of natural image
+classification (ImageNet). We conduct a battery of ablation-like experiments,
+generating thousands of VCEs for a suite of classifiers of various complexity,
+accuracy and robustness. Our findings suggest multiple directions for future
+advancements and improvements of VCE methods. By sharing our methodology and
+our approach to tackle the computational challenges of such a study on a
+limited hardware setup (including the complete code base), we offer a valuable
+guidance for researchers in the field fostering consistency and transparency in
+the assessment of counterfactual explanations.
+</p></li>
+</ul>
+
+<h3>Title: Taming the Power of Diffusion Models for High-Quality Virtual Try-On with Appearance Flow. (arXiv:2308.06101v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06101">http://arxiv.org/abs/2308.06101</a></li>
+<li>Code URL: https://github.com/bcmi/DCI-VTON-Virtual-Try-On</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06101]] Taming the Power of Diffusion Models for High-Quality Virtual Try-On with Appearance Flow(http://arxiv.org/abs/2308.06101)</code></li>
+<li>Summary: <p>Virtual try-on is a critical image synthesis task that aims to transfer
+clothes from one image to another while preserving the details of both humans
+and clothes. While many existing methods rely on Generative Adversarial
+Networks (GANs) to achieve this, flaws can still occur, particularly at high
+resolutions. Recently, the diffusion model has emerged as a promising
+alternative for generating high-quality images in various applications.
+However, simply using clothes as a condition for guiding the diffusion model to
+inpaint is insufficient to maintain the details of the clothes. To overcome
+this challenge, we propose an exemplar-based inpainting approach that leverages
+a warping module to guide the diffusion model's generation effectively. The
+warping module performs initial processing on the clothes, which helps to
+preserve the local details of the clothes. We then combine the warped clothes
+with clothes-agnostic person image and add noise as the input of diffusion
+model. Additionally, the warped clothes is used as local conditions for each
+denoising process to ensure that the resulting output retains as much detail as
+possible. Our approach, namely Diffusion-based Conditional Inpainting for
+Virtual Try-ON (DCI-VTON), effectively utilizes the power of the diffusion
+model, and the incorporation of the warping module helps to produce
+high-quality and realistic virtual try-on results. Experimental results on
+VITON-HD demonstrate the effectiveness and superiority of our method.
+</p></li>
+</ul>
+
+<h3>Title: DatasetDM: Synthesizing Data with Perception Annotations Using Diffusion Models. (arXiv:2308.06160v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06160">http://arxiv.org/abs/2308.06160</a></li>
+<li>Code URL: https://github.com/showlab/datasetdm</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06160]] DatasetDM: Synthesizing Data with Perception Annotations Using Diffusion Models(http://arxiv.org/abs/2308.06160)</code></li>
+<li>Summary: <p>Current deep networks are very data-hungry and benefit from training on
+largescale datasets, which are often time-consuming to collect and annotate. By
+contrast, synthetic data can be generated infinitely using generative models
+such as DALL-E and diffusion models, with minimal effort and cost. In this
+paper, we present DatasetDM, a generic dataset generation model that can
+produce diverse synthetic images and the corresponding high-quality perception
+annotations (e.g., segmentation masks, and depth). Our method builds upon the
+pre-trained diffusion model and extends text-guided image synthesis to
+perception data generation. We show that the rich latent code of the diffusion
+model can be effectively decoded as accurate perception annotations using a
+decoder module. Training the decoder only needs less than 1% (around 100
+images) manually labeled images, enabling the generation of an infinitely large
+annotated dataset. Then these synthetic data can be used for training various
+perception models for downstream tasks. To showcase the power of the proposed
+approach, we generate datasets with rich dense pixel-wise labels for a wide
+range of downstream tasks, including semantic segmentation, instance
+segmentation, and depth estimation. Notably, it achieves 1) state-of-the-art
+results on semantic segmentation and instance segmentation; 2) significantly
+more robust on domain generalization than using the real data alone; and
+state-of-the-art results in zero-shot segmentation setting; and 3) flexibility
+for efficient application and novel task composition (e.g., image editing). The
+project website and code can be found at
+https://weijiawu.github.io/DatasetDM_page/ and
+https://github.com/showlab/DatasetDM, respectively
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Fine-Grained Self-Supervised Learning with Jigsaw Puzzles for Medical Image Classification. (arXiv:2308.05770v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.05770">http://arxiv.org/abs/2308.05770</a></li>
+<li>Code URL: https://github.com/kalelpark/FG-SSL</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.05770]] Fine-Grained Self-Supervised Learning with Jigsaw Puzzles for Medical Image Classification(http://arxiv.org/abs/2308.05770)</code></li>
+<li>Summary: <p>Classifying fine-grained lesions is challenging due to minor and subtle
+differences in medical images. This is because learning features of
+fine-grained lesions with highly minor differences is very difficult in
+training deep neural networks. Therefore, in this paper, we introduce
+Fine-Grained Self-Supervised Learning(FG-SSL) method for classifying subtle
+lesions in medical images. The proposed method progressively learns the model
+through hierarchical block such that the cross-correlation between the
+fine-grained Jigsaw puzzle and regularized original images is close to the
+identity matrix. We also apply hierarchical block for progressive fine-grained
+learning, which extracts different information in each step, to supervised
+learning for discovering subtle differences. Our method does not require an
+asymmetric model, nor does a negative sampling strategy, and is not sensitive
+to batch size. We evaluate the proposed fine-grained self-supervised learning
+method on comprehensive experiments using various medical image recognition
+datasets. In our experiments, the proposed method performs favorably compared
+to existing state-of-the-art approaches on the widely-used ISIC2018, APTOS2019,
+and ISIC2017 datasets.
+</p></li>
+</ul>
+
+<h3>Title: Generalizing Event-Based Motion Deblurring in Real-World Scenarios. (arXiv:2308.05932v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.05932">http://arxiv.org/abs/2308.05932</a></li>
+<li>Code URL: https://github.com/xiangz-0/gem</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.05932]] Generalizing Event-Based Motion Deblurring in Real-World Scenarios(http://arxiv.org/abs/2308.05932)</code></li>
+<li>Summary: <p>Event-based motion deblurring has shown promising results by exploiting
+low-latency events. However, current approaches are limited in their practical
+usage, as they assume the same spatial resolution of inputs and specific
+blurriness distributions. This work addresses these limitations and aims to
+generalize the performance of event-based deblurring in real-world scenarios.
+We propose a scale-aware network that allows flexible input spatial scales and
+enables learning from different temporal scales of motion blur. A two-stage
+self-supervised learning scheme is then developed to fit real-world data
+distribution. By utilizing the relativity of blurriness, our approach
+efficiently ensures the restored brightness and structure of latent images and
+further generalizes deblurring performance to handle varying spatial and
+temporal scales of motion blur in a self-distillation manner. Our method is
+extensively evaluated, demonstrating remarkable performance, and we also
+introduce a real-world dataset consisting of multi-scale blurry frames and
+events to facilitate research in event-based deblurring.
+</p></li>
+</ul>
+
+<h3>Title: Focused Specific Objects NeRF. (arXiv:2308.05970v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.05970">http://arxiv.org/abs/2308.05970</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.05970]] Focused Specific Objects NeRF(http://arxiv.org/abs/2308.05970)</code></li>
+<li>Summary: <p>Most NeRF-based models are designed for learning the entire scene, and
+complex scenes can lead to longer learning times and poorer rendering effects.
+This paper utilizes scene semantic priors to make improvements in fast
+training, allowing the network to focus on the specific targets and not be
+affected by complex backgrounds. The training speed can be increased by 7.78
+times with better rendering effect, and small to medium sized targets can be
+rendered faster. In addition, this improvement applies to all NeRF-based
+models. Considering the inherent multi-view consistency and smoothness of NeRF,
+this paper also studies weak supervision by sparsely sampling negative ray
+samples. With this method, training can be further accelerated and rendering
+quality can be maintained. Finally, this paper extends pixel semantic and color
+rendering formulas and proposes a new scene editing technique that can achieve
+unique displays of the specific semantic targets or masking them in rendering.
+To address the problem of unsupervised regions incorrect inferences in the
+scene, we also designed a self-supervised loop that combines morphological
+operations and clustering.
+</p></li>
+</ul>
+
+<h3>Title: Versatile Face Animator: Driving Arbitrary 3D Facial Avatar in RGBD Space. (arXiv:2308.06076v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06076">http://arxiv.org/abs/2308.06076</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06076]] Versatile Face Animator: Driving Arbitrary 3D Facial Avatar in RGBD Space(http://arxiv.org/abs/2308.06076)</code></li>
+<li>Summary: <p>Creating realistic 3D facial animation is crucial for various applications in
+the movie production and gaming industry, especially with the burgeoning demand
+in the metaverse. However, prevalent methods such as blendshape-based
+approaches and facial rigging techniques are time-consuming, labor-intensive,
+and lack standardized configurations, making facial animation production
+challenging and costly. In this paper, we propose a novel self-supervised
+framework, Versatile Face Animator, which combines facial motion capture with
+motion retargeting in an end-to-end manner, eliminating the need for
+blendshapes or rigs. Our method has the following two main characteristics: 1)
+we propose an RGBD animation module to learn facial motion from raw RGBD videos
+by hierarchical motion dictionaries and animate RGBD images rendered from 3D
+facial mesh coarse-to-fine, enabling facial animation on arbitrary 3D
+characters regardless of their topology, textures, blendshapes, and rigs; and
+2) we introduce a mesh retarget module to utilize RGBD animation to create 3D
+facial animation by manipulating facial mesh with controller transformations,
+which are estimated from dense optical flow fields and blended together with
+geodesic-distance-based weights. Comprehensive experiments demonstrate the
+effectiveness of our proposed framework in generating impressive 3D facial
+animation results, highlighting its potential as a promising solution for the
+cost-effective and efficient production of facial animation in the metaverse.
+</p></li>
+</ul>
+
+<h3>Title: Fast and Accurate Transferability Measurement by Evaluating Intra-class Feature Variance. (arXiv:2308.05986v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.05986">http://arxiv.org/abs/2308.05986</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.05986]] Fast and Accurate Transferability Measurement by Evaluating Intra-class Feature Variance(http://arxiv.org/abs/2308.05986)</code></li>
+<li>Summary: <p>Given a set of pre-trained models, how can we quickly and accurately find the
+most useful pre-trained model for a downstream task? Transferability
+measurement is to quantify how transferable is a pre-trained model learned on a
+source task to a target task. It is used for quickly ranking pre-trained models
+for a given task and thus becomes a crucial step for transfer learning.
+Existing methods measure transferability as the discrimination ability of a
+source model for a target data before transfer learning, which cannot
+accurately estimate the fine-tuning performance. Some of them restrict the
+application of transferability measurement in selecting the best supervised
+pre-trained models that have classifiers. It is important to have a general
+method for measuring transferability that can be applied in a variety of
+situations, such as selecting the best self-supervised pre-trained models that
+do not have classifiers, and selecting the best transferring layer for a target
+task. In this work, we propose TMI (TRANSFERABILITY MEASUREMENT WITH
+INTRA-CLASS FEATURE VARIANCE), a fast and accurate algorithm to measure
+transferability. We view transferability as the generalization of a pre-trained
+model on a target task by measuring intra-class feature variance. Intra-class
+variance evaluates the adaptability of the model to a new task, which measures
+how transferable the model is. Compared to previous studies that estimate how
+discriminative the models are, intra-class variance is more accurate than those
+as it does not require an optimal feature extractor and classifier. Extensive
+experiments on real-world datasets show that TMI outperforms competitors for
+selecting the top-5 best models, and exhibits consistently better correlation
+in 13 out of 17 cases.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Thinking Like an Expert:Multimodal Hypergraph-of-Thought (HoT) Reasoning to boost Foundation Modals. (arXiv:2308.06207v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06207">http://arxiv.org/abs/2308.06207</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06207]] Thinking Like an Expert:Multimodal Hypergraph-of-Thought (HoT) Reasoning to boost Foundation Modals(http://arxiv.org/abs/2308.06207)</code></li>
+<li>Summary: <p>Reasoning ability is one of the most crucial capabilities of a foundation
+model, signifying its capacity to address complex reasoning tasks.
+Chain-of-Thought (CoT) technique is widely regarded as one of the effective
+methods for enhancing the reasoning ability of foundation models and has
+garnered significant attention. However, the reasoning process of CoT is
+linear, step-by-step, similar to personal logical reasoning, suitable for
+solving general and slightly complicated problems. On the contrary, the
+thinking pattern of an expert owns two prominent characteristics that cannot be
+handled appropriately in CoT, i.e., high-order multi-hop reasoning and
+multimodal comparative judgement. Therefore, the core motivation of this paper
+is transcending CoT to construct a reasoning paradigm that can think like an
+expert. The hyperedge of a hypergraph could connect various vertices, making it
+naturally suitable for modelling high-order relationships. Inspired by this,
+this paper innovatively proposes a multimodal Hypergraph-of-Thought (HoT)
+reasoning paradigm, which enables the foundation models to possess the
+expert-level ability of high-order multi-hop reasoning and multimodal
+comparative judgement. Specifically, a textual hypergraph-of-thought is
+constructed utilizing triple as the primary thought to model higher-order
+relationships, and a hyperedge-of-thought is generated through multi-hop
+walking paths to achieve multi-hop inference. Furthermore, we devise a visual
+hypergraph-of-thought to interact with the textual hypergraph-of-thought via
+Cross-modal Co-Attention Graph Learning for multimodal comparative
+verification. Experimentations on the ScienceQA benchmark demonstrate the
+proposed HoT-based T5 outperforms CoT-based GPT3.5 and chatGPT, which is on par
+with CoT-based GPT4 with a lower model size.
+</p></li>
+</ul>
+
+<h3>Title: Foundation Model is Efficient Multimodal Multitask Model Selector. (arXiv:2308.06262v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06262">http://arxiv.org/abs/2308.06262</a></li>
+<li>Code URL: https://github.com/opengvlab/multitask-model-selector</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06262]] Foundation Model is Efficient Multimodal Multitask Model Selector(http://arxiv.org/abs/2308.06262)</code></li>
+<li>Summary: <p>This paper investigates an under-explored but important problem: given a
+collection of pre-trained neural networks, predicting their performance on each
+multi-modal task without fine-tuning them, such as image recognition,
+referring, captioning, visual question answering, and text question answering.
+A brute-force approach is to finetune all models on all target datasets,
+bringing high computational costs. Although recent-advanced approaches employed
+lightweight metrics to measure models' transferability,they often depend
+heavily on the prior knowledge of a single task, making them inapplicable in a
+multi-modal multi-task scenario. To tackle this issue, we propose an efficient
+multi-task model selector (EMMS), which employs large-scale foundation models
+to transform diverse label formats such as categories, texts, and bounding
+boxes of different downstream tasks into a unified noisy label embedding. EMMS
+can estimate a model's transferability through a simple weighted linear
+regression, which can be efficiently solved by an alternating minimization
+algorithm with a convergence guarantee. Extensive experiments on 5 downstream
+tasks with 24 datasets show that EMMS is fast, effective, and generic enough to
+assess the transferability of pre-trained models, making it the first model
+selection method in the multi-task scenario. For instance, compared with the
+state-of-the-art method LogME enhanced by our label embeddings, EMMS achieves
+9.0\%, 26.3\%, 20.1\%, 54.8\%, 12.2\% performance gain on image recognition,
+referring, captioning, visual question answering, and text question answering,
+while bringing 5.13x, 6.29x, 3.59x, 6.19x, and 5.66x speedup in wall-clock
+time, respectively. The code is available at
+https://github.com/OpenGVLab/Multitask-Model-Selector.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: DIG In: Evaluating Disparities in Image Generations with Indicators for Geographic Diversity. (arXiv:2308.06198v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06198">http://arxiv.org/abs/2308.06198</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06198]] DIG In: Evaluating Disparities in Image Generations with Indicators for Geographic Diversity(http://arxiv.org/abs/2308.06198)</code></li>
+<li>Summary: <p>The unprecedented photorealistic results achieved by recent text-to-image
+generative systems and their increasing use as plug-and-play content creation
+solutions make it crucial to understand their potential biases. In this work,
+we introduce three indicators to evaluate the realism, diversity and
+prompt-generation consistency of text-to-image generative systems when prompted
+to generate objects from across the world. Our indicators complement
+qualitative analysis of the broader impact of such systems by enabling
+automatic and efficient benchmarking of geographic disparities, an important
+step towards building responsible visual content creation systems. We use our
+proposed indicators to analyze potential geographic biases in state-of-the-art
+visual content creation systems and find that: (1) models have less realism and
+diversity of generations when prompting for Africa and West Asia than Europe,
+(2) prompting with geographic information comes at a cost to prompt-consistency
+and diversity of generated images, and (3) models exhibit more region-level
+disparities for some objects than others. Perhaps most interestingly, our
+indicators suggest that progress in image generation quality has come at the
+cost of real-world geographic representation. Our comprehensive evaluation
+constitutes a crucial step towards ensuring a positive experience of visual
+content creation for everyone.
+</p></li>
+</ul>
+
+<h3>Title: Fly-Swat or Cannon? Cost-Effective Language Model Choice via Meta-Modeling. (arXiv:2308.06077v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06077">http://arxiv.org/abs/2308.06077</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06077]] Fly-Swat or Cannon? Cost-Effective Language Model Choice via Meta-Modeling(http://arxiv.org/abs/2308.06077)</code></li>
+<li>Summary: <p>Generative language models (LMs) have become omnipresent across data science.
+For a wide variety of tasks, inputs can be phrased as natural language prompts
+for an LM, from whose output the solution can then be extracted. LM performance
+has consistently been increasing with model size - but so has the monetary cost
+of querying the ever larger models. Importantly, however, not all inputs are
+equally hard: some require larger LMs for obtaining a satisfactory solution,
+whereas for others smaller LMs suffice. Based on this fact, we design a
+framework for Cost-Effective Language Model Choice (CELMOC). Given a set of
+inputs and a set of candidate LMs, CELMOC judiciously assigns each input to an
+LM predicted to do well on the input according to a so-called meta-model,
+aiming to achieve high overall performance at low cost. The cost-performance
+trade-off can be flexibly tuned by the user. Options include, among others,
+maximizing total expected performance (or the number of processed inputs) while
+staying within a given cost budget, or minimizing total cost while processing
+all inputs. We evaluate CELMOC on 14 datasets covering five natural language
+tasks, using four candidate LMs of vastly different size and cost. With CELMOC,
+we match the performance of the largest available LM while achieving a cost
+reduction of 63%. Via our publicly available library, researchers as well as
+practitioners can thus save large amounts of money without sacrificing
+performance.
+</p></li>
+</ul>
+
+<h3>Title: UFed-GAN: A Secure Federated Learning Framework with Constrained Computation and Unlabeled Data. (arXiv:2308.05870v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.05870">http://arxiv.org/abs/2308.05870</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.05870]] UFed-GAN: A Secure Federated Learning Framework with Constrained Computation and Unlabeled Data(http://arxiv.org/abs/2308.05870)</code></li>
+<li>Summary: <p>To satisfy the broad applications and insatiable hunger for deploying low
+latency multimedia data classification and data privacy in a cloud-based
+setting, federated learning (FL) has emerged as an important learning paradigm.
+For the practical cases involving limited computational power and only
+unlabeled data in many wireless communications applications, this work
+investigates FL paradigm in a resource-constrained and label-missing
+environment. Specifically, we propose a novel framework of UFed-GAN:
+Unsupervised Federated Generative Adversarial Network, which can capture
+user-side data distribution without local classification training. We also
+analyze the convergence and privacy of the proposed UFed-GAN. Our experimental
+results demonstrate the strong potential of UFed-GAN in addressing limited
+computational resources and unlabeled data while preserving privacy.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Out-of-Distribution Detection for Monocular Depth Estimation. (arXiv:2308.06072v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.06072">http://arxiv.org/abs/2308.06072</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.06072]] Out-of-Distribution Detection for Monocular Depth Estimation(http://arxiv.org/abs/2308.06072)</code></li>
+<li>Summary: <p>In monocular depth estimation, uncertainty estimation approaches mainly
+target the data uncertainty introduced by image noise. In contrast to prior
+work, we address the uncertainty due to lack of knowledge, which is relevant
+for the detection of data not represented by the training distribution, the
+so-called out-of-distribution (OOD) data. Motivated by anomaly detection, we
+propose to detect OOD images from an encoder-decoder depth estimation model
+based on the reconstruction error. Given the features extracted with the fixed
+depth encoder, we train an image decoder for image reconstruction using only
+in-distribution data. Consequently, OOD images result in a high reconstruction
+error, which we use to distinguish between in- and out-of-distribution samples.
+We built our experiments on the standard NYU Depth V2 and KITTI benchmarks as
+in-distribution data. Our post hoc method performs astonishingly well on
+different models and outperforms existing uncertainty estimation approaches
+without modifying the trained encoder-decoder depth estimation model.
+</p></li>
+</ul>
+
+<h3>Title: CyberForce: A Federated Reinforcement Learning Framework for Malware Mitigation. (arXiv:2308.05978v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.05978">http://arxiv.org/abs/2308.05978</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.05978]] CyberForce: A Federated Reinforcement Learning Framework for Malware Mitigation(http://arxiv.org/abs/2308.05978)</code></li>
+<li>Summary: <p>The expansion of the Internet-of-Things (IoT) paradigm is inevitable, but
+vulnerabilities of IoT devices to malware incidents have become an increasing
+concern. Recent research has shown that the integration of Reinforcement
+Learning with Moving Target Defense (MTD) mechanisms can enhance cybersecurity
+in IoT devices. Nevertheless, the numerous new malware attacks and the time
+that agents take to learn and select effective MTD techniques make this
+approach impractical for real-world IoT scenarios. To tackle this issue, this
+work presents CyberForce, a framework that employs Federated Reinforcement
+Learning (FRL) to collectively and privately determine suitable MTD techniques
+for mitigating diverse zero-day attacks. CyberForce integrates device
+fingerprinting and anomaly detection to reward or penalize MTD mechanisms
+chosen by an FRL-based agent. The framework has been evaluated in a federation
+consisting of ten devices of a real IoT platform. A pool of experiments with
+six malware samples affecting the devices has demonstrated that CyberForce can
+precisely learn optimum MTD mitigation strategies. When all clients are
+affected by all attacks, the FRL agent exhibits high accuracy and reduced
+training time when compared to a centralized RL agent. In cases where different
+clients experience distinct attacks, the CyberForce clients gain benefits
+through the transfer of knowledge from other clients and similar attack
+behavior. Additionally, CyberForce showcases notable robustness against data
+poisoning attacks.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
