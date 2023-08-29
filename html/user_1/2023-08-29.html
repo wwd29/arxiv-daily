@@ -1,0 +1,359 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Residual Denoising Diffusion Models. (arXiv:2308.13712v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13712">http://arxiv.org/abs/2308.13712</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13712]] Residual Denoising Diffusion Models(http://arxiv.org/abs/2308.13712)</code></li>
+<li>Summary: <p>Current diffusion-based image restoration methods feed degraded input images
+as conditions into the noise estimation network. However, interpreting this
+diffusion process is challenging since it essentially generates the target
+image from the noise. To establish a unified and more interpretable model for
+image generation and restoration, we propose residual denoising diffusion
+models (RDDM). In contrast to existing diffusion models (e.g., DDPM or DDIM)
+that focus solely on noise estimation, our RDDM predicts residuals to represent
+directional diffusion from the target domain to the input domain, while
+concurrently estimating noise to account for random perturbations in the
+diffusion process. The introduction of residuals allows us to redefine the
+forward diffusion process, wherein the target image progressively diffuses into
+a purely noisy image or a noise-carrying input image, thus unifying image
+generation and restoration. We demonstrate that our sampling process is
+consistent with that of DDPM and DDIM through coefficient transformation, and
+propose a partially path-independent generation process to better understand
+the reverse process. Notably, with native support for conditional inputs, our
+RDDM enables a generic UNet, trained with only an $\ell _1$ loss and a batch
+size of 1, to compete with state-of-the-art image restoration methods. We
+provide code and pre-trained models to encourage further exploration,
+application, and development of our innovative framework
+(https://github.com/nachifur/RDDM).
+</p></li>
+</ul>
+
+<h3>Title: DiffI2I: Efficient Diffusion Model for Image-to-Image Translation. (arXiv:2308.13767v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13767">http://arxiv.org/abs/2308.13767</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13767]] DiffI2I: Efficient Diffusion Model for Image-to-Image Translation(http://arxiv.org/abs/2308.13767)</code></li>
+<li>Summary: <p>The Diffusion Model (DM) has emerged as the SOTA approach for image
+synthesis. However, the existing DM cannot perform well on some image-to-image
+translation (I2I) tasks. Different from image synthesis, some I2I tasks, such
+as super-resolution, require generating results in accordance with GT images.
+Traditional DMs for image synthesis require extensive iterations and large
+denoising models to estimate entire images, which gives their strong generative
+ability but also leads to artifacts and inefficiency for I2I. To tackle this
+challenge, we propose a simple, efficient, and powerful DM framework for I2I,
+called DiffI2I. Specifically, DiffI2I comprises three key components: a compact
+I2I prior extraction network (CPEN), a dynamic I2I transformer (DI2Iformer),
+and a denoising network. We train DiffI2I in two stages: pretraining and DM
+training. For pretraining, GT and input images are fed into CPEN$_{S1}$ to
+capture a compact I2I prior representation (IPR) guiding DI2Iformer. In the
+second stage, the DM is trained to only use the input images to estimate the
+same IRP as CPEN$_{S1}$. Compared to traditional DMs, the compact IPR enables
+DiffI2I to obtain more accurate outcomes and employ a lighter denoising network
+and fewer iterations. Through extensive experiments on various I2I tasks, we
+demonstrate that DiffI2I achieves SOTA performance while significantly reducing
+computational burdens.
+</p></li>
+</ul>
+
+<h3>Title: ORES: Open-vocabulary Responsible Visual Synthesis. (arXiv:2308.13785v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13785">http://arxiv.org/abs/2308.13785</a></li>
+<li>Code URL: https://github.com/kodenii/ores</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13785]] ORES: Open-vocabulary Responsible Visual Synthesis(http://arxiv.org/abs/2308.13785)</code></li>
+<li>Summary: <p>Avoiding synthesizing specific visual concepts is an essential challenge in
+responsible visual synthesis. However, the visual concept that needs to be
+avoided for responsible visual synthesis tends to be diverse, depending on the
+region, context, and usage scenarios. In this work, we formalize a new task,
+Open-vocabulary Responsible Visual Synthesis (ORES), where the synthesis model
+is able to avoid forbidden visual concepts while allowing users to input any
+desired content. To address this problem, we present a Two-stage Intervention
+(TIN) framework. By introducing 1) rewriting with learnable instruction through
+a large-scale language model (LLM) and 2) synthesizing with prompt intervention
+on a diffusion synthesis model, it can effectively synthesize images avoiding
+any concepts but following the user's query as much as possible. To evaluate on
+ORES, we provide a publicly available dataset, baseline models, and benchmark.
+Experimental results demonstrate the effectiveness of our method in reducing
+risks of image generation. Our work highlights the potential of LLMs in
+responsible visual synthesis. Our code and dataset is public available.
+</p></li>
+</ul>
+
+<h3>Title: Unsupervised Domain Adaptation via Domain-Adaptive Diffusion. (arXiv:2308.13893v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13893">http://arxiv.org/abs/2308.13893</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13893]] Unsupervised Domain Adaptation via Domain-Adaptive Diffusion(http://arxiv.org/abs/2308.13893)</code></li>
+<li>Summary: <p>Unsupervised Domain Adaptation (UDA) is quite challenging due to the large
+distribution discrepancy between the source domain and the target domain.
+Inspired by diffusion models which have strong capability to gradually convert
+data distributions across a large gap, we consider to explore the diffusion
+technique to handle the challenging UDA task. However, using diffusion models
+to convert data distribution across different domains is a non-trivial problem
+as the standard diffusion models generally perform conversion from the Gaussian
+distribution instead of from a specific domain distribution. Besides, during
+the conversion, the semantics of the source-domain data needs to be preserved
+for classification in the target domain. To tackle these problems, we propose a
+novel Domain-Adaptive Diffusion (DAD) module accompanied by a Mutual Learning
+Strategy (MLS), which can gradually convert data distribution from the source
+domain to the target domain while enabling the classification model to learn
+along the domain transition process. Consequently, our method successfully
+eases the challenge of UDA by decomposing the large domain gap into small ones
+and gradually enhancing the capacity of classification model to finally adapt
+to the target domain. Our method outperforms the current state-of-the-arts by a
+large margin on three widely used UDA datasets.
+</p></li>
+</ul>
+
+<h3>Title: Network Embedding Using Sparse Approximations of Random Walks. (arXiv:2308.13663v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13663">http://arxiv.org/abs/2308.13663</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13663]] Network Embedding Using Sparse Approximations of Random Walks(http://arxiv.org/abs/2308.13663)</code></li>
+<li>Summary: <p>In this paper, we propose an efficient numerical implementation of Network
+Embedding based on commute times, using sparse approximation of a diffusion
+process on the network obtained by a modified version of the diffusion wavelet
+algorithm. The node embeddings are computed by optimizing the cross entropy
+loss via the stochastic gradient descent method with sampling of
+low-dimensional representations of green functions. We demonstrate the efficacy
+of this method for data clustering and multi-label classification through
+several examples, and compare its performance over existing methods in terms of
+efficiency and accuracy. Theoretical issues justifying the scheme are also
+discussed.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h2>foundation model</h2>
+<h3>Title: SamDSK: Combining Segment Anything Model with Domain-Specific Knowledge for Semi-Supervised Learning in Medical Image Segmentation. (arXiv:2308.13759v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13759">http://arxiv.org/abs/2308.13759</a></li>
+<li>Code URL: https://github.com/yizhezhang2000/samdsk</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13759]] SamDSK: Combining Segment Anything Model with Domain-Specific Knowledge for Semi-Supervised Learning in Medical Image Segmentation(http://arxiv.org/abs/2308.13759)</code></li>
+<li>Summary: <p>The Segment Anything Model (SAM) exhibits a capability to segment a wide
+array of objects in natural images, serving as a versatile perceptual tool for
+various downstream image segmentation tasks. In contrast, medical image
+segmentation tasks often rely on domain-specific knowledge (DSK). In this
+paper, we propose a novel method that combines the segmentation foundation
+model (i.e., SAM) with domain-specific knowledge for reliable utilization of
+unlabeled images in building a medical image segmentation model. Our new method
+is iterative and consists of two main stages: (1) segmentation model training;
+(2) expanding the labeled set by using the trained segmentation model, an
+unlabeled set, SAM, and domain-specific knowledge. These two stages are
+repeated until no more samples are added to the labeled set. A novel
+optimal-matching-based method is developed for combining the SAM-generated
+segmentation proposals and pixel-level and image-level DSK for constructing
+annotations of unlabeled images in the iterative stage (2). In experiments, we
+demonstrate the effectiveness of our proposed method for breast cancer
+segmentation in ultrasound images, polyp segmentation in endoscopic images, and
+skin lesion segmentation in dermoscopic images. Our work initiates a new
+direction of semi-supervised learning for medical image segmentation: the
+segmentation foundation model can be harnessed as a valuable tool for
+label-efficient segmentation learning in medical image segmentation.
+</p></li>
+</ul>
+
+<h3>Title: Zero-Shot Edge Detection with SCESAME: Spectral Clustering-based Ensemble for Segment Anything Model Estimation. (arXiv:2308.13779v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13779">http://arxiv.org/abs/2308.13779</a></li>
+<li>Code URL: https://github.com/ymgw55/scesame</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13779]] Zero-Shot Edge Detection with SCESAME: Spectral Clustering-based Ensemble for Segment Anything Model Estimation(http://arxiv.org/abs/2308.13779)</code></li>
+<li>Summary: <p>This paper proposes a novel zero-shot edge detection with SCESAME, which
+stands for Spectral Clustering-based Ensemble for Segment Anything Model
+Estimation, based on the recently proposed Segment Anything Model (SAM). SAM is
+a foundation model for segmentation tasks, and one of the interesting
+applications of SAM is Automatic Mask Generation (AMG), which generates
+zero-shot segmentation masks of an entire image. AMG can be applied to edge
+detection, but suffers from the problem of overdetecting edges. Edge detection
+with SCESAME overcomes this problem by three steps: (1) eliminating small
+generated masks, (2) combining masks by spectral clustering, taking into
+account mask positions and overlaps, and (3) removing artifacts after edge
+detection. We performed edge detection experiments on two datasets, BSDS500 and
+NYUDv2. Although our zero-shot approach is simple, the experimental results on
+BSDS500 showed almost identical performance to human performance and CNN-based
+methods from seven years ago. In the NYUDv2 experiments, it performed almost as
+well as recent CNN-based methods. These results indicate that our method has
+the potential to be a strong baseline for future zero-shot edge detection
+methods. Furthermore, SCESAME is not only applicable to edge detection, but
+also to other downstream zero-shot tasks.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: A Systematic Study on Quantifying Bias in GAN-Augmented Data. (arXiv:2308.13554v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13554">http://arxiv.org/abs/2308.13554</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13554]] A Systematic Study on Quantifying Bias in GAN-Augmented Data(http://arxiv.org/abs/2308.13554)</code></li>
+<li>Summary: <p>Generative adversarial networks (GANs) have recently become a popular data
+augmentation technique used by machine learning practitioners. However, they
+have been shown to suffer from the so-called mode collapse failure mode, which
+makes them vulnerable to exacerbating biases on already skewed datasets,
+resulting in the generated data distribution being less diverse than the
+training distribution. To this end, we address the problem of quantifying the
+extent to which mode collapse occurs. This study is a systematic effort focused
+on the evaluation of state-of-the-art metrics that can potentially quantify
+biases in GAN-augmented data. We show that, while several such methods are
+available, there is no single metric that quantifies bias exacerbation reliably
+over the span of different image domains.
+</p></li>
+</ul>
+
+<h3>Title: Out-of-distribution detection using normalizing flows on the data manifold. (arXiv:2308.13792v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13792">http://arxiv.org/abs/2308.13792</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13792]] Out-of-distribution detection using normalizing flows on the data manifold(http://arxiv.org/abs/2308.13792)</code></li>
+<li>Summary: <p>A common approach for out-of-distribution detection involves estimating an
+underlying data distribution, which assigns a lower likelihood value to
+out-of-distribution data. Normalizing flows are likelihood-based generative
+models providing a tractable density estimation via dimension-preserving
+invertible transformations. Conventional normalizing flows are prone to fail in
+out-of-distribution detection, because of the well-known curse of
+dimensionality problem of the likelihood-based models. According to the
+manifold hypothesis, real-world data often lie on a low-dimensional manifold.
+This study investigates the effect of manifold learning using normalizing flows
+on out-of-distribution detection. We proceed by estimating the density on a
+low-dimensional manifold, coupled with measuring the distance from the
+manifold, as criteria for out-of-distribution detection. However, individually,
+each of them is insufficient for this task. The extensive experimental results
+show that manifold learning improves the out-of-distribution detection ability
+of a class of likelihood-based models known as normalizing flows. This
+improvement is achieved without modifying the model structure or using
+auxiliary out-of-distribution data during training.
+</p></li>
+</ul>
+
+<h3>Title: VIDES: Virtual Interior Design via Natural Language and Visual Guidance. (arXiv:2308.13795v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13795">http://arxiv.org/abs/2308.13795</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13795]] VIDES: Virtual Interior Design via Natural Language and Visual Guidance(http://arxiv.org/abs/2308.13795)</code></li>
+<li>Summary: <p>Interior design is crucial in creating aesthetically pleasing and functional
+indoor spaces. However, developing and editing interior design concepts
+requires significant time and expertise. We propose Virtual Interior DESign
+(VIDES) system in response to this challenge. Leveraging cutting-edge
+technology in generative AI, our system can assist users in generating and
+editing indoor scene concepts quickly, given user text description and visual
+guidance. Using both visual guidance and language as the conditional inputs
+significantly enhances the accuracy and coherence of the generated scenes,
+resulting in visually appealing designs. Through extensive experimentation, we
+demonstrate the effectiveness of VIDES in developing new indoor concepts,
+changing indoor styles, and replacing and removing interior objects. The system
+successfully captures the essence of users' descriptions while providing
+flexibility for customization. Consequently, this system can potentially reduce
+the entry barrier for indoor design, making it more accessible to users with
+limited technical skills and reducing the time required to create high-quality
+images. Individuals who have a background in design can now easily communicate
+their ideas visually and effectively present their design concepts.
+https://sites.google.com/view/ltnghia/research/VIDES
+</p></li>
+</ul>
+
+<h3>Title: DM-VTON: Distilled Mobile Real-time Virtual Try-On. (arXiv:2308.13798v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13798">http://arxiv.org/abs/2308.13798</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13798]] DM-VTON: Distilled Mobile Real-time Virtual Try-On(http://arxiv.org/abs/2308.13798)</code></li>
+<li>Summary: <p>The fashion e-commerce industry has witnessed significant growth in recent
+years, prompting exploring image-based virtual try-on techniques to incorporate
+Augmented Reality (AR) experiences into online shopping platforms. However,
+existing research has primarily overlooked a crucial aspect - the runtime of
+the underlying machine-learning model. While existing methods prioritize
+enhancing output quality, they often disregard the execution time, which
+restricts their applications on a limited range of devices. To address this
+gap, we propose Distilled Mobile Real-time Virtual Try-On (DM-VTON), a novel
+virtual try-on framework designed to achieve simplicity and efficiency. Our
+approach is based on a knowledge distillation scheme that leverages a strong
+Teacher network as supervision to guide a Student network without relying on
+human parsing. Notably, we introduce an efficient Mobile Generative Module
+within the Student network, significantly reducing the runtime while ensuring
+high-quality output. Additionally, we propose Virtual Try-on-guided Pose for
+Data Synthesis to address the limited pose variation observed in training
+images. Experimental results show that the proposed method can achieve 40
+frames per second on a single Nvidia Tesla T4 GPU and only take up 37 MB of
+memory while producing almost the same output quality as other state-of-the-art
+methods. DM-VTON stands poised to facilitate the advancement of real-time AR
+applications, in addition to the generation of lifelike attired human figures
+tailored for diverse specialized training tasks.
+https://sites.google.com/view/ltnghia/research/DMVTON
+</p></li>
+</ul>
+
+<h3>Title: Time-to-Pattern: Information-Theoretic Unsupervised Learning for Scalable Time Series Summarization. (arXiv:2308.13722v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13722">http://arxiv.org/abs/2308.13722</a></li>
+<li>Code URL: https://github.com/alirezaghods/t2p-time-to-pattern</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13722]] Time-to-Pattern: Information-Theoretic Unsupervised Learning for Scalable Time Series Summarization(http://arxiv.org/abs/2308.13722)</code></li>
+<li>Summary: <p>Data summarization is the process of generating interpretable and
+representative subsets from a dataset. Existing time series summarization
+approaches often search for recurring subsequences using a set of manually
+devised similarity functions to summarize the data. However, such approaches
+are fraught with limitations stemming from an exhaustive search coupled with a
+heuristic definition of series similarity. Such approaches affect the diversity
+and comprehensiveness of the generated data summaries. To mitigate these
+limitations, we introduce an approach to time series summarization, called
+Time-to-Pattern (T2P), which aims to find a set of diverse patterns that
+together encode the most salient information, following the notion of minimum
+description length. T2P is implemented as a deep generative model that learns
+informative embeddings of the discrete time series on a latent space
+specifically designed to be interpretable. Our synthetic and real-world
+experiments reveal that T2P discovers informative patterns, even in noisy and
+complex settings. Furthermore, our results also showcase the improved
+performance of T2P over previous work in pattern diversity and processing
+scalability, which conclusively demonstrate the algorithm's effectiveness for
+time series summarization.
+</p></li>
+</ul>
+
+<h3>Title: SyMOT-Flow: Learning optimal transport flow for two arbitrary distributions with maximum mean discrepancy. (arXiv:2308.13815v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13815">http://arxiv.org/abs/2308.13815</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13815]] SyMOT-Flow: Learning optimal transport flow for two arbitrary distributions with maximum mean discrepancy(http://arxiv.org/abs/2308.13815)</code></li>
+<li>Summary: <p>Finding a transformation between two unknown probability distributions from
+samples is crucial for modeling complex data distributions and perform tasks
+such as density estimation, sample generation, and statistical inference. One
+powerful framework for such transformations is normalizing flow, which
+transforms an unknown distribution into a standard normal distribution using an
+invertible network. In this paper, we introduce a novel model called SyMOT-Flow
+that trains an invertible transformation by minimizing the symmetric maximum
+mean discrepancy between samples from two unknown distributions, and we
+incorporate an optimal transport cost as regularization to obtain a
+short-distance and interpretable transformation. The resulted transformation
+leads to more stable and accurate sample generation. We establish several
+theoretical results for the proposed model and demonstrate its effectiveness
+with low-dimensional illustrative examples as well as high-dimensional
+generative samples obtained through the forward and reverse flows.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Exploring Human Crowd Patterns and Categorization in Video Footage for Enhanced Security and Surveillance using Computer Vision and Machine Learning. (arXiv:2308.13910v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2308.13910">http://arxiv.org/abs/2308.13910</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2308.13910]] Exploring Human Crowd Patterns and Categorization in Video Footage for Enhanced Security and Surveillance using Computer Vision and Machine Learning(http://arxiv.org/abs/2308.13910)</code></li>
+<li>Summary: <p>Computer vision and machine learning have brought revolutionary shifts in
+perception for researchers, scientists, and the general populace. Once thought
+to be unattainable, these technologies have achieved the seemingly impossible.
+Their exceptional applications in diverse fields like security, agriculture,
+and education are a testament to their impact. However, the full potential of
+computer vision remains untapped. This paper explores computer vision's
+potential in security and surveillance, presenting a novel approach to track
+motion in videos. By categorizing motion into Arcs, Lanes,
+Converging/Diverging, and Random/Block motions using Motion Information Images
+and Blockwise dominant motion data, the paper examines different optical flow
+techniques, CNN models, and machine learning models. Successfully achieving its
+objectives with promising accuracy, the results can train anomaly-detection
+models, provide behavioral insights based on motion, and enhance scene
+comprehension.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
