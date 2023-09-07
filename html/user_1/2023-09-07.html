@@ -1,0 +1,440 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: RSDiff: Remote Sensing Image Generation from Text Using Diffusion Model. (arXiv:2309.02455v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02455">http://arxiv.org/abs/2309.02455</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02455]] RSDiff: Remote Sensing Image Generation from Text Using Diffusion Model(http://arxiv.org/abs/2309.02455)</code></li>
+<li>Summary: <p>Satellite imagery generation and super-resolution are pivotal tasks in remote
+sensing, demanding high-quality, detailed images for accurate analysis and
+decision-making. In this paper, we propose an innovative and lightweight
+approach that employs two-stage diffusion models to gradually generate
+high-resolution Satellite images purely based on text prompts. Our innovative
+pipeline comprises two interconnected diffusion models: a Low-Resolution
+Generation Diffusion Model (LR-GDM) that generates low-resolution images from
+text and a Super-Resolution Diffusion Model (SRDM) conditionally produced. The
+LR-GDM effectively synthesizes low-resolution by (computing the correlations of
+the text embedding and the image embedding in a shared latent space), capturing
+the essential content and layout of the desired scenes. Subsequently, the SRDM
+takes the generated low-resolution image and its corresponding text prompts and
+efficiently produces the high-resolution counterparts, infusing fine-grained
+spatial details and enhancing visual fidelity. Experiments are conducted on the
+commonly used dataset, Remote Sensing Image Captioning Dataset (RSICD). Our
+results demonstrate that our approach outperforms existing state-of-the-art
+(SoTA) models in generating satellite images with realistic geographical
+features, weather conditions, and land structures while achieving remarkable
+super-resolution results for increased spatial precision.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion Model is Secretly a Training-free Open Vocabulary Semantic Segmenter. (arXiv:2309.02773v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02773">http://arxiv.org/abs/2309.02773</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02773]] Diffusion Model is Secretly a Training-free Open Vocabulary Semantic Segmenter(http://arxiv.org/abs/2309.02773)</code></li>
+<li>Summary: <p>Recent research has explored the utilization of pre-trained text-image
+discriminative models, such as CLIP, to tackle the challenges associated with
+open-vocabulary semantic segmentation. However, it is worth noting that the
+alignment process based on contrastive learning employed by these models may
+unintentionally result in the loss of crucial localization information and
+object completeness, which are essential for achieving accurate semantic
+segmentation. More recently, there has been an emerging interest in extending
+the application of diffusion models beyond text-to-image generation tasks,
+particularly in the domain of semantic segmentation. These approaches utilize
+diffusion models either for generating annotated data or for extracting
+features to facilitate semantic segmentation. This typically involves training
+segmentation models by generating a considerable amount of synthetic data or
+incorporating additional mask annotations. To this end, we uncover the
+potential of generative text-to-image conditional diffusion models as highly
+efficient open-vocabulary semantic segmenters, and introduce a novel
+training-free approach named DiffSegmenter. Specifically, by feeding an input
+image and candidate classes into an off-the-shelf pre-trained conditional
+latent diffusion model, the cross-attention maps produced by the denoising
+U-Net are directly used as segmentation scores, which are further refined and
+completed by the followed self-attention maps. Additionally, we carefully
+design effective textual prompts and a category filtering mechanism to further
+enhance the segmentation results. Extensive experiments on three benchmark
+datasets show that the proposed DiffSegmenter achieves impressive results for
+open-vocabulary semantic segmentation.
+</p></li>
+</ul>
+
+<h3>Title: MCM: Multi-condition Motion Synthesis Framework for Multi-scenario. (arXiv:2309.03031v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.03031">http://arxiv.org/abs/2309.03031</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.03031]] MCM: Multi-condition Motion Synthesis Framework for Multi-scenario(http://arxiv.org/abs/2309.03031)</code></li>
+<li>Summary: <p>The objective of the multi-condition human motion synthesis task is to
+incorporate diverse conditional inputs, encompassing various forms like text,
+music, speech, and more. This endows the task with the capability to adapt
+across multiple scenarios, ranging from text-to-motion and music-to-dance,
+among others. While existing research has primarily focused on single
+conditions, the multi-condition human motion generation remains underexplored.
+In this paper, we address these challenges by introducing MCM, a novel paradigm
+for motion synthesis that spans multiple scenarios under diverse conditions.
+The MCM framework is able to integrate with any DDPM-like diffusion model to
+accommodate multi-conditional information input while preserving its generative
+capabilities. Specifically, MCM employs two-branch architecture consisting of a
+main branch and a control branch. The control branch shares the same structure
+as the main branch and is initialized with the parameters of the main branch,
+effectively maintaining the generation ability of the main branch and
+supporting multi-condition input. We also introduce a Transformer-based
+diffusion model MWNet (DDPM-like) as our main branch that can capture the
+spatial complexity and inter-joint correlations in motion sequences through a
+channel-dimension self-attention module. Quantitative comparisons demonstrate
+that our approach achieves SoTA results in both text-to-motion and competitive
+results in music-to-dance tasks, comparable to task-specific methods.
+Furthermore, the qualitative evaluation shows that MCM not only streamlines the
+adaptation of methodologies originally designed for text-to-motion tasks to
+domains like music-to-dance and speech-to-gesture, eliminating the need for
+extensive network re-configurations but also enables effective multi-condition
+modal control, realizing "once trained is motion need".
+</p></li>
+</ul>
+
+<h3>Title: SLiMe: Segment Like Me. (arXiv:2309.03179v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.03179">http://arxiv.org/abs/2309.03179</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.03179]] SLiMe: Segment Like Me(http://arxiv.org/abs/2309.03179)</code></li>
+<li>Summary: <p>Significant strides have been made using large vision-language models, like
+Stable Diffusion (SD), for a variety of downstream tasks, including image
+editing, image correspondence, and 3D shape generation. Inspired by these
+advancements, we explore leveraging these extensive vision-language models for
+segmenting images at any desired granularity using as few as one annotated
+sample by proposing SLiMe. SLiMe frames this problem as an optimization task.
+Specifically, given a single training image and its segmentation mask, we first
+extract attention maps, including our novel "weighted accumulated
+self-attention map" from the SD prior. Then, using the extracted attention
+maps, the text embeddings of Stable Diffusion are optimized such that, each of
+them, learn about a single segmented region from the training image. These
+learned embeddings then highlight the segmented region in the attention maps,
+which in turn can then be used to derive the segmentation map. This enables
+SLiMe to segment any real-world image during inference with the granularity of
+the segmented region in the training image, using just one example. Moreover,
+leveraging additional training data when available, i.e. few-shot, improves the
+performance of SLiMe. We carried out a knowledge-rich set of experiments
+examining various design factors and showed that SLiMe outperforms other
+existing one-shot and few-shot segmentation methods.
+</p></li>
+</ul>
+
+<h3>Title: My Art My Choice: Adversarial Protection Against Unruly AI. (arXiv:2309.03198v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.03198">http://arxiv.org/abs/2309.03198</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.03198]] My Art My Choice: Adversarial Protection Against Unruly AI(http://arxiv.org/abs/2309.03198)</code></li>
+<li>Summary: <p>Generative AI is on the rise, enabling everyone to produce realistic content
+via publicly available interfaces. Especially for guided image generation,
+diffusion models are changing the creator economy by producing high quality low
+cost content. In parallel, artists are rising against unruly AI, since their
+artwork are leveraged, distributed, and dissimulated by large generative
+models. Our approach, My Art My Choice (MAMC), aims to empower content owners
+by protecting their copyrighted materials from being utilized by diffusion
+models in an adversarial fashion. MAMC learns to generate adversarially
+perturbed "protected" versions of images which can in turn "break" diffusion
+models. The perturbation amount is decided by the artist to balance distortion
+vs. protection of the content. MAMC is designed with a simple UNet-based
+generator, attacking black box diffusion models, combining several losses to
+create adversarial twins of the original artwork. We experiment on three
+datasets for various image-to-image tasks, with different user control values.
+Both protected image and diffusion output results are evaluated in visual,
+noise, structure, pixel, and generative spaces to validate our claims. We
+believe that MAMC is a crucial step for preserving ownership information for AI
+generated content in a flawless, based-on-need, and human-centric way.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion on the Probability Simplex. (arXiv:2309.02530v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02530">http://arxiv.org/abs/2309.02530</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02530]] Diffusion on the Probability Simplex(http://arxiv.org/abs/2309.02530)</code></li>
+<li>Summary: <p>Diffusion models learn to reverse the progressive noising of a data
+distribution to create a generative model. However, the desired continuous
+nature of the noising process can be at odds with discrete data. To deal with
+this tension between continuous and discrete objects, we propose a method of
+performing diffusion on the probability simplex. Using the probability simplex
+naturally creates an interpretation where points correspond to categorical
+probability distributions. Our method uses the softmax function applied to an
+Ornstein-Unlenbeck Process, a well-known stochastic differential equation. We
+find that our methodology also naturally extends to include diffusion on the
+unit cube which has applications for bounded image generation.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Self-Supervised Video Transformers for Isolated Sign Language Recognition. (arXiv:2309.02450v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02450">http://arxiv.org/abs/2309.02450</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02450]] Self-Supervised Video Transformers for Isolated Sign Language Recognition(http://arxiv.org/abs/2309.02450)</code></li>
+<li>Summary: <p>This paper presents an in-depth analysis of various self-supervision methods
+for isolated sign language recognition (ISLR). We consider four recently
+introduced transformer-based approaches to self-supervised learning from
+videos, and four pre-training data regimes, and study all the combinations on
+the WLASL2000 dataset. Our findings reveal that MaskFeat achieves performance
+superior to pose-based and supervised video models, with a top-1 accuracy of
+79.02% on gloss-based WLASL2000. Furthermore, we analyze these models' ability
+to produce representations of ASL signs using linear probing on diverse
+phonological features. This study underscores the value of architecture and
+pre-training task choices in ISLR. Specifically, our results on WLASL2000
+highlight the power of masked reconstruction pre-training, and our linear
+probing results demonstrate the importance of hierarchical vision transformers
+for sign language representation.
+</p></li>
+</ul>
+
+<h3>Title: A Survey of the Impact of Self-Supervised Pretraining for Diagnostic Tasks with Radiological Images. (arXiv:2309.02555v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02555">http://arxiv.org/abs/2309.02555</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02555]] A Survey of the Impact of Self-Supervised Pretraining for Diagnostic Tasks with Radiological Images(http://arxiv.org/abs/2309.02555)</code></li>
+<li>Summary: <p>Self-supervised pretraining has been observed to be effective at improving
+feature representations for transfer learning, leveraging large amounts of
+unlabelled data. This review summarizes recent research into its usage in
+X-ray, computed tomography, magnetic resonance, and ultrasound imaging,
+concentrating on studies that compare self-supervised pretraining to fully
+supervised learning for diagnostic tasks such as classification and
+segmentation. The most pertinent finding is that self-supervised pretraining
+generally improves downstream task performance compared to full supervision,
+most prominently when unlabelled examples greatly outnumber labelled examples.
+Based on the aggregate evidence, recommendations are provided for practitioners
+considering using self-supervised learning. Motivated by limitations identified
+in current research, directions and practices for future study are suggested,
+such as integrating clinical knowledge with theoretically justified
+self-supervised learning methods, evaluating on public datasets, growing the
+modest body of evidence for ultrasound, and characterizing the impact of
+self-supervised pretraining on generalization.
+</p></li>
+</ul>
+
+<h3>Title: Self-Supervised Pretraining Improves Performance and Inference Efficiency in Multiple Lung Ultrasound Interpretation Tasks. (arXiv:2309.02596v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02596">http://arxiv.org/abs/2309.02596</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02596]] Self-Supervised Pretraining Improves Performance and Inference Efficiency in Multiple Lung Ultrasound Interpretation Tasks(http://arxiv.org/abs/2309.02596)</code></li>
+<li>Summary: <p>In this study, we investigated whether self-supervised pretraining could
+produce a neural network feature extractor applicable to multiple
+classification tasks in B-mode lung ultrasound analysis. When fine-tuning on
+three lung ultrasound tasks, pretrained models resulted in an improvement of
+the average across-task area under the receiver operating curve (AUC) by 0.032
+and 0.061 on local and external test sets respectively. Compact nonlinear
+classifiers trained on features outputted by a single pretrained model did not
+improve performance across all tasks; however, they did reduce inference time
+by 49% compared to serial execution of separate fine-tuned models. When
+training using 1% of the available labels, pretrained models consistently
+outperformed fully supervised models, with a maximum observed test AUC increase
+of 0.396 for the task of view classification. Overall, the results indicate
+that self-supervised pretraining is useful for producing initial weights for
+lung ultrasound classifiers.
+</p></li>
+</ul>
+
+<h3>Title: Towards Unsupervised Graph Completion Learning on Graphs with Features and Structure Missing. (arXiv:2309.02762v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02762">http://arxiv.org/abs/2309.02762</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02762]] Towards Unsupervised Graph Completion Learning on Graphs with Features and Structure Missing(http://arxiv.org/abs/2309.02762)</code></li>
+<li>Summary: <p>In recent years, graph neural networks (GNN) have achieved significant
+developments in a variety of graph analytical tasks. Nevertheless, GNN's
+superior performance will suffer from serious damage when the collected node
+features or structure relationships are partially missing owning to numerous
+unpredictable factors. Recently emerged graph completion learning (GCL) has
+received increasing attention, which aims to reconstruct the missing node
+features or structure relationships under the guidance of a specifically
+supervised task. Although these proposed GCL methods have made great success,
+they still exist the following problems: the reliance on labels, the bias of
+the reconstructed node features and structure relationships. Besides, the
+generalization ability of the existing GCL still faces a huge challenge when
+both collected node features and structure relationships are partially missing
+at the same time. To solve the above issues, we propose a more general GCL
+framework with the aid of self-supervised learning for improving the task
+performance of the existing GNN variants on graphs with features and structure
+missing, termed unsupervised GCL (UGCL). Specifically, to avoid the mismatch
+between missing node features and structure during the message-passing process
+of GNN, we separate the feature reconstruction and structure reconstruction and
+design its personalized model in turn. Then, a dual contrastive loss on the
+structure level and feature level is introduced to maximize the mutual
+information of node representations from feature reconstructing and structure
+reconstructing paths for providing more supervision signals. Finally, the
+reconstructed node features and structure can be applied to the downstream node
+classification task. Extensive experiments on eight datasets, three GNN
+variants and five missing rates demonstrate the effectiveness of our proposed
+method.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h2>generative</h2>
+<h3>Title: Hierarchical-level rain image generative model based on GAN. (arXiv:2309.02964v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02964">http://arxiv.org/abs/2309.02964</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02964]] Hierarchical-level rain image generative model based on GAN(http://arxiv.org/abs/2309.02964)</code></li>
+<li>Summary: <p>Autonomous vehicles are exposed to various weather during operation, which is
+likely to trigger the performance limitations of the perception system, leading
+to the safety of the intended functionality (SOTIF) problems. To efficiently
+generate data for testing the performance of visual perception algorithms under
+various weather conditions, a hierarchical-level rain image generative model,
+rain conditional CycleGAN (RCCycleGAN), is constructed. RCCycleGAN is based on
+the generative adversarial network (GAN) and can generate images of light,
+medium, and heavy rain. Different rain intensities are introduced as labels in
+conditional GAN (CGAN). Meanwhile, the model structure is optimized and the
+training strategy is adjusted to alleviate the problem of mode collapse. In
+addition, natural rain images of different intensities are collected and
+processed for model training and validation. Compared with the two baseline
+models, CycleGAN and DerainCycleGAN, the peak signal-to-noise ratio (PSNR) of
+RCCycleGAN on the test dataset is improved by 2.58 dB and 0.74 dB, and the
+structural similarity (SSIM) is improved by 18% and 8%, respectively. The
+ablation experiments are also carried out to validate the effectiveness of the
+model tuning.
+</p></li>
+</ul>
+
+<h3>Title: Persona-aware Generative Model for Code-mixed Language. (arXiv:2309.02915v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02915">http://arxiv.org/abs/2309.02915</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02915]] Persona-aware Generative Model for Code-mixed Language(http://arxiv.org/abs/2309.02915)</code></li>
+<li>Summary: <p>Code-mixing and script-mixing are prevalent across online social networks and
+multilingual societies. However, a user's preference toward code-mixing depends
+on the socioeconomic status, demographics of the user, and the local context,
+which existing generative models mostly ignore while generating code-mixed
+texts. In this work, we make a pioneering attempt to develop a persona-aware
+generative model to generate texts resembling real-life code-mixed texts of
+individuals. We propose a Persona-aware Generative Model for Code-mixed
+Generation, PARADOX, a novel Transformer-based encoder-decoder model that
+encodes an utterance conditioned on a user's persona and generates code-mixed
+texts without monolingual reference data. We propose an alignment module that
+re-calibrates the generated sequence to resemble real-life code-mixed texts.
+PARADOX generates code-mixed texts that are semantically more meaningful and
+linguistically more valid. To evaluate the personification capabilities of
+PARADOX, we propose four new metrics -- CM BLEU, CM Rouge-1, CM Rouge-L and CM
+KS. On average, PARADOX achieves 1.6 points better CM BLEU, 47% better
+perplexity and 32% better semantic coherence than the non-persona-based
+counterparts.
+</p></li>
+</ul>
+
+<h3>Title: Enhancing Semantic Communication with Deep Generative Models -- An ICASSP Special Session Overview. (arXiv:2309.02478v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02478">http://arxiv.org/abs/2309.02478</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02478]] Enhancing Semantic Communication with Deep Generative Models -- An ICASSP Special Session Overview(http://arxiv.org/abs/2309.02478)</code></li>
+<li>Summary: <p>Semantic communication is poised to play a pivotal role in shaping the
+landscape of future AI-driven communication systems. Its challenge of
+extracting semantic information from the original complex content and
+regenerating semantically consistent data at the receiver, possibly being
+robust to channel corruptions, can be addressed with deep generative models.
+This ICASSP special session overview paper discloses the semantic communication
+challenges from the machine learning perspective and unveils how deep
+generative models will significantly enhance semantic communication frameworks
+in dealing with real-world complex data, extracting and exploiting semantic
+information, and being robust to channel corruptions. Alongside establishing
+this emerging field, this paper charts novel research pathways for the next
+generative semantic communication frameworks.
+</p></li>
+</ul>
+
+<h3>Title: Utilizing Generative Adversarial Networks for Stable Structure Generation in Angry Birds. (arXiv:2309.02614v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02614">http://arxiv.org/abs/2309.02614</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02614]] Utilizing Generative Adversarial Networks for Stable Structure Generation in Angry Birds(http://arxiv.org/abs/2309.02614)</code></li>
+<li>Summary: <p>This paper investigates the suitability of using Generative Adversarial
+Networks (GANs) to generate stable structures for the physics-based puzzle game
+Angry Birds. While previous applications of GANs for level generation have been
+mostly limited to tile-based representations, this paper explores their
+suitability for creating stable structures made from multiple smaller blocks.
+This includes a detailed encoding/decoding process for converting between Angry
+Birds level descriptions and a suitable grid-based representation, as well as
+utilizing state-of-the-art GAN architectures and training methods to produce
+new structure designs. Our results show that GANs can be successfully applied
+to generate a varied range of complex and stable Angry Birds structures.
+</p></li>
+</ul>
+
+<h3>Title: Generative Algorithms for Fusion of Physics-Based Wildfire Spread Models with Satellite Data for Initializing Wildfire Forecasts. (arXiv:2309.02615v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02615">http://arxiv.org/abs/2309.02615</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02615]] Generative Algorithms for Fusion of Physics-Based Wildfire Spread Models with Satellite Data for Initializing Wildfire Forecasts(http://arxiv.org/abs/2309.02615)</code></li>
+<li>Summary: <p>Increases in wildfire activity and the resulting impacts have prompted the
+development of high-resolution wildfire behavior models for forecasting fire
+spread. Recent progress in using satellites to detect fire locations further
+provides the opportunity to use measurements to improve fire spread forecasts
+from numerical models through data assimilation. This work develops a method
+for inferring the history of a wildfire from satellite measurements, providing
+the necessary information to initialize coupled atmosphere-wildfire models from
+a measured wildfire state in a physics-informed approach. The fire arrival
+time, which is the time the fire reaches a given spatial location, acts as a
+succinct representation of the history of a wildfire. In this work, a
+conditional Wasserstein Generative Adversarial Network (cWGAN), trained with
+WRF-SFIRE simulations, is used to infer the fire arrival time from satellite
+active fire data. The cWGAN is used to produce samples of likely fire arrival
+times from the conditional distribution of arrival times given satellite active
+fire detections. Samples produced by the cWGAN are further used to assess the
+uncertainty of predictions. The cWGAN is tested on four California wildfires
+occurring between 2020 and 2022, and predictions for fire extent are compared
+against high resolution airborne infrared measurements. Further, the predicted
+ignition times are compared with reported ignition times. An average Sorensen's
+coefficient of 0.81 for the fire perimeters and an average ignition time error
+of 32 minutes suggest that the method is highly accurate.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: A Critical Review of Common Log Data Sets Used for Evaluation of Sequence-based Anomaly Detection Techniques. (arXiv:2309.02854v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.02854">http://arxiv.org/abs/2309.02854</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.02854]] A Critical Review of Common Log Data Sets Used for Evaluation of Sequence-based Anomaly Detection Techniques(http://arxiv.org/abs/2309.02854)</code></li>
+<li>Summary: <p>Log data store event execution patterns that correspond to underlying
+workflows of systems or applications. While most logs are informative, log data
+also include artifacts that indicate failures or incidents. Accordingly, log
+data are often used to evaluate anomaly detection techniques that aim to
+automatically disclose unexpected or otherwise relevant system behavior
+patterns. Recently, detection approaches leveraging deep learning have
+increasingly focused on anomalies that manifest as changes of sequential
+patterns within otherwise normal event traces. Several publicly available data
+sets, such as HDFS, BGL, Thunderbird, OpenStack, and Hadoop, have since become
+standards for evaluating these anomaly detection techniques, however, the
+appropriateness of these data sets has not been closely investigated in the
+past. In this paper we therefore analyze six publicly available log data sets
+with focus on the manifestations of anomalies and simple techniques for their
+detection. Our findings suggest that most anomalies are not directly related to
+sequential manifestations and that advanced detection techniques are not
+required to achieve high detection rates on these data sets.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Gender-specific Machine Translation with Large Language Models. (arXiv:2309.03175v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.03175">http://arxiv.org/abs/2309.03175</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.03175]] Gender-specific Machine Translation with Large Language Models(http://arxiv.org/abs/2309.03175)</code></li>
+<li>Summary: <p>Decoder-only Large Language Models (LLMs) have demonstrated potential in
+machine translation (MT), albeit with performance slightly lagging behind
+traditional encoder-decoder Neural Machine Translation (NMT) systems. However,
+LLMs offer a unique advantage: the ability to control the properties of the
+output through prompts. In this study, we harness this flexibility to explore
+LLaMa's capability to produce gender-specific translations for languages with
+grammatical gender. Our results indicate that LLaMa can generate
+gender-specific translations with competitive accuracy and gender bias
+mitigation when compared to NLLB, a state-of-the-art multilingual NMT system.
+Furthermore, our experiments reveal that LLaMa's translations are robust,
+showing significant performance drops when evaluated against opposite-gender
+references in gender-ambiguous datasets but maintaining consistency in less
+ambiguous contexts. This research provides insights into the potential and
+challenges of using LLMs for gender-specific translations and highlights the
+importance of in-context learning to elicit new tasks in LLMs.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
