@@ -1,0 +1,482 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: From Text to Mask: Localizing Entities Using the Attention of Text-to-Image Diffusion Models. (arXiv:2309.04109v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04109">http://arxiv.org/abs/2309.04109</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04109]] From Text to Mask: Localizing Entities Using the Attention of Text-to-Image Diffusion Models(http://arxiv.org/abs/2309.04109)</code></li>
+<li>Summary: <p>Diffusion models have revolted the field of text-to-image generation
+recently. The unique way of fusing text and image information contributes to
+their remarkable capability of generating highly text-related images. From
+another perspective, these generative models imply clues about the precise
+correlation between words and pixels. In this work, a simple but effective
+method is proposed to utilize the attention mechanism in the denoising network
+of text-to-image diffusion models. Without re-training nor inference-time
+optimization, the semantic grounding of phrases can be attained directly. We
+evaluate our method on Pascal VOC 2012 and Microsoft COCO 2014 under
+weakly-supervised semantic segmentation setting and our method achieves
+superior performance to prior methods. In addition, the acquired word-pixel
+correlation is found to be generalizable for the learned text embedding of
+customized generation methods, requiring only a few modifications. To validate
+our discovery, we introduce a new practical task called "personalized referring
+image segmentation" with a new dataset. Experiments in various situations
+demonstrate the advantages of our method compared to strong baselines on this
+task. In summary, our work reveals a novel way to extract the rich multi-modal
+knowledge hidden in diffusion models for segmentation.
+</p></li>
+</ul>
+
+<h3>Title: MoEController: Instruction-based Arbitrary Image Manipulation with Mixture-of-Expert Controllers. (arXiv:2309.04372v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04372">http://arxiv.org/abs/2309.04372</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04372]] MoEController: Instruction-based Arbitrary Image Manipulation with Mixture-of-Expert Controllers(http://arxiv.org/abs/2309.04372)</code></li>
+<li>Summary: <p>Diffusion-model-based text-guided image generation has recently made
+astounding progress, producing fascinating results in open-domain image
+manipulation tasks. Few models, however, currently have complete zero-shot
+capabilities for both global and local image editing due to the complexity and
+diversity of image manipulation tasks. In this work, we propose a method with a
+mixture-of-expert (MOE) controllers to align the text-guided capacity of
+diffusion models with different kinds of human instructions, enabling our model
+to handle various open-domain image manipulation tasks with natural language
+instructions. First, we use large language models (ChatGPT) and conditional
+image synthesis models (ControlNet) to generate a large number of global image
+transfer dataset in addition to the instruction-based local image editing
+dataset. Then, using an MOE technique and task-specific adaptation training on
+a large-scale dataset, our conditional diffusion model can edit images globally
+and locally. Extensive experiments demonstrate that our approach performs
+surprisingly well on various image manipulation tasks when dealing with
+open-domain images and arbitrary human instructions. Please refer to our
+project page: [https://oppo-mente-lab.github.io/moe_controller/]
+</p></li>
+</ul>
+
+<h3>Title: MaskDiffusion: Boosting Text-to-Image Consistency with Conditional Mask. (arXiv:2309.04399v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04399">http://arxiv.org/abs/2309.04399</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04399]] MaskDiffusion: Boosting Text-to-Image Consistency with Conditional Mask(http://arxiv.org/abs/2309.04399)</code></li>
+<li>Summary: <p>Recent advancements in diffusion models have showcased their impressive
+capacity to generate visually striking images. Nevertheless, ensuring a close
+match between the generated image and the given prompt remains a persistent
+challenge. In this work, we identify that a crucial factor leading to the
+text-image mismatch issue is the inadequate cross-modality relation learning
+between the prompt and the output image. To better align the prompt and image
+content, we advance the cross-attention with an adaptive mask, which is
+conditioned on the attention maps and the prompt embeddings, to dynamically
+adjust the contribution of each text token to the image features. This
+mechanism explicitly diminishes the ambiguity in semantic information embedding
+from the text encoder, leading to a boost of text-to-image consistency in the
+synthesized images. Our method, termed MaskDiffusion, is training-free and
+hot-pluggable for popular pre-trained diffusion models. When applied to the
+latent diffusion models, our MaskDiffusion can significantly improve the
+text-to-image consistency with negligible computation overhead compared to the
+original diffusion models.
+</p></li>
+</ul>
+
+<h3>Title: Create Your World: Lifelong Text-to-Image Diffusion. (arXiv:2309.04430v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04430">http://arxiv.org/abs/2309.04430</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04430]] Create Your World: Lifelong Text-to-Image Diffusion(http://arxiv.org/abs/2309.04430)</code></li>
+<li>Summary: <p>Text-to-image generative models can produce diverse high-quality images of
+concepts with a text prompt, which have demonstrated excellent ability in image
+generation, image translation, etc. We in this work study the problem of
+synthesizing instantiations of a use's own concepts in a never-ending manner,
+i.e., create your world, where the new concepts from user are quickly learned
+with a few examples. To achieve this goal, we propose a Lifelong text-to-image
+Diffusion Model (L2DM), which intends to overcome knowledge "catastrophic
+forgetting" for the past encountered concepts, and semantic "catastrophic
+neglecting" for one or more concepts in the text prompt. In respect of
+knowledge "catastrophic forgetting", our L2DM framework devises a task-aware
+memory enhancement module and a elastic-concept distillation module, which
+could respectively safeguard the knowledge of both prior concepts and each past
+personalized concept. When generating images with a user text prompt, the
+solution to semantic "catastrophic neglecting" is that a concept attention
+artist module can alleviate the semantic neglecting from concept aspect, and an
+orthogonal attention module can reduce the semantic binding from attribute
+aspect. To the end, our model can generate more faithful image across a range
+of continual text prompts in terms of both qualitative and quantitative
+metrics, when comparing with the related state-of-the-art models. The code will
+be released at https://wenqiliang.github.io/.
+</p></li>
+</ul>
+
+<h3>Title: Variations and Relaxations of Normalizing Flows. (arXiv:2309.04433v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04433">http://arxiv.org/abs/2309.04433</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04433]] Variations and Relaxations of Normalizing Flows(http://arxiv.org/abs/2309.04433)</code></li>
+<li>Summary: <p>Normalizing Flows (NFs) describe a class of models that express a complex
+target distribution as the composition of a series of bijective transformations
+over a simpler base distribution. By limiting the space of candidate
+transformations to diffeomorphisms, NFs enjoy efficient, exact sampling and
+density evaluation, enabling NFs to flexibly behave as both discriminative and
+generative models. Their restriction to diffeomorphisms, however, enforces that
+input, output and all intermediary spaces share the same dimension, limiting
+their ability to effectively represent target distributions with complex
+topologies. Additionally, in cases where the prior and target distributions are
+not homeomorphic, Normalizing Flows can leak mass outside of the support of the
+target. This survey covers a selection of recent works that combine aspects of
+other generative model classes, such as VAEs and score-based diffusion, and in
+doing so loosen the strict bijectivity constraints of NFs to achieve a balance
+of expressivity, training speed, sample efficiency and likelihood tractability.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: REALM: Robust Entropy Adaptive Loss Minimization for Improved Single-Sample Test-Time Adaptation. (arXiv:2309.03964v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.03964">http://arxiv.org/abs/2309.03964</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.03964]] REALM: Robust Entropy Adaptive Loss Minimization for Improved Single-Sample Test-Time Adaptation(http://arxiv.org/abs/2309.03964)</code></li>
+<li>Summary: <p>Fully-test-time adaptation (F-TTA) can mitigate performance loss due to
+distribution shifts between train and test data (1) without access to the
+training data, and (2) without knowledge of the model training procedure. In
+online F-TTA, a pre-trained model is adapted using a stream of test samples by
+minimizing a self-supervised objective, such as entropy minimization. However,
+models adapted with online using entropy minimization, are unstable especially
+in single sample settings, leading to degenerate solutions, and limiting the
+adoption of TTA inference strategies. Prior works identify noisy, or
+unreliable, samples as a cause of failure in online F-TTA. One solution is to
+ignore these samples, which can lead to bias in the update procedure, slow
+adaptation, and poor generalization. In this work, we present a general
+framework for improving robustness of F-TTA to these noisy samples, inspired by
+self-paced learning and robust loss functions. Our proposed approach, Robust
+Entropy Adaptive Loss Minimization (REALM), achieves better adaptation accuracy
+than previous approaches throughout the adaptation process on corruptions of
+CIFAR-10 and ImageNet-1K, demonstrating its effectiveness.
+</p></li>
+</ul>
+
+<h3>Title: CDFSL-V: Cross-Domain Few-Shot Learning for Videos. (arXiv:2309.03989v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.03989">http://arxiv.org/abs/2309.03989</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.03989]] CDFSL-V: Cross-Domain Few-Shot Learning for Videos(http://arxiv.org/abs/2309.03989)</code></li>
+<li>Summary: <p>Few-shot video action recognition is an effective approach to recognizing new
+categories with only a few labeled examples, thereby reducing the challenges
+associated with collecting and annotating large-scale video datasets. Existing
+methods in video action recognition rely on large labeled datasets from the
+same domain. However, this setup is not realistic as novel categories may come
+from different data domains that may have different spatial and temporal
+characteristics. This dissimilarity between the source and target domains can
+pose a significant challenge, rendering traditional few-shot action recognition
+techniques ineffective. To address this issue, in this work, we propose a novel
+cross-domain few-shot video action recognition method that leverages
+self-supervised learning and curriculum learning to balance the information
+from the source and target domains. To be particular, our method employs a
+masked autoencoder-based self-supervised training objective to learn from both
+source and target data in a self-supervised manner. Then a progressive
+curriculum balances learning the discriminative information from the source
+dataset with the generic information learned from the target domain. Initially,
+our curriculum utilizes supervised learning to learn class discriminative
+features from the source data. As the training progresses, we transition to
+learning target-domain-specific features. We propose a progressive curriculum
+to encourage the emergence of rich features in the target domain based on class
+discriminative supervised features in the source domain. %a schedule that helps
+with this transition. We evaluate our method on several challenging benchmark
+datasets and demonstrate that our approach outperforms existing cross-domain
+few-shot learning techniques. Our code is available at
+\hyperlink{https://github.com/Sarinda251/CDFSL-V}{https://github.com/Sarinda251/CDFSL-V}
+</p></li>
+</ul>
+
+<h3>Title: Adapting Self-Supervised Representations to Multi-Domain Setups. (arXiv:2309.03999v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.03999">http://arxiv.org/abs/2309.03999</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.03999]] Adapting Self-Supervised Representations to Multi-Domain Setups(http://arxiv.org/abs/2309.03999)</code></li>
+<li>Summary: <p>Current state-of-the-art self-supervised approaches, are effective when
+trained on individual domains but show limited generalization on unseen
+domains. We observe that these models poorly generalize even when trained on a
+mixture of domains, making them unsuitable to be deployed under diverse
+real-world setups. We therefore propose a general-purpose, lightweight Domain
+Disentanglement Module (DDM) that can be plugged into any self-supervised
+encoder to effectively perform representation learning on multiple, diverse
+domains with or without shared classes. During pre-training according to a
+self-supervised loss, DDM enforces a disentanglement in the representation
+space by splitting it into a domain-variant and a domain-invariant portion.
+When domain labels are not available, DDM uses a robust clustering approach to
+discover pseudo-domains. We show that pre-training with DDM can show up to 3.5%
+improvement in linear probing accuracy on state-of-the-art self-supervised
+models including SimCLR, MoCo, BYOL, DINO, SimSiam and Barlow Twins on
+multi-domain benchmarks including PACS, DomainNet and WILDS. Models trained
+with DDM show significantly improved generalization (7.4%) to unseen domains
+compared to baselines. Therefore, DDM can efficiently adapt self-supervised
+encoders to provide high-quality, generalizable representations for diverse
+multi-domain data.
+</p></li>
+</ul>
+
+<h3>Title: Robot Localization and Mapping Final Report -- Sequential Adversarial Learning for Self-Supervised Deep Visual Odometry. (arXiv:2309.04147v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04147">http://arxiv.org/abs/2309.04147</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04147]] Robot Localization and Mapping Final Report -- Sequential Adversarial Learning for Self-Supervised Deep Visual Odometry(http://arxiv.org/abs/2309.04147)</code></li>
+<li>Summary: <p>Visual odometry (VO) and SLAM have been using multi-view geometry via local
+structure from motion for decades. These methods have a slight disadvantage in
+challenging scenarios such as low-texture images, dynamic scenarios, etc.
+Meanwhile, use of deep neural networks to extract high level features is
+ubiquitous in computer vision. For VO, we can use these deep networks to
+extract depth and pose estimates using these high level features. The visual
+odometry task then can be modeled as an image generation task where the pose
+estimation is the by-product. This can also be achieved in a self-supervised
+manner, thereby eliminating the data (supervised) intensive nature of training
+deep neural networks. Although some works tried the similar approach [1], the
+depth and pose estimation in the previous works are vague sometimes resulting
+in accumulation of error (drift) along the trajectory. The goal of this work is
+to tackle these limitations of past approaches and to develop a method that can
+provide better depths and pose estimates. To address this, a couple of
+approaches are explored: 1) Modeling: Using optical flow and recurrent neural
+networks (RNN) in order to exploit spatio-temporal correlations which can
+provide more information to estimate depth. 2) Loss function: Generative
+adversarial network (GAN) [2] is deployed to improve the depth estimation (and
+thereby pose too), as shown in Figure 1. This additional loss term improves the
+realism in generated images and reduces artifacts.
+</p></li>
+</ul>
+
+<h3>Title: Representation Synthesis by Probabilistic Many-Valued Logic Operation in Self-Supervised Learning. (arXiv:2309.04148v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04148">http://arxiv.org/abs/2309.04148</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04148]] Representation Synthesis by Probabilistic Many-Valued Logic Operation in Self-Supervised Learning(http://arxiv.org/abs/2309.04148)</code></li>
+<li>Summary: <p>Self-supervised learning (SSL) using mixed images has been studied to learn
+various image representations. Existing methods using mixed images learn a
+representation by maximizing the similarity between the representation of the
+mixed image and the synthesized representation of the original images. However,
+few methods consider the synthesis of representations from the perspective of
+mathematical logic. In this study, we focused on a synthesis method of
+representations. We proposed a new SSL with mixed images and a new
+representation format based on many-valued logic. This format can indicate the
+feature-possession degree, that is, how much of each image feature is possessed
+by a representation. This representation format and representation synthesis by
+logic operation realize that the synthesized representation preserves the
+remarkable characteristics of the original representations. Our method
+performed competitively with previous representation synthesis methods for
+image classification tasks. We also examined the relationship between the
+feature-possession degree and the number of classes of images in the multilabel
+image classification dataset to verify that the intended learning was achieved.
+In addition, we discussed image retrieval, which is an application of our
+proposed representation format using many-valued logic.
+</p></li>
+</ul>
+
+<h3>Title: Unsupervised Object Localization with Representer Point Selection. (arXiv:2309.04172v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04172">http://arxiv.org/abs/2309.04172</a></li>
+<li>Code URL: https://github.com/yeonghwansong/uolwrps</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04172]] Unsupervised Object Localization with Representer Point Selection(http://arxiv.org/abs/2309.04172)</code></li>
+<li>Summary: <p>We propose a novel unsupervised object localization method that allows us to
+explain the predictions of the model by utilizing self-supervised pre-trained
+models without additional finetuning. Existing unsupervised and self-supervised
+object localization methods often utilize class-agnostic activation maps or
+self-similarity maps of a pre-trained model. Although these maps can offer
+valuable information for localization, their limited ability to explain how the
+model makes predictions remains challenging. In this paper, we propose a simple
+yet effective unsupervised object localization method based on representer
+point selection, where the predictions of the model can be represented as a
+linear combination of representer values of training points. By selecting
+representer points, which are the most important examples for the model
+predictions, our model can provide insights into how the model predicts the
+foreground object by providing relevant examples as well as their importance.
+Our method outperforms the state-of-the-art unsupervised and self-supervised
+object localization methods on various datasets with significant margins and
+even outperforms recent weakly supervised and few-shot methods.
+</p></li>
+</ul>
+
+<h3>Title: AMLP:Adaptive Masking Lesion Patches for Self-supervised Medical Image Segmentation. (arXiv:2309.04312v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04312">http://arxiv.org/abs/2309.04312</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04312]] AMLP:Adaptive Masking Lesion Patches for Self-supervised Medical Image Segmentation(http://arxiv.org/abs/2309.04312)</code></li>
+<li>Summary: <p>Self-supervised masked image modeling has shown promising results on natural
+images. However, directly applying such methods to medical images remains
+challenging. This difficulty stems from the complexity and distinct
+characteristics of lesions compared to natural images, which impedes effective
+representation learning. Additionally, conventional high fixed masking ratios
+restrict reconstructing fine lesion details, limiting the scope of learnable
+information. To tackle these limitations, we propose a novel self-supervised
+medical image segmentation framework, Adaptive Masking Lesion Patches (AMLP).
+Specifically, we design a Masked Patch Selection (MPS) strategy to identify and
+focus learning on patches containing lesions. Lesion regions are scarce yet
+critical, making their precise reconstruction vital. To reduce
+misclassification of lesion and background patches caused by unsupervised
+clustering in MPS, we introduce an Attention Reconstruction Loss (ARL) to focus
+on hard-to-reconstruct patches likely depicting lesions. We further propose a
+Category Consistency Loss (CCL) to refine patch categorization based on
+reconstruction difficulty, strengthening distinction between lesions and
+background. Moreover, we develop an Adaptive Masking Ratio (AMR) strategy that
+gradually increases the masking ratio to expand reconstructible information and
+improve learning. Extensive experiments on two medical segmentation datasets
+demonstrate AMLP's superior performance compared to existing self-supervised
+approaches. The proposed strategies effectively address limitations in applying
+masked modeling to medical images, tailored to capturing fine lesion details
+vital for segmentation tasks.
+</p></li>
+</ul>
+
+<h3>Title: 3D Denoisers are Good 2D Teachers: Molecular Pretraining via Denoising and Cross-Modal Distillation. (arXiv:2309.04062v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04062">http://arxiv.org/abs/2309.04062</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04062]] 3D Denoisers are Good 2D Teachers: Molecular Pretraining via Denoising and Cross-Modal Distillation(http://arxiv.org/abs/2309.04062)</code></li>
+<li>Summary: <p>Pretraining molecular representations from large unlabeled data is essential
+for molecular property prediction due to the high cost of obtaining
+ground-truth labels. While there exist various 2D graph-based molecular
+pretraining approaches, these methods struggle to show statistically
+significant gains in predictive performance. Recent work have thus instead
+proposed 3D conformer-based pretraining under the task of denoising, which led
+to promising results. During downstream finetuning, however, models trained
+with 3D conformers require accurate atom-coordinates of previously unseen
+molecules, which are computationally expensive to acquire at scale. In light of
+this limitation, we propose D&amp;D, a self-supervised molecular representation
+learning framework that pretrains a 2D graph encoder by distilling
+representations from a 3D denoiser. With denoising followed by cross-modal
+knowledge distillation, our approach enjoys use of knowledge obtained from
+denoising as well as painless application to downstream tasks with no access to
+accurate conformers. Experiments on real-world molecular property prediction
+datasets show that the graph encoder trained via D&amp;D can infer 3D information
+based on the 2D graph and shows superior performance and label-efficiency
+against other baselines.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Have We Ever Encountered This Before? Retrieving Out-of-Distribution Road Obstacles from Driving Scenes. (arXiv:2309.04302v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04302">http://arxiv.org/abs/2309.04302</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04302]] Have We Ever Encountered This Before? Retrieving Out-of-Distribution Road Obstacles from Driving Scenes(http://arxiv.org/abs/2309.04302)</code></li>
+<li>Summary: <p>In the life cycle of highly automated systems operating in an open and
+dynamic environment, the ability to adjust to emerging challenges is crucial.
+For systems integrating data-driven AI-based components, rapid responses to
+deployment issues require fast access to related data for testing and
+reconfiguration. In the context of automated driving, this especially applies
+to road obstacles that were not included in the training data, commonly
+referred to as out-of-distribution (OoD) road obstacles. Given the availability
+of large uncurated recordings of driving scenes, a pragmatic approach is to
+query a database to retrieve similar scenarios featuring the same safety
+concerns due to OoD road obstacles. In this work, we extend beyond identifying
+OoD road obstacles in video streams and offer a comprehensive approach to
+extract sequences of OoD road obstacles using text queries, thereby proposing a
+way of curating a collection of OoD data for subsequent analysis. Our proposed
+method leverages the recent advances in OoD segmentation and multi-modal
+foundation models to identify and efficiently extract safety-relevant scenes
+from unlabeled videos. We present a first approach for the novel task of
+text-based OoD object retrieval, which addresses the question ''Have we ever
+encountered this before?''.
+</p></li>
+</ul>
+
+<h3>Title: Zero-Shot Robustification of Zero-Shot Models With Foundation Models. (arXiv:2309.04344v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04344">http://arxiv.org/abs/2309.04344</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04344]] Zero-Shot Robustification of Zero-Shot Models With Foundation Models(http://arxiv.org/abs/2309.04344)</code></li>
+<li>Summary: <p>Zero-shot inference is a powerful paradigm that enables the use of large
+pretrained models for downstream classification tasks without further training.
+However, these models are vulnerable to inherited biases that can impact their
+performance. The traditional solution is fine-tuning, but this undermines the
+key advantage of pretrained models, which is their ability to be used
+out-of-the-box. We propose RoboShot, a method that improves the robustness of
+pretrained model embeddings in a fully zero-shot fashion. First, we use
+zero-shot language models (LMs) to obtain useful insights from task
+descriptions. These insights are embedded and used to remove harmful and boost
+useful components in embeddings -- without any supervision. Theoretically, we
+provide a simple and tractable model for biases in zero-shot embeddings and
+give a result characterizing under what conditions our approach can boost
+performance. Empirically, we evaluate RoboShot on nine image and NLP
+classification tasks and show an average improvement of 15.98% over several
+zero-shot baselines. Additionally, we demonstrate that RoboShot is compatible
+with a variety of pretrained and language models.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Score-PA: Score-based 3D Part Assembly. (arXiv:2309.04220v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04220">http://arxiv.org/abs/2309.04220</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04220]] Score-PA: Score-based 3D Part Assembly(http://arxiv.org/abs/2309.04220)</code></li>
+<li>Summary: <p>Autonomous 3D part assembly is a challenging task in the areas of robotics
+and 3D computer vision. This task aims to assemble individual components into a
+complete shape without relying on predefined instructions. In this paper, we
+formulate this task from a novel generative perspective, introducing the
+Score-based 3D Part Assembly framework (Score-PA) for 3D part assembly. Knowing
+that score-based methods are typically time-consuming during the inference
+stage. To address this issue, we introduce a novel algorithm called the Fast
+Predictor-Corrector Sampler (FPC) that accelerates the sampling process within
+the framework. We employ various metrics to assess assembly quality and
+diversity, and our evaluation results demonstrate that our algorithm
+outperforms existing state-of-the-art approaches. We release our code at
+https://github.com/J-F-Cheng/Score-PA_Score-based-3D-Part-Assembly.
+</p></li>
+</ul>
+
+<h3>Title: SSIG: A Visually-Guided Graph Edit Distance for Floor Plan Similarity. (arXiv:2309.04357v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04357">http://arxiv.org/abs/2309.04357</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04357]] SSIG: A Visually-Guided Graph Edit Distance for Floor Plan Similarity(http://arxiv.org/abs/2309.04357)</code></li>
+<li>Summary: <p>We propose a simple yet effective metric that measures structural similarity
+between visual instances of architectural floor plans, without the need for
+learning. Qualitatively, our experiments show that the retrieval results are
+similar to deeply learned methods. Effectively comparing instances of floor
+plan data is paramount to the success of machine understanding of floor plan
+data, including the assessment of floor plan generative models and floor plan
+recommendation systems. Comparing visual floor plan images goes beyond a sole
+pixel-wise visual examination and is crucially about similarities and
+differences in the shapes and relations between subdivisions that compose the
+layout. Currently, deep metric learning approaches are used to learn a
+pair-wise vector representation space that closely mimics the structural
+similarity, in which the models are trained on similarity labels that are
+obtained by Intersection-over-Union (IoU). To compensate for the lack of
+structural awareness in IoU, graph-based approaches such as Graph Matching
+Networks (GMNs) are used, which require pairwise inference for comparing data
+instances, making GMNs less practical for retrieval applications. In this
+paper, an effective evaluation metric for judging the structural similarity of
+floor plans, coined SSIG (Structural Similarity by IoU and GED), is proposed
+based on both image and graph distances. In addition, an efficient algorithm is
+developed that uses SSIG to rank a large-scale floor plan database. Code will
+be openly available.
+</p></li>
+</ul>
+
+<h3>Title: TIDE: Textual Identity Detection for Evaluating and Augmenting Classification and Language Models. (arXiv:2309.04027v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.04027">http://arxiv.org/abs/2309.04027</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.04027]] TIDE: Textual Identity Detection for Evaluating and Augmenting Classification and Language Models(http://arxiv.org/abs/2309.04027)</code></li>
+<li>Summary: <p>Machine learning models can perpetuate unintended biases from unfair and
+imbalanced datasets. Evaluating and debiasing these datasets and models is
+especially hard in text datasets where sensitive attributes such as race,
+gender, and sexual orientation may not be available. When these models are
+deployed into society, they can lead to unfair outcomes for historically
+underrepresented groups. In this paper, we present a dataset coupled with an
+approach to improve text fairness in classifiers and language models. We create
+a new, more comprehensive identity lexicon, TIDAL, which includes 15,123
+identity terms and associated sense context across three demographic
+categories. We leverage TIDAL to develop an identity annotation and
+augmentation tool that can be used to improve the availability of identity
+context and the effectiveness of ML fairness techniques. We evaluate our
+approaches using human contributors, and additionally run experiments focused
+on dataset and model debiasing. Results show our assistive annotation technique
+improves the reliability and velocity of human-in-the-loop processes. Our
+dataset and methods uncover more disparities during evaluation, and also
+produce more fair models during remediation. These approaches provide a
+practical path forward for scaling classifier and generative model fairness in
+real-world settings.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
