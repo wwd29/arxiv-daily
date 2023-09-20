@@ -1,0 +1,692 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Language Guided Adversarial Purification. (arXiv:2309.10348v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10348">http://arxiv.org/abs/2309.10348</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10348]] Language Guided Adversarial Purification(http://arxiv.org/abs/2309.10348)</code></li>
+<li>Summary: <p>Adversarial purification using generative models demonstrates strong
+adversarial defense performance. These methods are classifier and
+attack-agnostic, making them versatile but often computationally intensive.
+Recent strides in diffusion and score networks have improved image generation
+and, by extension, adversarial purification. Another highly efficient class of
+adversarial defense methods known as adversarial training requires specific
+knowledge of attack vectors, forcing them to be trained extensively on
+adversarial examples. To overcome these limitations, we introduce a new
+framework, namely Language Guided Adversarial Purification (LGAP), utilizing
+pre-trained diffusion models and caption generators to defend against
+adversarial attacks. Given an input image, our method first generates a
+caption, which is then used to guide the adversarial purification process
+through a diffusion network. Our approach has been evaluated against strong
+adversarial attacks, proving its effectiveness in enhancing adversarial
+robustness. Our results indicate that LGAP outperforms most existing
+adversarial defense techniques without requiring specialized network training.
+This underscores the generalizability of models trained on large datasets,
+highlighting a promising direction for further research.
+</p></li>
+</ul>
+
+<h3>Title: AutoDiffusion: Training-Free Optimization of Time Steps and Architectures for Automated Diffusion Model Acceleration. (arXiv:2309.10438v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10438">http://arxiv.org/abs/2309.10438</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10438]] AutoDiffusion: Training-Free Optimization of Time Steps and Architectures for Automated Diffusion Model Acceleration(http://arxiv.org/abs/2309.10438)</code></li>
+<li>Summary: <p>Diffusion models are emerging expressive generative models, in which a large
+number of time steps (inference steps) are required for a single image
+generation. To accelerate such tedious process, reducing steps uniformly is
+considered as an undisputed principle of diffusion models. We consider that
+such a uniform assumption is not the optimal solution in practice; i.e., we can
+find different optimal time steps for different models. Therefore, we propose
+to search the optimal time steps sequence and compressed model architecture in
+a unified framework to achieve effective image generation for diffusion models
+without any further training. Specifically, we first design a unified search
+space that consists of all possible time steps and various architectures. Then,
+a two stage evolutionary algorithm is introduced to find the optimal solution
+in the designed search space. To further accelerate the search process, we
+employ FID score between generated and real samples to estimate the performance
+of the sampled examples. As a result, the proposed method is (i).training-free,
+obtaining the optimal time steps and model architecture without any training
+process; (ii). orthogonal to most advanced diffusion samplers and can be
+integrated to gain better sample quality. (iii). generalized, where the
+searched time steps and architectures can be directly applied on different
+diffusion models with the same guidance scale. Experimental results show that
+our method achieves excellent performance by using only a few time steps, e.g.
+17.86 FID score on ImageNet 64 $\times$ 64 with only four steps, compared to
+138.66 with DDIM.
+</p></li>
+</ul>
+
+<h3>Title: Posterior sampling algorithms for unsupervised speech enhancement with recurrent variational autoencoder. (arXiv:2309.10439v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10439">http://arxiv.org/abs/2309.10439</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10439]] Posterior sampling algorithms for unsupervised speech enhancement with recurrent variational autoencoder(http://arxiv.org/abs/2309.10439)</code></li>
+<li>Summary: <p>In this paper, we address the unsupervised speech enhancement problem based
+on recurrent variational autoencoder (RVAE). This approach offers promising
+generalization performance over the supervised counterpart. Nevertheless, the
+involved iterative variational expectation-maximization (VEM) process at test
+time, which relies on a variational inference method, results in high
+computational complexity. To tackle this issue, we present efficient sampling
+techniques based on Langevin dynamics and Metropolis-Hasting algorithms,
+adapted to the EM-based speech enhancement with RVAE. By directly sampling from
+the intractable posterior distribution within the EM process, we circumvent the
+intricacies of variational inference. We conduct a series of experiments,
+comparing the proposed methods with VEM and a state-of-the-art supervised
+speech enhancement approach based on diffusion models. The results reveal that
+our sampling-based algorithms significantly outperform VEM, not only in terms
+of computational efficiency but also in overall performance. Furthermore, when
+compared to the supervised baseline, our methods showcase robust generalization
+performance in mismatched test conditions.
+</p></li>
+</ul>
+
+<h3>Title: Unsupervised speech enhancement with diffusion-based generative models. (arXiv:2309.10450v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10450">http://arxiv.org/abs/2309.10450</a></li>
+<li>Code URL: https://github.com/sp-uhh/sgmse</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10450]] Unsupervised speech enhancement with diffusion-based generative models(http://arxiv.org/abs/2309.10450)</code></li>
+<li>Summary: <p>Recently, conditional score-based diffusion models have gained significant
+attention in the field of supervised speech enhancement, yielding
+state-of-the-art performance. However, these methods may face challenges when
+generalising to unseen conditions. To address this issue, we introduce an
+alternative approach that operates in an unsupervised manner, leveraging the
+generative power of diffusion models. Specifically, in a training phase, a
+clean speech prior distribution is learnt in the short-time Fourier transform
+(STFT) domain using score-based diffusion models, allowing it to
+unconditionally generate clean speech from Gaussian noise. Then, we develop a
+posterior sampling methodology for speech enhancement by combining the learnt
+clean speech prior with a noise model for speech signal inference. The noise
+parameters are simultaneously learnt along with clean speech estimation through
+an iterative expectationmaximisation (EM) approach. To the best of our
+knowledge, this is the first work exploring diffusion-based generative models
+for unsupervised speech enhancement, demonstrating promising results compared
+to a recent variational auto-encoder (VAE)-based unsupervised approach and a
+state-of-the-art diffusion-based supervised method. It thus opens a new
+direction for future research in unsupervised speech enhancement.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion-based speech enhancement with a weighted generative-supervised learning loss. (arXiv:2309.10457v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10457">http://arxiv.org/abs/2309.10457</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10457]] Diffusion-based speech enhancement with a weighted generative-supervised learning loss(http://arxiv.org/abs/2309.10457)</code></li>
+<li>Summary: <p>Diffusion-based generative models have recently gained attention in speech
+enhancement (SE), providing an alternative to conventional supervised methods.
+These models transform clean speech training samples into Gaussian noise
+centered at noisy speech, and subsequently learn a parameterized model to
+reverse this process, conditionally on noisy speech. Unlike supervised methods,
+generative-based SE approaches usually rely solely on an unsupervised loss,
+which may result in less efficient incorporation of conditioned noisy speech.
+To address this issue, we propose augmenting the original diffusion training
+objective with a mean squared error (MSE) loss, measuring the discrepancy
+between estimated enhanced speech and ground-truth clean speech at each reverse
+process iteration. Experimental results demonstrate the effectiveness of our
+proposed methodology.
+</p></li>
+</ul>
+
+<h3>Title: Fully automated landmarking and facial segmentation on 3D photographs. (arXiv:2309.10472v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10472">http://arxiv.org/abs/2309.10472</a></li>
+<li>Code URL: https://github.com/rumc3dlab/3dlandmarkdetection</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10472]] Fully automated landmarking and facial segmentation on 3D photographs(http://arxiv.org/abs/2309.10472)</code></li>
+<li>Summary: <p>Three-dimensional facial stereophotogrammetry provides a detailed
+representation of craniofacial soft tissue without the use of ionizing
+radiation. While manual annotation of landmarks serves as the current gold
+standard for cephalometric analysis, it is a time-consuming process and is
+prone to human error. The aim in this study was to develop and evaluate an
+automated cephalometric annotation method using a deep learning-based approach.
+Ten landmarks were manually annotated on 2897 3D facial photographs by a single
+observer. The automated landmarking workflow involved two successive
+DiffusionNet models and additional algorithms for facial segmentation. The
+dataset was randomly divided into a training and test dataset. The training
+dataset was used to train the deep learning networks, whereas the test dataset
+was used to evaluate the performance of the automated workflow. The precision
+of the workflow was evaluated by calculating the Euclidean distances between
+the automated and manual landmarks and compared to the intra-observer and
+inter-observer variability of manual annotation and the semi-automated
+landmarking method. The workflow was successful in 98.6% of all test cases. The
+deep learning-based landmarking method achieved precise and consistent landmark
+annotation. The mean precision of 1.69 (+/-1.15) mm was comparable to the
+inter-observer variability (1.31 +/-0.91 mm) of manual annotation. The
+Euclidean distance between the automated and manual landmarks was within 2 mm
+in 69%. Automated landmark annotation on 3D photographs was achieved with the
+DiffusionNet-based approach. The proposed method allows quantitative analysis
+of large datasets and may be used in diagnosis, follow-up, and virtual surgical
+planning.
+</p></li>
+</ul>
+
+<h3>Title: Forgedit: Text Guided Image Editing via Learning and Forgetting. (arXiv:2309.10556v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10556">http://arxiv.org/abs/2309.10556</a></li>
+<li>Code URL: https://github.com/witcherofresearch/forgedit</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10556]] Forgedit: Text Guided Image Editing via Learning and Forgetting(http://arxiv.org/abs/2309.10556)</code></li>
+<li>Summary: <p>Text guided image editing on real images given only the image and the target
+text prompt as inputs, is a very general and challenging problem, which
+requires the editing model to reason by itself which part of the image should
+be edited, to preserve the characteristics of original image, and also to
+perform complicated non-rigid editing. Previous fine-tuning based solutions are
+time-consuming and vulnerable to overfitting, limiting their editing
+capabilities. To tackle these issues, we design a novel text guided image
+editing method, Forgedit. First, we propose a novel fine-tuning framework which
+learns to reconstruct the given image in less than one minute by vision
+language joint learning. Then we introduce vector subtraction and vector
+projection to explore the proper text embedding for editing. We also find a
+general property of UNet structures in Diffusion Models and inspired by such a
+finding, we design forgetting strategies to diminish the fatal overfitting
+issues and significantly boost the editing abilities of Diffusion Models. Our
+method, Forgedit, implemented with Stable Diffusion, achieves new
+state-of-the-art results on the challenging text guided image editing benchmark
+TEdBench, surpassing the previous SOTA method Imagic with Imagen, in terms of
+both CLIP score and LPIPS score. Codes are available at
+https://github.com/witcherofresearch/Forgedit.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Single-Image based unsupervised joint segmentation and denoising. (arXiv:2309.10511v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10511">http://arxiv.org/abs/2309.10511</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10511]] Single-Image based unsupervised joint segmentation and denoising(http://arxiv.org/abs/2309.10511)</code></li>
+<li>Summary: <p>In this work, we develop an unsupervised method for the joint segmentation
+and denoising of a single image. To this end, we combine the advantages of a
+variational segmentation method with the power of a self-supervised,
+single-image based deep learning approach. One major strength of our method
+lies in the fact, that in contrast to data-driven methods, where huge amounts
+of labeled samples are necessary, our model can segment an image into multiple
+meaningful regions without any training database. Further, we introduce a novel
+energy functional in which denoising and segmentation are coupled in a way that
+both tasks benefit from each other. The limitations of existing single-image
+based variational segmentation methods, which are not capable of dealing with
+high noise or generic texture, are tackled by this specific combination with
+self-supervised image denoising. We propose a unified optimisation strategy and
+show that, especially for very noisy images available in microscopy, our
+proposed joint approach outperforms its sequential counterpart as well as
+alternative methods focused purely on denoising or segmentation. Another
+comparison is conducted with a supervised deep learning approach designed for
+the same application, highlighting the good performance of our approach.
+</p></li>
+</ul>
+
+<h3>Title: Leveraging Speech PTM, Text LLM, and Emotional TTS for Speech Emotion Recognition. (arXiv:2309.10294v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10294">http://arxiv.org/abs/2309.10294</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10294]] Leveraging Speech PTM, Text LLM, and Emotional TTS for Speech Emotion Recognition(http://arxiv.org/abs/2309.10294)</code></li>
+<li>Summary: <p>In this paper, we explored how to boost speech emotion recognition (SER) with
+the state-of-the-art speech pre-trained model (PTM), data2vec, text generation
+technique, GPT-4, and speech synthesis technique, Azure TTS. First, we
+investigated the representation ability of different speech self-supervised
+pre-trained models, and we found that data2vec has a good representation
+ability on the SER task. Second, we employed a powerful large language model
+(LLM), GPT-4, and emotional text-to-speech (TTS) model, Azure TTS, to generate
+emotionally congruent text and speech. We carefully designed the text prompt
+and dataset construction, to obtain the synthetic emotional speech data with
+high quality. Third, we studied different ways of data augmentation to promote
+the SER task with synthetic speech, including random mixing, adversarial
+training, transfer learning, and curriculum learning. Experiments and ablation
+studies on the IEMOCAP dataset demonstrate the effectiveness of our method,
+compared with other data augmentation methods, and data augmentation with other
+synthetic data.
+</p></li>
+</ul>
+
+<h3>Title: Realistic Website Fingerprinting By Augmenting Network Trace. (arXiv:2309.10147v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10147">http://arxiv.org/abs/2309.10147</a></li>
+<li>Code URL: https://github.com/spin-umass/realistic-website-fingerprinting-by-augmenting-network-traces</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10147]] Realistic Website Fingerprinting By Augmenting Network Trace(http://arxiv.org/abs/2309.10147)</code></li>
+<li>Summary: <p>Website Fingerprinting (WF) is considered a major threat to the anonymity of
+Tor users (and other anonymity systems). While state-of-the-art WF techniques
+have claimed high attack accuracies, e.g., by leveraging Deep Neural Networks
+(DNN), several recent works have questioned the practicality of such WF attacks
+in the real world due to the assumptions made in the design and evaluation of
+these attacks. In this work, we argue that such impracticality issues are
+mainly due to the attacker's inability in collecting training data in
+comprehensive network conditions, e.g., a WF classifier may be trained only on
+samples collected on specific high-bandwidth network links but deployed on
+connections with different network conditions. We show that augmenting network
+traces can enhance the performance of WF classifiers in unobserved network
+conditions. Specifically, we introduce NetAugment, an augmentation technique
+tailored to the specifications of Tor traces. We instantiate NetAugment through
+semi-supervised and self-supervised learning techniques. Our extensive
+open-world and close-world experiments demonstrate that under practical
+evaluation settings, our WF attacks provide superior performances compared to
+the state-of-the-art; this is due to their use of augmented network traces for
+training, which allows them to learn the features of target traffic in
+unobserved settings. For instance, with a 5-shot learning in a closed-world
+scenario, our self-supervised WF attack (named NetCLR) reaches up to 80%
+accuracy when the traces for evaluation are collected in a setting unobserved
+by the WF adversary. This is compared to an accuracy of 64.4% achieved by the
+state-of-the-art Triplet Fingerprinting [35]. We believe that the promising
+results of our work can encourage the use of network trace augmentation in
+other types of network traffic analysis.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Multimodal Foundation Models: From Specialists to General-Purpose Assistants. (arXiv:2309.10020v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10020">http://arxiv.org/abs/2309.10020</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10020]] Multimodal Foundation Models: From Specialists to General-Purpose Assistants(http://arxiv.org/abs/2309.10020)</code></li>
+<li>Summary: <p>This paper presents a comprehensive survey of the taxonomy and evolution of
+multimodal foundation models that demonstrate vision and vision-language
+capabilities, focusing on the transition from specialist models to
+general-purpose assistants. The research landscape encompasses five core
+topics, categorized into two classes. (i) We start with a survey of
+well-established research areas: multimodal foundation models pre-trained for
+specific purposes, including two topics -- methods of learning vision backbones
+for visual understanding and text-to-image generation. (ii) Then, we present
+recent advances in exploratory, open research areas: multimodal foundation
+models that aim to play the role of general-purpose assistants, including three
+topics -- unified vision models inspired by large language models (LLMs),
+end-to-end training of multimodal LLMs, and chaining multimodal tools with
+LLMs. The target audiences of the paper are researchers, graduate students, and
+professionals in computer vision and vision-language multimodal communities who
+are eager to learn the basics and recent advances in multimodal foundation
+models.
+</p></li>
+</ul>
+
+<h3>Title: Specification-Driven Video Search via Foundation Models and Formal Verification. (arXiv:2309.10171v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10171">http://arxiv.org/abs/2309.10171</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10171]] Specification-Driven Video Search via Foundation Models and Formal Verification(http://arxiv.org/abs/2309.10171)</code></li>
+<li>Summary: <p>The increasing abundance of video data enables users to search for events of
+interest, e.g., emergency incidents. Meanwhile, it raises new concerns, such as
+the need for preserving privacy. Existing approaches to video search require
+either manual inspection or a deep learning model with massive training. We
+develop a method that uses recent advances in vision and language models, as
+well as formal methods, to search for events of interest in video clips
+automatically and efficiently. The method consists of an algorithm to map
+text-based event descriptions into linear temporal logic over finite traces
+(LTL$_f$) and an algorithm to construct an automaton encoding the video
+information. Then, the method formally verifies the automaton representing the
+video against the LTL$_f$ specifications and adds the pertinent video clips to
+the search result if the automaton satisfies the specifications. We provide
+qualitative and quantitative analysis to demonstrate the video-searching
+capability of the proposed method. It achieves over 90 percent precision in
+searching over privacy-sensitive videos and a state-of-the-art autonomous
+driving dataset.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Looking through the past: better knowledge retention for generative replay in continual learning. (arXiv:2309.10012v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10012">http://arxiv.org/abs/2309.10012</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10012]] Looking through the past: better knowledge retention for generative replay in continual learning(http://arxiv.org/abs/2309.10012)</code></li>
+<li>Summary: <p>In this work, we improve the generative replay in a continual learning
+setting to perform well on challenging scenarios. Current generative rehearsal
+methods are usually benchmarked on small and simple datasets as they are not
+powerful enough to generate more complex data with a greater number of classes.
+We notice that in VAE-based generative replay, this could be attributed to the
+fact that the generated features are far from the original ones when mapped to
+the latent space. Therefore, we propose three modifications that allow the
+model to learn and generate complex data. More specifically, we incorporate the
+distillation in latent space between the current and previous models to reduce
+feature drift. Additionally, a latent matching for the reconstruction and
+original data is proposed to improve generated features alignment. Further,
+based on the observation that the reconstructions are better for preserving
+knowledge, we add the cycling of generations through the previously trained
+model to make them closer to the original data. Our method outperforms other
+generative replay methods in various scenarios. Code available at
+https://github.com/valeriya-khan/looking-through-the-past.
+</p></li>
+</ul>
+
+<h3>Title: Offline Detection of Misspelled Handwritten Words by Convolving Recognition Model Features with Text Labels. (arXiv:2309.10158v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10158">http://arxiv.org/abs/2309.10158</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10158]] Offline Detection of Misspelled Handwritten Words by Convolving Recognition Model Features with Text Labels(http://arxiv.org/abs/2309.10158)</code></li>
+<li>Summary: <p>Offline handwriting recognition (HWR) has improved significantly with the
+advent of deep learning architectures in recent years. Nevertheless, it remains
+a challenging problem and practical applications often rely on post-processing
+techniques for restricting the predicted words via lexicons or language models.
+Despite their enhanced performance, such systems are less usable in contexts
+where out-of-vocabulary words are anticipated, e.g. for detecting misspelled
+words in school assessments. To that end, we introduce the task of comparing a
+handwriting image to text. To solve the problem, we propose an unrestricted
+binary classifier, consisting of a HWR feature extractor and a multimodal
+classification head which convolves the feature extractor output with the
+vector representation of the input text. Our model's classification head is
+trained entirely on synthetic data created using a state-of-the-art generative
+adversarial network. We demonstrate that, while maintaining high recall, the
+classifier can be calibrated to achieve an average precision increase of 19.5%
+compared to addressing the task by directly using state-of-the-art HWR models.
+Such massive performance gains can lead to significant productivity increases
+in applications utilizing human-in-the-loop automation.
+</p></li>
+</ul>
+
+<h3>Title: 360$^\circ$ Reconstruction From a Single Image Using Space Carved Outpainting. (arXiv:2309.10279v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10279">http://arxiv.org/abs/2309.10279</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10279]] 360$^\circ$ Reconstruction From a Single Image Using Space Carved Outpainting(http://arxiv.org/abs/2309.10279)</code></li>
+<li>Summary: <p>We introduce POP3D, a novel framework that creates a full $360^\circ$-view 3D
+model from a single image. POP3D resolves two prominent issues that limit the
+single-view reconstruction. Firstly, POP3D offers substantial generalizability
+to arbitrary categories, a trait that previous methods struggle to achieve.
+Secondly, POP3D further improves reconstruction fidelity and naturalness, a
+crucial aspect that concurrent works fall short of. Our approach marries the
+strengths of four primary components: (1) a monocular depth and normal
+predictor that serves to predict crucial geometric cues, (2) a space carving
+method capable of demarcating the potentially unseen portions of the target
+object, (3) a generative model pre-trained on a large-scale image dataset that
+can complete unseen regions of the target, and (4) a neural implicit surface
+reconstruction method tailored in reconstructing objects using RGB images along
+with monocular geometric cues. The combination of these components enables
+POP3D to readily generalize across various in-the-wild images and generate
+state-of-the-art reconstructions, outperforming similar works by a significant
+margin. Project page: \url{<a href="http://cg.postech.ac.kr/research/POP3D">this http URL</a>}
+</p></li>
+</ul>
+
+<h3>Title: SideGAN: 3D-Aware Generative Model for Improved Side-View Image Synthesis. (arXiv:2309.10388v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10388">http://arxiv.org/abs/2309.10388</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10388]] SideGAN: 3D-Aware Generative Model for Improved Side-View Image Synthesis(http://arxiv.org/abs/2309.10388)</code></li>
+<li>Summary: <p>While recent 3D-aware generative models have shown photo-realistic image
+synthesis with multi-view consistency, the synthesized image quality degrades
+depending on the camera pose (e.g., a face with a blurry and noisy boundary at
+a side viewpoint). Such degradation is mainly caused by the difficulty of
+learning both pose consistency and photo-realism simultaneously from a dataset
+with heavily imbalanced poses. In this paper, we propose SideGAN, a novel 3D
+GAN training method to generate photo-realistic images irrespective of the
+camera pose, especially for faces of side-view angles. To ease the challenging
+problem of learning photo-realistic and pose-consistent image synthesis, we
+split the problem into two subproblems, each of which can be solved more
+easily. Specifically, we formulate the problem as a combination of two simple
+discrimination problems, one of which learns to discriminate whether a
+synthesized image looks real or not, and the other learns to discriminate
+whether a synthesized image agrees with the camera pose. Based on this, we
+propose a dual-branched discriminator with two discrimination branches. We also
+propose a pose-matching loss to learn the pose consistency of 3D GANs. In
+addition, we present a pose sampling strategy to increase learning
+opportunities for steep angles in a pose-imbalanced dataset. With extensive
+validation, we demonstrate that our approach enables 3D GANs to generate
+high-quality geometries and photo-realistic images irrespective of the camera
+pose.
+</p></li>
+</ul>
+
+<h3>Title: A multimodal deep learning architecture for smoking detection with a small data approach. (arXiv:2309.10561v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10561">http://arxiv.org/abs/2309.10561</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10561]] A multimodal deep learning architecture for smoking detection with a small data approach(http://arxiv.org/abs/2309.10561)</code></li>
+<li>Summary: <p>Introduction: Covert tobacco advertisements often raise regulatory measures.
+This paper presents that artificial intelligence, particularly deep learning,
+has great potential for detecting hidden advertising and allows unbiased,
+reproducible, and fair quantification of tobacco-related media content.
+Methods: We propose an integrated text and image processing model based on deep
+learning, generative methods, and human reinforcement, which can detect smoking
+cases in both textual and visual formats, even with little available training
+data. Results: Our model can achieve 74\% accuracy for images and 98\% for
+text. Furthermore, our system integrates the possibility of expert intervention
+in the form of human reinforcement. Conclusions: Using the pre-trained
+multimodal, image, and text processing models available through deep learning
+makes it possible to detect smoking in different media even with few training
+data.
+</p></li>
+</ul>
+
+<h3>Title: What is the Best Automated Metric for Text to Motion Generation?. (arXiv:2309.10248v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10248">http://arxiv.org/abs/2309.10248</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10248]] What is the Best Automated Metric for Text to Motion Generation?(http://arxiv.org/abs/2309.10248)</code></li>
+<li>Summary: <p>There is growing interest in generating skeleton-based human motions from
+natural language descriptions. While most efforts have focused on developing
+better neural architectures for this task, there has been no significant work
+on determining the proper evaluation metric. Human evaluation is the ultimate
+accuracy measure for this task, and automated metrics should correlate well
+with human quality judgments. Since descriptions are compatible with many
+motions, determining the right metric is critical for evaluating and designing
+effective generative models. This paper systematically studies which metrics
+best align with human evaluations and proposes new metrics that align even
+better. Our findings indicate that none of the metrics currently used for this
+task show even a moderate correlation with human judgments on a sample level.
+However, for assessing average model performance, commonly used metrics such as
+R-Precision and less-used coordinate errors show strong correlations.
+Additionally, several recently developed metrics are not recommended due to
+their low correlation compared to alternatives. We also introduce a novel
+metric based on a multimodal BERT-like model, MoBERT, which offers strongly
+human-correlated sample-level evaluations while maintaining near-perfect
+model-level correlation. Our results demonstrate that this new metric exhibits
+extensive benefits over all current alternatives.
+</p></li>
+</ul>
+
+<h3>Title: OpenMSD: Towards Multilingual Scientific Documents Similarity Measurement. (arXiv:2309.10539v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10539">http://arxiv.org/abs/2309.10539</a></li>
+<li>Code URL: https://github.com/google-research/google-research</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10539]] OpenMSD: Towards Multilingual Scientific Documents Similarity Measurement(http://arxiv.org/abs/2309.10539)</code></li>
+<li>Summary: <p>We develop and evaluate multilingual scientific documents similarity
+measurement models in this work. Such models can be used to find related works
+in different languages, which can help multilingual researchers find and
+explore papers more efficiently. We propose the first multilingual scientific
+documents dataset, Open-access Multilingual Scientific Documents (OpenMSD),
+which has 74M papers in 103 languages and 778M citation pairs. With OpenMSD, we
+pretrain science-specialized language models, and explore different strategies
+to derive "related" paper pairs to fine-tune the models, including using a
+mixture of citation, co-citation, and bibliographic-coupling pairs. To further
+improve the models' performance for non-English papers, we explore the use of
+generative language models to enrich the non-English papers with English
+summaries. This allows us to leverage the models' English capabilities to
+create better representations for non-English papers. Our best model
+significantly outperforms strong baselines by 7-16% (in mean average
+precision).
+</p></li>
+</ul>
+
+<h3>Title: CFGPT: Chinese Financial Assistant with Large Language Model. (arXiv:2309.10654v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10654">http://arxiv.org/abs/2309.10654</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10654]] CFGPT: Chinese Financial Assistant with Large Language Model(http://arxiv.org/abs/2309.10654)</code></li>
+<li>Summary: <p>Large language models (LLMs) have demonstrated great potential in natural
+language processing tasks within the financial domain. In this work, we present
+a Chinese Financial Generative Pre-trained Transformer framework, named CFGPT,
+which includes a dataset~(CFData) for pre-training and supervised fine-tuning,
+a financial LLM~(CFLLM) to adeptly manage financial texts, and a deployment
+framework~(CFAPP) designed to navigate real-world financial applications. The
+CFData comprising both a pre-training dataset and a supervised fine-tuning
+dataset, where the pre-training dataset collates Chinese financial data and
+analytics, alongside a smaller subset of general-purpose text with 584M
+documents and 141B tokens in total, and the supervised fine-tuning dataset is
+tailored for six distinct financial tasks, embodying various facets of
+financial analysis and decision-making with 1.5M instruction pairs and 1.5B
+tokens in total. The CFLLM, which is based on InternLM-7B to balance the model
+capability and size, is trained on CFData in two stage, continued pre-training
+and supervised fine-tuning. The CFAPP is centered on large language models
+(LLMs) and augmented with additional modules to ensure multifaceted
+functionality in real-world application. Our codes are released at
+https://github.com/TongjiFinLab/CFGPT.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Learning Point-wise Abstaining Penalty for Point Cloud Anomaly Detection. (arXiv:2309.10230v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10230">http://arxiv.org/abs/2309.10230</a></li>
+<li>Code URL: https://github.com/daniellli/pad</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10230]] Learning Point-wise Abstaining Penalty for Point Cloud Anomaly Detection(http://arxiv.org/abs/2309.10230)</code></li>
+<li>Summary: <p>LiDAR-based semantic scene understanding is an important module in the modern
+autonomous driving perception stack. However, identifying Out-Of-Distribution
+(OOD) points in a LiDAR point cloud is challenging as point clouds lack
+semantically rich features when compared with RGB images. We revisit this
+problem from the perspective of selective classification, which introduces a
+selective function into the standard closed-set classification setup. Our
+solution is built upon the basic idea of abstaining from choosing any known
+categories but learns a point-wise abstaining penalty with a marginbased loss.
+Synthesizing outliers to approximate unlimited OOD samples is also critical to
+this idea, so we propose a strong synthesis pipeline that generates outliers
+originated from various factors: unrealistic object categories, sampling
+patterns and sizes. We demonstrate that learning different abstaining
+penalties, apart from point-wise penalty, for different types of (synthesized)
+outliers can further improve the performance. We benchmark our method on
+SemanticKITTI and nuScenes and achieve state-of-the-art results. Risk-coverage
+analysis further reveals intrinsic properties of different methods. Codes and
+models will be publicly available.
+</p></li>
+</ul>
+
+<h3>Title: Exploring Different Levels of Supervision for Detecting and Localizing Solar Panels on Remote Sensing Imagery. (arXiv:2309.10421v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10421">http://arxiv.org/abs/2309.10421</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10421]] Exploring Different Levels of Supervision for Detecting and Localizing Solar Panels on Remote Sensing Imagery(http://arxiv.org/abs/2309.10421)</code></li>
+<li>Summary: <p>This study investigates object presence detection and localization in remote
+sensing imagery, focusing on solar panel recognition. We explore different
+levels of supervision, evaluating three models: a fully supervised object
+detector, a weakly supervised image classifier with CAM-based localization, and
+a minimally supervised anomaly detector. The classifier excels in binary
+presence detection (0.79 F1-score), while the object detector (0.72) offers
+precise localization. The anomaly detector requires more data for viable
+performance. Fusion of model results shows potential accuracy gains. CAM
+impacts localization modestly, with GradCAM, GradCAM++, and HiResCAM yielding
+superior results. Notably, the classifier remains robust with less data, in
+contrast to the object detector.
+</p></li>
+</ul>
+
+<h3>Title: Towards Energy-Aware Federated Traffic Prediction for Cellular Networks. (arXiv:2309.10645v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10645">http://arxiv.org/abs/2309.10645</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10645]] Towards Energy-Aware Federated Traffic Prediction for Cellular Networks(http://arxiv.org/abs/2309.10645)</code></li>
+<li>Summary: <p>Cellular traffic prediction is a crucial activity for optimizing networks in
+fifth-generation (5G) networks and beyond, as accurate forecasting is essential
+for intelligent network design, resource allocation and anomaly mitigation.
+Although machine learning (ML) is a promising approach to effectively predict
+network traffic, the centralization of massive data in a single data center
+raises issues regarding confidentiality, privacy and data transfer demands. To
+address these challenges, federated learning (FL) emerges as an appealing ML
+training framework which offers high accurate predictions through parallel
+distributed computations. However, the environmental impact of these methods is
+often overlooked, which calls into question their sustainability. In this
+paper, we address the trade-off between accuracy and energy consumption in FL
+by proposing a novel sustainability indicator that allows assessing the
+feasibility of ML models. Then, we comprehensively evaluate state-of-the-art
+deep learning (DL) architectures in a federated scenario using real-world
+measurements from base station (BS) sites in the area of Barcelona, Spain. Our
+findings indicate that larger ML models achieve marginally improved performance
+but have a significant environmental impact in terms of carbon footprint, which
+make them impractical for real-world applications.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Understanding Catastrophic Forgetting in Language Models via Implicit Inference. (arXiv:2309.10105v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10105">http://arxiv.org/abs/2309.10105</a></li>
+<li>Code URL: https://github.com/kothasuhas/understanding-forgetting</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10105]] Understanding Catastrophic Forgetting in Language Models via Implicit Inference(http://arxiv.org/abs/2309.10105)</code></li>
+<li>Summary: <p>Fine-tuning (via methods such as instruction-tuning or reinforcement learning
+from human feedback) is a crucial step in training language models to robustly
+carry out tasks of interest. However, we lack a systematic understanding of the
+effects of fine-tuning, particularly on tasks outside the narrow fine-tuning
+distribution. In a simplified scenario, we demonstrate that improving
+performance on tasks within the fine-tuning data distribution comes at the
+expense of suppressing model capabilities on other tasks. This degradation is
+especially pronounced for tasks "closest" to the fine-tuning distribution. We
+hypothesize that language models implicitly infer the task of the prompt
+corresponds, and the fine-tuning process predominantly skews this task
+inference towards tasks in the fine-tuning distribution. To test this
+hypothesis, we propose Conjugate Prompting to see if we can recover pretrained
+capabilities. Conjugate prompting artificially makes the task look farther from
+the fine-tuning distribution while requiring the same capability. We find that
+conjugate prompting systematically recovers some of the pretraining
+capabilities on our synthetic setup. We then apply conjugate prompting to
+real-world LLMs using the observation that fine-tuning distributions are
+typically heavily skewed towards English. We find that simply translating the
+prompts to different languages can cause the fine-tuned models to respond like
+their pretrained counterparts instead. This allows us to recover the in-context
+learning abilities lost via instruction tuning, and more concerningly, to
+recover harmful content generation suppressed by safety fine-tuning in chatbots
+like ChatGPT.
+</p></li>
+</ul>
+
+<h3>Title: Few-Shot Adaptation for Parsing Contextual Utterances with LLMs. (arXiv:2309.10168v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10168">http://arxiv.org/abs/2309.10168</a></li>
+<li>Code URL: https://github.com/microsoft/few_shot_adaptation_for_parsing_contextual_utterances_with_llms</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10168]] Few-Shot Adaptation for Parsing Contextual Utterances with LLMs(http://arxiv.org/abs/2309.10168)</code></li>
+<li>Summary: <p>We evaluate the ability of semantic parsers based on large language models
+(LLMs) to handle contextual utterances. In real-world settings, there typically
+exists only a limited number of annotated contextual utterances due to
+annotation cost, resulting in an imbalance compared to non-contextual
+utterances. Therefore, parsers must adapt to contextual utterances with a few
+training examples. We examine four major paradigms for doing so in
+conversational semantic parsing i.e., Parse-with-Utterance-History,
+Parse-with-Reference-Program, Parse-then-Resolve, and Rewrite-then-Parse. To
+facilitate such cross-paradigm comparisons, we construct
+SMCalFlow-EventQueries, a subset of contextual examples from SMCalFlow with
+additional annotations. Experiments with in-context learning and fine-tuning
+suggest that Rewrite-then-Parse is the most promising paradigm when
+holistically considering parsing accuracy, annotation cost, and error types.
+</p></li>
+</ul>
+
+<h3>Title: Prompt, Condition, and Generate: Classification of Unsupported Claims with In-Context Learning. (arXiv:2309.10359v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10359">http://arxiv.org/abs/2309.10359</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10359]] Prompt, Condition, and Generate: Classification of Unsupported Claims with In-Context Learning(http://arxiv.org/abs/2309.10359)</code></li>
+<li>Summary: <p>Unsupported and unfalsifiable claims we encounter in our daily lives can
+influence our view of the world. Characterizing, summarizing, and -- more
+generally -- making sense of such claims, however, can be challenging. In this
+work, we focus on fine-grained debate topics and formulate a new task of
+distilling, from such claims, a countable set of narratives. We present a
+crowdsourced dataset of 12 controversial topics, comprising more than 120k
+arguments, claims, and comments from heterogeneous sources, each annotated with
+a narrative label. We further investigate how large language models (LLMs) can
+be used to synthesise claims using In-Context Learning. We find that generated
+claims with supported evidence can be used to improve the performance of
+narrative classification models and, additionally, that the same model can
+infer the stance and aspect using a few training examples. Such a model can be
+useful in applications which rely on narratives , e.g. fact-checking.
+</p></li>
+</ul>
+
+<h3>Title: Toward Unified Controllable Text Generation via Regular Expression Instruction. (arXiv:2309.10447v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10447">http://arxiv.org/abs/2309.10447</a></li>
+<li>Code URL: https://github.com/mrzhengxin/ctg-regex-instruction</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10447]] Toward Unified Controllable Text Generation via Regular Expression Instruction(http://arxiv.org/abs/2309.10447)</code></li>
+<li>Summary: <p>Controllable text generation is a fundamental aspect of natural language
+generation, with numerous methods proposed for different constraint types.
+However, these approaches often require significant architectural or decoding
+modifications, making them challenging to apply to additional constraints or
+resolve different constraint combinations. To address this, our paper
+introduces Regular Expression Instruction (REI), which utilizes an
+instruction-based mechanism to fully exploit regular expressions' advantages to
+uniformly model diverse constraints. Specifically, our REI supports all popular
+fine-grained controllable generation constraints, i.e., lexical, positional,
+and length, as well as their complex combinations, via regular expression-style
+instructions. Our method only requires fine-tuning on medium-scale language
+models or few-shot, in-context learning on large language models, and requires
+no further adjustment when applied to various constraint combinations.
+Experiments demonstrate that our straightforward approach yields high success
+rates and adaptability to various constraints while maintaining competitiveness
+in automatic metrics and outperforming most previous baselines.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
