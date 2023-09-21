@@ -1,0 +1,2538 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>secure</h2>
+<h3>Title: GME: GPU-based Microarchitectural Extensions to Accelerate Homomorphic Encryption. (arXiv:2309.11001v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11001">http://arxiv.org/abs/2309.11001</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11001]] GME: GPU-based Microarchitectural Extensions to Accelerate Homomorphic Encryption(http://arxiv.org/abs/2309.11001)</code></li>
+<li>Summary: <p>Fully Homomorphic Encryption (FHE) enables the processing of encrypted data
+without decrypting it. FHE has garnered significant attention over the past
+decade as it supports secure outsourcing of data processing to remote cloud
+services. Despite its promise of strong data privacy and security guarantees,
+FHE introduces a slowdown of up to five orders of magnitude as compared to the
+same computation using plaintext data. This overhead is presently a major
+barrier to the commercial adoption of FHE.
+</p>
+<p>In this work, we leverage GPUs to accelerate FHE, capitalizing on a
+well-established GPU ecosystem available in the cloud. We propose GME, which
+combines three key microarchitectural extensions along with a compile-time
+optimization to the current AMD CDNA GPU architecture. First, GME integrates a
+lightweight on-chip compute unit (CU)-side hierarchical interconnect to retain
+ciphertext in cache across FHE kernels, thus eliminating redundant memory
+transactions. Second, to tackle compute bottlenecks, GME introduces special
+MOD-units that provide native custom hardware support for modular reduction
+operations, one of the most commonly executed sets of operations in FHE. Third,
+by integrating the MOD-unit with our novel pipelined $64$-bit integer
+arithmetic cores (WMAC-units), GME further accelerates FHE workloads by $19\%$.
+Finally, we propose a Locality-Aware Block Scheduler (LABS) that exploits the
+temporal locality available in FHE primitive blocks. Incorporating these
+microarchitectural features and compiler optimizations, we create a synergistic
+approach achieving average speedups of $796\times$, $14.2\times$, and
+$2.3\times$ over Intel Xeon CPU, NVIDIA V100 GPU, and Xilinx FPGA
+implementations, respectively.
+</p></li>
+</ul>
+
+<h3>Title: Lazy Contracts: Alleviating High Gas Costs by Secure and Trustless Off-chain Execution of Smart Contracts. (arXiv:2309.11317v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11317">http://arxiv.org/abs/2309.11317</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11317]] Lazy Contracts: Alleviating High Gas Costs by Secure and Trustless Off-chain Execution of Smart Contracts(http://arxiv.org/abs/2309.11317)</code></li>
+<li>Summary: <p>Smart contracts are programs that are executed on the blockchain and can
+hold, manage and transfer assets in the form of cryptocurrencies. The
+contract's execution is then performed on-chain and is subject to consensus,
+i.e. every node on the blockchain network has to run the function calls and
+keep track of their side-effects. In most programmable blockchains, such as
+Ethereum, the notion of gas is introduced to prevent DoS attacks by malicious
+parties who might try to slow down the network by performing heavy
+computations. A fixed cost to each atomic operation, and the initiator of a
+function call pays the total gas cost as a transaction fee. This helps prevent
+DoS attacks, but the resulting fees are extremely high. For example, in 2022,
+on Ethereum alone, there has been a total gas usage of 1.77 Million ETH ~ 4.3
+Billion USD. This thesis proposes "lazy contracts" as a solution to alleviate
+these costs. Our solution moves most of the computation off-chain, ensuring
+that each function call incurs only a tiny amount of gas usage, while
+preserving enough data on-chain to guarantee an implicit consensus about the
+state of the contract variables and ownership of funds. A complete on-chain
+execution of the functions will only be triggered in case two parties to the
+contract are in disagreement about the current state, which in turn can only
+happen if at least one party is dishonest. In such cases, our protocol can
+identify the dishonest party and penalize them by having them pay for the
+entire gas usage. Hence, no rational party has an incentive to act dishonestly.
+Finally, we perform extensive experiments over 160,735 real-world Solidity
+contracts that were involved in 9,055,492 transactions in January 2022--January
+2023 on Ethereum and show that our approach reduces the overall gas usage by
+55.4%, which amounts to an astounding saving of 109.9 Million USD in gas fees.
+</p></li>
+</ul>
+
+<h3>Title: Software Compartmentalization Trade-Offs with Hardware Capabilities. (arXiv:2309.11332v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11332">http://arxiv.org/abs/2309.11332</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11332]] Software Compartmentalization Trade-Offs with Hardware Capabilities(http://arxiv.org/abs/2309.11332)</code></li>
+<li>Summary: <p>Compartmentalization is a form of defensive software design in which an
+application is broken down into isolated but communicating components.
+Retrofitting compartmentalization into existing applications is often thought
+to be expensive from the engineering effort and performance overhead points of
+view. Still, recent years have seen proposals of compartmentalization methods
+with promises of low engineering efforts and reduced performance impact. ARM
+Morello combines a modern ARM processor with an implementation of Capability
+Hardware Enhanced RISC Instructions (CHERI) aiming to provide efficient and
+secure compartmentalization. Past works exploring CHERI-based
+compartmentalization were restricted to emulated/FPGA prototypes.
+</p>
+<p>In this paper, we explore possible compartmentalization schemes with CHERI on
+the Morello chip. We propose two approaches representing different trade-offs
+in terms of engineering effort, security, scalability, and performance impact.
+We describe and implement these approaches on a prototype OS running bare metal
+on the Morello chip, compartmentalize two popular applications, and investigate
+the performance overheads. Furthermore, we show that compartmentalization can
+be achieved with an engineering cost that can be quite low if one is willing to
+trade off on scalability and security, and that performance overheads are
+similar to other intra-address space isolation mechanisms.
+</p></li>
+</ul>
+
+<h3>Title: Noise-Crypt: Image Encryption with Non-linear Noise, Hybrid Chaotic Maps, and Hashing. (arXiv:2309.11471v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11471">http://arxiv.org/abs/2309.11471</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11471]] Noise-Crypt: Image Encryption with Non-linear Noise, Hybrid Chaotic Maps, and Hashing(http://arxiv.org/abs/2309.11471)</code></li>
+<li>Summary: <p>To secure the digital images over insecure transmission channels, a new image
+encryption algorithm Noise-Crypt is proposed in this paper. Noise-Crypt
+integrates non-linear random noise, hybrid chaotic maps, and SHA-256 hashing
+algorithm. The utilized hybrid chaotic maps are the logistic-tent and the
+logistic-sine-cosine map. The hybrid chaotic maps enhance the pseudorandom
+sequence generation and selection of substitution boxes, while the
+logistic-sine-cosine map induces non-linearity in the algorithm through random
+noise. This deliberate inclusion of noise contributes to increased resistance
+against cryptanalysis. The proposed scheme has been evaluated for several
+security parameters, such as differential attacks, entropy, correlation, etc.
+Extensive evaluation demonstrates the efficacy of the proposed scheme, with
+almost ideal values of entropy of 7.99 and correlation of -0.0040. Results of
+the security analysis validate the potency of the proposed scheme in achieving
+robust image encryption.
+</p></li>
+</ul>
+
+<h3>Title: CellSecure: Securing Image Data in Industrial Internet-of-Things via Cellular Automata and Chaos-Based Encryption. (arXiv:2309.11476v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11476">http://arxiv.org/abs/2309.11476</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11476]] CellSecure: Securing Image Data in Industrial Internet-of-Things via Cellular Automata and Chaos-Based Encryption(http://arxiv.org/abs/2309.11476)</code></li>
+<li>Summary: <p>In the era of Industrial IoT (IIoT) and Industry 4.0, ensuring secure data
+transmission has become a critical concern. Among other data types, images are
+widely transmitted and utilized across various IIoT applications, ranging from
+sensor-generated visual data and real-time remote monitoring to quality control
+in production lines. The encryption of these images is essential for
+maintaining operational integrity, data confidentiality, and seamless
+integration with analytics platforms. This paper addresses these critical
+concerns by proposing a robust image encryption algorithm tailored for IIoT and
+Cyber-Physical Systems (CPS). The algorithm combines Rule-30 cellular automata
+with chaotic scrambling and substitution. The Rule 30 cellular automata serves
+as an efficient mechanism for generating pseudo-random sequences that enable
+fast encryption and decryption cycles suitable for real-time sensor data in
+industrial settings. Most importantly, it induces non-linearity in the
+encryption algorithm. Furthermore, to increase the chaotic range and keyspace
+of the algorithm, which is vital for security in distributed industrial
+networks, a hybrid chaotic map, i.e., logistic-sine map is utilized. Extensive
+security analysis has been carried out to validate the efficacy of the proposed
+algorithm. Results indicate that our algorithm achieves close-to-ideal values,
+with an entropy of 7.99 and a correlation of 0.002. This enhances the
+algorithm's resilience against potential cyber-attacks in the industrial
+domain.
+</p></li>
+</ul>
+
+<h2>security</h2>
+<h3>Title: Contrastive Pseudo Learning for Open-World DeepFake Attribution. (arXiv:2309.11132v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11132">http://arxiv.org/abs/2309.11132</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11132]] Contrastive Pseudo Learning for Open-World DeepFake Attribution(http://arxiv.org/abs/2309.11132)</code></li>
+<li>Summary: <p>The challenge in sourcing attribution for forgery faces has gained widespread
+attention due to the rapid development of generative techniques. While many
+recent works have taken essential steps on GAN-generated faces, more
+threatening attacks related to identity swapping or expression transferring are
+still overlooked. And the forgery traces hidden in unknown attacks from the
+open-world unlabeled faces still remain under-explored. To push the related
+frontier research, we introduce a new benchmark called Open-World DeepFake
+Attribution (OW-DFA), which aims to evaluate attribution performance against
+various types of fake faces under open-world scenarios. Meanwhile, we propose a
+novel framework named Contrastive Pseudo Learning (CPL) for the OW-DFA task
+through 1) introducing a Global-Local Voting module to guide the feature
+alignment of forged faces with different manipulated regions, 2) designing a
+Confidence-based Soft Pseudo-label strategy to mitigate the pseudo-noise caused
+by similar methods in unlabeled set. In addition, we extend the CPL framework
+with a multi-stage paradigm that leverages pre-train technique and iterative
+learning to further enhance traceability performance. Extensive experiments
+verify the superiority of our proposed method on the OW-DFA and also
+demonstrate the interpretability of deepfake attribution task and its impact on
+improving the security of deepfake detection area.
+</p></li>
+</ul>
+
+<h3>Title: Trojan Taxonomy in Quantum Computing. (arXiv:2309.10981v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10981">http://arxiv.org/abs/2309.10981</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10981]] Trojan Taxonomy in Quantum Computing(http://arxiv.org/abs/2309.10981)</code></li>
+<li>Summary: <p>Quantum computing introduces unfamiliar security vulnerabilities demanding
+customized threat models. Hardware and software Trojans pose serious concerns
+needing rethinking from classical paradigms. This paper develops the first
+structured taxonomy of Trojans tailored to quantum information systems. We
+enumerate potential attack vectors across the quantum stack from hardware to
+software layers. A categorization of quantum Trojan types and payloads is
+outlined ranging from reliability degradation, functionality corruption,
+backdoors, and denial-of-service. Adversarial motivations behind quantum
+Trojans are analyzed. By consolidating diverse threats into a unified
+perspective, this quantum Trojan taxonomy provides insights guiding threat
+modeling, risk analysis, detection mechanisms, and security best practices
+customized for this novel computing paradigm.
+</p></li>
+</ul>
+
+<h3>Title: Capacity: Cryptographically-Enforced In-Process Capabilities for Modern ARM Architectures (Extended Version). (arXiv:2309.11151v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11151">http://arxiv.org/abs/2309.11151</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11151]] Capacity: Cryptographically-Enforced In-Process Capabilities for Modern ARM Architectures (Extended Version)(http://arxiv.org/abs/2309.11151)</code></li>
+<li>Summary: <p>In-process compartmentalization and access control have been actively
+explored to provide in-place and efficient isolation of in-process security
+domains. Many works have proposed compartmentalization schemes that leverage
+hardware features, most notably using the new page-based memory isolation
+feature called Protection Keys for Userspace (PKU) on x86. Unfortunately, the
+modern ARM architecture does not have an equivalent feature. Instead, newer ARM
+architectures introduced Pointer Authentication (PA) and Memory Tagging
+Extension (MTE), adapting the reference validation model for memory safety and
+runtime exploit mitigation. We argue that those features have been
+underexplored in the context of compartmentalization and that they can be
+retrofitted to implement a capability-based in-process access control scheme.
+This paper presents Capacity, a novel hardware-assisted intra-process access
+control design that embraces capability-based security principles. Capacity
+coherently incorporates the new hardware security features on ARM that already
+exhibit inherent characteristics of capability. It supports the life-cycle
+protection of the domain's sensitive objects -- starting from their import from
+the file system to their place in memory. With intra-process domains
+authenticated with unique PA keys, Capacity transforms file descriptors and
+memory pointers into cryptographically-authenticated references and completely
+mediates reference usage with its program instrumentation framework and an
+efficient system call monitor. We evaluate our Capacity-enabled NGINX web
+server prototype and other common applications in which sensitive resources are
+isolated into different domains. Our evaluation shows that Capacity incurs a
+low-performance overhead of approximately 17% for the single-threaded and
+13.54% for the multi-threaded webserver.
+</p></li>
+</ul>
+
+<h3>Title: A Game-theoretic Approach for Provably-Uniform Random Number Generation in Decentralized Networks. (arXiv:2309.11250v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11250">http://arxiv.org/abs/2309.11250</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11250]] A Game-theoretic Approach for Provably-Uniform Random Number Generation in Decentralized Networks(http://arxiv.org/abs/2309.11250)</code></li>
+<li>Summary: <p>Many protocols in distributed computing rely on a source of randomness,
+usually called a random beacon, both for their applicability and security. This
+is especially true for proof-of-stake blockchain protocols in which the next
+miner or set of miners have to be chosen randomly and each party's likelihood
+to be selected is in proportion to their stake in the cryptocurrency.
+</p>
+<p>Current random beacons used in proof-of-stake protocols, such as Ouroboros
+and Algorand, have two fundamental limitations: Either (i)~they rely on
+pseudorandomness, e.g.~assuming that the output of a hash function is uniform,
+which is a widely-used but unproven assumption, or (ii)~they generate their
+randomness using a distributed protocol in which several participants are
+required to submit random numbers which are then used in the generation of a
+final random result. However, in this case, there is no guarantee that the
+numbers provided by the parties are uniformly random and there is no incentive
+for the parties to honestly generate uniform randomness. Most random beacons
+have both limitations.
+</p>
+<p>In this thesis, we provide a protocol for distributed generation of
+randomness. Our protocol does not rely on pseudorandomness at all. Similar to
+some of the previous approaches, it uses random inputs by different
+participants to generate a final random result. However, the crucial difference
+is that we provide a game-theoretic guarantee showing that it is in everyone's
+best interest to submit uniform random numbers. Hence, our approach is the
+first to incentivize honest behavior instead of just assuming it. Moreover, the
+approach is trustless and generates unbiased random numbers. It is also
+tamper-proof and no party can change the output or affect its distribution.
+Finally, it is designed with modularity in mind and can be easily plugged into
+existing distributed protocols such as proof-of-stake blockchains.
+</p></li>
+</ul>
+
+<h3>Title: Tropical cryptography III: digital signatures. (arXiv:2309.11256v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11256">http://arxiv.org/abs/2309.11256</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11256]] Tropical cryptography III: digital signatures(http://arxiv.org/abs/2309.11256)</code></li>
+<li>Summary: <p>We use tropical algebras as platforms for a very efficient digital signature
+protocol. Security relies on computational hardness of factoring one-variable
+tropical polynomials; this problem is known to be NP-hard.
+</p></li>
+</ul>
+
+<h2>privacy</h2>
+<h3>Title: Specializing Small Language Models towards Complex Style Transfer via Latent Attribute Pre-Training. (arXiv:2309.10929v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10929">http://arxiv.org/abs/2309.10929</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10929]] Specializing Small Language Models towards Complex Style Transfer via Latent Attribute Pre-Training(http://arxiv.org/abs/2309.10929)</code></li>
+<li>Summary: <p>In this work, we introduce the concept of complex text style transfer tasks,
+and constructed complex text datasets based on two widely applicable scenarios.
+Our dataset is the first large-scale data set of its kind, with 700 rephrased
+sentences and 1,000 sentences from the game Genshin Impact. While large
+language models (LLM) have shown promise in complex text style transfer, they
+have drawbacks such as data privacy concerns, network instability, and high
+deployment costs. To address these issues, we explore the effectiveness of
+small models (less than T5-3B) with implicit style pre-training through
+contrastive learning. We also propose a method for automated evaluation of text
+generation quality based on alignment with human evaluations using ChatGPT.
+Finally, we compare our approach with existing methods and show that our model
+achieves state-of-art performances of few-shot text style transfer models.
+</p></li>
+</ul>
+
+<h3>Title: Crypto'Graph: Leveraging Privacy-Preserving Distributed Link Prediction for Robust Graph Learning. (arXiv:2309.10890v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10890">http://arxiv.org/abs/2309.10890</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10890]] Crypto'Graph: Leveraging Privacy-Preserving Distributed Link Prediction for Robust Graph Learning(http://arxiv.org/abs/2309.10890)</code></li>
+<li>Summary: <p>Graphs are a widely used data structure for collecting and analyzing
+relational data. However, when the graph structure is distributed across
+several parties, its analysis is particularly challenging. In particular, due
+to the sensitivity of the data each party might want to keep their partial
+knowledge of the graph private, while still willing to collaborate with the
+other parties for tasks of mutual benefit, such as data curation or the removal
+of poisoned data. To address this challenge, we propose Crypto'Graph, an
+efficient protocol for privacy-preserving link prediction on distributed
+graphs. More precisely, it allows parties partially sharing a graph with
+distributed links to infer the likelihood of formation of new links in the
+future. Through the use of cryptographic primitives, Crypto'Graph is able to
+compute the likelihood of these new links on the joint network without
+revealing the structure of the private individual graph of each party, even
+though they know the number of nodes they have, since they share the same graph
+but not the same links. Crypto'Graph improves on previous works by enabling the
+computation of a certain number of similarity metrics without any additional
+cost. The use of Crypto'Graph is illustrated for defense against graph
+poisoning attacks, in which it is possible to identify potential adversarial
+links without compromising the privacy of the graphs of individual parties. The
+effectiveness of Crypto'Graph in mitigating graph poisoning attacks and
+achieving high prediction accuracy on a graph neural network node
+classification task is demonstrated through extensive experimentation on a
+real-world dataset.
+</p></li>
+</ul>
+
+<h3>Title: Information Leakage from Data Updates in Machine Learning Models. (arXiv:2309.11022v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11022">http://arxiv.org/abs/2309.11022</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11022]] Information Leakage from Data Updates in Machine Learning Models(http://arxiv.org/abs/2309.11022)</code></li>
+<li>Summary: <p>In this paper we consider the setting where machine learning models are
+retrained on updated datasets in order to incorporate the most up-to-date
+information or reflect distribution shifts. We investigate whether one can
+infer information about these updates in the training data (e.g., changes to
+attribute values of records). Here, the adversary has access to snapshots of
+the machine learning model before and after the change in the dataset occurs.
+Contrary to the existing literature, we assume that an attribute of a single or
+multiple training data points are changed rather than entire data records are
+removed or added. We propose attacks based on the difference in the prediction
+confidence of the original model and the updated model. We evaluate our attack
+methods on two public datasets along with multi-layer perceptron and logistic
+regression models. We validate that two snapshots of the model can result in
+higher information leakage in comparison to having access to only the updated
+model. Moreover, we observe that data records with rare values are more
+vulnerable to attacks, which points to the disparate vulnerability of privacy
+attacks in the update setting. When multiple records with the same original
+attribute value are updated to the same new value (i.e., repeated changes), the
+attacker is more likely to correctly guess the updated values since repeated
+changes leave a larger footprint on the trained model. These observations point
+to vulnerability of machine learning models to attribute inference attacks in
+the update setting.
+</p></li>
+</ul>
+
+<h3>Title: Clustered FedStack: Intermediate Global Models with Bayesian Information Criterion. (arXiv:2309.11044v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11044">http://arxiv.org/abs/2309.11044</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11044]] Clustered FedStack: Intermediate Global Models with Bayesian Information Criterion(http://arxiv.org/abs/2309.11044)</code></li>
+<li>Summary: <p>Federated Learning (FL) is currently one of the most popular technologies in
+the field of Artificial Intelligence (AI) due to its collaborative learning and
+ability to preserve client privacy. However, it faces challenges such as
+non-identically and non-independently distributed (non-IID) and data with
+imbalanced labels among local clients. To address these limitations, the
+research community has explored various approaches such as using local model
+parameters, federated generative adversarial learning, and federated
+representation learning. In our study, we propose a novel Clustered FedStack
+framework based on the previously published Stacked Federated Learning
+(FedStack) framework. The local clients send their model predictions and output
+layer weights to a server, which then builds a robust global model. This global
+model clusters the local clients based on their output layer weights using a
+clustering mechanism. We adopt three clustering mechanisms, namely K-Means,
+Agglomerative, and Gaussian Mixture Models, into the framework and evaluate
+their performance. We use Bayesian Information Criterion (BIC) with the maximum
+likelihood function to determine the number of clusters. The Clustered FedStack
+models outperform baseline models with clustering mechanisms. To estimate the
+convergence of our proposed framework, we use Cyclical learning rates.
+</p></li>
+</ul>
+
+<h3>Title: Learning Patient Static Information from Time-series EHR and an Approach for Safeguarding Privacy and Fairness. (arXiv:2309.11373v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11373">http://arxiv.org/abs/2309.11373</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11373]] Learning Patient Static Information from Time-series EHR and an Approach for Safeguarding Privacy and Fairness(http://arxiv.org/abs/2309.11373)</code></li>
+<li>Summary: <p>Recent work in machine learning for healthcare has raised concerns about
+patient privacy and algorithmic fairness. For example, previous work has shown
+that patient self-reported race can be predicted from medical data that does
+not explicitly contain racial information. However, the extent of data
+identification is unknown, and we lack ways to develop models whose outcomes
+are minimally affected by such information. Here we systematically investigated
+the ability of time-series electronic health record data to predict patient
+static information. We found that not only the raw time-series data, but also
+learned representations from machine learning models, can be trained to predict
+a variety of static information with area under the receiver operating
+characteristic curve as high as 0.851 for biological sex, 0.869 for binarized
+age and 0.810 for self-reported race. Such high predictive performance can be
+extended to a wide range of comorbidity factors and exists even when the model
+was trained for different tasks, using different cohorts, using different model
+architectures and databases. Given the privacy and fairness concerns these
+findings pose, we develop a variational autoencoder-based approach that learns
+a structured latent space to disentangle patient-sensitive attributes from
+time-series data. Our work thoroughly investigates the ability of machine
+learning models to encode patient static information from time-series
+electronic health records and introduces a general approach to protect
+patient-sensitive attribute information for downstream tasks.
+</p></li>
+</ul>
+
+<h2>protect</h2>
+<h3>Title: Learning Segment Similarity and Alignment in Large-Scale Content Based Video Retrieval. (arXiv:2309.11091v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11091">http://arxiv.org/abs/2309.11091</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11091]] Learning Segment Similarity and Alignment in Large-Scale Content Based Video Retrieval(http://arxiv.org/abs/2309.11091)</code></li>
+<li>Summary: <p>With the explosive growth of web videos in recent years, large-scale
+Content-Based Video Retrieval (CBVR) becomes increasingly essential in video
+filtering, recommendation, and copyright protection. Segment-level CBVR
+(S-CBVR) locates the start and end time of similar segments in finer
+granularity, which is beneficial for user browsing efficiency and infringement
+detection especially in long video scenarios. The challenge of S-CBVR task is
+how to achieve high temporal alignment accuracy with efficient computation and
+low storage consumption. In this paper, we propose a Segment Similarity and
+Alignment Network (SSAN) in dealing with the challenge which is firstly trained
+end-to-end in S-CBVR. SSAN is based on two newly proposed modules in video
+retrieval: (1) An efficient Self-supervised Keyframe Extraction (SKE) module to
+reduce redundant frame features, (2) A robust Similarity Pattern Detection
+(SPD) module for temporal alignment. In comparison with uniform frame
+extraction, SKE not only saves feature storage and search time, but also
+introduces comparable accuracy and limited extra computation time. In terms of
+temporal alignment, SPD localizes similar segments with higher accuracy and
+efficiency than existing deep learning methods. Furthermore, we jointly train
+SSAN with SKE and SPD and achieve an end-to-end improvement. Meanwhile, the two
+key modules SKE and SPD can also be effectively inserted into other video
+retrieval pipelines and gain considerable performance improvements.
+Experimental results on public datasets show that SSAN can obtain higher
+alignment accuracy while saving storage and online query computational cost
+compared to existing methods.
+</p></li>
+</ul>
+
+<h3>Title: Policy Patterns for Usage Control in Data Spaces. (arXiv:2309.11289v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11289">http://arxiv.org/abs/2309.11289</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11289]] Policy Patterns for Usage Control in Data Spaces(http://arxiv.org/abs/2309.11289)</code></li>
+<li>Summary: <p>Data-driven technologies have the potential to initiate a transportation
+related revolution in the way we travel, commute and navigate within cities. As
+a major effort of this transformation relies on Mobility Data Spaces for the
+exchange of mobility data, the necessity to protect valuable data and formulate
+conditions for data exchange arises. This paper presents key contributions to
+the development of automated contract negotiation and data usage policies in
+the Mobility Data Space. A comprehensive listing of policy patterns for usage
+control is provided, addressing common requirements and scenarios in data
+sharing and governance. The use of the Open Digital Rights Language (ODRL) is
+proposed to formalize the collected policies, along with an extension of the
+ODRL vocabulary for data space-specific properties.
+</p></li>
+</ul>
+
+<h3>Title: ModelGiF: Gradient Fields for Model Functional Distance. (arXiv:2309.11013v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11013">http://arxiv.org/abs/2309.11013</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11013]] ModelGiF: Gradient Fields for Model Functional Distance(http://arxiv.org/abs/2309.11013)</code></li>
+<li>Summary: <p>The last decade has witnessed the success of deep learning and the surge of
+publicly released trained models, which necessitates the quantification of the
+model functional distance for various purposes. However, quantifying the model
+functional distance is always challenging due to the opacity in inner workings
+and the heterogeneity in architectures or tasks. Inspired by the concept of
+"field" in physics, in this work we introduce Model Gradient Field (abbr.
+ModelGiF) to extract homogeneous representations from the heterogeneous
+pre-trained models. Our main assumption underlying ModelGiF is that each
+pre-trained deep model uniquely determines a ModelGiF over the input space. The
+distance between models can thus be measured by the similarity between their
+ModelGiFs. We validate the effectiveness of the proposed ModelGiF with a suite
+of testbeds, including task relatedness estimation, intellectual property
+protection, and model unlearning verification. Experimental results demonstrate
+the versatility of the proposed ModelGiF on these tasks, with significantly
+superiority performance to state-of-the-art competitors. Codes are available at
+https://github.com/zju-vipa/modelgif.
+</p></li>
+</ul>
+
+<h2>defense</h2>
+<h2>attack</h2>
+<h3>Title: PRAT: PRofiling Adversarial aTtacks. (arXiv:2309.11111v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11111">http://arxiv.org/abs/2309.11111</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11111]] PRAT: PRofiling Adversarial aTtacks(http://arxiv.org/abs/2309.11111)</code></li>
+<li>Summary: <p>Intrinsic susceptibility of deep learning to adversarial examples has led to
+a plethora of attack techniques with a broad common objective of fooling deep
+models. However, we find slight compositional differences between the
+algorithms achieving this objective. These differences leave traces that
+provide important clues for attacker profiling in real-life scenarios. Inspired
+by this, we introduce a novel problem of PRofiling Adversarial aTtacks (PRAT).
+Given an adversarial example, the objective of PRAT is to identify the attack
+used to generate it. Under this perspective, we can systematically group
+existing attacks into different families, leading to the sub-problem of attack
+family identification, which we also study. To enable PRAT analysis, we
+introduce a large Adversarial Identification Dataset (AID), comprising over
+180k adversarial samples generated with 13 popular attacks for image
+specific/agnostic white/black box setups. We use AID to devise a novel
+framework for the PRAT objective. Our framework utilizes a Transformer based
+Global-LOcal Feature (GLOF) module to extract an approximate signature of the
+adversarial attack, which in turn is used for the identification of the attack.
+Using AID and our framework, we provide multiple interesting benchmark results
+for the PRAT problem.
+</p></li>
+</ul>
+
+<h3>Title: A Survey on Acoustic Side Channel Attacks on Keyboards. (arXiv:2309.11012v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11012">http://arxiv.org/abs/2309.11012</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11012]] A Survey on Acoustic Side Channel Attacks on Keyboards(http://arxiv.org/abs/2309.11012)</code></li>
+<li>Summary: <p>In today's digital world, protecting personal and sensitive information is
+crucial. A new threat has emerged called acoustic side-channel attacks on
+keyboards, which exploit unintentional acoustic signals generated while typing
+to decipher keystrokes. This survey paper provides a thorough analysis of this
+danger, including attack strategies, methods, and their consequences. We
+explore key recognition techniques, the different acoustic features used, and
+performance metrics for evaluation. This survey is an essential resource for
+researchers, practitioners, and security experts to protect against acoustic
+side-channel attacks on keyboards.
+</p></li>
+</ul>
+
+<h3>Title: Fed-LSAE: Thwarting Poisoning Attacks against Federated Cyber Threat Detection System via Autoencoder-based Latent Space Inspection. (arXiv:2309.11053v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11053">http://arxiv.org/abs/2309.11053</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11053]] Fed-LSAE: Thwarting Poisoning Attacks against Federated Cyber Threat Detection System via Autoencoder-based Latent Space Inspection(http://arxiv.org/abs/2309.11053)</code></li>
+<li>Summary: <p>The significant rise of security concerns in conventional centralized
+learning has promoted federated learning (FL) adoption in building intelligent
+applications without privacy breaches. In cybersecurity, the sensitive data
+along with the contextual information and high-quality labeling in each
+enterprise organization play an essential role in constructing high-performance
+machine learning (ML) models for detecting cyber threats. Nonetheless, the
+risks coming from poisoning internal adversaries against FL systems have raised
+discussions about designing robust anti-poisoning frameworks. Whereas defensive
+mechanisms in the past were based on outlier detection, recent approaches tend
+to be more concerned with latent space representation. In this paper, we
+investigate a novel robust aggregation method for FL, namely Fed-LSAE, which
+takes advantage of latent space representation via the penultimate layer and
+Autoencoder to exclude malicious clients from the training process. The
+experimental results on the CIC-ToN-IoT and N-BaIoT datasets confirm the
+feasibility of our defensive mechanism against cutting-edge poisoning attacks
+for developing a robust FL-based threat detector in the context of IoT. More
+specifically, the FL evaluation witnesses an upward trend of approximately 98%
+across all metrics when integrating with our Fed-LSAE defense.
+</p></li>
+</ul>
+
+<h3>Title: AudioFool: Fast, Universal and synchronization-free Cross-Domain Attack on Speech Recognition. (arXiv:2309.11462v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11462">http://arxiv.org/abs/2309.11462</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11462]] AudioFool: Fast, Universal and synchronization-free Cross-Domain Attack on Speech Recognition(http://arxiv.org/abs/2309.11462)</code></li>
+<li>Summary: <p>Automatic Speech Recognition systems have been shown to be vulnerable to
+adversarial attacks that manipulate the command executed on the device. Recent
+research has focused on exploring methods to create such attacks, however, some
+issues relating to Over-The-Air (OTA) attacks have not been properly addressed.
+In our work, we examine the needed properties of robust attacks compatible with
+the OTA model, and we design a method of generating attacks with arbitrary such
+desired properties, namely the invariance to synchronization, and the
+robustness to filtering: this allows a Denial-of-Service (DoS) attack against
+ASR systems. We achieve these characteristics by constructing attacks in a
+modified frequency domain through an inverse Fourier transform. We evaluate our
+method on standard keyword classification tasks and analyze it in OTA, and we
+analyze the properties of the cross-domain attacks to explain the efficiency of
+the approach.
+</p></li>
+</ul>
+
+<h2>robust</h2>
+<h3>Title: Conformalized Multimodal Uncertainty Regression and Reasoning. (arXiv:2309.11018v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11018">http://arxiv.org/abs/2309.11018</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11018]] Conformalized Multimodal Uncertainty Regression and Reasoning(http://arxiv.org/abs/2309.11018)</code></li>
+<li>Summary: <p>This paper introduces a lightweight uncertainty estimator capable of
+predicting multimodal (disjoint) uncertainty bounds by integrating conformal
+prediction with a deep-learning regressor. We specifically discuss its
+application for visual odometry (VO), where environmental features such as
+flying domain symmetries and sensor measurements under ambiguities and
+occlusion can result in multimodal uncertainties. Our simulation results show
+that uncertainty estimates in our framework adapt sample-wise against
+challenging operating conditions such as pronounced noise, limited training
+data, and limited parametric size of the prediction model. We also develop a
+reasoning framework that leverages these robust uncertainty estimates and
+incorporates optical flow-based reasoning to improve prediction prediction
+accuracy. Thus, by appropriately accounting for predictive uncertainties of
+data-driven learning and closing their estimation loop via rule-based
+reasoning, our methodology consistently surpasses conventional deep learning
+approaches on all these challenging scenarios--pronounced noise, limited
+training data, and limited model size-reducing the prediction error by 2-3x.
+</p></li>
+</ul>
+
+<h3>Title: Dual-Modal Attention-Enhanced Text-Video Retrieval with Triplet Partial Margin Contrastive Learning. (arXiv:2309.11082v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11082">http://arxiv.org/abs/2309.11082</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11082]] Dual-Modal Attention-Enhanced Text-Video Retrieval with Triplet Partial Margin Contrastive Learning(http://arxiv.org/abs/2309.11082)</code></li>
+<li>Summary: <p>In recent years, the explosion of web videos makes text-video retrieval
+increasingly essential and popular for video filtering, recommendation, and
+search. Text-video retrieval aims to rank relevant text/video higher than
+irrelevant ones. The core of this task is to precisely measure the cross-modal
+similarity between texts and videos. Recently, contrastive learning methods
+have shown promising results for text-video retrieval, most of which focus on
+the construction of positive and negative pairs to learn text and video
+representations. Nevertheless, they do not pay enough attention to hard
+negative pairs and lack the ability to model different levels of semantic
+similarity. To address these two issues, this paper improves contrastive
+learning using two novel techniques. First, to exploit hard examples for robust
+discriminative power, we propose a novel Dual-Modal Attention-Enhanced Module
+(DMAE) to mine hard negative pairs from textual and visual clues. By further
+introducing a Negative-aware InfoNCE (NegNCE) loss, we are able to adaptively
+identify all these hard negatives and explicitly highlight their impacts in the
+training loss. Second, our work argues that triplet samples can better model
+fine-grained semantic similarity compared to pairwise samples. We thereby
+present a new Triplet Partial Margin Contrastive Learning (TPM-CL) module to
+construct partial order triplet samples by automatically generating
+fine-grained hard negatives for matched text-video pairs. The proposed TPM-CL
+designs an adaptive token masking strategy with cross-modal interaction to
+model subtle semantic differences. Extensive experiments demonstrate that the
+proposed approach outperforms existing methods on four widely-used text-video
+retrieval datasets, including MSR-VTT, MSVD, DiDeMo and ActivityNet.
+</p></li>
+</ul>
+
+<h3>Title: Locate and Verify: A Two-Stream Network for Improved Deepfake Detection. (arXiv:2309.11131v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11131">http://arxiv.org/abs/2309.11131</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11131]] Locate and Verify: A Two-Stream Network for Improved Deepfake Detection(http://arxiv.org/abs/2309.11131)</code></li>
+<li>Summary: <p>Deepfake has taken the world by storm, triggering a trust crisis. Current
+deepfake detection methods are typically inadequate in generalizability, with a
+tendency to overfit to image contents such as the background, which are
+frequently occurring but relatively unimportant in the training dataset.
+Furthermore, current methods heavily rely on a few dominant forgery regions and
+may ignore other equally important regions, leading to inadequate uncovering of
+forgery cues. In this paper, we strive to address these shortcomings from three
+aspects: (1) We propose an innovative two-stream network that effectively
+enlarges the potential regions from which the model extracts forgery evidence.
+(2) We devise three functional modules to handle the multi-stream and
+multi-scale features in a collaborative learning scheme. (3) Confronted with
+the challenge of obtaining forgery annotations, we propose a Semi-supervised
+Patch Similarity Learning strategy to estimate patch-level forged location
+annotations. Empirically, our method demonstrates significantly improved
+robustness and generalizability, outperforming previous methods on six
+benchmarks, and improving the frame-level AUC on Deepfake Detection Challenge
+preview dataset from 0.797 to 0.835 and video-level AUC on CelebDF$\_$v1
+dataset from 0.811 to 0.847. Our implementation is available at
+https://github.com/sccsok/Locate-and-Verify.
+</p></li>
+</ul>
+
+<h3>Title: Shape Anchor Guided Holistic Indoor Scene Understanding. (arXiv:2309.11133v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11133">http://arxiv.org/abs/2309.11133</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11133]] Shape Anchor Guided Holistic Indoor Scene Understanding(http://arxiv.org/abs/2309.11133)</code></li>
+<li>Summary: <p>This paper proposes a shape anchor guided learning strategy (AncLearn) for
+robust holistic indoor scene understanding. We observe that the search space
+constructed by current methods for proposal feature grouping and instance point
+sampling often introduces massive noise to instance detection and mesh
+reconstruction. Accordingly, we develop AncLearn to generate anchors that
+dynamically fit instance surfaces to (i) unmix noise and target-related
+features for offering reliable proposals at the detection stage, and (ii)
+reduce outliers in object point sampling for directly providing well-structured
+geometry priors without segmentation during reconstruction. We embed AncLearn
+into a reconstruction-from-detection learning system (AncRec) to generate
+high-quality semantic scene models in a purely instance-oriented manner.
+Experiments conducted on the challenging ScanNetv2 dataset demonstrate that our
+shape anchor-based method consistently achieves state-of-the-art performance in
+terms of 3D object detection, layout estimation, and shape reconstruction. The
+code will be available at https://github.com/Geo-Tell/AncRec.
+</p></li>
+</ul>
+
+<h3>Title: CNN-based local features for navigation near an asteroid. (arXiv:2309.11156v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11156">http://arxiv.org/abs/2309.11156</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11156]] CNN-based local features for navigation near an asteroid(http://arxiv.org/abs/2309.11156)</code></li>
+<li>Summary: <p>This article addresses the challenge of vision-based proximity navigation in
+asteroid exploration missions and on-orbit servicing. Traditional feature
+extraction methods struggle with the significant appearance variations of
+asteroids due to limited scattered light. To overcome this, we propose a
+lightweight feature extractor specifically tailored for asteroid proximity
+navigation, designed to be robust to illumination changes and affine
+transformations. We compare and evaluate state-of-the-art feature extraction
+networks and three lightweight network architectures in the asteroid context.
+Our proposed feature extractors and their evaluation leverages both synthetic
+images and real-world data from missions such as NEAR Shoemaker, Hayabusa,
+Rosetta, and OSIRIS-REx. Our contributions include a trained feature extractor,
+incremental improvements over existing methods, and a pipeline for training
+domain-specific feature extractors. Experimental results demonstrate the
+effectiveness of our approach in achieving accurate navigation and
+localization. This work aims to advance the field of asteroid navigation and
+provides insights for future research in this domain.
+</p></li>
+</ul>
+
+<h3>Title: Towards Robust Few-shot Point Cloud Semantic Segmentation. (arXiv:2309.11228v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11228">http://arxiv.org/abs/2309.11228</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11228]] Towards Robust Few-shot Point Cloud Semantic Segmentation(http://arxiv.org/abs/2309.11228)</code></li>
+<li>Summary: <p>Few-shot point cloud semantic segmentation aims to train a model to quickly
+adapt to new unseen classes with only a handful of support set samples.
+However, the noise-free assumption in the support set can be easily violated in
+many practical real-world settings. In this paper, we focus on improving the
+robustness of few-shot point cloud segmentation under the detrimental influence
+of noisy support sets during testing time. To this end, we first propose a
+Component-level Clean Noise Separation (CCNS) representation learning to learn
+discriminative feature representations that separates the clean samples of the
+target classes from the noisy samples. Leveraging the well separated clean and
+noisy support samples from our CCNS, we further propose a Multi-scale
+Degree-based Noise Suppression (MDNS) scheme to remove the noisy shots from the
+support set. We conduct extensive experiments on various noise settings on two
+benchmark datasets. Our results show that the combination of CCNS and MDNS
+significantly improves the performance. Our code is available at
+https://github.com/Pixie8888/R3DFSSeg.
+</p></li>
+</ul>
+
+<h3>Title: Language-driven Object Fusion into Neural Radiance Fields with Pose-Conditioned Dataset Updates. (arXiv:2309.11281v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11281">http://arxiv.org/abs/2309.11281</a></li>
+<li>Code URL: https://github.com/kcshum/pose-conditioned-NeRF-object-fusion</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11281]] Language-driven Object Fusion into Neural Radiance Fields with Pose-Conditioned Dataset Updates(http://arxiv.org/abs/2309.11281)</code></li>
+<li>Summary: <p>Neural radiance field is an emerging rendering method that generates
+high-quality multi-view consistent images from a neural scene representation
+and volume rendering. Although neural radiance field-based techniques are
+robust for scene reconstruction, their ability to add or remove objects remains
+limited. This paper proposes a new language-driven approach for object
+manipulation with neural radiance fields through dataset updates. Specifically,
+to insert a new foreground object represented by a set of multi-view images
+into a background radiance field, we use a text-to-image diffusion model to
+learn and generate combined images that fuse the object of interest into the
+given background across views. These combined images are then used for refining
+the background radiance field so that we can render view-consistent images
+containing both the object and the background. To ensure view consistency, we
+propose a dataset updates strategy that prioritizes radiance field training
+with camera views close to the already-trained views prior to propagating the
+training to remaining views. We show that under the same dataset updates
+strategy, we can easily adapt our method for object insertion using data from
+text-to-3D models as well as object removal. Experimental results show that our
+method generates photorealistic images of the edited scenes, and outperforms
+state-of-the-art methods in 3D reconstruction and neural radiance field
+blending.
+</p></li>
+</ul>
+
+<h3>Title: Generalizing Across Domains in Diabetic Retinopathy via Variational Autoencoders. (arXiv:2309.11301v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11301">http://arxiv.org/abs/2309.11301</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11301]] Generalizing Across Domains in Diabetic Retinopathy via Variational Autoencoders(http://arxiv.org/abs/2309.11301)</code></li>
+<li>Summary: <p>Domain generalization for Diabetic Retinopathy (DR) classification allows a
+model to adeptly classify retinal images from previously unseen domains with
+various imaging conditions and patient demographics, thereby enhancing its
+applicability in a wide range of clinical environments. In this study, we
+explore the inherent capacity of variational autoencoders to disentangle the
+latent space of fundus images, with an aim to obtain a more robust and
+adaptable domain-invariant representation that effectively tackles the domain
+shift encountered in DR datasets. Despite the simplicity of our approach, we
+explore the efficacy of this classical method and demonstrate its ability to
+outperform contemporary state-of-the-art approaches for this task using
+publicly available datasets. Our findings challenge the prevailing assumption
+that highly sophisticated methods for DR classification are inherently superior
+for domain generalization. This highlights the importance of considering simple
+methods and adapting them to the challenging task of generalizing medical
+images, rather than solely relying on advanced techniques.
+</p></li>
+</ul>
+
+<h3>Title: Uncovering the effects of model initialization on deep model generalization: A study with adult and pediatric Chest X-ray images. (arXiv:2309.11318v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11318">http://arxiv.org/abs/2309.11318</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11318]] Uncovering the effects of model initialization on deep model generalization: A study with adult and pediatric Chest X-ray images(http://arxiv.org/abs/2309.11318)</code></li>
+<li>Summary: <p>Model initialization techniques are vital for improving the performance and
+reliability of deep learning models in medical computer vision applications.
+While much literature exists on non-medical images, the impacts on medical
+images, particularly chest X-rays (CXRs) are less understood. Addressing this
+gap, our study explores three deep model initialization techniques: Cold-start,
+Warm-start, and Shrink and Perturb start, focusing on adult and pediatric
+populations. We specifically focus on scenarios with periodically arriving data
+for training, thereby embracing the real-world scenarios of ongoing data influx
+and the need for model updates. We evaluate these models for generalizability
+against external adult and pediatric CXR datasets. We also propose novel
+ensemble methods: F-score-weighted Sequential Least-Squares Quadratic
+Programming (F-SLSQP) and Attention-Guided Ensembles with Learnable Fuzzy
+Softmax to aggregate weight parameters from multiple models to capitalize on
+their collective knowledge and complementary representations. We perform
+statistical significance tests with 95% confidence intervals and p-values to
+analyze model performance. Our evaluations indicate models initialized with
+ImageNet-pre-trained weights demonstrate superior generalizability over
+randomly initialized counterparts, contradicting some findings for non-medical
+images. Notably, ImageNet-pretrained models exhibit consistent performance
+during internal and external testing across different training scenarios.
+Weight-level ensembles of these models show significantly higher recall
+(p&lt;0.05) during testing compared to individual models. Thus, our study
+accentuates the benefits of ImageNet-pretrained weight initialization,
+especially when used with weight-level ensembles, for creating robust and
+generalizable deep learning solutions.
+</p></li>
+</ul>
+
+<h3>Title: CNNs for JPEGs: A Study in Computational Cost. (arXiv:2309.11417v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11417">http://arxiv.org/abs/2309.11417</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11417]] CNNs for JPEGs: A Study in Computational Cost(http://arxiv.org/abs/2309.11417)</code></li>
+<li>Summary: <p>Convolutional neural networks (CNNs) have achieved astonishing advances over
+the past decade, defining state-of-the-art in several computer vision tasks.
+CNNs are capable of learning robust representations of the data directly from
+the RGB pixels. However, most image data are usually available in compressed
+format, from which the JPEG is the most widely used due to transmission and
+storage purposes demanding a preliminary decoding process that have a high
+computational load and memory usage. For this reason, deep learning methods
+capable of learning directly from the compressed domain have been gaining
+attention in recent years. Those methods usually extract a frequency domain
+representation of the image, like DCT, by a partial decoding, and then make
+adaptation to typical CNNs architectures to work with them. One limitation of
+these current works is that, in order to accommodate the frequency domain data,
+the modifications made to the original model increase significantly their
+amount of parameters and computational complexity. On one hand, the methods
+have faster preprocessing, since the cost of fully decoding the images is
+avoided, but on the other hand, the cost of passing the images though the model
+is increased, mitigating the possible upside of accelerating the method. In
+this paper, we propose a further study of the computational cost of deep models
+designed for the frequency domain, evaluating the cost of decoding and passing
+the images through the network. We also propose handcrafted and data-driven
+techniques for reducing the computational complexity and the number of
+parameters for these models in order to keep them similar to their RGB
+baselines, leading to efficient models with a better trade off between
+computational cost and accuracy.
+</p></li>
+</ul>
+
+<h3>Title: Heterogeneous Entity Matching with Complex Attribute Associations using BERT and Neural Networks. (arXiv:2309.11046v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11046">http://arxiv.org/abs/2309.11046</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11046]] Heterogeneous Entity Matching with Complex Attribute Associations using BERT and Neural Networks(http://arxiv.org/abs/2309.11046)</code></li>
+<li>Summary: <p>Across various domains, data from different sources such as Baidu Baike and
+Wikipedia often manifest in distinct forms. Current entity matching
+methodologies predominantly focus on homogeneous data, characterized by
+attributes that share the same structure and concise attribute values. However,
+this orientation poses challenges in handling data with diverse formats.
+Moreover, prevailing approaches aggregate the similarity of attribute values
+between corresponding attributes to ascertain entity similarity. Yet, they
+often overlook the intricate interrelationships between attributes, where one
+attribute may have multiple associations. The simplistic approach of pairwise
+attribute comparison fails to harness the wealth of information encapsulated
+within entities.To address these challenges, we introduce a novel entity
+matching model, dubbed Entity Matching Model for Capturing Complex Attribute
+Relationships(EMM-CCAR),built upon pre-trained models. Specifically, this model
+transforms the matching task into a sequence matching problem to mitigate the
+impact of varying data formats. Moreover, by introducing attention mechanisms,
+it identifies complex relationships between attributes, emphasizing the degree
+of matching among multiple attributes rather than one-to-one correspondences.
+Through the integration of the EMM-CCAR model, we adeptly surmount the
+challenges posed by data heterogeneity and intricate attribute
+interdependencies. In comparison with the prevalent DER-SSM and Ditto
+approaches, our model achieves improvements of approximately 4% and 1% in F1
+scores, respectively. This furnishes a robust solution for addressing the
+intricacies of attribute complexity in entity matching.
+</p></li>
+</ul>
+
+<h3>Title: UniPCM: Universal Pre-trained Conversation Model with Task-aware Automatic Prompt. (arXiv:2309.11065v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11065">http://arxiv.org/abs/2309.11065</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11065]] UniPCM: Universal Pre-trained Conversation Model with Task-aware Automatic Prompt(http://arxiv.org/abs/2309.11065)</code></li>
+<li>Summary: <p>Recent research has shown that multi-task pre-training greatly improves the
+model's robustness and transfer ability, which is crucial for building a
+high-quality dialog system. However, most previous works on multi-task
+pre-training rely heavily on human-defined input format or prompt, which is not
+optimal in quality and quantity. In this work, we propose to use Task-based
+Automatic Prompt generation (TAP) to automatically generate high-quality
+prompts. Using the high-quality prompts generated, we scale the corpus of the
+pre-trained conversation model to 122 datasets from 15 dialog-related tasks,
+resulting in Universal Pre-trained Conversation Model (UniPCM), a powerful
+foundation model for various conversational tasks and different dialog systems.
+Extensive experiments have shown that UniPCM is robust to input prompts and
+capable of various dialog-related tasks. Moreover, UniPCM has strong transfer
+ability and excels at low resource scenarios, achieving SOTA results on 9
+different datasets ranging from task-oriented dialog to open-domain
+conversation. Furthermore, we are amazed to find that TAP can generate prompts
+on par with those collected with crowdsourcing. The code is released with the
+paper.
+</p></li>
+</ul>
+
+<h3>Title: CoT-BERT: Enhancing Unsupervised Sentence Representation through Chain-of-Thought. (arXiv:2309.11143v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11143">http://arxiv.org/abs/2309.11143</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11143]] CoT-BERT: Enhancing Unsupervised Sentence Representation through Chain-of-Thought(http://arxiv.org/abs/2309.11143)</code></li>
+<li>Summary: <p>Unsupervised sentence representation learning aims to transform input
+sentences into fixed-length vectors enriched with intricate semantic
+information while obviating the reliance on labeled data. Recent progress
+within this field, propelled by contrastive learning and prompt engineering,
+has significantly bridged the gap between unsupervised and supervised
+strategies. Nonetheless, the potential utilization of Chain-of-Thought, remains
+largely untapped within this trajectory. To unlock latent capabilities within
+pre-trained models, such as BERT, we propose a two-stage approach for sentence
+representation: comprehension and summarization. Subsequently, the output of
+the latter phase is harnessed as the vectorized representation of the input
+sentence. For further performance enhancement, we meticulously refine both the
+contrastive learning loss function and the template denoising technique for
+prompt engineering. Rigorous experimentation substantiates our method,
+CoT-BERT, transcending a suite of robust baselines without necessitating other
+text representation models or external databases.
+</p></li>
+</ul>
+
+<h3>Title: Are Large Language Models Really Robust to Word-Level Perturbations?. (arXiv:2309.11166v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11166">http://arxiv.org/abs/2309.11166</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11166]] Are Large Language Models Really Robust to Word-Level Perturbations?(http://arxiv.org/abs/2309.11166)</code></li>
+<li>Summary: <p>The swift advancement in the scale and capabilities of Large Language Models
+(LLMs) positions them as promising tools for a variety of downstream tasks. In
+addition to the pursuit of better performance and the avoidance of violent
+feedback on a certain prompt, to ensure the responsibility of the LLM, much
+attention is drawn to the robustness of LLMs. However, existing evaluation
+methods mostly rely on traditional question answering datasets with predefined
+supervised labels, which do not align with the superior generation capabilities
+of contemporary LLMs. To address this issue, we propose a novel rational
+evaluation approach that leverages pre-trained reward models as diagnostic
+tools to evaluate the robustness of LLMs, which we refer to as the Reward Model
+for Reasonable Robustness Evaluation (TREvaL). Our extensive empirical
+experiments have demonstrated that TREval provides an accurate method for
+evaluating the robustness of an LLM, especially when faced with more
+challenging open questions. Furthermore, our results demonstrate that LLMs
+frequently exhibit vulnerability to word-level perturbations, which are
+commonplace in daily language usage. Notably, we were surprised to discover
+that robustness tends to decrease as fine-tuning (SFT and RLHF) is conducted.
+The code of TREval is available in https://github.com/Harry-mic/TREval.
+</p></li>
+</ul>
+
+<h3>Title: OpenChat: Advancing Open-source Language Models with Mixed-Quality Data. (arXiv:2309.11235v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11235">http://arxiv.org/abs/2309.11235</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11235]] OpenChat: Advancing Open-source Language Models with Mixed-Quality Data(http://arxiv.org/abs/2309.11235)</code></li>
+<li>Summary: <p>Nowadays, open-source large language models like LLaMA have emerged. Recent
+developments have incorporated supervised fine-tuning (SFT) and reinforcement
+learning fine-tuning (RLFT) to align these models with human goals. However,
+SFT methods treat all training data with mixed quality equally, while RLFT
+methods require high-quality pairwise or ranking-based preference data. In this
+study, we present a novel framework, named OpenChat, to advance open-source
+language models with mixed-quality data. Specifically, we consider the general
+SFT training data, consisting of a small amount of expert data mixed with a
+large proportion of sub-optimal data, without any preference labels. We propose
+the C(onditioned)-RLFT, which regards different data sources as coarse-grained
+reward labels and learns a class-conditioned policy to leverage complementary
+data quality information. Interestingly, the optimal policy in C-RLFT can be
+easily solved through single-stage, RL-free supervised learning, which is
+lightweight and avoids costly human preference labeling. Through extensive
+experiments on three standard benchmarks, our openchat-13b fine-tuned with
+C-RLFT achieves the highest average performance among all 13b open-source
+language models. Moreover, we use AGIEval to validate the model generalization
+performance, in which only openchat-13b surpasses the base model. Finally, we
+conduct a series of analyses to shed light on the effectiveness and robustness
+of OpenChat. Our code, data, and models are publicly available at
+https://github.com/imoneoi/openchat.
+</p></li>
+</ul>
+
+<h3>Title: GECTurk: Grammatical Error Correction and Detection Dataset for Turkish. (arXiv:2309.11346v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11346">http://arxiv.org/abs/2309.11346</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11346]] GECTurk: Grammatical Error Correction and Detection Dataset for Turkish(http://arxiv.org/abs/2309.11346)</code></li>
+<li>Summary: <p>Grammatical Error Detection and Correction (GEC) tools have proven useful for
+native speakers and second language learners. Developing such tools requires a
+large amount of parallel, annotated data, which is unavailable for most
+languages. Synthetic data generation is a common practice to overcome the
+scarcity of such data. However, it is not straightforward for morphologically
+rich languages like Turkish due to complex writing rules that require
+phonological, morphological, and syntactic information. In this work, we
+present a flexible and extensible synthetic data generation pipeline for
+Turkish covering more than 20 expert-curated grammar and spelling rules
+(a.k.a., writing rules) implemented through complex transformation functions.
+Using this pipeline, we derive 130,000 high-quality parallel sentences from
+professionally edited articles. Additionally, we create a more realistic test
+set by manually annotating a set of movie reviews. We implement three baselines
+formulating the task as i) neural machine translation, ii) sequence tagging,
+and iii) prefix tuning with a pretrained decoder-only model, achieving strong
+results. Furthermore, we perform exhaustive experiments on out-of-domain
+datasets to gain insights on the transferability and robustness of the proposed
+approaches. Our results suggest that our corpus, GECTurk, is high-quality and
+allows knowledge transfer for the out-of-domain setting. To encourage further
+research on Turkish GEC, we release our datasets, baseline models, and the
+synthetic data generation pipeline at https://github.com/GGLAB-KU/gecturk.
+</p></li>
+</ul>
+
+<h3>Title: It's Simplex! Disaggregating Measures to Improve Certified Robustness. (arXiv:2309.11005v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11005">http://arxiv.org/abs/2309.11005</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11005]] It's Simplex! Disaggregating Measures to Improve Certified Robustness(http://arxiv.org/abs/2309.11005)</code></li>
+<li>Summary: <p>Certified robustness circumvents the fragility of defences against
+adversarial attacks, by endowing model predictions with guarantees of class
+invariance for attacks up to a calculated size. While there is value in these
+certifications, the techniques through which we assess their performance do not
+present a proper accounting of their strengths and weaknesses, as their
+analysis has eschewed consideration of performance over individual samples in
+favour of aggregated measures. By considering the potential output space of
+certified models, this work presents two distinct approaches to improve the
+analysis of certification mechanisms, that allow for both dataset-independent
+and dataset-dependent measures of certification performance. Embracing such a
+perspective uncovers new certification approaches, which have the potential to
+more than double the achievable radius of certification, relative to current
+state-of-the-art. Empirical evaluation verifies that our new approach can
+certify $9\%$ more samples at noise scale $\sigma = 1$, with greater relative
+improvements observed as the difficulty of the predictive task increases.
+</p></li>
+</ul>
+
+<h3>Title: GPSINDy: Data-Driven Discovery of Equations of Motion. (arXiv:2309.11076v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11076">http://arxiv.org/abs/2309.11076</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11076]] GPSINDy: Data-Driven Discovery of Equations of Motion(http://arxiv.org/abs/2309.11076)</code></li>
+<li>Summary: <p>In this paper, we consider the problem of discovering dynamical system models
+from noisy data. The presence of noise is known to be a significant problem for
+symbolic regression algorithms. We combine Gaussian process regression, a
+nonparametric learning method, with SINDy, a parametric learning approach, to
+identify nonlinear dynamical systems from data. The key advantages of our
+proposed approach are its simplicity coupled with the fact that it demonstrates
+improved robustness properties with noisy data over SINDy. We demonstrate our
+proposed approach on a Lotka-Volterra model and a unicycle dynamic model in
+simulation and on an NVIDIA JetRacer system using hardware data. We demonstrate
+improved performance over SINDy for discovering the system dynamics and
+predicting future trajectories.
+</p></li>
+</ul>
+
+<h3>Title: RHALE: Robust and Heterogeneity-aware Accumulated Local Effects. (arXiv:2309.11193v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11193">http://arxiv.org/abs/2309.11193</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11193]] RHALE: Robust and Heterogeneity-aware Accumulated Local Effects(http://arxiv.org/abs/2309.11193)</code></li>
+<li>Summary: <p>Accumulated Local Effects (ALE) is a widely-used explainability method for
+isolating the average effect of a feature on the output, because it handles
+cases with correlated features well. However, it has two limitations. First, it
+does not quantify the deviation of instance-level (local) effects from the
+average (global) effect, known as heterogeneity. Second, for estimating the
+average effect, it partitions the feature domain into user-defined, fixed-sized
+bins, where different bin sizes may lead to inconsistent ALE estimations. To
+address these limitations, we propose Robust and Heterogeneity-aware ALE
+(RHALE). RHALE quantifies the heterogeneity by considering the standard
+deviation of the local effects and automatically determines an optimal
+variable-size bin-splitting. In this paper, we prove that to achieve an
+unbiased approximation of the standard deviation of local effects within each
+bin, bin splitting must follow a set of sufficient conditions. Based on these
+conditions, we propose an algorithm that automatically determines the optimal
+partitioning, balancing the estimation bias and variance. Through evaluations
+on synthetic and real datasets, we demonstrate the superiority of RHALE
+compared to other methods, including the advantages of automatic bin splitting,
+especially in cases with correlated features.
+</p></li>
+</ul>
+
+<h2>biometric</h2>
+<h3>Title: 3D Face Reconstruction: the Road to Forensics. (arXiv:2309.11357v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11357">http://arxiv.org/abs/2309.11357</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11357]] 3D Face Reconstruction: the Road to Forensics(http://arxiv.org/abs/2309.11357)</code></li>
+<li>Summary: <p>3D face reconstruction algorithms from images and videos are applied to many
+fields, from plastic surgery to the entertainment sector, thanks to their
+advantageous features. However, when looking at forensic applications, 3D face
+reconstruction must observe strict requirements that still make its possible
+role in bringing evidence to a lawsuit unclear. An extensive investigation of
+the constraints, potential, and limits of its application in forensics is still
+missing. Shedding some light on this matter is the goal of the present survey,
+which starts by clarifying the relation between forensic applications and
+biometrics, with a focus on face recognition. Therefore, it provides an
+analysis of the achievements of 3D face reconstruction algorithms from
+surveillance videos and mugshot images and discusses the current obstacles that
+separate 3D face reconstruction from an active role in forensic applications.
+Finally, it examines the underlying data sets, with their advantages and
+limitations, while proposing alternatives that could substitute or complement
+them.
+</p></li>
+</ul>
+
+<h2>steal</h2>
+<h2>extraction</h2>
+<h3>Title: StructChart: Perception, Structuring, Reasoning for Visual Chart Understanding. (arXiv:2309.11268v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11268">http://arxiv.org/abs/2309.11268</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11268]] StructChart: Perception, Structuring, Reasoning for Visual Chart Understanding(http://arxiv.org/abs/2309.11268)</code></li>
+<li>Summary: <p>Charts are common in literature across different scientific fields, conveying
+rich information easily accessible to readers. Current chart-related tasks
+focus on either chart perception which refers to extracting information from
+the visual charts, or performing reasoning given the extracted data, e.g. in a
+tabular form. In this paper, we aim to establish a unified and label-efficient
+learning paradigm for joint perception and reasoning tasks, which can be
+generally applicable to different downstream tasks, beyond the
+question-answering task as specifically studied in peer works. Specifically,
+StructChart first reformulates the chart information from the popular tubular
+form (specifically linearized CSV) to the proposed Structured Triplet
+Representations (STR), which is more friendly for reducing the task gap between
+chart perception and reasoning due to the employed structured information
+extraction for charts. We then propose a Structuring Chart-oriented
+Representation Metric (SCRM) to quantitatively evaluate the performance for the
+chart perception task. To enrich the dataset for training, we further explore
+the possibility of leveraging the Large Language Model (LLM), enhancing the
+chart diversity in terms of both chart visual style and its statistical
+information. Extensive experiments are conducted on various chart-related
+tasks, demonstrating the effectiveness and promising potential for a unified
+chart perception-reasoning paradigm to push the frontier of chart
+understanding.
+</p></li>
+</ul>
+
+<h3>Title: Semi-automatic staging area for high-quality structured data extraction from scientific literature. (arXiv:2309.10923v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10923">http://arxiv.org/abs/2309.10923</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10923]] Semi-automatic staging area for high-quality structured data extraction from scientific literature(http://arxiv.org/abs/2309.10923)</code></li>
+<li>Summary: <p>In this study, we propose a staging area for ingesting new superconductors'
+experimental data in SuperCon that is machine-collected from scientific
+articles. Our objective is to enhance the efficiency of updating SuperCon while
+maintaining or enhancing the data quality. We present a semi-automatic staging
+area driven by a workflow combining automatic and manual processes on the
+extracted database. An anomaly detection automatic process aims to pre-screen
+the collected data. Users can then manually correct any errors through a user
+interface tailored to simplify the data verification on the original PDF
+documents. Additionally, when a record is corrected, its raw data is collected
+and utilised to improve machine learning models as training data. Evaluation
+experiments demonstrate that our staging area significantly improves curation
+quality. We compare the interface with the traditional manual approach of
+reading PDF documents and recording information in an Excel document. Using the
+interface boosts the precision and recall by 6% and 50%, respectively to an
+average increase of 40% in F1-score.
+</p></li>
+</ul>
+
+<h3>Title: LMDX: Language Model-based Document Information Extraction and Localization. (arXiv:2309.10952v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10952">http://arxiv.org/abs/2309.10952</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10952]] LMDX: Language Model-based Document Information Extraction and Localization(http://arxiv.org/abs/2309.10952)</code></li>
+<li>Summary: <p>Large Language Models (LLM) have revolutionized Natural Language Processing
+(NLP), improving state-of-the-art on many existing tasks and exhibiting
+emergent capabilities. However, LLMs have not yet been successfully applied on
+semi-structured document information extraction, which is at the core of many
+document processing workflows and consists of extracting key entities from a
+visually rich document (VRD) given a predefined target schema. The main
+obstacles to LLM adoption in that task have been the absence of layout encoding
+within LLMs, critical for a high quality extraction, and the lack of a
+grounding mechanism ensuring the answer is not hallucinated. In this paper, we
+introduce Language Model-based Document Information Extraction and Localization
+(LMDX), a methodology to adapt arbitrary LLMs for document information
+extraction. LMDX can do extraction of singular, repeated, and hierarchical
+entities, both with and without training data, while providing grounding
+guarantees and localizing the entities within the document. In particular, we
+apply LMDX to the PaLM 2-S LLM and evaluate it on VRDU and CORD benchmarks,
+setting a new state-of-the-art and showing how LMDX enables the creation of
+high quality, data-efficient parsers.
+</p></li>
+</ul>
+
+<h2>membership infer</h2>
+<h2>federate</h2>
+<h3>Title: Sparser Random Networks Exist: Enforcing Communication-Efficient Federated Learning via Regularization. (arXiv:2309.10834v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10834">http://arxiv.org/abs/2309.10834</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10834]] Sparser Random Networks Exist: Enforcing Communication-Efficient Federated Learning via Regularization(http://arxiv.org/abs/2309.10834)</code></li>
+<li>Summary: <p>This work presents a new method for enhancing communication efficiency in
+stochastic Federated Learning that trains over-parameterized random networks.
+In this setting, a binary mask is optimized instead of the model weights, which
+are kept fixed. The mask characterizes a sparse sub-network that is able to
+generalize as good as a smaller target network. Importantly, sparse binary
+masks are exchanged rather than the floating point weights in traditional
+federated learning, reducing communication cost to at most 1 bit per parameter.
+We show that previous state of the art stochastic methods fail to find the
+sparse networks that can reduce the communication and storage overhead using
+consistent loss objectives. To address this, we propose adding a regularization
+term to local objectives that encourages sparser solutions by eliminating
+redundant features across sub-networks. Extensive experiments demonstrate
+significant improvements in communication and memory efficiency of up to five
+magnitudes compared to the literature, with minimal performance degradation in
+validation accuracy in some instances.
+</p></li>
+</ul>
+
+<h3>Title: Federated Learning in Intelligent Transportation Systems: Recent Applications and Open Problems. (arXiv:2309.11039v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11039">http://arxiv.org/abs/2309.11039</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11039]] Federated Learning in Intelligent Transportation Systems: Recent Applications and Open Problems(http://arxiv.org/abs/2309.11039)</code></li>
+<li>Summary: <p>Intelligent transportation systems (ITSs) have been fueled by the rapid
+development of communication technologies, sensor technologies, and the
+Internet of Things (IoT). Nonetheless, due to the dynamic characteristics of
+the vehicle networks, it is rather challenging to make timely and accurate
+decisions of vehicle behaviors. Moreover, in the presence of mobile wireless
+communications, the privacy and security of vehicle information are at constant
+risk. In this context, a new paradigm is urgently needed for various
+applications in dynamic vehicle environments. As a distributed machine learning
+technology, federated learning (FL) has received extensive attention due to its
+outstanding privacy protection properties and easy scalability. We conduct a
+comprehensive survey of the latest developments in FL for ITS. Specifically, we
+initially research the prevalent challenges in ITS and elucidate the
+motivations for applying FL from various perspectives. Subsequently, we review
+existing deployments of FL in ITS across various scenarios, and discuss
+specific potential issues in object recognition, traffic management, and
+service providing scenarios. Furthermore, we conduct a further analysis of the
+new challenges introduced by FL deployment and the inherent limitations that FL
+alone cannot fully address, including uneven data distribution, limited storage
+and computing power, and potential privacy and security concerns. We then
+examine the existing collaborative technologies that can help mitigate these
+challenges. Lastly, we discuss the open challenges that remain to be addressed
+in applying FL in ITS and propose several future research directions.
+</p></li>
+</ul>
+
+<h3>Title: Bold but Cautious: Unlocking the Potential of Personalized Federated Learning through Cautiously Aggressive Collaboration. (arXiv:2309.11103v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11103">http://arxiv.org/abs/2309.11103</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11103]] Bold but Cautious: Unlocking the Potential of Personalized Federated Learning through Cautiously Aggressive Collaboration(http://arxiv.org/abs/2309.11103)</code></li>
+<li>Summary: <p>Personalized federated learning (PFL) reduces the impact of non-independent
+and identically distributed (non-IID) data among clients by allowing each
+client to train a personalized model when collaborating with others. A key
+question in PFL is to decide which parameters of a client should be localized
+or shared with others. In current mainstream approaches, all layers that are
+sensitive to non-IID data (such as classifier layers) are generally
+personalized. The reasoning behind this approach is understandable, as
+localizing parameters that are easily influenced by non-IID data can prevent
+the potential negative effect of collaboration. However, we believe that this
+approach is too conservative for collaboration. For example, for a certain
+client, even if its parameters are easily influenced by non-IID data, it can
+still benefit by sharing these parameters with clients having similar data
+distribution. This observation emphasizes the importance of considering not
+only the sensitivity to non-IID data but also the similarity of data
+distribution when determining which parameters should be localized in PFL. This
+paper introduces a novel guideline for client collaboration in PFL. Unlike
+existing approaches that prohibit all collaboration of sensitive parameters,
+our guideline allows clients to share more parameters with others, leading to
+improved model performance. Additionally, we propose a new PFL method named
+FedCAC, which employs a quantitative metric to evaluate each parameter's
+sensitivity to non-IID data and carefully selects collaborators based on this
+evaluation. Experimental results demonstrate that FedCAC enables clients to
+share more parameters with others, resulting in superior performance compared
+to state-of-the-art methods, particularly in scenarios where clients have
+diverse distributions.
+</p></li>
+</ul>
+
+<h3>Title: Preconditioned Federated Learning. (arXiv:2309.11378v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11378">http://arxiv.org/abs/2309.11378</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11378]] Preconditioned Federated Learning(http://arxiv.org/abs/2309.11378)</code></li>
+<li>Summary: <p>Federated Learning (FL) is a distributed machine learning approach that
+enables model training in communication efficient and privacy-preserving
+manner. The standard optimization method in FL is Federated Averaging (FedAvg),
+which performs multiple local SGD steps between communication rounds. FedAvg
+has been considered to lack algorithm adaptivity compared to modern first-order
+adaptive optimizations. In this paper, we propose new communication-efficient
+FL algortithms based on two adaptive frameworks: local adaptivity (PreFed) and
+server-side adaptivity (PreFedOp). Proposed methods adopt adaptivity by using a
+novel covariance matrix preconditioner. Theoretically, we provide convergence
+guarantees for our algorithms. The empirical experiments show our methods
+achieve state-of-the-art performances on both i.i.d. and non-i.i.d. settings.
+</p></li>
+</ul>
+
+<h2>fair</h2>
+<h3>Title: Using Property Elicitation to Understand the Impacts of Fairness Constraints. (arXiv:2309.11343v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11343">http://arxiv.org/abs/2309.11343</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11343]] Using Property Elicitation to Understand the Impacts of Fairness Constraints(http://arxiv.org/abs/2309.11343)</code></li>
+<li>Summary: <p>Predictive algorithms are often trained by optimizing some loss function, to
+which regularization functions are added to impose a penalty for violating
+constraints. As expected, the addition of such regularization functions can
+change the minimizer of the objective. It is not well-understood which
+regularizers change the minimizer of the loss, and, when the minimizer does
+change, how it changes. We use property elicitation to take first steps towards
+understanding the joint relationship between the loss and regularization
+functions and the optimal decision for a given problem instance. In particular,
+we give a necessary and sufficient condition on loss and regularizer pairs for
+when a property changes with the addition of the regularizer, and examine some
+regularizers satisfying this condition standard in the fair machine learning
+literature. We empirically demonstrate how algorithmic decision-making changes
+as a function of both data distribution changes and hardness of the
+constraints.
+</p></li>
+</ul>
+
+<h2>interpretability</h2>
+<h3>Title: XATU: A Fine-grained Instruction-based Benchmark for Explainable Text Updates. (arXiv:2309.11063v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11063">http://arxiv.org/abs/2309.11063</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11063]] XATU: A Fine-grained Instruction-based Benchmark for Explainable Text Updates(http://arxiv.org/abs/2309.11063)</code></li>
+<li>Summary: <p>Text editing is a crucial task that involves modifying text to better align
+with user intents. However, existing text editing benchmark datasets have
+limitations in providing only coarse-grained instructions. Consequently,
+although the edited output may seem reasonable, it often deviates from the
+intended changes outlined in the gold reference, resulting in low evaluation
+scores. To comprehensively investigate the text editing capabilities of large
+language models, this paper introduces XATU, the first benchmark specifically
+designed for fine-grained instruction-based explainable text editing. XATU
+covers a wide range of topics and text types, incorporating lexical, syntactic,
+semantic, and knowledge-intensive edits. To enhance interpretability, we
+leverage high-quality data sources and human annotation, resulting in a
+benchmark that includes fine-grained instructions and gold-standard edit
+explanations. By evaluating existing open and closed large language models
+against our benchmark, we demonstrate the effectiveness of instruction tuning
+and the impact of underlying architecture across various editing tasks.
+Furthermore, extensive experimentation reveals the significant role of
+explanations in fine-tuning language models for text editing tasks. The
+benchmark will be open-sourced to support reproduction and facilitate future
+research.
+</p></li>
+</ul>
+
+<h3>Title: A New Interpretable Neural Network-Based Rule Model for Healthcare Decision Making. (arXiv:2309.11101v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11101">http://arxiv.org/abs/2309.11101</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11101]] A New Interpretable Neural Network-Based Rule Model for Healthcare Decision Making(http://arxiv.org/abs/2309.11101)</code></li>
+<li>Summary: <p>In healthcare applications, understanding how machine/deep learning models
+make decisions is crucial. In this study, we introduce a neural network
+framework, $\textit{Truth Table rules}$ (TT-rules), that combines the global
+and exact interpretability properties of rule-based models with the high
+performance of deep neural networks. TT-rules is built upon $\textit{Truth
+Table nets}$ (TTnet), a family of deep neural networks initially developed for
+formal verification. By extracting the necessary and sufficient rules
+$\mathcal{R}$ from the trained TTnet model (global interpretability) to yield
+the same output as the TTnet (exact interpretability), TT-rules effectively
+transforms the neural network into a rule-based model. This rule-based model
+supports binary classification, multi-label classification, and regression
+tasks for small to large tabular datasets. After outlining the framework, we
+evaluate TT-rules' performance on healthcare applications and compare it to
+state-of-the-art rule-based methods. Our results demonstrate that TT-rules
+achieves equal or higher performance compared to other interpretable methods.
+Notably, TT-rules presents the first accurate rule-based model capable of
+fitting large tabular datasets, including two real-life DNA datasets with over
+20K features.
+</p></li>
+</ul>
+
+<h2>explainability</h2>
+<h3>Title: Signature Activation: A Sparse Signal View for Holistic Saliency. (arXiv:2309.11443v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11443">http://arxiv.org/abs/2309.11443</a></li>
+<li>Code URL: https://github.com/dtak/signature-activation</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11443]] Signature Activation: A Sparse Signal View for Holistic Saliency(http://arxiv.org/abs/2309.11443)</code></li>
+<li>Summary: <p>The adoption of machine learning in healthcare calls for model transparency
+and explainability. In this work, we introduce Signature Activation, a saliency
+method that generates holistic and class-agnostic explanations for
+Convolutional Neural Network (CNN) outputs. Our method exploits the fact that
+certain kinds of medical images, such as angiograms, have clear foreground and
+background objects. We give theoretical explanation to justify our methods. We
+show the potential use of our method in clinical settings through evaluating
+its efficacy for aiding the detection of lesions in coronary angiograms.
+</p></li>
+</ul>
+
+<h3>Title: When to Trust AI: Advances and Challenges for Certification of Neural Networks. (arXiv:2309.11196v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11196">http://arxiv.org/abs/2309.11196</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11196]] When to Trust AI: Advances and Challenges for Certification of Neural Networks(http://arxiv.org/abs/2309.11196)</code></li>
+<li>Summary: <p>Artificial intelligence (AI) has been advancing at a fast pace and it is now
+poised for deployment in a wide range of applications, such as autonomous
+systems, medical diagnosis and natural language processing. Early adoption of
+AI technology for real-world applications has not been without problems,
+particularly for neural networks, which may be unstable and susceptible to
+adversarial examples. In the longer term, appropriate safety assurance
+techniques need to be developed to reduce potential harm due to avoidable
+system failures and ensure trustworthiness. Focusing on certification and
+explainability, this paper provides an overview of techniques that have been
+developed to ensure safety of AI decisions and discusses future challenges.
+</p></li>
+</ul>
+
+<h2>watermark</h2>
+<h2>diffusion</h2>
+<h3>Title: PSDiff: Diffusion Model for Person Search with Iterative and Collaborative Refinement. (arXiv:2309.11125v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11125">http://arxiv.org/abs/2309.11125</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11125]] PSDiff: Diffusion Model for Person Search with Iterative and Collaborative Refinement(http://arxiv.org/abs/2309.11125)</code></li>
+<li>Summary: <p>Dominant Person Search methods aim to localize and recognize query persons in
+a unified network, which jointly optimizes two sub-tasks, \ie, detection and
+Re-IDentification (ReID). Despite significant progress, two major challenges
+remain: 1) Detection-prior modules in previous methods are suboptimal for the
+ReID task. 2) The collaboration between two sub-tasks is ignored. To alleviate
+these issues, we present a novel Person Search framework based on the Diffusion
+model, PSDiff. PSDiff formulates the person search as a dual denoising process
+from noisy boxes and ReID embeddings to ground truths. Unlike existing methods
+that follow the Detection-to-ReID paradigm, our denoising paradigm eliminates
+detection-prior modules to avoid the local-optimum of the ReID task. Following
+the new paradigm, we further design a new Collaborative Denoising Layer (CDL)
+to optimize detection and ReID sub-tasks in an iterative and collaborative way,
+which makes two sub-tasks mutually beneficial. Extensive experiments on the
+standard benchmarks show that PSDiff achieves state-of-the-art performance with
+fewer parameters and elastic computing overhead.
+</p></li>
+</ul>
+
+<h3>Title: FaceDiffuser: Speech-Driven 3D Facial Animation Synthesis Using Diffusion. (arXiv:2309.11306v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11306">http://arxiv.org/abs/2309.11306</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11306]] FaceDiffuser: Speech-Driven 3D Facial Animation Synthesis Using Diffusion(http://arxiv.org/abs/2309.11306)</code></li>
+<li>Summary: <p>Speech-driven 3D facial animation synthesis has been a challenging task both
+in industry and research. Recent methods mostly focus on deterministic deep
+learning methods meaning that given a speech input, the output is always the
+same. However, in reality, the non-verbal facial cues that reside throughout
+the face are non-deterministic in nature. In addition, majority of the
+approaches focus on 3D vertex based datasets and methods that are compatible
+with existing facial animation pipelines with rigged characters is scarce. To
+eliminate these issues, we present FaceDiffuser, a non-deterministic deep
+learning model to generate speech-driven facial animations that is trained with
+both 3D vertex and blendshape based datasets. Our method is based on the
+diffusion technique and uses the pre-trained large speech representation model
+HuBERT to encode the audio input. To the best of our knowledge, we are the
+first to employ the diffusion method for the task of speech-driven 3D facial
+animation synthesis. We have run extensive objective and subjective analyses
+and show that our approach achieves better or comparable results in comparison
+to the state-of-the-art methods. We also introduce a new in-house dataset that
+is based on a blendshape based rigged character. We recommend watching the
+accompanying supplementary video. The code and the dataset will be publicly
+available.
+</p></li>
+</ul>
+
+<h3>Title: Face Aging via Diffusion-based Editing. (arXiv:2309.11321v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11321">http://arxiv.org/abs/2309.11321</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11321]] Face Aging via Diffusion-based Editing(http://arxiv.org/abs/2309.11321)</code></li>
+<li>Summary: <p>In this paper, we address the problem of face aging: generating past or
+future facial images by incorporating age-related changes to the given face.
+Previous aging methods rely solely on human facial image datasets and are thus
+constrained by their inherent scale and bias. This restricts their application
+to a limited generatable age range and the inability to handle large age gaps.
+We propose FADING, a novel approach to address Face Aging via DIffusion-based
+editiNG. We go beyond existing methods by leveraging the rich prior of
+large-scale language-image diffusion models. First, we specialize a pre-trained
+diffusion model for the task of face age editing by using an age-aware
+fine-tuning scheme. Next, we invert the input image to latent noise and obtain
+optimized null text embeddings. Finally, we perform text-guided local age
+editing via attention control. The quantitative and qualitative analyses
+demonstrate that our method outperforms existing approaches with respect to
+aging accuracy, attribute preservation, and aging quality.
+</p></li>
+</ul>
+
+<h3>Title: FreeU: Free Lunch in Diffusion U-Net. (arXiv:2309.11497v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11497">http://arxiv.org/abs/2309.11497</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11497]] FreeU: Free Lunch in Diffusion U-Net(http://arxiv.org/abs/2309.11497)</code></li>
+<li>Summary: <p>In this paper, we uncover the untapped potential of diffusion U-Net, which
+serves as a "free lunch" that substantially improves the generation quality on
+the fly. We initially investigate the key contributions of the U-Net
+architecture to the denoising process and identify that its main backbone
+primarily contributes to denoising, whereas its skip connections mainly
+introduce high-frequency features into the decoder module, causing the network
+to overlook the backbone semantics. Capitalizing on this discovery, we propose
+a simple yet effective method-termed "FreeU" - that enhances generation quality
+without additional training or finetuning. Our key insight is to strategically
+re-weight the contributions sourced from the U-Net's skip connections and
+backbone feature maps, to leverage the strengths of both components of the
+U-Net architecture. Promising results on image and video generation tasks
+demonstrate that our FreeU can be readily integrated to existing diffusion
+models, e.g., Stable Diffusion, DreamBooth, ModelScope, Rerender and ReVersion,
+to improve the generation quality with only a few lines of code. All you need
+is to adjust two scaling factors during inference. Project page:
+https://chenyangsi.top/FreeU/.
+</p></li>
+</ul>
+
+<h3>Title: Deep Networks as Denoising Algorithms: Sample-Efficient Learning of Diffusion Models in High-Dimensional Graphical Models. (arXiv:2309.11420v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11420">http://arxiv.org/abs/2309.11420</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11420]] Deep Networks as Denoising Algorithms: Sample-Efficient Learning of Diffusion Models in High-Dimensional Graphical Models(http://arxiv.org/abs/2309.11420)</code></li>
+<li>Summary: <p>We investigate the approximation efficiency of score functions by deep neural
+networks in diffusion-based generative modeling. While existing approximation
+theories utilize the smoothness of score functions, they suffer from the curse
+of dimensionality for intrinsically high-dimensional data. This limitation is
+pronounced in graphical models such as Markov random fields, common for image
+distributions, where the approximation efficiency of score functions remains
+unestablished.
+</p>
+<p>To address this, we observe score functions can often be well-approximated in
+graphical models through variational inference denoising algorithms.
+Furthermore, these algorithms are amenable to efficient neural network
+representation. We demonstrate this in examples of graphical models, including
+Ising models, conditional Ising models, restricted Boltzmann machines, and
+sparse encoding models. Combined with off-the-shelf discretization error bounds
+for diffusion-based sampling, we provide an efficient sample complexity bound
+for diffusion-based generative modeling when the score function is learned by
+deep neural networks.
+</p></li>
+</ul>
+
+<h2>noise learning</h2>
+<h2>data-free</h2>
+<h3>Title: Text2Reward: Automated Dense Reward Function Generation for Reinforcement Learning. (arXiv:2309.11489v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11489">http://arxiv.org/abs/2309.11489</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11489]] Text2Reward: Automated Dense Reward Function Generation for Reinforcement Learning(http://arxiv.org/abs/2309.11489)</code></li>
+<li>Summary: <p>Designing reward functions is a longstanding challenge in reinforcement
+learning (RL); it requires specialized knowledge or domain data, leading to
+high costs for development. To address this, we introduce Text2Reward, a
+data-free framework that automates the generation of dense reward functions
+based on large language models (LLMs). Given a goal described in natural
+language, Text2Reward generates dense reward functions as an executable program
+grounded in a compact representation of the environment. Unlike inverse RL and
+recent work that uses LLMs to write sparse reward codes, Text2Reward produces
+interpretable, free-form dense reward codes that cover a wide range of tasks,
+utilize existing packages, and allow iterative refinement with human feedback.
+We evaluate Text2Reward on two robotic manipulation benchmarks (ManiSkill2,
+MetaWorld) and two locomotion environments of MuJoCo. On 13 of the 17
+manipulation tasks, policies trained with generated reward codes achieve
+similar or better task success rates and convergence speed than expert-written
+reward codes. For locomotion tasks, our method learns six novel locomotion
+behaviors with a success rate exceeding 94%. Furthermore, we show that the
+policies trained in the simulator with our method can be deployed in the real
+world. Finally, Text2Reward further improves the policies by refining their
+reward functions with human feedback. Video results are available at
+https://text-to-reward.github.io
+</p></li>
+</ul>
+
+<h2>transformer</h2>
+<h3>Title: COSE: A Consistency-Sensitivity Metric for Saliency on Image Classification. (arXiv:2309.10989v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10989">http://arxiv.org/abs/2309.10989</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10989]] COSE: A Consistency-Sensitivity Metric for Saliency on Image Classification(http://arxiv.org/abs/2309.10989)</code></li>
+<li>Summary: <p>We present a set of metrics that utilize vision priors to effectively assess
+the performance of saliency methods on image classification tasks. To
+understand behavior in deep learning models, many methods provide visual
+saliency maps emphasizing image regions that most contribute to a model
+prediction. However, there is limited work on analyzing the reliability of
+saliency methods in explaining model decisions. We propose the metric
+COnsistency-SEnsitivity (COSE) that quantifies the equivariant and invariant
+properties of visual model explanations using simple data augmentations.
+Through our metrics, we show that although saliency methods are thought to be
+architecture-independent, most methods could better explain transformer-based
+models over convolutional-based models. In addition, GradCAM was found to
+outperform other methods in terms of COSE but was shown to have limitations
+such as lack of variability for fine-grained datasets. The duality between
+consistency and sensitivity allow the analysis of saliency methods from
+different angles. Ultimately, we find that it is important to balance these two
+metrics for a saliency map to faithfully show model behavior.
+</p></li>
+</ul>
+
+<h3>Title: Forgery-aware Adaptive Vision Transformer for Face Forgery Detection. (arXiv:2309.11092v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11092">http://arxiv.org/abs/2309.11092</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11092]] Forgery-aware Adaptive Vision Transformer for Face Forgery Detection(http://arxiv.org/abs/2309.11092)</code></li>
+<li>Summary: <p>With the advancement in face manipulation technologies, the importance of
+face forgery detection in protecting authentication integrity becomes
+increasingly evident. Previous Vision Transformer (ViT)-based detectors have
+demonstrated subpar performance in cross-database evaluations, primarily
+because fully fine-tuning with limited Deepfake data often leads to forgetting
+pre-trained knowledge and over-fitting to data-specific ones. To circumvent
+these issues, we propose a novel Forgery-aware Adaptive Vision Transformer
+(FA-ViT). In FA-ViT, the vanilla ViT's parameters are frozen to preserve its
+pre-trained knowledge, while two specially designed components, the Local-aware
+Forgery Injector (LFI) and the Global-aware Forgery Adaptor (GFA), are employed
+to adapt forgery-related knowledge. our proposed FA-ViT effectively combines
+these two different types of knowledge to form the general forgery features for
+detecting Deepfakes. Specifically, LFI captures local discriminative
+information and incorporates these information into ViT via
+Neighborhood-Preserving Cross Attention (NPCA). Simultaneously, GFA learns
+adaptive knowledge in the self-attention layer, bridging the gap between the
+two different domain. Furthermore, we design a novel Single Domain Pairwise
+Learning (SDPL) to facilitate fine-grained information learning in FA-ViT. The
+extensive experiments demonstrate that our FA-ViT achieves state-of-the-art
+performance in cross-dataset evaluation and cross-manipulation scenarios, and
+improves the robustness against unseen perturbations.
+</p></li>
+</ul>
+
+<h3>Title: Automatic Bat Call Classification using Transformer Networks. (arXiv:2309.11218v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11218">http://arxiv.org/abs/2309.11218</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11218]] Automatic Bat Call Classification using Transformer Networks(http://arxiv.org/abs/2309.11218)</code></li>
+<li>Summary: <p>Automatically identifying bat species from their echolocation calls is a
+difficult but important task for monitoring bats and the ecosystem they live
+in. Major challenges in automatic bat call identification are high call
+variability, similarities between species, interfering calls and lack of
+annotated data. Many currently available models suffer from relatively poor
+performance on real-life data due to being trained on single call datasets and,
+moreover, are often too slow for real-time classification. Here, we propose a
+Transformer architecture for multi-label classification with potential
+applications in real-time classification scenarios. We train our model on
+synthetically generated multi-species recordings by merging multiple bats calls
+into a single recording with multiple simultaneous calls. Our approach achieves
+a single species accuracy of 88.92% (F1-score of 84.23%) and a multi species
+macro F1-score of 74.40% on our test set. In comparison to three other tools on
+the independent and publicly available dataset ChiroVox, our model achieves at
+least 25.82% better accuracy for single species classification and at least
+6.9% better macro F1-score for multi species classification.
+</p></li>
+</ul>
+
+<h3>Title: Box2Poly: Memory-Efficient Polygon Prediction of Arbitrarily Shaped and Rotated Text. (arXiv:2309.11248v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11248">http://arxiv.org/abs/2309.11248</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11248]] Box2Poly: Memory-Efficient Polygon Prediction of Arbitrarily Shaped and Rotated Text(http://arxiv.org/abs/2309.11248)</code></li>
+<li>Summary: <p>Recently, Transformer-based text detection techniques have sought to predict
+polygons by encoding the coordinates of individual boundary vertices using
+distinct query features. However, this approach incurs a significant memory
+overhead and struggles to effectively capture the intricate relationships
+between vertices belonging to the same instance. Consequently, irregular text
+layouts often lead to the prediction of outlined vertices, diminishing the
+quality of results. To address these challenges, we present an innovative
+approach rooted in Sparse R-CNN: a cascade decoding pipeline for polygon
+prediction. Our method ensures precision by iteratively refining polygon
+predictions, considering both the scale and location of preceding results.
+Leveraging this stabilized regression pipeline, even employing just a single
+feature vector to guide polygon instance regression yields promising detection
+results. Simultaneously, the leverage of instance-level feature proposal
+substantially enhances memory efficiency (&gt;50% less vs. the state-of-the-art
+method DPText-DETR) and reduces inference speed (&gt;40% less vs. DPText-DETR)
+with minor performance drop on benchmarks.
+</p></li>
+</ul>
+
+<h3>Title: Kosmos-2.5: A Multimodal Literate Model. (arXiv:2309.11419v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11419">http://arxiv.org/abs/2309.11419</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11419]] Kosmos-2(http://arxiv.org/abs/2309.11419)</code></li>
+<li>Summary: <p>We present Kosmos-2.5, a multimodal literate model for machine reading of
+text-intensive images. Pre-trained on large-scale text-intensive images,
+Kosmos-2.5 excels in two distinct yet cooperative transcription tasks: (1)
+generating spatially-aware text blocks, where each block of text is assigned
+its spatial coordinates within the image, and (2) producing structured text
+output that captures styles and structures into the markdown format. This
+unified multimodal literate capability is achieved through a shared Transformer
+architecture, task-specific prompts, and flexible text representations. We
+evaluate Kosmos-2.5 on end-to-end document-level text recognition and
+image-to-markdown text generation. Furthermore, the model can be readily
+adapted for any text-intensive image understanding task with different prompts
+through supervised fine-tuning, making it a general-purpose tool for real-world
+applications involving text-rich images. This work also paves the way for the
+future scaling of multimodal large language models.
+</p></li>
+</ul>
+
+<h3>Title: SkeleTR: Towrads Skeleton-based Action Recognition in the Wild. (arXiv:2309.11445v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11445">http://arxiv.org/abs/2309.11445</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11445]] SkeleTR: Towrads Skeleton-based Action Recognition in the Wild(http://arxiv.org/abs/2309.11445)</code></li>
+<li>Summary: <p>We present SkeleTR, a new framework for skeleton-based action recognition. In
+contrast to prior work, which focuses mainly on controlled environments, we
+target more general scenarios that typically involve a variable number of
+people and various forms of interaction between people. SkeleTR works with a
+two-stage paradigm. It first models the intra-person skeleton dynamics for each
+skeleton sequence with graph convolutions, and then uses stacked Transformer
+encoders to capture person interactions that are important for action
+recognition in general scenarios. To mitigate the negative impact of inaccurate
+skeleton associations, SkeleTR takes relative short skeleton sequences as input
+and increases the number of sequences. As a unified solution, SkeleTR can be
+directly applied to multiple skeleton-based action tasks, including video-level
+action classification, instance-level action detection, and group-level
+activity recognition. It also enables transfer learning and joint training
+across different action tasks and datasets, which result in performance
+improvement. When evaluated on various skeleton-based action recognition
+benchmarks, SkeleTR achieves the state-of-the-art performance.
+</p></li>
+</ul>
+
+<h3>Title: A Family of Pretrained Transformer Language Models for Russian. (arXiv:2309.10931v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10931">http://arxiv.org/abs/2309.10931</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10931]] A Family of Pretrained Transformer Language Models for Russian(http://arxiv.org/abs/2309.10931)</code></li>
+<li>Summary: <p>Nowadays, Transformer language models (LMs) represent a fundamental component
+of the NLP research methodologies and applications. However, the development of
+such models specifically for the Russian language has received little
+attention. This paper presents a collection of 13 Russian Transformer LMs based
+on the encoder (ruBERT, ruRoBERTa, ruELECTRA), decoder (ruGPT-3), and
+encoder-decoder (ruT5, FRED-T5) models in multiple sizes. Access to these
+models is readily available via the HuggingFace platform. We provide a report
+of the model architecture design and pretraining, and the results of evaluating
+their generalization abilities on Russian natural language understanding and
+generation datasets and benchmarks. By pretraining and releasing these
+specialized Transformer LMs, we hope to broaden the scope of the NLP research
+directions and enable the development of industrial solutions for the Russian
+language.
+</p></li>
+</ul>
+
+<h3>Title: Making Small Language Models Better Multi-task Learners with Mixture-of-Task-Adapters. (arXiv:2309.11042v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11042">http://arxiv.org/abs/2309.11042</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11042]] Making Small Language Models Better Multi-task Learners with Mixture-of-Task-Adapters(http://arxiv.org/abs/2309.11042)</code></li>
+<li>Summary: <p>Recently, Large Language Models (LLMs) have achieved amazing zero-shot
+learning performance over a variety of Natural Language Processing (NLP) tasks,
+especially for text generative tasks. Yet, the large size of LLMs often leads
+to the high computational cost of model training and online deployment. In our
+work, we present ALTER, a system that effectively builds the multi-tAsk
+Learners with mixTure-of-task-adaptERs upon small language models (with &lt;1B
+parameters) to address multiple NLP tasks simultaneously, capturing the
+commonalities and differences between tasks, in order to support
+domain-specific applications. Specifically, in ALTER, we propose the
+Mixture-of-Task-Adapters (MTA) module as an extension to the transformer
+architecture for the underlying model to capture the intra-task and inter-task
+knowledge. A two-stage training method is further proposed to optimize the
+collaboration between adapters at a small computational cost. Experimental
+results over a mixture of NLP tasks show that our proposed MTA architecture and
+the two-stage training method achieve good performance. Based on ALTER, we have
+also produced MTA-equipped language models for various domains.
+</p></li>
+</ul>
+
+<h3>Title: Rating Prediction in Conversational Task Assistants with Behavioral and Conversational-Flow Features. (arXiv:2309.11307v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11307">http://arxiv.org/abs/2309.11307</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11307]] Rating Prediction in Conversational Task Assistants with Behavioral and Conversational-Flow Features(http://arxiv.org/abs/2309.11307)</code></li>
+<li>Summary: <p>Predicting the success of Conversational Task Assistants (CTA) can be
+critical to understand user behavior and act accordingly. In this paper, we
+propose TB-Rater, a Transformer model which combines conversational-flow
+features with user behavior features for predicting user ratings in a CTA
+scenario. In particular, we use real human-agent conversations and ratings
+collected in the Alexa TaskBot challenge, a novel multimodal and multi-turn
+conversational context. Our results show the advantages of modeling both the
+conversational-flow and behavioral aspects of the conversation in a single
+model for offline rating prediction. Additionally, an analysis of the
+CTA-specific behavioral features brings insights into this setting and can be
+used to bootstrap future systems.
+</p></li>
+</ul>
+
+<h3>Title: WFTNet: Exploiting Global and Local Periodicity in Long-term Time Series Forecasting. (arXiv:2309.11319v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11319">http://arxiv.org/abs/2309.11319</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11319]] WFTNet: Exploiting Global and Local Periodicity in Long-term Time Series Forecasting(http://arxiv.org/abs/2309.11319)</code></li>
+<li>Summary: <p>Recent CNN and Transformer-based models tried to utilize frequency and
+periodicity information for long-term time series forecasting. However, most
+existing work is based on Fourier transform, which cannot capture fine-grained
+and local frequency structure. In this paper, we propose a Wavelet-Fourier
+Transform Network (WFTNet) for long-term time series forecasting. WFTNet
+utilizes both Fourier and wavelet transforms to extract comprehensive
+temporal-frequency information from the signal, where Fourier transform
+captures the global periodic patterns and wavelet transform captures the local
+ones. Furthermore, we introduce a Periodicity-Weighted Coefficient (PWC) to
+adaptively balance the importance of global and local frequency patterns.
+Extensive experiments on various time series datasets show that WFTNet
+consistently outperforms other state-of-the-art baseline.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Score Mismatching for Generative Modeling. (arXiv:2309.11043v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11043">http://arxiv.org/abs/2309.11043</a></li>
+<li>Code URL: https://github.com/senmaoy/Score-Mismatching</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11043]] Score Mismatching for Generative Modeling(http://arxiv.org/abs/2309.11043)</code></li>
+<li>Summary: <p>We propose a new score-based model with one-step sampling. Previously,
+score-based models were burdened with heavy computations due to iterative
+sampling. For substituting the iterative process, we train a standalone
+generator to compress all the time steps with the gradient backpropagated from
+the score network. In order to produce meaningful gradients for the generator,
+the score network is trained to simultaneously match the real data distribution
+and mismatch the fake data distribution. This model has the following
+advantages: 1) For sampling, it generates a fake image with only one step
+forward. 2) For training, it only needs 10 diffusion steps.3) Compared with
+consistency model, it is free of the ill-posed problem caused by consistency
+loss. On the popular CIFAR-10 dataset, our model outperforms Consistency Model
+and Denoising Score Matching, which demonstrates the potential of the
+framework. We further provide more examples on the MINIST and LSUN datasets.
+The code is available on GitHub.
+</p></li>
+</ul>
+
+<h3>Title: Self-supervised Domain-agnostic Domain Adaptation for Satellite Images. (arXiv:2309.11109v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11109">http://arxiv.org/abs/2309.11109</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11109]] Self-supervised Domain-agnostic Domain Adaptation for Satellite Images(http://arxiv.org/abs/2309.11109)</code></li>
+<li>Summary: <p>Domain shift caused by, e.g., different geographical regions or acquisition
+conditions is a common issue in machine learning for global scale satellite
+image processing. A promising method to address this problem is domain
+adaptation, where the training and the testing datasets are split into two or
+multiple domains according to their distributions, and an adaptation method is
+applied to improve the generalizability of the model on the testing dataset.
+However, defining the domain to which each satellite image belongs is not
+trivial, especially under large-scale multi-temporal and multi-sensory
+scenarios, where a single image mosaic could be generated from multiple data
+sources. In this paper, we propose an self-supervised domain-agnostic domain
+adaptation (SS(DA)2) method to perform domain adaptation without such a domain
+definition. To achieve this, we first design a contrastive generative
+adversarial loss to train a generative network to perform image-to-image
+translation between any two satellite image patches. Then, we improve the
+generalizability of the downstream models by augmenting the training data with
+different testing spectral characteristics. The experimental results on public
+benchmarks verify the effectiveness of SS(DA)2.
+</p></li>
+</ul>
+
+<h3>Title: DreamLLM: Synergistic Multimodal Comprehension and Creation. (arXiv:2309.11499v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11499">http://arxiv.org/abs/2309.11499</a></li>
+<li>Code URL: https://github.com/RunpeiDong/DreamLLM</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11499]] DreamLLM: Synergistic Multimodal Comprehension and Creation(http://arxiv.org/abs/2309.11499)</code></li>
+<li>Summary: <p>This paper presents DreamLLM, a learning framework that first achieves
+versatile Multimodal Large Language Models (MLLMs) empowered with frequently
+overlooked synergy between multimodal comprehension and creation. DreamLLM
+operates on two fundamental principles. The first focuses on the generative
+modeling of both language and image posteriors by direct sampling in the raw
+multimodal space. This approach circumvents the limitations and information
+loss inherent to external feature extractors like CLIP, and a more thorough
+multimodal understanding is obtained. Second, DreamLLM fosters the generation
+of raw, interleaved documents, modeling both text and image contents, along
+with unstructured layouts. This allows DreamLLM to learn all conditional,
+marginal, and joint multimodal distributions effectively. As a result, DreamLLM
+is the first MLLM capable of generating free-form interleaved content.
+Comprehensive experiments highlight DreamLLM's superior performance as a
+zero-shot multimodal generalist, reaping from the enhanced learning synergy.
+</p></li>
+</ul>
+
+<h3>Title: Benchmarks for Pir\'a 2.0, a Reading Comprehension Dataset about the Ocean, the Brazilian Coast, and Climate Change. (arXiv:2309.10945v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10945">http://arxiv.org/abs/2309.10945</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10945]] Benchmarks for Pir\'a 2(http://arxiv.org/abs/2309.10945)</code></li>
+<li>Summary: <p>Pir\'a is a reading comprehension dataset focused on the ocean, the Brazilian
+coast, and climate change, built from a collection of scientific abstracts and
+reports on these topics. This dataset represents a versatile language resource,
+particularly useful for testing the ability of current machine learning models
+to acquire expert scientific knowledge. Despite its potential, a detailed set
+of baselines has not yet been developed for Pir\'a. By creating these
+baselines, researchers can more easily utilize Pir\'a as a resource for testing
+machine learning models across a wide range of question answering tasks. In
+this paper, we define six benchmarks over the Pir\'a dataset, covering closed
+generative question answering, machine reading comprehension, information
+retrieval, open question answering, answer triggering, and multiple choice
+question answering. As part of this effort, we have also produced a curated
+version of the original dataset, where we fixed a number of grammar issues,
+repetitions, and other shortcomings. Furthermore, the dataset has been extended
+in several new directions, so as to face the aforementioned benchmarks:
+translation of supporting texts from English into Portuguese, classification
+labels for answerability, automatic paraphrases of questions and answers, and
+multiple choice candidates. The results described in this paper provide several
+points of reference for researchers interested in exploring the challenges
+provided by the Pir\'a dataset.
+</p></li>
+</ul>
+
+<h3>Title: Localize, Retrieve and Fuse: A Generalized Framework for Free-Form Question Answering over Tables. (arXiv:2309.11049v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11049">http://arxiv.org/abs/2309.11049</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11049]] Localize, Retrieve and Fuse: A Generalized Framework for Free-Form Question Answering over Tables(http://arxiv.org/abs/2309.11049)</code></li>
+<li>Summary: <p>Question answering on tabular data (TableQA), which aims at generating
+answers to questions grounded on a given table, has attracted increasing
+attention in recent years. Existing work tends to generate factual short-form
+answers by extracting information from one or a few table cells without
+reasoning over selected table cells. However, the free-form TableQA, requiring
+a more complex relevant table cell selection strategy and the complex
+integration and inference of separate pieces of information, has been
+under-explored. To this end, this paper proposes a generalized three-stage
+approach: Table-to-Graph conversion and cell localizing, external knowledge
+retrieval and table-text fusion (called TAG-QA), addressing the challenge of
+inferring long free-form answer for generative TableQA. In particular, TAG-QA
+(1) locates relevant table cells using a graph neural network to gather
+intersecting cells between relevant rows and columns; (2) leverages external
+knowledge from Wikipedia and (3) generates answers by integrating both tabular
+data and natural linguistic information. Experiments with a human evaluation
+demonstrate that TAG-QA is capable of generating more faithful and coherent
+sentence when compared with several state-of-the-art baselines. Especially,
+TAG-QA outperforms the strong pipeline-based baseline TAPAS by 17% and 14%, in
+terms of BLEU-4 and PARENT F-score, respectively. Moreover, TAG-QA outperforms
+end-to-end model T5 by 16% and 12% on BLEU-4 and PARENT F-score.
+</p></li>
+</ul>
+
+<h3>Title: Sequence-to-Sequence Spanish Pre-trained Language Models. (arXiv:2309.11259v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11259">http://arxiv.org/abs/2309.11259</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11259]] Sequence-to-Sequence Spanish Pre-trained Language Models(http://arxiv.org/abs/2309.11259)</code></li>
+<li>Summary: <p>In recent years, substantial advancements in pre-trained language models have
+paved the way for the development of numerous non-English language versions,
+with a particular focus on encoder-only and decoder-only architectures. While
+Spanish language models encompassing BERT, RoBERTa, and GPT have exhibited
+prowess in natural language understanding and generation, there remains a
+scarcity of encoder-decoder models designed for sequence-to-sequence tasks
+involving input-output pairs. This paper breaks new ground by introducing the
+implementation and evaluation of renowned encoder-decoder architectures,
+exclusively pre-trained on Spanish corpora. Specifically, we present Spanish
+versions of BART, T5, and BERT2BERT-style models and subject them to a
+comprehensive assessment across a diverse range of sequence-to-sequence tasks,
+spanning summarization, rephrasing, and generative question answering. Our
+findings underscore the competitive performance of all models, with BART and T5
+emerging as top performers across all evaluated tasks. As an additional
+contribution, we have made all models publicly available to the research
+community, fostering future exploration and development in Spanish language
+processing.
+</p></li>
+</ul>
+
+<h3>Title: Generative Pre-Training of Time-Series Data for Unsupervised Fault Detection in Semiconductor Manufacturing. (arXiv:2309.11427v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11427">http://arxiv.org/abs/2309.11427</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11427]] Generative Pre-Training of Time-Series Data for Unsupervised Fault Detection in Semiconductor Manufacturing(http://arxiv.org/abs/2309.11427)</code></li>
+<li>Summary: <p>This paper introduces TRACE-GPT, which stands for Time-seRies
+Anomaly-detection with Convolutional Embedding and Generative Pre-trained
+Transformers. TRACE-GPT is designed to pre-train univariate time-series sensor
+data and detect faults on unlabeled datasets in semiconductor manufacturing. In
+semiconductor industry, classifying abnormal time-series sensor data from
+normal data is important because it is directly related to wafer defect.
+However, small, unlabeled, and even mixed training data without enough
+anomalies make classification tasks difficult. In this research, we capture
+features of time-series data with temporal convolutional embedding and
+Generative Pre-trained Transformer (GPT) to classify abnormal sequences from
+normal sequences using cross entropy loss. We prove that our model shows better
+performance than previous unsupervised models with both an open dataset, the
+University of California Riverside (UCR) time-series classification archive,
+and the process log of our Chemical Vapor Deposition (CVD) equipment. Our model
+has the highest F1 score at Equal Error Rate (EER) across all datasets and is
+only 0.026 below the supervised state-of-the-art baseline on the open dataset.
+</p></li>
+</ul>
+
+<h2>large language model</h2>
+<h3>Title: In-Context Learning for Text Classification with Many Labels. (arXiv:2309.10954v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10954">http://arxiv.org/abs/2309.10954</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10954]] In-Context Learning for Text Classification with Many Labels(http://arxiv.org/abs/2309.10954)</code></li>
+<li>Summary: <p>In-context learning (ICL) using large language models for tasks with many
+labels is challenging due to the limited context window, which makes it
+difficult to fit a sufficient number of examples in the prompt. In this paper,
+we use a pre-trained dense retrieval model to bypass this limitation, giving
+the model only a partial view of the full label space for each inference call.
+Testing with recent open-source LLMs (OPT, LLaMA), we set new state of the art
+performance in few-shot settings for three common intent classification
+datasets, with no finetuning. We also surpass fine-tuned performance on
+fine-grained sentiment classification in certain cases. We analyze the
+performance across number of in-context examples and different model scales,
+showing that larger models are necessary to effectively and consistently make
+use of larger context lengths for ICL. By running several ablations, we analyze
+the model's use of: a) the similarity of the in-context examples to the current
+input, b) the semantic content of the class names, and c) the correct
+correspondence between examples and labels. We demonstrate that all three are
+needed to varying degrees depending on the domain, contrary to certain recent
+works.
+</p></li>
+</ul>
+
+<h3>Title: Towards Joint Modeling of Dialogue Response and Speech Synthesis based on Large Language Model. (arXiv:2309.11000v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11000">http://arxiv.org/abs/2309.11000</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11000]] Towards Joint Modeling of Dialogue Response and Speech Synthesis based on Large Language Model(http://arxiv.org/abs/2309.11000)</code></li>
+<li>Summary: <p>This paper explores the potential of constructing an AI spoken dialogue
+system that "thinks how to respond" and "thinks how to speak" simultaneously,
+which more closely aligns with the human speech production process compared to
+the current cascade pipeline of independent chatbot and Text-to-Speech (TTS)
+modules. We hypothesize that Large Language Models (LLMs) with billions of
+parameters possess significant speech understanding capabilities and can
+jointly model dialogue responses and linguistic features. We conduct two sets
+of experiments: 1) Prosodic structure prediction, a typical front-end task in
+TTS, demonstrating the speech understanding ability of LLMs, and 2) Further
+integrating dialogue response and a wide array of linguistic features using a
+unified encoding format. Our results indicate that the LLM-based approach is a
+promising direction for building unified spoken dialogue systems.
+</p></li>
+</ul>
+
+<h3>Title: Assessment of Pre-Trained Models Across Languages and Grammars. (arXiv:2309.11165v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11165">http://arxiv.org/abs/2309.11165</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11165]] Assessment of Pre-Trained Models Across Languages and Grammars(http://arxiv.org/abs/2309.11165)</code></li>
+<li>Summary: <p>We present an approach for assessing how multilingual large language models
+(LLMs) learn syntax in terms of multi-formalism syntactic structures. We aim to
+recover constituent and dependency structures by casting parsing as sequence
+labeling. To do so, we select a few LLMs and study them on 13 diverse UD
+treebanks for dependency parsing and 10 treebanks for constituent parsing. Our
+results show that: (i) the framework is consistent across encodings, (ii)
+pre-trained word vectors do not favor constituency representations of syntax
+over dependencies, (iii) sub-word tokenization is needed to represent syntax,
+in contrast to character-based models, and (iv) occurrence of a language in the
+pretraining data is more important than the amount of task data when recovering
+syntax from the word vectors.
+</p></li>
+</ul>
+
+<h3>Title: Overview of AuTexTification at IberLEF 2023: Detection and Attribution of Machine-Generated Text in Multiple Domains. (arXiv:2309.11285v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11285">http://arxiv.org/abs/2309.11285</a></li>
+<li>Code URL: https://github.com/autextification/AuTexTification-Overview</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11285]] Overview of AuTexTification at IberLEF 2023: Detection and Attribution of Machine-Generated Text in Multiple Domains(http://arxiv.org/abs/2309.11285)</code></li>
+<li>Summary: <p>This paper presents the overview of the AuTexTification shared task as part
+of the IberLEF 2023 Workshop in Iberian Languages Evaluation Forum, within the
+framework of the SEPLN 2023 conference. AuTexTification consists of two
+subtasks: for Subtask 1, participants had to determine whether a text is
+human-authored or has been generated by a large language model. For Subtask 2,
+participants had to attribute a machine-generated text to one of six different
+text generation models. Our AuTexTification 2023 dataset contains more than
+160.000 texts across two languages (English and Spanish) and five domains
+(tweets, reviews, news, legal, and how-to articles). A total of 114 teams
+signed up to participate, of which 36 sent 175 runs, and 20 of them sent their
+working notes. In this overview, we present the AuTexTification dataset and
+task, the submitted participating systems, and the results.
+</p></li>
+</ul>
+
+<h3>Title: CPLLM: Clinical Prediction with Large Language Models. (arXiv:2309.11295v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11295">http://arxiv.org/abs/2309.11295</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11295]] CPLLM: Clinical Prediction with Large Language Models(http://arxiv.org/abs/2309.11295)</code></li>
+<li>Summary: <p>We present Clinical Prediction with Large Language Models (CPLLM), a method
+that involves fine-tuning a pre-trained Large Language Model (LLM) for clinical
+disease prediction. We utilized quantization and fine-tuned the LLM using
+prompts, with the task of predicting whether patients will be diagnosed with a
+target disease during their next visit or in the subsequent diagnosis,
+leveraging their historical diagnosis records. We compared our results versus
+various baselines, including Logistic Regression, RETAIN, and Med-BERT, which
+is the current state-of-the-art model for disease prediction using structured
+EHR data. Our experiments have shown that CPLLM surpasses all the tested models
+in terms of both PR-AUC and ROC-AUC metrics, displaying noteworthy enhancements
+compared to the baseline models.
+</p></li>
+</ul>
+
+<h3>Title: DISC-LawLLM: Fine-tuning Large Language Models for Intelligent Legal Services. (arXiv:2309.11325v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11325">http://arxiv.org/abs/2309.11325</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11325]] DISC-LawLLM: Fine-tuning Large Language Models for Intelligent Legal Services(http://arxiv.org/abs/2309.11325)</code></li>
+<li>Summary: <p>We propose DISC-LawLLM, an intelligent legal system utilizing large language
+models (LLMs) to provide a wide range of legal services. We adopt legal
+syllogism prompting strategies to construct supervised fine-tuning datasets in
+the Chinese Judicial domain and fine-tune LLMs with legal reasoning capability.
+We augment LLMs with a retrieval module to enhance models' ability to access
+and utilize external legal knowledge. A comprehensive legal benchmark,
+DISC-Law-Eval, is presented to evaluate intelligent legal systems from both
+objective and subjective dimensions. Quantitative and qualitative results on
+DISC-Law-Eval demonstrate the effectiveness of our system in serving various
+users across diverse legal scenarios. The detailed resources are available at
+https://github.com/FudanDISC/DISC-LawLLM.
+</p></li>
+</ul>
+
+<h3>Title: Safurai 001: New Qualitative Approach for Code LLM Evaluation. (arXiv:2309.11385v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11385">http://arxiv.org/abs/2309.11385</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11385]] Safurai 001: New Qualitative Approach for Code LLM Evaluation(http://arxiv.org/abs/2309.11385)</code></li>
+<li>Summary: <p>This paper presents Safurai-001, a new Large Language Model (LLM) with
+significant potential in the domain of coding assistance. Driven by recent
+advancements in coding LLMs, Safurai-001 competes in performance with the
+latest models like WizardCoder [Xu et al., 2023], PanguCoder [Shen et al.,
+2023] and Phi-1 [Gunasekar et al., 2023] but aims to deliver a more
+conversational interaction. By capitalizing on the progress in data engineering
+(including latest techniques of data transformation and prompt engineering) and
+instruction tuning, this new model promises to stand toe-to-toe with recent
+closed and open source developments. Recognizing the need for an efficacious
+evaluation metric for coding LLMs, this paper also introduces GPT4-based
+MultiParameters, an evaluation benchmark that harnesses varied parameters to
+present a comprehensive insight into the models functioning and performance.
+Our assessment shows that Safurai-001 can outperform GPT-3.5 by 1.58% and
+WizardCoder by 18.78% in the Code Readability parameter and more.
+</p></li>
+</ul>
+
+<h3>Title: You Only Look at Screens: Multimodal Chain-of-Action Agents. (arXiv:2309.11436v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11436">http://arxiv.org/abs/2309.11436</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11436]] You Only Look at Screens: Multimodal Chain-of-Action Agents(http://arxiv.org/abs/2309.11436)</code></li>
+<li>Summary: <p>Autonomous user interface (UI) agents aim to facilitate task automation by
+interacting with the user interface without manual intervention. Recent studies
+have investigated eliciting the capabilities of large language models (LLMs)
+for effective engagement in diverse environments. To align with the
+input-output requirement of LLMs, existing approaches are developed under a
+sandbox setting where they rely on external tools and application-specific APIs
+to parse the environment into textual elements and interpret the predicted
+actions. Consequently, those approaches often grapple with inference
+inefficiency and error propagation risks. To mitigate the challenges, we
+introduce Auto-UI, a multimodal solution that directly interacts with the
+interface, bypassing the need for environment parsing or reliance on
+application-dependent APIs. Moreover, we propose a chain-of-action technique --
+leveraging a series of intermediate previous action histories and future action
+plans -- to help the agent decide what action to execute. We evaluate our
+approach on a new device-control benchmark AITW with 30K unique instructions,
+spanning multi-step tasks such as application operation, web searching, and web
+shopping. Experimental results show that Auto-UI achieves state-of-the-art
+performance with an action type prediction accuracy of 90% and an overall
+action success rate of 74%. Code is publicly available at
+https://github.com/cooelf/Auto-UI.
+</p></li>
+</ul>
+
+<h3>Title: Controlled Generation with Prompt Insertion for Natural Language Explanations in Grammatical Error Correction. (arXiv:2309.11439v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11439">http://arxiv.org/abs/2309.11439</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11439]] Controlled Generation with Prompt Insertion for Natural Language Explanations in Grammatical Error Correction(http://arxiv.org/abs/2309.11439)</code></li>
+<li>Summary: <p>In Grammatical Error Correction (GEC), it is crucial to ensure the user's
+comprehension of a reason for correction. Existing studies present tokens,
+examples, and hints as to the basis for correction but do not directly explain
+the reasons for corrections. Although methods that use Large Language Models
+(LLMs) to provide direct explanations in natural language have been proposed
+for various tasks, no such method exists for GEC. Generating explanations for
+GEC corrections involves aligning input and output tokens, identifying
+correction points, and presenting corresponding explanations consistently.
+However, it is not straightforward to specify a complex format to generate
+explanations, because explicit control of generation is difficult with prompts.
+This study introduces a method called controlled generation with Prompt
+Insertion (PI) so that LLMs can explain the reasons for corrections in natural
+language. In PI, LLMs first correct the input text, and then we automatically
+extract the correction points based on the rules. The extracted correction
+points are sequentially inserted into the LLM's explanation output as prompts,
+guiding the LLMs to generate explanations for the correction points. We also
+create an Explainable GEC (XGEC) dataset of correction reasons by annotating
+NUCLE, CoNLL2013, and CoNLL2014. Although generations from GPT-3 and ChatGPT
+using original prompts miss some correction points, the generation control
+using PI can explicitly guide to describe explanations for all correction
+points, contributing to improved performance in generating correction reasons.
+</p></li>
+</ul>
+
+<h3>Title: Chain-of-Verification Reduces Hallucination in Large Language Models. (arXiv:2309.11495v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11495">http://arxiv.org/abs/2309.11495</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11495]] Chain-of-Verification Reduces Hallucination in Large Language Models(http://arxiv.org/abs/2309.11495)</code></li>
+<li>Summary: <p>Generation of plausible yet incorrect factual information, termed
+hallucination, is an unsolved issue in large language models. We study the
+ability of language models to deliberate on the responses they give in order to
+correct their mistakes. We develop the Chain-of-Verification (CoVe) method
+whereby the model first (i) drafts an initial response; then (ii) plans
+verification questions to fact-check its draft; (iii) answers those questions
+independently so the answers are not biased by other responses; and (iv)
+generates its final verified response. In experiments, we show CoVe decreases
+hallucinations across a variety of tasks, from list-based questions from
+Wikidata, closed book MultiSpanQA and longform text generation.
+</p></li>
+</ul>
+
+<h2>segmentation</h2>
+<h3>Title: CMRxRecon: An open cardiac MRI dataset for the competition of accelerated image reconstruction. (arXiv:2309.10836v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10836">http://arxiv.org/abs/2309.10836</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10836]] CMRxRecon: An open cardiac MRI dataset for the competition of accelerated image reconstruction(http://arxiv.org/abs/2309.10836)</code></li>
+<li>Summary: <p>Cardiac magnetic resonance imaging (CMR) has emerged as a valuable diagnostic
+tool for cardiac diseases. However, a limitation of CMR is its slow imaging
+speed, which causes patient discomfort and introduces artifacts in the images.
+There has been growing interest in deep learning-based CMR imaging algorithms
+that can reconstruct high-quality images from highly under-sampled k-space
+data. However, the development of deep learning methods requires large training
+datasets, which have not been publicly available for CMR. To address this gap,
+we released a dataset that includes multi-contrast, multi-view, multi-slice and
+multi-coil CMR imaging data from 300 subjects. Imaging studies include cardiac
+cine and mapping sequences. Manual segmentations of the myocardium and chambers
+of all the subjects are also provided within the dataset. Scripts of
+state-of-the-art reconstruction algorithms were also provided as a point of
+reference. Our aim is to facilitate the advancement of state-of-the-art CMR
+image reconstruction by introducing standardized evaluation criteria and making
+the dataset freely accessible to the research community. Researchers can access
+the dataset at https://www.synapse.org/#!Synapse:syn51471091/wiki/.
+</p></li>
+</ul>
+
+<h3>Title: PLVS: A SLAM System with Points, Lines, Volumetric Mapping, and 3D Incremental Segmentation. (arXiv:2309.10896v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10896">http://arxiv.org/abs/2309.10896</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10896]] PLVS: A SLAM System with Points, Lines, Volumetric Mapping, and 3D Incremental Segmentation(http://arxiv.org/abs/2309.10896)</code></li>
+<li>Summary: <p>This document presents PLVS: a real-time system that leverages sparse SLAM,
+volumetric mapping, and 3D unsupervised incremental segmentation. PLVS stands
+for Points, Lines, Volumetric mapping, and Segmentation. It supports RGB-D and
+Stereo cameras, which may be optionally equipped with IMUs. The SLAM module is
+keyframe-based, and extracts and tracks sparse points and line segments as
+features. Volumetric mapping runs in parallel with respect to the SLAM
+front-end and generates a 3D reconstruction of the explored environment by
+fusing point clouds backprojected from keyframes. Different volumetric mapping
+methods are supported and integrated in PLVS. We use a novel reprojection error
+to bundle-adjust line segments. This error exploits available depth information
+to stabilize the position estimates of line segment endpoints. An incremental
+and geometric-based segmentation method is implemented and integrated for RGB-D
+cameras in the PLVS framework. We present qualitative and quantitative
+evaluations of the PLVS framework on some publicly available datasets. The
+appendix details the adopted stereo line triangulation method and provides a
+derivation of the Jacobians we used for line error terms. The software is
+available as open-source.
+</p></li>
+</ul>
+
+<h3>Title: A Geometric Flow Approach for Segmentation of Images with Inhomongeneous Intensity and Missing Boundaries. (arXiv:2309.10935v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.10935">http://arxiv.org/abs/2309.10935</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.10935]] A Geometric Flow Approach for Segmentation of Images with Inhomongeneous Intensity and Missing Boundaries(http://arxiv.org/abs/2309.10935)</code></li>
+<li>Summary: <p>Image segmentation is a complex mathematical problem, especially for images
+that contain intensity inhomogeneity and tightly packed objects with missing
+boundaries in between. For instance, Magnetic Resonance (MR) muscle images
+often contain both of these issues, making muscle segmentation especially
+difficult. In this paper we propose a novel intensity correction and a
+semi-automatic active contour based segmentation approach. The approach uses a
+geometric flow that incorporates a reproducing kernel Hilbert space (RKHS) edge
+detector and a geodesic distance penalty term from a set of markers and
+anti-markers. We test the proposed scheme on MR muscle segmentation and compare
+with some state of the art methods. To help deal with the intensity
+inhomogeneity in this particular kind of image, a new approach to estimate the
+bias field using a fat fraction image, called Prior Bias-Corrected Fuzzy
+C-means (PBCFCM), is introduced. Numerical experiments show that the proposed
+scheme leads to significantly better results than compared ones. The average
+dice values of the proposed method are 92.5%, 85.3%, 85.3% for quadriceps,
+hamstrings and other muscle groups while other approaches are at least 10%
+worse.
+</p></li>
+</ul>
+
+<h3>Title: Dense 2D-3D Indoor Prediction with Sound via Aligned Cross-Modal Distillation. (arXiv:2309.11081v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11081">http://arxiv.org/abs/2309.11081</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11081]] Dense 2D-3D Indoor Prediction with Sound via Aligned Cross-Modal Distillation(http://arxiv.org/abs/2309.11081)</code></li>
+<li>Summary: <p>Sound can convey significant information for spatial reasoning in our daily
+lives. To endow deep networks with such ability, we address the challenge of
+dense indoor prediction with sound in both 2D and 3D via cross-modal knowledge
+distillation. In this work, we propose a Spatial Alignment via Matching (SAM)
+distillation framework that elicits local correspondence between the two
+modalities in vision-to-audio knowledge transfer. SAM integrates audio features
+with visually coherent learnable spatial embeddings to resolve inconsistencies
+in multiple layers of a student model. Our approach does not rely on a specific
+input representation, allowing for flexibility in the input shapes or
+dimensions without performance degradation. With a newly curated benchmark
+named Dense Auditory Prediction of Surroundings (DAPS), we are the first to
+tackle dense indoor prediction of omnidirectional surroundings in both 2D and
+3D with audio observations. Specifically, for audio-based depth estimation,
+semantic segmentation, and challenging 3D scene reconstruction, the proposed
+distillation framework consistently achieves state-of-the-art performance
+across various metrics and backbone architectures.
+</p></li>
+</ul>
+
+<h3>Title: BroadBEV: Collaborative LiDAR-camera Fusion for Broad-sighted Bird's Eye View Map Construction. (arXiv:2309.11119v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11119">http://arxiv.org/abs/2309.11119</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11119]] BroadBEV: Collaborative LiDAR-camera Fusion for Broad-sighted Bird's Eye View Map Construction(http://arxiv.org/abs/2309.11119)</code></li>
+<li>Summary: <p>A recent sensor fusion in a Bird's Eye View (BEV) space has shown its utility
+in various tasks such as 3D detection, map segmentation, etc. However, the
+approach struggles with inaccurate camera BEV estimation, and a perception of
+distant areas due to the sparsity of LiDAR points. In this paper, we propose a
+broad BEV fusion (\textit{BroadBEV}) that addresses the problems with a spatial
+synchronization approach of cross-modality. Our strategy aims to enhance camera
+BEV estimation for a broad-sighted perception while simultaneously improving
+the completion of LiDAR's sparsity in the entire BEV space. Toward that end, we
+devise Point-scattering that scatters LiDAR BEV distribution to camera depth
+distribution. The method boosts the learning of depth estimation of the camera
+branch and induces accurate location of dense camera features in BEV space. For
+an effective BEV fusion between the spatially synchronized features, we suggest
+ColFusion that applies self-attention weights of LiDAR and camera BEV features
+to each other. Our extensive experiments demonstrate that BroadBEV provides a
+broad-sighted BEV perception with remarkable performance gains.
+</p></li>
+</ul>
+
+<h3>Title: GL-Fusion: Global-Local Fusion Network for Multi-view Echocardiogram Video Segmentation. (arXiv:2309.11144v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11144">http://arxiv.org/abs/2309.11144</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11144]] GL-Fusion: Global-Local Fusion Network for Multi-view Echocardiogram Video Segmentation(http://arxiv.org/abs/2309.11144)</code></li>
+<li>Summary: <p>Cardiac structure segmentation from echocardiogram videos plays a crucial
+role in diagnosing heart disease. The combination of multi-view echocardiogram
+data is essential to enhance the accuracy and robustness of automated methods.
+However, due to the visual disparity of the data, deriving cross-view context
+information remains a challenging task, and unsophisticated fusion strategies
+can even lower performance. In this study, we propose a novel Gobal-Local
+fusion (GL-Fusion) network to jointly utilize multi-view information globally
+and locally that improve the accuracy of echocardiogram analysis. Specifically,
+a Multi-view Global-based Fusion Module (MGFM) is proposed to extract global
+context information and to explore the cyclic relationship of different
+heartbeat cycles in an echocardiogram video. Additionally, a Multi-view
+Local-based Fusion Module (MLFM) is designed to extract correlations of cardiac
+structures from different views. Furthermore, we collect a multi-view
+echocardiogram video dataset (MvEVD) to evaluate our method. Our method
+achieves an 82.29% average dice score, which demonstrates a 7.83% improvement
+over the baseline method, and outperforms other existing state-of-the-art
+methods. To our knowledge, this is the first exploration of a multi-view method
+for echocardiogram video segmentation. Code available at:
+https://github.com/xmed-lab/GL-Fusion
+</p></li>
+</ul>
+
+<h3>Title: GraphEcho: Graph-Driven Unsupervised Domain Adaptation for Echocardiogram Video Segmentation. (arXiv:2309.11145v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11145">http://arxiv.org/abs/2309.11145</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11145]] GraphEcho: Graph-Driven Unsupervised Domain Adaptation for Echocardiogram Video Segmentation(http://arxiv.org/abs/2309.11145)</code></li>
+<li>Summary: <p>Echocardiogram video segmentation plays an important role in cardiac disease
+diagnosis. This paper studies the unsupervised domain adaption (UDA) for
+echocardiogram video segmentation, where the goal is to generalize the model
+trained on the source domain to other unlabelled target domains. Existing UDA
+segmentation methods are not suitable for this task because they do not model
+local information and the cyclical consistency of heartbeat. In this paper, we
+introduce a newly collected CardiacUDA dataset and a novel GraphEcho method for
+cardiac structure segmentation. Our GraphEcho comprises two innovative modules,
+the Spatial-wise Cross-domain Graph Matching (SCGM) and the Temporal Cycle
+Consistency (TCC) module, which utilize prior knowledge of echocardiogram
+videos, i.e., consistent cardiac structure across patients and centers and the
+heartbeat cyclical consistency, respectively. These two modules can better
+align global and local features from source and target domains, improving UDA
+segmentation results. Experimental results showed that our GraphEcho
+outperforms existing state-of-the-art UDA segmentation methods. Our collected
+dataset and code will be publicly released upon acceptance. This work will lay
+a new and solid cornerstone for cardiac structure segmentation from
+echocardiogram videos. Code and dataset are available at:
+https://github.com/xmed-lab/GraphEcho
+</p></li>
+</ul>
+
+<h3>Title: Multi-grained Temporal Prototype Learning for Few-shot Video Object Segmentation. (arXiv:2309.11160v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11160">http://arxiv.org/abs/2309.11160</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11160]] Multi-grained Temporal Prototype Learning for Few-shot Video Object Segmentation(http://arxiv.org/abs/2309.11160)</code></li>
+<li>Summary: <p>Few-Shot Video Object Segmentation (FSVOS) aims to segment objects in a query
+video with the same category defined by a few annotated support images.
+However, this task was seldom explored. In this work, based on IPMT, a
+state-of-the-art few-shot image segmentation method that combines external
+support guidance information with adaptive query guidance cues, we propose to
+leverage multi-grained temporal guidance information for handling the temporal
+correlation nature of video data. We decompose the query video information into
+a clip prototype and a memory prototype for capturing local and long-term
+internal temporal guidance, respectively. Frame prototypes are further used for
+each frame independently to handle fine-grained adaptive guidance and enable
+bidirectional clip-frame prototype communication. To reduce the influence of
+noisy memory, we propose to leverage the structural similarity relation among
+different predicted regions and the support for selecting reliable memory
+frames. Furthermore, a new segmentation loss is also proposed to enhance the
+category discriminability of the learned prototypes. Experimental results
+demonstrate that our proposed video IPMT model significantly outperforms
+previous models on two benchmark datasets. Code is available at
+https://github.com/nankepan/VIPMT.
+</p></li>
+</ul>
+
+<h3>Title: Partition-A-Medical-Image: Extracting Multiple Representative Sub-regions for Few-shot Medical Image Segmentation. (arXiv:2309.11172v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11172">http://arxiv.org/abs/2309.11172</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11172]] Partition-A-Medical-Image: Extracting Multiple Representative Sub-regions for Few-shot Medical Image Segmentation(http://arxiv.org/abs/2309.11172)</code></li>
+<li>Summary: <p>Few-shot Medical Image Segmentation (FSMIS) is a more promising solution for
+medical image segmentation tasks where high-quality annotations are naturally
+scarce. However, current mainstream methods primarily focus on extracting
+holistic representations from support images with large intra-class variations
+in appearance and background, and encounter difficulties in adapting to query
+images. In this work, we present an approach to extract multiple representative
+sub-regions from a given support medical image, enabling fine-grained selection
+over the generated image regions. Specifically, the foreground of the support
+image is decomposed into distinct regions, which are subsequently used to
+derive region-level representations via a designed Regional Prototypical
+Learning (RPL) module. We then introduce a novel Prototypical Representation
+Debiasing (PRD) module based on a two-way elimination mechanism which
+suppresses the disturbance of regional representations by a self-support,
+Multi-direction Self-debiasing (MS) block, and a support-query, Interactive
+Debiasing (ID) block. Finally, an Assembled Prediction (AP) module is devised
+to balance and integrate predictions of multiple prototypical representations
+learned using stacked PRD modules. Results obtained through extensive
+experiments on three publicly accessible medical imaging datasets demonstrate
+consistent improvements over the leading FSMIS methods. The source code is
+available at https://github.com/YazhouZhu19/PAMI.
+</p></li>
+</ul>
+
+<h3>Title: Generalized Few-Shot Point Cloud Segmentation Via Geometric Words. (arXiv:2309.11222v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11222">http://arxiv.org/abs/2309.11222</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11222]] Generalized Few-Shot Point Cloud Segmentation Via Geometric Words(http://arxiv.org/abs/2309.11222)</code></li>
+<li>Summary: <p>Existing fully-supervised point cloud segmentation methods suffer in the
+dynamic testing environment with emerging new classes. Few-shot point cloud
+segmentation algorithms address this problem by learning to adapt to new
+classes at the sacrifice of segmentation accuracy for the base classes, which
+severely impedes its practicality. This largely motivates us to present the
+first attempt at a more practical paradigm of generalized few-shot point cloud
+segmentation, which requires the model to generalize to new categories with
+only a few support point clouds and simultaneously retain the capability to
+segment base classes. We propose the geometric words to represent geometric
+components shared between the base and novel classes, and incorporate them into
+a novel geometric-aware semantic representation to facilitate better
+generalization to the new classes without forgetting the old ones. Moreover, we
+introduce geometric prototypes to guide the segmentation with geometric prior
+knowledge. Extensive experiments on S3DIS and ScanNet consistently illustrate
+the superior performance of our method over baseline methods. Our code is
+available at: https://github.com/Pixie8888/GFS-3DSeg_GWs.
+</p></li>
+</ul>
+
+<h3>Title: From Classification to Segmentation with Explainable AI: A Study on Crack Detection and Growth Monitoring. (arXiv:2309.11267v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11267">http://arxiv.org/abs/2309.11267</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11267]] From Classification to Segmentation with Explainable AI: A Study on Crack Detection and Growth Monitoring(http://arxiv.org/abs/2309.11267)</code></li>
+<li>Summary: <p>Monitoring surface cracks in infrastructure is crucial for structural health
+monitoring. Automatic visual inspection offers an effective solution,
+especially in hard-to-reach areas. Machine learning approaches have proven
+their effectiveness but typically require large annotated datasets for
+supervised training. Once a crack is detected, monitoring its severity often
+demands precise segmentation of the damage. However, pixel-level annotation of
+images for segmentation is labor-intensive. To mitigate this cost, one can
+leverage explainable artificial intelligence (XAI) to derive segmentations from
+the explanations of a classifier, requiring only weak image-level supervision.
+This paper proposes applying this methodology to segment and monitor surface
+cracks. We evaluate the performance of various XAI methods and examine how this
+approach facilitates severity quantification and growth monitoring. Results
+reveal that while the resulting segmentation masks may exhibit lower quality
+than those produced by supervised methods, they remain meaningful and enable
+severity monitoring, thus reducing substantial labeling costs.
+</p></li>
+</ul>
+
+<h3>Title: A Systematic Review of Few-Shot Learning in Medical Imaging. (arXiv:2309.11433v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11433">http://arxiv.org/abs/2309.11433</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11433]] A Systematic Review of Few-Shot Learning in Medical Imaging(http://arxiv.org/abs/2309.11433)</code></li>
+<li>Summary: <p>The lack of annotated medical images limits the performance of deep learning
+models, which usually need large-scale labelled datasets. Few-shot learning
+techniques can reduce data scarcity issues and enhance medical image analysis,
+especially with meta-learning. This systematic review gives a comprehensive
+overview of few-shot learning in medical imaging. We searched the literature
+systematically and selected 80 relevant articles published from 2018 to 2023.
+We clustered the articles based on medical outcomes, such as tumour
+segmentation, disease classification, and image registration; anatomical
+structure investigated (i.e. heart, lung, etc.); and the meta-learning method
+used. For each cluster, we examined the papers' distributions and the results
+provided by the state-of-the-art. In addition, we identified a generic pipeline
+shared among all the studies. The review shows that few-shot learning can
+overcome data scarcity in most outcomes and that meta-learning is a popular
+choice to perform few-shot learning because it can adapt to new tasks with few
+labelled samples. In addition, following meta-learning, supervised learning and
+semi-supervised learning stand out as the predominant techniques employed to
+tackle few-shot learning challenges in medical imaging and also best
+performing. Lastly, we observed that the primary application areas
+predominantly encompass cardiac, pulmonary, and abdominal domains. This
+systematic review aims to inspire further research to improve medical image
+analysis and patient care.
+</p></li>
+</ul>
+
+<h3>Title: Grounded Complex Task Segmentation for Conversational Assistants. (arXiv:2309.11271v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11271">http://arxiv.org/abs/2309.11271</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11271]] Grounded Complex Task Segmentation for Conversational Assistants(http://arxiv.org/abs/2309.11271)</code></li>
+<li>Summary: <p>Following complex instructions in conversational assistants can be quite
+daunting due to the shorter attention and memory spans when compared to reading
+the same instructions. Hence, when conversational assistants walk users through
+the steps of complex tasks, there is a need to structure the task into
+manageable pieces of information of the right length and complexity. In this
+paper, we tackle the recipes domain and convert reading structured instructions
+into conversational structured ones. We annotated the structure of instructions
+according to a conversational scenario, which provided insights into what is
+expected in this setting. To computationally model the conversational step's
+characteristics, we tested various Transformer-based architectures, showing
+that a token-based approach delivers the best results. A further user study
+showed that users tend to favor steps of manageable complexity and length, and
+that the proposed methodology can improve the original web-based instructional
+text. Specifically, 86% of the evaluated tasks were improved from a
+conversational suitability point of view.
+</p></li>
+</ul>
+
+<h3>Title: Long-Form End-to-End Speech Translation via Latent Alignment Segmentation. (arXiv:2309.11384v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.11384">http://arxiv.org/abs/2309.11384</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.11384]] Long-Form End-to-End Speech Translation via Latent Alignment Segmentation(http://arxiv.org/abs/2309.11384)</code></li>
+<li>Summary: <p>Current simultaneous speech translation models can process audio only up to a
+few seconds long. Contemporary datasets provide an oracle segmentation into
+sentences based on human-annotated transcripts and translations. However, the
+segmentation into sentences is not available in the real world. Current speech
+segmentation approaches either offer poor segmentation quality or have to trade
+latency for quality. In this paper, we propose a novel segmentation approach
+for a low-latency end-to-end speech translation. We leverage the existing
+speech translation encoder-decoder architecture with ST CTC and show that it
+can perform the segmentation task without supervision or additional parameters.
+To the best of our knowledge, our method is the first that allows an actual
+end-to-end simultaneous speech translation, as the same model is used for
+translation and segmentation at the same time. On a diverse set of language
+pairs and in- and out-of-domain data, we show that the proposed approach
+achieves state-of-the-art quality at no additional computational cost.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
