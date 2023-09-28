@@ -1,0 +1,972 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: DreamCom: Finetuning Text-guided Inpainting Model for Image Composition. (arXiv:2309.15508v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15508">http://arxiv.org/abs/2309.15508</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15508]] DreamCom: Finetuning Text-guided Inpainting Model for Image Composition(http://arxiv.org/abs/2309.15508)</code></li>
+<li>Summary: <p>The goal of image composition is merging a foreground object into a
+background image to obtain a realistic composite image. Recently, generative
+composition methods are built on large pretrained diffusion models, due to
+their unprecedented image generation ability. They train a model on abundant
+pairs of foregrounds and backgrounds, so that it can be directly applied to a
+new pair of foreground and background at test time. However, the generated
+results often lose the foreground details and exhibit noticeable artifacts. In
+this work, we propose an embarrassingly simple approach named DreamCom inspired
+by DreamBooth. Specifically, given a few reference images for a subject, we
+finetune text-guided inpainting diffusion model to associate this subject with
+a special token and inpaint this subject in the specified bounding box. We also
+construct a new dataset named MureCom well-tailored for this task.
+</p></li>
+</ul>
+
+<h3>Title: Uncertainty Quantification via Neural Posterior Principal Components. (arXiv:2309.15533v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15533">http://arxiv.org/abs/2309.15533</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15533]] Uncertainty Quantification via Neural Posterior Principal Components(http://arxiv.org/abs/2309.15533)</code></li>
+<li>Summary: <p>Uncertainty quantification is crucial for the deployment of image restoration
+models in safety-critical domains, like autonomous driving and biological
+imaging. To date, methods for uncertainty visualization have mainly focused on
+per-pixel estimates. However, a heatmap of per-pixel variances is typically of
+little practical use, as it does not capture the strong correlations between
+pixels. A more natural measure of uncertainty corresponds to the variances
+along the principal components (PCs) of the posterior distribution.
+Theoretically, the PCs can be computed by applying PCA on samples generated
+from a conditional generative model for the input image. However, this requires
+generating a very large number of samples at test time, which is painfully slow
+with the current state-of-the-art (diffusion) models. In this work, we present
+a method for predicting the PCs of the posterior distribution for any input
+image, in a single forward pass of a neural network. Our method can either wrap
+around a pre-trained model that was trained to minimize the mean square error
+(MSE), or can be trained from scratch to output both a predicted image and the
+posterior PCs. We showcase our method on multiple inverse problems in imaging,
+including denoising, inpainting, super-resolution, and biological
+image-to-image translation. Our method reliably conveys instance-adaptive
+uncertainty directions, achieving uncertainty quantification comparable with
+posterior samplers while being orders of magnitude faster. Examples are
+available at https://eliasnehme.github.io/NPPC/
+</p></li>
+</ul>
+
+<h3>Title: Dynamic Prompt Learning: Addressing Cross-Attention Leakage for Text-Based Image Editing. (arXiv:2309.15664v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15664">http://arxiv.org/abs/2309.15664</a></li>
+<li>Code URL: https://github.com/wangkai930418/DPL</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15664]] Dynamic Prompt Learning: Addressing Cross-Attention Leakage for Text-Based Image Editing(http://arxiv.org/abs/2309.15664)</code></li>
+<li>Summary: <p>Large-scale text-to-image generative models have been a ground-breaking
+development in generative AI, with diffusion models showing their astounding
+ability to synthesize convincing images following an input text prompt. The
+goal of image editing research is to give users control over the generated
+images by modifying the text prompt. Current image editing techniques are
+susceptible to unintended modifications of regions outside the targeted area,
+such as on the background or on distractor objects which have some semantic or
+visual relationship with the targeted object. According to our experimental
+findings, inaccurate cross-attention maps are at the root of this problem.
+Based on this observation, we propose Dynamic Prompt Learning (DPL) to force
+cross-attention maps to focus on correct noun words in the text prompt. By
+updating the dynamic tokens for nouns in the textual input with the proposed
+leakage repairment losses, we achieve fine-grained image editing over
+particular objects while preventing undesired changes to other image regions.
+Our method DPL, based on the publicly available Stable Diffusion, is
+extensively evaluated on a wide range of images, and consistently obtains
+superior results both quantitatively (CLIP score, Structure-Dist) and
+qualitatively (on user-evaluation). We show improved prompt editing results for
+Word-Swap, Prompt Refinement, and Attention Re-weighting, especially for
+complex multi-object scenes.
+</p></li>
+</ul>
+
+<h3>Title: Factorized Diffusion Architectures for Unsupervised Image Generation and Segmentation. (arXiv:2309.15726v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15726">http://arxiv.org/abs/2309.15726</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15726]] Factorized Diffusion Architectures for Unsupervised Image Generation and Segmentation(http://arxiv.org/abs/2309.15726)</code></li>
+<li>Summary: <p>We develop a neural network architecture which, trained in an unsupervised
+manner as a denoising diffusion model, simultaneously learns to both generate
+and segment images. Learning is driven entirely by the denoising diffusion
+objective, without any annotation or prior knowledge about regions during
+training. A computational bottleneck, built into the neural architecture,
+encourages the denoising network to partition an input into regions, denoise
+them in parallel, and combine the results. Our trained model generates both
+synthetic images and, by simple examination of its internal predicted
+partitions, a semantic segmentation of those images. Without any finetuning, we
+directly apply our unsupervised model to the downstream task of segmenting real
+images via noising and subsequently denoising them. Experiments demonstrate
+that our model achieves accurate unsupervised image segmentation and
+high-quality synthetic image generation across multiple datasets.
+</p></li>
+</ul>
+
+<h3>Title: Emu: Enhancing Image Generation Models Using Photogenic Needles in a Haystack. (arXiv:2309.15807v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15807">http://arxiv.org/abs/2309.15807</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15807]] Emu: Enhancing Image Generation Models Using Photogenic Needles in a Haystack(http://arxiv.org/abs/2309.15807)</code></li>
+<li>Summary: <p>Training text-to-image models with web scale image-text pairs enables the
+generation of a wide range of visual concepts from text. However, these
+pre-trained models often face challenges when it comes to generating highly
+aesthetic images. This creates the need for aesthetic alignment post
+pre-training. In this paper, we propose quality-tuning to effectively guide a
+pre-trained model to exclusively generate highly visually appealing images,
+while maintaining generality across visual concepts. Our key insight is that
+supervised fine-tuning with a set of surprisingly small but extremely visually
+appealing images can significantly improve the generation quality. We pre-train
+a latent diffusion model on $1.1$ billion image-text pairs and fine-tune it
+with only a few thousand carefully selected high-quality images. The resulting
+model, Emu, achieves a win rate of $82.9\%$ compared with its pre-trained only
+counterpart. Compared to the state-of-the-art SDXLv1.0, Emu is preferred
+$68.4\%$ and $71.3\%$ of the time on visual appeal on the standard PartiPrompts
+and our Open User Input benchmark based on the real-world usage of
+text-to-image models. In addition, we show that quality-tuning is a generic
+approach that is also effective for other architectures, including pixel
+diffusion and masked generative transformer models.
+</p></li>
+</ul>
+
+<h3>Title: Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation. (arXiv:2309.15818v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15818">http://arxiv.org/abs/2309.15818</a></li>
+<li>Code URL: https://github.com/showlab/show-1</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15818]] Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation(http://arxiv.org/abs/2309.15818)</code></li>
+<li>Summary: <p>Significant advancements have been achieved in the realm of large-scale
+pre-trained text-to-video Diffusion Models (VDMs). However, previous methods
+either rely solely on pixel-based VDMs, which come with high computational
+costs, or on latent-based VDMs, which often struggle with precise text-video
+alignment. In this paper, we are the first to propose a hybrid model, dubbed as
+Show-1, which marries pixel-based and latent-based VDMs for text-to-video
+generation. Our model first uses pixel-based VDMs to produce a low-resolution
+video of strong text-video correlation. After that, we propose a novel expert
+translation method that employs the latent-based VDMs to further upsample the
+low-resolution video to high resolution. Compared to latent VDMs, Show-1 can
+produce high-quality videos of precise text-video alignment; Compared to pixel
+VDMs, Show-1 is much more efficient (GPU memory usage during inference is 15G
+vs 72G). We also validate our model on standard video generation benchmarks.
+Our code and model weights are publicly available at
+\url{https://github.com/showlab/Show-1}.
+</p></li>
+</ul>
+
+<h3>Title: Exploiting the Signal-Leak Bias in Diffusion Models. (arXiv:2309.15842v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15842">http://arxiv.org/abs/2309.15842</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15842]] Exploiting the Signal-Leak Bias in Diffusion Models(http://arxiv.org/abs/2309.15842)</code></li>
+<li>Summary: <p>There is a bias in the inference pipeline of most diffusion models. This bias
+arises from a signal leak whose distribution deviates from the noise
+distribution, creating a discrepancy between training and inference processes.
+We demonstrate that this signal-leak bias is particularly significant when
+models are tuned to a specific style, causing sub-optimal style matching.
+Recent research tries to avoid the signal leakage during training. We instead
+show how we can exploit this signal-leak bias in existing diffusion models to
+allow more control over the generated images. This enables us to generate
+images with more varied brightness, and images that better match a desired
+style or color. By modeling the distribution of the signal leak in the spatial
+frequency and pixel domains, and including a signal leak in the initial latent,
+we generate images that better match expected results without any additional
+training.
+</p></li>
+</ul>
+
+<h3>Title: Learning Using Generated Privileged Information by Text-to-Image Diffusion Models. (arXiv:2309.15238v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15238">http://arxiv.org/abs/2309.15238</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15238]] Learning Using Generated Privileged Information by Text-to-Image Diffusion Models(http://arxiv.org/abs/2309.15238)</code></li>
+<li>Summary: <p>Learning Using Privileged Information is a particular type of knowledge
+distillation where the teacher model benefits from an additional data
+representation during training, called privileged information, improving the
+student model, which does not see the extra representation. However, privileged
+information is rarely available in practice. To this end, we propose a text
+classification framework that harnesses text-to-image diffusion models to
+generate artificial privileged information. The generated images and the
+original text samples are further used to train multimodal teacher models based
+on state-of-the-art transformer-based architectures. Finally, the knowledge
+from multimodal teachers is distilled into a text-based (unimodal) student.
+Hence, by employing a generative model to produce synthetic data as privileged
+information, we guide the training of the student model. Our framework, called
+Learning Using Generated Privileged Information (LUGPI), yields noticeable
+performance gains on four text classification data sets, demonstrating its
+potential in text classification without any additional cost during inference.
+</p></li>
+</ul>
+
+<h3>Title: PINF: Continuous Normalizing Flows for Physics-Constrained Deep Learning. (arXiv:2309.15139v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15139">http://arxiv.org/abs/2309.15139</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15139]] PINF: Continuous Normalizing Flows for Physics-Constrained Deep Learning(http://arxiv.org/abs/2309.15139)</code></li>
+<li>Summary: <p>The normalization constraint on probability density poses a significant
+challenge for solving the Fokker-Planck equation. Normalizing Flow, an
+invertible generative model leverages the change of variables formula to ensure
+probability density conservation and enable the learning of complex data
+distributions. In this paper, we introduce Physics-Informed Normalizing Flows
+(PINF), a novel extension of continuous normalizing flows, incorporating
+diffusion through the method of characteristics. Our method, which is mesh-free
+and causality-free, can efficiently solve high dimensional time-dependent and
+steady-state Fokker-Planck equations.
+</p></li>
+</ul>
+
+<h3>Title: Generative Residual Diffusion Modeling for Km-scale Atmospheric Downscaling. (arXiv:2309.15214v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15214">http://arxiv.org/abs/2309.15214</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15214]] Generative Residual Diffusion Modeling for Km-scale Atmospheric Downscaling(http://arxiv.org/abs/2309.15214)</code></li>
+<li>Summary: <p>The state of the art for physical hazard prediction from weather and climate
+requires expensive km-scale numerical simulations driven by coarser resolution
+global inputs. Here, a km-scale downscaling diffusion model is presented as a
+cost effective alternative. The model is trained from a regional
+high-resolution weather model over Taiwan, and conditioned on ERA5 reanalysis
+data. To address the downscaling uncertainties, large resolution ratios (25km
+to 2km), different physics involved at different scales and predict channels
+that are not in the input data, we employ a two-step approach
+(\textit{ResDiff}) where a (UNet) regression predicts the mean in the first
+step and a diffusion model predicts the residual in the second step.
+\textit{ResDiff} exhibits encouraging skill in bulk RMSE and CRPS scores. The
+predicted spectra and distributions from ResDiff faithfully recover important
+power law relationships regulating damaging wind and rain extremes. Case
+studies of coherent weather phenomena reveal appropriate multivariate
+relationships reminiscent of learnt physics. This includes the sharp wind and
+temperature variations that co-locate with intense rainfall in a cold front,
+and the extreme winds and rainfall bands that surround the eyewall of typhoons.
+Some evidence of simultaneous bias correction is found. A first attempt at
+downscaling directly from an operational global forecast model successfully
+retains many of these benefits. The implication is that a new era of fully
+end-to-end, global-to-regional machine learning weather prediction is likely
+near at hand.
+</p></li>
+</ul>
+
+<h3>Title: Maximum Diffusion Reinforcement Learning. (arXiv:2309.15293v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15293">http://arxiv.org/abs/2309.15293</a></li>
+<li>Code URL: https://github.com/murpheylab/maxdiffrl</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15293]] Maximum Diffusion Reinforcement Learning(http://arxiv.org/abs/2309.15293)</code></li>
+<li>Summary: <p>The assumption that data are independent and identically distributed
+underpins all machine learning. When data are collected sequentially from agent
+experiences this assumption does not generally hold, as in reinforcement
+learning. Here, we derive a method that overcomes these limitations by
+exploiting the statistical mechanics of ergodic processes, which we term
+maximum diffusion reinforcement learning. By decorrelating agent experiences,
+our approach provably enables agents to learn continually in single-shot
+deployments regardless of how they are initialized. Moreover, we prove our
+approach generalizes well-known maximum entropy techniques, and show that it
+robustly exceeds state-of-the-art performance across popular benchmarks. Our
+results at the nexus of physics, learning, and control pave the way towards
+more transparent and reliable decision-making in reinforcement learning agents,
+such as locomoting robots and self-driving cars.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: SEPT: Towards Efficient Scene Representation Learning for Motion Prediction. (arXiv:2309.15289v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15289">http://arxiv.org/abs/2309.15289</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15289]] SEPT: Towards Efficient Scene Representation Learning for Motion Prediction(http://arxiv.org/abs/2309.15289)</code></li>
+<li>Summary: <p>Motion prediction is crucial for autonomous vehicles to operate safely in
+complex traffic environments. Extracting effective spatiotemporal relationships
+among traffic elements is key to accurate forecasting. Inspired by the
+successful practice of pretrained large language models, this paper presents
+SEPT, a modeling framework that leverages self-supervised learning to develop
+powerful spatiotemporal understanding for complex traffic scenes. Specifically,
+our approach involves three masking-reconstruction modeling tasks on scene
+inputs including agents' trajectories and road network, pretraining the scene
+encoder to capture kinematics within trajectory, spatial structure of road
+network, and interactions among roads and agents. The pretrained encoder is
+then finetuned on the downstream forecasting task. Extensive experiments
+demonstrate that SEPT, without elaborate architectural design or manual feature
+engineering, achieves state-of-the-art performance on the Argoverse 1 and
+Argoverse 2 motion forecasting benchmarks, outperforming previous methods on
+all main metrics by a large margin.
+</p></li>
+</ul>
+
+<h3>Title: M$^{3}$3D: Learning 3D priors using Multi-Modal Masked Autoencoders for 2D image and video understanding. (arXiv:2309.15313v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15313">http://arxiv.org/abs/2309.15313</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15313]] M$^{3}$3D: Learning 3D priors using Multi-Modal Masked Autoencoders for 2D image and video understanding(http://arxiv.org/abs/2309.15313)</code></li>
+<li>Summary: <p>We present a new pre-training strategy called M$^{3}$3D
+($\underline{M}$ulti-$\underline{M}$odal $\underline{M}$asked $\underline{3D}$)
+built based on Multi-modal masked autoencoders that can leverage 3D priors and
+learned cross-modal representations in RGB-D data. We integrate two major
+self-supervised learning frameworks; Masked Image Modeling (MIM) and
+contrastive learning; aiming to effectively embed masked 3D priors and modality
+complementary features to enhance the correspondence between modalities. In
+contrast to recent approaches which are either focusing on specific downstream
+tasks or require multi-view correspondence, we show that our pre-training
+strategy is ubiquitous, enabling improved representation learning that can
+transfer into improved performance on various downstream tasks such as video
+action recognition, video action detection, 2D semantic segmentation and depth
+estimation. Experiments show that M$^{3}$3D outperforms the existing
+state-of-the-art approaches on ScanNet, NYUv2, UCF-101 and OR-AR, particularly
+with an improvement of +1.3\% mIoU against Mask3D on ScanNet semantic
+segmentation. We further evaluate our method on low-data regime and demonstrate
+its superior data efficiency compared to current state-of-the-art approaches.
+</p></li>
+</ul>
+
+<h3>Title: KDD-LOAM: Jointly Learned Keypoint Detector and Descriptors Assisted LiDAR Odometry and Mapping. (arXiv:2309.15394v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15394">http://arxiv.org/abs/2309.15394</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15394]] KDD-LOAM: Jointly Learned Keypoint Detector and Descriptors Assisted LiDAR Odometry and Mapping(http://arxiv.org/abs/2309.15394)</code></li>
+<li>Summary: <p>Sparse keypoint matching based on distinct 3D feature representations can
+improve the efficiency and robustness of point cloud registration. Existing
+learning-based 3D descriptors and keypoint detectors are either independent or
+loosely coupled, so they cannot fully adapt to each other. In this work, we
+propose a tightly coupled keypoint detector and descriptor (TCKDD) based on a
+multi-task fully convolutional network with a probabilistic detection loss. In
+particular, this self-supervised detection loss fully adapts the keypoint
+detector to any jointly learned descriptors and benefits the self-supervised
+learning of descriptors. Extensive experiments on both indoor and outdoor
+datasets show that our TCKDD achieves state-of-the-art performance in point
+cloud registration. Furthermore, we design a keypoint detector and
+descriptors-assisted LiDAR odometry and mapping framework (KDD-LOAM), whose
+real-time odometry relies on keypoint descriptor matching-based RANSAC. The
+sparse keypoints are further used for efficient scan-to-map registration and
+mapping. Experiments on KITTI dataset demonstrate that KDD-LOAM significantly
+surpasses LOAM and shows competitive performance in odometry.
+</p></li>
+</ul>
+
+<h3>Title: The Triad of Failure Modes and a Possible Way Out. (arXiv:2309.15420v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15420">http://arxiv.org/abs/2309.15420</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15420]] The Triad of Failure Modes and a Possible Way Out(http://arxiv.org/abs/2309.15420)</code></li>
+<li>Summary: <p>We present a novel objective function for cluster-based self-supervised
+learning (SSL) that is designed to circumvent the triad of failure modes,
+namely representation collapse, cluster collapse, and the problem of invariance
+to permutations of cluster assignments. This objective consists of three key
+components: (i) A generative term that penalizes representation collapse, (ii)
+a term that promotes invariance to data augmentations, thereby addressing the
+issue of label permutations and (ii) a uniformity term that penalizes cluster
+collapse. Additionally, our proposed objective possesses two notable
+advantages. Firstly, it can be interpreted from a Bayesian perspective as a
+lower bound on the data log-likelihood. Secondly, it enables the training of a
+standard backbone architecture without the need for asymmetric elements like
+stop gradients, momentum encoders, or specialized clustering layers. Due to its
+simplicity and theoretical foundation, our proposed objective is well-suited
+for optimization. Experiments on both toy and real world data demonstrate its
+effectiveness
+</p></li>
+</ul>
+
+<h3>Title: Confidence-based Visual Dispersal for Few-shot Unsupervised Domain Adaptation. (arXiv:2309.15575v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15575">http://arxiv.org/abs/2309.15575</a></li>
+<li>Code URL: https://github.com/bostoncake/c-visdit</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15575]] Confidence-based Visual Dispersal for Few-shot Unsupervised Domain Adaptation(http://arxiv.org/abs/2309.15575)</code></li>
+<li>Summary: <p>Unsupervised domain adaptation aims to transfer knowledge from a
+fully-labeled source domain to an unlabeled target domain. However, in
+real-world scenarios, providing abundant labeled data even in the source domain
+can be infeasible due to the difficulty and high expense of annotation. To
+address this issue, recent works consider the Few-shot Unsupervised Domain
+Adaptation (FUDA) where only a few source samples are labeled, and conduct
+knowledge transfer via self-supervised learning methods. Yet existing methods
+generally overlook that the sparse label setting hinders learning reliable
+source knowledge for transfer. Additionally, the learning difficulty difference
+in target samples is different but ignored, leaving hard target samples poorly
+classified. To tackle both deficiencies, in this paper, we propose a novel
+Confidence-based Visual Dispersal Transfer learning method (C-VisDiT) for FUDA.
+Specifically, C-VisDiT consists of a cross-domain visual dispersal strategy
+that transfers only high-confidence source knowledge for model adaptation and
+an intra-domain visual dispersal strategy that guides the learning of hard
+target samples with easy ones. We conduct extensive experiments on Office-31,
+Office-Home, VisDA-C, and DomainNet benchmark datasets and the results
+demonstrate that the proposed C-VisDiT significantly outperforms
+state-of-the-art FUDA methods. Our code is available at
+https://github.com/Bostoncake/C-VisDiT.
+</p></li>
+</ul>
+
+<h3>Title: SGRec3D: Self-Supervised 3D Scene Graph Learning via Object-Level Scene Reconstruction. (arXiv:2309.15702v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15702">http://arxiv.org/abs/2309.15702</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15702]] SGRec3D: Self-Supervised 3D Scene Graph Learning via Object-Level Scene Reconstruction(http://arxiv.org/abs/2309.15702)</code></li>
+<li>Summary: <p>In the field of 3D scene understanding, 3D scene graphs have emerged as a new
+scene representation that combines geometric and semantic information about
+objects and their relationships. However, learning semantic 3D scene graphs in
+a fully supervised manner is inherently difficult as it requires not only
+object-level annotations but also relationship labels. While pre-training
+approaches have helped to boost the performance of many methods in various
+fields, pre-training for 3D scene graph prediction has received little
+attention. Furthermore, we find in this paper that classical contrastive point
+cloud-based pre-training approaches are ineffective for 3D scene graph
+learning. To this end, we present SGRec3D, a novel self-supervised pre-training
+method for 3D scene graph prediction. We propose to reconstruct the 3D input
+scene from a graph bottleneck as a pretext task. Pre-training SGRec3D does not
+require object relationship labels, making it possible to exploit large-scale
+3D scene understanding datasets, which were off-limits for 3D scene graph
+learning before. Our experiments demonstrate that in contrast to recent point
+cloud-based pre-training approaches, our proposed pre-training improves the 3D
+scene graph prediction considerably, which results in SOTA performance,
+outperforming other 3D scene graph models by +10% on object prediction and +4%
+on relationship prediction. Additionally, we show that only using a small
+subset of 10% labeled data during fine-tuning is sufficient to outperform the
+same model without pre-training.
+</p></li>
+</ul>
+
+<h3>Title: STANCE-C3: Domain-adaptive Cross-target Stance Detection via Contrastive Learning and Counterfactual Generation. (arXiv:2309.15176v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15176">http://arxiv.org/abs/2309.15176</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15176]] STANCE-C3: Domain-adaptive Cross-target Stance Detection via Contrastive Learning and Counterfactual Generation(http://arxiv.org/abs/2309.15176)</code></li>
+<li>Summary: <p>Stance detection is the process of inferring a person's position or
+standpoint on a specific issue to deduce prevailing perceptions toward topics
+of general or controversial interest, such as health policies during the
+COVID-19 pandemic. Existing models for stance detection are trained to perform
+well for a single domain (e.g., COVID-19) and a specific target topic (e.g.,
+masking protocols), but are generally ineffectual in other domains or targets
+due to distributional shifts in the data. However, constructing
+high-performing, domain-specific stance detection models requires an extensive
+corpus of labeled data relevant to the targeted domain, yet such datasets are
+not readily available. This poses a challenge as the process of annotating data
+is costly and time-consuming. To address these challenges, we introduce a novel
+stance detection model coined domain-adaptive Cross-target STANCE detection via
+Contrastive learning and Counterfactual generation (STANCE-C3) that uses
+counterfactual data augmentation to enhance domain-adaptive training by
+enriching the target domain dataset during the training process and requiring
+significantly less information from the new domain. We also propose a modified
+self-supervised contrastive learning as a component of STANCE-C3 to prevent
+overfitting for the existing domain and target and enable cross-target stance
+detection. Through experiments on various datasets, we show that STANCE-C3
+shows performance improvement over existing state-of-the-art methods.
+</p></li>
+</ul>
+
+<h3>Title: joint prediction and denoising for large-scale multilingual self-supervised learning. (arXiv:2309.15317v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15317">http://arxiv.org/abs/2309.15317</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15317]] joint prediction and denoising for large-scale multilingual self-supervised learning(http://arxiv.org/abs/2309.15317)</code></li>
+<li>Summary: <p>Multilingual self-supervised learning (SSL) has often lagged behind
+state-of-the-art (SOTA) methods due to the expenses and complexity required to
+handle many languages. This further harms the reproducibility of SSL, which is
+already limited to few research groups due to its resource usage. We show that
+more powerful techniques can actually lead to more efficient pre-training,
+opening SSL to more research groups. We propose WavLabLM, which extends WavLM's
+joint prediction and denoising to 40k hours of data across 136 languages. To
+build WavLabLM, we devise a novel multi-stage pre-training method, designed to
+address the language imbalance of multilingual data. WavLabLM achieves
+comparable performance to XLS-R on ML-SUPERB with less than 10% of the training
+data, making SSL realizable with academic compute. We show that further
+efficiency can be achieved with a vanilla HuBERT Base model, which can maintain
+94% of XLS-R's performance with only 3% of the data, 4 GPUs, and limited
+trials. We open-source all code and models in ESPnet.
+</p></li>
+</ul>
+
+<h3>Title: Graph Neural Prompting with Large Language Models. (arXiv:2309.15427v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15427">http://arxiv.org/abs/2309.15427</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15427]] Graph Neural Prompting with Large Language Models(http://arxiv.org/abs/2309.15427)</code></li>
+<li>Summary: <p>Large Language Models (LLMs) have shown remarkable generalization capability
+with exceptional performance in various language modeling tasks. However, they
+still exhibit inherent limitations in precisely capturing and returning
+grounded knowledge. While existing work has explored utilizing knowledge graphs
+to enhance language modeling via joint training and customized model
+architectures, applying this to LLMs is problematic owing to their large number
+of parameters and high computational cost. In addition, how to leverage the
+pre-trained LLMs and avoid training a customized model from scratch remains an
+open question. In this work, we propose Graph Neural Prompting (GNP), a novel
+plug-and-play method to assist pre-trained LLMs in learning beneficial
+knowledge from KGs. GNP encompasses various designs, including a standard graph
+neural network encoder, a cross-modality pooling module, a domain projector,
+and a self-supervised link prediction objective. Extensive experiments on
+multiple datasets demonstrate the superiority of GNP on both commonsense and
+biomedical reasoning tasks across different LLM sizes and settings.
+</p></li>
+</ul>
+
+<h3>Title: Exploring Speech Recognition, Translation, and Understanding with Discrete Speech Units: A Comparative Study. (arXiv:2309.15800v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15800">http://arxiv.org/abs/2309.15800</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15800]] Exploring Speech Recognition, Translation, and Understanding with Discrete Speech Units: A Comparative Study(http://arxiv.org/abs/2309.15800)</code></li>
+<li>Summary: <p>Speech signals, typically sampled at rates in the tens of thousands per
+second, contain redundancies, evoking inefficiencies in sequence modeling.
+High-dimensional speech features such as spectrograms are often used as the
+input for the subsequent model. However, they can still be redundant. Recent
+investigations proposed the use of discrete speech units derived from
+self-supervised learning representations, which significantly compresses the
+size of speech data. Applying various methods, such as de-duplication and
+subword modeling, can further compress the speech sequence length. Hence,
+training time is significantly reduced while retaining notable performance. In
+this study, we undertake a comprehensive and systematic exploration into the
+application of discrete units within end-to-end speech processing models.
+Experiments on 12 automatic speech recognition, 3 speech translation, and 1
+spoken language understanding corpora demonstrate that discrete units achieve
+reasonably good results in almost all the settings. We intend to release our
+configurations and trained models to foster future research efforts.
+</p></li>
+</ul>
+
+<h3>Title: Scaling Representation Learning from Ubiquitous ECG with State-Space Models. (arXiv:2309.15292v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15292">http://arxiv.org/abs/2309.15292</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15292]] Scaling Representation Learning from Ubiquitous ECG with State-Space Models(http://arxiv.org/abs/2309.15292)</code></li>
+<li>Summary: <p>Ubiquitous sensing from wearable devices in the wild holds promise for
+enhancing human well-being, from diagnosing clinical conditions and measuring
+stress to building adaptive health promoting scaffolds. But the large volumes
+of data therein across heterogeneous contexts pose challenges for conventional
+supervised learning approaches. Representation Learning from biological signals
+is an emerging realm catalyzed by the recent advances in computational modeling
+and the abundance of publicly shared databases. The electrocardiogram (ECG) is
+the primary researched modality in this context, with applications in health
+monitoring, stress and affect estimation. Yet, most studies are limited by
+small-scale controlled data collection and over-parameterized architecture
+choices. We introduce \textbf{WildECG}, a pre-trained state-space model for
+representation learning from ECG signals. We train this model in a
+self-supervised manner with 275,000 10s ECG recordings collected in the wild
+and evaluate it on a range of downstream tasks. The proposed model is a robust
+backbone for ECG analysis, providing competitive performance on most of the
+tasks considered, while demonstrating efficacy in low-resource regimes. The
+code and pre-trained weights are shared publicly at
+https://github.com/klean2050/tiles_ecg_model.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Towards Foundation Models Learned from Anatomy in Medical Imaging via Self-Supervision. (arXiv:2309.15358v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15358">http://arxiv.org/abs/2309.15358</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15358]] Towards Foundation Models Learned from Anatomy in Medical Imaging via Self-Supervision(http://arxiv.org/abs/2309.15358)</code></li>
+<li>Summary: <p>Human anatomy is the foundation of medical imaging and boasts one striking
+characteristic: its hierarchy in nature, exhibiting two intrinsic properties:
+(1) locality: each anatomical structure is morphologically distinct from the
+others; and (2) compositionality: each anatomical structure is an integrated
+part of a larger whole. We envision a foundation model for medical imaging that
+is consciously and purposefully developed upon this foundation to gain the
+capability of "understanding" human anatomy and to possess the fundamental
+properties of medical imaging. As our first step in realizing this vision
+towards foundation models in medical imaging, we devise a novel self-supervised
+learning (SSL) strategy that exploits the hierarchical nature of human anatomy.
+Our extensive experiments demonstrate that the SSL pretrained model, derived
+from our training strategy, not only outperforms state-of-the-art (SOTA)
+fully/self-supervised baselines but also enhances annotation efficiency,
+offering potential few-shot segmentation capabilities with performance
+improvements ranging from 9% to 30% for segmentation tasks compared to SSL
+baselines. This performance is attributed to the significance of anatomy
+comprehension via our learning strategy, which encapsulates the intrinsic
+attributes of anatomical structures-locality and compositionality-within the
+embedding space, yet overlooked in existing SSL methods. All code and
+pretrained models are available at https://github.com/JLiangLab/Eden.
+</p></li>
+</ul>
+
+<h3>Title: Tackling VQA with Pretrained Foundation Models without Further Training. (arXiv:2309.15487v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15487">http://arxiv.org/abs/2309.15487</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15487]] Tackling VQA with Pretrained Foundation Models without Further Training(http://arxiv.org/abs/2309.15487)</code></li>
+<li>Summary: <p>Large language models (LLMs) have achieved state-of-the-art results in many
+natural language processing tasks. They have also demonstrated ability to adapt
+well to different tasks through zero-shot or few-shot settings. With the
+capability of these LLMs, researchers have looked into how to adopt them for
+use with Visual Question Answering (VQA). Many methods require further training
+to align the image and text embeddings. However, these methods are
+computationally expensive and requires large scale image-text dataset for
+training. In this paper, we explore a method of combining pretrained LLMs and
+other foundation models without further training to solve the VQA problem. The
+general idea is to use natural language to represent the images such that the
+LLM can understand the images. We explore different decoding strategies for
+generating textual representation of the image and evaluate their performance
+on the VQAv2 dataset.
+</p></li>
+</ul>
+
+<h3>Title: Learning from SAM: Harnessing a Segmentation Foundation Model for Sim2Real Domain Adaptation through Regularization. (arXiv:2309.15562v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15562">http://arxiv.org/abs/2309.15562</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15562]] Learning from SAM: Harnessing a Segmentation Foundation Model for Sim2Real Domain Adaptation through Regularization(http://arxiv.org/abs/2309.15562)</code></li>
+<li>Summary: <p>Domain adaptation is especially important for robotics applications, where
+target domain training data is usually scarce and annotations are costly to
+obtain. We present a method for self-supervised domain adaptation for the
+scenario where annotated source domain data (e.g. from synthetic generation) is
+available, but the target domain data is completely unannotated. Our method
+targets the semantic segmentation task and leverages a segmentation foundation
+model (Segment Anything Model) to obtain segment information on unannotated
+data. We take inspiration from recent advances in unsupervised local feature
+learning and propose an invariance-variance loss structure over the detected
+segments for regularizing feature representations in the target domain.
+Crucially, this loss structure and network architecture can handle overlapping
+segments and oversegmentation as produced by Segment Anything. We demonstrate
+the advantage of our method on the challenging YCB-Video and HomebrewedDB
+datasets and show that it outperforms prior work and, on YCB-Video, even a
+network trained with real annotations.
+</p></li>
+</ul>
+
+<h3>Title: Deep Model Fusion: A Survey. (arXiv:2309.15698v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15698">http://arxiv.org/abs/2309.15698</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15698]] Deep Model Fusion: A Survey(http://arxiv.org/abs/2309.15698)</code></li>
+<li>Summary: <p>Deep model fusion/merging is an emerging technique that merges the parameters
+or predictions of multiple deep learning models into a single one. It combines
+the abilities of different models to make up for the biases and errors of a
+single model to achieve better performance. However, deep model fusion on
+large-scale deep learning models (e.g., LLMs and foundation models) faces
+several challenges, including high computational cost, high-dimensional
+parameter space, interference between different heterogeneous models, etc.
+Although model fusion has attracted widespread attention due to its potential
+to solve complex real-world tasks, there is still a lack of complete and
+detailed survey research on this technique. Accordingly, in order to understand
+the model fusion method better and promote its development, we present a
+comprehensive survey to summarize the recent progress. Specifically, we
+categorize existing deep model fusion methods as four-fold: (1) "Mode
+connectivity", which connects the solutions in weight space via a path of
+non-increasing loss, in order to obtain better initialization for model fusion;
+(2) "Alignment" matches units between neural networks to create better
+conditions for fusion; (3) "Weight average", a classical model fusion method,
+averages the weights of multiple models to obtain more accurate results closer
+to the optimal solution; (4) "Ensemble learning" combines the outputs of
+diverse models, which is a foundational technique for improving the accuracy
+and robustness of the final model. In addition, we analyze the challenges faced
+by deep model fusion and propose possible research directions for model fusion
+in the future. Our review is helpful in deeply understanding the correlation
+between different model fusion methods and practical application methods, which
+can enlighten the research in the field of deep model fusion.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Subjective Face Transform using Human First Impressions. (arXiv:2309.15381v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15381">http://arxiv.org/abs/2309.15381</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15381]] Subjective Face Transform using Human First Impressions(http://arxiv.org/abs/2309.15381)</code></li>
+<li>Summary: <p>Humans tend to form quick subjective first impressions of non-physical
+attributes when seeing someone's face, such as perceived trustworthiness or
+attractiveness. To understand what variations in a face lead to different
+subjective impressions, this work uses generative models to find semantically
+meaningful edits to a face image that change perceived attributes. Unlike prior
+work that relied on statistical manipulation in feature space, our end-to-end
+framework considers trade-offs between preserving identity and changing
+perceptual attributes. It maps identity-preserving latent space directions to
+changes in attribute scores, enabling transformation of any input face along an
+attribute axis according to a target change. We train on real and synthetic
+faces, evaluate for in-domain and out-of-domain images using predictive models
+and human ratings, demonstrating the generalizability of our approach.
+Ultimately, such a framework can be used to understand and explain biases in
+subjective interpretation of faces that are not dependent on the identity.
+</p></li>
+</ul>
+
+<h3>Title: P2I-NET: Mapping Camera Pose to Image via Adversarial Learning for New View Synthesis in Real Indoor Environments. (arXiv:2309.15526v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15526">http://arxiv.org/abs/2309.15526</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15526]] P2I-NET: Mapping Camera Pose to Image via Adversarial Learning for New View Synthesis in Real Indoor Environments(http://arxiv.org/abs/2309.15526)</code></li>
+<li>Summary: <p>Given a new $6DoF$ camera pose in an indoor environment, we study the
+challenging problem of predicting the view from that pose based on a set of
+reference RGBD views. Existing explicit or implicit 3D geometry construction
+methods are computationally expensive while those based on learning have
+predominantly focused on isolated views of object categories with regular
+geometric structure. Differing from the traditional \textit{render-inpaint}
+approach to new view synthesis in the real indoor environment, we propose a
+conditional generative adversarial neural network (P2I-NET) to directly predict
+the new view from the given pose. P2I-NET learns the conditional distribution
+of the images of the environment for establishing the correspondence between
+the camera pose and its view of the environment, and achieves this through a
+number of innovative designs in its architecture and training lost function.
+Two auxiliary discriminator constraints are introduced for enforcing the
+consistency between the pose of the generated image and that of the
+corresponding real world image in both the latent feature space and the real
+world pose space. Additionally a deep convolutional neural network (CNN) is
+introduced to further reinforce this consistency in the pixel space. We have
+performed extensive new view synthesis experiments on real indoor datasets.
+Results show that P2I-NET has superior performance against a number of NeRF
+based strong baseline models. In particular, we show that P2I-NET is 40 to 100
+times faster than these competitor techniques while synthesising similar
+quality images. Furthermore, we contribute a new publicly available indoor
+environment dataset containing 22 high resolution RGBD videos where each frame
+also has accurate camera pose parameters.
+</p></li>
+</ul>
+
+<h3>Title: Guided Frequency Loss for Image Restoration. (arXiv:2309.15563v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15563">http://arxiv.org/abs/2309.15563</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15563]] Guided Frequency Loss for Image Restoration(http://arxiv.org/abs/2309.15563)</code></li>
+<li>Summary: <p>Image Restoration has seen remarkable progress in recent years. Many
+generative models have been adapted to tackle the known restoration cases of
+images. However, the interest in benefiting from the frequency domain is not
+well explored despite its major factor in these particular cases of image
+synthesis. In this study, we propose the Guided Frequency Loss (GFL), which
+helps the model to learn in a balanced way the image's frequency content
+alongside the spatial content. It aggregates three major components that work
+in parallel to enhance learning efficiency; a Charbonnier component, a
+Laplacian Pyramid component, and a Gradual Frequency component. We tested GFL
+on the Super Resolution and the Denoising tasks. We used three different
+datasets and three different architectures for each of them. We found that the
+GFL loss improved the PSNR metric in most implemented experiments. Also, it
+improved the training of the Super Resolution models in both SwinIR and SRGAN.
+In addition, the utility of the GFL loss increased better on constrained data
+due to the less stochasticity in the high frequencies' components among
+samples.
+</p></li>
+</ul>
+
+<h3>Title: A Unified View of Differentially Private Deep Generative Modeling. (arXiv:2309.15696v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15696">http://arxiv.org/abs/2309.15696</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15696]] A Unified View of Differentially Private Deep Generative Modeling(http://arxiv.org/abs/2309.15696)</code></li>
+<li>Summary: <p>The availability of rich and vast data sources has greatly advanced machine
+learning applications in various domains. However, data with privacy concerns
+comes with stringent regulations that frequently prohibited data access and
+data sharing. Overcoming these obstacles in compliance with privacy
+considerations is key for technological progress in many real-world application
+scenarios that involve privacy sensitive data. Differentially private (DP) data
+publishing provides a compelling solution, where only a sanitized form of the
+data is publicly released, enabling privacy-preserving downstream analysis and
+reproducible research in sensitive domains. In recent years, various approaches
+have been proposed for achieving privacy-preserving high-dimensional data
+generation by private training on top of deep neural networks. In this paper,
+we present a novel unified view that systematizes these approaches. Our view
+provides a joint design space for systematically deriving methods that cater to
+different use cases. We then discuss the strengths, limitations, and inherent
+correlations between different approaches, aiming to shed light on crucial
+aspects and inspire future research. We conclude by presenting potential paths
+forward for the field of DP data generation, with the aim of steering the
+community toward making the next important steps in advancing
+privacy-preserving learning.
+</p></li>
+</ul>
+
+<h3>Title: Generative Speech Recognition Error Correction with Large Language Models. (arXiv:2309.15649v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15649">http://arxiv.org/abs/2309.15649</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15649]] Generative Speech Recognition Error Correction with Large Language Models(http://arxiv.org/abs/2309.15649)</code></li>
+<li>Summary: <p>We explore the ability of large language models (LLMs) to act as ASR
+post-processors that perform rescoring and error correction. Our focus is on
+instruction prompting to let LLMs perform these task without fine-tuning, for
+which we evaluate different prompting schemes, both zero- and few-shot
+in-context learning, and a novel task-activating prompting (TAP) method that
+combines instruction and demonstration. Using a pre-trained first-pass system
+and rescoring output on two out-of-domain tasks (ATIS and WSJ), we show that
+rescoring only by in-context learning with frozen LLMs achieves results that
+are competitive with rescoring by domain-tuned LMs. By combining prompting
+techniques with fine-tuning we achieve error rates below the N-best oracle
+level, showcasing the generalization power of the LLMs.
+</p></li>
+</ul>
+
+<h3>Title: HyPoradise: An Open Baseline for Generative Speech Recognition with Large Language Models. (arXiv:2309.15701v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15701">http://arxiv.org/abs/2309.15701</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15701]] HyPoradise: An Open Baseline for Generative Speech Recognition with Large Language Models(http://arxiv.org/abs/2309.15701)</code></li>
+<li>Summary: <p>Advancements in deep neural networks have allowed automatic speech
+recognition (ASR) systems to attain human parity on several publicly available
+clean speech datasets. However, even state-of-the-art ASR systems experience
+performance degradation when confronted with adverse conditions, as a
+well-trained acoustic model is sensitive to variations in the speech domain,
+e.g., background noise. Intuitively, humans address this issue by relying on
+their linguistic knowledge: the meaning of ambiguous spoken terms is usually
+inferred from contextual cues thereby reducing the dependency on the auditory
+system. Inspired by this observation, we introduce the first open-source
+benchmark to utilize external large language models (LLMs) for ASR error
+correction, where N-best decoding hypotheses provide informative elements for
+true transcription prediction. This approach is a paradigm shift from the
+traditional language model rescoring strategy that can only select one
+candidate hypothesis as the output transcription. The proposed benchmark
+contains a novel dataset, HyPoradise (HP), encompassing more than 334,000 pairs
+of N-best hypotheses and corresponding accurate transcriptions across prevalent
+speech domains. Given this dataset, we examine three types of error correction
+techniques based on LLMs with varying amounts of labeled
+hypotheses-transcription pairs, which gains a significant word error rate (WER)
+reduction. Experimental evidence demonstrates the proposed technique achieves a
+breakthrough by surpassing the upper bound of traditional re-ranking based
+methods. More surprisingly, LLM with reasonable prompt and its generative
+capability can even correct those tokens that are missing in N-best list. We
+make our results publicly accessible for reproducible pipelines with released
+pre-trained models, thus providing a new evaluation paradigm for ASR error
+correction with LLMs.
+</p></li>
+</ul>
+
+<h3>Title: ChatGPT-BCI: Word-Level Neural State Classification Using GPT, EEG, and Eye-Tracking Biomarkers in Semantic Inference Reading Comprehension. (arXiv:2309.15714v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15714">http://arxiv.org/abs/2309.15714</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15714]] ChatGPT-BCI: Word-Level Neural State Classification Using GPT, EEG, and Eye-Tracking Biomarkers in Semantic Inference Reading Comprehension(http://arxiv.org/abs/2309.15714)</code></li>
+<li>Summary: <p>With the recent explosion of large language models (LLMs), such as Generative
+Pretrained Transformers (GPT), the need to understand the ability of humans and
+machines to comprehend semantic language meaning has entered a new phase. This
+requires interdisciplinary research that bridges the fields of cognitive
+science and natural language processing (NLP). This pilot study aims to provide
+insights into individuals' neural states during a semantic relation
+reading-comprehension task. We propose jointly analyzing LLMs, eye-gaze, and
+electroencephalographic (EEG) data to study how the brain processes words with
+varying degrees of relevance to a keyword during reading. We also use a feature
+engineering approach to improve the fixation-related EEG data classification
+while participants read words with high versus low relevance to the keyword.
+The best validation accuracy in this word-level classification is over 60\%
+across 12 subjects. Words of high relevance to the inference keyword had
+significantly more eye fixations per word: 1.0584 compared to 0.6576 when
+excluding no-fixation words, and 1.5126 compared to 1.4026 when including them.
+This study represents the first attempt to classify brain states at a word
+level using LLM knowledge. It provides valuable insights into human cognitive
+abilities and the realm of Artificial General Intelligence (AGI), and offers
+guidance for developing potential reading-assisted technologies.
+</p></li>
+</ul>
+
+<h3>Title: Disinformation Detection: An Evolving Challenge in the Age of LLMs. (arXiv:2309.15847v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15847">http://arxiv.org/abs/2309.15847</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15847]] Disinformation Detection: An Evolving Challenge in the Age of LLMs(http://arxiv.org/abs/2309.15847)</code></li>
+<li>Summary: <p>The advent of generative Large Language Models (LLMs) such as ChatGPT has
+catalyzed transformative advancements across multiple domains. However,
+alongside these advancements, they have also introduced potential threats. One
+critical concern is the misuse of LLMs by disinformation spreaders, leveraging
+these models to generate highly persuasive yet misleading content that
+challenges the disinformation detection system. This work aims to address this
+issue by answering three research questions: (1) To what extent can the current
+disinformation detection technique reliably detect LLM-generated
+disinformation? (2) If traditional techniques prove less effective, can LLMs
+themself be exploited to serve as a robust defense against advanced
+disinformation? and, (3) Should both these strategies falter, what novel
+approaches can be proposed to counter this burgeoning threat effectively? A
+holistic exploration for the formation and detection of disinformation is
+conducted to foster this line of research.
+</p></li>
+</ul>
+
+<h3>Title: Deep Generative Methods for Producing Forecast Trajectories in Power Systems. (arXiv:2309.15137v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15137">http://arxiv.org/abs/2309.15137</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15137]] Deep Generative Methods for Producing Forecast Trajectories in Power Systems(http://arxiv.org/abs/2309.15137)</code></li>
+<li>Summary: <p>With the expansion of renewables in the electricity mix, power grid
+variability will increase, hence a need to robustify the system to guarantee
+its security. Therefore, Transport System Operators (TSOs) must conduct
+analyses to simulate the future functioning of power systems. Then, these
+simulations are used as inputs in decision-making processes. In this context,
+we investigate using deep learning models to generate energy production and
+load forecast trajectories. To capture the spatiotemporal correlations in these
+multivariate time series, we adapt autoregressive networks and normalizing
+flows, demonstrating their effectiveness against the current copula-based
+statistical approach. We conduct extensive experiments on the French TSO RTE
+wind forecast data and compare the different models with \textit{ad hoc}
+evaluation metrics for time series generation.
+</p></li>
+</ul>
+
+<h3>Title: Deep Learning in Deterministic Computational Mechanics. (arXiv:2309.15421v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15421">http://arxiv.org/abs/2309.15421</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15421]] Deep Learning in Deterministic Computational Mechanics(http://arxiv.org/abs/2309.15421)</code></li>
+<li>Summary: <p>The rapid growth of deep learning research, including within the field of
+computational mechanics, has resulted in an extensive and diverse body of
+literature. To help researchers identify key concepts and promising
+methodologies within this field, we provide an overview of deep learning in
+deterministic computational mechanics. Five main categories are identified and
+explored: simulation substitution, simulation enhancement, discretizations as
+neural networks, generative approaches, and deep reinforcement learning. This
+review focuses on deep learning methods rather than applications for
+computational mechanics, thereby enabling researchers to explore this field
+more effectively. As such, the review is not necessarily aimed at researchers
+with extensive knowledge of deep learning -- instead, the primary audience is
+researchers at the verge of entering this field or those who attempt to gain an
+overview of deep learning in computational mechanics. The discussed concepts
+are, therefore, explained as simple as possible.
+</p></li>
+</ul>
+
+<h3>Title: SANGEA: Scalable and Attributed Network Generation. (arXiv:2309.15648v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15648">http://arxiv.org/abs/2309.15648</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15648]] SANGEA: Scalable and Attributed Network Generation(http://arxiv.org/abs/2309.15648)</code></li>
+<li>Summary: <p>The topic of synthetic graph generators (SGGs) has recently received much
+attention due to the wave of the latest breakthroughs in generative modelling.
+However, many state-of-the-art SGGs do not scale well with the graph size.
+Indeed, in the generation process, all the possible edges for a fixed number of
+nodes must often be considered, which scales in $\mathcal{O}(N^2)$, with $N$
+being the number of nodes in the graph. For this reason, many state-of-the-art
+SGGs are not applicable to large graphs. In this paper, we present SANGEA, a
+sizeable synthetic graph generation framework which extends the applicability
+of any SGG to large graphs. By first splitting the large graph into
+communities, SANGEA trains one SGG per community, then links the community
+graphs back together to create a synthetic large graph. Our experiments show
+that the graphs generated by SANGEA have high similarity to the original graph,
+in terms of both topology and node feature distribution. Additionally, these
+generated graphs achieve high utility on downstream tasks such as link
+prediction. Finally, we provide a privacy assessment of the generated graphs to
+show that, even though they have excellent utility, they also achieve
+reasonable privacy scores.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Human Kinematics-inspired Skeleton-based Video Anomaly Detection. (arXiv:2309.15662v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15662">http://arxiv.org/abs/2309.15662</a></li>
+<li>Code URL: https://github.com/XiaoJian923/Kinematics-VAD</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15662]] Human Kinematics-inspired Skeleton-based Video Anomaly Detection(http://arxiv.org/abs/2309.15662)</code></li>
+<li>Summary: <p>Previous approaches to detecting human anomalies in videos have typically
+relied on implicit modeling by directly applying the model to video or skeleton
+data, potentially resulting in inaccurate modeling of motion information. In
+this paper, we conduct an exploratory study and introduce a new idea called
+HKVAD (Human Kinematic-inspired Video Anomaly Detection) for video anomaly
+detection, which involves the explicit use of human kinematic features to
+detect anomalies. To validate the effectiveness and potential of this
+perspective, we propose a pilot method that leverages the kinematic features of
+the skeleton pose, with a specific focus on the walking stride, skeleton
+displacement at feet level, and neck level. Following this, the method employs
+a normalizing flow model to estimate density and detect anomalies based on the
+estimated density. Based on the number of kinematic features used, we have
+devised three straightforward variant methods and conducted experiments on two
+highly challenging public datasets, ShanghaiTech and UBnormal. Our method
+achieves good results with minimal computational resources, validating its
+effectiveness and potential.
+</p></li>
+</ul>
+
+<h3>Title: ADGym: Design Choices for Deep Anomaly Detection. (arXiv:2309.15376v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2309.15376">http://arxiv.org/abs/2309.15376</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2309.15376]] ADGym: Design Choices for Deep Anomaly Detection(http://arxiv.org/abs/2309.15376)</code></li>
+<li>Summary: <p>Deep learning (DL) techniques have recently been applied to anomaly detection
+(AD), yielding successful outcomes in areas such as finance, medical services,
+and cloud computing. However, much of the current research evaluates a deep AD
+algorithm holistically, failing to understand the contributions of individual
+design choices like loss functions and network architectures. Consequently, the
+importance of prerequisite steps, such as preprocessing, might be overshadowed
+by the spotlight on novel loss functions and architectures. In this paper, we
+address these oversights by posing two questions: (i) Which components (i.e.,
+design choices) of deep AD methods are pivotal in detecting anomalies? (ii) How
+can we construct tailored AD algorithms for specific datasets by selecting the
+best design choices automatically, rather than relying on generic, pre-existing
+solutions? To this end, we introduce ADGym, the first platform designed for
+comprehensive evaluation and automatic selection of AD design elements in deep
+methods. Extensive experiments reveal that merely adopting existing leading
+methods is not ideal. Models crafted using ADGym markedly surpass current
+state-of-the-art techniques.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
