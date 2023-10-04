@@ -1,0 +1,933 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Direct Inversion: Boosting Diffusion-based Editing with 3 Lines of Code. (arXiv:2310.01506v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01506">http://arxiv.org/abs/2310.01506</a></li>
+<li>Code URL: https://github.com/cure-lab/directinversion</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01506]] Direct Inversion: Boosting Diffusion-based Editing with 3 Lines of Code(http://arxiv.org/abs/2310.01506)</code></li>
+<li>Summary: <p>Text-guided diffusion models have revolutionized image generation and
+editing, offering exceptional realism and diversity. Specifically, in the
+context of diffusion-based editing, where a source image is edited according to
+a target prompt, the process commences by acquiring a noisy latent vector
+corresponding to the source image via the diffusion model. This vector is
+subsequently fed into separate source and target diffusion branches for
+editing. The accuracy of this inversion process significantly impacts the final
+editing outcome, influencing both essential content preservation of the source
+image and edit fidelity according to the target prompt. Prior inversion
+techniques aimed at finding a unified solution in both the source and target
+diffusion branches. However, our theoretical and empirical analyses reveal that
+disentangling these branches leads to a distinct separation of responsibilities
+for preserving essential content and ensuring edit fidelity. Building on this
+insight, we introduce "Direct Inversion," a novel technique achieving optimal
+performance of both branches with just three lines of code. To assess image
+editing performance, we present PIE-Bench, an editing benchmark with 700 images
+showcasing diverse scenes and editing types, accompanied by versatile
+annotations and comprehensive evaluation metrics. Compared to state-of-the-art
+optimization-based inversion techniques, our solution not only yields superior
+performance across 8 editing methods but also achieves nearly an order of
+speed-up.
+</p></li>
+</ul>
+
+<h3>Title: SYRAC: Synthesize, Rank, and Count. (arXiv:2310.01662v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01662">http://arxiv.org/abs/2310.01662</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01662]] SYRAC: Synthesize, Rank, and Count(http://arxiv.org/abs/2310.01662)</code></li>
+<li>Summary: <p>Crowd counting is a critical task in computer vision, with several important
+applications. However, existing counting methods rely on labor-intensive
+density map annotations, necessitating the manual localization of each
+individual pedestrian. While recent efforts have attempted to alleviate the
+annotation burden through weakly or semi-supervised learning, these approaches
+fall short of significantly reducing the workload. We propose a novel approach
+to eliminate the annotation burden by leveraging latent diffusion models to
+generate synthetic data. However, these models struggle to reliably understand
+object quantities, leading to noisy annotations when prompted to produce images
+with a specific quantity of objects. To address this, we use latent diffusion
+models to create two types of synthetic data: one by removing pedestrians from
+real images, which generates ranked image pairs with a weak but reliable object
+quantity signal, and the other by generating synthetic images with a
+predetermined number of objects, offering a strong but noisy counting signal.
+Our method utilizes the ranking image pairs for pre-training and then fits a
+linear layer to the noisy synthetic images using these crowd quantity features.
+We report state-of-the-art results for unsupervised crowd counting.
+</p></li>
+</ul>
+
+<h3>Title: Transcending Domains through Text-to-Image Diffusion: A Source-Free Approach to Domain Adaptation. (arXiv:2310.01701v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01701">http://arxiv.org/abs/2310.01701</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01701]] Transcending Domains through Text-to-Image Diffusion: A Source-Free Approach to Domain Adaptation(http://arxiv.org/abs/2310.01701)</code></li>
+<li>Summary: <p>Domain Adaptation (DA) is a method for enhancing a model's performance on a
+target domain with inadequate annotated data by applying the information the
+model has acquired from a related source domain with sufficient labeled data.
+The escalating enforcement of data-privacy regulations like HIPAA, COPPA,
+FERPA, etc. have sparked a heightened interest in adapting models to novel
+domains while circumventing the need for direct access to the source data, a
+problem known as Source-Free Domain Adaptation (SFDA). In this paper, we
+propose a novel framework for SFDA that generates source data using a
+text-to-image diffusion model trained on the target domain samples. Our method
+starts by training a text-to-image diffusion model on the labeled target domain
+samples, which is then fine-tuned using the pre-trained source model to
+generate samples close to the source data. Finally, we use Domain Adaptation
+techniques to align the artificially generated source data with the target
+domain data, resulting in significant performance improvements of the model on
+the target domain. Through extensive comparison against several baselines on
+the standard Office-31, Office-Home, and VisDA benchmarks, we demonstrate the
+effectiveness of our approach for the SFDA task.
+</p></li>
+</ul>
+
+<h3>Title: Amazing Combinatorial Creation: Acceptable Swap-Sampling for Text-to-Image Generation. (arXiv:2310.01819v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01819">http://arxiv.org/abs/2310.01819</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01819]] Amazing Combinatorial Creation: Acceptable Swap-Sampling for Text-to-Image Generation(http://arxiv.org/abs/2310.01819)</code></li>
+<li>Summary: <p>Exploring a machine learning system to generate meaningful combinatorial
+object images from multiple textual descriptions, emulating human creativity,
+is a significant challenge as humans are able to construct amazing
+combinatorial objects, but machines strive to emulate data distribution. In
+this paper, we develop a straightforward yet highly effective technique called
+acceptable swap-sampling to generate a combinatorial object image that exhibits
+novelty and surprise, utilizing text concepts of different objects. Initially,
+we propose a swapping mechanism that constructs a novel embedding by exchanging
+column vectors of two text embeddings for generating a new combinatorial image
+through a cutting-edge diffusion model. Furthermore, we design an acceptable
+region by managing suitable CLIP distances between the new image and the
+original concept generations, increasing the likelihood of accepting the new
+image with a high-quality combination. This region allows us to efficiently
+sample a small subset from a new image pool generated by using randomly
+exchanging column vectors. Lastly, we employ a segmentation method to compare
+CLIP distances among the segmented components, ultimately selecting the most
+promising object image from the sampled subset. Our experiments focus on text
+pairs of objects from ImageNet, and our results demonstrate that our approach
+outperforms recent methods such as Stable-Diffusion2, DALLE2, ERNIE-ViLG2 and
+Bing in generating novel and surprising object images, even when the associated
+concepts appear to be implausible, such as lionfish-abacus. Furthermore, during
+the sampling process, our approach without training and human preference is
+also comparable to PickScore and HPSv2 trained using human preference datasets.
+</p></li>
+</ul>
+
+<h3>Title: Global Attractor for a Reaction-Diffusion Model Arising in Biological Dynamic in 3D Soil Structure. (arXiv:2310.02060v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.02060">http://arxiv.org/abs/2310.02060</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.02060]] Global Attractor for a Reaction-Diffusion Model Arising in Biological Dynamic in 3D Soil Structure(http://arxiv.org/abs/2310.02060)</code></li>
+<li>Summary: <p>Partial Differential Equations (PDEs) play a crucial role as tools for
+modeling and comprehending intricate natural processes, notably within the
+domain of biology. This research explores the domain of microbial activity
+within the complex matrix of 3D soil structures, providing valuable
+understanding into both the existence and uniqueness of solutions and the
+asymptotic behavior of the corresponding PDE model. Our investigation results
+in the discovery of a global attractor, a fundamental feature with significant
+implications for long-term system behavior. To enhance the clarity of our
+findings, numerical simulations are employed to visually illustrate the
+attributes of this global attractor.
+</p></li>
+</ul>
+
+<h3>Title: Navigating Cultural Chasms: Exploring and Unlocking the Cultural POV of Text-To-Image Models. (arXiv:2310.01929v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01929">http://arxiv.org/abs/2310.01929</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01929]] Navigating Cultural Chasms: Exploring and Unlocking the Cultural POV of Text-To-Image Models(http://arxiv.org/abs/2310.01929)</code></li>
+<li>Summary: <p>Text-To-Image (TTI) models, exemplified by DALL-E and StableDiffusion, have
+recently gained prominence for their remarkable zero-shot capabilities in
+generating images guided by textual prompts. Language, as a conduit of culture,
+plays a pivotal role in these models' multilingual capabilities, which in turn
+shape their cultural agency. In this study, we explore the cultural perception
+embedded in TTI models by characterizing culture across three hierarchical
+tiers: cultural dimensions, cultural domains, and cultural concepts. We propose
+a comprehensive suite of evaluation techniques, including intrinsic evaluations
+using the CLIP space, extrinsic evaluations with a Visual-Question-Answer (VQA)
+model, and human assessments, to discern TTI cultural perceptions. To
+facilitate our research, we introduce the CulText2I dataset, derived from four
+diverse TTI models and spanning ten languages. Our experiments reveal insights
+into these models' cultural awareness, cultural distinctions, and the unlocking
+of cultural features, releasing the potential for cross-cultural applications.
+</p></li>
+</ul>
+
+<h3>Title: Operator Learning Meets Numerical Analysis: Improving Neural Networks through Iterative Methods. (arXiv:2310.01618v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01618">http://arxiv.org/abs/2310.01618</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01618]] Operator Learning Meets Numerical Analysis: Improving Neural Networks through Iterative Methods(http://arxiv.org/abs/2310.01618)</code></li>
+<li>Summary: <p>Deep neural networks, despite their success in numerous applications, often
+function without established theoretical foundations. In this paper, we bridge
+this gap by drawing parallels between deep learning and classical numerical
+analysis. By framing neural networks as operators with fixed points
+representing desired solutions, we develop a theoretical framework grounded in
+iterative methods for operator equations. Under defined conditions, we present
+convergence proofs based on fixed point theory. We demonstrate that popular
+architectures, such as diffusion models and AlphaFold, inherently employ
+iterative operator learning. Empirical assessments highlight that performing
+iterations through network operators improves performance. We also introduce an
+iterative graph neural network, PIGN, that further demonstrates benefits of
+iterations. Our work aims to enhance the understanding of deep learning by
+merging insights from numerical analysis, potentially guiding the design of
+future networks with clearer theoretical underpinnings and improved
+performance.
+</p></li>
+</ul>
+
+<h3>Title: Sampling Multimodal Distributions with the Vanilla Score: Benefits of Data-Based Initialization. (arXiv:2310.01762v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01762">http://arxiv.org/abs/2310.01762</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01762]] Sampling Multimodal Distributions with the Vanilla Score: Benefits of Data-Based Initialization(http://arxiv.org/abs/2310.01762)</code></li>
+<li>Summary: <p>There is a long history, as well as a recent explosion of interest, in
+statistical and generative modeling approaches based on score functions --
+derivatives of the log-likelihood of a distribution. In seminal works,
+Hyv\"arinen proposed vanilla score matching as a way to learn distributions
+from data by computing an estimate of the score function of the underlying
+ground truth, and established connections between this method and established
+techniques like Contrastive Divergence and Pseudolikelihood estimation. It is
+by now well-known that vanilla score matching has significant difficulties
+learning multimodal distributions. Although there are various ways to overcome
+this difficulty, the following question has remained unanswered -- is there a
+natural way to sample multimodal distributions using just the vanilla score?
+Inspired by a long line of related experimental works, we prove that the
+Langevin diffusion with early stopping, initialized at the empirical
+distribution, and run on a score function estimated from data successfully
+generates natural multimodal distributions (mixtures of log-concave
+distributions).
+</p></li>
+</ul>
+
+<h3>Title: Spectral operator learning for parametric PDEs without data reliance. (arXiv:2310.02013v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.02013">http://arxiv.org/abs/2310.02013</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.02013]] Spectral operator learning for parametric PDEs without data reliance(http://arxiv.org/abs/2310.02013)</code></li>
+<li>Summary: <p>In this paper, we introduce the Spectral Coefficient Learning via Operator
+Network (SCLON), a novel operator learning-based approach for solving
+parametric partial differential equations (PDEs) without the need for data
+harnessing. The cornerstone of our method is the spectral methodology that
+employs expansions using orthogonal functions, such as Fourier series and
+Legendre polynomials, enabling accurate PDE solutions with fewer grid points.
+By merging the merits of spectral methods - encompassing high accuracy,
+efficiency, generalization, and the exact fulfillment of boundary conditions -
+with the prowess of deep neural networks, SCLON offers a transformative
+strategy. Our approach not only eliminates the need for paired input-output
+training data, which typically requires extensive numerical computations, but
+also effectively learns and predicts solutions of complex parametric PDEs,
+ranging from singularly perturbed convection-diffusion equations to the
+Navier-Stokes equations. The proposed framework demonstrates superior
+performance compared to existing scientific machine learning techniques,
+offering solutions for multiple instances of parametric PDEs without harnessing
+data. The mathematical framework is robust and reliable, with a well-developed
+loss function derived from the weak formulation, ensuring accurate
+approximation of solutions while exactly satisfying boundary conditions. The
+method's efficacy is further illustrated through its ability to accurately
+predict intricate natural behaviors like the Kolmogorov flow and boundary
+layers. In essence, our work pioneers a compelling avenue for parametric PDE
+solutions, serving as a bridge between traditional numerical methodologies and
+cutting-edge machine learning techniques in the realm of scientific
+computation.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Task-guided Domain Gap Reduction for Monocular Depth Prediction in Endoscopy. (arXiv:2310.01663v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01663">http://arxiv.org/abs/2310.01663</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01663]] Task-guided Domain Gap Reduction for Monocular Depth Prediction in Endoscopy(http://arxiv.org/abs/2310.01663)</code></li>
+<li>Summary: <p>Colorectal cancer remains one of the deadliest cancers in the world. In
+recent years computer-aided methods have aimed to enhance cancer screening and
+improve the quality and availability of colonoscopies by automatizing
+sub-tasks. One such task is predicting depth from monocular video frames, which
+can assist endoscopic navigation. As ground truth depth from standard in-vivo
+colonoscopy remains unobtainable due to hardware constraints, two approaches
+have aimed to circumvent the need for real training data: supervised methods
+trained on labeled synthetic data and self-supervised models trained on
+unlabeled real data. However, self-supervised methods depend on unreliable loss
+functions that struggle with edges, self-occlusion, and lighting inconsistency.
+Methods trained on synthetic data can provide accurate depth for synthetic
+geometries but do not use any geometric supervisory signal from real data and
+overfit to synthetic anatomies and properties. This work proposes a novel
+approach to leverage labeled synthetic and unlabeled real data. While previous
+domain adaptation methods indiscriminately enforce the distributions of both
+input data modalities to coincide, we focus on the end task, depth prediction,
+and translate only essential information between the input domains. Our
+approach results in more resilient and accurate depth maps of real colonoscopy
+sequences.
+</p></li>
+</ul>
+
+<h3>Title: Keypoint-Augmented Self-Supervised Learning for Medical Image Segmentation with Limited Annotation. (arXiv:2310.01680v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01680">http://arxiv.org/abs/2310.01680</a></li>
+<li>Code URL: https://github.com/zshyang/kaf</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01680]] Keypoint-Augmented Self-Supervised Learning for Medical Image Segmentation with Limited Annotation(http://arxiv.org/abs/2310.01680)</code></li>
+<li>Summary: <p>Pretraining CNN models (i.e., UNet) through self-supervision has become a
+powerful approach to facilitate medical image segmentation under low annotation
+regimes. Recent contrastive learning methods encourage similar global
+representations when the same image undergoes different transformations, or
+enforce invariance across different image/patch features that are intrinsically
+correlated. However, CNN-extracted global and local features are limited in
+capturing long-range spatial dependencies that are essential in biological
+anatomy. To this end, we present a keypoint-augmented fusion layer that
+extracts representations preserving both short- and long-range self-attention.
+In particular, we augment the CNN feature map at multiple scales by
+incorporating an additional input that learns long-range spatial self-attention
+among localized keypoint features. Further, we introduce both global and local
+self-supervised pretraining for the framework. At the global scale, we obtain
+global representations from both the bottleneck of the UNet, and by aggregating
+multiscale keypoint features. These global features are subsequently
+regularized through image-level contrastive objectives. At the local scale, we
+define a distance-based criterion to first establish correspondences among
+keypoints and encourage similarity between their features. Through extensive
+experiments on both MRI and CT segmentation tasks, we demonstrate the
+architectural advantages of our proposed method in comparison to both CNN and
+Transformer-based UNets, when all architectures are trained with randomly
+initialized weights. With our proposed pretraining strategy, our method further
+outperforms existing SSL methods by producing more robust self-attention and
+achieving state-of-the-art segmentation results. The code is available at
+https://github.com/zshyang/kaf.git.
+</p></li>
+</ul>
+
+<h3>Title: MIMO-NeRF: Fast Neural Rendering with Multi-input Multi-output Neural Radiance Fields. (arXiv:2310.01821v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01821">http://arxiv.org/abs/2310.01821</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01821]] MIMO-NeRF: Fast Neural Rendering with Multi-input Multi-output Neural Radiance Fields(http://arxiv.org/abs/2310.01821)</code></li>
+<li>Summary: <p>Neural radiance fields (NeRFs) have shown impressive results for novel view
+synthesis. However, they depend on the repetitive use of a single-input
+single-output multilayer perceptron (SISO MLP) that maps 3D coordinates and
+view direction to the color and volume density in a sample-wise manner, which
+slows the rendering. We propose a multi-input multi-output NeRF (MIMO-NeRF)
+that reduces the number of MLPs running by replacing the SISO MLP with a MIMO
+MLP and conducting mappings in a group-wise manner. One notable challenge with
+this approach is that the color and volume density of each point can differ
+according to a choice of input coordinates in a group, which can lead to some
+notable ambiguity. We also propose a self-supervised learning method that
+regularizes the MIMO MLP with multiple fast reformulated MLPs to alleviate this
+ambiguity without using pretrained models. The results of a comprehensive
+experimental evaluation including comparative and ablation studies are
+presented to show that MIMO-NeRF obtains a good trade-off between speed and
+quality with a reasonable training time. We then demonstrate that MIMO-NeRF is
+compatible with and complementary to previous advancements in NeRFs by applying
+it to two representative fast NeRFs, i.e., a NeRF with sample reduction
+(DONeRF) and a NeRF with alternative representations (TensoRF).
+</p></li>
+</ul>
+
+<h3>Title: Self-Supervised High Dynamic Range Imaging with Multi-Exposure Images in Dynamic Scenes. (arXiv:2310.01840v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01840">http://arxiv.org/abs/2310.01840</a></li>
+<li>Code URL: https://github.com/cszhilu1998/selfhdr</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01840]] Self-Supervised High Dynamic Range Imaging with Multi-Exposure Images in Dynamic Scenes(http://arxiv.org/abs/2310.01840)</code></li>
+<li>Summary: <p>Merging multi-exposure images is a common approach for obtaining high dynamic
+range (HDR) images, with the primary challenge being the avoidance of ghosting
+artifacts in dynamic scenes. Recent methods have proposed using deep neural
+networks for deghosting. However, the methods typically rely on sufficient data
+with HDR ground-truths, which are difficult and costly to collect. In this
+work, to eliminate the need for labeled data, we propose SelfHDR, a
+self-supervised HDR reconstruction method that only requires dynamic
+multi-exposure images during training. Specifically, SelfHDR learns a
+reconstruction network under the supervision of two complementary components,
+which can be constructed from multi-exposure images and focus on HDR color as
+well as structure, respectively. The color component is estimated from aligned
+multi-exposure images, while the structure one is generated through a
+structure-focused network that is supervised by the color component and an
+input reference (\eg, medium-exposure) image. During testing, the learned
+reconstruction network is directly deployed to predict an HDR image.
+Experiments on real-world images demonstrate our SelfHDR achieves superior
+results against the state-of-the-art self-supervised methods, and comparable
+performance to supervised ones. Codes are available at
+https://github.com/cszhilu1998/SelfHDR
+</p></li>
+</ul>
+
+<h3>Title: SelfGraphVQA: A Self-Supervised Graph Neural Network for Scene-based Question Answering. (arXiv:2310.01842v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01842">http://arxiv.org/abs/2310.01842</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01842]] SelfGraphVQA: A Self-Supervised Graph Neural Network for Scene-based Question Answering(http://arxiv.org/abs/2310.01842)</code></li>
+<li>Summary: <p>The intersection of vision and language is of major interest due to the
+increased focus on seamless integration between recognition and reasoning.
+Scene graphs (SGs) have emerged as a useful tool for multimodal image analysis,
+showing impressive performance in tasks such as Visual Question Answering
+(VQA). In this work, we demonstrate that despite the effectiveness of scene
+graphs in VQA tasks, current methods that utilize idealized annotated scene
+graphs struggle to generalize when using predicted scene graphs extracted from
+images. To address this issue, we introduce the SelfGraphVQA framework. Our
+approach extracts a scene graph from an input image using a pre-trained scene
+graph generator and employs semantically-preserving augmentation with
+self-supervised techniques. This method improves the utilization of graph
+representations in VQA tasks by circumventing the need for costly and
+potentially biased annotated data. By creating alternative views of the
+extracted graphs through image augmentations, we can learn joint embeddings by
+optimizing the informational content in their representations using an
+un-normalized contrastive approach. As we work with SGs, we experiment with
+three distinct maximization strategies: node-wise, graph-wise, and
+permutation-equivariant regularization. We empirically showcase the
+effectiveness of the extracted scene graph for VQA and demonstrate that these
+approaches enhance overall performance by highlighting the significance of
+visual information. This offers a more practical solution for VQA tasks that
+rely on SGs for complex reasoning questions.
+</p></li>
+</ul>
+
+<h3>Title: DARTH: Holistic Test-time Adaptation for Multiple Object Tracking. (arXiv:2310.01926v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01926">http://arxiv.org/abs/2310.01926</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01926]] DARTH: Holistic Test-time Adaptation for Multiple Object Tracking(http://arxiv.org/abs/2310.01926)</code></li>
+<li>Summary: <p>Multiple object tracking (MOT) is a fundamental component of perception
+systems for autonomous driving, and its robustness to unseen conditions is a
+requirement to avoid life-critical failures. Despite the urge of safety in
+driving systems, no solution to the MOT adaptation problem to domain shift in
+test-time conditions has ever been proposed. However, the nature of a MOT
+system is manifold - requiring object detection and instance association - and
+adapting all its components is non-trivial. In this paper, we analyze the
+effect of domain shift on appearance-based trackers, and introduce DARTH, a
+holistic test-time adaptation framework for MOT. We propose a detection
+consistency formulation to adapt object detection in a self-supervised fashion,
+while adapting the instance appearance representations via our novel patch
+contrastive loss. We evaluate our method on a variety of domain shifts -
+including sim-to-real, outdoor-to-indoor, indoor-to-outdoor - and substantially
+improve the source model performance on all metrics. Code:
+https://github.com/mattiasegu/darth.
+</p></li>
+</ul>
+
+<h3>Title: Understanding Masked Autoencoders From a Local Contrastive Perspective. (arXiv:2310.01994v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01994">http://arxiv.org/abs/2310.01994</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01994]] Understanding Masked Autoencoders From a Local Contrastive Perspective(http://arxiv.org/abs/2310.01994)</code></li>
+<li>Summary: <p>Masked AutoEncoder(MAE) has revolutionized the field of self-supervised
+learning with its simple yet effective masking and reconstruction strategies.
+However, despite achieving state-of-the-art performance across various
+downstream vision tasks, the underlying mechanisms that drive MAE's efficacy
+are less well-explored compared to the canonical contrastive learning paradigm.
+In this paper, we explore a new perspective to explain what truly contributes
+to the "rich hidden representations inside the MAE". Firstly, concerning MAE's
+generative pretraining pathway, with a unique encoder-decoder architecture to
+reconstruct images from aggressive masking, we conduct an in-depth analysis of
+the decoder's behaviors. We empirically find that MAE's decoder mainly learns
+local features with a limited receptive field, adhering to the well-known
+Locality Principle. Building upon this locality assumption, we propose a
+theoretical framework that reformulates the reconstruction-based MAE into a
+local region-level contrastive learning form for improved understanding.
+Furthermore, to substantiate the local contrastive nature of MAE, we introduce
+a Siamese architecture that combines the essence of MAE and contrastive
+learning without masking and explicit decoder, which sheds light on a unified
+and more flexible self-supervised learning framework.
+</p></li>
+</ul>
+
+<h3>Title: MUSCLE: Multi-task Self-supervised Continual Learning to Pre-train Deep Models for X-ray Images of Multiple Body Parts. (arXiv:2310.02000v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.02000">http://arxiv.org/abs/2310.02000</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.02000]] MUSCLE: Multi-task Self-supervised Continual Learning to Pre-train Deep Models for X-ray Images of Multiple Body Parts(http://arxiv.org/abs/2310.02000)</code></li>
+<li>Summary: <p>While self-supervised learning (SSL) algorithms have been widely used to
+pre-train deep models, few efforts [11] have been done to improve
+representation learning of X-ray image analysis with SSL pre-trained models. In
+this work, we study a novel self-supervised pre-training pipeline, namely
+Multi-task Self-super-vised Continual Learning (MUSCLE), for multiple medical
+imaging tasks, such as classification and segmentation, using X-ray images
+collected from multiple body parts, including heads, lungs, and bones.
+Specifically, MUSCLE aggregates X-rays collected from multiple body parts for
+MoCo-based representation learning, and adopts a well-designed continual
+learning (CL) procedure to further pre-train the backbone subject various X-ray
+analysis tasks jointly. Certain strategies for image pre-processing, learning
+schedules, and regularization have been used to solve data heterogeneity,
+overfitting, and catastrophic forgetting problems for multi-task/dataset
+learning in MUSCLE.We evaluate MUSCLE using 9 real-world X-ray datasets with
+various tasks, including pneumonia classification, skeletal abnormality
+classification, lung segmentation, and tuberculosis (TB) detection. Comparisons
+against other pre-trained models [7] confirm the proof-of-concept that
+self-supervised multi-task/dataset continual pre-training could boost the
+performance of X-ray image analysis.
+</p></li>
+</ul>
+
+<h3>Title: Exploring Generalisability of Self-Distillation with No Labels for SAR-Based Vegetation Prediction. (arXiv:2310.02048v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.02048">http://arxiv.org/abs/2310.02048</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.02048]] Exploring Generalisability of Self-Distillation with No Labels for SAR-Based Vegetation Prediction(http://arxiv.org/abs/2310.02048)</code></li>
+<li>Summary: <p>In this work we pre-train a DINO-ViT based model using two Synthetic Aperture
+Radar datasets (S1GRD or GSSIC) across three regions (China, Conus, Europe). We
+fine-tune the models on smaller labeled datasets to predict vegetation
+percentage, and empirically study the connection between the embedding space of
+the models and their ability to generalize across diverse geographic regions
+and to unseen data. For S1GRD, embedding spaces of different regions are
+clearly separated, while GSSIC's overlaps. Positional patterns remain during
+fine-tuning, and greater distances in embeddings often result in higher errors
+for unfamiliar regions. With this, our work increases our understanding of
+generalizability for self-supervised models applied to remote sensing.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Zero-Shot Refinement of Buildings' Segmentation Models using SAM. (arXiv:2310.01845v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01845">http://arxiv.org/abs/2310.01845</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01845]] Zero-Shot Refinement of Buildings' Segmentation Models using SAM(http://arxiv.org/abs/2310.01845)</code></li>
+<li>Summary: <p>Foundation models have excelled in various tasks but are often evaluated on
+general benchmarks. The adaptation of these models for specific domains, such
+as remote sensing imagery, remains an underexplored area. In remote sensing,
+precise building instance segmentation is vital for applications like urban
+planning. While Convolutional Neural Networks (CNNs) perform well, their
+generalization can be limited. For this aim, we present a novel approach to
+adapt foundation models to address existing models' generalization dropback.
+Among several models, our focus centers on the Segment Anything Model (SAM), a
+potent foundation model renowned for its prowess in class-agnostic image
+segmentation capabilities. We start by identifying the limitations of SAM,
+revealing its suboptimal performance when applied to remote sensing imagery.
+Moreover, SAM does not offer recognition abilities and thus fails to classify
+and tag localized objects. To address these limitations, we introduce different
+prompting strategies, including integrating a pre-trained CNN as a prompt
+generator. This novel approach augments SAM with recognition abilities, a first
+of its kind. We evaluated our method on three remote sensing datasets,
+including the WHU Buildings dataset, the Massachusetts Buildings dataset, and
+the AICrowd Mapping Challenge. For out-of-distribution performance on the WHU
+dataset, we achieve a 5.47% increase in IoU and a 4.81% improvement in
+F1-score. For in-distribution performance on the WHU dataset, we observe a
+2.72% and 1.58% increase in True-Positive-IoU and True-Positive-F1 score,
+respectively. We intend to release our code repository, hoping to inspire
+further exploration of foundation models for domain-specific tasks within the
+remote sensing community.
+</p></li>
+</ul>
+
+<h3>Title: Fusing Models with Complementary Expertise. (arXiv:2310.01542v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01542">http://arxiv.org/abs/2310.01542</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01542]] Fusing Models with Complementary Expertise(http://arxiv.org/abs/2310.01542)</code></li>
+<li>Summary: <p>Training AI models that generalize across tasks and domains has long been
+among the open problems driving AI research. The emergence of Foundation Models
+made it easier to obtain expert models for a given task, but the heterogeneity
+of data that may be encountered at test time often means that any single expert
+is insufficient. We consider the Fusion of Experts (FoE) problem of fusing
+outputs of expert models with complementary knowledge of the data distribution
+and formulate it as an instance of supervised learning. Our method is
+applicable to both discriminative and generative tasks and leads to significant
+performance improvements in image and text classification, text summarization,
+multiple-choice QA, and automatic evaluation of generated text. We also extend
+our method to the "frugal" setting where it is desired to reduce the number of
+expert model evaluations at test time.
+</p></li>
+</ul>
+
+<h3>Title: PolySketchFormer: Fast Transformers via Sketches for Polynomial Kernels. (arXiv:2310.01655v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01655">http://arxiv.org/abs/2310.01655</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01655]] PolySketchFormer: Fast Transformers via Sketches for Polynomial Kernels(http://arxiv.org/abs/2310.01655)</code></li>
+<li>Summary: <p>The quadratic complexity of attention in transformer architectures remains a
+big bottleneck in scaling up large foundation models for long context. In fact,
+recent theoretical results show the hardness of approximating the output of
+softmax attention mechanism in sub-quadratic time assuming Strong Exponential
+Time Hypothesis. In this paper, we show how to break this theoretical barrier
+by replacing softmax with a polynomial function and polynomial sketching. In
+particular we show that sketches for Polynomial Kernel from the randomized
+numerical linear algebra literature can be used to approximate the polynomial
+attention which leads to a significantly faster attention mechanism without
+assuming any sparse structure for the attention matrix that has been done in
+many previous works.
+</p>
+<p>In addition, we propose an efficient block-based algorithm that lets us apply
+the causal mask to the attention matrix without explicitly realizing the $n
+\times n$ attention matrix and compute the output of the polynomial attention
+mechanism in time linear in the context length. The block-based algorithm gives
+significant speedups over the \emph{cumulative sum} algorithm used by Performer
+to apply the causal mask to the attention matrix. These observations help us
+design \emph{PolySketchFormer}, a practical linear-time transformer
+architecture for language modeling with provable guarantees.
+</p>
+<p>We validate our design empirically by training language models with long
+context lengths. We first show that the eval perplexities of our models are
+comparable to that of models trained with softmax attention. We then show that
+for large context lengths our training times are significantly faster than
+FlashAttention.
+</p></li>
+</ul>
+
+<h3>Title: Time-LLM: Time Series Forecasting by Reprogramming Large Language Models. (arXiv:2310.01728v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01728">http://arxiv.org/abs/2310.01728</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01728]] Time-LLM: Time Series Forecasting by Reprogramming Large Language Models(http://arxiv.org/abs/2310.01728)</code></li>
+<li>Summary: <p>Time series forecasting holds significant importance in many real-world
+dynamic systems and has been extensively studied. Unlike natural language
+process (NLP) and computer vision (CV), where a single large model can tackle
+multiple tasks, models for time series forecasting are often specialized,
+necessitating distinct designs for different tasks and applications. While
+pre-trained foundation models have made impressive strides in NLP and CV, their
+development in time series domains has been constrained by data sparsity.
+Recent studies have revealed that large language models (LLMs) possess robust
+pattern recognition and reasoning abilities over complex sequences of tokens.
+However, the challenge remains in effectively aligning the modalities of time
+series data and natural language to leverage these capabilities. In this work,
+we present Time-LLM, a reprogramming framework to repurpose LLMs for general
+time series forecasting with the backbone language models kept intact. We begin
+by reprogramming the input time series with text prototypes before feeding it
+into the frozen LLM to align the two modalities. To augment the LLM's ability
+to reason with time series data, we propose Prompt-as-Prefix (PaP), which
+enriches the input context and directs the transformation of reprogrammed input
+patches. The transformed time series patches from the LLM are finally projected
+to obtain the forecasts. Our comprehensive evaluations demonstrate that
+Time-LLM is a powerful time series learner that outperforms state-of-the-art,
+specialized forecasting models. Moreover, Time-LLM excels in both few-shot and
+zero-shot learning scenarios.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Generative Autoencoding of Dropout Patterns. (arXiv:2310.01712v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01712">http://arxiv.org/abs/2310.01712</a></li>
+<li>Code URL: https://github.com/shuntama/deciphering-autoencoders</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01712]] Generative Autoencoding of Dropout Patterns(http://arxiv.org/abs/2310.01712)</code></li>
+<li>Summary: <p>We propose a generative model termed Deciphering Autoencoders. In this model,
+we assign a unique random dropout pattern to each data point in the training
+dataset and then train an autoencoder to reconstruct the corresponding data
+point using this pattern as information to be encoded. Since the training of
+Deciphering Autoencoders relies solely on reconstruction error, it offers more
+stable training than other generative models. Despite its simplicity,
+Deciphering Autoencoders show comparable sampling quality to DCGAN on the
+CIFAR-10 dataset.
+</p></li>
+</ul>
+
+<h3>Title: AI-Generated Images as Data Source: The Dawn of Synthetic Era. (arXiv:2310.01830v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01830">http://arxiv.org/abs/2310.01830</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01830]] AI-Generated Images as Data Source: The Dawn of Synthetic Era(http://arxiv.org/abs/2310.01830)</code></li>
+<li>Summary: <p>The advancement of visual intelligence is intrinsically tethered to the
+availability of data. In parallel, generative Artificial Intelligence (AI) has
+unlocked the potential to create synthetic images that closely resemble
+real-world photographs, which prompts a compelling inquiry: how visual
+intelligence benefit from the advance of generative AI? This paper explores the
+innovative concept of harnessing these AI-generated images as a new data
+source, reshaping traditional model paradigms in visual intelligence. In
+contrast to real data, AI-generated data sources exhibit remarkable advantages,
+including unmatched abundance and scalability, the rapid generation of vast
+datasets, and the effortless simulation of edge cases. Built on the success of
+generative AI models, we examines the potential of their generated data in a
+range of applications, from training machine learning models to simulating
+scenarios for computational modelling, testing, and validation. We probe the
+technological foundations that support this groundbreaking use of generative
+AI, engaging in an in-depth discussion on the ethical, legal, and practical
+considerations that accompany this transformative paradigm shift. Through an
+exhaustive survey of current technologies and applications, this paper presents
+a comprehensive view of the synthetic era in visual intelligence. A project
+with this paper can be found at https://github.com/mwxely/AIGS .
+</p></li>
+</ul>
+
+<h3>Title: A Dual Attentive Generative Adversarial Network for Remote Sensing Image Change Detection. (arXiv:2310.01876v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01876">http://arxiv.org/abs/2310.01876</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01876]] A Dual Attentive Generative Adversarial Network for Remote Sensing Image Change Detection(http://arxiv.org/abs/2310.01876)</code></li>
+<li>Summary: <p>Remote sensing change detection between bi-temporal images receives growing
+concentration from researchers. However, comparing two bi-temporal images for
+detecting changes is challenging, as they demonstrate different appearances. In
+this paper, we propose a dual attentive generative adversarial network for
+achieving very high-resolution remote sensing image change detection tasks,
+which regards the detection model as a generator and attains the optimal
+weights of the detection model without increasing the parameters of the
+detection model through generative-adversarial strategy, boosting the spatial
+contiguity of predictions. Moreover, We design a multi-level feature extractor
+for effectively fusing multi-level features, which adopts the pre-trained model
+to extract multi-level features from bi-temporal images and introduces
+aggregate connections to fuse them. To strengthen the identification of
+multi-scale objects, we propose a multi-scale adaptive fusion module to
+adaptively fuse multi-scale features through various receptive fields and
+design a context refinement module to explore contextual dependencies.
+Moreover, the DAGAN framework utilizes the 4-layer convolution network as a
+discriminator to identify whether the synthetic image is fake or real.
+Extensive experiments represent that the DAGAN framework has better performance
+with 85.01% mean IoU and 91.48% mean F1 score than advanced methods on the
+LEVIR dataset.
+</p></li>
+</ul>
+
+<h3>Title: Chatmap : Large Language Model Interaction with Cartographic Data. (arXiv:2310.01429v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01429">http://arxiv.org/abs/2310.01429</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01429]] Chatmap : Large Language Model Interaction with Cartographic Data(http://arxiv.org/abs/2310.01429)</code></li>
+<li>Summary: <p>The swift advancement and widespread availability of foundational Large
+Language Models (LLMs), complemented by robust fine-tuning methodologies, have
+catalyzed their adaptation for innovative and industrious applications.
+Enabling LLMs to recognize and interpret geospatial data, while offering a
+linguistic access to vast cartographic datasets, is of significant importance.
+OpenStreetMap (OSM) is the most ambitious open-source global initiative
+offering detailed urban and rural geographic data, curated by a community of
+over 10 million contributors, which constitutes a great potential for LLM
+applications. In this study, we demonstrate the proof of concept and details of
+the process of fine-tuning a relatively small scale (1B parameters) LLM with a
+relatively small artificial dataset curated by a more capable teacher model, in
+order to provide a linguistic interface to the OSM data of an arbitrary urban
+region. Through this interface, users can inquire about a location's
+attributes, covering a wide spectrum of concepts, such as its touristic appeal
+or the potential profitability of various businesses in that vicinity. The
+study aims to provide an initial guideline for such generative artificial
+intelligence (AI) adaptations and demonstrate early signs of useful emerging
+abilities in this context even in minimal computational settings. The
+embeddings of artificially curated prompts including OSM data are also
+investigated in detail, which might be instrumental for potential geospatially
+aware urban Retrieval Augmented Generation (RAG) applications.
+</p></li>
+</ul>
+
+<h3>Title: Closing the Curious Case of Neural Text Degeneration. (arXiv:2310.01693v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01693">http://arxiv.org/abs/2310.01693</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01693]] Closing the Curious Case of Neural Text Degeneration(http://arxiv.org/abs/2310.01693)</code></li>
+<li>Summary: <p>Despite their ubiquity in language generation, it remains unknown why
+truncation sampling heuristics like nucleus sampling are so effective. We
+provide a theoretical explanation for the effectiveness of the truncation
+sampling by proving that truncation methods that discard tokens below some
+probability threshold (the most common type of truncation) can guarantee that
+all sampled tokens have nonzero true probability. However, thresholds are a
+coarse heuristic, and necessarily discard some tokens with nonzero true
+probability as well. In pursuit of a more precise sampling strategy, we show
+that we can leverage a known source of model errors, the softmax bottleneck, to
+prove that certain tokens have nonzero true probability, without relying on a
+threshold. Based on our findings, we develop an experimental truncation
+strategy and the present pilot studies demonstrating the promise of this type
+of algorithm. Our evaluations show that our method outperforms its
+threshold-based counterparts under automatic and human evaluation metrics for
+low-entropy (i.e., close to greedy) open-ended text generation. Our theoretical
+findings and pilot experiments provide both insight into why truncation
+sampling works, and make progress toward more expressive sampling algorithms
+that better surface the generative capabilities of large language models.
+</p></li>
+</ul>
+
+<h3>Title: Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs. (arXiv:2310.01801v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01801">http://arxiv.org/abs/2310.01801</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01801]] Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs(http://arxiv.org/abs/2310.01801)</code></li>
+<li>Summary: <p>In this study, we introduce adaptive KV cache compression, a plug-and-play
+method that reduces the memory footprint of generative inference for Large
+Language Models (LLMs). Different from the conventional KV cache that retains
+key and value vectors for all context tokens, we conduct targeted profiling to
+discern the intrinsic structure of attention modules. Based on the recognized
+structure, we then construct the KV cache in an adaptive manner: evicting
+long-range contexts on attention heads emphasizing local contexts, discarding
+non-special tokens on attention heads centered on special tokens, and only
+employing the standard KV cache for attention heads that broadly attend to all
+tokens. Moreover, with the lightweight attention profiling used to guide the
+construction of the adaptive KV cache, FastGen can be deployed without
+resource-intensive fine-tuning or re-training. In our experiments across
+various asks, FastGen demonstrates substantial reduction on GPU memory
+consumption with negligible generation quality loss. We will release our code
+and the compatible CUDA kernel for reproducibility.
+</p></li>
+</ul>
+
+<h3>Title: Graph Neural Architecture Search with GPT-4. (arXiv:2310.01436v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01436">http://arxiv.org/abs/2310.01436</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01436]] Graph Neural Architecture Search with GPT-4(http://arxiv.org/abs/2310.01436)</code></li>
+<li>Summary: <p>Graph Neural Architecture Search (GNAS) has shown promising results in
+automatically designing graph neural networks. However, GNAS still requires
+intensive human labor with rich domain knowledge to design the search space and
+search strategy. In this paper, we integrate GPT-4 into GNAS and propose a new
+GPT-4 based Graph Neural Architecture Search method (GPT4GNAS for short). The
+basic idea of our method is to design a new class of prompts for GPT-4 to guide
+GPT-4 toward the generative task of graph neural architectures. The prompts
+consist of descriptions of the search space, search strategy, and search
+feedback of GNAS. By iteratively running GPT-4 with the prompts, GPT4GNAS
+generates more accurate graph neural networks with fast convergence.
+Experimental results show that embedding GPT-4 into GNAS outperforms the
+state-of-the-art GNAS methods.
+</p></li>
+</ul>
+
+<h3>Title: CODA: Temporal Domain Generalization via Concept Drift Simulator. (arXiv:2310.01508v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01508">http://arxiv.org/abs/2310.01508</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01508]] CODA: Temporal Domain Generalization via Concept Drift Simulator(http://arxiv.org/abs/2310.01508)</code></li>
+<li>Summary: <p>In real-world applications, machine learning models often become obsolete due
+to shifts in the joint distribution arising from underlying temporal trends, a
+phenomenon known as the "concept drift". Existing works propose model-specific
+strategies to achieve temporal generalization in the near-future domain.
+However, the diverse characteristics of real-world datasets necessitate
+customized prediction model architectures. To this end, there is an urgent
+demand for a model-agnostic temporal domain generalization approach that
+maintains generality across diverse data modalities and architectures. In this
+work, we aim to address the concept drift problem from a data-centric
+perspective to bypass considering the interaction between data and model.
+Developing such a framework presents non-trivial challenges: (i) existing
+generative models struggle to generate out-of-distribution future data, and
+(ii) precisely capturing the temporal trends of joint distribution along
+chronological source domains is computationally infeasible. To tackle the
+challenges, we propose the COncept Drift simulAtor (CODA) framework
+incorporating a predicted feature correlation matrix to simulate future data
+for model training. Specifically, CODA leverages feature correlations to
+represent data characteristics at specific time points, thereby circumventing
+the daunting computational costs. Experimental results demonstrate that using
+CODA-generated data as training input effectively achieves temporal domain
+generalization across different model architectures.
+</p></li>
+</ul>
+
+<h3>Title: Nowcasting day-ahead marginal emissions using multi-headed CNNs and deep generative models. (arXiv:2310.01524v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01524">http://arxiv.org/abs/2310.01524</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01524]] Nowcasting day-ahead marginal emissions using multi-headed CNNs and deep generative models(http://arxiv.org/abs/2310.01524)</code></li>
+<li>Summary: <p>Nowcasting day-ahead marginal emissions factors is increasingly important for
+power systems with high flexibility and penetration of distributed energy
+resources. With a significant share of firm generation from natural gas and
+coal power plants, forecasting day-ahead emissions in the current energy system
+has been widely studied. In contrast, as we shift to an energy system
+characterized by flexible power markets, dispatchable sources, and competing
+low-cost generation such as large-scale battery or hydrogen storage, system
+operators will be able to choose from a mix of different generation as well as
+emission pathways. To fully develop the emissions implications of a given
+dispatch schedule, we need a near real-time workflow with two layers. The first
+layer is a market model that continuously solves a security-constrained
+economic dispatch model. The second layer determines the marginal emissions
+based on the output of the market model, which is the subject of this paper. We
+propose using multi-headed convolutional neural networks to generate day-ahead
+forecasts of marginal and average emissions for a given independent system
+operator.
+</p></li>
+</ul>
+
+<h3>Title: Causal Inference with Conditional Front-Door Adjustment and Identifiable Variational Autoencoder. (arXiv:2310.01937v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01937">http://arxiv.org/abs/2310.01937</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01937]] Causal Inference with Conditional Front-Door Adjustment and Identifiable Variational Autoencoder(http://arxiv.org/abs/2310.01937)</code></li>
+<li>Summary: <p>An essential and challenging problem in causal inference is causal effect
+estimation from observational data. The problem becomes more difficult with the
+presence of unobserved confounding variables. The front-door adjustment is a
+practical approach for dealing with unobserved confounding variables. However,
+the restriction for the standard front-door adjustment is difficult to satisfy
+in practice. In this paper, we relax some of the restrictions by proposing the
+concept of conditional front-door (CFD) adjustment and develop the theorem that
+guarantees the causal effect identifiability of CFD adjustment. Furthermore, as
+it is often impossible for a CFD variable to be given in practice, it is
+desirable to learn it from data. By leveraging the ability of deep generative
+models, we propose CFDiVAE to learn the representation of the CFD adjustment
+variable directly from data with the identifiable Variational AutoEncoder and
+formally prove the model identifiability. Extensive experiments on synthetic
+datasets validate the effectiveness of CFDiVAE and its superiority over
+existing methods. The experiments also show that the performance of CFDiVAE is
+less sensitive to the causal strength of unobserved confounding variables. We
+further apply CFDiVAE to a real-world dataset to demonstrate its potential
+application.
+</p></li>
+</ul>
+
+<h3>Title: De Novo Drug Design with Joint Transformers. (arXiv:2310.02066v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.02066">http://arxiv.org/abs/2310.02066</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.02066]] De Novo Drug Design with Joint Transformers(http://arxiv.org/abs/2310.02066)</code></li>
+<li>Summary: <p>De novo drug design requires simultaneously generating novel molecules
+outside of training data and predicting their target properties, making it a
+hard task for generative models. To address this, we propose Joint Transformer
+that combines a Transformer decoder, a Transformer encoder, and a predictor in
+a joint generative model with shared weights. We show that training the model
+with a penalized log-likelihood objective results in state-of-the-art
+performance in molecule generation, while decreasing the prediction error on
+newly sampled molecules, as compared to a fine-tuned decoder-only Transformer,
+by 42%. Finally, we propose a probabilistic black-box optimization algorithm
+that employs Joint Transformer to generate novel molecules with improved target
+properties, as compared to the training data, outperforming other SMILES-based
+optimization methods in de novo drug design.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: STARS: Zero-shot Sim-to-Real Transfer for Segmentation of Shipwrecks in Sonar Imagery. (arXiv:2310.01667v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01667">http://arxiv.org/abs/2310.01667</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01667]] STARS: Zero-shot Sim-to-Real Transfer for Segmentation of Shipwrecks in Sonar Imagery(http://arxiv.org/abs/2310.01667)</code></li>
+<li>Summary: <p>In this paper, we address the problem of sim-to-real transfer for object
+segmentation when there is no access to real examples of an object of interest
+during training, i.e. zero-shot sim-to-real transfer for segmentation. We focus
+on the application of shipwreck segmentation in side scan sonar imagery. Our
+novel segmentation network, STARS, addresses this challenge by fusing a
+predicted deformation field and anomaly volume, allowing it to generalize
+better to real sonar images and achieve more effective zero-shot sim-to-real
+transfer for image segmentation. We evaluate the sim-to-real transfer
+capabilities of our method on a real, expert-labeled side scan sonar dataset of
+shipwrecks collected from field work surveys with an autonomous underwater
+vehicle (AUV). STARS is trained entirely in simulation and performs zero-shot
+shipwreck segmentation with no additional fine-tuning on real data. Our method
+provides a significant 20% increase in segmentation performance for the
+targeted shipwreck class compared to the best baseline.
+</p></li>
+</ul>
+
+<h3>Title: Beyond the Benchmark: Detecting Diverse Anomalies in Videos. (arXiv:2310.01904v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01904">http://arxiv.org/abs/2310.01904</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01904]] Beyond the Benchmark: Detecting Diverse Anomalies in Videos(http://arxiv.org/abs/2310.01904)</code></li>
+<li>Summary: <p>Video Anomaly Detection (VAD) plays a crucial role in modern surveillance
+systems, aiming to identify various anomalies in real-world situations.
+However, current benchmark datasets predominantly emphasize simple,
+single-frame anomalies such as novel object detection. This narrow focus
+restricts the advancement of VAD models. In this research, we advocate for an
+expansion of VAD investigations to encompass intricate anomalies that extend
+beyond conventional benchmark boundaries. To facilitate this, we introduce two
+datasets, HMDB-AD and HMDB-Violence, to challenge models with diverse
+action-based anomalies. These datasets are derived from the HMDB51 action
+recognition dataset. We further present Multi-Frame Anomaly Detection (MFAD), a
+novel method built upon the AI-VAD framework. AI-VAD utilizes single-frame
+features such as pose estimation and deep image encoding, and two-frame
+features such as object velocity. They then apply a density estimation
+algorithm to compute anomaly scores. To address complex multi-frame anomalies,
+we add a deep video encoding features capturing long-range temporal
+dependencies, and logistic regression to enhance final score calculation.
+Experimental results confirm our assumptions, highlighting existing models
+limitations with new anomaly types. MFAD excels in both simple and complex
+anomaly detection scenarios.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Fool Your (Vision and) Language Model With Embarrassingly Simple Permutations. (arXiv:2310.01651v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.01651">http://arxiv.org/abs/2310.01651</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.01651]] Fool Your (Vision and) Language Model With Embarrassingly Simple Permutations(http://arxiv.org/abs/2310.01651)</code></li>
+<li>Summary: <p>Large language and vision-language models are rapidly being deployed in
+practice thanks to their impressive capabilities in instruction following,
+in-context learning, and so on. This raises an urgent need to carefully analyse
+their robustness so that stakeholders can understand if and when such models
+are trustworthy enough to be relied upon in any given application. In this
+paper, we highlight a specific vulnerability in popular models, namely
+permutation sensitivity in multiple-choice question answering (MCQA).
+Specifically, we show empirically that popular models are vulnerable to
+adversarial permutation in answer sets for multiple-choice prompting, which is
+surprising as models should ideally be as invariant to prompt permutation as
+humans are. These vulnerabilities persist across various model sizes, and exist
+in very recent language and vision-language models. Code is available at
+\url{https://github.com/ys-zong/FoolyourVLLMs}.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
