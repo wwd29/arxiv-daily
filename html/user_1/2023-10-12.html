@@ -1,0 +1,864 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: ObjectComposer: Consistent Generation of Multiple Objects Without Fine-tuning. (arXiv:2310.06968v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.06968">http://arxiv.org/abs/2310.06968</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.06968]] ObjectComposer: Consistent Generation of Multiple Objects Without Fine-tuning(http://arxiv.org/abs/2310.06968)</code></li>
+<li>Summary: <p>Recent text-to-image generative models can generate high-fidelity images from
+text prompts. However, these models struggle to consistently generate the same
+objects in different contexts with the same appearance. Consistent object
+generation is important to many downstream tasks like generating comic book
+illustrations with consistent characters and setting. Numerous approaches
+attempt to solve this problem by extending the vocabulary of diffusion models
+through fine-tuning. However, even lightweight fine-tuning approaches can be
+prohibitively expensive to run at scale and in real-time. We introduce a method
+called ObjectComposer for generating compositions of multiple objects that
+resemble user-specified images. Our approach is training-free, leveraging the
+abilities of preexisting models. We build upon the recent BLIP-Diffusion model,
+which can generate images of single objects specified by reference images.
+ObjectComposer enables the consistent generation of compositions containing
+multiple specific objects simultaneously, all without modifying the weights of
+the underlying models.
+</p></li>
+</ul>
+
+<h3>Title: Denoising Task Routing for Diffusion Models. (arXiv:2310.07138v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07138">http://arxiv.org/abs/2310.07138</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07138]] Denoising Task Routing for Diffusion Models(http://arxiv.org/abs/2310.07138)</code></li>
+<li>Summary: <p>Diffusion models generate highly realistic images through learning a
+multi-step denoising process, naturally embodying the principles of multi-task
+learning (MTL). Despite the inherent connection between diffusion models and
+MTL, there remains an unexplored area in designing neural architectures that
+explicitly incorporate MTL into the framework of diffusion models. In this
+paper, we present Denoising Task Routing (DTR), a simple add-on strategy for
+existing diffusion model architectures to establish distinct information
+pathways for individual tasks within a single architecture by selectively
+activating subsets of channels in the model. What makes DTR particularly
+compelling is its seamless integration of prior knowledge of denoising tasks
+into the framework: (1) Task Affinity: DTR activates similar channels for tasks
+at adjacent timesteps and shifts activated channels as sliding windows through
+timesteps, capitalizing on the inherent strong affinity between tasks at
+adjacent timesteps. (2) Task Weights: During the early stages (higher
+timesteps) of the denoising process, DTR assigns a greater number of
+task-specific channels, leveraging the insight that diffusion models prioritize
+reconstructing global structure and perceptually rich contents in earlier
+stages, and focus on simple noise removal in later stages. Our experiments
+demonstrate that DTR consistently enhances the performance of diffusion models
+across various evaluation protocols, all without introducing additional
+parameters. Furthermore, DTR contributes to accelerating convergence during
+training. Finally, we show the complementarity between our architectural
+approach and existing MTL optimization techniques, providing a more complete
+view of MTL within the context of diffusion training.
+</p></li>
+</ul>
+
+<h3>Title: Uni-paint: A Unified Framework for Multimodal Image Inpainting with Pretrained Diffusion Model. (arXiv:2310.07222v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07222">http://arxiv.org/abs/2310.07222</a></li>
+<li>Code URL: https://github.com/ysy31415/unipaint</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07222]] Uni-paint: A Unified Framework for Multimodal Image Inpainting with Pretrained Diffusion Model(http://arxiv.org/abs/2310.07222)</code></li>
+<li>Summary: <p>Recently, text-to-image denoising diffusion probabilistic models (DDPMs) have
+demonstrated impressive image generation capabilities and have also been
+successfully applied to image inpainting. However, in practice, users often
+require more control over the inpainting process beyond textual guidance,
+especially when they want to composite objects with customized appearance,
+color, shape, and layout. Unfortunately, existing diffusion-based inpainting
+methods are limited to single-modal guidance and require task-specific
+training, hindering their cross-modal scalability. To address these
+limitations, we propose Uni-paint, a unified framework for multimodal
+inpainting that offers various modes of guidance, including unconditional,
+text-driven, stroke-driven, exemplar-driven inpainting, as well as a
+combination of these modes. Furthermore, our Uni-paint is based on pretrained
+Stable Diffusion and does not require task-specific training on specific
+datasets, enabling few-shot generalizability to customized images. We have
+conducted extensive qualitative and quantitative evaluations that show our
+approach achieves comparable results to existing single-modal methods while
+offering multimodal inpainting capabilities not available in other methods.
+Code will be available at https://github.com/ysy31415/unipaint.
+</p></li>
+</ul>
+
+<h3>Title: Multi-Concept T2I-Zero: Tweaking Only The Text Embeddings and Nothing Else. (arXiv:2310.07419v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07419">http://arxiv.org/abs/2310.07419</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07419]] Multi-Concept T2I-Zero: Tweaking Only The Text Embeddings and Nothing Else(http://arxiv.org/abs/2310.07419)</code></li>
+<li>Summary: <p>Recent advances in text-to-image diffusion models have enabled the
+photorealistic generation of images from text prompts. Despite the great
+progress, existing models still struggle to generate compositional
+multi-concept images naturally, limiting their ability to visualize human
+imagination. While several recent works have attempted to address this issue,
+they either introduce additional training or adopt guidance at inference time.
+In this work, we consider a more ambitious goal: natural multi-concept
+generation using a pre-trained diffusion model, and with almost no extra cost.
+To achieve this goal, we identify the limitations in the text embeddings used
+for the pre-trained text-to-image diffusion models. Specifically, we observe
+concept dominance and non-localized contribution that severely degrade
+multi-concept generation performance. We further design a minimal low-cost
+solution that overcomes the above issues by tweaking (not re-training) the text
+embeddings for more realistic multi-concept text-to-image generation. Our
+Correction by Similarities method tweaks the embedding of concepts by
+collecting semantic features from most similar tokens to localize the
+contribution. To avoid mixing features of concepts, we also apply Cross-Token
+Non-Maximum Suppression, which excludes the overlap of contributions from
+different concepts. Experiments show that our approach outperforms previous
+methods in text-to-image, image manipulation, and personalization tasks,
+despite not introducing additional training or inference costs to the diffusion
+steps.
+</p></li>
+</ul>
+
+<h3>Title: Boosting Black-box Attack to Deep Neural Networks with Conditional Diffusion Models. (arXiv:2310.07492v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07492">http://arxiv.org/abs/2310.07492</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07492]] Boosting Black-box Attack to Deep Neural Networks with Conditional Diffusion Models(http://arxiv.org/abs/2310.07492)</code></li>
+<li>Summary: <p>Existing black-box attacks have demonstrated promising potential in creating
+adversarial examples (AE) to deceive deep learning models. Most of these
+attacks need to handle a vast optimization space and require a large number of
+queries, hence exhibiting limited practical impacts in real-world scenarios. In
+this paper, we propose a novel black-box attack strategy, Conditional Diffusion
+Model Attack (CDMA), to improve the query efficiency of generating AEs under
+query-limited situations. The key insight of CDMA is to formulate the task of
+AE synthesis as a distribution transformation problem, i.e., benign examples
+and their corresponding AEs can be regarded as coming from two distinctive
+distributions and can transform from each other with a particular converter.
+Unlike the conventional \textit{query-and-optimization} approach, we generate
+eligible AEs with direct conditional transform using the aforementioned data
+converter, which can significantly reduce the number of queries needed. CDMA
+adopts the conditional Denoising Diffusion Probabilistic Model as the
+converter, which can learn the transformation from clean samples to AEs, and
+ensure the smooth development of perturbed noise resistant to various defense
+strategies. We demonstrate the effectiveness and efficiency of CDMA by
+comparing it with nine state-of-the-art black-box attacks across three
+benchmark datasets. On average, CDMA can reduce the query count to a handful of
+times; in most cases, the query count is only ONE. We also show that CDMA can
+obtain $&gt;99\%$ attack success rate for untarget attacks over all datasets and
+targeted attack over CIFAR-10 with the noise budget of $\epsilon=16$.
+</p></li>
+</ul>
+
+<h3>Title: Monsters in the Dark: Sanitizing Hidden Threats with Diffusion Models. (arXiv:2310.06951v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.06951">http://arxiv.org/abs/2310.06951</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.06951]] Monsters in the Dark: Sanitizing Hidden Threats with Diffusion Models(http://arxiv.org/abs/2310.06951)</code></li>
+<li>Summary: <p>Steganography is the art of hiding information in plain sight. This form of
+covert communication can be used by bad actors to propagate malware, exfiltrate
+victim data, and communicate with other bad actors. Current image steganography
+defenses rely upon steganalysis, or the detection of hidden messages. These
+methods, however, are non-blind as they require information about known
+steganography techniques and are easily bypassed. Recent work has instead
+focused on a defense mechanism known as sanitization, which eliminates hidden
+information from images. In this work, we introduce a novel blind deep learning
+steganography sanitization method that utilizes a diffusion model framework to
+sanitize universal and dependent steganography (DM-SUDS), which both sanitizes
+and preserves image quality. We evaluate this approach against state-of-the-art
+deep learning sanitization frameworks and provide further detailed analysis
+through an ablation study. DM-SUDS outperforms previous sanitization methods
+and improves image preservation MSE by 71.32%, PSNR by 22.43% and SSIM by
+17.30%. This is the first blind deep learning image sanitization framework to
+meet these image quality results.
+</p></li>
+</ul>
+
+<h3>Title: Investigating the Adversarial Robustness of Density Estimation Using the Probability Flow ODE. (arXiv:2310.07084v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07084">http://arxiv.org/abs/2310.07084</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07084]] Investigating the Adversarial Robustness of Density Estimation Using the Probability Flow ODE(http://arxiv.org/abs/2310.07084)</code></li>
+<li>Summary: <p>Beyond their impressive sampling capabilities, score-based diffusion models
+offer a powerful analysis tool in the form of unbiased density estimation of a
+query sample under the training data distribution. In this work, we investigate
+the robustness of density estimation using the probability flow (PF) neural
+ordinary differential equation (ODE) model against gradient-based likelihood
+maximization attacks and the relation to sample complexity, where the
+compressed size of a sample is used as a measure of its complexity. We
+introduce and evaluate six gradient-based log-likelihood maximization attacks,
+including a novel reverse integration attack. Our experimental evaluations on
+CIFAR-10 show that density estimation using the PF ODE is robust against
+high-complexity, high-likelihood attacks, and that in some cases adversarial
+samples are semantically meaningful, as expected from a robust estimator.
+</p></li>
+</ul>
+
+<h3>Title: Imitation Learning from Purified Demonstration. (arXiv:2310.07143v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07143">http://arxiv.org/abs/2310.07143</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07143]] Imitation Learning from Purified Demonstration(http://arxiv.org/abs/2310.07143)</code></li>
+<li>Summary: <p>Imitation learning has emerged as a promising approach for addressing
+sequential decision-making problems, with the assumption that expert
+demonstrations are optimal. However, in real-world scenarios, expert
+demonstrations are often imperfect, leading to challenges in effectively
+applying imitation learning. While existing research has focused on optimizing
+with imperfect demonstrations, the training typically requires a certain
+proportion of optimal demonstrations to guarantee performance. To tackle these
+problems, we propose to purify the potential perturbations in imperfect
+demonstrations and subsequently conduct imitation learning from purified
+demonstrations. Motivated by the success of diffusion models, we introduce a
+two-step purification via the diffusion process. In the first step, we apply a
+forward diffusion process to effectively smooth out the potential perturbations
+in imperfect demonstrations by introducing additional noise. Subsequently, a
+reverse generative process is utilized to recover the optimal expert
+demonstrations from the diffused ones. We provide theoretical evidence
+supporting our approach, demonstrating that total variance distance between the
+purified and optimal demonstration distributions can be upper-bounded. The
+evaluation results on MuJoCo demonstrate the effectiveness of our method from
+different aspects.
+</p></li>
+</ul>
+
+<h3>Title: Generative Modeling on Manifolds Through Mixture of Riemannian Diffusion Processes. (arXiv:2310.07216v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07216">http://arxiv.org/abs/2310.07216</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07216]] Generative Modeling on Manifolds Through Mixture of Riemannian Diffusion Processes(http://arxiv.org/abs/2310.07216)</code></li>
+<li>Summary: <p>Learning the distribution of data on Riemannian manifolds is crucial for
+modeling data from non-Euclidean space, which is required by many applications
+from diverse scientific fields. Yet, existing generative models on manifolds
+suffer from expensive divergence computation or rely on approximations of heat
+kernel. These limitations restrict their applicability to simple geometries and
+hinder scalability to high dimensions. In this work, we introduce the
+Riemannian Diffusion Mixture, a principled framework for building a generative
+process on manifolds as a mixture of endpoint-conditioned diffusion processes
+instead of relying on the denoising approach of previous diffusion models, for
+which the generative process is characterized by its drift guiding toward the
+most probable endpoint with respect to the geometry of the manifold. We further
+propose a simple yet efficient training objective for learning the mixture
+process, that is readily applicable to general manifolds. Our method
+outperforms previous generative models on various manifolds while scaling to
+high dimensions and requires a dramatically reduced number of in-training
+simulation steps for general manifolds.
+</p></li>
+</ul>
+
+<h3>Title: Score Regularized Policy Optimization through Diffusion Behavior. (arXiv:2310.07297v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07297">http://arxiv.org/abs/2310.07297</a></li>
+<li>Code URL: https://github.com/thu-ml/srpo</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07297]] Score Regularized Policy Optimization through Diffusion Behavior(http://arxiv.org/abs/2310.07297)</code></li>
+<li>Summary: <p>Recent developments in offline reinforcement learning have uncovered the
+immense potential of diffusion modeling, which excels at representing
+heterogeneous behavior policies. However, sampling from diffusion policies is
+considerably slow because it necessitates tens to hundreds of iterative
+inference steps for one action. To address this issue, we propose to extract an
+efficient deterministic inference policy from critic models and pretrained
+diffusion behavior models, leveraging the latter to directly regularize the
+policy gradient with the behavior distribution's score function during
+optimization. Our method enjoys powerful generative capabilities of diffusion
+modeling while completely circumventing the computationally intensive and
+time-consuming diffusion sampling scheme, both during training and evaluation.
+Extensive results on D4RL tasks show that our method boosts action sampling
+speed by more than 25 times compared with various leading diffusion-based
+methods in locomotion tasks, while still maintaining state-of-the-art
+performance.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Self-supervised Object-Centric Learning for Videos. (arXiv:2310.06907v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.06907">http://arxiv.org/abs/2310.06907</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.06907]] Self-supervised Object-Centric Learning for Videos(http://arxiv.org/abs/2310.06907)</code></li>
+<li>Summary: <p>Unsupervised multi-object segmentation has shown impressive results on images
+by utilizing powerful semantics learned from self-supervised pretraining. An
+additional modality such as depth or motion is often used to facilitate the
+segmentation in video sequences. However, the performance improvements observed
+in synthetic sequences, which rely on the robustness of an additional cue, do
+not translate to more challenging real-world scenarios. In this paper, we
+propose the first fully unsupervised method for segmenting multiple objects in
+real-world sequences. Our object-centric learning framework spatially binds
+objects to slots on each frame and then relates these slots across frames. From
+these temporally-aware slots, the training objective is to reconstruct the
+middle frame in a high-level semantic feature space. We propose a masking
+strategy by dropping a significant portion of tokens in the feature space for
+efficiency and regularization. Additionally, we address over-clustering by
+merging slots based on similarity. Our method can successfully segment multiple
+instances of complex and high-variety classes in YouTube videos.
+</p></li>
+</ul>
+
+<h3>Title: Computational Pathology at Health System Scale -- Self-Supervised Foundation Models from Three Billion Images. (arXiv:2310.07033v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07033">http://arxiv.org/abs/2310.07033</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07033]] Computational Pathology at Health System Scale -- Self-Supervised Foundation Models from Three Billion Images(http://arxiv.org/abs/2310.07033)</code></li>
+<li>Summary: <p>Recent breakthroughs in self-supervised learning have enabled the use of
+large unlabeled datasets to train visual foundation models that can generalize
+to a variety of downstream tasks. While this training paradigm is well suited
+for the medical domain where annotations are scarce, large-scale pre-training
+in the medical domain, and in particular pathology, has not been extensively
+studied. Previous work in self-supervised learning in pathology has leveraged
+smaller datasets for both pre-training and evaluating downstream performance.
+The aim of this project is to train the largest academic foundation model and
+benchmark the most prominent self-supervised learning algorithms by
+pre-training and evaluating downstream performance on large clinical pathology
+datasets. We collected the largest pathology dataset to date, consisting of
+over 3 billion images from over 423 thousand microscopy slides. We compared
+pre-training of visual transformer models using the masked autoencoder (MAE)
+and DINO algorithms. We evaluated performance on six clinically relevant tasks
+from three anatomic sites and two institutions: breast cancer detection,
+inflammatory bowel disease detection, breast cancer estrogen receptor
+prediction, lung adenocarcinoma EGFR mutation prediction, and lung cancer
+immunotherapy response prediction. Our results demonstrate that pre-training on
+pathology data is beneficial for downstream performance compared to
+pre-training on natural images. Additionally, the DINO algorithm achieved
+better generalization performance across all tasks tested. The presented
+results signify a phase change in computational pathology research, paving the
+way into a new era of more performant models based on large-scale, parallel
+pre-training at the billion-image scale.
+</p></li>
+</ul>
+
+<h3>Title: Causal Unsupervised Semantic Segmentation. (arXiv:2310.07379v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07379">http://arxiv.org/abs/2310.07379</a></li>
+<li>Code URL: https://github.com/byungkwanlee/causal-unsupervised-segmentation</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07379]] Causal Unsupervised Semantic Segmentation(http://arxiv.org/abs/2310.07379)</code></li>
+<li>Summary: <p>Unsupervised semantic segmentation aims to achieve high-quality semantic
+grouping without human-labeled annotations. With the advent of self-supervised
+pre-training, various frameworks utilize the pre-trained features to train
+prediction heads for unsupervised dense prediction. However, a significant
+challenge in this unsupervised setup is determining the appropriate level of
+clustering required for segmenting concepts. To address it, we propose a novel
+framework, CAusal Unsupervised Semantic sEgmentation (CAUSE), which leverages
+insights from causal inference. Specifically, we bridge intervention-oriented
+approach (i.e., frontdoor adjustment) to define suitable two-step tasks for
+unsupervised prediction. The first step involves constructing a concept
+clusterbook as a mediator, which represents possible concept prototypes at
+different levels of granularity in a discretized form. Then, the mediator
+establishes an explicit link to the subsequent concept-wise self-supervised
+learning for pixel-level grouping. Through extensive experiments and analyses
+on various datasets, we corroborate the effectiveness of CAUSE and achieve
+state-of-the-art performance in unsupervised semantic segmentation.
+</p></li>
+</ul>
+
+<h3>Title: Heuristic Vision Pre-Training with Self-Supervised and Supervised Multi-Task Learning. (arXiv:2310.07510v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07510">http://arxiv.org/abs/2310.07510</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07510]] Heuristic Vision Pre-Training with Self-Supervised and Supervised Multi-Task Learning(http://arxiv.org/abs/2310.07510)</code></li>
+<li>Summary: <p>To mimic human vision with the way of recognizing the diverse and open world,
+foundation vision models are much critical. While recent techniques of
+self-supervised learning show the promising potentiality of this mission, we
+argue that signals from labelled data are also important for common-sense
+recognition, and properly chosen pre-text tasks can facilitate the efficiency
+of vision representation learning. To this end, we propose a novel pre-training
+framework by adopting both self-supervised and supervised visual pre-text tasks
+in a multi-task manner. Specifically, given an image, we take a heuristic way
+by considering its intrinsic style properties, inside objects with their
+locations and correlations, and how it looks like in 3D space for basic visual
+understanding. However, large-scale object bounding boxes and correlations are
+usually hard to achieve. Alternatively, we develop a hybrid method by
+leveraging both multi-label classification and self-supervised learning. On the
+one hand, under the multi-label supervision, the pre-trained model can explore
+the detailed information of an image, e.g., image types, objects, and part of
+semantic relations. On the other hand, self-supervised learning tasks, with
+respect to Masked Image Modeling (MIM) and contrastive learning, can help the
+model learn pixel details and patch correlations. Results show that our
+pre-trained models can deliver results on par with or better than
+state-of-the-art (SOTA) results on multiple visual tasks. For example, with a
+vanilla Swin-B backbone, we achieve 85.3\% top-1 accuracy on ImageNet-1K
+classification, 47.9 box AP on COCO object detection for Mask R-CNN, and 50.6
+mIoU on ADE-20K semantic segmentation when using Upernet. The performance shows
+the ability of our vision foundation model to serve general purpose vision
+tasks.
+</p></li>
+</ul>
+
+<h3>Title: S4C: Self-Supervised Semantic Scene Completion with Neural Fields. (arXiv:2310.07522v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07522">http://arxiv.org/abs/2310.07522</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07522]] S4C: Self-Supervised Semantic Scene Completion with Neural Fields(http://arxiv.org/abs/2310.07522)</code></li>
+<li>Summary: <p>3D semantic scene understanding is a fundamental challenge in computer
+vision. It enables mobile agents to autonomously plan and navigate arbitrary
+environments. SSC formalizes this challenge as jointly estimating dense
+geometry and semantic information from sparse observations of a scene. Current
+methods for SSC are generally trained on 3D ground truth based on aggregated
+LiDAR scans. This process relies on special sensors and annotation by hand
+which are costly and do not scale well. To overcome this issue, our work
+presents the first self-supervised approach to SSC called S4C that does not
+rely on 3D ground truth data. Our proposed method can reconstruct a scene from
+a single image and only relies on videos and pseudo segmentation ground truth
+generated from off-the-shelf image segmentation network during training. Unlike
+existing methods, which use discrete voxel grids, we represent scenes as
+implicit semantic fields. This formulation allows querying any point within the
+camera frustum for occupancy and semantic class. Our architecture is trained
+through rendering-based self-supervised losses. Nonetheless, our method
+achieves performance close to fully supervised state-of-the-art methods.
+Additionally, our method demonstrates strong generalization capabilities and
+can synthesize accurate segmentation maps for far away viewpoints.
+</p></li>
+</ul>
+
+<h3>Title: Self-supervised Pocket Pretraining via Protein Fragment-Surroundings Alignment. (arXiv:2310.07229v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07229">http://arxiv.org/abs/2310.07229</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07229]] Self-supervised Pocket Pretraining via Protein Fragment-Surroundings Alignment(http://arxiv.org/abs/2310.07229)</code></li>
+<li>Summary: <p>Pocket representations play a vital role in various biomedical applications,
+such as druggability estimation, ligand affinity prediction, and de novo drug
+design. While existing geometric features and pretrained representations have
+demonstrated promising results, they usually treat pockets independent of
+ligands, neglecting the fundamental interactions between them. However, the
+limited pocket-ligand complex structures available in the PDB database (less
+than 100 thousand non-redundant pairs) hampers large-scale pretraining
+endeavors for interaction modeling. To address this constraint, we propose a
+novel pocket pretraining approach that leverages knowledge from high-resolution
+atomic protein structures, assisted by highly effective pretrained small
+molecule representations. By segmenting protein structures into drug-like
+fragments and their corresponding pockets, we obtain a reasonable simulation of
+ligand-receptor interactions, resulting in the generation of over 5 million
+complexes. Subsequently, the pocket encoder is trained in a contrastive manner
+to align with the representation of pseudo-ligand furnished by some pretrained
+small molecule encoders. Our method, named ProFSA, achieves state-of-the-art
+performance across various tasks, including pocket druggability prediction,
+pocket matching, and ligand binding affinity prediction. Notably, ProFSA
+surpasses other pretraining methods by a substantial margin. Moreover, our work
+opens up a new avenue for mitigating the scarcity of protein-ligand complex
+data through the utilization of high-quality and diverse protein structure
+databases.
+</p></li>
+</ul>
+
+<h3>Title: Hierarchical Decomposition of Prompt-Based Continual Learning: Rethinking Obscured Sub-optimality. (arXiv:2310.07234v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07234">http://arxiv.org/abs/2310.07234</a></li>
+<li>Code URL: https://github.com/thu-ml/hide-prompt</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07234]] Hierarchical Decomposition of Prompt-Based Continual Learning: Rethinking Obscured Sub-optimality(http://arxiv.org/abs/2310.07234)</code></li>
+<li>Summary: <p>Prompt-based continual learning is an emerging direction in leveraging
+pre-trained knowledge for downstream continual learning, and has almost reached
+the performance pinnacle under supervised pre-training. However, our empirical
+research reveals that the current strategies fall short of their full potential
+under the more realistic self-supervised pre-training, which is essential for
+handling vast quantities of unlabeled data in practice. This is largely due to
+the difficulty of task-specific knowledge being incorporated into instructed
+representations via prompt parameters and predicted by uninstructed
+representations at test time. To overcome the exposed sub-optimality, we
+conduct a theoretical analysis of the continual learning objective in the
+context of pre-training, and decompose it into hierarchical components:
+within-task prediction, task-identity inference, and task-adaptive prediction.
+Following these empirical and theoretical insights, we propose Hierarchical
+Decomposition (HiDe-)Prompt, an innovative approach that explicitly optimizes
+the hierarchical components with an ensemble of task-specific prompts and
+statistics of both uninstructed and instructed representations, further with
+the coordination of a contrastive regularization strategy. Our extensive
+experiments demonstrate the superior performance of HiDe-Prompt and its
+robustness to pre-training paradigms in continual learning (e.g., up to 15.01%
+and 9.61% lead on Split CIFAR-100 and Split ImageNet-R, respectively). Our code
+is available at \url{https://github.com/thu-ml/HiDe-Prompt}.
+</p></li>
+</ul>
+
+<h3>Title: GraphControl: Adding Conditional Control to Universal Graph Pre-trained Models for Graph Domain Transfer Learning. (arXiv:2310.07365v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07365">http://arxiv.org/abs/2310.07365</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07365]] GraphControl: Adding Conditional Control to Universal Graph Pre-trained Models for Graph Domain Transfer Learning(http://arxiv.org/abs/2310.07365)</code></li>
+<li>Summary: <p>Graph-structured data is ubiquitous in the world which models complex
+relationships between objects, enabling various Web applications. Daily
+influxes of unlabeled graph data on the Web offer immense potential for these
+applications. Graph self-supervised algorithms have achieved significant
+success in acquiring generic knowledge from abundant unlabeled graph data.
+These pre-trained models can be applied to various downstream Web applications,
+saving training time and improving downstream (target) performance. However,
+different graphs, even across seemingly similar domains, can differ
+significantly in terms of attribute semantics, posing difficulties, if not
+infeasibility, for transferring the pre-trained models to downstream tasks.
+Concretely speaking, for example, the additional task-specific node information
+in downstream tasks (specificity) is usually deliberately omitted so that the
+pre-trained representation (transferability) can be leveraged. The trade-off as
+such is termed as "transferability-specificity dilemma" in this work. To
+address this challenge, we introduce an innovative deployment module coined as
+GraphControl, motivated by ControlNet, to realize better graph domain transfer
+learning. Specifically, by leveraging universal structural pre-trained models
+and GraphControl, we align the input space across various graphs and
+incorporate unique characteristics of target data as conditional inputs. These
+conditions will be progressively integrated into the model during fine-tuning
+or prompt tuning through ControlNet, facilitating personalized deployment.
+Extensive experiments show that our method significantly enhances the
+adaptability of pre-trained models on target attributed datasets, achieving
+1.4-3x performance gain. Furthermore, it outperforms training-from-scratch
+methods on target data with a comparable margin and exhibits faster
+convergence.
+</p></li>
+</ul>
+
+<h3>Title: NuTime: Numerically Multi-Scaled Embedding for Large-Scale Time Series Pretraining. (arXiv:2310.07402v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07402">http://arxiv.org/abs/2310.07402</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07402]] NuTime: Numerically Multi-Scaled Embedding for Large-Scale Time Series Pretraining(http://arxiv.org/abs/2310.07402)</code></li>
+<li>Summary: <p>Recent research on time-series self-supervised models shows great promise in
+learning semantic representations. However, it has been limited to small-scale
+datasets, e.g., thousands of temporal sequences. In this work, we make key
+technical contributions that are tailored to the numerical properties of
+time-series data and allow the model to scale to large datasets, e.g., millions
+of temporal sequences. We adopt the Transformer architecture by first
+partitioning the input into non-overlapping windows. Each window is then
+characterized by its normalized shape and two scalar values denoting the mean
+and standard deviation within each window. To embed scalar values that may
+possess arbitrary numerical scales to high-dimensional vectors, we propose a
+numerically multi-scaled embedding module enumerating all possible scales for
+the scalar values. The model undergoes pretraining using the proposed
+numerically multi-scaled embedding with a simple contrastive objective on a
+large-scale dataset containing over a million sequences. We study its transfer
+performance on a number of univariate and multivariate classification
+benchmarks. Our method exhibits remarkable improvement against previous
+representation learning approaches and establishes the new state of the art,
+even compared with domain-specific non-learning-based methods.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Risk Assessment and Statistical Significance in the Age of Foundation Models. (arXiv:2310.07132v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07132">http://arxiv.org/abs/2310.07132</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07132]] Risk Assessment and Statistical Significance in the Age of Foundation Models(http://arxiv.org/abs/2310.07132)</code></li>
+<li>Summary: <p>We propose a distributional framework for assessing socio-technical risks of
+foundation models with quantified statistical significance. Our approach hinges
+on a new statistical relative testing based on first and second order
+stochastic dominance of real random variables. We show that the second order
+statistics in this test are linked to mean-risk models commonly used in
+econometrics and mathematical finance to balance risk and utility when choosing
+between alternatives. Using this framework, we formally develop a risk-aware
+approach for foundation model selection given guardrails quantified by
+specified metrics. Inspired by portfolio optimization and selection theory in
+mathematical finance, we define a \emph{metrics portfolio} for each model as a
+means to aggregate a collection of metrics, and perform model selection based
+on the stochastic dominance of these portfolios. The statistical significance
+of our tests is backed theoretically by an asymptotic analysis via central
+limit theorems instantiated in practice via a bootstrap variance estimate. We
+use our framework to compare various large language models regarding risks
+related to drifting from instructions and outputting toxic content.
+</p></li>
+</ul>
+
+<h3>Title: SAM-OCTA: Prompting Segment-Anything for OCTA Image Segmentation. (arXiv:2310.07183v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07183">http://arxiv.org/abs/2310.07183</a></li>
+<li>Code URL: https://github.com/shellredia/sam-octa</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07183]] SAM-OCTA: Prompting Segment-Anything for OCTA Image Segmentation(http://arxiv.org/abs/2310.07183)</code></li>
+<li>Summary: <p>In the analysis of optical coherence tomography angiography (OCTA) images,
+the operation of segmenting specific targets is necessary. Existing methods
+typically train on supervised datasets with limited samples (approximately a
+few hundred), which can lead to overfitting. To address this, the low-rank
+adaptation technique is adopted for foundation model fine-tuning and proposed
+corresponding prompt point generation strategies to process various
+segmentation tasks on OCTA datasets. This method is named SAM-OCTA and has been
+experimented on the publicly available OCTA-500 and ROSE datasets. This method
+achieves or approaches state-of-the-art segmentation performance metrics. The
+effect and applicability of prompt points are discussed in detail for the
+retinal vessel, foveal avascular zone, capillary, artery, and vein segmentation
+tasks. Furthermore, SAM-OCTA accomplishes local vessel segmentation and
+effective artery-vein segmentation, which was not well-solved in previous
+works. The code is available at https://github.com/ShellRedia/SAM-OCTA.
+</p></li>
+</ul>
+
+<h3>Title: Towards Foundation Models for Learning on Tabular Data. (arXiv:2310.07338v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07338">http://arxiv.org/abs/2310.07338</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07338]] Towards Foundation Models for Learning on Tabular Data(http://arxiv.org/abs/2310.07338)</code></li>
+<li>Summary: <p>Learning on tabular data underpins numerous real-world applications. Despite
+considerable efforts in developing effective learning models for tabular data,
+current transferable tabular models remain in their infancy, limited by either
+the lack of support for direct instruction following in new tasks or the
+neglect of acquiring foundational knowledge and capabilities from diverse
+tabular datasets. In this paper, we propose Tabular Foundation Models (TabFMs)
+to overcome these limitations. TabFMs harness the potential of generative
+tabular learning, employing a pre-trained large language model (LLM) as the
+base model and fine-tuning it using purpose-designed objectives on an extensive
+range of tabular datasets. This approach endows TabFMs with a profound
+understanding and universal capabilities essential for learning on tabular
+data. Our evaluations underscore TabFM's effectiveness: not only does it
+significantly excel in instruction-following tasks like zero-shot and
+in-context inference, but it also showcases performance that approaches, and in
+instances, even transcends, the renowned yet mysterious closed-source LLMs like
+GPT-4. Furthermore, when fine-tuning with scarce data, our model achieves
+remarkable efficiency and maintains competitive performance with abundant
+training data. Finally, while our results are promising, we also delve into
+TabFM's limitations and potential opportunities, aiming to stimulate and
+expedite future research on developing more potent TabFMs.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Mitigating stereotypical biases in text to image generative systems. (arXiv:2310.06904v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.06904">http://arxiv.org/abs/2310.06904</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.06904]] Mitigating stereotypical biases in text to image generative systems(http://arxiv.org/abs/2310.06904)</code></li>
+<li>Summary: <p>State-of-the-art generative text-to-image models are known to exhibit social
+biases and over-represent certain groups like people of perceived lighter skin
+tones and men in their outcomes. In this work, we propose a method to mitigate
+such biases and ensure that the outcomes are fair across different groups of
+people. We do this by finetuning text-to-image models on synthetic data that
+varies in perceived skin tones and genders constructed from diverse text
+prompts. These text prompts are constructed from multiplicative combinations of
+ethnicities, genders, professions, age groups, and so on, resulting in diverse
+synthetic data. Our diversity finetuned (DFT) model improves the group fairness
+metric by 150% for perceived skin tone and 97.7% for perceived gender. Compared
+to baselines, DFT models generate more people with perceived darker skin tone
+and more women. To foster open research, we will release all text prompts and
+code to generate training images.
+</p></li>
+</ul>
+
+<h3>Title: Utilizing Synthetic Data for Medical Vision-Language Pre-training: Bypassing the Need for Real Images. (arXiv:2310.07027v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07027">http://arxiv.org/abs/2310.07027</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07027]] Utilizing Synthetic Data for Medical Vision-Language Pre-training: Bypassing the Need for Real Images(http://arxiv.org/abs/2310.07027)</code></li>
+<li>Summary: <p>Medical Vision-Language Pre-training (VLP) learns representations jointly
+from medical images and paired radiology reports. It typically requires
+large-scale paired image-text datasets to achieve effective pre-training for
+both the image encoder and text encoder. The advent of text-guided generative
+models raises a compelling question: Can VLP be implemented solely with
+synthetic images generated from genuine radiology reports, thereby mitigating
+the need for extensively pairing and curating image-text datasets? In this
+work, we scrutinize this very question by examining the feasibility and
+effectiveness of employing synthetic images for medical VLP. We replace real
+medical images with their synthetic equivalents, generated from authentic
+medical reports. Utilizing three state-of-the-art VLP algorithms, we
+exclusively train on these synthetic samples. Our empirical evaluation across
+three subsequent tasks, namely image classification, semantic segmentation and
+object detection, reveals that the performance achieved through synthetic data
+is on par with or even exceeds that obtained with real images. As a pioneering
+contribution to this domain, we introduce a large-scale synthetic medical image
+dataset, paired with anonymized real radiology reports. This alleviates the
+need of sharing medical images, which are not easy to curate and share in
+practice. The code and the dataset will be made publicly available upon paper
+acceptance.
+</p></li>
+</ul>
+
+<h3>Title: Crowd Counting in Harsh Weather using Image Denoising with Pix2Pix GANs. (arXiv:2310.07245v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07245">http://arxiv.org/abs/2310.07245</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07245]] Crowd Counting in Harsh Weather using Image Denoising with Pix2Pix GANs(http://arxiv.org/abs/2310.07245)</code></li>
+<li>Summary: <p>Visual crowd counting estimates the density of the crowd using deep learning
+models such as convolution neural networks (CNNs). The performance of the model
+heavily relies on the quality of the training data that constitutes crowd
+images. In harsh weather such as fog, dust, and low light conditions, the
+inference performance may severely degrade on the noisy and blur images. In
+this paper, we propose the use of Pix2Pix generative adversarial network (GAN)
+to first denoise the crowd images prior to passing them to the counting model.
+A Pix2Pix network is trained using synthetic noisy images generated from
+original crowd images and then the pretrained generator is then used in the
+inference engine to estimate the crowd density in unseen, noisy crowd images.
+The performance is tested on JHU-Crowd dataset to validate the significance of
+the proposed method particularly when high reliability and accuracy are
+required.
+</p></li>
+</ul>
+
+<h3>Title: On the Impact of Cross-Domain Data on German Language Models. (arXiv:2310.07321v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07321">http://arxiv.org/abs/2310.07321</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07321]] On the Impact of Cross-Domain Data on German Language Models(http://arxiv.org/abs/2310.07321)</code></li>
+<li>Summary: <p>Traditionally, large language models have been either trained on general web
+crawls or domain-specific data. However, recent successes of generative large
+language models, have shed light on the benefits of cross-domain datasets. To
+examine the significance of prioritizing data diversity over quality, we
+present a German dataset comprising texts from five domains, along with another
+dataset aimed at containing high-quality data. Through training a series of
+models ranging between 122M and 750M parameters on both datasets, we conduct a
+comprehensive benchmark on multiple downstream tasks. Our findings demonstrate
+that the models trained on the cross-domain dataset outperform those trained on
+quality data alone, leading to improvements up to $4.45\%$ over the previous
+state-of-the-art. The models are available at
+https://huggingface.co/ikim-uk-essen
+</p></li>
+</ul>
+
+<h3>Title: LLMs Killed the Script Kiddie: How Agents Supported by Large Language Models Change the Landscape of Network Threat Testing. (arXiv:2310.06936v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.06936">http://arxiv.org/abs/2310.06936</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.06936]] LLMs Killed the Script Kiddie: How Agents Supported by Large Language Models Change the Landscape of Network Threat Testing(http://arxiv.org/abs/2310.06936)</code></li>
+<li>Summary: <p>In this paper, we explore the potential of Large Language Models (LLMs) to
+reason about threats, generate information about tools, and automate cyber
+campaigns. We begin with a manual exploration of LLMs in supporting specific
+threat-related actions and decisions. We proceed by automating the decision
+process in a cyber campaign. We present prompt engineering approaches for a
+plan-act-report loop for one action of a threat campaign and and a prompt
+chaining design that directs the sequential decision process of a multi-action
+campaign. We assess the extent of LLM's cyber-specific knowledge w.r.t the
+short campaign we demonstrate and provide insights into prompt design for
+eliciting actionable responses. We discuss the potential impact of LLMs on the
+threat landscape and the ethical considerations of using LLMs for accelerating
+threat actor capabilities. We report a promising, yet concerning, application
+of generative AI to cyber threats. However, the LLM's capabilities to deal with
+more complex networks, sophisticated vulnerabilities, and the sensitivity of
+prompts are open questions. This research should spur deliberations over the
+inevitable advancements in LLM-supported cyber adversarial landscape.
+</p></li>
+</ul>
+
+<h3>Title: On sparse regression, Lp-regularization, and automated model discovery. (arXiv:2310.06872v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.06872">http://arxiv.org/abs/2310.06872</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.06872]] On sparse regression, Lp-regularization, and automated model discovery(http://arxiv.org/abs/2310.06872)</code></li>
+<li>Summary: <p>Sparse regression and feature extraction are the cornerstones of knowledge
+discovery from massive data. Their goal is to discover interpretable and
+predictive models that provide simple relationships among scientific variables.
+While the statistical tools for model discovery are well established in the
+context of linear regression, their generalization to nonlinear regression in
+material modeling is highly problem-specific and insufficiently understood.
+Here we explore the potential of neural networks for automatic model discovery
+and induce sparsity by a hybrid approach that combines two strategies:
+regularization and physical constraints. We integrate the concept of Lp
+regularization for subset selection with constitutive neural networks that
+leverage our domain knowledge in kinematics and thermodynamics. We train our
+networks with both, synthetic and real data, and perform several thousand
+discovery runs to infer common guidelines and trends: L2 regularization or
+ridge regression is unsuitable for model discovery; L1 regularization or lasso
+promotes sparsity, but induces strong bias; only L0 regularization allows us to
+transparently fine-tune the trade-off between interpretability and
+predictability, simplicity and accuracy, and bias and variance. With these
+insights, we demonstrate that Lp regularized constitutive neural networks can
+simultaneously discover both, interpretable models and physically meaningful
+parameters. We anticipate that our findings will generalize to alternative
+discovery techniques such as sparse and symbolic regression, and to other
+domains such as biology, chemistry, or medicine. Our ability to automatically
+discover material models from data could have tremendous applications in
+generative material design and open new opportunities to manipulate matter,
+alter properties of existing materials, and discover new materials with
+user-defined properties.
+</p></li>
+</ul>
+
+<h3>Title: ProbTS: A Unified Toolkit to Probe Deep Time-series Forecasting. (arXiv:2310.07446v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07446">http://arxiv.org/abs/2310.07446</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07446]] ProbTS: A Unified Toolkit to Probe Deep Time-series Forecasting(http://arxiv.org/abs/2310.07446)</code></li>
+<li>Summary: <p>Time-series forecasting serves as a linchpin in a myriad of applications,
+spanning various domains. With the growth of deep learning, this arena has
+bifurcated into two salient branches: one focuses on crafting specific neural
+architectures tailored for time series, and the other harnesses advanced deep
+generative models for probabilistic forecasting. While both branches have made
+significant progress, their differences across data scenarios, methodological
+focuses, and decoding schemes pose profound, yet unexplored, research
+questions. To bridge this knowledge chasm, we introduce ProbTS, a pioneering
+toolkit developed to synergize and compare these two distinct branches. Endowed
+with a unified data module, a modularized model module, and a comprehensive
+evaluator module, ProbTS allows us to revisit and benchmark leading methods
+from both branches. The scrutiny with ProbTS highlights their distinct
+characteristics, relative strengths and weaknesses, and areas that need further
+exploration. Our analyses point to new avenues for research, aiming for more
+effective time-series forecasting.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: A Unified Remote Sensing Anomaly Detector Across Modalities and Scenes via Deviation Relationship Learning. (arXiv:2310.07511v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07511">http://arxiv.org/abs/2310.07511</a></li>
+<li>Code URL: https://github.com/jingtao-li-cver/uniadrs</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07511]] A Unified Remote Sensing Anomaly Detector Across Modalities and Scenes via Deviation Relationship Learning(http://arxiv.org/abs/2310.07511)</code></li>
+<li>Summary: <p>Remote sensing anomaly detector can find the objects deviating from the
+background as potential targets. Given the diversity in earth anomaly types, a
+unified anomaly detector across modalities and scenes should be cost-effective
+and flexible to new earth observation sources and anomaly types. However, the
+current anomaly detectors are limited to a single modality and single scene,
+since they aim to learn the varying background distribution. Motivated by the
+universal anomaly deviation pattern, in that anomalies exhibit deviations from
+their local context, we exploit this characteristic to build a unified anomaly
+detector. Firstly, we reformulate the anomaly detection task as an undirected
+bilayer graph based on the deviation relationship, where the anomaly score is
+modeled as the conditional probability, given the pattern of the background and
+normal objects. The learning objective is then expressed as a conditional
+probability ranking problem. Furthermore, we design an instantiation of the
+reformulation in the data, architecture, and optimization aspects. Simulated
+spectral and spatial anomalies drive the instantiated architecture. The model
+is optimized directly for the conditional probability ranking. The proposed
+model was validated in five modalities including the hyperspectral, visible
+light, synthetic aperture radar (SAR), infrared and low light to show its
+unified detection ability.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Syntax Error-Free and Generalizable Tool Use for LLMs via Finite-State Decoding. (arXiv:2310.07075v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07075">http://arxiv.org/abs/2310.07075</a></li>
+<li>Code URL: https://github.com/chenhongqiao/tooldec</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07075]] Syntax Error-Free and Generalizable Tool Use for LLMs via Finite-State Decoding(http://arxiv.org/abs/2310.07075)</code></li>
+<li>Summary: <p>Large language models (LLMs) have shown promising capabilities in using
+external tools to solve complex problems. However, existing approaches either
+involve fine-tuning on tool demonstrations, which do not generalize to new
+tools without additional training, or providing tool documentation in context,
+limiting the number of tools. Both approaches often generate syntactically
+invalid tool calls. In this paper, we propose ToolDec, a finite-state
+machine-guided decoding algorithm for tool-augmented LLMs. ToolDec eliminates
+tool-related errors for any tool-augmented LLMs by ensuring valid tool names
+and type-conforming arguments. Furthermore, ToolDec enables LLM to effectively
+select tools using only the information contained in their names, with no need
+for fine-tuning or in-context documentation. We evaluated multiple prior
+methods and their ToolDec-enhanced versions on a variety of tasks involving
+tools like math functions, knowledge graph relations, and complex real-world
+RESTful APIs. Our experiments show that ToolDec reduces syntactic errors to
+zero, consequently achieving significantly better performance and as much as a
+2x speedup. We also show that ToolDec achieves superior generalization
+performance on unseen tools, performing up to 8x better than the baselines.
+</p></li>
+</ul>
+
+<h3>Title: Argumentative Stance Prediction: An Exploratory Study on Multimodality and Few-Shot Learning. (arXiv:2310.07093v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07093">http://arxiv.org/abs/2310.07093</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07093]] Argumentative Stance Prediction: An Exploratory Study on Multimodality and Few-Shot Learning(http://arxiv.org/abs/2310.07093)</code></li>
+<li>Summary: <p>To advance argumentative stance prediction as a multimodal problem, the First
+Shared Task in Multimodal Argument Mining hosted stance prediction in crucial
+social topics of gun control and abortion. Our exploratory study attempts to
+evaluate the necessity of images for stance prediction in tweets and compare
+out-of-the-box text-based large-language models (LLM) in few-shot settings
+against fine-tuned unimodal and multimodal models. Our work suggests an
+ensemble of fine-tuned text-based language models (0.817 F1-score) outperforms
+both the multimodal (0.677 F1-score) and text-based few-shot prediction using a
+recent state-of-the-art LLM (0.550 F1-score). In addition to the differences in
+performance, our findings suggest that the multimodal models tend to perform
+better when image content is summarized as natural language over their native
+pixel structure and, using in-context examples improves few-shot performance of
+LLMs.
+</p></li>
+</ul>
+
+<h3>Title: Ethical Reasoning over Moral Alignment: A Case and Framework for In-Context Ethical Policies in LLMs. (arXiv:2310.07251v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07251">http://arxiv.org/abs/2310.07251</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07251]] Ethical Reasoning over Moral Alignment: A Case and Framework for In-Context Ethical Policies in LLMs(http://arxiv.org/abs/2310.07251)</code></li>
+<li>Summary: <p>In this position paper, we argue that instead of morally aligning LLMs to
+specific set of ethical principles, we should infuse generic ethical reasoning
+capabilities into them so that they can handle value pluralism at a global
+scale. When provided with an ethical policy, an LLM should be capable of making
+decisions that are ethically consistent to the policy. We develop a framework
+that integrates moral dilemmas with moral principles pertaining to different
+foramlisms of normative ethics, and at different levels of abstractions.
+Initial experiments with GPT-x models shows that while GPT-4 is a nearly
+perfect ethical reasoner, the models still have bias towards the moral values
+of Western and English speaking societies.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
