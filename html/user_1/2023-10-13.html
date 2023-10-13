@@ -1,0 +1,799 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Towards the Vulnerability of Watermarking Artificial Intelligence Generated Content. (arXiv:2310.07726v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07726">http://arxiv.org/abs/2310.07726</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07726]] Towards the Vulnerability of Watermarking Artificial Intelligence Generated Content(http://arxiv.org/abs/2310.07726)</code></li>
+<li>Summary: <p>Artificial Intelligence Generated Content (AIGC) is gaining great popularity
+in social media, with many commercial services available. These services
+leverage advanced generative models, such as latent diffusion models and large
+language models, to generate creative content (e.g., realistic images, fluent
+sentences) for users. The usage of such generated content needs to be highly
+regulated, as the service providers need to ensure the users do not violate the
+usage policies (e.g., abuse for commercialization, generating and distributing
+unsafe content).
+</p>
+<p>Numerous watermarking approaches have been proposed recently. However, in
+this paper, we show that an adversary can easily break these watermarking
+mechanisms. Specifically, we consider two possible attacks. (1) Watermark
+removal: the adversary can easily erase the embedded watermark from the
+generated content and then use it freely without the regulation of the service
+provider. (2) Watermark forge: the adversary can create illegal content with
+forged watermarks from another user, causing the service provider to make wrong
+attributions. We propose WMaGi, a unified framework to achieve both attacks in
+a holistic way. The key idea is to leverage a pre-trained diffusion model for
+content processing, and a generative adversarial network for watermark removing
+or forging. We evaluate WMaGi on different datasets and embedding setups. The
+results prove that it can achieve high success rates while maintaining the
+quality of the generated content. Compared with existing diffusion model-based
+attacks, WMaGi is 5,050$\sim$11,000$\times$ faster.
+</p></li>
+</ul>
+
+<h3>Title: DrivingDiffusion: Layout-Guided multi-view driving scene video generation with latent diffusion model. (arXiv:2310.07771v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07771">http://arxiv.org/abs/2310.07771</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07771]] DrivingDiffusion: Layout-Guided multi-view driving scene video generation with latent diffusion model(http://arxiv.org/abs/2310.07771)</code></li>
+<li>Summary: <p>With the increasing popularity of autonomous driving based on the powerful
+and unified bird's-eye-view (BEV) representation, a demand for high-quality and
+large-scale multi-view video data with accurate annotation is urgently
+required. However, such large-scale multi-view data is hard to obtain due to
+expensive collection and annotation costs. To alleviate the problem, we propose
+a spatial-temporal consistent diffusion framework DrivingDiffusion, to generate
+realistic multi-view videos controlled by 3D layout. There are three challenges
+when synthesizing multi-view videos given a 3D layout: How to keep 1)
+cross-view consistency and 2) cross-frame consistency? 3) How to guarantee the
+quality of the generated instances? Our DrivingDiffusion solves the problem by
+cascading the multi-view single-frame image generation step, the single-view
+video generation step shared by multiple cameras, and post-processing that can
+handle long video generation. In the multi-view model, the consistency of
+multi-view images is ensured by information exchange between adjacent cameras.
+In the temporal model, we mainly query the information that needs attention in
+subsequent frame generation from the multi-view images of the first frame. We
+also introduce the local prompt to effectively improve the quality of generated
+instances. In post-processing, we further enhance the cross-view consistency of
+subsequent frames and extend the video length by employing temporal sliding
+window algorithm. Without any extra cost, our model can generate large-scale
+realistic multi-camera driving videos in complex urban scenes, fueling the
+downstream driving tasks. The code will be made publicly available.
+</p></li>
+</ul>
+
+<h3>Title: Efficient Integrators for Diffusion Generative Models. (arXiv:2310.07894v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07894">http://arxiv.org/abs/2310.07894</a></li>
+<li>Code URL: https://github.com/mandt-lab/PSLD</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07894]] Efficient Integrators for Diffusion Generative Models(http://arxiv.org/abs/2310.07894)</code></li>
+<li>Summary: <p>Diffusion models suffer from slow sample generation at inference time.
+Therefore, developing a principled framework for fast deterministic/stochastic
+sampling for a broader class of diffusion models is a promising direction. We
+propose two complementary frameworks for accelerating sample generation in
+pre-trained models: Conjugate Integrators and Splitting Integrators. Conjugate
+integrators generalize DDIM, mapping the reverse diffusion dynamics to a more
+amenable space for sampling. In contrast, splitting-based integrators, commonly
+used in molecular dynamics, reduce the numerical simulation error by cleverly
+alternating between numerical updates involving the data and auxiliary
+variables. After extensively studying these methods empirically and
+theoretically, we present a hybrid method that leads to the best-reported
+performance for diffusion models in augmented spaces. Applied to Phase Space
+Langevin Diffusion [Pandey &amp; Mandt, 2023] on CIFAR-10, our deterministic and
+stochastic samplers achieve FID scores of 2.11 and 2.36 in only 100 network
+function evaluations (NFE) as compared to 2.57 and 2.63 for the best-performing
+baselines, respectively. Our code and model checkpoints will be made publicly
+available at \url{https://github.com/mandt-lab/PSLD}.
+</p></li>
+</ul>
+
+<h3>Title: Consistent123: Improve Consistency for One Image to 3D Object Synthesis. (arXiv:2310.08092v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08092">http://arxiv.org/abs/2310.08092</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08092]] Consistent123: Improve Consistency for One Image to 3D Object Synthesis(http://arxiv.org/abs/2310.08092)</code></li>
+<li>Summary: <p>Large image diffusion models enable novel view synthesis with high quality
+and excellent zero-shot capability. However, such models based on
+image-to-image translation have no guarantee of view consistency, limiting the
+performance for downstream tasks like 3D reconstruction and image-to-3D
+generation. To empower consistency, we propose Consistent123 to synthesize
+novel views simultaneously by incorporating additional cross-view attention
+layers and the shared self-attention mechanism. The proposed attention
+mechanism improves the interaction across all synthesized views, as well as the
+alignment between the condition view and novel views. In the sampling stage,
+such architecture supports simultaneously generating an arbitrary number of
+views while training at a fixed length. We also introduce a progressive
+classifier-free guidance strategy to achieve the trade-off between texture and
+geometry for synthesized object views. Qualitative and quantitative experiments
+show that Consistent123 outperforms baselines in view consistency by a large
+margin. Furthermore, we demonstrate a significant improvement of Consistent123
+on varying downstream tasks, showing its great potential in the 3D generation
+field. The project page is available at consistent-123.github.io.
+</p></li>
+</ul>
+
+<h3>Title: Interpretable Diffusion via Information Decomposition. (arXiv:2310.07972v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07972">http://arxiv.org/abs/2310.07972</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07972]] Interpretable Diffusion via Information Decomposition(http://arxiv.org/abs/2310.07972)</code></li>
+<li>Summary: <p>Denoising diffusion models enable conditional generation and density modeling
+of complex relationships like images and text. However, the nature of the
+learned relationships is opaque making it difficult to understand precisely
+what relationships between words and parts of an image are captured, or to
+predict the effect of an intervention. We illuminate the fine-grained
+relationships learned by diffusion models by noticing a precise relationship
+between diffusion and information decomposition. Exact expressions for mutual
+information and conditional mutual information can be written in terms of the
+denoising model. Furthermore, pointwise estimates can be easily estimated as
+well, allowing us to ask questions about the relationships between specific
+images and captions. Decomposing information even further to understand which
+variables in a high-dimensional space carry information is a long-standing
+problem. For diffusion models, we show that a natural non-negative
+decomposition of mutual information emerges, allowing us to quantify
+informative relationships between words and pixels in an image. We exploit
+these new relations to measure the compositional understanding of diffusion
+models, to do unsupervised localization of objects in images, and to measure
+effects when selectively editing images through prompt interventions.
+</p></li>
+</ul>
+
+<h3>Title: Local Graph Clustering with Noisy Labels. (arXiv:2310.08031v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08031">http://arxiv.org/abs/2310.08031</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08031]] Local Graph Clustering with Noisy Labels(http://arxiv.org/abs/2310.08031)</code></li>
+<li>Summary: <p>The growing interest in machine learning problems over graphs with additional
+node information such as texts, images, or labels has popularized methods that
+require the costly operation of processing the entire graph. Yet, little effort
+has been made to the development of fast local methods (i.e. without accessing
+the entire graph) that extract useful information from such data. To that end,
+we propose a study of local graph clustering using noisy node labels as a proxy
+for additional node information. In this setting, nodes receive initial binary
+labels based on cluster affiliation: 1 if they belong to the target cluster and
+0 otherwise. Subsequently, a fraction of these labels is flipped. We
+investigate the benefits of incorporating noisy labels for local graph
+clustering. By constructing a weighted graph with such labels, we study the
+performance of graph diffusion-based local clustering method on both the
+original and the weighted graphs. From a theoretical perspective, we consider
+recovering an unknown target cluster with a single seed node in a random graph
+with independent noisy node labels. We provide sufficient conditions on the
+label noise under which, with high probability, using diffusion in the weighted
+graph yields a more accurate recovery of the target cluster. This approach
+proves more effective than using the given labels alone or using diffusion in
+the label-free original graph. Empirically, we show that reliable node labels
+can be obtained with just a few samples from an attributed graph. Moreover,
+utilizing these labels via diffusion in the weighted graph leads to
+significantly better local clustering performance across several real-world
+datasets, improving F1 scores by up to 13%.
+</p></li>
+</ul>
+
+<h3>Title: Neural Diffusion Models. (arXiv:2310.08337v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08337">http://arxiv.org/abs/2310.08337</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08337]] Neural Diffusion Models(http://arxiv.org/abs/2310.08337)</code></li>
+<li>Summary: <p>Diffusion models have shown remarkable performance on many generative tasks.
+Despite recent success, most diffusion models are restricted in that they only
+allow linear transformation of the data distribution. In contrast, broader
+family of transformations can potentially help train generative distributions
+more efficiently, simplifying the reverse process and closing the gap between
+the true negative log-likelihood and the variational approximation. In this
+paper, we present Neural Diffusion Models (NDMs), a generalization of
+conventional diffusion models that enables defining and learning time-dependent
+non-linear transformations of data. We show how to optimise NDMs using a
+variational bound in a simulation-free setting. Moreover, we derive a
+time-continuous formulation of NDMs, which allows fast and reliable inference
+using off-the-shelf numerical ODE and SDE solvers. Finally, we demonstrate the
+utility of NDMs with learnable transformations through experiments on standard
+image generation benchmarks, including CIFAR-10, downsampled versions of
+ImageNet and CelebA-HQ. NDMs outperform conventional diffusion models in terms
+of likelihood and produce high-quality samples.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: CrIBo: Self-Supervised Learning via Cross-Image Object-Level Bootstrapping. (arXiv:2310.07855v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07855">http://arxiv.org/abs/2310.07855</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07855]] CrIBo: Self-Supervised Learning via Cross-Image Object-Level Bootstrapping(http://arxiv.org/abs/2310.07855)</code></li>
+<li>Summary: <p>Leveraging nearest neighbor retrieval for self-supervised representation
+learning has proven beneficial with object-centric images. However, this
+approach faces limitations when applied to scene-centric datasets, where
+multiple objects within an image are only implicitly captured in the global
+representation. Such global bootstrapping can lead to undesirable entanglement
+of object representations. Furthermore, even object-centric datasets stand to
+benefit from a finer-grained bootstrapping approach. In response to these
+challenges, we introduce a novel Cross-Image Object-Level Bootstrapping method
+tailored to enhance dense visual representation learning. By employing
+object-level nearest neighbor bootstrapping throughout the training, CrIBo
+emerges as a notably strong and adequate candidate for in-context learning,
+leveraging nearest neighbor retrieval at test time. CrIBo shows
+state-of-the-art performance on the latter task while being highly competitive
+in more standard downstream segmentation tasks. Our code and pretrained models
+will be publicly available upon acceptance.
+</p></li>
+</ul>
+
+<h3>Title: D2 Pruning: Message Passing for Balancing Diversity and Difficulty in Data Pruning. (arXiv:2310.07931v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07931">http://arxiv.org/abs/2310.07931</a></li>
+<li>Code URL: https://github.com/adymaharana/d2pruning</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07931]] D2 Pruning: Message Passing for Balancing Diversity and Difficulty in Data Pruning(http://arxiv.org/abs/2310.07931)</code></li>
+<li>Summary: <p>Analytical theories suggest that higher-quality data can lead to lower test
+errors in models trained on a fixed data budget. Moreover, a model can be
+trained on a lower compute budget without compromising performance if a dataset
+can be stripped of its redundancies. Coreset selection (or data pruning) seeks
+to select a subset of the training data so as to maximize the performance of
+models trained on this subset, also referred to as coreset. There are two
+dominant approaches: (1) geometry-based data selection for maximizing data
+diversity in the coreset, and (2) functions that assign difficulty scores to
+samples based on training dynamics. Optimizing for data diversity leads to a
+coreset that is biased towards easier samples, whereas, selection by difficulty
+ranking omits easy samples that are necessary for the training of deep learning
+models. This demonstrates that data diversity and importance scores are two
+complementary factors that need to be jointly considered during coreset
+selection. We represent a dataset as an undirected graph and propose a novel
+pruning algorithm, D2 Pruning, that uses forward and reverse message passing
+over this dataset graph for coreset selection. D2 Pruning updates the
+difficulty scores of each example by incorporating the difficulty of its
+neighboring examples in the dataset graph. Then, these updated difficulty
+scores direct a graph-based sampling method to select a coreset that
+encapsulates both diverse and difficult regions of the dataset space. We
+evaluate supervised and self-supervised versions of our method on various
+vision and language datasets. Results show that D2 Pruning improves coreset
+selection over previous state-of-the-art methods for up to 70% pruning rates.
+Additionally, we find that using D2 Pruning for filtering large multimodal
+datasets leads to increased diversity in the dataset and improved
+generalization of pretrained models.
+</p></li>
+</ul>
+
+<h3>Title: Self-supervised visual learning for analyzing firearms trafficking activities on the Web. (arXiv:2310.07975v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07975">http://arxiv.org/abs/2310.07975</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07975]] Self-supervised visual learning for analyzing firearms trafficking activities on the Web(http://arxiv.org/abs/2310.07975)</code></li>
+<li>Summary: <p>Automated visual firearms classification from RGB images is an important
+real-world task with applications in public space security, intelligence
+gathering and law enforcement investigations. When applied to images massively
+crawled from the World Wide Web (including social media and dark Web sites), it
+can serve as an important component of systems that attempt to identify
+criminal firearms trafficking networks, by analyzing Big Data from open-source
+intelligence. Deep Neural Networks (DNN) are the state-of-the-art methodology
+for achieving this, with Convolutional Neural Networks (CNN) being typically
+employed. The common transfer learning approach consists of pretraining on a
+large-scale, generic annotated dataset for whole-image classification, such as
+ImageNet-1k, and then finetuning the DNN on a smaller, annotated,
+task-specific, downstream dataset for visual firearms classification. Neither
+Visual Transformer (ViT) neural architectures nor Self-Supervised Learning
+(SSL) approaches have been so far evaluated on this critical task. SSL
+essentially consists of replacing the traditional supervised pretraining
+objective with an unsupervised pretext task that does not require ground-truth
+labels..
+</p></li>
+</ul>
+
+<h3>Title: EC-Depth: Exploring the consistency of self-supervised monocular depth estimation under challenging scenes. (arXiv:2310.08044v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08044">http://arxiv.org/abs/2310.08044</a></li>
+<li>Code URL: https://github.com/RuijieZhu94/EC-Depth</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08044]] EC-Depth: Exploring the consistency of self-supervised monocular depth estimation under challenging scenes(http://arxiv.org/abs/2310.08044)</code></li>
+<li>Summary: <p>Self-supervised monocular depth estimation holds significant importance in
+the fields of autonomous driving and robotics. However, existing methods are
+typically designed to train and test on clear and pristine datasets,
+overlooking the impact of various adverse conditions prevalent in real-world
+scenarios. As a result, it is commonly observed that most self-supervised
+monocular depth estimation methods struggle to perform adequately under
+challenging conditions. To address this issue, we present EC-Depth, a novel
+self-supervised two-stage training framework to achieve a robust depth
+estimation, starting from the foundation of depth prediction consistency under
+different perturbations. Leveraging the proposed perturbation-invariant depth
+consistency constraint module and the consistency-based pseudo-label selection
+module, our model attains accurate and consistent depth predictions in both
+standard and challenging scenarios. Extensive experiments substantiate the
+effectiveness of the proposed method. Moreover, our method surpasses existing
+state-of-the-art methods on KITTI, KITTI-C and DrivingStereo benchmarks,
+demonstrating its potential for enhancing the reliability of self-supervised
+monocular depth estimation models in real-world applications.
+</p></li>
+</ul>
+
+<h3>Title: DualAug: Exploiting Additional Heavy Augmentation with OOD Data Rejection. (arXiv:2310.08139v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08139">http://arxiv.org/abs/2310.08139</a></li>
+<li>Code URL: https://github.com/shuguang99/DualAug</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08139]] DualAug: Exploiting Additional Heavy Augmentation with OOD Data Rejection(http://arxiv.org/abs/2310.08139)</code></li>
+<li>Summary: <p>Data augmentation is a dominant method for reducing model overfitting and
+improving generalization. Most existing data augmentation methods tend to find
+a compromise in augmenting the data, \textit{i.e.}, increasing the amplitude of
+augmentation carefully to avoid degrading some data too much and doing harm to
+the model performance. We delve into the relationship between data augmentation
+and model performance, revealing that the performance drop with heavy
+augmentation comes from the presence of out-of-distribution (OOD) data.
+Nonetheless, as the same data transformation has different effects for
+different training samples, even for heavy augmentation, there remains part of
+in-distribution data which is beneficial to model training. Based on the
+observation, we propose a novel data augmentation method, named
+\textbf{DualAug}, to keep the augmentation in distribution as much as possible
+at a reasonable time and computational cost. We design a data mixing strategy
+to fuse augmented data from both the basic- and the heavy-augmentation
+branches. Extensive experiments on supervised image classification benchmarks
+show that DualAug improve various automated data augmentation method. Moreover,
+the experiments on semi-supervised learning and contrastive self-supervised
+learning demonstrate that our DualAug can also improve related method. Code is
+available at
+\href{https://github.com/shuguang99/DualAug}{https://github.com/shuguang99/DualAug}.
+</p></li>
+</ul>
+
+<h3>Title: Self-supervised Representation Learning From Random Data Projectors. (arXiv:2310.07756v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07756">http://arxiv.org/abs/2310.07756</a></li>
+<li>Code URL: https://github.com/layer6ai-labs/lfr</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07756]] Self-supervised Representation Learning From Random Data Projectors(http://arxiv.org/abs/2310.07756)</code></li>
+<li>Summary: <p>Self-supervised representation learning~(SSRL) has advanced considerably by
+exploiting the transformation invariance assumption under artificially designed
+data augmentations. While augmentation-based SSRL algorithms push the
+boundaries of performance in computer vision and natural language processing,
+they are often not directly applicable to other data modalities, and can
+conflict with application-specific data augmentation constraints. This paper
+presents an SSRL approach that can be applied to any data modality and network
+architecture because it does not rely on augmentations or masking.
+Specifically, we show that high-quality data representations can be learned by
+reconstructing random data projections. We evaluate the proposed approach on a
+wide range of representation learning tasks that span diverse modalities and
+real-world applications. We show that it outperforms multiple state-of-the-art
+SSRL baselines. Due to its wide applicability and strong empirical results, we
+argue that learning from randomness is a fruitful research direction worthy of
+attention and further study.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Domain-Controlled Prompt Learning. (arXiv:2310.07730v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07730">http://arxiv.org/abs/2310.07730</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07730]] Domain-Controlled Prompt Learning(http://arxiv.org/abs/2310.07730)</code></li>
+<li>Summary: <p>Large pre-trained vision-language models, such as CLIP, have shown remarkable
+generalization capabilities across various tasks when appropriate text prompts
+are provided. However, adapting these models to specialized domains, like
+remote sensing images (RSIs), medical images, etc, remains unexplored and
+challenging. Existing prompt learning methods often lack domain-awareness or
+domain-transfer mechanisms, leading to suboptimal performance due to the
+misinterpretation of specialized images in natural image patterns. To tackle
+this dilemma, we proposed a Domain-Controlled Prompt Learning for the
+specialized domains. Specifically, the large-scale specialized domain
+foundation model (LSDM) is first introduced to provide essential specialized
+domain knowledge. Using lightweight neural networks, we transfer this knowledge
+into domain biases, which control both the visual and language branches to
+obtain domain-adaptive prompts in a directly incorporating manner.
+Simultaneously, to overcome the existing overfitting challenge, we propose a
+novel noisy-adding strategy, without extra trainable parameters, to help the
+model escape the suboptimal solution in a global domain oscillation manner.
+Experimental results show our method achieves state-of-the-art performance in
+specialized domain image recognition datasets. Our code is available at
+https://anonymous.4open.science/r/DCPL-8588.
+</p></li>
+</ul>
+
+<h3>Title: Generalized Logit Adjustment: Calibrating Fine-tuned Models by Removing Label Bias in Foundation Models. (arXiv:2310.08106v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08106">http://arxiv.org/abs/2310.08106</a></li>
+<li>Code URL: https://github.com/BeierZhu/GLA</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08106]] Generalized Logit Adjustment: Calibrating Fine-tuned Models by Removing Label Bias in Foundation Models(http://arxiv.org/abs/2310.08106)</code></li>
+<li>Summary: <p>Foundation models like CLIP allow zero-shot transfer on various tasks without
+additional training data. Yet, the zero-shot performance is less competitive
+than a fully supervised one. Thus, to enhance the performance, fine-tuning and
+ensembling are also commonly adopted to better fit the downstream tasks.
+However, we argue that such prior work has overlooked the inherent biases in
+foundation models. Due to the highly imbalanced Web-scale training set, these
+foundation models are inevitably skewed toward frequent semantics, and thus the
+subsequent fine-tuning or ensembling is still biased. In this study, we
+systematically examine the biases in foundation models and demonstrate the
+efficacy of our proposed Generalized Logit Adjustment (GLA) method. Note that
+bias estimation in foundation models is challenging, as most pre-train data
+cannot be explicitly accessed like in traditional long-tailed classification
+tasks. To this end, GLA has an optimization-based bias estimation approach for
+debiasing foundation models. As our work resolves a fundamental flaw in the
+pre-training, the proposed GLA demonstrates significant improvements across a
+diverse range of tasks: it achieves 1.5 pp accuracy gains on ImageNet, an large
+average improvement (1.4-4.6 pp) on 11 few-shot datasets, 2.4 pp gains on
+long-tailed classification. Codes are in \url{https://github.com/BeierZhu/GLA}.
+</p></li>
+</ul>
+
+<h3>Title: LEMON: Lossless model expansion. (arXiv:2310.07999v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07999">http://arxiv.org/abs/2310.07999</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07999]] LEMON: Lossless model expansion(http://arxiv.org/abs/2310.07999)</code></li>
+<li>Summary: <p>Scaling of deep neural networks, especially Transformers, is pivotal for
+their surging performance and has further led to the emergence of sophisticated
+reasoning capabilities in foundation models. Such scaling generally requires
+training large models from scratch with random initialization, failing to
+leverage the knowledge acquired by their smaller counterparts, which are
+already resource-intensive to obtain. To tackle this inefficiency, we present
+$\textbf{L}$ossl$\textbf{E}$ss $\textbf{MO}$del Expansio$\textbf{N}$ (LEMON), a
+recipe to initialize scaled models using the weights of their smaller but
+pre-trained counterparts. This is followed by model training with an optimized
+learning rate scheduler tailored explicitly for the scaled models,
+substantially reducing the training time compared to training from scratch.
+Notably, LEMON is versatile, ensuring compatibility with various network
+structures, including models like Vision Transformers and BERT. Our empirical
+results demonstrate that LEMON reduces computational costs by 56.7% for Vision
+Transformers and 33.2% for BERT when compared to training from scratch.
+</p></li>
+</ul>
+
+<h3>Title: Lag-Llama: Towards Foundation Models for Time Series Forecasting. (arXiv:2310.08278v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08278">http://arxiv.org/abs/2310.08278</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08278]] Lag-Llama: Towards Foundation Models for Time Series Forecasting(http://arxiv.org/abs/2310.08278)</code></li>
+<li>Summary: <p>Aiming to build foundation models for time-series forecasting and study their
+scaling behavior, we present here our work-in-progress on Lag-Llama, a
+general-purpose univariate probabilistic time-series forecasting model trained
+on a large collection of time-series data. The model shows good zero-shot
+prediction capabilities on unseen "out-of-distribution" time-series datasets,
+outperforming supervised baselines. We use smoothly broken power-laws to fit
+and predict model scaling behavior. The open source code is made available at
+https://github.com/kashif/pytorch-transformer-ts.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: CleftGAN: Adapting A Style-Based Generative Adversarial Network To Create Images Depicting Cleft Lip Deformity. (arXiv:2310.07969v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07969">http://arxiv.org/abs/2310.07969</a></li>
+<li>Code URL: https://github.com/abdullah-tamu/CleftGAN</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07969]] CleftGAN: Adapting A Style-Based Generative Adversarial Network To Create Images Depicting Cleft Lip Deformity(http://arxiv.org/abs/2310.07969)</code></li>
+<li>Summary: <p>A major obstacle when attempting to train a machine learning system to
+evaluate facial clefts is the scarcity of large datasets of high-quality,
+ethics board-approved patient images. In response, we have built a deep
+learning-based cleft lip generator designed to produce an almost unlimited
+number of artificial images exhibiting high-fidelity facsimiles of cleft lip
+with wide variation. We undertook a transfer learning protocol testing
+different versions of StyleGAN-ADA (a generative adversarial network image
+generator incorporating adaptive data augmentation (ADA)) as the base model.
+Training images depicting a variety of cleft deformities were pre-processed to
+adjust for rotation, scaling, color adjustment and background blurring. The ADA
+modification of the primary algorithm permitted construction of our new
+generative model while requiring input of a relatively small number of training
+images. Adversarial training was carried out using 514 unique frontal
+photographs of cleft-affected faces to adapt a pre-trained model based on
+70,000 normal faces. The Frechet Inception Distance (FID) was used to measure
+the similarity of the newly generated facial images to the cleft training
+dataset, while Perceptual Path Length (PPL) and the novel Divergence Index of
+Severity Histograms (DISH) measures were also used to assess the performance of
+the image generator that we dub CleftGAN. We found that StyleGAN3 with
+translation invariance (StyleGAN3-t) performed optimally as a base model.
+Generated images achieved a low FID reflecting a close similarity to our
+training input dataset of genuine cleft images. Low PPL and DISH measures
+reflected a smooth and semantically valid interpolation of images through the
+transfer learning process and a similar distribution of severity in the
+training and generated images, respectively.
+</p></li>
+</ul>
+
+<h3>Title: GePSAn: Generative Procedure Step Anticipation in Cooking Videos. (arXiv:2310.08312v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08312">http://arxiv.org/abs/2310.08312</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08312]] GePSAn: Generative Procedure Step Anticipation in Cooking Videos(http://arxiv.org/abs/2310.08312)</code></li>
+<li>Summary: <p>We study the problem of future step anticipation in procedural videos. Given
+a video of an ongoing procedural activity, we predict a plausible next
+procedure step described in rich natural language. While most previous work
+focus on the problem of data scarcity in procedural video datasets, another
+core challenge of future anticipation is how to account for multiple plausible
+future realizations in natural settings. This problem has been largely
+overlooked in previous work. To address this challenge, we frame future step
+prediction as modelling the distribution of all possible candidates for the
+next step. Specifically, we design a generative model that takes a series of
+video clips as input, and generates multiple plausible and diverse candidates
+(in natural language) for the next step. Following previous work, we side-step
+the video annotation scarcity by pretraining our model on a large text-based
+corpus of procedural activities, and then transfer the model to the video
+domain. Our experiments, both in textual and video domains, show that our model
+captures diversity in the next step prediction and generates multiple plausible
+future predictions. Moreover, our model establishes new state-of-the-art
+results on YouCookII, where it outperforms existing baselines on the next step
+anticipation. Finally, we also show that our model can successfully transfer
+from text to the video domain zero-shot, ie, without fine-tuning or adaptation,
+and produces good-quality future step predictions from video.
+</p></li>
+</ul>
+
+<h3>Title: GenTKG: Generative Forecasting on Temporal Knowledge Graph. (arXiv:2310.07793v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07793">http://arxiv.org/abs/2310.07793</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07793]] GenTKG: Generative Forecasting on Temporal Knowledge Graph(http://arxiv.org/abs/2310.07793)</code></li>
+<li>Summary: <p>The rapid advancements in large language models (LLMs) have ignited interest
+in the temporal knowledge graph (tKG) domain, where conventional carefully
+designed embedding-based and rule-based models dominate. The question remains
+open of whether pre-trained LLMs can understand structured temporal relational
+data and replace them as the foundation model for temporal relational
+forecasting. Therefore, we bring temporal knowledge forecasting into the
+generative setting. However, challenges occur in the huge chasms between
+complex temporal graph data structure and sequential natural expressions LLMs
+can handle, and between the enormous data sizes of tKGs and heavy computation
+costs of finetuning LLMs. To address these challenges, we propose a novel
+retrieval augmented generation framework that performs generative forecasting
+on tKGs named GenTKG, which combines a temporal logical rule-based retrieval
+strategy and lightweight parameter-efficient instruction tuning. Extensive
+experiments have shown that GenTKG outperforms conventional methods of temporal
+relational forecasting under low computation resources. GenTKG also highlights
+remarkable transferability with exceeding performance on unseen datasets
+without re-training. Our work reveals the huge potential of LLMs in the tKG
+domain and opens a new frontier for generative forecasting on tKGs.
+</p></li>
+</ul>
+
+<h3>Title: Harnessing Large Language Models' Empathetic Response Generation Capabilities for Online Mental Health Counselling Support. (arXiv:2310.08017v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08017">http://arxiv.org/abs/2310.08017</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08017]] Harnessing Large Language Models' Empathetic Response Generation Capabilities for Online Mental Health Counselling Support(http://arxiv.org/abs/2310.08017)</code></li>
+<li>Summary: <p>Large Language Models (LLMs) have demonstrated remarkable performance across
+various information-seeking and reasoning tasks. These computational systems
+drive state-of-the-art dialogue systems, such as ChatGPT and Bard. They also
+carry substantial promise in meeting the growing demands of mental health care,
+albeit relatively unexplored. As such, this study sought to examine LLMs'
+capability to generate empathetic responses in conversations that emulate those
+in a mental health counselling setting. We selected five LLMs: version 3.5 and
+version 4 of the Generative Pre-training (GPT), Vicuna FastChat-T5, Pathways
+Language Model (PaLM) version 2, and Falcon-7B-Instruct. Based on a simple
+instructional prompt, these models responded to utterances derived from the
+EmpatheticDialogues (ED) dataset. Using three empathy-related metrics, we
+compared their responses to those from traditional response generation dialogue
+systems, which were fine-tuned on the ED dataset, along with human-generated
+responses. Notably, we discovered that responses from the LLMs were remarkably
+more empathetic in most scenarios. We position our findings in light of
+catapulting advancements in creating empathetic conversational systems.
+</p></li>
+</ul>
+
+<h3>Title: Training Generative Question-Answering on Synthetic Data Obtained from an Instruct-tuned Mo. (arXiv:2310.08072v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08072">http://arxiv.org/abs/2310.08072</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08072]] Training Generative Question-Answering on Synthetic Data Obtained from an Instruct-tuned Mo(http://arxiv.org/abs/2310.08072)</code></li>
+<li>Summary: <p>This paper presents a simple and cost-effective method for synthesizing data
+to train question-answering systems. For training, fine-tuning GPT models is a
+common practice in resource-rich languages like English, however, it becomes
+challenging for non-English languages due to the scarcity of sufficient
+question-answer (QA) pairs. Existing approaches use question and answer
+generators trained on human-authored QA pairs, which involves substantial human
+expenses. In contrast, we use an instruct-tuned model to generate QA pairs in a
+zero-shot or few-shot manner. We conduct experiments to compare various
+strategies for obtaining QA pairs from the instruct-tuned model. The results
+demonstrate that a model trained on our proposed synthetic data achieves
+comparable performance to a model trained on manually curated datasets, without
+incurring human costs.
+</p></li>
+</ul>
+
+<h3>Title: Generative Modeling with Phase Stochastic Bridges. (arXiv:2310.07805v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.07805">http://arxiv.org/abs/2310.07805</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.07805]] Generative Modeling with Phase Stochastic Bridges(http://arxiv.org/abs/2310.07805)</code></li>
+<li>Summary: <p>Diffusion models (DMs) represent state-of-the-art generative models for
+continuous inputs. DMs work by constructing a Stochastic Differential Equation
+(SDE) in the input space (ie, position space), and using a neural network to
+reverse it. In this work, we introduce a novel generative modeling framework
+grounded in \textbf{phase space dynamics}, where a phase space is defined as
+{an augmented space encompassing both position and velocity.} Leveraging
+insights from Stochastic Optimal Control, we construct a path measure in the
+phase space that enables efficient sampling. {In contrast to DMs, our framework
+demonstrates the capability to generate realistic data points at an early stage
+of dynamics propagation.} This early prediction sets the stage for efficient
+data generation by leveraging additional velocity information along the
+trajectory. On standard image generation benchmarks, our model yields favorable
+performance over baselines in the regime of small Number of Function
+Evaluations (NFEs). Furthermore, our approach rivals the performance of
+diffusion models equipped with efficient sampling techniques, underscoring its
+potential as a new tool generative modeling.
+</p></li>
+</ul>
+
+<h3>Title: SEE-OoD: Supervised Exploration For Enhanced Out-of-Distribution Detection. (arXiv:2310.08040v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08040">http://arxiv.org/abs/2310.08040</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08040]] SEE-OoD: Supervised Exploration For Enhanced Out-of-Distribution Detection(http://arxiv.org/abs/2310.08040)</code></li>
+<li>Summary: <p>Current techniques for Out-of-Distribution (OoD) detection predominantly rely
+on quantifying predictive uncertainty and incorporating model regularization
+during the training phase, using either real or synthetic OoD samples. However,
+methods that utilize real OoD samples lack exploration and are prone to overfit
+the OoD samples at hand. Whereas synthetic samples are often generated based on
+features extracted from training data, rendering them less effective when the
+training and OoD data are highly overlapped in the feature space. In this work,
+we propose a Wasserstein-score-based generative adversarial training scheme to
+enhance OoD detection accuracy, which, for the first time, performs data
+augmentation and exploration simultaneously under the supervision of limited
+OoD samples. Specifically, the generator explores OoD spaces and generates
+synthetic OoD samples using feedback from the discriminator, while the
+discriminator exploits both the observed and synthesized samples for OoD
+detection using a predefined Wasserstein score. We provide theoretical
+guarantees that the optimal solutions of our generative scheme are
+statistically achievable through adversarial training in empirical settings. We
+then demonstrate that the proposed method outperforms state-of-the-art
+techniques on various computer vision datasets and exhibits superior
+generalizability to unseen OoD data.
+</p></li>
+</ul>
+
+<h3>Title: Generative Intrinsic Optimization: Intrisic Control with Model Learning. (arXiv:2310.08100v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08100">http://arxiv.org/abs/2310.08100</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08100]] Generative Intrinsic Optimization: Intrisic Control with Model Learning(http://arxiv.org/abs/2310.08100)</code></li>
+<li>Summary: <p>Future sequence represents the outcome after executing the action into the
+environment. When driven by the information-theoretic concept of mutual
+information, it seeks maximally informative consequences. Explicit outcomes may
+vary across state, return, or trajectory serving different purposes such as
+credit assignment or imitation learning. However, the inherent nature of
+incorporating intrinsic motivation with reward maximization is often neglected.
+In this work, we propose a variational approach to jointly learn the necessary
+quantity for estimating the mutual information and the dynamics model,
+providing a general framework for incorporating different forms of outcomes of
+interest. Integrated into a policy iteration scheme, our approach guarantees
+convergence to the optimal policy. While we mainly focus on theoretical
+analysis, our approach opens the possibilities of leveraging intrinsic control
+with model learning to enhance sample efficiency and incorporate uncertainty of
+the environment into decision-making.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h2>in-context</h2>
+<h3>Title: Promptor: A Conversational and Autonomous Prompt Generation Agent for Intelligent Text Entry Techniques. (arXiv:2310.08101v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08101">http://arxiv.org/abs/2310.08101</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08101]] Promptor: A Conversational and Autonomous Prompt Generation Agent for Intelligent Text Entry Techniques(http://arxiv.org/abs/2310.08101)</code></li>
+<li>Summary: <p>Text entry is an essential task in our day-to-day digital interactions.
+Numerous intelligent features have been developed to streamline this process,
+making text entry more effective, efficient, and fluid. These improvements
+include sentence prediction and user personalization. However, as deep
+learning-based language models become the norm for these advanced features, the
+necessity for data collection and model fine-tuning increases. These challenges
+can be mitigated by harnessing the in-context learning capability of large
+language models such as GPT-3.5. This unique feature allows the language model
+to acquire new skills through prompts, eliminating the need for data collection
+and fine-tuning. Consequently, large language models can learn various text
+prediction techniques. We initially showed that, for a sentence prediction
+task, merely prompting GPT-3.5 surpassed a GPT-2 backed system and is
+comparable with a fine-tuned GPT-3.5 model, with the latter two methods
+requiring costly data collection, fine-tuning and post-processing. However, the
+task of prompting large language models to specialize in specific text
+prediction tasks can be challenging, particularly for designers without
+expertise in prompt engineering. To address this, we introduce Promptor, a
+conversational prompt generation agent designed to engage proactively with
+designers. Promptor can automatically generate complex prompts tailored to meet
+specific needs, thus offering a solution to this challenge. We conducted a user
+study involving 24 participants creating prompts for three intelligent text
+entry tasks, half of the participants used Promptor while the other half
+designed prompts themselves. The results show that Promptor-designed prompts
+result in a 35% increase in similarity and 22% in coherence over those by
+designers.
+</p></li>
+</ul>
+
+<h3>Title: Ziya-VL: Bilingual Large Vision-Language Model via Multi-Task Instruction Tuning. (arXiv:2310.08166v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08166">http://arxiv.org/abs/2310.08166</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08166]] Ziya-VL: Bilingual Large Vision-Language Model via Multi-Task Instruction Tuning(http://arxiv.org/abs/2310.08166)</code></li>
+<li>Summary: <p>Recent advancements enlarge the capabilities of large language models (LLMs)
+in zero-shot image-to-text generation and understanding by integrating
+multi-modal inputs. However, such success is typically limited to English
+scenarios due to the lack of large-scale and high-quality non-English
+multi-modal resources, making it extremely difficult to establish competitive
+counterparts in other languages. In this paper, we introduce the Ziya-VL
+series, a set of bilingual large-scale vision-language models (LVLMs) designed
+to incorporate visual semantics into LLM for multi-modal dialogue. Composed of
+Ziya-VL-Base and Ziya-VL-Chat, our models adopt the Querying Transformer from
+BLIP-2, further exploring the assistance of optimization schemes such as
+instruction tuning, multi-stage training and low-rank adaptation module for
+visual-language alignment. In addition, we stimulate the understanding ability
+of GPT-4 in multi-modal scenarios, translating our gathered English image-text
+datasets into Chinese and generating instruction-response through the
+in-context learning method. The experiment results demonstrate that compared to
+the existing LVLMs, Ziya-VL achieves competitive performance across a wide
+range of English-only tasks including zero-shot image-text retrieval, image
+captioning, and visual question answering. The evaluation leaderboard accessed
+by GPT-4 also indicates that our models possess satisfactory image-text
+understanding and generation capabilities in Chinese multi-modal scenario
+dialogues. Code, demo and models are available at
+~\url{https://huggingface.co/IDEA-CCNL/Ziya-BLIP2-14B-Visual-v1}.
+</p></li>
+</ul>
+
+<h3>Title: EIPE-text: Evaluation-Guided Iterative Plan Extraction for Long-Form Narrative Text Generation. (arXiv:2310.08185v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08185">http://arxiv.org/abs/2310.08185</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08185]] EIPE-text: Evaluation-Guided Iterative Plan Extraction for Long-Form Narrative Text Generation(http://arxiv.org/abs/2310.08185)</code></li>
+<li>Summary: <p>Plan-and-Write is a common hierarchical approach in long-form narrative text
+generation, which first creates a plan to guide the narrative writing.
+Following this approach, several studies rely on simply prompting large
+language models for planning, which often yields suboptimal results. In this
+paper, we propose a new framework called Evaluation-guided Iterative Plan
+Extraction for long-form narrative text generation (EIPE-text), which extracts
+plans from the corpus of narratives and utilizes the extracted plans to
+construct a better planner. EIPE-text has three stages: plan extraction,
+learning, and inference. In the plan extraction stage, it iteratively extracts
+and improves plans from the narrative corpus and constructs a plan corpus. We
+propose a question answer (QA) based evaluation mechanism to automatically
+evaluate the plans and generate detailed plan refinement instructions to guide
+the iterative improvement. In the learning stage, we build a better planner by
+fine-tuning with the plan corpus or in-context learning with examples in the
+plan corpus. Finally, we leverage a hierarchical approach to generate long-form
+narratives. We evaluate the effectiveness of EIPE-text in the domains of novels
+and storytelling. Both GPT-4-based evaluations and human evaluations
+demonstrate that our method can generate more coherent and relevant long-form
+narratives. Our code will be released in the future.
+</p></li>
+</ul>
+
+<h3>Title: Not All Demonstration Examples are Equally Beneficial: Reweighting Demonstration Examples for In-Context Learning. (arXiv:2310.08309v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08309">http://arxiv.org/abs/2310.08309</a></li>
+<li>Code URL: https://github.com/Zhe-Young/WICL</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08309]] Not All Demonstration Examples are Equally Beneficial: Reweighting Demonstration Examples for In-Context Learning(http://arxiv.org/abs/2310.08309)</code></li>
+<li>Summary: <p>Large Language Models (LLMs) have recently gained the In-Context Learning
+(ICL) ability with the models scaling up, allowing them to quickly adapt to
+downstream tasks with only a few demonstration examples prepended in the input
+sequence. Nonetheless, the current practice of ICL treats all demonstration
+examples equally, which still warrants improvement, as the quality of examples
+is usually uneven. In this paper, we investigate how to determine approximately
+optimal weights for demonstration examples and how to apply them during ICL. To
+assess the quality of weights in the absence of additional validation data, we
+design a masked self-prediction (MSP) score that exhibits a strong correlation
+with the final ICL performance. To expedite the weight-searching process, we
+discretize the continuous weight space and adopt beam search. With
+approximately optimal weights obtained, we further propose two strategies to
+apply them to demonstrations at different model positions. Experimental results
+on 8 text classification tasks show that our approach outperforms conventional
+ICL by a large margin. Our code are publicly available at
+https:github.com/Zhe-Young/WICL.
+</p></li>
+</ul>
+
+<h3>Title: Exploring the Relationship Between Model Architecture and In-Context Learning Ability. (arXiv:2310.08049v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08049">http://arxiv.org/abs/2310.08049</a></li>
+<li>Code URL: https://github.com/ivnle/synth-icl</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08049]] Exploring the Relationship Between Model Architecture and In-Context Learning Ability(http://arxiv.org/abs/2310.08049)</code></li>
+<li>Summary: <p>What is the relationship between model architecture and the ability to
+perform in-context learning? In this empirical study, we take the first steps
+towards answering this question. In particular, we evaluate fifteen model
+architectures across a suite of synthetic in-context learning tasks. The
+selected architectures represent a broad range of paradigms, including
+recurrent and convolution-based neural networks, transformers, and emerging
+attention alternatives. We discover that all considered architectures can
+perform in-context learning under certain conditions. However, contemporary
+architectures are found to be the best performing, especially as task
+complexity grows. Additionally, our follow-up experiments delve into various
+factors that influence in-context learning. We observe varied sensitivities
+among architectures with respect to hyperparameter settings. Our study of
+training dynamics reveals that certain architectures exhibit a smooth,
+progressive learning trajectory, while others demonstrate periods of stagnation
+followed by abrupt mastery of the task. Finally, and somewhat surprisingly, we
+find that several emerging attention alternatives are more robust in-context
+learners than transformers; since such approaches have constant-sized memory
+footprints at inference time, this result opens the future possibility of
+scaling up in-context learning to vastly larger numbers of in-context examples.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
