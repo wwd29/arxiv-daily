@@ -1,0 +1,901 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Histogram- and Diffusion-Based Medical Out-of-Distribution Detection. (arXiv:2310.08654v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08654">http://arxiv.org/abs/2310.08654</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08654]] Histogram- and Diffusion-Based Medical Out-of-Distribution Detection(http://arxiv.org/abs/2310.08654)</code></li>
+<li>Summary: <p>Out-of-distribution (OOD) detection is crucial for the safety and reliability
+of artificial intelligence algorithms, especially in the medical domain. In the
+context of the Medical OOD (MOOD) detection challenge 2023, we propose a
+pipeline that combines a histogram-based method and a diffusion-based method.
+The histogram-based method is designed to accurately detect homogeneous
+anomalies in the toy examples of the challenge, such as blobs with constant
+intensity values. The diffusion-based method is based on one of the latest
+methods for unsupervised anomaly detection, called DDPM-OOD. We explore this
+method and propose extensive post-processing steps for pixel-level and
+sample-level anomaly detection on brain MRI and abdominal CT data provided by
+the challenge. Our results show that the proposed DDPM method is sensitive to
+blur and bias field samples, but faces challenges with anatomical deformation,
+black slice, and swapped patches. These findings suggest that further research
+is needed to improve the performance of DDPM for OOD detection in medical
+images.
+</p></li>
+</ul>
+
+<h3>Title: DeltaSpace: A Semantic-aligned Feature Space for Flexible Text-guided Image Editing. (arXiv:2310.08785v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08785">http://arxiv.org/abs/2310.08785</a></li>
+<li>Code URL: https://github.com/yueming6568/deltaedit</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08785]] DeltaSpace: A Semantic-aligned Feature Space for Flexible Text-guided Image Editing(http://arxiv.org/abs/2310.08785)</code></li>
+<li>Summary: <p>Text-guided image editing faces significant challenges to training and
+inference flexibility. Much literature collects large amounts of annotated
+image-text pairs to train text-conditioned generative models from scratch,
+which is expensive and not efficient. After that, some approaches that leverage
+pre-trained vision-language models are put forward to avoid data collection,
+but they are also limited by either per text-prompt optimization or
+inference-time hyper-parameters tuning. To address these issues, we investigate
+and identify a specific space, referred to as CLIP DeltaSpace, where the CLIP
+visual feature difference of two images is semantically aligned with the CLIP
+textual feature difference of their corresponding text descriptions. Based on
+DeltaSpace, we propose a novel framework called DeltaEdit, which maps the CLIP
+visual feature differences to the latent space directions of a generative model
+during the training phase, and predicts the latent space directions from the
+CLIP textual feature differences during the inference phase. And this design
+endows DeltaEdit with two advantages: (1) text-free training; (2)
+generalization to various text prompts for zero-shot inference. Extensive
+experiments validate the effectiveness and versatility of DeltaEdit with
+different generative models, including both the GAN model and the diffusion
+model, in achieving flexible text-guided image editing. Code is available at
+https://github.com/Yueming6568/DeltaEdit.
+</p></li>
+</ul>
+
+<h3>Title: R&B: Region and Boundary Aware Zero-shot Grounded Text-to-image Generation. (arXiv:2310.08872v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08872">http://arxiv.org/abs/2310.08872</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08872]] R&B: Region and Boundary Aware Zero-shot Grounded Text-to-image Generation(http://arxiv.org/abs/2310.08872)</code></li>
+<li>Summary: <p>Recent text-to-image (T2I) diffusion models have achieved remarkable progress
+in generating high-quality images given text-prompts as input. However, these
+models fail to convey appropriate spatial composition specified by a layout
+instruction. In this work, we probe into zero-shot grounded T2I generation with
+diffusion models, that is, generating images corresponding to the input layout
+information without training auxiliary modules or finetuning diffusion models.
+We propose a Region and Boundary (R&amp;B) aware cross-attention guidance approach
+that gradually modulates the attention maps of diffusion model during
+generative process, and assists the model to synthesize images (1) with high
+fidelity, (2) highly compatible with textual input, and (3) interpreting layout
+instructions accurately. Specifically, we leverage the discrete sampling to
+bridge the gap between consecutive attention maps and discrete layout
+constraints, and design a region-aware loss to refine the generative layout
+during diffusion process. We further propose a boundary-aware loss to
+strengthen object discriminability within the corresponding regions.
+Experimental results show that our method outperforms existing state-of-the-art
+zero-shot grounded T2I generation methods by a large margin both qualitatively
+and quantitatively on several benchmarks.
+</p></li>
+</ul>
+
+<h3>Title: Unseen Image Synthesis with Diffusion Models. (arXiv:2310.09213v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09213">http://arxiv.org/abs/2310.09213</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09213]] Unseen Image Synthesis with Diffusion Models(http://arxiv.org/abs/2310.09213)</code></li>
+<li>Summary: <p>While the current trend in the generative field is scaling up towards larger
+models and more training data for generalized domain representations, we go the
+opposite direction in this work by synthesizing unseen domain images without
+additional training. We do so via latent sampling and geometric optimization
+using pre-trained and frozen Denoising Diffusion Probabilistic Models (DDPMs)
+on single-domain datasets. Our key observation is that DDPMs pre-trained even
+just on single-domain images are already equipped with sufficient
+representation abilities to reconstruct arbitrary images from the inverted
+latent encoding following bi-directional deterministic diffusion and denoising
+trajectories. This motivates us to investigate the statistical and geometric
+behaviors of the Out-Of-Distribution (OOD) samples from unseen image domains in
+the latent spaces along the denoising chain. Notably, we theoretically and
+empirically show that the inverted OOD samples also establish Gaussians that
+are distinguishable from the original In-Domain (ID) samples in the
+intermediate latent spaces, which allows us to sample from them directly.
+Geometrical domain-specific and model-dependent information of the unseen
+subspace (e.g., sample-wise distance and angles) is used to further optimize
+the sampled OOD latent encodings from the estimated Gaussian prior. We conduct
+extensive analysis and experiments using pre-trained diffusion models (DDPM,
+iDDPM) on different datasets (AFHQ, CelebA-HQ, LSUN-Church, and LSUN-Bedroom),
+proving the effectiveness of this novel perspective to explore and re-think the
+diffusion models' data synthesis generalization ability.
+</p></li>
+</ul>
+
+<h3>Title: Hypernymy Understanding Evaluation of Text-to-Image Models via WordNet Hierarchy. (arXiv:2310.09247v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09247">http://arxiv.org/abs/2310.09247</a></li>
+<li>Code URL: https://github.com/yandex-research/text-to-img-hypernymy</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09247]] Hypernymy Understanding Evaluation of Text-to-Image Models via WordNet Hierarchy(http://arxiv.org/abs/2310.09247)</code></li>
+<li>Summary: <p>Text-to-image synthesis has recently attracted widespread attention due to
+rapidly improving quality and numerous practical applications. However, the
+language understanding capabilities of text-to-image models are still poorly
+understood, which makes it difficult to reason about prompt formulations that a
+given model would understand well. In this work, we measure the capability of
+popular text-to-image models to understand $\textit{hypernymy}$, or the "is-a"
+relation between words. We design two automatic metrics based on the WordNet
+semantic hierarchy and existing image classifiers pretrained on ImageNet. These
+metrics both enable broad quantitative comparison of linguistic capabilities
+for text-to-image models and offer a way of finding fine-grained qualitative
+differences, such as words that are unknown to models and thus are difficult
+for them to draw. We comprehensively evaluate popular text-to-image models,
+including GLIDE, Latent Diffusion, and Stable Diffusion, showing how our
+metrics can provide a better understanding of the individual strengths and
+weaknesses of these models.
+</p></li>
+</ul>
+
+<h3>Title: DDMT: Denoising Diffusion Mask Transformer Models for Multivariate Time Series Anomaly Detection. (arXiv:2310.08800v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08800">http://arxiv.org/abs/2310.08800</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08800]] DDMT: Denoising Diffusion Mask Transformer Models for Multivariate Time Series Anomaly Detection(http://arxiv.org/abs/2310.08800)</code></li>
+<li>Summary: <p>Anomaly detection in multivariate time series has emerged as a crucial
+challenge in time series research, with significant research implications in
+various fields such as fraud detection, fault diagnosis, and system state
+estimation. Reconstruction-based models have shown promising potential in
+recent years for detecting anomalies in time series data. However, due to the
+rapid increase in data scale and dimensionality, the issues of noise and Weak
+Identity Mapping (WIM) during time series reconstruction have become
+increasingly pronounced. To address this, we introduce a novel Adaptive Dynamic
+Neighbor Mask (ADNM) mechanism and integrate it with the Transformer and
+Denoising Diffusion Model, creating a new framework for multivariate time
+series anomaly detection, named Denoising Diffusion Mask Transformer (DDMT).
+The ADNM module is introduced to mitigate information leakage between input and
+output features during data reconstruction, thereby alleviating the problem of
+WIM during reconstruction. The Denoising Diffusion Transformer (DDT) employs
+the Transformer as an internal neural network structure for Denoising Diffusion
+Model. It learns the stepwise generation process of time series data to model
+the probability distribution of the data, capturing normal data patterns and
+progressively restoring time series data by removing noise, resulting in a
+clear recovery of anomalies. To the best of our knowledge, this is the first
+model that combines Denoising Diffusion Model and the Transformer for
+multivariate time series anomaly detection. Experimental evaluations were
+conducted on five publicly available multivariate time series anomaly detection
+datasets. The results demonstrate that the model effectively identifies
+anomalies in time series data, achieving state-of-the-art performance in
+anomaly detection.
+</p></li>
+</ul>
+
+<h3>Title: MINDE: Mutual Information Neural Diffusion Estimation. (arXiv:2310.09031v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09031">http://arxiv.org/abs/2310.09031</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09031]] MINDE: Mutual Information Neural Diffusion Estimation(http://arxiv.org/abs/2310.09031)</code></li>
+<li>Summary: <p>In this work we present a new method for the estimation of Mutual Information
+(MI) between random variables. Our approach is based on an original
+interpretation of the Girsanov theorem, which allows us to use score-based
+diffusion models to estimate the Kullback Leibler divergence between two
+densities as a difference between their score functions. As a by-product, our
+method also enables the estimation of the entropy of random variables. Armed
+with such building blocks, we present a general recipe to measure MI, which
+unfolds in two directions: one uses conditional diffusion process, whereas the
+other uses joint diffusion processes that allow simultaneous modelling of two
+random variables. Our results, which derive from a thorough experimental
+protocol over all the variants of our approach, indicate that our method is
+more accurate than the main alternatives from the literature, especially for
+challenging distributions. Furthermore, our methods pass MI self-consistency
+tests, including data processing and additivity under independence, which
+instead are a pain-point of existing methods.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: PU-Ray: Point Cloud Upsampling via Ray Marching on Implicit Surface. (arXiv:2310.08755v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08755">http://arxiv.org/abs/2310.08755</a></li>
+<li>Code URL: https://github.com/sum1lim/PU-Ray</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08755]] PU-Ray: Point Cloud Upsampling via Ray Marching on Implicit Surface(http://arxiv.org/abs/2310.08755)</code></li>
+<li>Summary: <p>While the recent advancements in deep-learning-based point cloud upsampling
+methods improve the input to autonomous driving systems, they still suffer from
+the uncertainty of denser point generation resulting from end-to-end learning.
+For example, due to the vague training objectives of the models, their
+performance depends on the point distributions of the input and the ground
+truth. This causes problems of domain dependency between synthetic and
+real-scanned point clouds and issues with substantial model sizes and dataset
+requirements. Additionally, many existing methods upsample point clouds with a
+fixed scaling rate, making them inflexible and computationally redundant. This
+paper addresses the above problems by proposing a ray-based upsampling approach
+with an arbitrary rate, where a depth prediction is made for each query ray.
+The method simulates the ray marching algorithm to achieve more precise and
+stable ray-depth predictions through implicit surface learning. The rule-based
+mid-point query sampling method enables a uniform output point distribution
+without requiring model training using the Chamfer distance loss function,
+which can exhibit bias towards the training dataset. Self-supervised learning
+becomes possible with accurate ground truths within the input point cloud. The
+results demonstrate the method's versatility across different domains and
+training scenarios with limited computational resources and training data. This
+allows the upsampling task to transition from academic research to real-world
+applications.
+</p></li>
+</ul>
+
+<h3>Title: SIDE: Self-supervised Intermediate Domain Exploration for Source-free Domain Adaptation. (arXiv:2310.08928v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08928">http://arxiv.org/abs/2310.08928</a></li>
+<li>Code URL: https://github.com/se111/side</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08928]] SIDE: Self-supervised Intermediate Domain Exploration for Source-free Domain Adaptation(http://arxiv.org/abs/2310.08928)</code></li>
+<li>Summary: <p>Domain adaptation aims to alleviate the domain shift when transferring the
+knowledge learned from the source domain to the target domain. Due to privacy
+issues, source-free domain adaptation (SFDA), where source data is unavailable
+during adaptation, has recently become very demanding yet challenging. Existing
+SFDA methods focus on either self-supervised learning of target samples or
+reconstruction of virtual source data. The former overlooks the transferable
+knowledge in the source model, whilst the latter introduces even more
+uncertainty. To address the above issues, this paper proposes self-supervised
+intermediate domain exploration (SIDE) that effectively bridges the domain gap
+with an intermediate domain, where samples are cyclically filtered out in a
+self-supervised fashion. First, we propose cycle intermediate domain filtering
+(CIDF) to cyclically select intermediate samples with similar distributions
+over source and target domains. Second, with the aid of those intermediate
+samples, an inter-domain gap transition (IDGT) module is developed to mitigate
+possible distribution mismatches between the source and target data. Finally,
+we introduce cross-view consistency learning (CVCL) to maintain the intrinsic
+class discriminability whilst adapting the model to the target domain.
+Extensive experiments on three popular benchmarks, i.e. Office-31, Office-Home
+and VisDA-C, show that our proposed SIDE achieves competitive performance
+against state-of-the-art methods.
+</p></li>
+</ul>
+
+<h3>Title: Towards Interpretable Controllability in Object-Centric Learning. (arXiv:2310.08929v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08929">http://arxiv.org/abs/2310.08929</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08929]] Towards Interpretable Controllability in Object-Centric Learning(http://arxiv.org/abs/2310.08929)</code></li>
+<li>Summary: <p>The binding problem in artificial neural networks is actively explored with
+the goal of achieving human-level recognition skills through the comprehension
+of the world in terms of symbol-like entities. Especially in the field of
+computer vision, object-centric learning (OCL) is extensively researched to
+better understand complex scenes by acquiring object representations or slots.
+While recent studies in OCL have made strides with complex images or videos,
+the interpretability and interactivity over object representation remain
+largely uncharted, still holding promise in the field of OCL. In this paper, we
+introduce a novel method, Slot Attention with Image Augmentation (SlotAug), to
+explore the possibility of learning interpretable controllability over slots in
+a self-supervised manner by utilizing an image augmentation strategy. We also
+devise the concept of sustainability in controllable slots by introducing
+iterative and reversible controls over slots with two proposed submethods:
+Auxiliary Identity Manipulation and Slot Consistency Loss. Extensive empirical
+studies and theoretical validation confirm the effectiveness of our approach,
+offering a novel capability for interpretable and sustainable control of object
+representations. Code will be available soon.
+</p></li>
+</ul>
+
+<h3>Title: Online Adaptive Disparity Estimation for Dynamic Scenes in Structured Light Systems. (arXiv:2310.08934v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08934">http://arxiv.org/abs/2310.08934</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08934]] Online Adaptive Disparity Estimation for Dynamic Scenes in Structured Light Systems(http://arxiv.org/abs/2310.08934)</code></li>
+<li>Summary: <p>In recent years, deep neural networks have shown remarkable progress in dense
+disparity estimation from dynamic scenes in monocular structured light systems.
+However, their performance significantly drops when applied in unseen
+environments. To address this issue, self-supervised online adaptation has been
+proposed as a solution to bridge this performance gap. Unlike traditional
+fine-tuning processes, online adaptation performs test-time optimization to
+adapt networks to new domains. Therefore, achieving fast convergence during the
+adaptation process is critical for attaining satisfactory accuracy. In this
+paper, we propose an unsupervised loss function based on long sequential
+inputs. It ensures better gradient directions and faster convergence. Our loss
+function is designed using a multi-frame pattern flow, which comprises a set of
+sparse trajectories of the projected pattern along the sequence. We estimate
+the sparse pseudo ground truth with a confidence mask using a filter-based
+method, which guides the online adaptation process. Our proposed framework
+significantly improves the online adaptation speed and achieves superior
+performance on unseen data.
+</p></li>
+</ul>
+
+<h3>Title: CAMELL: Confidence-based Acquisition Model for Efficient Self-supervised Active Learning with Label Validation. (arXiv:2310.08944v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08944">http://arxiv.org/abs/2310.08944</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08944]] CAMELL: Confidence-based Acquisition Model for Efficient Self-supervised Active Learning with Label Validation(http://arxiv.org/abs/2310.08944)</code></li>
+<li>Summary: <p>Supervised neural approaches are hindered by their dependence on large,
+meticulously annotated datasets, a requirement that is particularly cumbersome
+for sequential tasks. The quality of annotations tends to deteriorate with the
+transition from expert-based to crowd-sourced labelling. To address these
+challenges, we present \textbf{CAMELL} (Confidence-based Acquisition Model for
+Efficient self-supervised active Learning with Label validation), a pool-based
+active learning framework tailored for sequential multi-output problems. CAMELL
+possesses three core features: (1) it requires expert annotators to label only
+a fraction of a chosen sequence, (2) it facilitates self-supervision for the
+remainder of the sequence, and (3) it employs a label validation mechanism to
+prevent erroneous labels from contaminating the dataset and harming model
+performance. We evaluate CAMELL on sequential tasks, with a special emphasis on
+dialogue belief tracking, a task plagued by the constraints of limited and
+noisy datasets. Our experiments demonstrate that CAMELL outperforms the
+baselines in terms of efficiency. Furthermore, the data corrections suggested
+by our method contribute to an overall improvement in the quality of the
+resulting datasets.
+</p></li>
+</ul>
+
+<h3>Title: xDial-Eval: A Multilingual Open-Domain Dialogue Evaluation Benchmark. (arXiv:2310.08958v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08958">http://arxiv.org/abs/2310.08958</a></li>
+<li>Code URL: https://github.com/e0397123/xdial-eval</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08958]] xDial-Eval: A Multilingual Open-Domain Dialogue Evaluation Benchmark(http://arxiv.org/abs/2310.08958)</code></li>
+<li>Summary: <p>Recent advancements in reference-free learned metrics for open-domain
+dialogue evaluation have been driven by the progress in pre-trained language
+models and the availability of dialogue data with high-quality human
+annotations. However, current studies predominantly concentrate on English
+dialogues, and the generalization of these metrics to other languages has not
+been fully examined. This is largely due to the absence of a multilingual
+dialogue evaluation benchmark. To address the issue, we introduce xDial-Eval,
+built on top of open-source English dialogue evaluation datasets. xDial-Eval
+includes 12 turn-level and 6 dialogue-level English datasets, comprising 14930
+annotated turns and 8691 annotated dialogues respectively. The English dialogue
+data are extended to nine other languages with commercial machine translation
+systems. On xDial-Eval, we conduct comprehensive analyses of previous
+BERT-based metrics and the recently-emerged large language models. Lastly, we
+establish strong self-supervised and multilingual baselines. In terms of
+average Pearson correlations over all datasets and languages, the best baseline
+outperforms OpenAI's ChatGPT by absolute improvements of 6.5% and 4.6% at the
+turn and dialogue levels respectively, albeit with much fewer parameters. The
+data and code are publicly available at https://github.com/e0397123/xDial-Eval.
+</p></li>
+</ul>
+
+<h3>Title: Kernel-Elastic Autoencoder for Molecular Design. (arXiv:2310.08685v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08685">http://arxiv.org/abs/2310.08685</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08685]] Kernel-Elastic Autoencoder for Molecular Design(http://arxiv.org/abs/2310.08685)</code></li>
+<li>Summary: <p>We introduce the Kernel-Elastic Autoencoder (KAE), a self-supervised
+generative model based on the transformer architecture with enhanced
+performance for molecular design. KAE is formulated based on two novel loss
+functions: modified maximum mean discrepancy and weighted reconstruction. KAE
+addresses the long-standing challenge of achieving valid generation and
+accurate reconstruction at the same time. KAE achieves remarkable diversity in
+molecule generation while maintaining near-perfect reconstructions on the
+independent testing dataset, surpassing previous molecule-generating models.
+KAE enables conditional generation and allows for decoding based on beam search
+resulting in state-of-the-art performance in constrained optimizations.
+Furthermore, KAE can generate molecules conditional to favorable binding
+affinities in docking applications as confirmed by AutoDock Vina and Glide
+scores, outperforming all existing candidates from the training dataset. Beyond
+molecular design, we anticipate KAE could be applied to solve problems by
+generation in a wide range of applications.
+</p></li>
+</ul>
+
+<h3>Title: Splicing Up Your Predictions with RNA Contrastive Learning. (arXiv:2310.08738v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08738">http://arxiv.org/abs/2310.08738</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08738]] Splicing Up Your Predictions with RNA Contrastive Learning(http://arxiv.org/abs/2310.08738)</code></li>
+<li>Summary: <p>In the face of rapidly accumulating genomic data, our understanding of the
+RNA regulatory code remains incomplete. Recent self-supervised methods in other
+domains have demonstrated the ability to learn rules underlying the
+data-generating process such as sentence structure in language. Inspired by
+this, we extend contrastive learning techniques to genomic data by utilizing
+functional similarities between sequences generated through alternative
+splicing and gene duplication. Our novel dataset and contrastive objective
+enable the learning of generalized RNA isoform representations. We validate
+their utility on downstream tasks such as RNA half-life and mean ribosome load
+prediction. Our pre-training strategy yields competitive results using linear
+probing on both tasks, along with up to a two-fold increase in Pearson
+correlation in low-data conditions. Importantly, our exploration of the learned
+latent space reveals that our contrastive objective yields semantically
+meaningful representations, underscoring its potential as a valuable
+initialization technique for RNA property prediction.
+</p></li>
+</ul>
+
+<h3>Title: Selectivity Drives Productivity: Efficient Dataset Pruning for Enhanced Transfer Learning. (arXiv:2310.08782v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08782">http://arxiv.org/abs/2310.08782</a></li>
+<li>Code URL: https://github.com/optml-group/dp4tl</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08782]] Selectivity Drives Productivity: Efficient Dataset Pruning for Enhanced Transfer Learning(http://arxiv.org/abs/2310.08782)</code></li>
+<li>Summary: <p>Massive data is often considered essential for deep learning applications,
+but it also incurs significant computational and infrastructural costs.
+Therefore, dataset pruning (DP) has emerged as an effective way to improve data
+efficiency by identifying and removing redundant training samples without
+sacrificing performance. In this work, we aim to address the problem of DP for
+transfer learning, i.e., how to prune a source dataset for improved pretraining
+efficiency and lossless finetuning accuracy on downstream target tasks. To our
+best knowledge, the problem of DP for transfer learning remains open, as
+previous studies have primarily addressed DP and transfer learning as separate
+problems. By contrast, we establish a unified viewpoint to integrate DP with
+transfer learning and find that existing DP methods are not suitable for the
+transfer learning paradigm. We then propose two new DP methods, label mapping
+and feature mapping, for supervised and self-supervised pretraining settings
+respectively, by revisiting the DP problem through the lens of source-target
+domain mapping. Furthermore, we demonstrate the effectiveness of our approach
+on numerous transfer learning tasks. We show that source data classes can be
+pruned by up to 40% ~ 80% without sacrificing downstream performance, resulting
+in a significant 2 ~ 5 times speed-up during the pretraining stage. Besides,
+our proposal exhibits broad applicability and can improve other computationally
+intensive transfer learning techniques, such as adversarial pretraining. Codes
+are available at https://github.com/OPTML-Group/DP4TL.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: SAM-guided Unsupervised Domain Adaptation for 3D Segmentation. (arXiv:2310.08820v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08820">http://arxiv.org/abs/2310.08820</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08820]] SAM-guided Unsupervised Domain Adaptation for 3D Segmentation(http://arxiv.org/abs/2310.08820)</code></li>
+<li>Summary: <p>Unsupervised domain adaptation (UDA) in 3D segmentation tasks presents a
+formidable challenge, primarily stemming from the sparse and unordered nature
+of point cloud data. Especially for LiDAR point clouds, the domain discrepancy
+becomes obvious across varying capture scenes, fluctuating weather conditions,
+and the diverse array of LiDAR devices in use. While previous UDA methodologies
+have often sought to mitigate this gap by aligning features between source and
+target domains, this approach falls short when applied to 3D segmentation due
+to the substantial domain variations. Inspired by the remarkable generalization
+capabilities exhibited by the vision foundation model, SAM, in the realm of
+image segmentation, our approach leverages the wealth of general knowledge
+embedded within SAM to unify feature representations across diverse 3D domains
+and further solves the 3D domain adaptation problem. Specifically, we harness
+the corresponding images associated with point clouds to facilitate knowledge
+transfer and propose an innovative hybrid feature augmentation methodology,
+which significantly enhances the alignment between the 3D feature space and
+SAM's feature space, operating at both the scene and instance levels. Our
+method is evaluated on many widely-recognized datasets and achieves
+state-of-the-art performance.
+</p></li>
+</ul>
+
+<h3>Title: Virtual Augmented Reality for Atari Reinforcement Learning. (arXiv:2310.08683v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08683">http://arxiv.org/abs/2310.08683</a></li>
+<li>Code URL: https://github.com/c-a-schiller/var4arl</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08683]] Virtual Augmented Reality for Atari Reinforcement Learning(http://arxiv.org/abs/2310.08683)</code></li>
+<li>Summary: <p>Reinforcement Learning (RL) has achieved significant milestones in the gaming
+domain, most notably Google DeepMind's AlphaGo defeating human Go champion Ken
+Jie. This victory was also made possible through the Atari Learning Environment
+(ALE): The ALE has been foundational in RL research, facilitating significant
+RL algorithm developments such as AlphaGo and others. In current Atari video
+game RL research, RL agents' perceptions of its environment is based on raw
+pixel data from the Atari video game screen with minimal image preprocessing.
+Contrarily, cutting-edge ML research, external to the Atari video game RL
+research domain, is focusing on enhancing image perception. A notable example
+is Meta Research's "Segment Anything Model" (SAM), a foundation model capable
+of segmenting images without prior training (zero-shot). This paper addresses a
+novel methodical question: Can state-of-the-art image segmentation models such
+as SAM improve the performance of RL agents playing Atari video games? The
+results suggest that SAM can serve as a "virtual augmented reality" for the RL
+agent, boosting its Atari video game playing performance under certain
+conditions. Comparing RL agent performance results from raw and augmented pixel
+inputs provides insight into these conditions. Although this paper was limited
+by computational constraints, the findings show improved RL agent performance
+for augmented pixel inputs and can inform broader research agendas in the
+domain of "virtual augmented reality for video game playing RL agents".
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: A Benchmarking Protocol for SAR Colorization: From Regression to Deep Learning Approaches. (arXiv:2310.08705v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08705">http://arxiv.org/abs/2310.08705</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08705]] A Benchmarking Protocol for SAR Colorization: From Regression to Deep Learning Approaches(http://arxiv.org/abs/2310.08705)</code></li>
+<li>Summary: <p>Synthetic aperture radar (SAR) images are widely used in remote sensing.
+Interpreting SAR images can be challenging due to their intrinsic speckle noise
+and grayscale nature. To address this issue, SAR colorization has emerged as a
+research direction to colorize gray scale SAR images while preserving the
+original spatial information and radiometric information. However, this
+research field is still in its early stages, and many limitations can be
+highlighted. In this paper, we propose a full research line for supervised
+learning-based approaches to SAR colorization. Our approach includes a protocol
+for generating synthetic color SAR images, several baselines, and an effective
+method based on the conditional generative adversarial network (cGAN) for SAR
+colorization. We also propose numerical assessment metrics for the problem at
+hand. To our knowledge, this is the first attempt to propose a research line
+for SAR colorization that includes a protocol, a benchmark, and a complete
+performance evaluation. Our extensive tests demonstrate the effectiveness of
+our proposed cGAN-based network for SAR colorization. The code will be made
+publicly available.
+</p></li>
+</ul>
+
+<h3>Title: Vision-by-Language for Training-Free Compositional Image Retrieval. (arXiv:2310.09291v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09291">http://arxiv.org/abs/2310.09291</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09291]] Vision-by-Language for Training-Free Compositional Image Retrieval(http://arxiv.org/abs/2310.09291)</code></li>
+<li>Summary: <p>Given an image and a target modification (e.g an image of the Eiffel tower
+and the text "without people and at night-time"), Compositional Image Retrieval
+(CIR) aims to retrieve the relevant target image in a database. While
+supervised approaches rely on annotating triplets that is costly (i.e. query
+image, textual modification, and target image), recent research sidesteps this
+need by using large-scale vision-language models (VLMs), performing Zero-Shot
+CIR (ZS-CIR). However, state-of-the-art approaches in ZS-CIR still require
+training task-specific, customized models over large amounts of image-text
+pairs. In this work, we propose to tackle CIR in a training-free manner via our
+Compositional Image Retrieval through Vision-by-Language (CIReVL), a simple,
+yet human-understandable and scalable pipeline that effectively recombines
+large-scale VLMs with large language models (LLMs). By captioning the reference
+image using a pre-trained generative VLM and asking a LLM to recompose the
+caption based on the textual target modification for subsequent retrieval via
+e.g. CLIP, we achieve modular language reasoning. In four ZS-CIR benchmarks, we
+find competitive, in-part state-of-the-art performance - improving over
+supervised methods. Moreover, the modularity of CIReVL offers simple
+scalability without re-training, allowing us to both investigate scaling laws
+and bottlenecks for ZS-CIR while easily scaling up to in parts more than double
+of previously reported results. Finally, we show that CIReVL makes CIR
+human-understandable by composing image and text in a modular fashion in the
+language domain, thereby making it intervenable, allowing to post-hoc re-align
+failure cases. Code will be released upon acceptance.
+</p></li>
+</ul>
+
+<h3>Title: Retrieval-Generation Alignment for End-to-End Task-Oriented Dialogue System. (arXiv:2310.08877v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08877">http://arxiv.org/abs/2310.08877</a></li>
+<li>Code URL: https://github.com/shenwzh3/mk-tod</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08877]] Retrieval-Generation Alignment for End-to-End Task-Oriented Dialogue System(http://arxiv.org/abs/2310.08877)</code></li>
+<li>Summary: <p>Developing an efficient retriever to retrieve knowledge from a large-scale
+knowledge base (KB) is critical for task-oriented dialogue systems to
+effectively handle localized and specialized tasks. However, widely used
+generative models such as T5 and ChatGPT often struggle to differentiate subtle
+differences among the retrieved KB records when generating responses, resulting
+in suboptimal quality of generated responses. In this paper, we propose the
+application of maximal marginal likelihood to train a perceptive retriever by
+utilizing signals from response generation for supervision. In addition, our
+approach goes beyond considering solely retrieved entities and incorporates
+various meta knowledge to guide the generator, thus improving the utilization
+of knowledge. We evaluate our approach on three task-oriented dialogue datasets
+using T5 and ChatGPT as the backbone models. The results demonstrate that when
+combined with meta knowledge, the response generator can effectively leverage
+high-quality knowledge records from the retriever and enhance the quality of
+generated responses. The codes and models of this paper are available at
+https://github.com/shenwzh3/MK-TOD.
+</p></li>
+</ul>
+
+<h3>Title: Exploration with Principles for Diverse AI Supervision. (arXiv:2310.08899v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08899">http://arxiv.org/abs/2310.08899</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08899]] Exploration with Principles for Diverse AI Supervision(http://arxiv.org/abs/2310.08899)</code></li>
+<li>Summary: <p>Training large transformers using next-token prediction has given rise to
+groundbreaking advancements in AI. While this generative AI approach has
+produced impressive results, it heavily leans on human supervision. Even
+state-of-the-art AI models like ChatGPT depend on fine-tuning through human
+demonstrations, demanding extensive human input and domain expertise. This
+strong reliance on human oversight poses a significant hurdle to the
+advancement of AI innovation. To address this limitation, we propose a novel
+paradigm termed Exploratory AI (EAI) aimed at autonomously generating
+high-quality training data. Drawing inspiration from unsupervised reinforcement
+learning (RL) pretraining, EAI achieves exploration within the natural language
+space. We accomplish this by harnessing large language models to assess the
+novelty of generated content. Our approach employs two key components: an actor
+that generates novel content following exploration principles and a critic that
+evaluates the generated content, offering critiques to guide the actor.
+Empirical evaluations demonstrate that EAI significantly boosts model
+performance on complex reasoning tasks, addressing the limitations of
+human-intensive supervision.
+</p></li>
+</ul>
+
+<h3>Title: "Kelly is a Warm Person, Joseph is a Role Model": Gender Biases in LLM-Generated Reference Letters. (arXiv:2310.09219v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09219">http://arxiv.org/abs/2310.09219</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09219]] "Kelly is a Warm Person, Joseph is a Role Model": Gender Biases in LLM-Generated Reference Letters(http://arxiv.org/abs/2310.09219)</code></li>
+<li>Summary: <p>As generative language models advance, users have started to utilize Large
+Language Models (LLMs) to assist in writing various types of content, including
+professional documents such as recommendation letters. Despite their
+convenience, these applications introduce unprecedented fairness concerns. As
+generated reference letters might be directly utilized by users in professional
+or academic scenarios, they have the potential to cause direct social harms,
+such as lowering success rates for female applicants. Therefore, it is imminent
+and necessary to comprehensively study fairness issues and associated harms in
+such real-world use cases for future mitigation and monitoring. In this paper,
+we critically examine gender bias in LLM-generated reference letters. Inspired
+by findings in social science, we design evaluation methods to manifest gender
+biases in LLM-generated letters through 2 dimensions: biases in language style
+and biases in lexical content. Furthermore, we investigate the extent of bias
+propagation by separately analyze bias amplification in model-hallucinated
+contents, which we define to be the hallucination bias of model-generated
+documents. Through benchmarking evaluation on 4 popular LLMs, including
+ChatGPT, Alpaca, Vicuna and StableLM, our study reveals significant gender
+biases in LLM-generated recommendation letters. Our findings further point
+towards the importance and imminence to recognize biases in LLM-generated
+professional documents.
+</p></li>
+</ul>
+
+<h3>Title: Automated Claim Matching with Large Language Models: Empowering Fact-Checkers in the Fight Against Misinformation. (arXiv:2310.09223v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09223">http://arxiv.org/abs/2310.09223</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09223]] Automated Claim Matching with Large Language Models: Empowering Fact-Checkers in the Fight Against Misinformation(http://arxiv.org/abs/2310.09223)</code></li>
+<li>Summary: <p>In today's digital era, the rapid spread of misinformation poses threats to
+public well-being and societal trust. As online misinformation proliferates,
+manual verification by fact checkers becomes increasingly challenging. We
+introduce FACT-GPT (Fact-checking Augmentation with Claim matching
+Task-oriented Generative Pre-trained Transformer), a framework designed to
+automate the claim matching phase of fact-checking using Large Language Models
+(LLMs). This framework identifies new social media content that either supports
+or contradicts claims previously debunked by fact-checkers. Our approach
+employs GPT-4 to generate a labeled dataset consisting of simulated social
+media posts. This data set serves as a training ground for fine-tuning more
+specialized LLMs. We evaluated FACT-GPT on an extensive dataset of social media
+content related to public health. The results indicate that our fine-tuned LLMs
+rival the performance of larger pre-trained LLMs in claim matching tasks,
+aligning closely with human annotations. This study achieves three key
+milestones: it provides an automated framework for enhanced fact-checking;
+demonstrates the potential of LLMs to complement human expertise; offers public
+resources, including datasets and models, to further research and applications
+in the fact-checking domain.
+</p></li>
+</ul>
+
+<h3>Title: Optimal Sample Complexity for Average Reward Markov Decision Processes. (arXiv:2310.08833v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08833">http://arxiv.org/abs/2310.08833</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08833]] Optimal Sample Complexity for Average Reward Markov Decision Processes(http://arxiv.org/abs/2310.08833)</code></li>
+<li>Summary: <p>We settle the sample complexity of policy learning for the maximization of
+the long run average reward associated with a uniformly ergodic Markov decision
+process (MDP), assuming a generative model. In this context, the existing
+literature provides a sample complexity upper bound of $\widetilde
+O(|S||A|t_{\text{mix}}^2 \epsilon^{-2})$ and a lower bound of
+$\Omega(|S||A|t_{\text{mix}} \epsilon^{-2})$. In these expressions, $|S|$ and
+$|A|$ denote the cardinalities of the state and action spaces respectively,
+$t_{\text{mix}}$ serves as a uniform upper limit for the total variation mixing
+times, and $\epsilon$ signifies the error tolerance. Therefore, a notable gap
+of $t_{\text{mix}}$ still remains to be bridged. Our primary contribution is to
+establish an estimator for the optimal policy of average reward MDPs with a
+sample complexity of $\widetilde O(|S||A|t_{\text{mix}}\epsilon^{-2})$,
+effectively reaching the lower bound in the literature. This is achieved by
+combining algorithmic ideas in Jin and Sidford (2021) with those of Li et al.
+(2020).
+</p></li>
+</ul>
+
+<h3>Title: Towards End-to-end 4-Bit Inference on Generative Large Language Models. (arXiv:2310.09259v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09259">http://arxiv.org/abs/2310.09259</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09259]] Towards End-to-end 4-Bit Inference on Generative Large Language Models(http://arxiv.org/abs/2310.09259)</code></li>
+<li>Summary: <p>We show that the majority of the inference computations for large generative
+models such as LLaMA and OPT can be performed with both weights and activations
+being cast to 4 bits, in a way that leads to practical speedups while at the
+same time maintaining good accuracy. We achieve this via a hybrid quantization
+strategy called QUIK, which compresses most of the weights and activations to
+4-bit, while keeping some outlier weights and activations in higher-precision.
+Crucially, our scheme is designed with computational efficiency in mind: we
+provide GPU kernels with highly-efficient layer-wise runtimes, which lead to
+practical end-to-end throughput improvements of up to 3.1x relative to FP16
+execution. Code and models are provided at https://github.com/IST-DASLab/QUIK.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Voyager: MTD-Based Aggregation Protocol for Mitigating Poisoning Attacks on DFL. (arXiv:2310.08739v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08739">http://arxiv.org/abs/2310.08739</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08739]] Voyager: MTD-Based Aggregation Protocol for Mitigating Poisoning Attacks on DFL(http://arxiv.org/abs/2310.08739)</code></li>
+<li>Summary: <p>The growing concern over malicious attacks targeting the robustness of both
+centralized and decentralized federated learning (FL) necessitates novel
+defensive strategies. In contrast to the centralized approach, decentralized FL
+(DFL) has the advantage of utilizing network topology and local dataset,
+enabling the exploration of moving target defense (MTD) based approaches. This
+work presents a theoretical analysis of the influence of network topology on
+the rubostness of DFL models. Drawing inspiration from these findings, a
+three-stage MTD-based aggregation protocol, called as Voyager, is proposed to
+improve the resilience of DFL against poisoning attacks through the
+manipulation of network topology connectivity. Voyager has three main
+components: an anomaly detector, a network topology explorer, and a connection
+deployer. When an abnormal model is detected in the network, the topology
+explorer responds strategically by forming connections with more trustworthy
+participants to secure the model. Experimental evaluations show that Voyager
+effectively mitigates various poisoning attacks without imposing significant
+resource and computational burdens on participants. These findings highlight
+the proposed reactive MTD as a potent defense mechanism in the context of DFL.
+</p></li>
+</ul>
+
+<h3>Title: Log Anomaly Detection on EuXFEL Nodes. (arXiv:2310.08951v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08951">http://arxiv.org/abs/2310.08951</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08951]] Log Anomaly Detection on EuXFEL Nodes(http://arxiv.org/abs/2310.08951)</code></li>
+<li>Summary: <p>This article introduces a method to detect anomalies in the log data
+generated by control system nodes at the European XFEL accelerator. The primary
+aim of this proposed method is to provide operators a comprehensive
+understanding of the availability, status, and problems specific to each node.
+This information is vital for ensuring the smooth operation. The sequential
+nature of logs and the absence of a rich text corpus that is specific to our
+nodes poses significant limitations for traditional and learning-based
+approaches for anomaly detection. To overcome this limitation, we propose a
+method that uses word embedding and models individual nodes as a sequence of
+these vectors that commonly co-occur, using a Hidden Markov Model (HMM). We
+score individual log entries by computing a probability ratio between the
+probability of the full log sequence including the new entry and the
+probability of just the previous log entries, without the new entry. This ratio
+indicates how probable the sequence becomes when the new entry is added. The
+proposed approach can detect anomalies by scoring and ranking log entries from
+EuXFEL nodes where entries that receive high scores are potential anomalies
+that do not fit the routine of the node. This method provides a warning system
+to alert operators about these irregular log events that may indicate issues.
+</p></li>
+</ul>
+
+<h3>Title: Electrical Grid Anomaly Detection via Tensor Decomposition. (arXiv:2310.08650v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08650">http://arxiv.org/abs/2310.08650</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08650]] Electrical Grid Anomaly Detection via Tensor Decomposition(http://arxiv.org/abs/2310.08650)</code></li>
+<li>Summary: <p>Supervisory Control and Data Acquisition (SCADA) systems often serve as the
+nervous system for substations within power grids. These systems facilitate
+real-time monitoring, data acquisition, control of equipment, and ensure smooth
+and efficient operation of the substation and its connected devices. Previous
+work has shown that dimensionality reduction-based approaches, such as
+Principal Component Analysis (PCA), can be used for accurate identification of
+anomalies in SCADA systems. While not specifically applied to SCADA,
+non-negative matrix factorization (NMF) has shown strong results at detecting
+anomalies in wireless sensor networks. These unsupervised approaches model the
+normal or expected behavior and detect the unseen types of attacks or anomalies
+by identifying the events that deviate from the expected behavior. These
+approaches; however, do not model the complex and multi-dimensional
+interactions that are naturally present in SCADA systems. Differently,
+non-negative tensor decomposition is a powerful unsupervised machine learning
+(ML) method that can model the complex and multi-faceted activity details of
+SCADA events. In this work, we novelly apply the tensor decomposition method
+Canonical Polyadic Alternating Poisson Regression (CP-APR) with a probabilistic
+framework, which has previously shown state-of-the-art anomaly detection
+results on cyber network data, to identify anomalies in SCADA systems. We
+showcase that the use of statistical behavior analysis of SCADA communication
+with tensor decomposition improves the specificity and accuracy of identifying
+anomalies in electrical grid systems. In our experiments, we model real-world
+SCADA system data collected from the electrical grid operated by Los Alamos
+National Laboratory (LANL) which provides transmission and distribution service
+through a partnership with Los Alamos County, and detect synthetically
+generated anomalies.
+</p></li>
+</ul>
+
+<h3>Title: Does Graph Distillation See Like Vision Dataset Counterpart?. (arXiv:2310.09192v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09192">http://arxiv.org/abs/2310.09192</a></li>
+<li>Code URL: https://github.com/ringbdstack/sgdd</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09192]] Does Graph Distillation See Like Vision Dataset Counterpart?(http://arxiv.org/abs/2310.09192)</code></li>
+<li>Summary: <p>Training on large-scale graphs has achieved remarkable results in graph
+representation learning, but its cost and storage have attracted increasing
+concerns. Existing graph condensation methods primarily focus on optimizing the
+feature matrices of condensed graphs while overlooking the impact of the
+structure information from the original graphs. To investigate the impact of
+the structure information, we conduct analysis from the spectral domain and
+empirically identify substantial Laplacian Energy Distribution (LED) shifts in
+previous works. Such shifts lead to poor performance in cross-architecture
+generalization and specific tasks, including anomaly detection and link
+prediction. In this paper, we propose a novel Structure-broadcasting Graph
+Dataset Distillation (SGDD) scheme for broadcasting the original structure
+information to the generation of the synthetic one, which explicitly prevents
+overlooking the original structure information. Theoretically, the synthetic
+graphs by SGDD are expected to have smaller LED shifts than previous works,
+leading to superior performance in both cross-architecture settings and
+specific tasks. We validate the proposed SGDD across 9 datasets and achieve
+state-of-the-art results on all of them: for example, on the YelpChi dataset,
+our approach maintains 98.6% test accuracy of training on the original graph
+dataset with 1,000 times saving on the scale of the graph. Moreover, we
+empirically evaluate there exist 17.6% ~ 31.4% reductions in LED shift crossing
+9 datasets. Extensive experiments and analysis verify the effectiveness and
+necessity of the proposed designs. The code is available in the GitHub
+repository: https://github.com/RingBDStack/SGDD.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Human-in-the-loop Machine Translation with Large Language Model. (arXiv:2310.08908v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08908">http://arxiv.org/abs/2310.08908</a></li>
+<li>Code URL: https://github.com/nlp2ct/hil-mt</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08908]] Human-in-the-loop Machine Translation with Large Language Model(http://arxiv.org/abs/2310.08908)</code></li>
+<li>Summary: <p>The large language model (LLM) has garnered significant attention due to its
+in-context learning mechanisms and emergent capabilities. The research
+community has conducted several pilot studies to apply LLMs to machine
+translation tasks and evaluate their performance from diverse perspectives.
+However, previous research has primarily focused on the LLM itself and has not
+explored human intervention in the inference process of LLM. The
+characteristics of LLM, such as in-context learning and prompt engineering,
+closely mirror human cognitive abilities in language tasks, offering an
+intuitive solution for human-in-the-loop generation. In this study, we propose
+a human-in-the-loop pipeline that guides LLMs to produce customized outputs
+with revision instructions. The pipeline initiates by prompting the LLM to
+produce a draft translation, followed by the utilization of automatic retrieval
+or human feedback as supervision signals to enhance the LLM's translation
+through in-context learning. The human-machine interactions generated in this
+pipeline are also stored in an external database to expand the in-context
+retrieval database, enabling us to leverage human supervision in an offline
+setting. We evaluate the proposed pipeline using GPT-3.5-turbo API on five
+domain-specific benchmarks for German-English translation. The results
+demonstrate the effectiveness of the pipeline in tailoring in-domain
+translations and improving translation performance compared to direct
+translation. Additionally, we discuss the results from the following
+perspectives: 1) the effectiveness of different in-context retrieval methods;
+2) the construction of a retrieval database under low-resource scenarios; 3)
+the observed domains differences; 4) the quantitative analysis of linguistic
+statistics; and 5) the qualitative analysis of translation cases. The code and
+data are available at https://github.com/NLP2CT/HIL-MT/.
+</p></li>
+</ul>
+
+<h3>Title: Towards Informative Few-Shot Prompt with Maximum Information Gain for In-Context Learning. (arXiv:2310.08923v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08923">http://arxiv.org/abs/2310.08923</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08923]] Towards Informative Few-Shot Prompt with Maximum Information Gain for In-Context Learning(http://arxiv.org/abs/2310.08923)</code></li>
+<li>Summary: <p>Large Language models (LLMs) possess the capability to engage In-context
+Learning (ICL) by leveraging a few demonstrations pertaining to a new
+downstream task as conditions. However, this particular learning paradigm
+suffers from high instability stemming from substantial variances induced by
+factors such as the input distribution of selected examples, their ordering,
+and prompt formats. In this work, we demonstrate that even when all these
+factors are held constant, the random selection of examples still results in
+high variance. Consequently, we aim to explore the informative ability of data
+examples by quantifying the Information Gain (IG) obtained in prediction after
+observing a given example candidate. Then we propose to sample those with
+maximum IG. Additionally, we identify the presence of template bias, which can
+lead to unfair evaluations of IG during the sampling process. To mitigate this
+bias, we introduce Calibration Before Sampling strategy. The experimental
+results illustrate that our proposed method can yield an average relative
+improvement of 14.3% across six classification tasks using three LLMs.
+</p></li>
+</ul>
+
+<h3>Title: Precedent-Enhanced Legal Judgment Prediction with LLM and Domain-Model Collaboration. (arXiv:2310.09241v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.09241">http://arxiv.org/abs/2310.09241</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.09241]] Precedent-Enhanced Legal Judgment Prediction with LLM and Domain-Model Collaboration(http://arxiv.org/abs/2310.09241)</code></li>
+<li>Summary: <p>Legal Judgment Prediction (LJP) has become an increasingly crucial task in
+Legal AI, i.e., predicting the judgment of the case in terms of case fact
+description. Precedents are the previous legal cases with similar facts, which
+are the basis for the judgment of the subsequent case in national legal
+systems. Thus, it is worthwhile to explore the utilization of precedents in the
+LJP. Recent advances in deep learning have enabled a variety of techniques to
+be used to solve the LJP task. These can be broken down into two categories:
+large language models (LLMs) and domain-specific models. LLMs are capable of
+interpreting and generating complex natural language, while domain models are
+efficient in learning task-specific information. In this paper, we propose the
+precedent-enhanced LJP framework (PLJP), a system that leverages the strength
+of both LLM and domain models in the context of precedents. Specifically, the
+domain models are designed to provide candidate labels and find the proper
+precedents efficiently, and the large models will make the final prediction
+with an in-context precedents comprehension. Experiments on the real-world
+dataset demonstrate the effectiveness of our PLJP. Moreover, our work shows a
+promising direction for LLM and domain-model collaboration that can be
+generalized to other vertical domains.
+</p></li>
+</ul>
+
+<h3>Title: In-Context Learning for Few-Shot Molecular Property Prediction. (arXiv:2310.08863v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.08863">http://arxiv.org/abs/2310.08863</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.08863]] In-Context Learning for Few-Shot Molecular Property Prediction(http://arxiv.org/abs/2310.08863)</code></li>
+<li>Summary: <p>In-context learning has become an important approach for few-shot learning in
+Large Language Models because of its ability to rapidly adapt to new tasks
+without fine-tuning model parameters. However, it is restricted to applications
+in natural language and inapplicable to other domains. In this paper, we adapt
+the concepts underpinning in-context learning to develop a new algorithm for
+few-shot molecular property prediction. Our approach learns to predict
+molecular properties from a context of (molecule, property measurement) pairs
+and rapidly adapts to new properties without fine-tuning. On the FS-Mol and
+BACE molecular property prediction benchmarks, we find this method surpasses
+the performance of recent meta-learning algorithms at small support sizes and
+is competitive with the best methods at large support sizes.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
