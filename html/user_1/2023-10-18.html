@@ -1,0 +1,947 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: BiomedJourney: Counterfactual Biomedical Image Generation by Instruction-Learning from Multimodal Patient Journeys. (arXiv:2310.10765v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10765">http://arxiv.org/abs/2310.10765</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10765]] BiomedJourney: Counterfactual Biomedical Image Generation by Instruction-Learning from Multimodal Patient Journeys(http://arxiv.org/abs/2310.10765)</code></li>
+<li>Summary: <p>Rapid progress has been made in instruction-learning for image editing with
+natural-language instruction, as exemplified by InstructPix2Pix. In
+biomedicine, such methods can be applied to counterfactual image generation,
+which helps differentiate causal structure from spurious correlation and
+facilitate robust image interpretation for disease progression modeling.
+However, generic image-editing models are ill-suited for the biomedical domain,
+and counterfactual biomedical image generation is largely underexplored. In
+this paper, we present BiomedJourney, a novel method for counterfactual
+biomedical image generation by instruction-learning from multimodal patient
+journeys. Given a patient with two biomedical images taken at different time
+points, we use GPT-4 to process the corresponding imaging reports and generate
+a natural language description of disease progression. The resulting triples
+(prior image, progression description, new image) are then used to train a
+latent diffusion model for counterfactual biomedical image generation. Given
+the relative scarcity of image time series data, we introduce a two-stage
+curriculum that first pretrains the denoising network using the much more
+abundant single image-report pairs (with dummy prior image), and then continues
+training using the counterfactual triples. Experiments using the standard
+MIMIC-CXR dataset demonstrate the promise of our method. In a comprehensive
+battery of tests on counterfactual medical image generation, BiomedJourney
+substantially outperforms prior state-of-the-art methods in instruction image
+editing and medical image generation such as InstructPix2Pix and RoentGen. To
+facilitate future study in counterfactual medical generation, we plan to
+release our instruction-learning code and pretrained models.
+</p></li>
+</ul>
+
+<h3>Title: LAMP: Learn A Motion Pattern for Few-Shot-Based Video Generation. (arXiv:2310.10769v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10769">http://arxiv.org/abs/2310.10769</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10769]] LAMP: Learn A Motion Pattern for Few-Shot-Based Video Generation(http://arxiv.org/abs/2310.10769)</code></li>
+<li>Summary: <p>With the impressive progress in diffusion-based text-to-image generation,
+extending such powerful generative ability to text-to-video raises enormous
+attention. Existing methods either require large-scale text-video pairs and a
+large number of training resources or learn motions that are precisely aligned
+with template videos. It is non-trivial to balance a trade-off between the
+degree of generation freedom and the resource costs for video generation. In
+our study, we present a few-shot-based tuning framework, LAMP, which enables
+text-to-image diffusion model Learn A specific Motion Pattern with 8~16 videos
+on a single GPU. Specifically, we design a first-frame-conditioned pipeline
+that uses an off-the-shelf text-to-image model for content generation so that
+our tuned video diffusion model mainly focuses on motion learning. The
+well-developed text-to-image techniques can provide visually pleasing and
+diverse content as generation conditions, which highly improves video quality
+and generation freedom. To capture the features of temporal dimension, we
+expand the pretrained 2D convolution layers of the T2I model to our novel
+temporal-spatial motion learning layers and modify the attention blocks to the
+temporal level. Additionally, we develop an effective inference trick,
+shared-noise sampling, which can improve the stability of videos with
+computational costs. Our method can also be flexibly applied to other tasks,
+e.g. real-world image animation and video editing. Extensive experiments
+demonstrate that LAMP can effectively learn the motion pattern on limited data
+and generate high-quality videos. The code and models are available at
+https://rq-wu.github.io/projects/LAMP.
+</p></li>
+</ul>
+
+<h3>Title: 3D Structure-guided Network for Tooth Alignment in 2D Photograph. (arXiv:2310.11106v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11106">http://arxiv.org/abs/2310.11106</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11106]] 3D Structure-guided Network for Tooth Alignment in 2D Photograph(http://arxiv.org/abs/2310.11106)</code></li>
+<li>Summary: <p>Orthodontics focuses on rectifying misaligned teeth (i.e., malocclusions),
+affecting both masticatory function and aesthetics. However, orthodontic
+treatment often involves complex, lengthy procedures. As such, generating a 2D
+photograph depicting aligned teeth prior to orthodontic treatment is crucial
+for effective dentist-patient communication and, more importantly, for
+encouraging patients to accept orthodontic intervention. In this paper, we
+propose a 3D structure-guided tooth alignment network that takes 2D photographs
+as input (e.g., photos captured by smartphones) and aligns the teeth within the
+2D image space to generate an orthodontic comparison photograph featuring
+aesthetically pleasing, aligned teeth. Notably, while the process operates
+within a 2D image space, our method employs 3D intra-oral scanning models
+collected in clinics to learn about orthodontic treatment, i.e., projecting the
+pre- and post-orthodontic 3D tooth structures onto 2D tooth contours, followed
+by a diffusion model to learn the mapping relationship. Ultimately, the aligned
+tooth contours are leveraged to guide the generation of a 2D photograph with
+aesthetically pleasing, aligned teeth and realistic textures. We evaluate our
+network on various facial photographs, demonstrating its exceptional
+performance and strong applicability within the orthodontic industry.
+</p></li>
+</ul>
+
+<h3>Title: BayesDiff: Estimating Pixel-wise Uncertainty in Diffusion via Bayesian Inference. (arXiv:2310.11142v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11142">http://arxiv.org/abs/2310.11142</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11142]] BayesDiff: Estimating Pixel-wise Uncertainty in Diffusion via Bayesian Inference(http://arxiv.org/abs/2310.11142)</code></li>
+<li>Summary: <p>Diffusion models have impressive image generation capability, but low-quality
+generations still exist, and their identification remains challenging due to
+the lack of a proper sample-wise metric. To address this, we propose BayesDiff,
+a pixel-wise uncertainty estimator for generations from diffusion models based
+on Bayesian inference. In particular, we derive a novel uncertainty iteration
+principle to characterize the uncertainty dynamics in diffusion, and leverage
+the last-layer Laplace approximation for efficient Bayesian inference. The
+estimated pixel-wise uncertainty can not only be aggregated into a sample-wise
+metric to filter out low-fidelity images but also aids in augmenting successful
+generations and rectifying artifacts in failed generations in text-to-image
+tasks. Extensive experiments demonstrate the efficacy of BayesDiff and its
+promise for practical applications.
+</p></li>
+</ul>
+
+<h3>Title: Enhancing Network Resilience through Machine Learning-powered Graph Combinatorial Optimization: Applications in Cyber Defense and Information Diffusion. (arXiv:2310.10667v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10667">http://arxiv.org/abs/2310.10667</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10667]] Enhancing Network Resilience through Machine Learning-powered Graph Combinatorial Optimization: Applications in Cyber Defense and Information Diffusion(http://arxiv.org/abs/2310.10667)</code></li>
+<li>Summary: <p>With the burgeoning advancements of computing and network communication
+technologies, network infrastructures and their application environments have
+become increasingly complex. Due to the increased complexity, networks are more
+prone to hardware faults and highly susceptible to cyber-attacks. Therefore,
+for rapidly growing network-centric applications, network resilience is
+essential to minimize the impact of attacks and to ensure that the network
+provides an acceptable level of services during attacks, faults or disruptions.
+In this regard, this thesis focuses on developing effective approaches for
+enhancing network resilience. Existing approaches for enhancing network
+resilience emphasize on determining bottleneck nodes and edges in the network
+and designing proactive responses to safeguard the network against attacks.
+However, existing solutions generally consider broader application domains and
+possess limited applicability when applied to specific application areas such
+as cyber defense and information diffusion, which are highly popular
+application domains among cyber attackers.
+</p>
+<p>This thesis aims to design effective, efficient and scalable techniques for
+discovering bottleneck nodes and edges in the network to enhance network
+resilience in cyber defense and information diffusion application domains. We
+first investigate a cyber defense graph optimization problem, i.e., hardening
+active directory systems by discovering bottleneck edges in the network. We
+then study the problem of identifying bottleneck structural hole spanner nodes,
+which are crucial for information diffusion in the network. We transform both
+problems into graph-combinatorial optimization problems and design machine
+learning based approaches for discovering bottleneck points vital for enhancing
+network resilience.
+</p></li>
+</ul>
+
+<h3>Title: Enhancing ML model accuracy for Digital VLSI circuits using diffusion models: A study on synthetic data generation. (arXiv:2310.10691v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10691">http://arxiv.org/abs/2310.10691</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10691]] Enhancing ML model accuracy for Digital VLSI circuits using diffusion models: A study on synthetic data generation(http://arxiv.org/abs/2310.10691)</code></li>
+<li>Summary: <p>Generative AI has seen remarkable growth over the past few years, with
+diffusion models being state-of-the-art for image generation. This study
+investigates the use of diffusion models in generating artificial data
+generation for electronic circuits for enhancing the accuracy of subsequent
+machine learning models in tasks such as performance assessment, design, and
+testing when training data is usually known to be very limited. We utilize
+simulations in the HSPICE design environment with 22nm CMOS technology nodes to
+obtain representative real training data for our proposed diffusion model. Our
+results demonstrate the close resemblance of synthetic data using diffusion
+model to real data. We validate the quality of generated data, and demonstrate
+that data augmentation certainly effective in predictive analysis of VLSI
+design for digital circuits.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: DORec: Decomposed Object Reconstruction Utilizing 2D Self-Supervised Features. (arXiv:2310.11092v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11092">http://arxiv.org/abs/2310.11092</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11092]] DORec: Decomposed Object Reconstruction Utilizing 2D Self-Supervised Features(http://arxiv.org/abs/2310.11092)</code></li>
+<li>Summary: <p>Decomposing a target object from a complex background while reconstructing is
+challenging. Most approaches acquire the perception for object instances
+through the use of manual labels, but the annotation procedure is costly. The
+recent advancements in 2D self-supervised learning have brought new prospects
+to object-aware representation, yet it remains unclear how to leverage such
+noisy 2D features for clean decomposition. In this paper, we propose a
+Decomposed Object Reconstruction (DORec) network based on neural implicit
+representations. Our key idea is to transfer 2D self-supervised features into
+masks of two levels of granularity to supervise the decomposition, including a
+binary mask to indicate the foreground regions and a K-cluster mask to indicate
+the semantically similar regions. These two masks are complementary to each
+other and lead to robust decomposition. Experimental results show the
+superiority of DORec in segmenting and reconstructing the foreground object on
+various datasets.
+</p></li>
+</ul>
+
+<h3>Title: SD-HuBERT: Self-Distillation Induces Syllabic Organization in HuBERT. (arXiv:2310.10803v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10803">http://arxiv.org/abs/2310.10803</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10803]] SD-HuBERT: Self-Distillation Induces Syllabic Organization in HuBERT(http://arxiv.org/abs/2310.10803)</code></li>
+<li>Summary: <p>Data-driven unit discovery in self-supervised learning (SSL) of speech has
+embarked on a new era of spoken language processing. Yet, the discovered units
+often remain in phonetic space, limiting the utility of SSL representations.
+Here, we demonstrate that a syllabic organization emerges in learning
+sentence-level representation of speech. In particular, we adopt
+"self-distillation" objective to fine-tune the pretrained HuBERT with an
+aggregator token that summarizes the entire sentence. Without any supervision,
+the resulting model draws definite boundaries in speech, and the
+representations across frames show salient syllabic structures. We demonstrate
+that this emergent structure largely corresponds to the ground truth syllables.
+Furthermore, we propose a new benchmark task, Spoken Speech ABX, for evaluating
+sentence-level representation of speech. When compared to previous models, our
+model outperforms in both unsupervised syllable discovery and learning
+sentence-level representation. Together, we demonstrate that the
+self-distillation of HuBERT gives rise to syllabic organization without relying
+on external labels or modalities, and potentially provides novel data-driven
+units for spoken language modeling.
+</p></li>
+</ul>
+
+<h3>Title: Spatial HuBERT: Self-supervised Spatial Speech Representation Learning for a Single Talker from Multi-channel Audio. (arXiv:2310.10922v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10922">http://arxiv.org/abs/2310.10922</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10922]] Spatial HuBERT: Self-supervised Spatial Speech Representation Learning for a Single Talker from Multi-channel Audio(http://arxiv.org/abs/2310.10922)</code></li>
+<li>Summary: <p>Self-supervised learning has been used to leverage unlabelled data, improving
+accuracy and generalisation of speech systems through the training of
+representation models. While many recent works have sought to produce effective
+representations across a variety of acoustic domains, languages, modalities and
+even simultaneous speakers, these studies have all been limited to
+single-channel audio recordings. This paper presents Spatial HuBERT, a
+self-supervised speech representation model that learns both acoustic and
+spatial information pertaining to a single speaker in a potentially noisy
+environment by using multi-channel audio inputs. Spatial HuBERT learns
+representations that outperform state-of-the-art single-channel speech
+representations on a variety of spatial downstream tasks, particularly in
+reverberant and noisy environments. We also demonstrate the utility of the
+representations learned by Spatial HuBERT on a speech localisation downstream
+task. Along with this paper, we publicly release a new dataset of 100 000
+simulated first-order ambisonics room impulse responses.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Automated Natural Language Explanation of Deep Visual Neurons with Large Models. (arXiv:2310.10708v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10708">http://arxiv.org/abs/2310.10708</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10708]] Automated Natural Language Explanation of Deep Visual Neurons with Large Models(http://arxiv.org/abs/2310.10708)</code></li>
+<li>Summary: <p>Deep neural networks have exhibited remarkable performance across a wide
+range of real-world tasks. However, comprehending the underlying reasons for
+their effectiveness remains a challenging problem. Interpreting deep neural
+networks through examining neurons offers distinct advantages when it comes to
+exploring the inner workings of neural networks. Previous research has
+indicated that specific neurons within deep vision networks possess semantic
+meaning and play pivotal roles in model performance. Nonetheless, the current
+methods for generating neuron semantics heavily rely on human intervention,
+which hampers their scalability and applicability. To address this limitation,
+this paper proposes a novel post-hoc framework for generating semantic
+explanations of neurons with large foundation models, without requiring human
+intervention or prior knowledge. Our framework is designed to be compatible
+with various model architectures and datasets, facilitating automated and
+scalable neuron interpretation. Experiments are conducted with both qualitative
+and quantitative analysis to verify the effectiveness of our proposed approach.
+</p></li>
+</ul>
+
+<h3>Title: Towards Training-free Open-world Segmentation via Image Prompting Foundation Models. (arXiv:2310.10912v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10912">http://arxiv.org/abs/2310.10912</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10912]] Towards Training-free Open-world Segmentation via Image Prompting Foundation Models(http://arxiv.org/abs/2310.10912)</code></li>
+<li>Summary: <p>The realm of computer vision has witnessed a paradigm shift with the advent
+of foundational models, mirroring the transformative influence of large
+language models in the domain of natural language processing. This paper delves
+into the exploration of open-world segmentation, presenting a novel approach
+called Image Prompt Segmentation (IPSeg) that harnesses the power of vision
+foundational models. At the heart of IPSeg lies the principle of a
+training-free paradigm, which capitalizes on image prompting techniques. IPSeg
+utilizes a single image containing a subjective visual concept as a flexible
+prompt to query vision foundation models like DINOv2 and Stable Diffusion. Our
+approach extracts robust features for the prompt image and input image, then
+matches the input representations to the prompt representations via a novel
+feature interaction module to generate point prompts highlighting target
+objects in the input image. The generated point prompts are further utilized to
+guide the Segment Anything Model to segment the target object in the input
+image. The proposed method stands out by eliminating the need for exhaustive
+training sessions, thereby offering a more efficient and scalable solution.
+Experiments on COCO, PASCAL VOC, and other datasets demonstrate IPSeg's
+efficacy for flexible open-world segmentation using intuitive image prompts.
+This work pioneers tapping foundation models for open-world understanding
+through visual concepts conveyed in images.
+</p></li>
+</ul>
+
+<h3>Title: A decoder-only foundation model for time-series forecasting. (arXiv:2310.10688v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10688">http://arxiv.org/abs/2310.10688</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10688]] A decoder-only foundation model for time-series forecasting(http://arxiv.org/abs/2310.10688)</code></li>
+<li>Summary: <p>Motivated by recent advances in large language models for Natural Language
+Processing (NLP), we design a time-series foundation model for forecasting
+whose out-of-the-box zero-shot performance on a variety of public datasets
+comes close to the accuracy of state-of-the-art supervised forecasting models
+for each individual dataset. Our model is based on pretraining a
+patched-decoder style attention model on a large time-series corpus, and can
+work well across different forecasting history lengths, prediction lengths and
+temporal granularities.
+</p></li>
+</ul>
+
+<h3>Title: RealBehavior: A Framework for Faithfully Characterizing Foundation Models' Human-like Behavior Mechanisms. (arXiv:2310.11227v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11227">http://arxiv.org/abs/2310.11227</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11227]] RealBehavior: A Framework for Faithfully Characterizing Foundation Models' Human-like Behavior Mechanisms(http://arxiv.org/abs/2310.11227)</code></li>
+<li>Summary: <p>Reports of human-like behaviors in foundation models are growing, with
+psychological theories providing enduring tools to investigate these behaviors.
+However, current research tends to directly apply these human-oriented tools
+without verifying the faithfulness of their outcomes. In this paper, we
+introduce a framework, RealBehavior, which is designed to characterize the
+humanoid behaviors of models faithfully. Beyond simply measuring behaviors, our
+framework assesses the faithfulness of results based on reproducibility,
+internal and external consistency, and generalizability. Our findings suggest
+that a simple application of psychological tools cannot faithfully characterize
+all human-like behaviors. Moreover, we discuss the impacts of aligning models
+with human and social values, arguing for the necessity of diversifying
+alignment objectives to prevent the creation of models with restricted
+characteristics.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Improving Video Deepfake Detection: A DCT-Based Approach with Patch-Level Analysis. (arXiv:2310.11204v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11204">http://arxiv.org/abs/2310.11204</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11204]] Improving Video Deepfake Detection: A DCT-Based Approach with Patch-Level Analysis(http://arxiv.org/abs/2310.11204)</code></li>
+<li>Summary: <p>The term deepfake refers to all those multimedia contents that were
+synthetically altered or created from scratch through the use of generative
+models. This phenomenon has become widespread due to the use of increasingly
+accurate and efficient architectures capable of rendering manipulated content
+indistinguishable from real content. In order to fight the illicit use of this
+powerful technology, it has become necessary to develop algorithms able to
+distinguish synthetic content from real ones. In this study, a new algorithm
+for the detection of deepfakes in digital videos is presented, focusing on the
+main goal of creating a fast and explainable method from a forensic
+perspective. To achieve this goal, the I-frames were extracted in order to
+provide faster computation and analysis than approaches described in
+literature. In addition, to identify the most discriminating regions within
+individual video frames, the entire frame, background, face, eyes, nose, mouth,
+and face frame were analyzed separately. From the Discrete Cosine Transform
+(DCT), the Beta components were extracted from the AC coefficients and used as
+input to standard classifiers (e.g., k-NN, SVM, and others) in order to
+identify those frequencies most discriminative for solving the task in
+question. Experimental results obtained on the Faceforensics++ and Celeb-DF
+(v2) datasets show that the eye and mouth regions are those most discriminative
+and able to determine the nature of the video with greater reliability than the
+analysis of the whole frame. The method proposed in this study is analytical,
+fast and does not require much computational power.
+</p></li>
+</ul>
+
+<h3>Title: Emergent AI-Assisted Discourse: Case Study of a Second Language Writer Authoring with ChatGPT. (arXiv:2310.10903v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10903">http://arxiv.org/abs/2310.10903</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10903]] Emergent AI-Assisted Discourse: Case Study of a Second Language Writer Authoring with ChatGPT(http://arxiv.org/abs/2310.10903)</code></li>
+<li>Summary: <p>The rapid proliferation of ChatGPT has incited debates regarding its impact
+on human writing. Amid concerns about declining writing standards, this study
+investigates the role of ChatGPT in facilitating academic writing, especially
+among language learners. Using a case study approach, this study examines the
+experiences of Kailing, a doctoral student, who integrates ChatGPT throughout
+their academic writing process. The study employs activity theory as a lens for
+understanding writing with generative AI tools and data analyzed includes
+semi-structured interviews, writing samples, and GPT logs. Results indicate
+that Kailing effectively collaborates with ChatGPT across various writing
+stages while preserving her distinct authorial voice and agency. This
+underscores the potential of AI tools such as ChatGPT to enhance academic
+writing for language learners without overshadowing individual authenticity.
+This case study offers a critical exploration of how ChatGPT is utilized in the
+academic writing process and the preservation of a student's authentic voice
+when engaging with the tool.
+</p></li>
+</ul>
+
+<h3>Title: Denevil: Towards Deciphering and Navigating the Ethical Values of Large Language Models via Instruction Learning. (arXiv:2310.11053v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11053">http://arxiv.org/abs/2310.11053</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11053]] Denevil: Towards Deciphering and Navigating the Ethical Values of Large Language Models via Instruction Learning(http://arxiv.org/abs/2310.11053)</code></li>
+<li>Summary: <p>Large Language Models (LLMs) have made unprecedented breakthroughs, yet their
+increasing integration into everyday life might raise societal risks due to
+generated unethical content. Despite extensive study on specific issues like
+bias, the intrinsic values of LLMs remain largely unexplored from a moral
+philosophy perspective. This work delves into ethical values utilizing Moral
+Foundation Theory. Moving beyond conventional discriminative evaluations with
+poor reliability, we propose DeNEVIL, a novel prompt generation algorithm
+tailored to dynamically exploit LLMs' value vulnerabilities and elicit the
+violation of ethics in a generative manner, revealing their underlying value
+inclinations. On such a basis, we construct MoralPrompt, a high-quality dataset
+comprising 2,397 prompts covering 500+ value principles, and then benchmark the
+intrinsic values across a spectrum of LLMs. We discovered that most models are
+essentially misaligned, necessitating further ethical value alignment. In
+response, we develop VILMO, an in-context alignment method that substantially
+enhances the value compliance of LLM outputs by learning to generate
+appropriate value instructions, outperforming existing competitors. Our methods
+are suitable for black-box and open-source models, offering a promising initial
+step in studying the ethical values of LLMs.
+</p></li>
+</ul>
+
+<h3>Title: Revealing the Unwritten: Visual Investigation of Beam Search Trees to Address Language Model Prompting Challenges. (arXiv:2310.11252v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11252">http://arxiv.org/abs/2310.11252</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11252]] Revealing the Unwritten: Visual Investigation of Beam Search Trees to Address Language Model Prompting Challenges(http://arxiv.org/abs/2310.11252)</code></li>
+<li>Summary: <p>The growing popularity of generative language models has amplified interest
+in interactive methods to guide model outputs. Prompt refinement is considered
+one of the most effective means to influence output among these methods. We
+identify several challenges associated with prompting large language models,
+categorized into data- and model-specific, linguistic, and socio-linguistic
+challenges. A comprehensive examination of model outputs, including runner-up
+candidates and their corresponding probabilities, is needed to address these
+issues. The beam search tree, the prevalent algorithm to sample model outputs,
+can inherently supply this information. Consequently, we introduce an
+interactive visual method for investigating the beam search tree, facilitating
+analysis of the decisions made by the model during generation. We
+quantitatively show the value of exposing the beam search tree and present five
+detailed analysis scenarios addressing the identified challenges. Our
+methodology validates existing results and offers additional insights.
+</p></li>
+</ul>
+
+<h3>Title: Analysis and Detection against Network Attacks in the Overlapping Phenomenon of Behavior Attribute. (arXiv:2310.10660v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10660">http://arxiv.org/abs/2310.10660</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10660]] Analysis and Detection against Network Attacks in the Overlapping Phenomenon of Behavior Attribute(http://arxiv.org/abs/2310.10660)</code></li>
+<li>Summary: <p>The proliferation of network attacks poses a significant threat. Researchers
+propose datasets for network attacks to support research in related fields.
+Then, many attack detection methods based on these datasets are proposed. These
+detection methods, whether two-classification or multi-classification, belong
+to single-label learning, i.e., only one label is given to each sample.
+However, we discover that there is a noteworthy phenomenon of behavior
+attribute overlap between attacks, The presentation of this phenomenon in a
+dataset is that there are multiple samples with the same features but different
+labels. In this paper, we verify the phenomenon in well-known
+datasets(UNSW-NB15, CCCS-CIC-AndMal-2020) and re-label these data. In addition,
+detecting network attacks in a multi-label manner can obtain more information,
+providing support for tracing the attack source and building IDS. Therefore, we
+propose a multi-label detection model based on deep learning, MLD-Model, in
+which Wasserstein-Generative-Adversarial- Network-with-Gradient-Penalty
+(WGAN-GP) with improved loss performs data enhancement to alleviate the class
+imbalance problem, and Auto-Encoder (AE) performs classifier parameter
+pre-training. Experimental results demonstrate that MLD-Model can achieve
+excellent classification performance. It can achieve F1=80.06% in UNSW-NB15 and
+F1=83.63% in CCCS-CIC-AndMal-2020. Especially, MLD-Model is 5.99%-7.97% higher
+in F1 compared with the related single-label methods.
+</p></li>
+</ul>
+
+<h3>Title: Demystifying Poisoning Backdoor Attacks from a Statistical Perspective. (arXiv:2310.10780v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10780">http://arxiv.org/abs/2310.10780</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10780]] Demystifying Poisoning Backdoor Attacks from a Statistical Perspective(http://arxiv.org/abs/2310.10780)</code></li>
+<li>Summary: <p>The growing dependence on machine learning in real-world applications
+emphasizes the importance of understanding and ensuring its safety. Backdoor
+attacks pose a significant security risk due to their stealthy nature and
+potentially serious consequences. Such attacks involve embedding triggers
+within a learning model with the intention of causing malicious behavior when
+an active trigger is present while maintaining regular functionality without
+it. This paper evaluates the effectiveness of any backdoor attack incorporating
+a constant trigger, by establishing tight lower and upper boundaries for the
+performance of the compromised model on both clean and backdoor test data. The
+developed theory answers a series of fundamental but previously underexplored
+problems, including (1) what are the determining factors for a backdoor
+attack's success, (2) what is the direction of the most effective backdoor
+attack, and (3) when will a human-imperceptible trigger succeed. Our derived
+understanding applies to both discriminative and generative models. We also
+demonstrate the theory by conducting experiments using benchmark datasets and
+state-of-the-art backdoor attack scenarios.
+</p></li>
+</ul>
+
+<h3>Title: ACES: generating diverse programming puzzles with autotelic language models and semantic descriptors. (arXiv:2310.10692v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10692">http://arxiv.org/abs/2310.10692</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10692]] ACES: generating diverse programming puzzles with autotelic language models and semantic descriptors(http://arxiv.org/abs/2310.10692)</code></li>
+<li>Summary: <p>Finding and selecting new and interesting problems to solve is at the heart
+of curiosity, science and innovation. We here study automated problem
+generation in the context of the open-ended space of python programming
+puzzles. Existing generative models often aim at modeling a reference
+distribution without any explicit diversity optimization. Other methods
+explicitly optimizing for diversity do so either in limited hand-coded
+representation spaces or in uninterpretable learned embedding spaces that may
+not align with human perceptions of interesting variations. With ACES
+(Autotelic Code Exploration via Semantic descriptors), we introduce a new
+autotelic generation method that leverages semantic descriptors produced by a
+large language model (LLM) to directly optimize for interesting diversity, as
+well as few-shot-based generation. Each puzzle is labeled along 10 dimensions,
+each capturing a programming skill required to solve it. ACES generates and
+pursues novel and feasible goals to explore that abstract semantic space,
+slowly discovering a diversity of solvable programming puzzles in any given
+run. Across a set of experiments, we show that ACES discovers a richer
+diversity of puzzles than existing diversity-maximizing algorithms as measured
+across a range of diversity metrics. We further study whether and in which
+conditions this diversity can translate into the successful training of puzzle
+solving models.
+</p></li>
+</ul>
+
+<h3>Title: Gotta be SAFE: A New Framework for Molecular Design. (arXiv:2310.10773v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10773">http://arxiv.org/abs/2310.10773</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10773]] Gotta be SAFE: A New Framework for Molecular Design(http://arxiv.org/abs/2310.10773)</code></li>
+<li>Summary: <p>Traditional molecular string representations, such as SMILES, often pose
+challenges for AI-driven molecular design due to their non-sequential depiction
+of molecular substructures. To address this issue, we introduce Sequential
+Attachment-based Fragment Embedding (SAFE), a novel line notation for chemical
+structures. SAFE reimagines SMILES strings as an unordered sequence of
+interconnected fragment blocks while maintaining full compatibility with
+existing SMILES parsers. It streamlines complex generative tasks, including
+scaffold decoration, fragment linking, polymer generation, and scaffold
+hopping, while facilitating autoregressive generation for fragment-constrained
+design, thereby eliminating the need for intricate decoding or graph-based
+models. We demonstrate the effectiveness of SAFE by training an
+87-million-parameter GPT2-like model on a dataset containing 1.1 billion SAFE
+representations. Through extensive experimentation, we show that our SAFE-GPT
+model exhibits versatile and robust optimization performance. SAFE opens up new
+avenues for the rapid exploration of chemical space under various constraints,
+promising breakthroughs in AI-driven molecular design.
+</p></li>
+</ul>
+
+<h3>Title: From Identifiable Causal Representations to Controllable Counterfactual Generation: A Survey on Causal Generative Modeling. (arXiv:2310.11011v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11011">http://arxiv.org/abs/2310.11011</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11011]] From Identifiable Causal Representations to Controllable Counterfactual Generation: A Survey on Causal Generative Modeling(http://arxiv.org/abs/2310.11011)</code></li>
+<li>Summary: <p>Deep generative models have shown tremendous success in data density
+estimation and data generation from finite samples. While these models have
+shown impressive performance by learning correlations among features in the
+data, some fundamental shortcomings are their lack of explainability, the
+tendency to induce spurious correlations, and poor out-of-distribution
+extrapolation. In an effort to remedy such challenges, one can incorporate the
+theory of causality in deep generative modeling. Structural causal models
+(SCMs) describe data-generating processes and model complex causal
+relationships and mechanisms among variables in a system. Thus, SCMs can
+naturally be combined with deep generative models. Causal models offer several
+beneficial properties to deep generative models, such as distribution shift
+robustness, fairness, and interoperability. We provide a technical survey on
+causal generative modeling categorized into causal representation learning and
+controllable counterfactual generation methods. We focus on fundamental theory,
+formulations, drawbacks, datasets, metrics, and applications of causal
+generative models in fairness, privacy, out-of-distribution generalization, and
+precision medicine. We also discuss open problems and fruitful research
+directions for future work in the field.
+</p></li>
+</ul>
+
+<h3>Title: HGCVAE: Integrating Generative and Contrastive Learning for Heterogeneous Graph Learning. (arXiv:2310.11102v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11102">http://arxiv.org/abs/2310.11102</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11102]] HGCVAE: Integrating Generative and Contrastive Learning for Heterogeneous Graph Learning(http://arxiv.org/abs/2310.11102)</code></li>
+<li>Summary: <p>Generative self-supervised learning (SSL) has exhibited significant potential
+and garnered increasing interest in graph learning. In this study, we aim to
+explore the problem of generative SSL in the context of heterogeneous graph
+learning (HGL). The previous SSL approaches for heterogeneous graphs have
+primarily relied on contrastive learning, necessitating the design of complex
+views to capture heterogeneity. However, existing generative SSL methods have
+not fully leveraged the capabilities of generative models to address the
+challenges of HGL. In this paper, we present HGCVAE, a novel contrastive
+variational graph auto-encoder that liberates HGL from the burden of intricate
+heterogeneity capturing. Instead of focusing on complicated heterogeneity,
+HGCVAE harnesses the full potential of generative SSL. HGCVAE innovatively
+consolidates contrastive learning with generative SSL, introducing several key
+innovations. Firstly, we employ a progressive mechanism to generate
+high-quality hard negative samples for contrastive learning, utilizing the
+power of variational inference. Additionally, we present a dynamic mask
+strategy to ensure effective and stable learning. Moreover, we propose an
+enhanced scaled cosine error as the criterion for better attribute
+reconstruction. As an initial step in combining generative and contrastive SSL,
+HGCVAE achieves remarkable results compared to various state-of-the-art
+baselines, confirming its superiority.
+</p></li>
+</ul>
+
+<h3>Title: Learning to Sample Better. (arXiv:2310.11232v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11232">http://arxiv.org/abs/2310.11232</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11232]] Learning to Sample Better(http://arxiv.org/abs/2310.11232)</code></li>
+<li>Summary: <p>These lecture notes provide an introduction to recent advances in generative
+modeling methods based on the dynamical transportation of measures, by means of
+which samples from a simple base measure are mapped to samples from a target
+measure of interest. Special emphasis is put on the applications of these
+methods to Monte-Carlo (MC) sampling techniques, such as importance sampling
+and Markov Chain Monte-Carlo (MCMC) schemes. In this context, it is shown how
+the maps can be learned variationally using data generated by MC sampling, and
+how they can in turn be used to improve such sampling in a positive feedback
+loop.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Extracting Physical Causality from Measurements to Detect and Localize False Data Injection Attacks. (arXiv:2310.10666v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10666">http://arxiv.org/abs/2310.10666</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10666]] Extracting Physical Causality from Measurements to Detect and Localize False Data Injection Attacks(http://arxiv.org/abs/2310.10666)</code></li>
+<li>Summary: <p>False Data Injection Attack (FDIA) has become a growing concern in modern
+cyber-physical power systems. Most existing FDIA detection techniques project
+the raw measurement data into a high-dimensional latent space to separate
+normal and attacked samples. These approaches focus more on the statistical
+correlations of data values and are therefore susceptible to data distribution
+drifts induced by changes in system operating points or changes in FDIA types
+and strengths, especially for FDIA localization tasks. Causal inference, on the
+other hand, extracts the causality behind the coordinated fluctuations of
+different measurements. The causality patterns are determined by fundamental
+physical laws such as Ohm's Law and Kirchhoff's Law. They are sensitive to the
+violation of physical laws caused by FDIA, but tend to remain stable with the
+drift of system operating points. Leveraging this advantage, this paper
+proposes a joint FDIA detection and localization framework based on causal
+inference and the Graph Attention Network (GAT) to identify the attacked system
+nodes. The proposed framework consists of two levels. The lower level uses the
+X-learner algorithm to estimate the causality strength between measurements and
+generate Measurement Causality Graphs (MCGs). The upper level then applies a
+GAT to identify the anomaly patterns in the MCGs. Since the extracted causality
+patterns are intrinsically related to the measurements, it is easier for the
+upper level to figure out the attacked nodes than the existing FDIA
+localization approaches. The performance of the proposed framework is evaluated
+on the IEEE 39-bus system. Experimental results show that the causality-based
+FDIA detection and localization mechanism is highly interpretable and robust.
+</p></li>
+</ul>
+
+<h3>Title: Transparent Anomaly Detection via Concept-based Explanations. (arXiv:2310.10702v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10702">http://arxiv.org/abs/2310.10702</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10702]] Transparent Anomaly Detection via Concept-based Explanations(http://arxiv.org/abs/2310.10702)</code></li>
+<li>Summary: <p>Advancements in deep learning techniques have given a boost to the
+performance of anomaly detection. However, real-world and safety-critical
+applications demand a level of transparency and reasoning beyond accuracy. The
+task of anomaly detection (AD) focuses on finding whether a given sample
+follows the learned distribution. Existing methods lack the ability to reason
+with clear explanations for their outcomes. Hence to overcome this challenge,
+we propose Transparent {A}nomaly Detection {C}oncept {E}xplanations (ACE). ACE
+is able to provide human interpretable explanations in the form of concepts
+along with anomaly prediction. To the best of our knowledge, this is the first
+paper that proposes interpretable by-design anomaly detection. In addition to
+promoting transparency in AD, it allows for effective human-model interaction.
+Our proposed model shows either higher or comparable results to black-box
+uninterpretable models. We validate the performance of ACE across three
+realistic datasets - bird classification on CUB-200-2011, challenging
+histopathology slide image classification on TIL-WSI-TCGA, and gender
+classification on CelebA. We further demonstrate that our concept learning
+paradigm can be seamlessly integrated with other classification-based AD
+methods.
+</p></li>
+</ul>
+
+<h3>Title: Spatially-resolved hyperlocal weather prediction and anomaly detection using IoT sensor networks and machine learning techniques. (arXiv:2310.11001v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11001">http://arxiv.org/abs/2310.11001</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11001]] Spatially-resolved hyperlocal weather prediction and anomaly detection using IoT sensor networks and machine learning techniques(http://arxiv.org/abs/2310.11001)</code></li>
+<li>Summary: <p>Accurate and timely hyperlocal weather predictions are essential for various
+applications, ranging from agriculture to disaster management. In this paper,
+we propose a novel approach that combines hyperlocal weather prediction and
+anomaly detection using IoT sensor networks and advanced machine learning
+techniques. Our approach leverages data from multiple spatially-distributed yet
+relatively close locations and IoT sensors to create high-resolution weather
+models capable of predicting short-term, localized weather conditions such as
+temperature, pressure, and humidity. By monitoring changes in weather
+parameters across these locations, our system is able to enhance the spatial
+resolution of predictions and effectively detect anomalies in real-time.
+Additionally, our system employs unsupervised learning algorithms to identify
+unusual weather patterns, providing timely alerts. Our findings indicate that
+this system has the potential to enhance decision-making.
+</p></li>
+</ul>
+
+<h3>Title: MST-GAT: A Multimodal Spatial-Temporal Graph Attention Network for Time Series Anomaly Detection. (arXiv:2310.11169v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11169">http://arxiv.org/abs/2310.11169</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11169]] MST-GAT: A Multimodal Spatial-Temporal Graph Attention Network for Time Series Anomaly Detection(http://arxiv.org/abs/2310.11169)</code></li>
+<li>Summary: <p>Multimodal time series (MTS) anomaly detection is crucial for maintaining the
+safety and stability of working devices (e.g., water treatment system and
+spacecraft), whose data are characterized by multivariate time series with
+diverse modalities. Although recent deep learning methods show great potential
+in anomaly detection, they do not explicitly capture spatial-temporal
+relationships between univariate time series of different modalities, resulting
+in more false negatives and false positives. In this paper, we propose a
+multimodal spatial-temporal graph attention network (MST-GAT) to tackle this
+problem. MST-GAT first employs a multimodal graph attention network (M-GAT) and
+a temporal convolution network to capture the spatial-temporal correlation in
+multimodal time series. Specifically, M-GAT uses a multi-head attention module
+and two relational attention modules (i.e., intra- and inter-modal attention)
+to model modal correlations explicitly. Furthermore, MST-GAT optimizes the
+reconstruction and prediction modules simultaneously. Experimental results on
+four multimodal benchmarks demonstrate that MST-GAT outperforms the
+state-of-the-art baselines. Further analysis indicates that MST-GAT strengthens
+the interpretability of detected anomalies by locating the most anomalous
+univariate time series.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Context-Aware Meta-Learning. (arXiv:2310.10971v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10971">http://arxiv.org/abs/2310.10971</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10971]] Context-Aware Meta-Learning(http://arxiv.org/abs/2310.10971)</code></li>
+<li>Summary: <p>Large Language Models like ChatGPT demonstrate a remarkable capacity to learn
+new concepts during inference without any fine-tuning. However, visual models
+trained to detect new objects during inference have been unable to replicate
+this ability, and instead either perform poorly or require meta-training and/or
+fine-tuning on similar objects. In this work, we propose a meta-learning
+algorithm that emulates Large Language Models by learning new visual concepts
+during inference without fine-tuning. Our approach leverages a frozen
+pre-trained feature extractor, and analogous to in-context learning, recasts
+meta-learning as sequence modeling over datapoints with known labels and a test
+datapoint with an unknown label. On 8 out of 11 meta-learning benchmarks, our
+approach -- without meta-training or fine-tuning -- exceeds or matches the
+state-of-the-art algorithm, P&gt;M&gt;F, which is meta-trained on these benchmarks.
+</p></li>
+</ul>
+
+<h3>Title: Large Language Models for In-Context Student Modeling: Synthesizing Student's Behavior in Visual Programming from One-Shot Observation. (arXiv:2310.10690v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10690">http://arxiv.org/abs/2310.10690</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10690]] Large Language Models for In-Context Student Modeling: Synthesizing Student's Behavior in Visual Programming from One-Shot Observation(http://arxiv.org/abs/2310.10690)</code></li>
+<li>Summary: <p>Student modeling is central to many educational technologies as it enables
+the prediction of future learning outcomes and targeted instructional
+strategies. However, open-ended learning environments pose challenges for
+accurately modeling students due to the diverse behaviors exhibited by students
+and the absence of a well-defined set of learning skills. To approach these
+challenges, we explore the application of Large Language Models (LLMs) for
+in-context student modeling in open-ended learning environments. We introduce a
+novel framework, LLM-SS, that leverages LLMs for synthesizing student's
+behavior. More concretely, given a particular student's solving attempt on a
+reference task as observation, the goal is to synthesize the student's attempt
+on a target task. Our framework can be combined with different LLMs; moreover,
+we fine-tune LLMs using domain-specific expertise to boost their understanding
+of domain background and student behaviors. We evaluate several concrete
+methods based on LLM-SS using the StudentSyn benchmark, an existing student's
+attempt synthesis benchmark in visual programming. Experimental results show a
+significant improvement compared to baseline methods included in the StudentSyn
+benchmark. Furthermore, our method using the fine-tuned Llama2-70B model
+improves noticeably compared to using the base model and becomes on par with
+using the state-of-the-art GPT-4 model.
+</p></li>
+</ul>
+
+<h3>Title: Bridging Code Semantic and LLMs: Semantic Chain-of-Thought Prompting for Code Generation. (arXiv:2310.10698v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10698">http://arxiv.org/abs/2310.10698</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10698]] Bridging Code Semantic and LLMs: Semantic Chain-of-Thought Prompting for Code Generation(http://arxiv.org/abs/2310.10698)</code></li>
+<li>Summary: <p>Large language models (LLMs) have showcased remarkable prowess in code
+generation. However, automated code generation is still challenging since it
+requires a high-level semantic mapping between natural language requirements
+and codes. Most existing LLMs-based approaches for code generation rely on
+decoder-only causal language models often treate codes merely as plain text
+tokens, i.e., feeding the requirements as a prompt input, and outputing code as
+flat sequence of tokens, potentially missing the rich semantic features
+inherent in source code. To bridge this gap, this paper proposes the "Semantic
+Chain-of-Thought" approach to intruduce semantic information of code, named
+SeCoT. Our motivation is that the semantic information of the source code (\eg
+data flow and control flow) describes more precise program execution behavior,
+intention and function. By guiding LLM consider and integrate semantic
+information, we can achieve a more granular understanding and representation of
+code, enhancing code generation accuracy. Meanwhile, while traditional
+techniques leveraging such semantic information require complex static or
+dynamic code analysis to obtain features such as data flow and control flow,
+SeCoT demonstrates that this process can be fully automated via the intrinsic
+capabilities of LLMs (i.e., in-context learning), while being generalizable and
+applicable to challenging domains. While SeCoT can be applied with different
+LLMs, this paper focuses on the powerful GPT-style models: ChatGPT(close-source
+model) and WizardCoder(open-source model). The experimental study on three
+popular DL benchmarks (i.e., HumanEval, HumanEval-ET and MBPP) shows that SeCoT
+can achieves state-of-the-art performance, greatly improving the potential for
+large models and code generation.
+</p></li>
+</ul>
+
+<h3>Title: Demonstrations Are All You Need: Advancing Offensive Content Paraphrasing using In-Context Learning. (arXiv:2310.10707v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10707">http://arxiv.org/abs/2310.10707</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10707]] Demonstrations Are All You Need: Advancing Offensive Content Paraphrasing using In-Context Learning(http://arxiv.org/abs/2310.10707)</code></li>
+<li>Summary: <p>Paraphrasing of offensive content is a better alternative to content removal
+and helps improve civility in a communication environment. Supervised
+paraphrasers; however, rely heavily on large quantities of labelled data to
+help preserve meaning and intent. They also retain a large portion of the
+offensiveness of the original content, which raises questions on their overall
+usability. In this paper we aim to assist practitioners in developing usable
+paraphrasers by exploring In-Context Learning (ICL) with large language models
+(LLMs), i.e., using a limited number of input-label demonstration pairs to
+guide the model in generating desired outputs for specific queries. Our study
+focuses on key factors such as -- number and order of demonstrations, exclusion
+of prompt instruction, and reduction in measured toxicity. We perform
+principled evaluation on three datasets, including our proposed Context-Aware
+Polite Paraphrase dataset, comprising of dialogue-style rude utterances, polite
+paraphrases, and additional dialogue context. We evaluate our approach using
+two closed source and one open source LLM. Our results reveal that ICL is
+comparable to supervised methods in generation quality, while being
+qualitatively better by 25% on human evaluation and attaining lower toxicity by
+76%. Also, ICL-based paraphrasers only show a slight reduction in performance
+even with just 10% training data.
+</p></li>
+</ul>
+
+<h3>Title: IDEAL: Influence-Driven Selective Annotations Empower In-Context Learners in Large Language Models. (arXiv:2310.10873v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.10873">http://arxiv.org/abs/2310.10873</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.10873]] IDEAL: Influence-Driven Selective Annotations Empower In-Context Learners in Large Language Models(http://arxiv.org/abs/2310.10873)</code></li>
+<li>Summary: <p>In-context learning is a promising paradigm that utilizes in-context examples
+as prompts for the predictions of large language models. These prompts are
+crucial for achieving strong performance. However, since the prompts need to be
+sampled from a large volume of annotated examples, finding the right prompt may
+result in high annotation costs. To address this challenge, this paper
+introduces an influence-driven selective annotation method that aims to
+minimize annotation costs while improving the quality of in-context examples.
+The essence of our method is to select a pivotal subset from a large-scale
+unlabeled data pool to annotate for the subsequent sampling of prompts.
+Specifically, a directed graph is first constructed to represent unlabeled
+data. Afterward, the influence of candidate unlabeled subsets is quantified
+with a diffusion process. A simple yet effective greedy algorithm for unlabeled
+data selection is lastly introduced. It iteratively selects the data if it
+provides a maximum marginal gain with respect to quantified influence. Compared
+with previous efforts on selective annotations, our influence-driven method
+works in an end-to-end manner, avoids an intractable explicit balance between
+data diversity and representativeness, and enjoys theoretical support.
+Experiments confirm the superiority of the proposed method on various
+benchmarks, achieving better performance under lower time consumption during
+subset selection. The project page is available at
+https://skzhang1.github.io/IDEAL/.
+</p></li>
+</ul>
+
+<h3>Title: Exploring Automatic Evaluation Methods based on a Decoder-based LLM for Text Generation. (arXiv:2310.11026v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11026">http://arxiv.org/abs/2310.11026</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11026]] Exploring Automatic Evaluation Methods based on a Decoder-based LLM for Text Generation(http://arxiv.org/abs/2310.11026)</code></li>
+<li>Summary: <p>Automatic evaluation of text generation is essential for improving the
+accuracy of generation tasks. In light of the current trend towards
+increasingly larger decoder-based language models, we investigate automatic
+evaluation methods based on such models for text generation. This paper
+compares various methods, including tuning with encoder-based models and large
+language models under equal conditions, on two different tasks, machine
+translation evaluation and semantic textual similarity, in two languages,
+Japanese and English. Experimental results show that compared to the tuned
+encoder-based models, the tuned decoder-based models perform poorly. The
+analysis of the causes for this suggests that the decoder-based models focus on
+surface word sequences and do not capture meaning. It is also revealed that
+in-context learning of very large decoder-based models such as ChatGPT makes it
+difficult to identify fine-grained semantic differences.
+</p></li>
+</ul>
+
+<h3>Title: Learning from Red Teaming: Gender Bias Provocation and Mitigation in Large Language Models. (arXiv:2310.11079v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11079">http://arxiv.org/abs/2310.11079</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11079]] Learning from Red Teaming: Gender Bias Provocation and Mitigation in Large Language Models(http://arxiv.org/abs/2310.11079)</code></li>
+<li>Summary: <p>Recently, researchers have made considerable improvements in dialogue systems
+with the progress of large language models (LLMs) such as ChatGPT and GPT-4.
+These LLM-based chatbots encode the potential biases while retaining
+disparities that can harm humans during interactions. The traditional biases
+investigation methods often rely on human-written test cases. However, these
+test cases are usually expensive and limited. In this work, we propose a
+first-of-its-kind method that automatically generates test cases to detect
+LLMs' potential gender bias. We apply our method to three well-known LLMs and
+find that the generated test cases effectively identify the presence of biases.
+To address the biases identified, we propose a mitigation strategy that uses
+the generated test cases as demonstrations for in-context learning to
+circumvent the need for parameter fine-tuning. The experimental results show
+that LLMs generate fairer responses with the proposed approach.
+</p></li>
+</ul>
+
+<h3>Title: In-Context Few-Shot Relation Extraction via Pre-Trained Language Models. (arXiv:2310.11085v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11085">http://arxiv.org/abs/2310.11085</a></li>
+<li>Code URL: https://github.com/oezyurty/replm</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11085]] In-Context Few-Shot Relation Extraction via Pre-Trained Language Models(http://arxiv.org/abs/2310.11085)</code></li>
+<li>Summary: <p>Relation extraction aims at inferring structured human knowledge from textual
+documents. State-of-the-art methods based on language models commonly have two
+limitations: (1) they require named entities to be either given as input or
+infer them, which introduces additional noise, and (2) they require human
+annotations of documents. As a remedy, we present a novel framework for
+in-context few-shot relation extraction via pre-trained language models. To the
+best of our knowledge, we are the first to reformulate the relation extraction
+task as a tailored in-context few-shot learning paradigm. Thereby, we achieve
+crucial benefits in that we eliminate the need for both named entity
+recognition and human annotation of documents. Unlike existing methods based on
+fine-tuning, our framework is flexible in that it can be easily updated for a
+new set of relations without re-training. We evaluate our framework using
+DocRED, the largest publicly available dataset for document-level relation
+extraction, and demonstrate that our framework achieves state-of-the-art
+performance. Finally, our framework allows us to identify missing annotations,
+and we thus show that our framework actually performs much better than the
+original labels from the development set of DocRED.
+</p></li>
+</ul>
+
+<h3>Title: Entity Matching using Large Language Models. (arXiv:2310.11244v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.11244">http://arxiv.org/abs/2310.11244</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.11244]] Entity Matching using Large Language Models(http://arxiv.org/abs/2310.11244)</code></li>
+<li>Summary: <p>Entity Matching is the task of deciding whether two entity descriptions refer
+to the same real-world entity. Entity Matching is a central step in most data
+integration pipelines and an enabler for many e-commerce applications which
+require to match products offers from different vendors. State-of-the-art
+entity matching methods often rely on pre-trained language models (PLMs) such
+as BERT or RoBERTa. Two major drawbacks of these models for entity matching are
+that (i) the models require significant amounts of task-specific training data
+and (ii) the fine-tuned models are not robust concerning out-of-distribution
+entities. In this paper, we investigate using large language models (LLMs) for
+entity matching as a less domain-specific training data reliant and more robust
+alternative to PLM-based matchers. Our study covers hosted LLMs, such as GPT3.5
+and GPT4, as well as open source LLMs based on Llama2 which can be run locally.
+We evaluate these models in a zero-shot scenario as well as a scenario where
+task-specific training data is available. We compare different prompt designs
+as well as the prompt sensitivity of the models in the zero-shot scenario. We
+investigate (i) the selection of in-context demonstrations, (ii) the generation
+of matching rules, as well as (iii) fine-tuning GPT3.5 in the second scenario
+using the same pool of training data across the different approaches. Our
+experiments show that GPT4 without any task-specific training data outperforms
+fine-tuned PLMs (RoBERTa and Ditto) on three out of five benchmark datasets
+reaching F1 scores around 90%. The experiments with in-context learning and
+rule generation show that all models beside of GPT4 benefit from these
+techniques (on average 5.9% and 2.2% F1), while GPT4 does not need such
+additional guidance in most cases...
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
