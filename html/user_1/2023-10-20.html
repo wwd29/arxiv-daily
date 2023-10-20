@@ -1,0 +1,827 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: DynamiCrafter: Animating Open-domain Images with Video Diffusion Priors. (arXiv:2310.12190v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12190">http://arxiv.org/abs/2310.12190</a></li>
+<li>Code URL: https://github.com/ailab-cvc/videocrafter</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12190]] DynamiCrafter: Animating Open-domain Images with Video Diffusion Priors(http://arxiv.org/abs/2310.12190)</code></li>
+<li>Summary: <p>Enhancing a still image with motion offers more engaged visual experience.
+Traditional image animation techniques mainly focus on animating natural scenes
+with random dynamics, such as clouds and fluid, and thus limits their
+applicability to generic visual contents. To overcome this limitation, we
+explore the synthesis of dynamic content for open-domain images, converting
+them into animated videos. The key idea is to utilize the motion prior of
+text-to-video diffusion models by incorporating the image into the generative
+process as guidance. Given an image, we first project it into a text-aligned
+rich image embedding space using a learnable image encoding network, which
+facilitates the video model to digest the image content compatibly. However,
+some visual details still struggle to be preserved in the resulting videos. To
+supplement more precise image information, we further feed the full image to
+the diffusion model by concatenating it with the initial noises. Experimental
+results reveal that our proposed method produces visually convincing animated
+videos, exhibiting both natural motions and high fidelity to the input image.
+Comparative evaluation demonstrates the notable superiority of our approach
+over existing competitors. The source code will be released upon publication.
+</p></li>
+</ul>
+
+<h3>Title: Enhancing High-Resolution 3D Generation through Pixel-wise Gradient Clipping. (arXiv:2310.12474v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12474">http://arxiv.org/abs/2310.12474</a></li>
+<li>Code URL: https://github.com/fudan-zvg/pgc-3d</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12474]] Enhancing High-Resolution 3D Generation through Pixel-wise Gradient Clipping(http://arxiv.org/abs/2310.12474)</code></li>
+<li>Summary: <p>High-resolution 3D object generation remains a challenging task primarily due
+to the limited availability of comprehensive annotated training data. Recent
+advancements have aimed to overcome this constraint by harnessing image
+generative models, pretrained on extensive curated web datasets, using
+knowledge transfer techniques like Score Distillation Sampling (SDS).
+Efficiently addressing the requirements of high-resolution rendering often
+necessitates the adoption of latent representation-based models, such as the
+Latent Diffusion Model (LDM). In this framework, a significant challenge
+arises: To compute gradients for individual image pixels, it is necessary to
+backpropagate gradients from the designated latent space through the frozen
+components of the image model, such as the VAE encoder used within LDM.
+However, this gradient propagation pathway has never been optimized, remaining
+uncontrolled during training. We find that the unregulated gradients adversely
+affect the 3D model's capacity in acquiring texture-related information from
+the image generative model, leading to poor quality appearance synthesis. To
+address this overarching challenge, we propose an innovative operation termed
+Pixel-wise Gradient Clipping (PGC) designed for seamless integration into
+existing 3D generative models, thereby enhancing their synthesis quality.
+Specifically, we control the magnitude of stochastic gradients by clipping the
+pixel-wise gradients efficiently, while preserving crucial texture-related
+gradient directions. Despite this simplicity and minimal extra cost, extensive
+experiments demonstrate the efficacy of our PGC in enhancing the performance of
+existing 3D generative models for high-resolution object rendering.
+</p></li>
+</ul>
+
+<h3>Title: Diverse Diffusion: Enhancing Image Diversity in Text-to-Image Generation. (arXiv:2310.12583v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12583">http://arxiv.org/abs/2310.12583</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12583]] Diverse Diffusion: Enhancing Image Diversity in Text-to-Image Generation(http://arxiv.org/abs/2310.12583)</code></li>
+<li>Summary: <p>Latent diffusion models excel at producing high-quality images from text.
+Yet, concerns appear about the lack of diversity in the generated imagery. To
+tackle this, we introduce Diverse Diffusion, a method for boosting image
+diversity beyond gender and ethnicity, spanning into richer realms, including
+color diversity.Diverse Diffusion is a general unsupervised technique that can
+be applied to existing text-to-image models. Our approach focuses on finding
+vectors in the Stable Diffusion latent space that are distant from each other.
+We generate multiple vectors in the latent space until we find a set of vectors
+that meets the desired distance requirements and the required batch size.To
+evaluate the effectiveness of our diversity methods, we conduct experiments
+examining various characteristics, including color diversity, LPIPS metric, and
+ethnicity/gender representation in images featuring humans.The results of our
+experiments emphasize the significance of diversity in generating realistic and
+varied images, offering valuable insights for improving text-to-image models.
+Through the enhancement of image diversity, our approach contributes to the
+creation of more inclusive and representative AI-generated art.
+</p></li>
+</ul>
+
+<h3>Title: EMIT-Diff: Enhancing Medical Image Segmentation via Text-Guided Diffusion Model. (arXiv:2310.12868v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12868">http://arxiv.org/abs/2310.12868</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12868]] EMIT-Diff: Enhancing Medical Image Segmentation via Text-Guided Diffusion Model(http://arxiv.org/abs/2310.12868)</code></li>
+<li>Summary: <p>Large-scale, big-variant, and high-quality data are crucial for developing
+robust and successful deep-learning models for medical applications since they
+potentially enable better generalization performance and avoid overfitting.
+However, the scarcity of high-quality labeled data always presents significant
+challenges. This paper proposes a novel approach to address this challenge by
+developing controllable diffusion models for medical image synthesis, called
+EMIT-Diff. We leverage recent diffusion probabilistic models to generate
+realistic and diverse synthetic medical image data that preserve the essential
+characteristics of the original medical images by incorporating edge
+information of objects to guide the synthesis process. In our approach, we
+ensure that the synthesized samples adhere to medically relevant constraints
+and preserve the underlying structure of imaging data. Due to the random
+sampling process by the diffusion model, we can generate an arbitrary number of
+synthetic images with diverse appearances. To validate the effectiveness of our
+proposed method, we conduct an extensive set of medical image segmentation
+experiments on multiple datasets, including Ultrasound breast (+13.87%), CT
+spleen (+0.38%), and MRI prostate (+7.78%), achieving significant improvements
+over the baseline segmentation methods. For the first time, to our best
+knowledge, the promising results demonstrate the effectiveness of our EMIT-Diff
+for medical image segmentation tasks and show the feasibility of introducing a
+first-ever text-guided diffusion model for general medical image segmentation
+tasks. With carefully designed ablation experiments, we investigate the
+influence of various data augmentation ratios, hyper-parameter settings, patch
+size for generating random merging mask settings, and combined influence with
+different network architectures.
+</p></li>
+</ul>
+
+<h3>Title: Closed-Form Diffusion Models. (arXiv:2310.12395v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12395">http://arxiv.org/abs/2310.12395</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12395]] Closed-Form Diffusion Models(http://arxiv.org/abs/2310.12395)</code></li>
+<li>Summary: <p>Score-based generative models (SGMs) sample from a target distribution by
+iteratively transforming noise using the score function of the perturbed
+target. For any finite training set, this score function can be evaluated in
+closed form, but the resulting SGM memorizes its training data and does not
+generate novel samples. In practice, one approximates the score by training a
+neural network via score-matching. The error in this approximation promotes
+generalization, but neural SGMs are costly to train and sample, and the
+effective regularization this error provides is not well-understood
+theoretically. In this work, we instead explicitly smooth the closed-form score
+to obtain an SGM that generates novel samples without training. We analyze our
+model and propose an efficient nearest-neighbor-based estimator of its score
+function. Using this estimator, our method achieves sampling times competitive
+with neural SGMs while running on consumer-grade CPUs.
+</p></li>
+</ul>
+
+<h3>Title: SalUn: Empowering Machine Unlearning via Gradient-based Weight Saliency in Both Image Classification and Generation. (arXiv:2310.12508v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12508">http://arxiv.org/abs/2310.12508</a></li>
+<li>Code URL: https://github.com/optml-group/unlearn-saliency</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12508]] SalUn: Empowering Machine Unlearning via Gradient-based Weight Saliency in Both Image Classification and Generation(http://arxiv.org/abs/2310.12508)</code></li>
+<li>Summary: <p>With evolving data regulations, machine unlearning (MU) has become an
+important tool for fostering trust and safety in today's AI models. However,
+existing MU methods focusing on data and/or weight perspectives often grapple
+with limitations in unlearning accuracy, stability, and cross-domain
+applicability. To address these challenges, we introduce the concept of 'weight
+saliency' in MU, drawing parallels with input saliency in model explanation.
+This innovation directs MU's attention toward specific model weights rather
+than the entire model, improving effectiveness and efficiency. The resultant
+method that we call saliency unlearning (SalUn) narrows the performance gap
+with 'exact' unlearning (model retraining from scratch after removing the
+forgetting dataset). To the best of our knowledge, SalUn is the first
+principled MU approach adaptable enough to effectively erase the influence of
+forgetting data, classes, or concepts in both image classification and
+generation. For example, SalUn yields a stability advantage in high-variance
+random data forgetting, e.g., with a 0.2% gap compared to exact unlearning on
+the CIFAR-10 dataset. Moreover, in preventing conditional diffusion models from
+generating harmful images, SalUn achieves nearly 100% unlearning accuracy,
+outperforming current state-of-the-art baselines like Erased Stable Diffusion
+and Forget-Me-Not.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Improving Representation Learning for Histopathologic Images with Cluster Constraints. (arXiv:2310.12334v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12334">http://arxiv.org/abs/2310.12334</a></li>
+<li>Code URL: https://github.com/wwyi1828/clusiam</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12334]] Improving Representation Learning for Histopathologic Images with Cluster Constraints(http://arxiv.org/abs/2310.12334)</code></li>
+<li>Summary: <p>Recent advances in whole-slide image (WSI) scanners and computational
+capabilities have significantly propelled the application of artificial
+intelligence in histopathology slide analysis. While these strides are
+promising, current supervised learning approaches for WSI analysis come with
+the challenge of exhaustively labeling high-resolution slides - a process that
+is both labor-intensive and time-consuming. In contrast, self-supervised
+learning (SSL) pretraining strategies are emerging as a viable alternative,
+given that they don't rely on explicit data annotations. These SSL strategies
+are quickly bridging the performance disparity with their supervised
+counterparts. In this context, we introduce an SSL framework. This framework
+aims for transferable representation learning and semantically meaningful
+clustering by synergizing invariance loss and clustering loss in WSI analysis.
+Notably, our approach outperforms common SSL methods in downstream
+classification and clustering tasks, as evidenced by tests on the Camelyon16
+and a pancreatic cancer dataset. The code and additional details are accessible
+at: https://github.com/wwyi1828/CluSiam.
+</p></li>
+</ul>
+
+<h3>Title: ClusT3: Information Invariant Test-Time Training. (arXiv:2310.12345v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12345">http://arxiv.org/abs/2310.12345</a></li>
+<li>Code URL: https://github.com/dosowiechi/clust3</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12345]] ClusT3: Information Invariant Test-Time Training(http://arxiv.org/abs/2310.12345)</code></li>
+<li>Summary: <p>Deep Learning models have shown remarkable performance in a broad range of
+vision tasks. However, they are often vulnerable against domain shifts at
+test-time. Test-time training (TTT) methods have been developed in an attempt
+to mitigate these vulnerabilities, where a secondary task is solved at training
+time simultaneously with the main task, to be later used as an self-supervised
+proxy task at test-time. In this work, we propose a novel unsupervised TTT
+technique based on the maximization of Mutual Information between multi-scale
+feature maps and a discrete latent representation, which can be integrated to
+the standard training as an auxiliary clustering task. Experimental results
+demonstrate competitive classification performance on different popular
+test-time adaptation benchmarks.
+</p></li>
+</ul>
+
+<h3>Title: Segment Anything Meets Universal Adversarial Perturbation. (arXiv:2310.12431v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12431">http://arxiv.org/abs/2310.12431</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12431]] Segment Anything Meets Universal Adversarial Perturbation(http://arxiv.org/abs/2310.12431)</code></li>
+<li>Summary: <p>As Segment Anything Model (SAM) becomes a popular foundation model in
+computer vision, its adversarial robustness has become a concern that cannot be
+ignored. This works investigates whether it is possible to attack SAM with
+image-agnostic Universal Adversarial Perturbation (UAP). In other words, we
+seek a single perturbation that can fool the SAM to predict invalid masks for
+most (if not all) images. We demonstrate convetional image-centric attack
+framework is effective for image-independent attacks but fails for universal
+adversarial attack. To this end, we propose a novel perturbation-centric
+framework that results in a UAP generation method based on self-supervised
+contrastive learning (CL), where the UAP is set to the anchor sample and the
+positive sample is augmented from the UAP. The representations of negative
+samples are obtained from the image encoder in advance and saved in a memory
+bank. The effectiveness of our proposed CL-based UAP generation method is
+validated by both quantitative and qualitative results. On top of the ablation
+study to understand various components in our proposed method, we shed light on
+the roles of positive and negative samples in making the generated UAP
+effective for attacking SAM.
+</p></li>
+</ul>
+
+<h3>Title: WeedCLR: Weed Contrastive Learning through Visual Representations with Class-Optimized Loss in Long-Tailed Datasets. (arXiv:2310.12465v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12465">http://arxiv.org/abs/2310.12465</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12465]] WeedCLR: Weed Contrastive Learning through Visual Representations with Class-Optimized Loss in Long-Tailed Datasets(http://arxiv.org/abs/2310.12465)</code></li>
+<li>Summary: <p>Image classification is a crucial task in modern weed management and crop
+intervention technologies. However, the limited size, diversity, and balance of
+existing weed datasets hinder the development of deep learning models for
+generalizable weed identification. In addition, the expensive labelling
+requirements of mainstream fully-supervised weed classifiers make them cost-
+and time-prohibitive to deploy widely, for new weed species, and in
+site-specific weed management. This paper proposes a novel method for Weed
+Contrastive Learning through visual Representations (WeedCLR), that uses
+class-optimized loss with Von Neumann Entropy of deep representation for weed
+classification in long-tailed datasets. WeedCLR leverages self-supervised
+learning to learn rich and robust visual features without any labels and
+applies a class-optimized loss function to address the class imbalance problem
+in long-tailed datasets. WeedCLR is evaluated on two public weed datasets:
+CottonWeedID15, containing 15 weed species, and DeepWeeds, containing 8 weed
+species. WeedCLR achieves an average accuracy improvement of 4.3\% on
+CottonWeedID15 and 5.6\% on DeepWeeds over previous methods. It also
+demonstrates better generalization ability and robustness to different
+environmental conditions than existing methods without the need for expensive
+and time-consuming human annotations. These significant improvements make
+WeedCLR an effective tool for weed classification in long-tailed datasets and
+allows for more rapid and widespread deployment of site-specific weed
+management and crop intervention technologies.
+</p></li>
+</ul>
+
+<h3>Title: FUSC: Fetal Ultrasound Semantic Clustering of Second Trimester Scans Using Deep Self-supervised Learning. (arXiv:2310.12600v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12600">http://arxiv.org/abs/2310.12600</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12600]] FUSC: Fetal Ultrasound Semantic Clustering of Second Trimester Scans Using Deep Self-supervised Learning(http://arxiv.org/abs/2310.12600)</code></li>
+<li>Summary: <p>Ultrasound is the primary imaging modality in clinical practice during
+pregnancy. More than 140M fetuses are born yearly, resulting in numerous scans.
+The availability of a large volume of fetal ultrasound scans presents the
+opportunity to train robust machine learning models. However, the abundance of
+scans also has its challenges, as manual labeling of each image is needed for
+supervised methods. Labeling is typically labor-intensive and requires
+expertise to annotate the images accurately. This study presents an
+unsupervised approach for automatically clustering ultrasound images into a
+large range of fetal views, reducing or eliminating the need for manual
+labeling. Our Fetal Ultrasound Semantic Clustering (FUSC) method is developed
+using a large dataset of 88,063 images and further evaluated on an additional
+unseen dataset of 8,187 images achieving over 92% clustering purity. The result
+of our investigation hold the potential to significantly impact the field of
+fetal ultrasound imaging and pave the way for more advanced automated labeling
+solutions. Finally, we make the code and the experimental setup publicly
+available to help advance the field.
+</p></li>
+</ul>
+
+<h3>Title: Representation Learning via Consistent Assignment of Views over Random Partitions. (arXiv:2310.12692v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12692">http://arxiv.org/abs/2310.12692</a></li>
+<li>Code URL: https://github.com/sthalles/carp</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12692]] Representation Learning via Consistent Assignment of Views over Random Partitions(http://arxiv.org/abs/2310.12692)</code></li>
+<li>Summary: <p>We present Consistent Assignment of Views over Random Partitions (CARP), a
+self-supervised clustering method for representation learning of visual
+features. CARP learns prototypes in an end-to-end online fashion using gradient
+descent without additional non-differentiable modules to solve the cluster
+assignment problem. CARP optimizes a new pretext task based on random
+partitions of prototypes that regularizes the model and enforces consistency
+between views' assignments. Additionally, our method improves training
+stability and prevents collapsed solutions in joint-embedding training. Through
+an extensive evaluation, we demonstrate that CARP's representations are
+suitable for learning downstream tasks. We evaluate CARP's representations
+capabilities in 17 datasets across many standard protocols, including linear
+evaluation, few-shot classification, k-NN, k-means, image retrieval, and copy
+detection. We compare CARP performance to 11 existing self-supervised methods.
+We extensively ablate our method and demonstrate that our proposed random
+partition pretext task improves the quality of the learned representations by
+devising multiple random classification tasks. In transfer learning tasks, CARP
+achieves the best performance on average against many SSL methods trained for a
+longer time.
+</p></li>
+</ul>
+
+<h3>Title: Unsupervised Object Localization in the Era of Self-Supervised ViTs: A Survey. (arXiv:2310.12904v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12904">http://arxiv.org/abs/2310.12904</a></li>
+<li>Code URL: https://github.com/valeoai/awesome-unsupervised-object-localization</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12904]] Unsupervised Object Localization in the Era of Self-Supervised ViTs: A Survey(http://arxiv.org/abs/2310.12904)</code></li>
+<li>Summary: <p>The recent enthusiasm for open-world vision systems show the high interest of
+the community to perform perception tasks outside of the closed-vocabulary
+benchmark setups which have been so popular until now. Being able to discover
+objects in images/videos without knowing in advance what objects populate the
+dataset is an exciting prospect. But how to find objects without knowing
+anything about them? Recent works show that it is possible to perform
+class-agnostic unsupervised object localization by exploiting self-supervised
+pre-trained features. We propose here a survey of unsupervised object
+localization methods that discover objects in images without requiring any
+manual annotation in the era of self-supervised ViTs. We gather links of
+discussed methods in the repository
+https://github.com/valeoai/Awesome-Unsupervised-Object-Localization.
+</p></li>
+</ul>
+
+<h3>Title: A Survey of GPT-3 Family Large Language Models Including ChatGPT and GPT-4. (arXiv:2310.12321v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12321">http://arxiv.org/abs/2310.12321</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12321]] A Survey of GPT-3 Family Large Language Models Including ChatGPT and GPT-4(http://arxiv.org/abs/2310.12321)</code></li>
+<li>Summary: <p>Large language models (LLMs) are a special class of pretrained language
+models obtained by scaling model size, pretraining corpus and computation.
+LLMs, because of their large size and pretraining on large volumes of text
+data, exhibit special abilities which allow them to achieve remarkable
+performances without any task-specific training in many of the natural language
+processing tasks. The era of LLMs started with OpenAI GPT-3 model, and the
+popularity of LLMs is increasing exponentially after the introduction of models
+like ChatGPT and GPT4. We refer to GPT-3 and its successor OpenAI models,
+including ChatGPT and GPT4, as GPT-3 family large language models (GLLMs). With
+the ever-rising popularity of GLLMs, especially in the research community,
+there is a strong need for a comprehensive survey which summarizes the recent
+research progress in multiple dimensions and can guide the research community
+with insightful future research directions. We start the survey paper with
+foundation concepts like transformers, transfer learning, self-supervised
+learning, pretrained language models and large language models. We then present
+a brief overview of GLLMs and discuss the performances of GLLMs in various
+downstream tasks, specific domains and multiple languages. We also discuss the
+data labelling and data augmentation abilities of GLLMs, the robustness of
+GLLMs, the effectiveness of GLLMs as evaluators, and finally, conclude with
+multiple insightful future research directions. To summarize, this
+comprehensive survey paper will serve as a good resource for both academic and
+industry people to stay updated with the latest research related to GPT-3
+family large language models.
+</p></li>
+</ul>
+
+<h3>Title: MTS-LOF: Medical Time-Series Representation Learning via Occlusion-Invariant Features. (arXiv:2310.12451v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12451">http://arxiv.org/abs/2310.12451</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12451]] MTS-LOF: Medical Time-Series Representation Learning via Occlusion-Invariant Features(http://arxiv.org/abs/2310.12451)</code></li>
+<li>Summary: <p>Medical time series data are indispensable in healthcare, providing critical
+insights for disease diagnosis, treatment planning, and patient management. The
+exponential growth in data complexity, driven by advanced sensor technologies,
+has presented challenges related to data labeling. Self-supervised learning
+(SSL) has emerged as a transformative approach to address these challenges,
+eliminating the need for extensive human annotation. In this study, we
+introduce a novel framework for Medical Time Series Representation Learning,
+known as MTS-LOF. MTS-LOF leverages the strengths of contrastive learning and
+Masked Autoencoder (MAE) methods, offering a unique approach to representation
+learning for medical time series data. By combining these techniques, MTS-LOF
+enhances the potential of healthcare applications by providing more
+sophisticated, context-rich representations. Additionally, MTS-LOF employs a
+multi-masking strategy to facilitate occlusion-invariant feature learning. This
+approach allows the model to create multiple views of the data by masking
+portions of it. By minimizing the discrepancy between the representations of
+these masked patches and the fully visible patches, MTS-LOF learns to capture
+rich contextual information within medical time series datasets. The results of
+experiments conducted on diverse medical time series datasets demonstrate the
+superiority of MTS-LOF over other methods. These findings hold promise for
+significantly enhancing healthcare applications by improving representation
+learning. Furthermore, our work delves into the integration of joint-embedding
+SSL and MAE techniques, shedding light on the intricate interplay between
+temporal and structural dependencies in healthcare data. This understanding is
+crucial, as it allows us to grasp the complexities of healthcare data analysis.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Neurosymbolic Grounding for Compositional World Models. (arXiv:2310.12690v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12690">http://arxiv.org/abs/2310.12690</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12690]] Neurosymbolic Grounding for Compositional World Models(http://arxiv.org/abs/2310.12690)</code></li>
+<li>Summary: <p>We introduce Cosmos, a framework for object-centric world modeling that is
+designed for compositional generalization (CG), i.e., high performance on
+unseen input scenes obtained through the composition of known visual "atoms."
+The central insight behind Cosmos is the use of a novel form of neurosymbolic
+grounding. Specifically, the framework introduces two new tools: (i)
+neurosymbolic scene encodings, which represent each entity in a scene using a
+real vector computed using a neural encoder, as well as a vector of composable
+symbols describing attributes of the entity, and (ii) a neurosymbolic attention
+mechanism that binds these entities to learned rules of interaction. Cosmos is
+end-to-end differentiable; also, unlike traditional neurosymbolic methods that
+require representations to be manually mapped to symbols, it computes an
+entity's symbolic attributes using vision-language foundation models. Through
+an evaluation that considers two different forms of CG on an established
+blocks-pushing domain, we show that the framework establishes a new
+state-of-the-art for CG in world modeling.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Improving SCGAN's Similarity Constraint and Learning a Better Disentangled Representation. (arXiv:2310.12262v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12262">http://arxiv.org/abs/2310.12262</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12262]] Improving SCGAN's Similarity Constraint and Learning a Better Disentangled Representation(http://arxiv.org/abs/2310.12262)</code></li>
+<li>Summary: <p>SCGAN adds a similarity constraint between generated images and conditions as
+a regularization term on generative adversarial networks. Similarity constraint
+works as a tutor to instruct the generator network to comprehend the difference
+of representations based on conditions. We understand how SCGAN works on a
+deeper level. This understanding makes us realize that the similarity
+constraint functions like the contrastive loss function. We believe that a
+model with high understanding and intelligence measures the similarity between
+images based on their structure and high level features, just like humans do.
+Two major changes we applied to SCGAN in order to make a modified model are
+using SSIM to measure similarity between images and applying contrastive loss
+principles to the similarity constraint. The modified model performs better
+using FID and FactorVAE metrics. The modified model also has better
+generalisability compared to other models. Keywords Generative Adversarial
+Nets, Unsupervised Learning, Disentangled Representation Learning, Contrastive
+Disentanglement, SSIM
+</p></li>
+</ul>
+
+<h3>Title: PrivacyGAN: robust generative image privacy. (arXiv:2310.12590v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12590">http://arxiv.org/abs/2310.12590</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12590]] PrivacyGAN: robust generative image privacy(http://arxiv.org/abs/2310.12590)</code></li>
+<li>Summary: <p>Classical techniques for protecting facial image privacy typically fall into
+two categories: data-poisoning methods, exemplified by Fawkes, which introduce
+subtle perturbations to images, or anonymization methods that generate images
+resembling the original only in several characteristics, such as gender,
+ethnicity, or facial expression.In this study, we introduce a novel approach,
+PrivacyGAN, that uses the power of image generation techniques, such as VQGAN
+and StyleGAN, to safeguard privacy while maintaining image usability,
+particularly for social media applications. Drawing inspiration from Fawkes,
+our method entails shifting the original image within the embedding space
+towards a decoy image.We evaluate our approach using privacy metrics on
+traditional and novel facial image datasets. Additionally, we propose new
+criteria for evaluating the robustness of privacy-protection methods against
+unknown image recognition techniques, and we demonstrate that our approach is
+effective even in unknown embedding transfer scenarios. We also provide a human
+evaluation that further proves that the modified image preserves its utility as
+it remains recognisable as an image of the same person by friends and family.
+</p></li>
+</ul>
+
+<h3>Title: REMARK-LLM: A Robust and Efficient Watermarking Framework for Generative Large Language Models. (arXiv:2310.12362v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12362">http://arxiv.org/abs/2310.12362</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12362]] REMARK-LLM: A Robust and Efficient Watermarking Framework for Generative Large Language Models(http://arxiv.org/abs/2310.12362)</code></li>
+<li>Summary: <p>We present REMARK-LLM, a novel efficient, and robust watermarking framework
+designed for texts generated by large language models (LLMs). Synthesizing
+human-like content using LLMs necessitates vast computational resources and
+extensive datasets, encapsulating critical intellectual property (IP). However,
+the generated content is prone to malicious exploitation, including spamming
+and plagiarism. To address the challenges, REMARK-LLM proposes three new
+components: (i) a learning-based message encoding module to infuse binary
+signatures into LLM-generated texts; (ii) a reparameterization module to
+transform the dense distributions from the message encoding to the sparse
+distribution of the watermarked textual tokens; (iii) a decoding module
+dedicated for signature extraction; Furthermore, we introduce an optimized beam
+search algorithm to guarantee the coherence and consistency of the generated
+content. REMARK-LLM is rigorously trained to encourage the preservation of
+semantic integrity in watermarked content, while ensuring effective watermark
+retrieval. Extensive evaluations on multiple unseen datasets highlight
+REMARK-LLM proficiency and transferability in inserting 2 times more signature
+bits into the same texts when compared to prior art, all while maintaining
+semantic integrity. Furthermore, REMARK-LLM exhibits better resilience against
+a spectrum of watermark detection and removal attacks.
+</p></li>
+</ul>
+
+<h3>Title: Experimental Narratives: A Comparison of Human Crowdsourced Storytelling and AI Storytelling. (arXiv:2310.12902v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12902">http://arxiv.org/abs/2310.12902</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12902]] Experimental Narratives: A Comparison of Human Crowdsourced Storytelling and AI Storytelling(http://arxiv.org/abs/2310.12902)</code></li>
+<li>Summary: <p>The paper proposes a framework that combines behavioral and computational
+experiments employing fictional prompts as a novel tool for investigating
+cultural artifacts and social biases in storytelling both by humans and
+generative AI. The study analyzes 250 stories authored by crowdworkers in June
+2019 and 80 stories generated by GPT-3.5 and GPT-4 in March 2023 by merging
+methods from narratology and inferential statistics. Both crowdworkers and
+large language models responded to identical prompts about creating and falling
+in love with an artificial human. The proposed experimental paradigm allows a
+direct comparison between human and LLM-generated storytelling. Responses to
+the Pygmalionesque prompts confirm the pervasive presence of the Pygmalion myth
+in the collective imaginary of both humans and large language models. All
+solicited narratives present a scientific or technological pursuit. The
+analysis reveals that narratives from GPT-3.5 and particularly GPT-4 are more
+more progressive in terms of gender roles and sexuality than those written by
+humans. While AI narratives can occasionally provide innovative plot twists,
+they offer less imaginative scenarios and rhetoric than human-authored texts.
+The proposed framework argues that fiction can be used as a window into human
+and AI-based collective imaginary and social dimensions.
+</p></li>
+</ul>
+
+<h3>Title: Privacy Preserving Large Language Models: ChatGPT Case Study Based Vision and Framework. (arXiv:2310.12523v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12523">http://arxiv.org/abs/2310.12523</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12523]] Privacy Preserving Large Language Models: ChatGPT Case Study Based Vision and Framework(http://arxiv.org/abs/2310.12523)</code></li>
+<li>Summary: <p>The generative Artificial Intelligence (AI) tools based on Large Language
+Models (LLMs) use billions of parameters to extensively analyse large datasets
+and extract critical private information such as, context, specific details,
+identifying information etc. This have raised serious threats to user privacy
+and reluctance to use such tools. This article proposes the conceptual model
+called PrivChatGPT, a privacy-preserving model for LLMs that consists of two
+main components i.e., preserving user privacy during the data
+curation/pre-processing together with preserving private context and the
+private training process for large-scale data. To demonstrate its
+applicability, we show how a private mechanism could be integrated into the
+existing model for training LLMs to protect user privacy; specifically, we
+employed differential privacy and private training using Reinforcement Learning
+(RL). We measure the privacy loss and evaluate the measure of uncertainty or
+randomness once differential privacy is applied. It further recursively
+evaluates the level of privacy guarantees and the measure of uncertainty of
+public database and resources, during each update when new information is added
+for training purposes. To critically evaluate the use of differential privacy
+for private LLMs, we hypothetically compared other mechanisms e..g, Blockchain,
+private information retrieval, randomisation, for various performance measures
+such as the model performance and accuracy, computational complexity, privacy
+vs. utility etc. We conclude that differential privacy, randomisation, and
+obfuscation can impact utility and performance of trained models, conversely,
+the use of ToR, Blockchain, and PIR may introduce additional computational
+complexity and high training latency. We believe that the proposed model could
+be used as a benchmark for proposing privacy preserving LLMs for generative AI
+tools.
+</p></li>
+</ul>
+
+<h3>Title: Knowledge from Uncertainty in Evidential Deep Learning. (arXiv:2310.12663v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12663">http://arxiv.org/abs/2310.12663</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12663]] Knowledge from Uncertainty in Evidential Deep Learning(http://arxiv.org/abs/2310.12663)</code></li>
+<li>Summary: <p>This work reveals an evidential signal that emerges from the uncertainty
+value in Evidential Deep Learning (EDL). EDL is one example of a class of
+uncertainty-aware deep learning approaches designed to provide confidence (or
+epistemic uncertainty) about the current test sample. In particular for
+computer vision and bidirectional encoder large language models, the
+`evidential signal' arising from the Dirichlet strength in EDL can, in some
+cases, discriminate between classes, which is particularly strong when using
+large language models. We hypothesise that the KL regularisation term causes
+EDL to couple aleatoric and epistemic uncertainty. In this paper, we
+empirically investigate the correlations between misclassification and
+evaluated uncertainty, and show that EDL's `evidential signal' is due to
+misclassification bias. We critically evaluate EDL with other Dirichlet-based
+approaches, namely Generative Evidential Neural Networks (EDL-GEN) and Prior
+Networks, and show theoretically and empirically the differences between these
+loss functions. We conclude that EDL's coupling of uncertainty arises from
+these differences due to the use (or lack) of out-of-distribution samples
+during training.
+</p></li>
+</ul>
+
+<h3>Title: TabuLa: Harnessing Language Models for Tabular Data Synthesis. (arXiv:2310.12746v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12746">http://arxiv.org/abs/2310.12746</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12746]] TabuLa: Harnessing Language Models for Tabular Data Synthesis(http://arxiv.org/abs/2310.12746)</code></li>
+<li>Summary: <p>Given the ubiquitous use of tabular data in industries and the growing
+concerns in data privacy and security, tabular data synthesis emerges as a
+critical research area. The recent state-of-the-art methods show that large
+language models (LLMs) can be adopted to generate realistic tabular data. As
+LLMs pre-process tabular data as full text, they have the advantage of avoiding
+the curse of dimensionality associated with one-hot encoding high-dimensional
+data. However, their long training time and limited re-usability on new tasks
+prevent them from replacing exiting tabular generative models. In this paper,
+we propose Tabula, a tabular data synthesizer based on the language model
+structure. Through Tabula, we demonstrate the inherent limitation of employing
+pre-trained language models designed for natural language processing (NLP) in
+the context of tabular data synthesis. Our investigation delves into the
+development of a dedicated foundational model tailored specifically for tabular
+data synthesis. Additionally, we propose a token sequence compression strategy
+to significantly reduce training time while preserving the quality of synthetic
+data. Extensive experiments on six datasets demonstrate that using a language
+model structure without loading the well-trained model weights yields a better
+starting model for tabular data synthesis. Moreover, the Tabula model,
+previously trained on other tabular data, serves as an excellent foundation
+model for new tabular data synthesis tasks. Additionally, the token sequence
+compression method substantially reduces the model's training time. Results
+show that Tabula averagely reduces 46.2% training time per epoch comparing to
+current LLMs-based state-of-the-art algorithm and consistently achieves even
+higher synthetic data utility.
+</p></li>
+</ul>
+
+<h3>Title: Fine-Tuning Generative Models as an Inference Method for Robotic Tasks. (arXiv:2310.12862v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12862">http://arxiv.org/abs/2310.12862</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12862]] Fine-Tuning Generative Models as an Inference Method for Robotic Tasks(http://arxiv.org/abs/2310.12862)</code></li>
+<li>Summary: <p>Adaptable models could greatly benefit robotic agents operating in the real
+world, allowing them to deal with novel and varying conditions. While
+approaches such as Bayesian inference are well-studied frameworks for adapting
+models to evidence, we build on recent advances in deep generative models which
+have greatly affected many areas of robotics. Harnessing modern GPU
+acceleration, we investigate how to quickly adapt the sample generation of
+neural network models to observations in robotic tasks. We propose a simple and
+general method that is applicable to various deep generative models and robotic
+environments. The key idea is to quickly fine-tune the model by fitting it to
+generated samples matching the observed evidence, using the cross-entropy
+method. We show that our method can be applied to both autoregressive models
+and variational autoencoders, and demonstrate its usability in object shape
+inference from grasping, inverse kinematics calculation, and point cloud
+completion.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Anomaly Heterogeneity Learning for Open-set Supervised Anomaly Detection. (arXiv:2310.12790v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12790">http://arxiv.org/abs/2310.12790</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12790]] Anomaly Heterogeneity Learning for Open-set Supervised Anomaly Detection(http://arxiv.org/abs/2310.12790)</code></li>
+<li>Summary: <p>Open-set supervised anomaly detection (OSAD) - a recently emerging anomaly
+detection area - aims at utilizing a few samples of anomaly classes seen during
+training to detect unseen anomalies (i.e., samples from open-set anomaly
+classes), while effectively identifying the seen anomalies. Benefiting from the
+prior knowledge illustrated by the seen anomalies, current OSAD methods can
+often largely reduce false positive errors. However, these methods treat the
+anomaly examples as from a homogeneous distribution, rendering them less
+effective in generalizing to unseen anomalies that can be drawn from any
+distribution. In this paper, we propose to learn heterogeneous anomaly
+distributions using the limited anomaly examples to address this issue. To this
+end, we introduce a novel approach, namely Anomaly Heterogeneity Learning
+(AHL), that simulates a diverse set of heterogeneous (seen and unseen) anomaly
+distributions and then utilizes them to learn a unified heterogeneous
+abnormality model. Further, AHL is a generic framework that existing OSAD
+models can plug and play for enhancing their abnormality modeling. Extensive
+experiments on nine real-world anomaly detection datasets show that AHL can 1)
+substantially enhance different state-of-the-art (SOTA) OSAD models in
+detecting both seen and unseen anomalies, achieving new SOTA performance on a
+large set of datasets, and 2) effectively generalize to unseen anomalies in new
+target domains.
+</p></li>
+</ul>
+
+<h3>Title: Open-Set Multivariate Time-Series Anomaly Detection. (arXiv:2310.12294v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12294">http://arxiv.org/abs/2310.12294</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12294]] Open-Set Multivariate Time-Series Anomaly Detection(http://arxiv.org/abs/2310.12294)</code></li>
+<li>Summary: <p>Numerous methods for time series anomaly detection (TSAD) methods have
+emerged in recent years. Most existing methods are unsupervised and assume the
+availability of normal training samples only, while few supervised methods have
+shown superior performance by incorporating labeled anomalous samples in the
+training phase. However, certain anomaly types are inherently challenging for
+unsupervised methods to differentiate from normal data, while supervised
+methods are constrained to detecting anomalies resembling those present during
+training, failing to generalize to unseen anomaly classes. This paper is the
+first attempt in providing a novel approach for the open-set TSAD problem, in
+which a small number of labeled anomalies from a limited class of anomalies are
+visible in the training phase, with the objective of detecting both seen and
+unseen anomaly classes in the test phase. The proposed method, called
+Multivariate Open-Set timeseries Anomaly Detection (MOSAD) consists of three
+primary modules: a Feature Extractor to extract meaningful time-series
+features; a Multi-head Network consisting of Generative-, Deviation-, and
+Contrastive heads for capturing both seen and unseen anomaly classes; and an
+Anomaly Scoring module leveraging the insights of the three heads to detect
+anomalies. Extensive experiments on three real-world datasets consistently show
+that our approach surpasses existing methods under various experimental
+settings, thus establishing a new state-of-the-art performance in the TSAD
+field.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Measuring Pointwise $\mathcal{V}$-Usable Information In-Context-ly. (arXiv:2310.12300v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12300">http://arxiv.org/abs/2310.12300</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12300]] Measuring Pointwise $\mathcal{V}$-Usable Information In-Context-ly(http://arxiv.org/abs/2310.12300)</code></li>
+<li>Summary: <p>In-context learning (ICL) is a new learning paradigm that has gained
+popularity along with the development of large language models. In this work,
+we adapt a recently proposed hardness metric, pointwise $\mathcal{V}$-usable
+information (PVI), to an in-context version (in-context PVI). Compared to the
+original PVI, in-context PVI is more efficient in that it requires only a few
+exemplars and does not require fine-tuning. We conducted a comprehensive
+empirical analysis to evaluate the reliability of in-context PVI. Our findings
+indicate that in-context PVI estimates exhibit similar characteristics to the
+original PVI. Specific to the in-context setting, we show that in-context PVI
+estimates remain consistent across different exemplar selections and numbers of
+shots. The variance of in-context PVI estimates across different exemplar
+selections is insignificant, which suggests that in-context PVI are stable.
+Furthermore, we demonstrate how in-context PVI can be employed to identify
+challenging instances. Our work highlights the potential of in-context PVI and
+provides new insights into the capabilities of ICL.
+</p></li>
+</ul>
+
+<h3>Title: Attack Prompt Generation for Red Teaming and Defending Large Language Models. (arXiv:2310.12505v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12505">http://arxiv.org/abs/2310.12505</a></li>
+<li>Code URL: https://github.com/aatrox103/sap</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12505]] Attack Prompt Generation for Red Teaming and Defending Large Language Models(http://arxiv.org/abs/2310.12505)</code></li>
+<li>Summary: <p>Large language models (LLMs) are susceptible to red teaming attacks, which
+can induce LLMs to generate harmful content. Previous research constructs
+attack prompts via manual or automatic methods, which have their own
+limitations on construction cost and quality. To address these issues, we
+propose an integrated approach that combines manual and automatic methods to
+economically generate high-quality attack prompts. Specifically, considering
+the impressive capabilities of newly emerged LLMs, we propose an attack
+framework to instruct LLMs to mimic human-generated prompts through in-context
+learning. Furthermore, we propose a defense framework that fine-tunes victim
+LLMs through iterative interactions with the attack framework to enhance their
+safety against red teaming attacks. Extensive experiments on different LLMs
+validate the effectiveness of our proposed attack and defense frameworks.
+Additionally, we release a series of attack prompts datasets named SAP with
+varying sizes, facilitating the safety evaluation and enhancement of more LLMs.
+Our code and dataset is available on https://github.com/Aatrox103/SAP .
+</p></li>
+</ul>
+
+<h3>Title: Product Attribute Value Extraction using Large Language Models. (arXiv:2310.12537v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12537">http://arxiv.org/abs/2310.12537</a></li>
+<li>Code URL: https://github.com/wbsg-uni-mannheim/extractgpt</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12537]] Product Attribute Value Extraction using Large Language Models(http://arxiv.org/abs/2310.12537)</code></li>
+<li>Summary: <p>E-commerce applications such as faceted product search or product comparison
+are based on structured product descriptions like attribute/value pairs. The
+vendors on e-commerce platforms do not provide structured product descriptions
+but describe offers using titles or descriptions. To process such offers, it is
+necessary to extract attribute/value pairs from textual product attributes.
+State-of-the-art attribute/value extraction techniques rely on pre-trained
+language models (PLMs), such as BERT. Two major drawbacks of these models for
+attribute/value extraction are that (i) the models require significant amounts
+of task-specific training data and (ii) the fine-tuned models face challenges
+in generalizing to attribute values not included in the training data. This
+paper explores the potential of large language models (LLMs) as a training
+data-efficient and robust alternative to PLM-based attribute/value extraction
+methods. We consider hosted LLMs, such as GPT-3.5 and GPT-4, as well as
+open-source LLMs based on Llama2. We evaluate the models in a zero-shot
+scenario and in a scenario where task-specific training data is available. In
+the zero-shot scenario, we compare various prompt designs for representing
+information about the target attributes of the extraction. In the scenario with
+training data, we investigate (i) the provision of example attribute values,
+(ii) the selection of in-context demonstrations, and (iii) the fine-tuning of
+GPT-3.5. Our experiments show that GPT-4 achieves an average F1-score of 85% on
+the two evaluation datasets while the best PLM-based techniques perform on
+average 5% worse using the same amount of training data. GPT-4 achieves a 10%
+higher F1-score than the best open-source LLM. The fine-tuned GPT-3.5 model
+reaches a similar performance as GPT-4 while being significantly more
+cost-efficient.
+</p></li>
+</ul>
+
+<h3>Title: Are Structural Concepts Universal in Transformer Language Models? Towards Interpretable Cross-Lingual Generalization. (arXiv:2310.12794v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12794">http://arxiv.org/abs/2310.12794</a></li>
+<li>Code URL: https://github.com/ningyuxu/structural_concepts_correspondence</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12794]] Are Structural Concepts Universal in Transformer Language Models? Towards Interpretable Cross-Lingual Generalization(http://arxiv.org/abs/2310.12794)</code></li>
+<li>Summary: <p>Large language models (LLMs) have exhibited considerable cross-lingual
+generalization abilities, whereby they implicitly transfer knowledge across
+languages. However, the transfer is not equally successful for all languages,
+especially for low-resource ones, which poses an ongoing challenge. It is
+unclear whether we have reached the limits of implicit cross-lingual
+generalization and if explicit knowledge transfer is viable. In this paper, we
+investigate the potential for explicitly aligning conceptual correspondence
+between languages to enhance cross-lingual generalization. Using the syntactic
+aspect of language as a testbed, our analyses of 43 languages reveal a high
+degree of alignability among the spaces of structural concepts within each
+language for both encoder-only and decoder-only LLMs. We then propose a
+meta-learning-based method to learn to align conceptual spaces of different
+languages, which facilitates zero-shot and few-shot generalization in concept
+classification and also offers insights into the cross-lingual in-context
+learning phenomenon. Experiments on syntactic analysis tasks show that our
+approach achieves competitive results with state-of-the-art methods and narrows
+the performance gap between languages, particularly benefiting those with
+limited resources.
+</p></li>
+</ul>
+
+<h3>Title: Probing LLMs for hate speech detection: strengths and vulnerabilities. (arXiv:2310.12860v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.12860">http://arxiv.org/abs/2310.12860</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.12860]] Probing LLMs for hate speech detection: strengths and vulnerabilities(http://arxiv.org/abs/2310.12860)</code></li>
+<li>Summary: <p>Recently efforts have been made by social media platforms as well as
+researchers to detect hateful or toxic language using large language models.
+However, none of these works aim to use explanation, additional context and
+victim community information in the detection process. We utilise different
+prompt variation, input information and evaluate large language models in zero
+shot setting (without adding any in-context examples). We select three large
+language models (GPT-3.5, text-davinci and Flan-T5) and three datasets -
+HateXplain, implicit hate and ToxicSpans. We find that on average including the
+target information in the pipeline improves the model performance substantially
+(~20-30%) over the baseline across the datasets. There is also a considerable
+effect of adding the rationales/explanations into the pipeline (~10-20%) over
+the baseline across the datasets. In addition, we further provide a typology of
+the error cases where these large language models fail to (i) classify and (ii)
+explain the reason for the decisions they take. Such vulnerable points
+automatically constitute 'jailbreak' prompts for these models and industry
+scale safeguard techniques need to be developed to make the models robust
+against such prompts.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
