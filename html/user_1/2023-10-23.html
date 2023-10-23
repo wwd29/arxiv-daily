@@ -1,0 +1,728 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: DreamSpace: Dreaming Your Room Space with Text-Driven Panoramic Texture Propagation. (arXiv:2310.13119v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13119">http://arxiv.org/abs/2310.13119</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13119]] DreamSpace: Dreaming Your Room Space with Text-Driven Panoramic Texture Propagation(http://arxiv.org/abs/2310.13119)</code></li>
+<li>Summary: <p>Diffusion-based methods have achieved prominent success in generating 2D
+media. However, accomplishing similar proficiencies for scene-level mesh
+texturing in 3D spatial applications, e.g., XR/VR, remains constrained,
+primarily due to the intricate nature of 3D geometry and the necessity for
+immersive free-viewpoint rendering. In this paper, we propose a novel indoor
+scene texturing framework, which delivers text-driven texture generation with
+enchanting details and authentic spatial coherence. The key insight is to first
+imagine a stylized 360{\deg} panoramic texture from the central viewpoint of
+the scene, and then propagate it to the rest areas with inpainting and
+imitating techniques. To ensure meaningful and aligned textures to the scene,
+we develop a novel coarse-to-fine panoramic texture generation approach with
+dual texture alignment, which both considers the geometry and texture cues of
+the captured scenes. To survive from cluttered geometries during texture
+propagation, we design a separated strategy, which conducts texture inpainting
+in confidential regions and then learns an implicit imitating network to
+synthesize textures in occluded and tiny structural areas. Extensive
+experiments and the immersive VR application on real-world indoor scenes
+demonstrate the high quality of the generated textures and the engaging
+experience on VR headsets. Project webpage:
+https://ybbbbt.com/publication/dreamspace
+</p></li>
+</ul>
+
+<h3>Title: CycleNet: Rethinking Cycle Consistency in Text-Guided Diffusion for Image Manipulation. (arXiv:2310.13165v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13165">http://arxiv.org/abs/2310.13165</a></li>
+<li>Code URL: https://github.com/sled-group/cyclenet</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13165]] CycleNet: Rethinking Cycle Consistency in Text-Guided Diffusion for Image Manipulation(http://arxiv.org/abs/2310.13165)</code></li>
+<li>Summary: <p>Diffusion models (DMs) have enabled breakthroughs in image synthesis tasks
+but lack an intuitive interface for consistent image-to-image (I2I)
+translation. Various methods have been explored to address this issue,
+including mask-based methods, attention-based methods, and image-conditioning.
+However, it remains a critical challenge to enable unpaired I2I translation
+with pre-trained DMs while maintaining satisfying consistency. This paper
+introduces Cyclenet, a novel but simple method that incorporates cycle
+consistency into DMs to regularize image manipulation. We validate Cyclenet on
+unpaired I2I tasks of different granularities. Besides the scene and object
+level translation, we additionally contribute a multi-domain I2I translation
+dataset to study the physical state changes of objects. Our empirical studies
+show that Cyclenet is superior in translation consistency and quality, and can
+generate high-quality images for out-of-domain distributions with a simple
+change of the textual prompt. Cyclenet is a practical framework, which is
+robust even with very limited training data (around 2k) and requires minimal
+computational resources (1 GPU) to train. Project homepage:
+https://cyclenetweb.github.io/
+</p></li>
+</ul>
+
+<h3>Title: DPM-Solver-v3: Improved Diffusion ODE Solver with Empirical Model Statistics. (arXiv:2310.13268v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13268">http://arxiv.org/abs/2310.13268</a></li>
+<li>Code URL: https://github.com/thu-ml/dpm-solver-v3</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13268]] DPM-Solver-v3: Improved Diffusion ODE Solver with Empirical Model Statistics(http://arxiv.org/abs/2310.13268)</code></li>
+<li>Summary: <p>Diffusion probabilistic models (DPMs) have exhibited excellent performance
+for high-fidelity image generation while suffering from inefficient sampling.
+Recent works accelerate the sampling procedure by proposing fast ODE solvers
+that leverage the specific ODE form of DPMs. However, they highly rely on
+specific parameterization during inference (such as noise/data prediction),
+which might not be the optimal choice. In this work, we propose a novel
+formulation towards the optimal parameterization during sampling that minimizes
+the first-order discretization error of the ODE solution. Based on such
+formulation, we propose \textit{DPM-Solver-v3}, a new fast ODE solver for DPMs
+by introducing several coefficients efficiently computed on the pretrained
+model, which we call \textit{empirical model statistics}. We further
+incorporate multistep methods and a predictor-corrector framework, and propose
+some techniques for improving sample quality at small numbers of function
+evaluations (NFE) or large guidance scales. Experiments show that DPM-Solver-v3
+achieves consistently better or comparable performance in both unconditional
+and conditional sampling with both pixel-space and latent-space DPMs,
+especially in 5$\sim$10 NFEs. We achieve FIDs of 12.21 (5 NFE), 2.51 (10 NFE)
+on unconditional CIFAR10, and MSE of 0.55 (5 NFE, 7.5 guidance scale) on Stable
+Diffusion, bringing a speed-up of 15\%$\sim$30\% compared to previous
+state-of-the-art training-free methods. Code is available at
+\url{https://github.com/thu-ml/DPM-Solver-v3}.
+</p></li>
+</ul>
+
+<h3>Title: ScaleLong: Towards More Stable Training of Diffusion Model via Scaling Network Long Skip Connection. (arXiv:2310.13545v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13545">http://arxiv.org/abs/2310.13545</a></li>
+<li>Code URL: https://github.com/sail-sg/scalelong</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13545]] ScaleLong: Towards More Stable Training of Diffusion Model via Scaling Network Long Skip Connection(http://arxiv.org/abs/2310.13545)</code></li>
+<li>Summary: <p>In diffusion models, UNet is the most popular network backbone, since its
+long skip connects (LSCs) to connect distant network blocks can aggregate
+long-distant information and alleviate vanishing gradient. Unfortunately, UNet
+often suffers from unstable training in diffusion models which can be
+alleviated by scaling its LSC coefficients smaller. However, theoretical
+understandings of the instability of UNet in diffusion models and also the
+performance improvement of LSC scaling remain absent yet. To solve this issue,
+we theoretically show that the coefficients of LSCs in UNet have big effects on
+the stableness of the forward and backward propagation and robustness of UNet.
+Specifically, the hidden feature and gradient of UNet at any layer can
+oscillate and their oscillation ranges are actually large which explains the
+instability of UNet training. Moreover, UNet is also provably sensitive to
+perturbed input, and predicts an output distant from the desired output,
+yielding oscillatory loss and thus oscillatory gradient. Besides, we also
+observe the theoretical benefits of the LSC coefficient scaling of UNet in the
+stableness of hidden features and gradient and also robustness. Finally,
+inspired by our theory, we propose an effective coefficient scaling framework
+ScaleLong that scales the coefficients of LSC in UNet and better improves the
+training stability of UNet. Experimental results on four famous datasets show
+that our methods are superior to stabilize training and yield about 1.5x
+training acceleration on different diffusion models with UNet or UViT
+backbones. Code: https://github.com/sail-sg/ScaleLong
+</p></li>
+</ul>
+
+<h3>Title: Particle Guidance: non-I.I.D. Diverse Sampling with Diffusion Models. (arXiv:2310.13102v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13102">http://arxiv.org/abs/2310.13102</a></li>
+<li>Code URL: https://github.com/gcorso/particle-guidance</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13102]] Particle Guidance: non-I(http://arxiv.org/abs/2310.13102)</code></li>
+<li>Summary: <p>In light of the widespread success of generative models, a significant amount
+of research has gone into speeding up their sampling time. However, generative
+models are often sampled multiple times to obtain a diverse set incurring a
+cost that is orthogonal to sampling time. We tackle the question of how to
+improve diversity and sample efficiency by moving beyond the common assumption
+of independent samples. We propose particle guidance, an extension of
+diffusion-based generative sampling where a joint-particle time-evolving
+potential enforces diversity. We analyze theoretically the joint distribution
+that particle guidance generates, its implications on the choice of potential,
+and the connections with methods in other disciplines. Empirically, we test the
+framework both in the setting of conditional image generation, where we are
+able to increase diversity without affecting quality, and molecular conformer
+generation, where we reduce the state-of-the-art median error by 13% on
+average.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Multiscale Superpixel Structured Difference Graph Convolutional Network for VL Representation. (arXiv:2310.13447v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13447">http://arxiv.org/abs/2310.13447</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13447]] Multiscale Superpixel Structured Difference Graph Convolutional Network for VL Representation(http://arxiv.org/abs/2310.13447)</code></li>
+<li>Summary: <p>Within the multimodal field, the key to integrating vision and language lies
+in establishing a good alignment strategy. Recently, benefiting from the
+success of self-supervised learning, significant progress has been made in
+multimodal semantic representation based on pre-trained models for vision and
+language. However, there is still room for improvement in visual semantic
+representation. The lack of spatial semantic coherence and vulnerability to
+noise makes it challenging for current pixel or patch-based methods to
+accurately extract complex scene boundaries. To this end, this paper develops
+superpixel as a comprehensive compact representation of learnable image data,
+which effectively reduces the number of visual primitives for subsequent
+processing by clustering perceptually similar pixels. To mine more precise
+topological relations, we propose a Multiscale Difference Graph Convolutional
+Network (MDGCN). It parses the entire image as a fine-to-coarse hierarchical
+structure of constituent visual patterns, and captures multiscale features by
+progressively merging adjacent superpixels as graph nodes. Moreover, we predict
+the differences between adjacent nodes through the graph structure,
+facilitating key information aggregation of graph nodes to reason actual
+semantic relations. Afterward, we design a multi-level fusion rule in a
+bottom-up manner to avoid understanding deviation by learning complementary
+spatial information at different regional scales. Our proposed method can be
+well applied to multiple downstream task learning. Extensive experiments
+demonstrate that our method is competitive with other state-of-the-art methods
+in visual reasoning. Our code will be released upon publication.
+</p></li>
+</ul>
+
+<h3>Title: Longer-range Contextualized Masked Autoencoder. (arXiv:2310.13593v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13593">http://arxiv.org/abs/2310.13593</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13593]] Longer-range Contextualized Masked Autoencoder(http://arxiv.org/abs/2310.13593)</code></li>
+<li>Summary: <p>Masked image modeling (MIM) has emerged as a promising self-supervised
+learning (SSL) strategy. The MIM pre-training facilitates learning powerful
+representations using an encoder-decoder framework by randomly masking some
+input pixels and reconstructing the masked pixels from the remaining ones.
+However, as the encoder is trained with partial pixels, the MIM pre-training
+can suffer from a low capability of understanding long-range dependency. This
+limitation may hinder its capability to fully understand multiple-range
+dependencies, resulting in narrow highlighted regions in the attention map that
+may incur accuracy drops. To mitigate the limitation, We propose a
+self-supervised learning framework, named Longer-range Contextualized Masked
+Autoencoder (LC-MAE). LC-MAE effectively leverages a global context
+understanding of visual representations while simultaneously reducing the
+spatial redundancy of input at the same time. Our method steers the encoder to
+learn from entire pixels in multiple views while also learning local
+representation from sparse pixels. As a result, LC-MAE learns more
+discriminative representations, leading to a performance improvement of
+achieving 84.2% top-1 accuracy with ViT-B on ImageNet-1K with 0.6%p gain. We
+attribute the success to the enhanced pre-training method, as evidenced by the
+singular value spectrum and attention analyses. Finally, LC-MAE achieves
+significant performance gains at the downstream semantic segmentation and
+fine-grained visual classification tasks; and on diverse robust evaluation
+metrics. Our code will be publicly available.
+</p></li>
+</ul>
+
+<h3>Title: GraphGPT: Graph Instruction Tuning for Large Language Models. (arXiv:2310.13023v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13023">http://arxiv.org/abs/2310.13023</a></li>
+<li>Code URL: https://github.com/HKUDS/GraphGPT</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13023]] GraphGPT: Graph Instruction Tuning for Large Language Models(http://arxiv.org/abs/2310.13023)</code></li>
+<li>Summary: <p>Graph Neural Networks (GNNs) have advanced graph structure understanding via
+recursive information exchange and aggregation among graph nodes. To improve
+model robustness, self-supervised learning (SSL) has emerged as a promising
+approach for data augmentation. However, existing methods for generating
+pre-trained graph embeddings often rely on fine-tuning with specific downstream
+task labels, which limits their usability in scenarios where labeled data is
+scarce or unavailable. To address this, our research focuses on advancing the
+generalization capabilities of graph models in challenging zero-shot learning
+scenarios. Inspired by the success of large language models (LLMs), we aim to
+develop a graph-oriented LLM that can achieve high generalization across
+diverse downstream datasets and tasks, even without any information available
+from the downstream graph data. In this work, we present the GraphGPT framework
+that aligns LLMs with graph structural knowledge with a graph instruction
+tuning paradigm. Our framework incorporates a text-graph grounding component to
+establish a connection between textual information and graph structures.
+Additionally, we propose a dual-stage instruction tuning paradigm, accompanied
+by a lightweight graph-text alignment projector. This paradigm explores
+self-supervised graph structural signals and task-specific graph instructions,
+to guide LLMs in understanding complex graph structures and improving their
+adaptability across different downstream tasks. Our framework is evaluated on
+supervised and zero-shot graph learning tasks, demonstrating superior
+generalization and outperforming state-of-the-art baselines.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Weakly-Supervised Semantic Segmentation with Image-Level Labels: from Traditional Models to Foundation Models. (arXiv:2310.13026v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13026">http://arxiv.org/abs/2310.13026</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13026]] Weakly-Supervised Semantic Segmentation with Image-Level Labels: from Traditional Models to Foundation Models(http://arxiv.org/abs/2310.13026)</code></li>
+<li>Summary: <p>The rapid development of deep learning has driven significant progress in the
+field of image semantic segmentation - a fundamental task in computer vision.
+Semantic segmentation algorithms often depend on the availability of
+pixel-level labels (i.e., masks of objects), which are expensive,
+time-consuming, and labor-intensive. Weakly-supervised semantic segmentation
+(WSSS) is an effective solution to avoid such labeling. It utilizes only
+partial or incomplete annotations and provides a cost-effective alternative to
+fully-supervised semantic segmentation. In this paper, we focus on the WSSS
+with image-level labels, which is the most challenging form of WSSS. Our work
+has two parts. First, we conduct a comprehensive survey on traditional methods,
+primarily focusing on those presented at premier research conferences. We
+categorize them into four groups based on where their methods operate:
+pixel-wise, image-wise, cross-image, and external data. Second, we investigate
+the applicability of visual foundation models, such as the Segment Anything
+Model (SAM), in the context of WSSS. We scrutinize SAM in two intriguing
+scenarios: text prompting and zero-shot learning. We provide insights into the
+potential and challenges associated with deploying visual foundational models
+for WSSS, facilitating future developments in this exciting research area.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Conditional Generative Modeling for Images, 3D Animations, and Video. (arXiv:2310.13157v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13157">http://arxiv.org/abs/2310.13157</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13157]] Conditional Generative Modeling for Images, 3D Animations, and Video(http://arxiv.org/abs/2310.13157)</code></li>
+<li>Summary: <p>This dissertation attempts to drive innovation in the field of generative
+modeling for computer vision, by exploring novel formulations of conditional
+generative models, and innovative applications in images, 3D animations, and
+video. Our research focuses on architectures that offer reversible
+transformations of noise and visual data, and the application of
+encoder-decoder architectures for generative tasks and 3D content manipulation.
+In all instances, we incorporate conditional information to enhance the
+synthesis of visual data, improving the efficiency of the generation process as
+well as the generated content.
+</p>
+<p>We introduce the use of Neural ODEs to model video dynamics using an
+encoder-decoder architecture, demonstrating their ability to predict future
+video frames despite being trained solely to reconstruct current frames. Next,
+we propose a conditional variant of continuous normalizing flows that enables
+higher-resolution image generation based on lower-resolution input, achieving
+comparable image quality while reducing parameters and training time. Our next
+contribution presents a pipeline that takes human images as input,
+automatically aligns a user-specified 3D character with the pose of the human,
+and facilitates pose editing based on partial inputs. Next, we derive the
+relevant mathematical details for denoising diffusion models that use
+non-isotropic Gaussian processes, and show comparable generation quality.
+Finally, we devise a novel denoising diffusion framework capable of solving all
+three video tasks of prediction, generation, and interpolation. We perform
+ablation studies, and show SOTA results on multiple datasets.
+</p>
+<p>Our contributions are published articles at peer-reviewed venues. Overall,
+our research aims to make a meaningful contribution to the pursuit of more
+efficient and flexible generative models, with the potential to shape the
+future of computer vision.
+</p></li>
+</ul>
+
+<h3>Title: Generative error correction for code-switching speech recognition using large language models. (arXiv:2310.13013v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13013">http://arxiv.org/abs/2310.13013</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13013]] Generative error correction for code-switching speech recognition using large language models(http://arxiv.org/abs/2310.13013)</code></li>
+<li>Summary: <p>Code-switching (CS) speech refers to the phenomenon of mixing two or more
+languages within the same sentence. Despite the recent advances in automatic
+speech recognition (ASR), CS-ASR is still a challenging task ought to the
+grammatical structure complexity of the phenomenon and the data scarcity of
+specific training corpus. In this work, we propose to leverage large language
+models (LLMs) and lists of hypotheses generated by an ASR to address the CS
+problem. Specifically, we first employ multiple well-trained ASR models for
+N-best hypotheses generation, with the aim of increasing the diverse and
+informative elements in the set of hypotheses. Next, we utilize the LLMs to
+learn the hypotheses-to-transcription (H2T) mapping by adding a trainable
+low-rank adapter. Such a generative error correction (GER) method directly
+predicts the accurate transcription according to its expert linguistic
+knowledge and N-best hypotheses, resulting in a paradigm shift from the
+traditional language model rescoring or error correction techniques.
+Experimental evidence demonstrates that GER significantly enhances CS-ASR
+accuracy, in terms of reduced mixed error rate (MER). Furthermore, LLMs show
+remarkable data efficiency for H2T learning, providing a potential solution to
+the data scarcity problem of CS-ASR in low-resource languages.
+</p></li>
+</ul>
+
+<h3>Title: Auto-Instruct: Automatic Instruction Generation and Ranking for Black-Box Language Models. (arXiv:2310.13127v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13127">http://arxiv.org/abs/2310.13127</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13127]] Auto-Instruct: Automatic Instruction Generation and Ranking for Black-Box Language Models(http://arxiv.org/abs/2310.13127)</code></li>
+<li>Summary: <p>Large language models (LLMs) can perform a wide range of tasks by following
+natural language instructions, without the necessity of task-specific
+fine-tuning. Unfortunately, the performance of LLMs is greatly influenced by
+the quality of these instructions, and manually writing effective instructions
+for each task is a laborious and subjective process. In this paper, we
+introduce Auto-Instruct, a novel method to automatically improve the quality of
+instructions provided to LLMs. Our method leverages the inherent generative
+ability of LLMs to produce diverse candidate instructions for a given task, and
+then ranks them using a scoring model trained on a variety of 575 existing NLP
+tasks. In experiments on 118 out-of-domain tasks, Auto-Instruct surpasses both
+human-written instructions and existing baselines of LLM-generated
+instructions. Furthermore, our method exhibits notable generalizability even
+with other LLMs that are not incorporated into its training process.
+</p></li>
+</ul>
+
+<h3>Title: Fast and Accurate Factual Inconsistency Detection Over Long Documents. (arXiv:2310.13189v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13189">http://arxiv.org/abs/2310.13189</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13189]] Fast and Accurate Factual Inconsistency Detection Over Long Documents(http://arxiv.org/abs/2310.13189)</code></li>
+<li>Summary: <p>Generative AI models exhibit remarkable potential; however, hallucinations
+across various tasks present a significant challenge, particularly for longer
+inputs that current approaches struggle to address effectively. We introduce
+SCALE (Source Chunking Approach for Large-scale inconsistency Evaluation), a
+task-agnostic model for detecting factual inconsistencies using a novel
+chunking strategy. Specifically, SCALE is a Natural Language Inference (NLI)
+based model that uses large text chunks to condition over long texts. This
+approach achieves state-of-the-art performance in factual inconsistency
+detection for diverse tasks and long inputs. Additionally, we leverage the
+chunking mechanism and employ a novel algorithm to explain SCALE's decisions
+through relevant source sentence retrieval. Our evaluations reveal that SCALE
+outperforms existing methods on both standard benchmarks and a new long-form
+dialogue dataset ScreenEval we constructed. Moreover, SCALE surpasses
+competitive systems in efficiency and model explanation evaluations.
+</p></li>
+</ul>
+
+<h3>Title: Zero-Shot Sharpness-Aware Quantization for Pre-trained Language Models. (arXiv:2310.13315v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13315">http://arxiv.org/abs/2310.13315</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13315]] Zero-Shot Sharpness-Aware Quantization for Pre-trained Language Models(http://arxiv.org/abs/2310.13315)</code></li>
+<li>Summary: <p>Quantization is a promising approach for reducing memory overhead and
+accelerating inference, especially in large pre-trained language model (PLM)
+scenarios. While having no access to original training data due to security and
+privacy concerns has emerged the demand for zero-shot quantization. Most of the
+cutting-edge zero-shot quantization methods primarily 1) apply to computer
+vision tasks, and 2) neglect of overfitting problem in the generative
+adversarial learning process, leading to sub-optimal performance. Motivated by
+this, we propose a novel zero-shot sharpness-aware quantization (ZSAQ)
+framework for the zero-shot quantization of various PLMs. The key algorithm in
+solving ZSAQ is the SAM-SGA optimization, which aims to improve the
+quantization accuracy and model generalization via optimizing a minimax
+problem. We theoretically prove the convergence rate for the minimax
+optimization problem and this result can be applied to other nonconvex-PL
+minimax optimization frameworks. Extensive experiments on 11 tasks demonstrate
+that our method brings consistent and significant performance gains on both
+discriminative and generative PLMs, i.e., up to +6.98 average score.
+Furthermore, we empirically validate that our method can effectively improve
+the model generalization.
+</p></li>
+</ul>
+
+<h3>Title: Cache & Distil: Optimising API Calls to Large Language Models. (arXiv:2310.13561v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13561">http://arxiv.org/abs/2310.13561</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13561]] Cache & Distil: Optimising API Calls to Large Language Models(http://arxiv.org/abs/2310.13561)</code></li>
+<li>Summary: <p>Large-scale deployment of generative AI tools often depends on costly API
+calls to a Large Language Model (LLM) to fulfil user queries. To curtail the
+frequency of these calls, one can employ a smaller language model -- a student
+-- which is continuously trained on the responses of the LLM. This student
+gradually gains proficiency in independently handling an increasing number of
+user requests, a process we term neural caching. The crucial element in neural
+caching is a policy that decides which requests should be processed by the
+student alone and which should be redirected to the LLM, subsequently aiding
+the student's learning. In this study, we focus on classification tasks, and we
+consider a range of classic active learning-based selection criteria as the
+policy. Our experiments suggest that Margin Sampling and Query by Committee
+bring consistent benefits across tasks and budgets.
+</p></li>
+</ul>
+
+<h3>Title: A Distributed Approach to Meteorological Predictions: Addressing Data Imbalance in Precipitation Prediction Models through Federated Learning and GANs. (arXiv:2310.13161v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13161">http://arxiv.org/abs/2310.13161</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13161]] A Distributed Approach to Meteorological Predictions: Addressing Data Imbalance in Precipitation Prediction Models through Federated Learning and GANs(http://arxiv.org/abs/2310.13161)</code></li>
+<li>Summary: <p>The classification of weather data involves categorizing meteorological
+phenomena into classes, thereby facilitating nuanced analyses and precise
+predictions for various sectors such as agriculture, aviation, and disaster
+management. This involves utilizing machine learning models to analyze large,
+multidimensional weather datasets for patterns and trends. These datasets may
+include variables such as temperature, humidity, wind speed, and pressure,
+contributing to meteorological conditions. Furthermore, it's imperative that
+classification algorithms proficiently navigate challenges such as data
+imbalances, where certain weather events (e.g., storms or extreme temperatures)
+might be underrepresented. This empirical study explores data augmentation
+methods to address imbalanced classes in tabular weather data in centralized
+and federated settings. Employing data augmentation techniques such as the
+Synthetic Minority Over-sampling Technique or Generative Adversarial Networks
+can improve the model's accuracy in classifying rare but critical weather
+events. Moreover, with advancements in federated learning, machine learning
+models can be trained across decentralized databases, ensuring privacy and data
+integrity while mitigating the need for centralized data storage and
+processing. Thus, the classification of weather data stands as a critical
+bridge, linking raw meteorological data to actionable insights, enhancing our
+capacity to anticipate and prepare for diverse weather conditions.
+</p></li>
+</ul>
+
+<h3>Title: DIG-MILP: a Deep Instance Generator for Mixed-Integer Linear Programming with Feasibility Guarantee. (arXiv:2310.13261v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13261">http://arxiv.org/abs/2310.13261</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13261]] DIG-MILP: a Deep Instance Generator for Mixed-Integer Linear Programming with Feasibility Guarantee(http://arxiv.org/abs/2310.13261)</code></li>
+<li>Summary: <p>Mixed-integer linear programming (MILP) stands as a notable NP-hard problem
+pivotal to numerous crucial industrial applications. The development of
+effective algorithms, the tuning of solvers, and the training of machine
+learning models for MILP resolution all hinge on access to extensive, diverse,
+and representative data. Yet compared to the abundant naturally occurring data
+in image and text realms, MILP is markedly data deficient, underscoring the
+vital role of synthetic MILP generation. We present DIG-MILP, a deep generative
+framework based on variational auto-encoder (VAE), adept at extracting
+deep-level structural features from highly limited MILP data and producing
+instances that closely mirror the target data. Notably, by leveraging the MILP
+duality, DIG-MILP guarantees a correct and complete generation space as well as
+ensures the boundedness and feasibility of the generated instances. Our
+empirical study highlights the novelty and quality of the instances generated
+by DIG-MILP through two distinct downstream tasks: (S1) Data sharing, where
+solver solution times correlate highly positive between original and
+DIG-MILP-generated instances, allowing data sharing for solver tuning without
+publishing the original data; (S2) Data Augmentation, wherein the
+DIG-MILP-generated instances bolster the generalization performance of machine
+learning models tasked with resolving MILP problems.
+</p></li>
+</ul>
+
+<h3>Title: Learning Recurrent Models with Temporally Local Rules. (arXiv:2310.13284v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13284">http://arxiv.org/abs/2310.13284</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13284]] Learning Recurrent Models with Temporally Local Rules(http://arxiv.org/abs/2310.13284)</code></li>
+<li>Summary: <p>Fitting generative models to sequential data typically involves two recursive
+computations through time, one forward and one backward. The latter could be a
+computation of the loss gradient (as in backpropagation through time), or an
+inference algorithm (as in the RTS/Kalman smoother). The backward pass in
+particular is computationally expensive (since it is inherently serial and
+cannot exploit GPUs), and difficult to map onto biological processes.
+Work-arounds have been proposed; here we explore a very different one:
+requiring the generative model to learn the joint distribution over current and
+previous states, rather than merely the transition probabilities. We show on
+toy datasets that different architectures employing this principle can learn
+aspects of the data typically requiring the backward pass.
+</p></li>
+</ul>
+
+<h3>Title: Y-Diagonal Couplings: Approximating Posteriors with Conditional Wasserstein Distances. (arXiv:2310.13433v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13433">http://arxiv.org/abs/2310.13433</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13433]] Y-Diagonal Couplings: Approximating Posteriors with Conditional Wasserstein Distances(http://arxiv.org/abs/2310.13433)</code></li>
+<li>Summary: <p>In inverse problems, many conditional generative models approximate the
+posterior measure by minimizing a distance between the joint measure and its
+learned approximation. While this approach also controls the distance between
+the posterior measures in the case of the Kullback Leibler divergence, it does
+not hold true for the Wasserstein distance. We will introduce a conditional
+Wasserstein distance with a set of restricted couplings that equals the
+expected Wasserstein distance of the posteriors. By deriving its dual, we find
+a rigorous way to motivate the loss of conditional Wasserstein GANs. We outline
+conditions under which the vanilla and the conditional Wasserstein distance
+coincide. Furthermore, we will show numerical examples where training with the
+conditional Wasserstein distance yields favorable properties for posterior
+sampling.
+</p></li>
+</ul>
+
+<h3>Title: Stable Nonconvex-Nonconcave Training via Linear Interpolation. (arXiv:2310.13459v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13459">http://arxiv.org/abs/2310.13459</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13459]] Stable Nonconvex-Nonconcave Training via Linear Interpolation(http://arxiv.org/abs/2310.13459)</code></li>
+<li>Summary: <p>This paper presents a theoretical analysis of linear interpolation as a
+principled method for stabilizing (large-scale) neural network training. We
+argue that instabilities in the optimization process are often caused by the
+nonmonotonicity of the loss landscape and show how linear interpolation can
+help by leveraging the theory of nonexpansive operators. We construct a new
+optimization scheme called relaxed approximate proximal point (RAPP), which is
+the first explicit method to achieve last iterate convergence rates for the
+full range of cohypomonotone problems. The construction extends to constrained
+and regularized settings. By replacing the inner optimizer in RAPP we
+rediscover the family of Lookahead algorithms for which we establish
+convergence in cohypomonotone problems even when the base optimizer is taken to
+be gradient descent ascent. The range of cohypomonotone problems in which
+Lookahead converges is further expanded by exploiting that Lookahead inherits
+the properties of the base optimizer. We corroborate the results with
+experiments on generative adversarial networks which demonstrates the benefits
+of the linear interpolation present in both RAPP and Lookahead.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Anomaly Detection of Command Shell Sessions based on DistilBERT: Unsupervised and Supervised Approaches. (arXiv:2310.13247v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13247">http://arxiv.org/abs/2310.13247</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13247]] Anomaly Detection of Command Shell Sessions based on DistilBERT: Unsupervised and Supervised Approaches(http://arxiv.org/abs/2310.13247)</code></li>
+<li>Summary: <p>Anomaly detection in command shell sessions is a critical aspect of computer
+security. Recent advances in deep learning and natural language processing,
+particularly transformer-based models, have shown great promise for addressing
+complex security challenges. In this paper, we implement a comprehensive
+approach to detect anomalies in Unix shell sessions using a pretrained
+DistilBERT model, leveraging both unsupervised and supervised learning
+techniques to identify anomalous activity while minimizing data labeling. The
+unsupervised method captures the underlying structure and syntax of Unix shell
+commands, enabling the detection of session deviations from normal behavior.
+Experiments on a large-scale enterprise dataset collected from production
+systems demonstrate the effectiveness of our approach in detecting anomalous
+behavior in Unix shell sessions. This work highlights the potential of
+leveraging recent advances in transformers to address important computer
+security challenges.
+</p></li>
+</ul>
+
+<h3>Title: FLTracer: Accurate Poisoning Attack Provenance in Federated Learning. (arXiv:2310.13424v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13424">http://arxiv.org/abs/2310.13424</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13424]] FLTracer: Accurate Poisoning Attack Provenance in Federated Learning(http://arxiv.org/abs/2310.13424)</code></li>
+<li>Summary: <p>Federated Learning (FL) is a promising distributed learning approach that
+enables multiple clients to collaboratively train a shared global model.
+However, recent studies show that FL is vulnerable to various poisoning
+attacks, which can degrade the performance of global models or introduce
+backdoors into them. In this paper, we first conduct a comprehensive study on
+prior FL attacks and detection methods. The results show that all existing
+detection methods are only effective against limited and specific attacks. Most
+detection methods suffer from high false positives, which lead to significant
+performance degradation, especially in not independent and identically
+distributed (non-IID) settings. To address these issues, we propose FLTracer,
+the first FL attack provenance framework to accurately detect various attacks
+and trace the attack time, objective, type, and poisoned location of updates.
+Different from existing methodologies that rely solely on cross-client anomaly
+detection, we propose a Kalman filter-based cross-round detection to identify
+adversaries by seeking the behavior changes before and after the attack. Thus,
+this makes it resilient to data heterogeneity and is effective even in non-IID
+settings. To further improve the accuracy of our detection method, we employ
+four novel features and capture their anomalies with the joint decisions.
+Extensive evaluations show that FLTracer achieves an average true positive rate
+of over $96.88\%$ at an average false positive rate of less than $2.67\%$,
+significantly outperforming SOTA detection methods. \footnote{Code is available
+at \url{https://github.com/Eyr3/FLTracer}.}
+</p></li>
+</ul>
+
+<h3>Title: Positive-Unlabeled Node Classification with Structure-aware Graph Learning. (arXiv:2310.13538v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13538">http://arxiv.org/abs/2310.13538</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13538]] Positive-Unlabeled Node Classification with Structure-aware Graph Learning(http://arxiv.org/abs/2310.13538)</code></li>
+<li>Summary: <p>Node classification on graphs is an important research problem with many
+applications. Real-world graph data sets may not be balanced and accurate as
+assumed by most existing works. A challenging setting is positive-unlabeled
+(PU) node classification, where labeled nodes are restricted to positive nodes.
+It has diverse applications, e.g., pandemic prediction or network anomaly
+detection. Existing works on PU node classification overlook information in the
+graph structure, which can be critical. In this paper, we propose to better
+utilize graph structure for PU node classification. We first propose a
+distance-aware PU loss that uses homophily in graphs to introduce more accurate
+supervision. We also propose a regularizer to align the model with graph
+structure. Theoretical analysis shows that minimizing the proposed loss also
+leads to minimizing the expected loss with both positive and negative labels.
+Extensive empirical evaluation on diverse graph data sets demonstrates its
+superior performance over existing state-of-the-art methods.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: A Simple Baseline for Knowledge-Based Visual Question Answering. (arXiv:2310.13570v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13570">http://arxiv.org/abs/2310.13570</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13570]] A Simple Baseline for Knowledge-Based Visual Question Answering(http://arxiv.org/abs/2310.13570)</code></li>
+<li>Summary: <p>This paper is on the problem of Knowledge-Based Visual Question Answering
+(KB-VQA). Recent works have emphasized the significance of incorporating both
+explicit (through external databases) and implicit (through LLMs) knowledge to
+answer questions requiring external knowledge effectively. A common limitation
+of such approaches is that they consist of relatively complicated pipelines and
+often heavily rely on accessing GPT-3 API. Our main contribution in this paper
+is to propose a much simpler and readily reproducible pipeline which, in a
+nutshell, is based on efficient in-context learning by prompting LLaMA (1 and
+2) using question-informative captions as contextual information. Contrary to
+recent approaches, our method is training-free, does not require access to
+external databases or APIs, and yet achieves state-of-the-art accuracy on the
+OK-VQA and A-OK-VQA datasets. Finally, we perform several ablation studies to
+understand important aspects of our method. Our code is publicly available at
+https://github.com/alexandrosXe/ASimple-Baseline-For-Knowledge-Based-VQA
+</p></li>
+</ul>
+
+<h3>Title: Steering Large Language Models for Machine Translation with Finetuning and In-Context Learning. (arXiv:2310.13448v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13448">http://arxiv.org/abs/2310.13448</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13448]] Steering Large Language Models for Machine Translation with Finetuning and In-Context Learning(http://arxiv.org/abs/2310.13448)</code></li>
+<li>Summary: <p>Large language models (LLMs) are a promising avenue for machine translation
+(MT). However, current LLM-based MT systems are brittle: their effectiveness
+highly depends on the choice of few-shot examples and they often require extra
+post-processing due to overgeneration. Alternatives such as finetuning on
+translation instructions are computationally expensive and may weaken
+in-context learning capabilities, due to overspecialization. In this paper, we
+provide a closer look at this problem. We start by showing that adapter-based
+finetuning with LoRA matches the performance of traditional finetuning while
+reducing the number of training parameters by a factor of 50. This method also
+outperforms few-shot prompting and eliminates the need for post-processing or
+in-context examples. However, we show that finetuning generally degrades
+few-shot performance, hindering adaptation capabilities. Finally, to obtain the
+best of both worlds, we propose a simple approach that incorporates few-shot
+examples during finetuning. Experiments on 10 language pairs show that our
+proposed approach recovers the original few-shot capabilities while keeping the
+added benefits of finetuning.
+</p></li>
+</ul>
+
+<h3>Title: Mind the instructions: a holistic evaluation of consistency and interactions in prompt-based learning. (arXiv:2310.13486v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13486">http://arxiv.org/abs/2310.13486</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13486]] Mind the instructions: a holistic evaluation of consistency and interactions in prompt-based learning(http://arxiv.org/abs/2310.13486)</code></li>
+<li>Summary: <p>Finding the best way of adapting pre-trained language models to a task is a
+big challenge in current NLP. Just like the previous generation of task-tuned
+models (TT), models that are adapted to tasks via in-context-learning (ICL) are
+robust in some setups but not in others. Here, we present a detailed analysis
+of which design choices cause instabilities and inconsistencies in LLM
+predictions. First, we show how spurious correlations between input
+distributions and labels -- a known issue in TT models -- form only a minor
+problem for prompted models. Then, we engage in a systematic, holistic
+evaluation of different factors that have been found to influence predictions
+in a prompting setup. We test all possible combinations of a range of factors
+on both vanilla and instruction-tuned (IT) LLMs of different scale and
+statistically analyse the results to show which factors are the most
+influential, interactive or stable. Our results show which factors can be used
+without precautions and which should be avoided or handled with care in most
+settings.
+</p></li>
+</ul>
+
+<h3>Title: Self-prompted Chain-of-Thought on Large Language Models for Open-domain Multi-hop Reasoning. (arXiv:2310.13552v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13552">http://arxiv.org/abs/2310.13552</a></li>
+<li>Code URL: https://github.com/noewangjy/sp-cot</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13552]] Self-prompted Chain-of-Thought on Large Language Models for Open-domain Multi-hop Reasoning(http://arxiv.org/abs/2310.13552)</code></li>
+<li>Summary: <p>In open-domain question-answering (ODQA), most existing questions require
+single-hop reasoning on commonsense. To further extend this task, we officially
+introduce open-domain multi-hop reasoning (ODMR) by answering multi-hop
+questions with explicit reasoning steps in open-domain setting. Recently, large
+language models (LLMs) have found significant utility in facilitating ODQA
+without external corpus. Furthermore, chain-of-thought (CoT) prompting boosts
+the reasoning capability of LLMs to a greater extent with manual or automated
+paradigms. However, existing automated methods lack of quality assurance, while
+manual approaches suffer from limited scalability and poor diversity, hindering
+the capabilities of LLMs. In this paper, we propose Self-prompted
+Chain-of-Thought (SP-CoT), an automated framework to mass-produce high quality
+CoTs of LLMs, by LLMs and for LLMs. SP-CoT introduces an automated generation
+pipeline of high quality ODMR datasets, an adaptive sampler for in-context CoT
+selection and self-prompted inference via in-context learning. Extensive
+experiments on four multi-hop question-answering benchmarks show that our
+proposed SP-CoT not only significantly surpasses the previous SOTA methods on
+large-scale (175B) LLMs, but also nearly doubles the zero-shot performance of
+small-scale (13B) LLMs. Further analysis reveals the remarkable capability of
+SP-CoT to elicit direct and concise intermediate reasoning steps by recalling
+$\sim$50\% of intermediate answers on MuSiQue-Ans dataset.
+</p></li>
+</ul>
+
+<h3>Title: In-context Learning with Transformer Is Really Equivalent to a Contrastive Learning Pattern. (arXiv:2310.13220v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.13220">http://arxiv.org/abs/2310.13220</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.13220]] In-context Learning with Transformer Is Really Equivalent to a Contrastive Learning Pattern(http://arxiv.org/abs/2310.13220)</code></li>
+<li>Summary: <p>Pre-trained large language models based on Transformers have demonstrated
+amazing in-context learning (ICL) abilities. Given several demonstration
+examples, the models can implement new tasks without any parameter updates.
+However, it is still an open question to understand the mechanism of ICL. In
+this paper, we interpret the inference process of ICL as a gradient descent
+process in a contrastive learning pattern. Firstly, leveraging kernel methods,
+we establish the relationship between gradient descent and self-attention
+mechanism under generally used softmax attention setting instead of linear
+attention setting. Then, we analyze the corresponding gradient descent process
+of ICL from the perspective of contrastive learning without negative samples
+and discuss possible improvements of this contrastive learning pattern, based
+on which the self-attention layer can be further modified. Finally, we design
+experiments to support our opinions. To the best of our knowledge, our work is
+the first to provide the understanding of ICL from the perspective of
+contrastive learning and has the potential to facilitate future model design by
+referring to related works on contrastive learning.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
