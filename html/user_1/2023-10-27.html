@@ -1,0 +1,901 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Improving Denoising Diffusion Models via Simultaneous Estimation of Image and Noise. (arXiv:2310.17167v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17167">http://arxiv.org/abs/2310.17167</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17167]] Improving Denoising Diffusion Models via Simultaneous Estimation of Image and Noise(http://arxiv.org/abs/2310.17167)</code></li>
+<li>Summary: <p>This paper introduces two key contributions aimed at improving the speed and
+quality of images generated through inverse diffusion processes. The first
+contribution involves reparameterizing the diffusion process in terms of the
+angle on a quarter-circular arc between the image and noise, specifically
+setting the conventional $\displaystyle \sqrt{\bar{\alpha}}=\cos(\eta)$. This
+reparameterization eliminates two singularities and allows for the expression
+of diffusion evolution as a well-behaved ordinary differential equation (ODE).
+In turn, this allows higher order ODE solvers such as Runge-Kutta methods to be
+used effectively. The second contribution is to directly estimate both the
+image ($\mathbf{x}_0$) and noise ($\mathbf{\epsilon}$) using our network, which
+enables more stable calculations of the update step in the inverse diffusion
+steps, as accurate estimation of both the image and noise are crucial at
+different stages of the process. Together with these changes, our model
+achieves faster generation, with the ability to converge on high-quality images
+more quickly, and higher quality of the generated images, as measured by
+metrics such as Frechet Inception Distance (FID), spatial Frechet Inception
+Distance (sFID), precision, and recall.
+</p></li>
+</ul>
+
+<h3>Title: Exploring Iterative Refinement with Diffusion Models for Video Grounding. (arXiv:2310.17189v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17189">http://arxiv.org/abs/2310.17189</a></li>
+<li>Code URL: https://github.com/mastervito/diffusionvg</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17189]] Exploring Iterative Refinement with Diffusion Models for Video Grounding(http://arxiv.org/abs/2310.17189)</code></li>
+<li>Summary: <p>Video grounding aims to localize the target moment in an untrimmed video
+corresponding to a given sentence query. Existing methods typically select the
+best prediction from a set of predefined proposals or directly regress the
+target span in a single-shot manner, resulting in the absence of a systematical
+prediction refinement process. In this paper, we propose DiffusionVG, a novel
+framework with diffusion models that formulates video grounding as a
+conditional generation task, where the target span is generated from Gaussian
+noise inputs and interatively refined in the reverse diffusion process. During
+training, DiffusionVG progressively adds noise to the target span with a fixed
+forward diffusion process and learns to recover the target span in the reverse
+diffusion process. In inference, DiffusionVG can generate the target span from
+Gaussian noise inputs by the learned reverse diffusion process conditioned on
+the video-sentence representations. Our DiffusionVG follows the encoder-decoder
+architecture, which firstly encodes the video-sentence features and iteratively
+denoises the predicted spans in its specialized span refining decoder. Without
+bells and whistles, our DiffusionVG demonstrates competitive or even superior
+performance compared to existing well-crafted models on mainstream Charades-STA
+and ActivityNet Captions benchmarks.
+</p></li>
+</ul>
+
+<h3>Title: Defect Spectrum: A Granular Look of Large-Scale Defect Datasets with Rich Semantics. (arXiv:2310.17316v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17316">http://arxiv.org/abs/2310.17316</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17316]] Defect Spectrum: A Granular Look of Large-Scale Defect Datasets with Rich Semantics(http://arxiv.org/abs/2310.17316)</code></li>
+<li>Summary: <p>Defect inspection is paramount within the closed-loop manufacturing system.
+However, existing datasets for defect inspection often lack precision and
+semantic granularity required for practical applications. In this paper, we
+introduce the Defect Spectrum, a comprehensive benchmark that offers precise,
+semantic-abundant, and large-scale annotations for a wide range of industrial
+defects. Building on four key industrial benchmarks, our dataset refines
+existing annotations and introduces rich semantic details, distinguishing
+multiple defect types within a single image. Furthermore, we introduce
+Defect-Gen, a two-stage diffusion-based generator designed to create
+high-quality and diverse defective images, even when working with limited
+datasets. The synthetic images generated by Defect-Gen significantly enhance
+the efficacy of defect inspection models. Overall, The Defect Spectrum dataset
+demonstrates its potential in defect inspection research, offering a solid
+platform for testing and refining advanced models.
+</p></li>
+</ul>
+
+<h3>Title: CADS: Unleashing the Diversity of Diffusion Models through Condition-Annealed Sampling. (arXiv:2310.17347v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17347">http://arxiv.org/abs/2310.17347</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17347]] CADS: Unleashing the Diversity of Diffusion Models through Condition-Annealed Sampling(http://arxiv.org/abs/2310.17347)</code></li>
+<li>Summary: <p>While conditional diffusion models are known to have good coverage of the
+data distribution, they still face limitations in output diversity,
+particularly when sampled with a high classifier-free guidance scale for
+optimal image quality or when trained on small datasets. We attribute this
+problem to the role of the conditioning signal in inference and offer an
+improved sampling strategy for diffusion models that can increase generation
+diversity, especially at high guidance scales, with minimal loss of sample
+quality. Our sampling strategy anneals the conditioning signal by adding
+scheduled, monotonically decreasing Gaussian noise to the conditioning vector
+during inference to balance diversity and condition alignment. Our
+Condition-Annealed Diffusion Sampler (CADS) can be used with any pretrained
+model and sampling algorithm, and we show that it boosts the diversity of
+diffusion models in various conditional generation tasks. Further, using an
+existing pretrained diffusion model, CADS achieves a new state-of-the-art FID
+of 1.70 and 2.31 for class-conditional ImageNet generation at 256$\times$256
+and 512$\times$512 respectively.
+</p></li>
+</ul>
+
+<h3>Title: SE(3) Diffusion Model-based Point Cloud Registration for Robust 6D Object Pose Estimation. (arXiv:2310.17359v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17359">http://arxiv.org/abs/2310.17359</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17359]] SE(3) Diffusion Model-based Point Cloud Registration for Robust 6D Object Pose Estimation(http://arxiv.org/abs/2310.17359)</code></li>
+<li>Summary: <p>In this paper, we introduce an SE(3) diffusion model-based point cloud
+registration framework for 6D object pose estimation in real-world scenarios.
+Our approach formulates the 3D registration task as a denoising diffusion
+process, which progressively refines the pose of the source point cloud to
+obtain a precise alignment with the model point cloud. Training our framework
+involves two operations: An SE(3) diffusion process and an SE(3) reverse
+process. The SE(3) diffusion process gradually perturbs the optimal rigid
+transformation of a pair of point clouds by continuously injecting noise
+(perturbation transformation). By contrast, the SE(3) reverse process focuses
+on learning a denoising network that refines the noisy transformation
+step-by-step, bringing it closer to the optimal transformation for accurate
+pose estimation. Unlike standard diffusion models used in linear Euclidean
+spaces, our diffusion model operates on the SE(3) manifold. This requires
+exploiting the linear Lie algebra $\mathfrak{se}(3)$ associated with SE(3) to
+constrain the transformation transitions during the diffusion and reverse
+processes. Additionally, to effectively train our denoising network, we derive
+a registration-specific variational lower bound as the optimization objective
+for model learning. Furthermore, we show that our denoising network can be
+constructed with a surrogate registration model, making our approach applicable
+to different deep registration networks. Extensive experiments demonstrate that
+our diffusion registration framework presents outstanding pose estimation
+performance on the real-world TUD-L, LINEMOD, and Occluded-LINEMOD datasets.
+</p></li>
+</ul>
+
+<h3>Title: The Expressive Power of Low-Rank Adaptation. (arXiv:2310.17513v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17513">http://arxiv.org/abs/2310.17513</a></li>
+<li>Code URL: https://github.com/uw-madison-lee-lab/expressive_power_of_lora</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17513]] The Expressive Power of Low-Rank Adaptation(http://arxiv.org/abs/2310.17513)</code></li>
+<li>Summary: <p>Low-Rank Adaptation (LoRA), a parameter-efficient fine-tuning method that
+leverages low-rank adaptation of weight matrices, has emerged as a prevalent
+technique for fine-tuning pre-trained models such as large language models and
+diffusion models. Despite its huge success in practice, the theoretical
+underpinnings of LoRA have largely remained unexplored. This paper takes the
+first step to bridge this gap by theoretically analyzing the expressive power
+of LoRA. We prove that, for fully connected neural networks, LoRA can adapt any
+model $f$ to accurately represent any smaller target model $\overline{f}$ if
+LoRA-rank $\geq(\text{width of }f) \times \frac{\text{depth of
+}\overline{f}}{\text{depth of }f}$. We also quantify the approximation error
+when LoRA-rank is lower than the threshold. For Transformer networks, we show
+any model can be adapted to a target model of the same size with
+rank-$(\frac{\text{embedding size}}{2})$ LoRA adapters.
+</p></li>
+</ul>
+
+<h3>Title: Hierarchical Semi-Implicit Variational Inference with Application to Diffusion Model Acceleration. (arXiv:2310.17153v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17153">http://arxiv.org/abs/2310.17153</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17153]] Hierarchical Semi-Implicit Variational Inference with Application to Diffusion Model Acceleration(http://arxiv.org/abs/2310.17153)</code></li>
+<li>Summary: <p>Semi-implicit variational inference (SIVI) has been introduced to expand the
+analytical variational families by defining expressive semi-implicit
+distributions in a hierarchical manner. However, the single-layer architecture
+commonly used in current SIVI methods can be insufficient when the target
+posterior has complicated structures. In this paper, we propose hierarchical
+semi-implicit variational inference, called HSIVI, which generalizes SIVI to
+allow more expressive multi-layer construction of semi-implicit distributions.
+By introducing auxiliary distributions that interpolate between a simple base
+distribution and the target distribution, the conditional layers can be trained
+by progressively matching these auxiliary distributions one layer after
+another. Moreover, given pre-trained score networks, HSIVI can be used to
+accelerate the sampling process of diffusion models with the score matching
+objective. We show that HSIVI significantly enhances the expressiveness of SIVI
+on several Bayesian inference problems with complicated target distributions.
+When used for diffusion model acceleration, we show that HSIVI can produce high
+quality samples comparable to or better than the existing fast diffusion model
+based samplers with a small number of function evaluations on various datasets.
+</p></li>
+</ul>
+
+<h3>Title: Towards Unifying Diffusion Models for Probabilistic Spatio-Temporal Graph Learning. (arXiv:2310.17360v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17360">http://arxiv.org/abs/2310.17360</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17360]] Towards Unifying Diffusion Models for Probabilistic Spatio-Temporal Graph Learning(http://arxiv.org/abs/2310.17360)</code></li>
+<li>Summary: <p>Spatio-temporal graph learning is a fundamental problem in the Web of Things
+era, which enables a plethora of Web applications such as smart cities, human
+mobility and climate analysis. Existing approaches tackle different learning
+tasks independently, tailoring their models to unique task characteristics.
+These methods, however, fall short of modeling intrinsic uncertainties in the
+spatio-temporal data. Meanwhile, their specialized designs limit their
+universality as general spatio-temporal learning solutions. In this paper, we
+propose to model the learning tasks in a unified perspective, viewing them as
+predictions based on conditional information with shared spatio-temporal
+patterns. Based on this proposal, we introduce Unified Spatio-Temporal
+Diffusion Models (USTD) to address the tasks uniformly within the
+uncertainty-aware diffusion framework. USTD is holistically designed,
+comprising a shared spatio-temporal encoder and attention-based denoising
+networks that are task-specific. The shared encoder, optimized by a
+pre-training strategy, effectively captures conditional spatio-temporal
+patterns. The denoising networks, utilizing both cross- and self-attention,
+integrate conditional dependencies and generate predictions. Opting for
+forecasting and kriging as downstream tasks, we design Gated Attention (SGA)
+and Temporal Gated Attention (TGA) for each task, with different emphases on
+the spatial and temporal dimensions, respectively. By combining the advantages
+of deterministic encoders and probabilistic diffusion models, USTD achieves
+state-of-the-art performances compared to deterministic and probabilistic
+baselines in both tasks, while also providing valuable uncertainty estimates.
+</p></li>
+</ul>
+
+<h3>Title: Causal Modeling with Stationary Diffusions. (arXiv:2310.17405v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17405">http://arxiv.org/abs/2310.17405</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17405]] Causal Modeling with Stationary Diffusions(http://arxiv.org/abs/2310.17405)</code></li>
+<li>Summary: <p>We develop a novel approach towards causal inference. Rather than structural
+equations over a causal graph, we learn stochastic differential equations
+(SDEs) whose stationary densities model a system's behavior under
+interventions. These stationary diffusion models do not require the formalism
+of causal graphs, let alone the common assumption of acyclicity. We show that
+in several cases, they generalize to unseen interventions on their variables,
+often better than classical approaches. Our inference method is based on a new
+theoretical result that expresses a stationarity condition on the diffusion's
+generator in a reproducing kernel Hilbert space. The resulting kernel deviation
+from stationarity (KDS) is an objective function of independent interest.
+</p></li>
+</ul>
+
+<h3>Title: Likelihood-based Out-of-Distribution Detection with Denoising Diffusion Probabilistic Models. (arXiv:2310.17432v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17432">http://arxiv.org/abs/2310.17432</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17432]] Likelihood-based Out-of-Distribution Detection with Denoising Diffusion Probabilistic Models(http://arxiv.org/abs/2310.17432)</code></li>
+<li>Summary: <p>Out-of-Distribution detection between dataset pairs has been extensively
+explored with generative models. We show that likelihood-based
+Out-of-Distribution detection can be extended to diffusion models by leveraging
+the fact that they, like other likelihood-based generative models, are
+dramatically affected by the input sample complexity. Currently, all
+Out-of-Distribution detection methods with Diffusion Models are
+reconstruction-based. We propose a new likelihood ratio for Out-of-Distribution
+detection with Deep Denoising Diffusion Models, which we call the Complexity
+Corrected Likelihood Ratio. Our likelihood ratio is constructed using Evidence
+Lower-Bound evaluations from an individual model at various noising levels. We
+present results that are comparable to state-of-the-art Out-of-Distribution
+detection methods with generative models.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Learning depth from monocular video sequences. (arXiv:2310.17156v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17156">http://arxiv.org/abs/2310.17156</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17156]] Learning depth from monocular video sequences(http://arxiv.org/abs/2310.17156)</code></li>
+<li>Summary: <p>Learning single image depth estimation model from monocular video sequence is
+a very challenging problem. In this paper, we propose a novel training loss
+which enables us to include more images for supervision during the training
+process. We propose a simple yet effective model to account the frame to frame
+pixel motion. We also design a novel network architecture for single image
+estimation. When combined, our method produces state of the art results for
+monocular depth estimation on the KITTI dataset in the self-supervised setting.
+</p></li>
+</ul>
+
+<h3>Title: Bridging The Gaps Between Token Pruning and Full Pre-training via Masked Fine-tuning. (arXiv:2310.17177v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17177">http://arxiv.org/abs/2310.17177</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17177]] Bridging The Gaps Between Token Pruning and Full Pre-training via Masked Fine-tuning(http://arxiv.org/abs/2310.17177)</code></li>
+<li>Summary: <p>Despite the success of transformers on various computer vision tasks, they
+suffer from excessive memory and computational cost. Some works present dynamic
+vision transformers to accelerate inference by pruning redundant tokens. A key
+to improving token pruning is using well-trained models as initialization for
+faster convergence and better performance. However, current base models usually
+adopt full image training, i.e., using full images as inputs and keeping the
+whole feature maps through the forward process, which causes inconsistencies
+with dynamic models that gradually reduce tokens, including calculation
+pattern, information amount and token selection strategy inconsistencies.
+Inspired by MAE which performs masking and reconstruction self-supervised task,
+we devise masked fine-tuning to bridge the gaps between pre-trained base models
+used for initialization and token pruning based dynamic vision transformers, by
+masking image patches and predicting the image class label based on left
+unmasked patches. Extensive experiments on ImageNet demonstrate that base
+models via masked fine-tuning gain strong occlusion robustness and ability
+against information loss. With this better initialization, Dynamic ViT achieves
+higher accuracies, especially under large token pruning ratios (e.g., 81.9% vs.
+81.3%, and 62.3% vs. 58.9% for DeiT based Dynamic ViT/0.8 and Dynamic ViT/0.3).
+Moreover, we apply our method into different token pruning based dynamic vision
+transformers, different pre-trained models and randomly initialized models to
+demonstrate the generalization ability.
+</p></li>
+</ul>
+
+<h3>Title: Weakly-Supervised Surgical Phase Recognition. (arXiv:2310.17209v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17209">http://arxiv.org/abs/2310.17209</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17209]] Weakly-Supervised Surgical Phase Recognition(http://arxiv.org/abs/2310.17209)</code></li>
+<li>Summary: <p>A key element of computer-assisted surgery systems is phase recognition of
+surgical videos. Existing phase recognition algorithms require frame-wise
+annotation of a large number of videos, which is time and money consuming. In
+this work we join concepts of graph segmentation with self-supervised learning
+to derive a random-walk solution for per-frame phase prediction. Furthermore,
+we utilize within our method two forms of weak supervision: sparse timestamps
+or few-shot learning. The proposed algorithm enjoys low complexity and can
+operate in lowdata regimes. We validate our method by running experiments with
+the public Cholec80 dataset of laparoscopic cholecystectomy videos,
+demonstrating promising performance in multiple setups.
+</p></li>
+</ul>
+
+<h3>Title: Revisiting the Distillation of Image Representations into Point Clouds for Autonomous Driving. (arXiv:2310.17504v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17504">http://arxiv.org/abs/2310.17504</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17504]] Revisiting the Distillation of Image Representations into Point Clouds for Autonomous Driving(http://arxiv.org/abs/2310.17504)</code></li>
+<li>Summary: <p>Self-supervised image networks can be used to address complex 2D tasks (e.g.,
+semantic segmentation, object discovery) very efficiently and with little or no
+downstream supervision. However, self-supervised 3D networks on lidar data do
+not perform as well for now. A few methods therefore propose to distill
+high-quality self-supervised 2D features into 3D networks. The most recent ones
+doing so on autonomous driving data show promising results. Yet, a performance
+gap persists between these distilled features and fully-supervised ones. In
+this work, we revisit 2D-to-3D distillation. First, we propose, for semantic
+segmentation, a simple approach that leads to a significant improvement
+compared to prior 3D distillation methods. Second, we show that distillation in
+high capacity 3D networks is key to reach high quality 3D features. This
+actually allows us to significantly close the gap between unsupervised
+distilled 3D features and fully-supervised ones. Last, we show that our
+high-quality distilled representations can also be used for open-vocabulary
+segmentation and background/foreground discovery.
+</p></li>
+</ul>
+
+<h3>Title: Towards Matching Phones and Speech Representations. (arXiv:2310.17558v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17558">http://arxiv.org/abs/2310.17558</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17558]] Towards Matching Phones and Speech Representations(http://arxiv.org/abs/2310.17558)</code></li>
+<li>Summary: <p>Learning phone types from phone instances has been a long-standing problem,
+while still being open. In this work, we revisit this problem in the context of
+self-supervised learning, and pose it as the problem of matching cluster
+centroids to phone embeddings. We study two key properties that enable
+matching, namely, whether cluster centroids of self-supervised representations
+reduce the variability of phone instances and respect the relationship among
+phones. We then use the matching result to produce pseudo-labels and introduce
+a new loss function for improving self-supervised representations. Our
+experiments show that the matching result captures the relationship among
+phones. Training the new loss function jointly with the regular self-supervised
+losses, such as APC and CPC, significantly improves the downstream phone
+classification.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Task-driven Prompt Evolution for Foundation Models. (arXiv:2310.17128v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17128">http://arxiv.org/abs/2310.17128</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17128]] Task-driven Prompt Evolution for Foundation Models(http://arxiv.org/abs/2310.17128)</code></li>
+<li>Summary: <p>Promptable foundation models, particularly Segment Anything Model (SAM), have
+emerged as a promising alternative to the traditional task-specific supervised
+learning for image segmentation. However, many evaluation studies have found
+that their performance on medical imaging modalities to be underwhelming
+compared to conventional deep learning methods. In the world of large
+pre-trained language and vision-language models, learning prompt from
+downstream tasks has achieved considerable success in improving performance. In
+this work, we propose a plug-and-play Prompt Optimization Technique for
+foundation models like SAM (SAMPOT) that utilizes the downstream segmentation
+task to optimize the human-provided prompt to obtain improved performance. We
+demonstrate the utility of SAMPOT on lung segmentation in chest X-ray images
+and obtain an improvement on a significant number of cases ($\sim75\%$) over
+human-provided initial prompts. We hope this work will lead to further
+investigations in the nascent field of automatic visual prompt-tuning.
+</p></li>
+</ul>
+
+<h3>Title: Quality > Quantity: Synthetic Corpora from Foundation Models for Closed-Domain Extractive Question Answering. (arXiv:2310.16995v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.16995">http://arxiv.org/abs/2310.16995</a></li>
+<li>Code URL: https://github.com/saptarshi059/cdqa-v1-targetted-pretraining</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.16995]] Quality > Quantity: Synthetic Corpora from Foundation Models for Closed-Domain Extractive Question Answering(http://arxiv.org/abs/2310.16995)</code></li>
+<li>Summary: <p>Domain adaptation, the process of training a model in one domain and applying
+it to another, has been extensively explored in machine learning. While
+training a domain-specific foundation model (FM) from scratch is an option,
+recent methods have focused on adapting pre-trained FMs for domain-specific
+tasks. However, our experiments reveal that either approach does not
+consistently achieve state-of-the-art (SOTA) results in the target domain. In
+this work, we study extractive question answering within closed domains and
+introduce the concept of targeted pre-training. This involves determining and
+generating relevant data to further pre-train our models, as opposed to the
+conventional philosophy of utilizing domain-specific FMs trained on a wide
+range of data. Our proposed framework uses Galactica to generate synthetic,
+``targeted'' corpora that align with specific writing styles and topics, such
+as research papers and radiology reports. This process can be viewed as a form
+of knowledge distillation. We apply our method to two biomedical extractive
+question answering datasets, COVID-QA and RadQA, achieving a new benchmark on
+the former and demonstrating overall improvements on the latter. Code available
+at https://github.com/saptarshi059/CDQA-v1-Targetted-PreTraining/tree/main.
+</p></li>
+</ul>
+
+<h3>Title: Transferring a molecular foundation model for polymer property predictions. (arXiv:2310.16958v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.16958">http://arxiv.org/abs/2310.16958</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.16958]] Transferring a molecular foundation model for polymer property predictions(http://arxiv.org/abs/2310.16958)</code></li>
+<li>Summary: <p>Transformer-based large language models have remarkable potential to
+accelerate design optimization for applications such as drug development and
+materials discovery. Self-supervised pretraining of transformer models requires
+large-scale datasets, which are often sparsely populated in topical areas such
+as polymer science. State-of-the-art approaches for polymers conduct data
+augmentation to generate additional samples but unavoidably incurs extra
+computational costs. In contrast, large-scale open-source datasets are
+available for small molecules and provide a potential solution to data scarcity
+through transfer learning. In this work, we show that using transformers
+pretrained on small molecules and fine-tuned on polymer properties achieve
+comparable accuracy to those trained on augmented polymer datasets for a series
+of benchmark prediction tasks.
+</p></li>
+</ul>
+
+<h3>Title: FedPEAT: Convergence of Federated Learning, Parameter-Efficient Fine Tuning, and Emulator Assisted Tuning for Artificial Intelligence Foundation Models with Mobile Edge Computing. (arXiv:2310.17491v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17491">http://arxiv.org/abs/2310.17491</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17491]] FedPEAT: Convergence of Federated Learning, Parameter-Efficient Fine Tuning, and Emulator Assisted Tuning for Artificial Intelligence Foundation Models with Mobile Edge Computing(http://arxiv.org/abs/2310.17491)</code></li>
+<li>Summary: <p>The emergence of foundation models, including language and vision models, has
+reshaped AI's landscape, offering capabilities across various applications.
+Deploying and fine-tuning these large models, like GPT-3 and BERT, presents
+challenges, especially in the current foundation model era. We introduce
+Emulator-Assisted Tuning (EAT) combined with Parameter-Efficient Fine-Tuning
+(PEFT) to form Parameter-Efficient Emulator-Assisted Tuning (PEAT). Further, we
+expand this into federated learning as Federated PEAT (FedPEAT). FedPEAT uses
+adapters, emulators, and PEFT for federated model tuning, enhancing model
+privacy and memory efficiency. Adapters adjust pre-trained models, while
+emulators give a compact representation of original models, addressing both
+privacy and efficiency. Adaptable to various neural networks, our approach also
+uses deep reinforcement learning for hyper-parameter optimization. We tested
+FedPEAT in a unique scenario with a server participating in collaborative
+federated tuning, showcasing its potential in tackling foundation model
+challenges.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Diagnosing Alzheimer's Disease using Early-Late Multimodal Data Fusion with Jacobian Maps. (arXiv:2310.16936v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.16936">http://arxiv.org/abs/2310.16936</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.16936]] Diagnosing Alzheimer's Disease using Early-Late Multimodal Data Fusion with Jacobian Maps(http://arxiv.org/abs/2310.16936)</code></li>
+<li>Summary: <p>Alzheimer's disease (AD) is a prevalent and debilitating neurodegenerative
+disorder impacting a large aging population. Detecting AD in all its
+presymptomatic and symptomatic stages is crucial for early intervention and
+treatment. An active research direction is to explore machine learning methods
+that harness multimodal data fusion to outperform human inspection of medical
+scans. However, existing multimodal fusion models have limitations, including
+redundant computation, complex architecture, and simplistic handling of missing
+data. Moreover, the preprocessing pipelines of medical scans remain
+inadequately detailed and are seldom optimized for individual subjects. In this
+paper, we propose an efficient early-late fusion (ELF) approach, which
+leverages a convolutional neural network for automated feature extraction and
+random forests for their competitive performance on small datasets.
+Additionally, we introduce a robust preprocessing pipeline that adapts to the
+unique characteristics of individual subjects and makes use of whole brain
+images rather than slices or patches. Moreover, to tackle the challenge of
+detecting subtle changes in brain volume, we transform images into the Jacobian
+domain (JD) to enhance both accuracy and robustness in our classification.
+Using MRI and CT images from the OASIS-3 dataset, our experiments demonstrate
+the effectiveness of the ELF approach in classifying AD into four stages with
+an accuracy of 97.19%.
+</p></li>
+</ul>
+
+<h3>Title: Attribute Based Interpretable Evaluation Metrics for Generative Models. (arXiv:2310.17261v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17261">http://arxiv.org/abs/2310.17261</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17261]] Attribute Based Interpretable Evaluation Metrics for Generative Models(http://arxiv.org/abs/2310.17261)</code></li>
+<li>Summary: <p>When the training dataset comprises a 1:1 proportion of dogs to cats, a
+generative model that produces 1:1 dogs and cats better resembles the training
+species distribution than another model with 3:1 dogs and cats. Can we capture
+this phenomenon using existing metrics? Unfortunately, we cannot, because these
+metrics do not provide any interpretability beyond "diversity". In this
+context, we propose a new evaluation protocol that measures the divergence of a
+set of generated images from the training set regarding the distribution of
+attribute strengths as follows. Single-attribute Divergence (SaD) measures the
+divergence regarding PDFs of a single attribute. Paired-attribute Divergence
+(PaD) measures the divergence regarding joint PDFs of a pair of attributes.
+They provide which attributes the models struggle. For measuring the attribute
+strengths of an image, we propose Heterogeneous CLIPScore (HCS) which measures
+the cosine similarity between image and text vectors with heterogeneous initial
+points. With SaD and PaD, we reveal the following about existing generative
+models. ProjectedGAN generates implausible attribute relationships such as a
+baby with a beard even though it has competitive scores of existing metrics.
+Diffusion models struggle to capture diverse colors in the datasets. The larger
+sampling timesteps of latent diffusion model generate the more minor objects
+including earrings and necklaces. Stable Diffusion v1.5 better captures the
+attributes than v2.1. Our metrics lay a foundation for explainable evaluations
+of generative models.
+</p></li>
+</ul>
+
+<h3>Title: C-Disentanglement: Discovering Causally-Independent Generative Factors under an Inductive Bias of Confounder. (arXiv:2310.17325v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17325">http://arxiv.org/abs/2310.17325</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17325]] C-Disentanglement: Discovering Causally-Independent Generative Factors under an Inductive Bias of Confounder(http://arxiv.org/abs/2310.17325)</code></li>
+<li>Summary: <p>Representation learning assumes that real-world data is generated by a few
+semantically meaningful generative factors (i.e., sources of variation) and
+aims to discover them in the latent space. These factors are expected to be
+causally disentangled, meaning that distinct factors are encoded into separate
+latent variables, and changes in one factor will not affect the values of the
+others. Compared to statistical independence, causal disentanglement allows
+more controllable data generation, improved robustness, and better
+generalization. However, most existing work assumes unconfoundedness in the
+discovery process, that there are no common causes to the generative factors
+and thus obtain only statistical independence. In this paper, we recognize the
+importance of modeling confounders in discovering causal generative factors.
+Unfortunately, such factors are not identifiable without proper inductive bias.
+We fill the gap by introducing a framework entitled Confounded-Disentanglement
+(C-Disentanglement), the first framework that explicitly introduces the
+inductive bias of confounder via labels from domain expertise. In addition, we
+accordingly propose an approach to sufficiently identify the causally
+disentangled factors under any inductive bias of the confounder. We conduct
+extensive experiments on both synthetic and real-world datasets. Our method
+demonstrates competitive results compared to various SOTA baselines in
+obtaining causally disentangled features and downstream tasks under domain
+shifts.
+</p></li>
+</ul>
+
+<h3>Title: AntifakePrompt: Prompt-Tuned Vision-Language Models are Fake Image Detectors. (arXiv:2310.17419v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17419">http://arxiv.org/abs/2310.17419</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17419]] AntifakePrompt: Prompt-Tuned Vision-Language Models are Fake Image Detectors(http://arxiv.org/abs/2310.17419)</code></li>
+<li>Summary: <p>Deep generative models can create remarkably photorealistic fake images while
+raising concerns about misinformation and copyright infringement, known as
+deepfake threats. Deepfake detection technique is developed to distinguish
+between real and fake images, where the existing methods typically learn
+classifiers in the image domain or various feature domains. However, the
+generalizability of deepfake detection against emerging and more advanced
+generative models remains challenging. In this paper, being inspired by the
+zero-shot advantages of Vision-Language Models (VLMs), we propose a novel
+approach using VLMs (e.g. InstructBLIP) and prompt tuning techniques to improve
+the deepfake detection accuracy over unseen data. We formulate deepfake
+detection as a visual question answering problem, and tune soft prompts for
+InstructBLIP to answer the real/fake information of a query image. We conduct
+full-spectrum experiments on datasets from 3 held-in and 13 held-out generative
+models, covering modern text-to-image generation, image editing and image
+attacks. Results demonstrate that (1) the deepfake detection accuracy can be
+significantly and consistently improved (from 58.8% to 91.31%, in average
+accuracy over unseen data) using pretrained vision-language models with prompt
+tuning; (2) our superior performance is at less cost of trainable parameters,
+resulting in an effective and efficient solution for deepfake detection. Code
+and models can be found at https://github.com/nctu-eva-lab/AntifakePrompt.
+</p></li>
+</ul>
+
+<h3>Title: How well can machine-generated texts be identified and can language models be trained to avoid identification?. (arXiv:2310.16992v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.16992">http://arxiv.org/abs/2310.16992</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.16992]] How well can machine-generated texts be identified and can language models be trained to avoid identification?(http://arxiv.org/abs/2310.16992)</code></li>
+<li>Summary: <p>With the rise of generative pre-trained transformer models such as GPT-3,
+GPT-NeoX, or OPT, distinguishing human-generated texts from machine-generated
+ones has become important. We refined five separate language models to generate
+synthetic tweets, uncovering that shallow learning classification algorithms,
+like Naive Bayes, achieve detection accuracy between 0.6 and 0.8.
+</p>
+<p>Shallow learning classifiers differ from human-based detection, especially
+when using higher temperature values during text generation, resulting in a
+lower detection rate. Humans prioritize linguistic acceptability, which tends
+to be higher at lower temperature values. In contrast, transformer-based
+classifiers have an accuracy of 0.9 and above. We found that using a
+reinforcement learning approach to refine our generative models can
+successfully evade BERT-based classifiers with a detection accuracy of 0.15 or
+less.
+</p></li>
+</ul>
+
+<h3>Title: Beyond MLE: Convex Learning for Text Generation. (arXiv:2310.17217v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17217">http://arxiv.org/abs/2310.17217</a></li>
+<li>Code URL: https://github.com/ictnlp/convex-learning</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17217]] Beyond MLE: Convex Learning for Text Generation(http://arxiv.org/abs/2310.17217)</code></li>
+<li>Summary: <p>Maximum likelihood estimation (MLE) is a statistical method used to estimate
+the parameters of a probability distribution that best explain the observed
+data. In the context of text generation, MLE is often used to train generative
+language models, which can then be used to generate new text. However, we argue
+that MLE is not always necessary and optimal, especially for closed-ended text
+generation tasks like machine translation. In these tasks, the goal of model is
+to generate the most appropriate response, which does not necessarily require
+it to estimate the entire data distribution with MLE. To this end, we propose a
+novel class of training objectives based on convex functions, which enables
+text generation models to focus on highly probable outputs without having to
+estimate the entire data distribution. We investigate the theoretical
+properties of the optimal predicted distribution when applying convex functions
+to the loss, demonstrating that convex functions can sharpen the optimal
+distribution, thereby enabling the model to better capture outputs with high
+probabilities. Experiments on various text generation tasks and models show the
+effectiveness of our approach. It enables autoregressive models to bridge the
+gap between greedy and beam search, and facilitates the learning of
+non-autoregressive models with a maximum improvement of 9+ BLEU points.
+Moreover, our approach also exhibits significant impact on large language
+models (LLMs), substantially enhancing their generative capability on various
+tasks. Source code is available at
+\url{https://github.com/ictnlp/Convex-Learning}.
+</p></li>
+</ul>
+
+<h3>Title: Meaning and understanding in large language models. (arXiv:2310.17407v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17407">http://arxiv.org/abs/2310.17407</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17407]] Meaning and understanding in large language models(http://arxiv.org/abs/2310.17407)</code></li>
+<li>Summary: <p>Can a machine understand the meanings of natural language? Recent
+developments in the generative large language models (LLMs) of artificial
+intelligence have led to the belief that traditional philosophical assumptions
+about machine understanding of language need to be revised. This article
+critically evaluates the prevailing tendency to regard machine language
+performance as mere syntactic manipulation and the simulation of understanding,
+which is only partial and very shallow, without sufficient referential
+grounding in the world. The aim is to highlight the conditions crucial to
+attributing natural language understanding to state-of-the-art LLMs, where it
+can be legitimately argued that LLMs not only use syntax but also semantics,
+their understanding not being simulated but duplicated; and determine how they
+ground the meanings of linguistic expressions.
+</p></li>
+</ul>
+
+<h3>Title: Harnessing GPT-3.5-turbo for Rhetorical Role Prediction in Legal Cases. (arXiv:2310.17413v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17413">http://arxiv.org/abs/2310.17413</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17413]] Harnessing GPT-3(http://arxiv.org/abs/2310.17413)</code></li>
+<li>Summary: <p>We propose a comprehensive study of one-stage elicitation techniques for
+querying a large pre-trained generative transformer (GPT-3.5-turbo) in the
+rhetorical role prediction task of legal cases. This task is known as requiring
+textual context to be addressed. Our study explores strategies such as zero-few
+shots, task specification with definitions and clarification of annotation
+ambiguities, textual context and reasoning with general prompts and specific
+questions. We show that the number of examples, the definition of labels, the
+presentation of the (labelled) textual context and specific questions about
+this context have a positive influence on the performance of the model. Given
+non-equivalent test set configurations, we observed that prompting with a few
+labelled examples from direct context can lead the model to a better
+performance than a supervised fined-tuned multi-class classifier based on the
+BERT encoder (weighted F1 score of = 72%). But there is still a gap to reach
+the performance of the best systems = 86%) in the LegalEval 2023 task which, on
+the other hand, require dedicated resources, architectures and training.
+</p></li>
+</ul>
+
+<h3>Title: An Explainable Deep Learning-Based Method For Schizophrenia Diagnosis Using Generative Data-Augmentation. (arXiv:2310.16867v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.16867">http://arxiv.org/abs/2310.16867</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.16867]] An Explainable Deep Learning-Based Method For Schizophrenia Diagnosis Using Generative Data-Augmentation(http://arxiv.org/abs/2310.16867)</code></li>
+<li>Summary: <p>In this study, we leverage a deep learning-based method for the automatic
+diagnosis of schizophrenia using EEG brain recordings. This approach utilizes
+generative data augmentation, a powerful technique that enhances the accuracy
+of the diagnosis. To enable the utilization of time-frequency features,
+spectrograms were extracted from the raw signals. After exploring several
+neural network architectural setups, a proper convolutional neural network
+(CNN) was used for the initial diagnosis. Subsequently, using Wasserstein GAN
+with Gradient Penalty (WGAN-GP) and Variational Autoencoder (VAE), two
+different synthetic datasets were generated in order to augment the initial
+dataset and address the over-fitting issue. The augmented dataset using VAE
+achieved a 3.0\% improvement in accuracy reaching up to 99.0\% and yielded a
+lower loss value as well as a faster convergence. Finally, we addressed the
+lack of trust in black-box models using the Local Interpretable Model-agnostic
+Explanations (LIME) algorithm to determine the most important superpixels
+(frequencies) in the diagnosis process.
+</p></li>
+</ul>
+
+<h3>Title: Probabilistic Integral Circuits. (arXiv:2310.16986v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.16986">http://arxiv.org/abs/2310.16986</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.16986]] Probabilistic Integral Circuits(http://arxiv.org/abs/2310.16986)</code></li>
+<li>Summary: <p>Continuous latent variables (LVs) are a key ingredient of many generative
+models, as they allow modelling expressive mixtures with an uncountable number
+of components. In contrast, probabilistic circuits (PCs) are hierarchical
+discrete mixtures represented as computational graphs composed of input, sum
+and product units. Unlike continuous LV models, PCs provide tractable inference
+but are limited to discrete LVs with categorical (i.e. unordered) states. We
+bridge these model classes by introducing probabilistic integral circuits
+(PICs), a new language of computational graphs that extends PCs with integral
+units representing continuous LVs. In the first place, PICs are symbolic
+computational graphs and are fully tractable in simple cases where analytical
+integration is possible. In practice, we parameterise PICs with light-weight
+neural nets delivering an intractable hierarchical continuous mixture that can
+be approximated arbitrarily well with large PCs using numerical quadrature. On
+several distribution estimation benchmarks, we show that such PIC-approximating
+PCs systematically outperform PCs commonly learned via expectation-maximization
+or SGD.
+</p></li>
+</ul>
+
+<h3>Title: Learning an Inventory Control Policy with General Inventory Arrival Dynamics. (arXiv:2310.17168v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17168">http://arxiv.org/abs/2310.17168</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17168]] Learning an Inventory Control Policy with General Inventory Arrival Dynamics(http://arxiv.org/abs/2310.17168)</code></li>
+<li>Summary: <p>In this paper we address the problem of learning and backtesting inventory
+control policies in the presence of general arrival dynamics -- which we term
+as a quantity-over-time arrivals model (QOT). We also allow for order
+quantities to be modified as a post-processing step to meet vendor constraints
+such as order minimum and batch size constraints -- a common practice in real
+supply chains. To the best of our knowledge this is the first work to handle
+either arbitrary arrival dynamics or an arbitrary downstream post-processing of
+order quantities. Building upon recent work (Madeka et al., 2022) we similarly
+formulate the periodic review inventory control problem as an exogenous
+decision process, where most of the state is outside the control of the agent.
+Madeka et al. (2022) show how to construct a simulator that replays historic
+data to solve this class of problem. In our case, we incorporate a deep
+generative model for the arrivals process as part of the history replay. By
+formulating the problem as an exogenous decision process, we can apply results
+from Madeka et al. (2022) to obtain a reduction to supervised learning.
+Finally, we show via simulation studies that this approach yields statistically
+significant improvements in profitability over production baselines. Using data
+from an ongoing real-world A/B test, we show that Gen-QOT generalizes well to
+off-policy data.
+</p></li>
+</ul>
+
+<h3>Title: Adaptive important sampling for Deep Ritz. (arXiv:2310.17185v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17185">http://arxiv.org/abs/2310.17185</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17185]] Adaptive important sampling for Deep Ritz(http://arxiv.org/abs/2310.17185)</code></li>
+<li>Summary: <p>We introduce an adaptive sampling method for the Deep Ritz method aimed at
+solving partial differential equations (PDEs). Two deep neural networks are
+used. One network is employed to approximate the solution of PDEs, while the
+other one is a deep generative model used to generate new collocation points to
+refine the training set. The adaptive sampling procedure consists of two main
+steps. The first step is solving the PDEs using the Deep Ritz method by
+minimizing an associated variational loss discretized by the collocation points
+in the training set. The second step involves generating a new training set,
+which is then used in subsequent computations to further improve the accuracy
+of the current approximate solution. We treat the integrand in the variational
+loss as an unnormalized probability density function (PDF) and approximate it
+using a deep generative model called bounded KRnet. The new samples and their
+associated PDF values are obtained from the bounded KRnet. With these new
+samples and their associated PDF values, the variational loss can be
+approximated more accurately by importance sampling. Compared to the original
+Deep Ritz method, the proposed adaptive method improves accuracy, especially
+for problems characterized by low regularity and high dimensionality. We
+demonstrate the effectiveness of our new method through a series of numerical
+experiments.
+</p></li>
+</ul>
+
+<h3>Title: De-novo Chemical Reaction Generation by Means of Temporarily Convolutional Neural Networks. (arXiv:2310.17341v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17341">http://arxiv.org/abs/2310.17341</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17341]] De-novo Chemical Reaction Generation by Means of Temporarily Convolutional Neural Networks(http://arxiv.org/abs/2310.17341)</code></li>
+<li>Summary: <p>We present here a combination of two networks, Recurrent Neural Networks
+(RNN) and Temporarily Convolutional Neural Networks (TCN) in de novo reaction
+generation using the novel Reaction Smiles-like representation of reactions
+(CGRSmiles) with atom mapping directly incorporated. Recurrent Neural Networks
+are known for their autoregressive properties and are frequently used in
+language modelling with direct application to SMILES generation. The relatively
+novel TCNs possess similar properties with wide receptive field while obeying
+the causality required for natural language processing (NLP). The combination
+of both latent representations expressed through TCN and RNN results in an
+overall better performance compared to RNN alone. Additionally, it is shown
+that different fine-tuning protocols have a profound impact on generative scope
+of the model when applied on a dataset of interest via transfer learning.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h2>in-context</h2>
+<h3>Title: Learning Transfers over Several Programming Languages. (arXiv:2310.16937v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.16937">http://arxiv.org/abs/2310.16937</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.16937]] Learning Transfers over Several Programming Languages(http://arxiv.org/abs/2310.16937)</code></li>
+<li>Summary: <p>Large language models (LLMs) have recently become remarkably good at
+improving developer productivity for high-resource programming languages. These
+models use two kinds of data: large amounts of unlabeled code samples for
+pretraining and relatively smaller amounts of labeled code samples for
+fine-tuning or in-context learning. Unfortunately, many programming languages
+are low-resource, lacking labeled samples for most tasks and often even lacking
+unlabeled samples. Therefore, users of low-resource languages (e.g., legacy or
+new languages) miss out on the benefits of LLMs. Cross-lingual transfer
+learning uses data from a source language to improve model performance on a
+target language. It has been well-studied for natural languages, but has
+received little attention for programming languages. This paper reports
+extensive experiments on four tasks using a transformer-based LLM and 11 to 41
+programming languages to explore the following questions. First, how well
+cross-lingual transfer works for a given task across different language pairs.
+Second, given a task and target language, how to best choose a source language.
+Third, the characteristics of a language pair that are predictive of transfer
+performance, and fourth, how that depends on the given task.
+</p></li>
+</ul>
+
+<h3>Title: Transformers Learn Higher-Order Optimization Methods for In-Context Learning: A Study with Linear Models. (arXiv:2310.17086v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17086">http://arxiv.org/abs/2310.17086</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17086]] Transformers Learn Higher-Order Optimization Methods for In-Context Learning: A Study with Linear Models(http://arxiv.org/abs/2310.17086)</code></li>
+<li>Summary: <p>Transformers are remarkably good at in-context learning (ICL) -- learning
+from demonstrations without parameter updates -- but how they perform ICL
+remains a mystery. Recent work suggests that Transformers may learn in-context
+by internally running Gradient Descent, a first-order optimization method. In
+this paper, we instead demonstrate that Transformers learn to implement
+higher-order optimization methods to perform ICL. Focusing on in-context linear
+regression, we show that Transformers learn to implement an algorithm very
+similar to Iterative Newton's Method, a higher-order optimization method,
+rather than Gradient Descent. Empirically, we show that predictions from
+successive Transformer layers closely match different iterations of Newton's
+Method linearly, with each middle layer roughly computing 3 iterations. In
+contrast, exponentially more Gradient Descent steps are needed to match an
+additional Transformers layer; this suggests that Transformers have an
+comparable rate of convergence with high-order methods such as Iterative
+Newton, which are exponentially faster than Gradient Descent. We also show that
+Transformers can learn in-context on ill-conditioned data, a setting where
+Gradient Descent struggles but Iterative Newton succeeds. Finally, we show
+theoretical results which support our empirical findings and have a close
+correspondence with them: we prove that Transformers can implement $k$
+iterations of Newton's method with $\mathcal{O}(k)$ layers.
+</p></li>
+</ul>
+
+<h3>Title: How do Language Models Bind Entities in Context?. (arXiv:2310.17191v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17191">http://arxiv.org/abs/2310.17191</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17191]] How do Language Models Bind Entities in Context?(http://arxiv.org/abs/2310.17191)</code></li>
+<li>Summary: <p>To correctly use in-context information, language models (LMs) must bind
+entities to their attributes. For example, given a context describing a "green
+square" and a "blue circle", LMs must bind the shapes to their respective
+colors. We analyze LM representations and identify the binding ID mechanism: a
+general mechanism for solving the binding problem, which we observe in every
+sufficiently large model from the Pythia and LLaMA families. Using causal
+interventions, we show that LMs' internal activations represent binding
+information by attaching binding ID vectors to corresponding entities and
+attributes. We further show that binding ID vectors form a continuous subspace,
+in which distances between binding ID vectors reflect their discernability.
+Overall, our results uncover interpretable strategies in LMs for representing
+symbolic knowledge in-context, providing a step towards understanding general
+in-context reasoning in large-scale LMs.
+</p></li>
+</ul>
+
+<h3>Title: ACT-SQL: In-Context Learning for Text-to-SQL with Automatically-Generated Chain-of-Thought. (arXiv:2310.17342v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17342">http://arxiv.org/abs/2310.17342</a></li>
+<li>Code URL: https://github.com/x-lance/text2sql-gpt</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17342]] ACT-SQL: In-Context Learning for Text-to-SQL with Automatically-Generated Chain-of-Thought(http://arxiv.org/abs/2310.17342)</code></li>
+<li>Summary: <p>Recently Large Language Models (LLMs) have been proven to have strong
+abilities in various domains and tasks. We study the problem of prompt
+designing in the text-to-SQL task and attempt to improve the LLMs' reasoning
+ability when generating SQL queries. Besides the trivial few-shot in-context
+learning setting, we design our chain-of-thought (CoT) prompt with a similar
+method to schema linking. We provide a method named ACT-SQL to automatically
+generate auto-CoT exemplars and thus the whole process doesn't need manual
+labeling. Our approach is cost-saving since we only use the LLMs' API call once
+when generating one SQL query. Furthermore, we extend our in-context learning
+method to the multi-turn text-to-SQL task. The experiment results show that the
+LLMs' performance can benefit from our ACT-SQL approach. Our approach achieves
+SOTA performance on the Spider dev set among existing in-context learning
+approaches.
+</p></li>
+</ul>
+
+<h3>Title: Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time. (arXiv:2310.17157v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17157">http://arxiv.org/abs/2310.17157</a></li>
+<li>Code URL: https://github.com/fminference/dejavu</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17157]] Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time(http://arxiv.org/abs/2310.17157)</code></li>
+<li>Summary: <p>Large language models (LLMs) with hundreds of billions of parameters have
+sparked a new wave of exciting AI applications. However, they are
+computationally expensive at inference time. Sparsity is a natural approach to
+reduce this cost, but existing methods either require costly retraining, have
+to forgo LLM's in-context learning ability, or do not yield wall-clock time
+speedup on modern hardware. We hypothesize that contextual sparsity, which are
+small, input-dependent sets of attention heads and MLP parameters that yield
+approximately the same output as the dense model for a given input, can address
+these issues. We show that contextual sparsity exists, that it can be
+accurately predicted, and that we can exploit it to speed up LLM inference in
+wall-clock time without compromising LLM's quality or in-context learning
+ability. Based on these insights, we propose DejaVu, a system that uses a
+low-cost algorithm to predict contextual sparsity on the fly given inputs to
+each layer, along with an asynchronous and hardware-aware implementation that
+speeds up LLM inference. We validate that DejaVu can reduce the inference
+latency of OPT-175B by over 2X compared to the state-of-the-art
+FasterTransformer, and over 6X compared to the widely used Hugging Face
+implementation, without compromising model quality. The code is available at
+https://github.com/FMInference/DejaVu.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
