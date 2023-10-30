@@ -1,0 +1,616 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: ZeroNVS: Zero-Shot 360-Degree View Synthesis from a Single Real Image. (arXiv:2310.17994v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17994">http://arxiv.org/abs/2310.17994</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17994]] ZeroNVS: Zero-Shot 360-Degree View Synthesis from a Single Real Image(http://arxiv.org/abs/2310.17994)</code></li>
+<li>Summary: <p>We introduce a 3D-aware diffusion model, ZeroNVS, for single-image novel view
+synthesis for in-the-wild scenes. While existing methods are designed for
+single objects with masked backgrounds, we propose new techniques to address
+challenges introduced by in-the-wild multi-object scenes with complex
+backgrounds. Specifically, we train a generative prior on a mixture of data
+sources that capture object-centric, indoor, and outdoor scenes. To address
+issues from data mixture such as depth-scale ambiguity, we propose a novel
+camera conditioning parameterization and normalization scheme. Further, we
+observe that Score Distillation Sampling (SDS) tends to truncate the
+distribution of complex backgrounds during distillation of 360-degree scenes,
+and propose "SDS anchoring" to improve the diversity of synthesized novel
+views. Our model sets a new state-of-the-art result in LPIPS on the DTU dataset
+in the zero-shot setting, even outperforming methods specifically trained on
+DTU. We further adapt the challenging Mip-NeRF 360 dataset as a new benchmark
+for single-image novel view synthesis, and demonstrate strong performance in
+this setting. Our code and data are at <a href="http://kylesargent.github.io/zeronvs/">this http URL</a>
+</p></li>
+</ul>
+
+<h3>Title: Interacting Diffusion Processes for Event Sequence Forecasting. (arXiv:2310.17800v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17800">http://arxiv.org/abs/2310.17800</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17800]] Interacting Diffusion Processes for Event Sequence Forecasting(http://arxiv.org/abs/2310.17800)</code></li>
+<li>Summary: <p>Neural Temporal Point Processes (TPPs) have emerged as the primary framework
+for predicting sequences of events that occur at irregular time intervals, but
+their sequential nature can hamper performance for long-horizon forecasts. To
+address this, we introduce a novel approach that incorporates a diffusion
+generative model. The model facilitates sequence-to-sequence prediction,
+allowing multi-step predictions based on historical event sequences. In
+contrast to previous approaches, our model directly learns the joint
+probability distribution of types and inter-arrival times for multiple events.
+This allows us to fully leverage the high dimensional modeling capability of
+modern generative models. Our model is composed of two diffusion processes, one
+for the time intervals and one for the event types. These processes interact
+through their respective denoising functions, which can take as input
+intermediate representations from both processes, allowing the model to learn
+complex interactions. We demonstrate that our proposal outperforms
+state-of-the-art baselines for long-horizon forecasting of TPP.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: SmooSeg: Smoothness Prior for Unsupervised Semantic Segmentation. (arXiv:2310.17874v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17874">http://arxiv.org/abs/2310.17874</a></li>
+<li>Code URL: https://github.com/mc-lan/smooseg</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17874]] SmooSeg: Smoothness Prior for Unsupervised Semantic Segmentation(http://arxiv.org/abs/2310.17874)</code></li>
+<li>Summary: <p>Unsupervised semantic segmentation is a challenging task that segments images
+into semantic groups without manual annotation. Prior works have primarily
+focused on leveraging prior knowledge of semantic consistency or priori
+concepts from self-supervised learning methods, which often overlook the
+coherence property of image segments. In this paper, we demonstrate that the
+smoothness prior, asserting that close features in a metric space share the
+same semantics, can significantly simplify segmentation by casting unsupervised
+semantic segmentation as an energy minimization problem. Under this paradigm,
+we propose a novel approach called SmooSeg that harnesses self-supervised
+learning methods to model the closeness relationships among observations as
+smoothness signals. To effectively discover coherent semantic segments, we
+introduce a novel smoothness loss that promotes piecewise smoothness within
+segments while preserving discontinuities across different segments.
+Additionally, to further enhance segmentation quality, we design an asymmetric
+teacher-student style predictor that generates smoothly updated pseudo labels,
+facilitating an optimal fit between observations and labeling outputs. Thanks
+to the rich supervision cues of the smoothness prior, our SmooSeg significantly
+outperforms STEGO in terms of pixel accuracy on three datasets: COCOStuff
+(+14.9%), Cityscapes (+13.0%), and Potsdam-3 (+5.7%).
+</p></li>
+</ul>
+
+<h3>Title: FaultSeg Swin-UNETR: Transformer-Based Self-Supervised Pretraining Model for Fault Recognition. (arXiv:2310.17974v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17974">http://arxiv.org/abs/2310.17974</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17974]] FaultSeg Swin-UNETR: Transformer-Based Self-Supervised Pretraining Model for Fault Recognition(http://arxiv.org/abs/2310.17974)</code></li>
+<li>Summary: <p>This paper introduces an approach to enhance seismic fault recognition
+through self-supervised pretraining. Seismic fault interpretation holds great
+significance in the fields of geophysics and geology. However, conventional
+methods for seismic fault recognition encounter various issues, including
+dependence on data quality and quantity, as well as susceptibility to
+interpreter subjectivity. Currently, automated fault recognition methods
+proposed based on small synthetic datasets experience performance degradation
+when applied to actual seismic data. To address these challenges, we have
+introduced the concept of self-supervised learning, utilizing a substantial
+amount of relatively easily obtainable unlabeled seismic data for pretraining.
+Specifically, we have employed the Swin Transformer model as the core network
+and employed the SimMIM pretraining task to capture unique features related to
+discontinuities in seismic data. During the fine-tuning phase, inspired by edge
+detection techniques, we have also refined the structure of the Swin-UNETR
+model, enabling multiscale decoding and fusion for more effective fault
+detection. Experimental results demonstrate that our proposed method attains
+state-of-the-art performance on the Thebe dataset, as measured by the OIS and
+ODS metrics.
+</p></li>
+</ul>
+
+<h3>Title: A Self-Supervised Approach to Land Cover Segmentation. (arXiv:2310.18251v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18251">http://arxiv.org/abs/2310.18251</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18251]] A Self-Supervised Approach to Land Cover Segmentation(http://arxiv.org/abs/2310.18251)</code></li>
+<li>Summary: <p>Land use/land cover change (LULC) maps are integral resources in earth
+science and agricultural research. Due to the nature of such maps, the creation
+of LULC maps is often constrained by the time and human resources necessary to
+accurately annotate satellite imagery and remote sensing data. While computer
+vision models that perform semantic segmentation to create detailed labels from
+such data are not uncommon, litle research has been done on self-supervised and
+unsupervised approaches to labelling LULC maps without the use of ground-truth
+masks. Here, we demonstrate a self-supervised method of land cover segmentation
+that has no need for high-quality ground truth labels. The proposed deep
+learning employs a frozen pre-trained ViT backbone transferred from DINO in a
+STEGO architecture and is fine-tuned using a custom dataset consisting of very
+high resolution (VHR) sattelite imagery. After only 10 epochs of fine-tuning,
+an accuracy of roughly 52% was observed across 5 samples, signifying the
+feasibility of self-supervised models for the automated labelling of VHR LULC
+maps.
+</p></li>
+</ul>
+
+<h3>Title: Non-contrastive sentence representations via self-supervision. (arXiv:2310.17690v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17690">http://arxiv.org/abs/2310.17690</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17690]] Non-contrastive sentence representations via self-supervision(http://arxiv.org/abs/2310.17690)</code></li>
+<li>Summary: <p>Sample contrastive methods, typically referred to simply as contrastive are
+the foundation of most unsupervised methods to learn text and sentence
+embeddings. On the other hand, a different class of self-supervised loss
+functions and methods have been considered in the computer vision community and
+referred to as dimension contrastive. In this paper, we thoroughly compare this
+class of methods with the standard baseline for contrastive sentence
+embeddings, SimCSE. We find that self-supervised embeddings trained using
+dimension contrastive objectives can outperform SimCSE on downstream tasks
+without needing auxiliary loss functions.
+</p></li>
+</ul>
+
+<h3>Title: Unveiling the Potential of Probabilistic Embeddings in Self-Supervised Learning. (arXiv:2310.18080v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18080">http://arxiv.org/abs/2310.18080</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18080]] Unveiling the Potential of Probabilistic Embeddings in Self-Supervised Learning(http://arxiv.org/abs/2310.18080)</code></li>
+<li>Summary: <p>In recent years, self-supervised learning has played a pivotal role in
+advancing machine learning by allowing models to acquire meaningful
+representations from unlabeled data. An intriguing research avenue involves
+developing self-supervised models within an information-theoretic framework,
+but many studies often deviate from the stochasticity assumptions made when
+deriving their objectives. To gain deeper insights into this issue, we propose
+to explicitly model the representation with stochastic embeddings and assess
+their effects on performance, information compression and potential for
+out-of-distribution detection. From an information-theoretic perspective, we
+seek to investigate the impact of probabilistic modeling on the information
+bottleneck, shedding light on a trade-off between compression and preservation
+of information in both representation and loss space. Emphasizing the
+importance of distinguishing between these two spaces, we demonstrate how
+constraining one can affect the other, potentially leading to performance
+degradation. Moreover, our findings suggest that introducing an additional
+bottleneck in the loss space can significantly enhance the ability to detect
+out-of-distribution examples, only leveraging either representation features or
+the variance of their underlying distribution.
+</p></li>
+</ul>
+
+<h3>Title: Alignment and Outer Shell Isotropy for Hyperbolic Graph Contrastive Learning. (arXiv:2310.18209v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18209">http://arxiv.org/abs/2310.18209</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18209]] Alignment and Outer Shell Isotropy for Hyperbolic Graph Contrastive Learning(http://arxiv.org/abs/2310.18209)</code></li>
+<li>Summary: <p>Learning good self-supervised graph representations that are beneficial to
+downstream tasks is challenging. Among a variety of methods, contrastive
+learning enjoys competitive performance. The embeddings of contrastive learning
+are arranged on a hypersphere that enables the Cosine distance measurement in
+the Euclidean space. However, the underlying structure of many domains such as
+graphs exhibits highly non-Euclidean latent geometry. To this end, we propose a
+novel contrastive learning framework to learn high-quality graph embedding.
+Specifically, we design the alignment metric that effectively captures the
+hierarchical data-invariant information, as well as we propose a substitute of
+uniformity metric to prevent the so-called dimensional collapse. We show that
+in the hyperbolic space one has to address the leaf- and height-level
+uniformity which are related to properties of trees, whereas in the ambient
+space of the hyperbolic manifold, these notions translate into imposing an
+isotropic ring density towards boundaries of Poincar\'e ball. This ring density
+can be easily imposed by promoting the isotropic feature distribution on the
+tangent space of manifold. In the experiments, we demonstrate the efficacy of
+our proposed method across different hyperbolic graph embedding techniques in
+both supervised and self-supervised learning settings.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h2>generative</h2>
+<h3>Title: One Style is All you Need to Generate a Video. (arXiv:2310.17835v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17835">http://arxiv.org/abs/2310.17835</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17835]] One Style is All you Need to Generate a Video(http://arxiv.org/abs/2310.17835)</code></li>
+<li>Summary: <p>In this paper, we propose a style-based conditional video generative model.
+We introduce a novel temporal generator based on a set of learned sinusoidal
+bases. Our method learns dynamic representations of various actions that are
+independent of image content and can be transferred between different actors.
+Beyond the significant enhancement of video quality compared to prevalent
+methods, we demonstrate that the disentangled dynamic and content permit their
+independent manipulation, as well as temporal GAN-inversion to retrieve and
+transfer a video motion from one content or identity to another without further
+preprocessing such as landmark points.
+</p></li>
+</ul>
+
+<h3>Title: 3D-Aware Visual Question Answering about Parts, Poses and Occlusions. (arXiv:2310.17914v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17914">http://arxiv.org/abs/2310.17914</a></li>
+<li>Code URL: https://github.com/xingruiwang/3d-aware-vqa</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17914]] 3D-Aware Visual Question Answering about Parts, Poses and Occlusions(http://arxiv.org/abs/2310.17914)</code></li>
+<li>Summary: <p>Despite rapid progress in Visual question answering (VQA), existing datasets
+and models mainly focus on testing reasoning in 2D. However, it is important
+that VQA models also understand the 3D structure of visual scenes, for example
+to support tasks like navigation or manipulation. This includes an
+understanding of the 3D object pose, their parts and occlusions. In this work,
+we introduce the task of 3D-aware VQA, which focuses on challenging questions
+that require a compositional reasoning over the 3D structure of visual scenes.
+We address 3D-aware VQA from both the dataset and the model perspective. First,
+we introduce Super-CLEVR-3D, a compositional reasoning dataset that contains
+questions about object parts, their 3D poses, and occlusions. Second, we
+propose PO3D-VQA, a 3D-aware VQA model that marries two powerful ideas:
+probabilistic neural symbolic program execution for reasoning and deep neural
+networks with 3D generative representations of objects for robust visual
+recognition. Our experimental results show our model PO3D-VQA outperforms
+existing methods significantly, but we still observe a significant performance
+gap compared to 2D VQA benchmarks, indicating that 3D-aware VQA remains an
+important open research area.
+</p></li>
+</ul>
+
+<h3>Title: Generative AI Model for Artistic Style Transfer Using Convolutional Neural Networks. (arXiv:2310.18237v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18237">http://arxiv.org/abs/2310.18237</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18237]] Generative AI Model for Artistic Style Transfer Using Convolutional Neural Networks(http://arxiv.org/abs/2310.18237)</code></li>
+<li>Summary: <p>Artistic style transfer, a captivating application of generative artificial
+intelligence, involves fusing the content of one image with the artistic style
+of another to create unique visual compositions. This paper presents a
+comprehensive overview of a novel technique for style transfer using
+Convolutional Neural Networks (CNNs). By leveraging deep image representations
+learned by CNNs, we demonstrate how to separate and manipulate image content
+and style, enabling the synthesis of high-quality images that combine content
+and style in a harmonious manner. We describe the methodology, including
+content and style representations, loss computation, and optimization, and
+showcase experimental results highlighting the effectiveness and versatility of
+the approach across different styles and content
+</p></li>
+</ul>
+
+<h3>Title: PlantPlotGAN: A Physics-Informed Generative Adversarial Network for Plant Disease Prediction. (arXiv:2310.18268v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18268">http://arxiv.org/abs/2310.18268</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18268]] PlantPlotGAN: A Physics-Informed Generative Adversarial Network for Plant Disease Prediction(http://arxiv.org/abs/2310.18268)</code></li>
+<li>Summary: <p>Monitoring plantations is crucial for crop management and producing healthy
+harvests. Unmanned Aerial Vehicles (UAVs) have been used to collect
+multispectral images that aid in this monitoring. However, given the number of
+hectares to be monitored and the limitations of flight, plant disease signals
+become visually clear only in the later stages of plant growth and only if the
+disease has spread throughout a significant portion of the plantation. This
+limited amount of relevant data hampers the prediction models, as the
+algorithms struggle to generalize patterns with unbalanced or unrealistic
+augmented datasets effectively. To address this issue, we propose PlantPlotGAN,
+a physics-informed generative model capable of creating synthetic multispectral
+plot images with realistic vegetation indices. These indices served as a proxy
+for disease detection and were used to evaluate if our model could help
+increase the accuracy of prediction models. The results demonstrate that the
+synthetic imagery generated from PlantPlotGAN outperforms state-of-the-art
+methods regarding the Fr\'echet inception distance. Moreover, prediction models
+achieve higher accuracy metrics when trained with synthetic and original
+imagery for earlier plant disease detection compared to the training processes
+based solely on real imagery.
+</p></li>
+</ul>
+
+<h3>Title: FOUND: Foot Optimization with Uncertain Normals for Surface Deformation Using Synthetic Data. (arXiv:2310.18279v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18279">http://arxiv.org/abs/2310.18279</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18279]] FOUND: Foot Optimization with Uncertain Normals for Surface Deformation Using Synthetic Data(http://arxiv.org/abs/2310.18279)</code></li>
+<li>Summary: <p>Surface reconstruction from multi-view images is a challenging task, with
+solutions often requiring a large number of sampled images with high overlap.
+We seek to develop a method for few-view reconstruction, for the case of the
+human foot. To solve this task, we must extract rich geometric cues from RGB
+images, before carefully fusing them into a final 3D object. Our FOUND approach
+tackles this, with 4 main contributions: (i) SynFoot, a synthetic dataset of
+50,000 photorealistic foot images, paired with ground truth surface normals and
+keypoints; (ii) an uncertainty-aware surface normal predictor trained on our
+synthetic dataset; (iii) an optimization scheme for fitting a generative foot
+model to a series of images; and (iv) a benchmark dataset of calibrated images
+and high resolution ground truth geometry. We show that our normal predictor
+outperforms all off-the-shelf equivalents significantly on real images, and our
+optimization scheme outperforms state-of-the-art photogrammetry pipelines,
+especially for a few-view setting. We release our synthetic dataset and
+baseline 3D scans to the research community.
+</p></li>
+</ul>
+
+<h3>Title: A Framework for Automated Measurement of Responsible AI Harms in Generative AI Applications. (arXiv:2310.17750v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17750">http://arxiv.org/abs/2310.17750</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17750]] A Framework for Automated Measurement of Responsible AI Harms in Generative AI Applications(http://arxiv.org/abs/2310.17750)</code></li>
+<li>Summary: <p>We present a framework for the automated measurement of responsible AI (RAI)
+metrics for large language models (LLMs) and associated products and services.
+Our framework for automatically measuring harms from LLMs builds on existing
+technical and sociotechnical expertise and leverages the capabilities of
+state-of-the-art LLMs, such as GPT-4. We use this framework to run through
+several case studies investigating how different LLMs may violate a range of
+RAI-related principles. The framework may be employed alongside domain-specific
+sociotechnical expertise to create measurements for new harm areas in the
+future. By implementing this framework, we aim to enable more advanced harm
+measurement efforts and further the responsible use of LLMs.
+</p></li>
+</ul>
+
+<h3>Title: DUMA: a Dual-Mind Conversational Agent with Fast and Slow Thinking. (arXiv:2310.18075v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18075">http://arxiv.org/abs/2310.18075</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18075]] DUMA: a Dual-Mind Conversational Agent with Fast and Slow Thinking(http://arxiv.org/abs/2310.18075)</code></li>
+<li>Summary: <p>Inspired by the dual-process theory of human cognition, we introduce DUMA, a
+novel conversational agent framework that embodies a dual-mind mechanism
+through the utilization of two generative Large Language Models (LLMs)
+dedicated to fast and slow thinking respectively. The fast thinking model
+serves as the primary interface for external interactions and initial response
+generation, evaluating the necessity for engaging the slow thinking model based
+on the complexity of the complete response. When invoked, the slow thinking
+model takes over the conversation, engaging in meticulous planning, reasoning,
+and tool utilization to provide a well-analyzed response. This dual-mind
+configuration allows for a seamless transition between intuitive responses and
+deliberate problem-solving processes based on the situation. We have
+constructed a conversational agent to handle online inquiries in the real
+estate industry. The experiment proves that our method balances effectiveness
+and efficiency, and has a significant improvement compared to the baseline.
+</p></li>
+</ul>
+
+<h3>Title: Personas as a Way to Model Truthfulness in Language Models. (arXiv:2310.18168v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18168">http://arxiv.org/abs/2310.18168</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18168]] Personas as a Way to Model Truthfulness in Language Models(http://arxiv.org/abs/2310.18168)</code></li>
+<li>Summary: <p>Large Language Models are trained on vast amounts of text from the internet,
+which contains both factual and misleading information about the world. Can
+language models discern truth from falsehood in this contradicting data?
+Expanding on the view that LLMs can model different agents producing the
+corpora, we hypothesize that they can cluster truthful text by modeling a
+truthful persona: a group of agents that are likely to produce truthful text
+and share similar features. For example, trustworthy sources like Wikipedia and
+Science usually use formal writing styles and make consistent claims. By
+modeling this persona, LLMs can generalize truthfulness beyond the specific
+contexts in which each agent generated the training text. For example, the
+model can infer that the agent "Wikipedia" will behave truthfully on topics
+that were only generated by "Science" because they share a persona. We first
+show evidence for the persona hypothesis via two observations: (1) we can probe
+whether a model's answer will be truthful before it is generated; (2)
+finetuning a model on a set of facts improves its truthfulness on unseen
+topics. Next, using arithmetics as a synthetic environment, we show that
+language models can separate true and false statements, and generalize
+truthfulness across agents; but only if agents in the training data share a
+truthful generative process that enables the creation of a truthful persona.
+Overall, our findings suggest that models can exploit hierarchical structures
+in the data to learn abstract concepts like truthfulness.
+</p></li>
+</ul>
+
+<h3>Title: Lost in Translation, Found in Spans: Identifying Claims in Multilingual Social Media. (arXiv:2310.18205v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18205">http://arxiv.org/abs/2310.18205</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18205]] Lost in Translation, Found in Spans: Identifying Claims in Multilingual Social Media(http://arxiv.org/abs/2310.18205)</code></li>
+<li>Summary: <p>Claim span identification (CSI) is an important step in fact-checking
+pipelines, aiming to identify text segments that contain a checkworthy claim or
+assertion in a social media post. Despite its importance to journalists and
+human fact-checkers, it remains a severely understudied problem, and the scarce
+research on this topic so far has only focused on English. Here we aim to
+bridge this gap by creating a novel dataset, X-CLAIM, consisting of 7K
+real-world claims collected from numerous social media platforms in five Indian
+languages and English. We report strong baselines with state-of-the-art
+encoder-only language models (e.g., XLM-R) and we demonstrate the benefits of
+training on multiple languages over alternative cross-lingual transfer methods
+such as zero-shot transfer, or training on translated data, from a
+high-resource language such as English. We evaluate generative large language
+models from the GPT series using prompting methods on the X-CLAIM dataset and
+we find that they underperform the smaller encoder-only language models for
+low-resource languages.
+</p></li>
+</ul>
+
+<h3>Title: Spatio-Temporal Meta Contrastive Learning. (arXiv:2310.17678v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17678">http://arxiv.org/abs/2310.17678</a></li>
+<li>Code URL: https://github.com/hkuds/cl4st</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17678]] Spatio-Temporal Meta Contrastive Learning(http://arxiv.org/abs/2310.17678)</code></li>
+<li>Summary: <p>Spatio-temporal prediction is crucial in numerous real-world applications,
+including traffic forecasting and crime prediction, which aim to improve public
+transportation and safety management. Many state-of-the-art models demonstrate
+the strong capability of spatio-temporal graph neural networks (STGNN) to
+capture complex spatio-temporal correlations. However, despite their
+effectiveness, existing approaches do not adequately address several key
+challenges. Data quality issues, such as data scarcity and sparsity, lead to
+data noise and a lack of supervised signals, which significantly limit the
+performance of STGNN. Although recent STGNN models with contrastive learning
+aim to address these challenges, most of them use pre-defined augmentation
+strategies that heavily depend on manual design and cannot be customized for
+different Spatio-Temporal Graph (STG) scenarios. To tackle these challenges, we
+propose a new spatio-temporal contrastive learning (CL4ST) framework to encode
+robust and generalizable STG representations via the STG augmentation paradigm.
+Specifically, we design the meta view generator to automatically construct node
+and edge augmentation views for each disentangled spatial and temporal graph in
+a data-driven manner. The meta view generator employs meta networks with
+parameterized generative model to customize the augmentations for each input.
+This personalizes the augmentation strategies for every STG and endows the
+learning framework with spatio-temporal-aware information. Additionally, we
+integrate a unified spatio-temporal graph attention network with the proposed
+meta view generator and two-branch graph contrastive learning paradigms.
+Extensive experiments demonstrate that our CL4ST significantly improves
+performance over various state-of-the-art baselines in traffic and crime
+prediction.
+</p></li>
+</ul>
+
+<h3>Title: Counterfactual Fairness for Predictions using Generative Adversarial Networks. (arXiv:2310.17687v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17687">http://arxiv.org/abs/2310.17687</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17687]] Counterfactual Fairness for Predictions using Generative Adversarial Networks(http://arxiv.org/abs/2310.17687)</code></li>
+<li>Summary: <p>Fairness in predictions is of direct importance in practice due to legal,
+ethical, and societal reasons. It is often achieved through counterfactual
+fairness, which ensures that the prediction for an individual is the same as
+that in a counterfactual world under a different sensitive attribute. However,
+achieving counterfactual fairness is challenging as counterfactuals are
+unobservable. In this paper, we develop a novel deep neural network called
+Generative Counterfactual Fairness Network (GCFN) for making predictions under
+counterfactual fairness. Specifically, we leverage a tailored generative
+adversarial network to directly learn the counterfactual distribution of the
+descendants of the sensitive attribute, which we then use to enforce fair
+predictions through a novel counterfactual mediator regularization. If the
+counterfactual distribution is learned sufficiently well, our method is
+mathematically guaranteed to ensure the notion of counterfactual fairness.
+Thereby, our GCFN addresses key shortcomings of existing baselines that are
+based on inferring latent variables, yet which (a) are potentially correlated
+with the sensitive attributes and thus lead to bias, and (b) have weak
+capability in constructing latent representations and thus low prediction
+performance. Across various experiments, our method achieves state-of-the-art
+performance. Using a real-world case study from recidivism prediction, we
+further demonstrate that our method makes meaningful predictions in practice.
+</p></li>
+</ul>
+
+<h3>Title: Sample Complexity Bounds for Score-Matching: Causal Discovery and Generative Modeling. (arXiv:2310.18123v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18123">http://arxiv.org/abs/2310.18123</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18123]] Sample Complexity Bounds for Score-Matching: Causal Discovery and Generative Modeling(http://arxiv.org/abs/2310.18123)</code></li>
+<li>Summary: <p>This paper provides statistical sample complexity bounds for score-matching
+and its applications in causal discovery. We demonstrate that accurate
+estimation of the score function is achievable by training a standard deep ReLU
+neural network using stochastic gradient descent. We establish bounds on the
+error rate of recovering causal relationships using the score-matching-based
+causal discovery method of Rolland et al. [2022], assuming a sufficiently good
+estimation of the score function. Finally, we analyze the upper bound of
+score-matching estimation within the score-based generative modeling, which has
+been applied for causal discovery but is also of independent interest within
+the domain of generative models.
+</p></li>
+</ul>
+
+<h3>Title: Addressing GAN Training Instabilities via Tunable Classification Losses. (arXiv:2310.18291v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18291">http://arxiv.org/abs/2310.18291</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18291]] Addressing GAN Training Instabilities via Tunable Classification Losses(http://arxiv.org/abs/2310.18291)</code></li>
+<li>Summary: <p>Generative adversarial networks (GANs), modeled as a zero-sum game between a
+generator (G) and a discriminator (D), allow generating synthetic data with
+formal guarantees. Noting that D is a classifier, we begin by reformulating the
+GAN value function using class probability estimation (CPE) losses. We prove a
+two-way correspondence between CPE loss GANs and $f$-GANs which minimize
+$f$-divergences. We also show that all symmetric $f$-divergences are equivalent
+in convergence. In the finite sample and model capacity setting, we define and
+obtain bounds on estimation and generalization errors. We specialize these
+results to $\alpha$-GANs, defined using $\alpha$-loss, a tunable CPE loss
+family parametrized by $\alpha\in(0,\infty]$. We next introduce a class of
+dual-objective GANs to address training instabilities of GANs by modeling each
+player's objective using $\alpha$-loss to obtain $(\alpha_D,\alpha_G)$-GANs. We
+show that the resulting non-zero sum game simplifies to minimizing an
+$f$-divergence under appropriate conditions on $(\alpha_D,\alpha_G)$.
+Generalizing this dual-objective formulation using CPE losses, we define and
+obtain upper bounds on an appropriately defined estimation error. Finally, we
+highlight the value of tuning $(\alpha_D,\alpha_G)$ in alleviating training
+instabilities for the synthetic 2D Gaussian mixture ring as well as the large
+publicly available Celeb-A and LSUN Classroom image datasets.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Understanding Parameter Saliency via Extreme Value Theory. (arXiv:2310.17951v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17951">http://arxiv.org/abs/2310.17951</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17951]] Understanding Parameter Saliency via Extreme Value Theory(http://arxiv.org/abs/2310.17951)</code></li>
+<li>Summary: <p>Deep neural networks are being increasingly implemented throughout society in
+recent years. It is useful to identify which parameters trigger
+misclassification in diagnosing undesirable model behaviors. The concept of
+parameter saliency is proposed and used to diagnose convolutional neural
+networks (CNNs) by ranking convolution filters that may have caused
+misclassification on the basis of parameter saliency. It is also shown that
+fine-tuning the top ranking salient filters has efficiently corrected
+misidentification on ImageNet. However, there is still a knowledge gap in terms
+of understanding why parameter saliency ranking can find the filters inducing
+misidentification. In this work, we attempt to bridge the gap by analyzing
+parameter saliency ranking from a statistical viewpoint, namely, extreme value
+theory. We first show that the existing work implicitly assumes that the
+gradient norm computed for each filter follows a normal distribution. Then, we
+clarify the relationship between parameter saliency and the score based on the
+peaks-over-threshold (POT) method, which is often used to model extreme values.
+Finally, we reformulate parameter saliency in terms of the POT method, where
+this reformulation is regarded as statistical anomaly detection and does not
+require the implicit assumptions of the existing parameter-saliency
+formulation. Our experimental results demonstrate that our reformulation can
+detect malicious filters as well. Furthermore, we show that the existing
+parameter saliency method exhibits a bias against the depth of layers in deep
+neural networks. In particular, this bias has the potential to inhibit the
+discovery of filters that cause misidentification in situations where domain
+shift occurs. In contrast, parameter saliency based on POT shows less of this
+bias.
+</p></li>
+</ul>
+
+<h3>Title: Making the End-User a Priority in Benchmarking: OrionBench for Unsupervised Time Series Anomaly Detection. (arXiv:2310.17748v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.17748">http://arxiv.org/abs/2310.17748</a></li>
+<li>Code URL: https://github.com/sintel-dev/orion</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.17748]] Making the End-User a Priority in Benchmarking: OrionBench for Unsupervised Time Series Anomaly Detection(http://arxiv.org/abs/2310.17748)</code></li>
+<li>Summary: <p>Time series anomaly detection is a prevalent problem in many application
+domains such as patient monitoring in healthcare, forecasting in finance, or
+predictive maintenance in energy. This has led to the emergence of a plethora
+of anomaly detection methods, including more recently, deep learning based
+methods. Although several benchmarks have been proposed to compare newly
+developed models, they usually rely on one-time execution over a limited set of
+datasets and the comparison is restricted to a few models. We propose
+OrionBench -- a user centric continuously maintained benchmark for unsupervised
+time series anomaly detection. The framework provides universal abstractions to
+represent models, extensibility to add new pipelines and datasets,
+hyperparameter standardization, pipeline verification, and frequent releases
+with published benchmarks. We demonstrate the usage of OrionBench, and the
+progression of pipelines across 15 releases published over the course of three
+years. Moreover, we walk through two real scenarios we experienced with
+OrionBench that highlight the importance of continuous benchmarks in
+unsupervised time series anomaly detection.
+</p></li>
+</ul>
+
+<h3>Title: Adversarial Anomaly Detection using Gaussian Priors and Nonlinear Anomaly Scores. (arXiv:2310.18091v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18091">http://arxiv.org/abs/2310.18091</a></li>
+<li>Code URL: https://github.com/emundo/ecgan</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18091]] Adversarial Anomaly Detection using Gaussian Priors and Nonlinear Anomaly Scores(http://arxiv.org/abs/2310.18091)</code></li>
+<li>Summary: <p>Anomaly detection in imbalanced datasets is a frequent and crucial problem,
+especially in the medical domain where retrieving and labeling irregularities
+is often expensive. By combining the generative stability of a
+$\beta$-variational autoencoder (VAE) with the discriminative strengths of
+generative adversarial networks (GANs), we propose a novel model,
+$\beta$-VAEGAN. We investigate methods for composing anomaly scores based on
+the discriminative and reconstructive capabilities of our model. Existing work
+focuses on linear combinations of these components to determine if data is
+anomalous. We advance existing work by training a kernelized support vector
+machine (SVM) on the respective error components to also consider nonlinear
+relationships. This improves anomaly detection performance, while allowing
+faster optimization. Lastly, we use the deviations from the Gaussian prior of
+$\beta$-VAEGAN to form a novel anomaly score component. In comparison to
+state-of-the-art work, we improve the $F_1$ score during anomaly detection from
+0.85 to 0.92 on the widely used MITBIH Arrhythmia Database.
+</p></li>
+</ul>
+
+<h3>Title: MIM-GAN-based Anomaly Detection for Multivariate Time Series Data. (arXiv:2310.18257v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2310.18257">http://arxiv.org/abs/2310.18257</a></li>
+<li>Code URL: https://github.com/explorerlu1024/mimad-gan</li>
+<li>Copy Paste: <code><input type="checkbox">[[2310.18257]] MIM-GAN-based Anomaly Detection for Multivariate Time Series Data(http://arxiv.org/abs/2310.18257)</code></li>
+<li>Summary: <p>The loss function of Generative adversarial network(GAN) is an important
+factor that affects the quality and diversity of the generated samples for
+anomaly detection. In this paper, we propose an unsupervised multiple time
+series anomaly detection algorithm based on the GAN with message importance
+measure(MIM-GAN). In particular, the time series data is divided into
+subsequences using a sliding window. Then a generator and a discriminator
+designed based on the Long Short-Term Memory (LSTM) are employed to capture the
+temporal correlations of the time series data. To avoid the local optimal
+solution of loss function and the model collapse, we introduce an exponential
+information measure into the loss function of GAN. Additionally, a discriminant
+reconstruction score consisting on discrimination and reconstruction loss is
+taken into account. The global optimal solution for the loss function is
+derived and the model collapse is proved to be avoided in our proposed
+MIM-GAN-based anomaly detection algorithm. Experimental results show that the
+proposed MIM-GAN-based anomaly detection algorithm has superior performance in
+terms of precision, recall, and F1 score.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
