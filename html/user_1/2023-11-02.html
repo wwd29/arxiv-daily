@@ -1,0 +1,701 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Diversity and Diffusion: Observations on Synthetic Image Distributions with Stable Diffusion. (arXiv:2311.00056v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00056">http://arxiv.org/abs/2311.00056</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00056]] Diversity and Diffusion: Observations on Synthetic Image Distributions with Stable Diffusion(http://arxiv.org/abs/2311.00056)</code></li>
+<li>Summary: <p>Recent progress in text-to-image (TTI) systems, such as StableDiffusion,
+Imagen, and DALL-E 2, have made it possible to create realistic images with
+simple text prompts. It is tempting to use these systems to eliminate the
+manual task of obtaining natural images for training a new machine learning
+classifier. However, in all of the experiments performed to date, classifiers
+trained solely with synthetic images perform poorly at inference, despite the
+images used for training appearing realistic. Examining this apparent
+incongruity in detail gives insight into the limitations of the underlying
+image generation processes. Through the lens of diversity in image creation
+vs.accuracy of what is created, we dissect the differences in semantic
+mismatches in what is modeled in synthetic vs. natural images. This will
+elucidate the roles of the image-languag emodel, CLIP, and the image generation
+model, diffusion. We find four issues that limit the usefulness of TTI systems
+for this task: ambiguity, adherence to prompt, lack of diversity, and inability
+to represent the underlying concept. We further present surprising insights
+into the geometry of CLIP embeddings.
+</p></li>
+</ul>
+
+<h3>Title: Score Normalization for a Faster Diffusion Exponential Integrator Sampler. (arXiv:2311.00157v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00157">http://arxiv.org/abs/2311.00157</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00157]] Score Normalization for a Faster Diffusion Exponential Integrator Sampler(http://arxiv.org/abs/2311.00157)</code></li>
+<li>Summary: <p>Recently, zhang et al have proposed the Diffusion Exponential Integrator
+Sampler (DEIS) for fast generation of samples from Diffusion Models. It
+leverages the semi-linear nature of the probability flow ordinary differential
+equation (ODE) in order to greatly reduce integration error and improve
+generation quality at low numbers of function evaluations (NFEs). Key to this
+approach is the score function reparameterisation, which reduces the
+integration error incurred from using a fixed score function estimate over each
+integration step. The original authors use the default parameterisation used by
+models trained for noise prediction -- multiply the score by the standard
+deviation of the conditional forward noising distribution. We find that
+although the mean absolute value of this score parameterisation is close to
+constant for a large portion of the reverse sampling process, it changes
+rapidly at the end of sampling. As a simple fix, we propose to instead
+reparameterise the score (at inference) by dividing it by the average absolute
+value of previous score estimates at that time step collected from offline high
+NFE generations. We find that our score normalisation (DEIS-SN) consistently
+improves FID compared to vanilla DEIS, showing an FID improvement from 6.44 to
+5.57 at 10 NFEs for our CIFAR-10 experiments. Our code is available at
+https://github.com/mtkresearch/Diffusion-DEIS-SN.
+</p></li>
+</ul>
+
+<h3>Title: Space Narrative: Generating Images and 3D Scenes of Chinese Garden from Text using Deep Learning. (arXiv:2311.00339v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00339">http://arxiv.org/abs/2311.00339</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00339]] Space Narrative: Generating Images and 3D Scenes of Chinese Garden from Text using Deep Learning(http://arxiv.org/abs/2311.00339)</code></li>
+<li>Summary: <p>The consistent mapping from poems to paintings is essential for the research
+and restoration of traditional Chinese gardens. But the lack of firsthand
+ma-terial is a great challenge to the reconstruction work. In this paper, we
+pro-pose a method to generate garden paintings based on text descriptions using
+deep learning method. Our image-text pair dataset consists of more than one
+thousand Ming Dynasty Garden paintings and their inscriptions and post-scripts.
+A latent text-to-image diffusion model learns the mapping from de-scriptive
+texts to garden paintings of the Ming Dynasty, and then the text description of
+Jichang Garden guides the model to generate new garden paintings. The cosine
+similarity between the guide text and the generated image is the evaluation
+criterion for the generated images. Our dataset is used to fine-tune the
+pre-trained diffusion model using Low-Rank Adapta-tion of Large Language Models
+(LoRA). We also transformed the generated images into a panorama and created a
+free-roam scene in Unity 3D. Our post-trained model is capable of generating
+garden images in the style of Ming Dynasty landscape paintings based on textual
+descriptions. The gener-ated images are compatible with three-dimensional
+presentation in Unity 3D.
+</p></li>
+</ul>
+
+<h3>Title: LatentWarp: Consistent Diffusion Latents for Zero-Shot Video-to-Video Translation. (arXiv:2311.00353v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00353">http://arxiv.org/abs/2311.00353</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00353]] LatentWarp: Consistent Diffusion Latents for Zero-Shot Video-to-Video Translation(http://arxiv.org/abs/2311.00353)</code></li>
+<li>Summary: <p>Leveraging the generative ability of image diffusion models offers great
+potential for zero-shot video-to-video translation. The key lies in how to
+maintain temporal consistency across generated video frames by image diffusion
+models. Previous methods typically adopt cross-frame attention, \emph{i.e.,}
+sharing the \textit{key} and \textit{value} tokens across attentions of
+different frames, to encourage the temporal consistency. However, in those
+works, temporal inconsistency issue may not be thoroughly solved, rendering the
+fidelity of generated videos limited.%The current state of the art cross-frame
+attention method aims at maintaining fine-grained visual details across frames,
+but it is still challenged by the temporal coherence problem. In this paper, we
+find the bottleneck lies in the unconstrained query tokens and propose a new
+zero-shot video-to-video translation framework, named \textit{LatentWarp}. Our
+approach is simple: to constrain the query tokens to be temporally consistent,
+we further incorporate a warping operation in the latent space to constrain the
+query tokens. Specifically, based on the optical flow obtained from the
+original video, we warp the generated latent features of last frame to align
+with the current frame during the denoising process. As a result, the
+corresponding regions across the adjacent frames can share closely-related
+query tokens and attention outputs, which can further improve latent-level
+consistency to enhance visual temporal coherence of generated videos. Extensive
+experiment results demonstrate the superiority of \textit{LatentWarp} in
+achieving video-to-video translation with temporal coherence.
+</p></li>
+</ul>
+
+<h3>Title: Dual Conditioned Diffusion Models for Out-Of-Distribution Detection: Application to Fetal Ultrasound Videos. (arXiv:2311.00469v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00469">http://arxiv.org/abs/2311.00469</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00469]] Dual Conditioned Diffusion Models for Out-Of-Distribution Detection: Application to Fetal Ultrasound Videos(http://arxiv.org/abs/2311.00469)</code></li>
+<li>Summary: <p>Out-of-distribution (OOD) detection is essential to improve the reliability
+of machine learning models by detecting samples that do not belong to the
+training distribution. Detecting OOD samples effectively in certain tasks can
+pose a challenge because of the substantial heterogeneity within the
+in-distribution (ID), and the high structural similarity between ID and OOD
+classes. For instance, when detecting heart views in fetal ultrasound videos
+there is a high structural similarity between the heart and other anatomies
+such as the abdomen, and large in-distribution variance as a heart has 5
+distinct views and structural variations within each view. To detect OOD
+samples in this context, the resulting model should generalise to the
+intra-anatomy variations while rejecting similar OOD samples. In this paper, we
+introduce dual-conditioned diffusion models (DCDM) where we condition the model
+on in-distribution class information and latent features of the input image for
+reconstruction-based OOD detection. This constrains the generative manifold of
+the model to generate images structurally and semantically similar to those
+within the in-distribution. The proposed model outperforms reference methods
+with a 12% improvement in accuracy, 22% higher precision, and an 8% better F1
+score.
+</p></li>
+</ul>
+
+<h3>Title: Intriguing Properties of Data Attribution on Diffusion Models. (arXiv:2311.00500v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00500">http://arxiv.org/abs/2311.00500</a></li>
+<li>Code URL: https://github.com/sail-sg/d-trak</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00500]] Intriguing Properties of Data Attribution on Diffusion Models(http://arxiv.org/abs/2311.00500)</code></li>
+<li>Summary: <p>Data attribution seeks to trace model outputs back to training data. With the
+recent development of diffusion models, data attribution has become a desired
+module to properly assign valuations for high-quality or copyrighted training
+samples, ensuring that data contributors are fairly compensated or credited.
+Several theoretically motivated methods have been proposed to implement data
+attribution, in an effort to improve the trade-off between computational
+scalability and effectiveness. In this work, we conduct extensive experiments
+and ablation studies on attributing diffusion models, specifically focusing on
+DDPMs trained on CIFAR-10 and CelebA, as well as a Stable Diffusion model
+LoRA-finetuned on ArtBench. Intriguingly, we report counter-intuitive
+observations that theoretically unjustified design choices for attribution
+empirically outperform previous baselines by a large margin, in terms of both
+linear datamodeling score and counterfactual evaluation. Our work presents a
+significantly more efficient approach for attributing diffusion models, while
+the unexpected findings suggest that at least in non-convex settings,
+constructions guided by theoretical assumptions may lead to inferior
+attribution performance. The code is available at
+https://github.com/sail-sg/D-TRAK.
+</p></li>
+</ul>
+
+<h3>Title: De-Diffusion Makes Text a Strong Cross-Modal Interface. (arXiv:2311.00618v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00618">http://arxiv.org/abs/2311.00618</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00618]] De-Diffusion Makes Text a Strong Cross-Modal Interface(http://arxiv.org/abs/2311.00618)</code></li>
+<li>Summary: <p>We demonstrate text as a strong cross-modal interface. Rather than relying on
+deep embeddings to connect image and language as the interface representation,
+our approach represents an image as text, from which we enjoy the
+interpretability and flexibility inherent to natural language. We employ an
+autoencoder that uses a pre-trained text-to-image diffusion model for decoding.
+The encoder is trained to transform an input image into text, which is then fed
+into the fixed text-to-image diffusion decoder to reconstruct the original
+input -- a process we term De-Diffusion. Experiments validate both the
+precision and comprehensiveness of De-Diffusion text representing images, such
+that it can be readily ingested by off-the-shelf text-to-image tools and LLMs
+for diverse multi-modal tasks. For example, a single De-Diffusion model can
+generalize to provide transferable prompts for different text-to-image tools,
+and also achieves a new state of the art on open-ended vision-language tasks by
+simply prompting large language models with few-shot examples.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion models for probabilistic programming. (arXiv:2311.00474v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00474">http://arxiv.org/abs/2311.00474</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00474]] Diffusion models for probabilistic programming(http://arxiv.org/abs/2311.00474)</code></li>
+<li>Summary: <p>We propose Diffusion Model Variational Inference (DMVI), a novel method for
+automated approximate inference in probabilistic programming languages (PPLs).
+DMVI utilizes diffusion models as variational approximations to the true
+posterior distribution by deriving a novel bound to the marginal likelihood
+objective used in Bayesian modelling. DMVI is easy to implement, allows
+hassle-free inference in PPLs without the drawbacks of, e.g., variational
+inference using normalizing flows, and does not make any constraints on the
+underlying neural network model. We evaluate DMVI on a set of common Bayesian
+models and show that its posterior inferences are in general more accurate than
+those of contemporary methods used in PPLs while having a similar computational
+cost and requiring less manual tuning.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: SC-MIL: Sparsely Coded Multiple Instance Learning for Whole Slide Image Classification. (arXiv:2311.00048v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00048">http://arxiv.org/abs/2311.00048</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00048]] SC-MIL: Sparsely Coded Multiple Instance Learning for Whole Slide Image Classification(http://arxiv.org/abs/2311.00048)</code></li>
+<li>Summary: <p>Multiple Instance Learning (MIL) has been widely used in weakly supervised
+whole slide image (WSI) classification. Typical MIL methods include a feature
+embedding part that embeds the instances into features via a pre-trained
+feature extractor and the MIL aggregator that combines instance embeddings into
+predictions. The current focus has been directed toward improving these parts
+by refining the feature embeddings through self-supervised pre-training and
+modeling the correlations between instances separately. In this paper, we
+proposed a sparsely coded MIL (SC-MIL) that addresses those two aspects at the
+same time by leveraging sparse dictionary learning. The sparse dictionary
+learning captures the similarities of instances by expressing them as a sparse
+linear combination of atoms in an over-complete dictionary. In addition,
+imposing sparsity help enhance the instance feature embeddings by suppressing
+irrelevant instances while retaining the most relevant ones. To make the
+conventional sparse coding algorithm compatible with deep learning, we unrolled
+it into an SC module by leveraging deep unrolling. The proposed SC module can
+be incorporated into any existing MIL framework in a plug-and-play manner with
+an acceptable computation cost. The experimental results on multiple datasets
+demonstrated that the proposed SC module could substantially boost the
+performance of state-of-the-art MIL methods. The codes are available at
+\href{https://github.com/sotiraslab/SCMIL.git}{https://github.com/sotiraslab/SCMIL.git}.
+</p></li>
+</ul>
+
+<h3>Title: Rethinking Samples Selection for Contrastive Learning: Mining of Potential Samples. (arXiv:2311.00358v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00358">http://arxiv.org/abs/2311.00358</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00358]] Rethinking Samples Selection for Contrastive Learning: Mining of Potential Samples(http://arxiv.org/abs/2311.00358)</code></li>
+<li>Summary: <p>Contrastive learning predicts whether two images belong to the same category
+by training a model to make their feature representations as close or as far
+away as possible. In this paper, we rethink how to mine samples in contrastive
+learning, unlike other methods, our approach is more comprehensive, taking into
+account both positive and negative samples, and mining potential samples from
+two aspects: First, for positive samples, we consider both the augmented sample
+views obtained by data augmentation and the mined sample views through data
+mining. Then, we weight and combine them using both soft and hard weighting
+strategies. Second, considering the existence of uninformative negative samples
+and false negative samples in the negative samples, we analyze the negative
+samples from the gradient perspective and finally mine negative samples that
+are neither too hard nor too easy as potential negative samples, i.e., those
+negative samples that are close to positive samples. The experiments show the
+obvious advantages of our method compared with some traditional self-supervised
+methods. Our method achieves 88.57%, 61.10%, and 36.69% top-1 accuracy on
+CIFAR10, CIFAR100, and TinyImagenet, respectively.
+</p></li>
+</ul>
+
+<h3>Title: MNN: Mixed Nearest-Neighbors for Self-Supervised Learning. (arXiv:2311.00562v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00562">http://arxiv.org/abs/2311.00562</a></li>
+<li>Code URL: https://github.com/pc-cp/mnn</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00562]] MNN: Mixed Nearest-Neighbors for Self-Supervised Learning(http://arxiv.org/abs/2311.00562)</code></li>
+<li>Summary: <p>In contrastive self-supervised learning, positive samples are typically drawn
+from the same image but in different augmented views, resulting in a relatively
+limited source of positive samples. An effective way to alleviate this problem
+is to incorporate the relationship between samples, which involves including
+the top-k nearest neighbors of positive samples in the framework. However, the
+problem of false neighbors (i.e., neighbors that do not belong to the same
+category as the positive sample) is an objective but often overlooked challenge
+due to the query of neighbor samples without human supervision. In this paper,
+we present a simple Self-supervised learning framework called Mixed
+Nearest-Neighbors for Self-Supervised Learning (MNN). MNN optimizes the
+influence of neighbor samples on the semantics of positive samples through an
+intuitive weighting approach and image mixture operations. The results of our
+study demonstrate that MNN exhibits exceptional generalization performance and
+training efficiency on four benchmark datasets.
+</p></li>
+</ul>
+
+<h3>Title: CROMA: Remote Sensing Representations with Contrastive Radar-Optical Masked Autoencoders. (arXiv:2311.00566v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00566">http://arxiv.org/abs/2311.00566</a></li>
+<li>Code URL: https://github.com/antofuller/croma</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00566]] CROMA: Remote Sensing Representations with Contrastive Radar-Optical Masked Autoencoders(http://arxiv.org/abs/2311.00566)</code></li>
+<li>Summary: <p>A vital and rapidly growing application, remote sensing offers vast yet
+sparsely labeled, spatially aligned multimodal data; this makes self-supervised
+learning algorithms invaluable. We present CROMA: a framework that combines
+contrastive and reconstruction self-supervised objectives to learn rich
+unimodal and multimodal representations. Our method separately encodes
+masked-out multispectral optical and synthetic aperture radar samples --
+aligned in space and time -- and performs cross-modal contrastive learning.
+Another encoder fuses these sensors, producing joint multimodal encodings that
+are used to predict the masked patches via a lightweight decoder. We show that
+these objectives are complementary when leveraged on spatially aligned
+multimodal data. We also introduce X- and 2D-ALiBi, which spatially biases our
+cross- and self-attention matrices. These strategies improve representations
+and allow our models to effectively extrapolate to images up to 17.6x larger at
+test-time. CROMA outperforms the current SoTA multispectral model, evaluated
+on: four classification benchmarks -- finetuning (avg. 1.8%), linear (avg.
+2.4%) and nonlinear (avg. 1.4%) probing, kNN classification (avg. 3.5%), and
+K-means clustering (avg. 8.4%); and three segmentation benchmarks (avg. 6.4%).
+CROMA's rich, optionally multimodal representations can be widely leveraged
+across remote sensing applications.
+</p></li>
+</ul>
+
+<h3>Title: Prompt-based Logical Semantics Enhancement for Implicit Discourse Relation Recognition. (arXiv:2311.00367v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00367">http://arxiv.org/abs/2311.00367</a></li>
+<li>Code URL: https://github.com/lalalamdbf/plse_idrr</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00367]] Prompt-based Logical Semantics Enhancement for Implicit Discourse Relation Recognition(http://arxiv.org/abs/2311.00367)</code></li>
+<li>Summary: <p>Implicit Discourse Relation Recognition (IDRR), which infers discourse
+relations without the help of explicit connectives, is still a crucial and
+challenging task for discourse parsing. Recent works tend to exploit the
+hierarchical structure information from the annotated senses, which demonstrate
+enhanced discourse relation representations can be obtained by integrating
+sense hierarchy. Nevertheless, the performance and robustness for IDRR are
+significantly constrained by the availability of annotated data. Fortunately,
+there is a wealth of unannotated utterances with explicit connectives, that can
+be utilized to acquire enriched discourse relation features. In light of such
+motivation, we propose a Prompt-based Logical Semantics Enhancement (PLSE)
+method for IDRR. Essentially, our method seamlessly injects knowledge relevant
+to discourse relation into pre-trained language models through prompt-based
+connective prediction. Furthermore, considering the prompt-based connective
+prediction exhibits local dependencies due to the deficiency of masked language
+model (MLM) in capturing global semantics, we design a novel self-supervised
+learning objective based on mutual information maximization to derive enhanced
+representations of logical semantics for IDRR. Experimental results on PDTB 2.0
+and CoNLL16 datasets demonstrate that our method achieves outstanding and
+consistent performance against the current state-of-the-art models.
+</p></li>
+</ul>
+
+<h3>Title: Explicit Morphological Knowledge Improves Pre-training of Language Models for Hebrew. (arXiv:2311.00658v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00658">http://arxiv.org/abs/2311.00658</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00658]] Explicit Morphological Knowledge Improves Pre-training of Language Models for Hebrew(http://arxiv.org/abs/2311.00658)</code></li>
+<li>Summary: <p>Pre-trained language models (PLMs) have shown remarkable successes in
+acquiring a wide range of linguistic knowledge, relying solely on
+self-supervised training on text streams. Nevertheless, the effectiveness of
+this language-agnostic approach has been frequently questioned for its
+sub-optimal performance when applied to morphologically-rich languages (MRLs).
+We investigate the hypothesis that incorporating explicit morphological
+knowledge in the pre-training phase can improve the performance of PLMs for
+MRLs. We propose various morphologically driven tokenization methods enabling
+the model to leverage morphological cues beyond raw text. We pre-train multiple
+language models utilizing the different methods and evaluate them on Hebrew, a
+language with complex and highly ambiguous morphology. Our experiments show
+that morphologically driven tokenization demonstrates improved results compared
+to a standard language-agnostic tokenization, on a benchmark of both semantic
+and morphologic tasks. These findings suggest that incorporating morphological
+knowledge holds the potential for further improving PLMs for morphologically
+rich languages.
+</p></li>
+</ul>
+
+<h3>Title: Retrieval-Based Reconstruction For Time-series Contrastive Learning. (arXiv:2311.00519v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00519">http://arxiv.org/abs/2311.00519</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00519]] Retrieval-Based Reconstruction For Time-series Contrastive Learning(http://arxiv.org/abs/2311.00519)</code></li>
+<li>Summary: <p>The success of self-supervised contrastive learning hinges on identifying
+positive data pairs that, when pushed together in embedding space, encode
+useful information for subsequent downstream tasks. However, in time-series,
+this is challenging because creating positive pairs via augmentations may break
+the original semantic meaning. We hypothesize that if we can retrieve
+information from one subsequence to successfully reconstruct another
+subsequence, then they should form a positive pair. Harnessing this intuition,
+we introduce our novel approach: REtrieval-BAsed Reconstruction (REBAR)
+contrastive learning. First, we utilize a convolutional cross-attention
+architecture to calculate the REBAR error between two different time-series.
+Then, through validation experiments, we show that the REBAR error is a
+predictor of mutual class membership, justifying its usage as a
+positive/negative labeler. Finally, once integrated into a contrastive learning
+framework, our REBAR method can learn an embedding that achieves
+state-of-the-art performance on downstream tasks across various modalities.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h2>generative</h2>
+<h3>Title: Flooding Regularization for Stable Training of Generative Adversarial Networks. (arXiv:2311.00318v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00318">http://arxiv.org/abs/2311.00318</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00318]] Flooding Regularization for Stable Training of Generative Adversarial Networks(http://arxiv.org/abs/2311.00318)</code></li>
+<li>Summary: <p>Generative Adversarial Networks (GANs) have shown remarkable performance in
+image generation. However, GAN training suffers from the problem of
+instability. One of the main approaches to address this problem is to modify
+the loss function, often using regularization terms in addition to changing the
+type of adversarial losses. This paper focuses on directly regularizing the
+adversarial loss function. We propose a method that applies flooding, an
+overfitting suppression method in supervised learning, to GANs to directly
+prevent the discriminator's loss from becoming excessively low. Flooding
+requires tuning the flood level, but when applied to GANs, we propose that the
+appropriate range of flood level settings is determined by the adversarial loss
+function, supported by theoretical analysis of GANs using the binary cross
+entropy loss. We experimentally verify that flooding stabilizes GAN training
+and can be combined with other stabilization techniques. We also reveal that by
+restricting the discriminator's loss to be no greater than flood level, the
+training proceeds stably even when the flood level is somewhat high.
+</p></li>
+</ul>
+
+<h3>Title: Feature-oriented Deep Learning Framework for Pulmonary Cone-beam CT (CBCT) Enhancement with Multi-task Customized Perceptual Loss. (arXiv:2311.00412v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00412">http://arxiv.org/abs/2311.00412</a></li>
+<li>Code URL: https://github.com/zhujiarui42/cfp-loss</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00412]] Feature-oriented Deep Learning Framework for Pulmonary Cone-beam CT (CBCT) Enhancement with Multi-task Customized Perceptual Loss(http://arxiv.org/abs/2311.00412)</code></li>
+<li>Summary: <p>Cone-beam computed tomography (CBCT) is routinely collected during
+image-guided radiation therapy (IGRT) to provide updated patient anatomy
+information for cancer treatments. However, CBCT images often suffer from
+streaking artifacts and noise caused by under-rate sampling projections and
+low-dose exposure, resulting in low clarity and information loss. While recent
+deep learning-based CBCT enhancement methods have shown promising results in
+suppressing artifacts, they have limited performance on preserving anatomical
+details since conventional pixel-to-pixel loss functions are incapable of
+describing detailed anatomy. To address this issue, we propose a novel
+feature-oriented deep learning framework that translates low-quality CBCT
+images into high-quality CT-like imaging via a multi-task customized
+feature-to-feature perceptual loss function. The framework comprises two main
+components: a multi-task learning feature-selection network(MTFS-Net) for
+customizing the perceptual loss function; and a CBCT-to-CT translation network
+guided by feature-to-feature perceptual loss, which uses advanced generative
+models such as U-Net, GAN and CycleGAN. Our experiments showed that the
+proposed framework can generate synthesized CT (sCT) images for the lung that
+achieved a high similarity to CT images, with an average SSIM index of 0.9869
+and an average PSNR index of 39.9621. The sCT images also achieved visually
+pleasing performance with effective artifacts suppression, noise reduction, and
+distinctive anatomical details preservation. Our experiment results indicate
+that the proposed framework outperforms the state-of-the-art models for
+pulmonary CBCT enhancement. This framework holds great promise for generating
+high-quality anatomical imaging from CBCT that is suitable for various clinical
+applications.
+</p></li>
+</ul>
+
+<h3>Title: JADE: A Linguistic-based Safety Evaluation Platform for LLM. (arXiv:2311.00286v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00286">http://arxiv.org/abs/2311.00286</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00286]] JADE: A Linguistic-based Safety Evaluation Platform for LLM(http://arxiv.org/abs/2311.00286)</code></li>
+<li>Summary: <p>In this paper, we present \textit{JADE}, a targeted linguistic fuzzing
+platform which strengthens the linguistic complexity of seed questions to
+simultaneously and consistently break a wide range of widely-used LLMs
+categorized in three groups: eight open-sourced Chinese, six commercial Chinese
+and four commercial English LLMs. JADE generates three safety benchmarks for
+the three groups of LLMs, which contain unsafe questions that are highly
+threatening: the questions simultaneously trigger harmful generation of
+multiple LLMs, with an average unsafe generation ratio of \textbf{$70\%$}
+(please see the table below), while are still natural questions, fluent and
+preserving the core unsafe semantics. We release the benchmark demos generated
+for commercial English LLMs and open-sourced English LLMs in the following
+link: https://github.com/whitzard-ai/jade-db. For readers who are interested in
+evaluating on more questions generated by JADE, please contact us.
+</p>
+<p>\textit{JADE} is based on Noam Chomsky's seminal theory of
+transformational-generative grammar. Given a seed question with unsafe
+intention, \textit{JADE} invokes a sequence of generative and transformational
+rules to increment the complexity of the syntactic structure of the original
+question, until the safety guardrail is broken. Our key insight is: Due to the
+complexity of human language, most of the current best LLMs can hardly
+recognize the invariant evil from the infinite number of different syntactic
+structures which form an unbound example space that can never be fully covered.
+Technically, the generative/transformative rules are constructed by native
+speakers of the languages, and, once developed, can be used to automatically
+grow and transform the parse tree of a given question, until the guardrail is
+broken. For more evaluation results and demo, please check our website:
+https://whitzard-ai.github.io/jade.html.
+</p></li>
+</ul>
+
+<h3>Title: HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning. (arXiv:2311.00321v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00321">http://arxiv.org/abs/2311.00321</a></li>
+<li>Code URL: https://github.com/joonkeekim/hare-hate-speech</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00321]] HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning(http://arxiv.org/abs/2311.00321)</code></li>
+<li>Summary: <p>With the proliferation of social media, accurate detection of hate speech has
+become critical to ensure safety online. To combat nuanced forms of hate
+speech, it is important to identify and thoroughly explain hate speech to help
+users understand its harmful effects. Recent benchmarks have attempted to
+tackle this issue by training generative models on free-text annotations of
+implications in hateful text. However, we find significant reasoning gaps in
+the existing annotations schemes, which may hinder the supervision of detection
+models. In this paper, we introduce a hate speech detection framework, HARE,
+which harnesses the reasoning capabilities of large language models (LLMs) to
+fill these gaps in explanations of hate speech, thus enabling effective
+supervision of detection models. Experiments on SBIC and Implicit Hate
+benchmarks show that our method, using model-generated data, consistently
+outperforms baselines, using existing free-text human annotations. Analysis
+demonstrates that our method enhances the explanation quality of trained models
+and improves generalization to unseen datasets. Our code is available at
+https://github.com/joonkeekim/hare-hate-speech.git.
+</p></li>
+</ul>
+
+<h3>Title: An Embedded Diachronic Sense Change Model with a Case Study from Ancient Greek. (arXiv:2311.00541v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00541">http://arxiv.org/abs/2311.00541</a></li>
+<li>Code URL: https://github.com/schyanzafar/edisc</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00541]] An Embedded Diachronic Sense Change Model with a Case Study from Ancient Greek(http://arxiv.org/abs/2311.00541)</code></li>
+<li>Summary: <p>Word meanings change over time, and word senses evolve, emerge or die out in
+the process. For ancient languages, where the corpora are often small, sparse
+and noisy, modelling such changes accurately proves challenging, and
+quantifying uncertainty in sense-change estimates consequently becomes
+important. GASC and DiSC are existing generative models that have been used to
+analyse sense change for target words from an ancient Greek text corpus, using
+unsupervised learning without the help of any pre-training. These models
+represent the senses of a given target word such as "kosmos" (meaning
+decoration, order or world) as distributions over context words, and sense
+prevalence as a distribution over senses. The models are fitted using MCMC
+methods to measure temporal changes in these representations. In this paper, we
+introduce EDiSC, an embedded version of DiSC, which combines word embeddings
+with DiSC to provide superior model performance. We show empirically that EDiSC
+offers improved predictive accuracy, ground-truth recovery and uncertainty
+quantification, as well as better sampling efficiency and scalability
+properties with MCMC methods. We also discuss the challenges of fitting these
+models.
+</p></li>
+</ul>
+
+<h3>Title: Are Large Language Models Reliable Judges? A Study on the Factuality Evaluation Capabilities of LLMs. (arXiv:2311.00681v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00681">http://arxiv.org/abs/2311.00681</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00681]] Are Large Language Models Reliable Judges? A Study on the Factuality Evaluation Capabilities of LLMs(http://arxiv.org/abs/2311.00681)</code></li>
+<li>Summary: <p>In recent years, Large Language Models (LLMs) have gained immense attention
+due to their notable emergent capabilities, surpassing those seen in earlier
+language models. A particularly intriguing application of LLMs is their role as
+evaluators for texts produced by various generative models.
+</p>
+<p>In this study, we delve into the potential of LLMs as reliable assessors of
+factual consistency in summaries generated by text-generation models.
+Initially, we introduce an innovative approach for factuality assessment using
+LLMs. This entails employing a singular LLM for the entirety of the
+question-answering-based factuality scoring process. Following this, we examine
+the efficacy of various LLMs in direct factuality scoring, benchmarking them
+against traditional measures and human annotations.
+</p>
+<p>Contrary to initial expectations, our results indicate a lack of significant
+correlations between factuality metrics and human evaluations, specifically for
+GPT-4 and PaLM-2. Notable correlations were only observed with GPT-3.5 across
+two factuality subcategories. These consistent findings across various factual
+error categories suggest a fundamental limitation in the current LLMs'
+capability to accurately gauge factuality.
+</p>
+<p>This version presents the information more concisely while maintaining the
+main points and findings of the original text.
+</p></li>
+</ul>
+
+<h3>Title: Uncertainty quantification and out-of-distribution detection using surjective normalizing flows. (arXiv:2311.00377v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00377">http://arxiv.org/abs/2311.00377</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00377]] Uncertainty quantification and out-of-distribution detection using surjective normalizing flows(http://arxiv.org/abs/2311.00377)</code></li>
+<li>Summary: <p>Reliable quantification of epistemic and aleatoric uncertainty is of crucial
+importance in applications where models are trained in one environment but
+applied to multiple different environments, often seen in real-world
+applications for example, in climate science or mobility analysis. We propose a
+simple approach using surjective normalizing flows to identify
+out-of-distribution data sets in deep neural network models that can be
+computed in a single forward pass. The method builds on recent developments in
+deep uncertainty quantification and generative modeling with normalizing flows.
+We apply our method to a synthetic data set that has been simulated using a
+mechanistic model from the mobility literature and several data sets simulated
+from interventional distributions induced by soft and atomic interventions on
+that model, and demonstrate that our method can reliably discern
+out-of-distribution data from in-distribution data. We compare the surjective
+flow model to a Dirichlet process mixture model and a bijective flow and find
+that the surjections are a crucial component to reliably distinguish
+in-distribution from out-of-distribution data.
+</p></li>
+</ul>
+
+<h3>Title: Optimal Budgeted Rejection Sampling for Generative Models. (arXiv:2311.00460v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00460">http://arxiv.org/abs/2311.00460</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00460]] Optimal Budgeted Rejection Sampling for Generative Models(http://arxiv.org/abs/2311.00460)</code></li>
+<li>Summary: <p>Rejection sampling methods have recently been proposed to improve the
+performance of discriminator-based generative models. However, these methods
+are only optimal under an unlimited sampling budget, and are usually applied to
+a generator trained independently of the rejection procedure. We first propose
+an Optimal Budgeted Rejection Sampling (OBRS) scheme that is provably optimal
+with respect to \textit{any} $f$-divergence between the true distribution and
+the post-rejection distribution, for a given sampling budget. Second, we
+propose an end-to-end method that incorporates the sampling scheme into the
+training procedure to further enhance the model's overall performance. Through
+experiments and supporting theory, we show that the proposed methods are
+effective in significantly improving the quality and diversity of the samples.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: CLIP-AD: A Language-Guided Staged Dual-Path Model for Zero-shot Anomaly Detection. (arXiv:2311.00453v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00453">http://arxiv.org/abs/2311.00453</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00453]] CLIP-AD: A Language-Guided Staged Dual-Path Model for Zero-shot Anomaly Detection(http://arxiv.org/abs/2311.00453)</code></li>
+<li>Summary: <p>This paper considers zero-shot Anomaly Detection (AD), a valuable yet
+under-studied task, which performs AD without any reference images of the test
+objects. Specifically, we employ a language-guided strategy and propose a
+simple-yet-effective architecture CLIP-AD, leveraging the superior zero-shot
+classification capabilities of the large vision-language model CLIP. A natural
+idea for anomaly segmentation is to directly calculate the similarity between
+text/image features, but we observe opposite predictions and irrelevant
+highlights in the results. Inspired by the phenomena, we introduce a Staged
+Dual-Path model (SDP) that effectively uses features from various levels and
+applies architecture and feature surgery to address these issues. Furthermore,
+delving beyond surface phenomena, we identify the problem arising from
+misalignment of text/image features in the joint embedding space. Thus, we
+introduce a fine-tuning strategy by adding linear layers and construct an
+extended model SDP+, further enhancing the performance. Abundant experiments
+demonstrate the effectiveness of our approach, e.g., on VisA, SDP outperforms
+SOTA by +1.0/+1.2 in classification/segmentation F1 scores, while SDP+ achieves
++1.9/+11.7 improvements.
+</p></li>
+</ul>
+
+<h3>Title: Architecture of Data Anomaly Detection-Enhanced Decentralized Expert System for Early-Stage Alzheimer's Disease Prediction. (arXiv:2311.00373v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00373">http://arxiv.org/abs/2311.00373</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00373]] Architecture of Data Anomaly Detection-Enhanced Decentralized Expert System for Early-Stage Alzheimer's Disease Prediction(http://arxiv.org/abs/2311.00373)</code></li>
+<li>Summary: <p>Alzheimer's Disease is a global health challenge that requires early and
+accurate detection to improve patient outcomes. Magnetic Resonance Imaging
+(MRI) holds significant diagnostic potential, but its effective analysis
+remains a formidable task. This study introduces a groundbreaking decentralized
+expert system that cleverly combines blockchain technology with Artificial
+Intelligence (AI) to integrate robust anomaly detection for patient-submitted
+data.
+</p>
+<p>Traditional diagnostic methods often lead to delayed and imprecise
+predictions, especially in the early stages of the disease. Centralized data
+repositories struggle to manage the immense volumes of MRI data, and persistent
+privacy concerns hinder collaborative efforts. Our innovative solution
+harnesses decentralization to protect data integrity and patient privacy,
+facilitated by blockchain technology. It not only emphasizes AI-driven MRI
+analysis but also incorporates a sophisticated data anomaly detection
+architecture. These mechanisms scrutinize patient-contributed data for various
+issues, including data quality problems and atypical findings within MRI
+images.
+</p>
+<p>Conducting an exhaustive check of MRI image correctness and quality directly
+on the blockchain is impractical due to computational complexity and cost
+constraints. Typically, such checks are performed off-chain, and the blockchain
+securely records the results. This comprehensive approach empowers our
+decentralized app to provide more precise early-stage Alzheimer's Disease
+predictions. By merging the strengths of blockchain, AI, and anomaly detection,
+our system represents a pioneering step towards revolutionizing disease
+diagnostics.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: The Mystery and Fascination of LLMs: A Comprehensive Survey on the Interpretation and Analysis of Emergent Abilities. (arXiv:2311.00237v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00237">http://arxiv.org/abs/2311.00237</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00237]] The Mystery and Fascination of LLMs: A Comprehensive Survey on the Interpretation and Analysis of Emergent Abilities(http://arxiv.org/abs/2311.00237)</code></li>
+<li>Summary: <p>Understanding emergent abilities, such as in-context learning (ICL) and
+chain-of-thought (CoT) prompting in large language models (LLMs), is of utmost
+importance. This importance stems not only from the better utilization of these
+capabilities across various tasks, but also from the proactive identification
+and mitigation of potential risks, including concerns of truthfulness, bias,
+and toxicity, that may arise alongside these capabilities. In this paper, we
+present a thorough survey on the interpretation and analysis of emergent
+abilities of LLMs. First, we provide a concise introduction to the background
+and definition of emergent abilities. Then, we give an overview of advancements
+from two perspectives: 1) a macro perspective, emphasizing studies on the
+mechanistic interpretability and delving into the mathematical foundations
+behind emergent abilities; and 2) a micro-perspective, concerning studies that
+focus on empirical interpretability by examining factors associated with these
+abilities. We conclude by highlighting the challenges encountered and
+suggesting potential avenues for future research. We believe that our work
+establishes the basis for further exploration into the interpretation of
+emergent abilities.
+</p></li>
+</ul>
+
+<h3>Title: Crosslingual Retrieval Augmented In-context Learning for Bangla. (arXiv:2311.00587v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.00587">http://arxiv.org/abs/2311.00587</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.00587]] Crosslingual Retrieval Augmented In-context Learning for Bangla(http://arxiv.org/abs/2311.00587)</code></li>
+<li>Summary: <p>The promise of Large Language Models (LLMs) in Natural Language Processing
+has often been overshadowed by their limited performance in low-resource
+languages such as Bangla. To address this, our paper presents a pioneering
+approach that utilizes cross-lingual retrieval augmented in-context learning.
+By strategically sourcing semantically similar prompts from high-resource
+language, we enable multilingual pretrained language models (MPLMs), especially
+the generative model BLOOMZ, to successfully boost performance on Bangla tasks.
+Our extensive evaluation highlights that the cross-lingual retrieval augmented
+prompts bring steady improvements to MPLMs over the zero-shot performance.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
