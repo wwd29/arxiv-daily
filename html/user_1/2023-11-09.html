@@ -1,0 +1,412 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: A Data Perspective on Enhanced Identity Preservation for Diffusion Personalization. (arXiv:2311.04315v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04315">http://arxiv.org/abs/2311.04315</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04315]] A Data Perspective on Enhanced Identity Preservation for Diffusion Personalization(http://arxiv.org/abs/2311.04315)</code></li>
+<li>Summary: <p>Large text-to-image models have revolutionized the ability to generate
+imagery using natural language. However, particularly unique or personal visual
+concepts, such as your pet, an object in your house, etc., will not be captured
+by the original model. This has led to interest in how to inject new visual
+concepts, bound to a new text token, using as few as 4-6 examples. Despite
+significant progress, this task remains a formidable challenge, particularly in
+preserving the subject's identity. While most researchers attempt to to address
+this issue by modifying model architectures, our approach takes a data-centric
+perspective, advocating the modification of data rather than the model itself.
+We introduce a novel regularization dataset generation strategy on both the
+text and image level; demonstrating the importance of a rich and structured
+regularization dataset (automatically generated) to prevent losing text
+coherence and better identity preservation. The better quality is enabled by
+allowing up to 5x more fine-tuning iterations without overfitting and
+degeneration. The generated renditions of the desired subject preserve even
+fine details such as text and logos; all while maintaining the ability to
+generate diverse samples that follow the input text prompt. Since our method
+focuses on data augmentation, rather than adjusting the model architecture, it
+is complementary and can be combined with prior work. We show on established
+benchmarks that our data-centric approach forms the new state of the art in
+terms of image quality, with the best trade-off between identity preservation,
+diversity, and text alignment.
+</p></li>
+</ul>
+
+<h3>Title: 3DiffTection: 3D Object Detection with Geometry-Aware Diffusion Features. (arXiv:2311.04391v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04391">http://arxiv.org/abs/2311.04391</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04391]] 3DiffTection: 3D Object Detection with Geometry-Aware Diffusion Features(http://arxiv.org/abs/2311.04391)</code></li>
+<li>Summary: <p>We present 3DiffTection, a state-of-the-art method for 3D object detection
+from single images, leveraging features from a 3D-aware diffusion model.
+Annotating large-scale image data for 3D detection is resource-intensive and
+time-consuming. Recently, pretrained large image diffusion models have become
+prominent as effective feature extractors for 2D perception tasks. However,
+these features are initially trained on paired text and image data, which are
+not optimized for 3D tasks, and often exhibit a domain gap when applied to the
+target data. Our approach bridges these gaps through two specialized tuning
+strategies: geometric and semantic. For geometric tuning, we fine-tune a
+diffusion model to perform novel view synthesis conditioned on a single image,
+by introducing a novel epipolar warp operator. This task meets two essential
+criteria: the necessity for 3D awareness and reliance solely on posed image
+data, which are readily available (e.g., from videos) and does not require
+manual annotation. For semantic refinement, we further train the model on
+target data with detection supervision. Both tuning phases employ ControlNet to
+preserve the integrity of the original feature capabilities. In the final step,
+we harness these enhanced capabilities to conduct a test-time prediction
+ensemble across multiple virtual viewpoints. Through our methodology, we obtain
+3D-aware features that are tailored for 3D detection and excel in identifying
+cross-view point correspondences. Consequently, our model emerges as a powerful
+3D detector, substantially surpassing previous benchmarks, e.g., Cube-RCNN, a
+precedent in single-view 3D detection by 9.43\% in AP3D on the
+Omni3D-ARkitscene dataset. Furthermore, 3DiffTection showcases robust data
+efficiency and generalization to cross-domain data.
+</p></li>
+</ul>
+
+<h3>Title: Weakly-supervised deepfake localization in diffusion-generated images. (arXiv:2311.04584v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04584">http://arxiv.org/abs/2311.04584</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04584]] Weakly-supervised deepfake localization in diffusion-generated images(http://arxiv.org/abs/2311.04584)</code></li>
+<li>Summary: <p>The remarkable generative capabilities of denoising diffusion models have
+raised new concerns regarding the authenticity of the images we see every day
+on the Internet. However, the vast majority of existing deepfake detection
+models are tested against previous generative approaches (e.g. GAN) and usually
+provide only a "fake" or "real" label per image. We believe a more informative
+output would be to augment the per-image label with a localization map
+indicating which regions of the input have been manipulated. To this end, we
+frame this task as a weakly-supervised localization problem and identify three
+main categories of methods (based on either explanations, local scores or
+attention), which we compare on an equal footing by using the Xception network
+as the common backbone architecture. We provide a careful analysis of all the
+main factors that parameterize the design space: choice of method, type of
+supervision, dataset and generator used in the creation of manipulated images;
+our study is enabled by constructing datasets in which only one of the
+components is varied. Our results show that weakly-supervised localization is
+attainable, with the best performing detection method (based on local scores)
+being less sensitive to the looser supervision than to the mismatch in terms of
+dataset or generator.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: ADFactory: Automated Data Factory for Optical Flow Tasks. (arXiv:2311.04246v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04246">http://arxiv.org/abs/2311.04246</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04246]] ADFactory: Automated Data Factory for Optical Flow Tasks(http://arxiv.org/abs/2311.04246)</code></li>
+<li>Summary: <p>A major challenge faced by current optical flow methods is the difficulty in
+generalizing them well into the real world, mainly due to the high production
+cost of datasets, which currently do not have a large real-world optical flow
+dataset. To address this challenge, we introduce a novel optical flow training
+framework that can efficiently train optical flow networks on the target data
+domain without manual annotation. Specifically, we use advanced Nerf technology
+to reconstruct scenes from photo groups collected by monocular cameras, and
+calculate the optical flow results between camera pose pairs from the rendered
+results. On this basis, we screen the generated training data from various
+aspects such as Nerf's reconstruction quality, visual consistency of optical
+flow labels, reconstruction depth consistency, etc. The filtered training data
+can be directly used for network supervision. Experimentally, the
+generalization ability of our scheme on KITTI surpasses existing
+self-supervised optical flow and monocular scene flow algorithms. Moreover, it
+can always surpass most supervised methods in real-world zero-point
+generalization evaluation.
+</p></li>
+</ul>
+
+<h3>Title: Self-Supervised Learning for Visual Relationship Detection through Masked Bounding Box Reconstruction. (arXiv:2311.04834v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04834">http://arxiv.org/abs/2311.04834</a></li>
+<li>Code URL: https://github.com/deeplab-ai/selfsupervisedvrd</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04834]] Self-Supervised Learning for Visual Relationship Detection through Masked Bounding Box Reconstruction(http://arxiv.org/abs/2311.04834)</code></li>
+<li>Summary: <p>We present a novel self-supervised approach for representation learning,
+particularly for the task of Visual Relationship Detection (VRD). Motivated by
+the effectiveness of Masked Image Modeling (MIM), we propose Masked Bounding
+Box Reconstruction (MBBR), a variation of MIM where a percentage of the
+entities/objects within a scene are masked and subsequently reconstructed based
+on the unmasked objects. The core idea is that, through object-level masked
+modeling, the network learns context-aware representations that capture the
+interaction of objects within a scene and thus are highly predictive of visual
+object relationships. We extensively evaluate learned representations, both
+qualitatively and quantitatively, in a few-shot setting and demonstrate the
+efficacy of MBBR for learning robust visual representations, particularly
+tailored for VRD. The proposed method is able to surpass state-of-the-art VRD
+methods on the Predicate Detection (PredDet) evaluation setting, using only a
+few annotated samples. We make our code available at
+https://github.com/deeplab-ai/SelfSupervisedVRD.
+</p></li>
+</ul>
+
+<h3>Title: MTGER: Multi-view Temporal Graph Enhanced Temporal Reasoning over Time-Involved Document. (arXiv:2311.04816v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04816">http://arxiv.org/abs/2311.04816</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04816]] MTGER: Multi-view Temporal Graph Enhanced Temporal Reasoning over Time-Involved Document(http://arxiv.org/abs/2311.04816)</code></li>
+<li>Summary: <p>The facts and time in the document are intricately intertwined, making
+temporal reasoning over documents challenging. Previous work models time
+implicitly, making it difficult to handle such complex relationships. To
+address this issue, we propose MTGER, a novel Multi-view Temporal Graph
+Enhanced Temporal Reasoning framework for temporal reasoning over time-involved
+documents. Concretely, MTGER explicitly models the temporal relationships among
+facts by multi-view temporal graphs. On the one hand, the heterogeneous
+temporal graphs explicitly model the temporal and discourse relationships among
+facts; on the other hand, the multi-view mechanism captures both time-focused
+and fact-focused information, allowing the two views to complement each other
+through adaptive fusion. To further improve the implicit reasoning capability
+of the model, we design a self-supervised time-comparing objective. Extensive
+experimental results demonstrate the effectiveness of our method on the TimeQA
+and SituatedQA datasets. Furthermore, MTGER gives more consistent answers under
+question perturbations.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: mPLUG-Owl2: Revolutionizing Multi-modal Large Language Model with Modality Collaboration. (arXiv:2311.04257v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04257">http://arxiv.org/abs/2311.04257</a></li>
+<li>Code URL: https://github.com/x-plug/mplug-owl</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04257]] mPLUG-Owl2: Revolutionizing Multi-modal Large Language Model with Modality Collaboration(http://arxiv.org/abs/2311.04257)</code></li>
+<li>Summary: <p>Multi-modal Large Language Models (MLLMs) have demonstrated impressive
+instruction abilities across various open-ended tasks. However, previous
+methods primarily focus on enhancing multi-modal capabilities. In this work, we
+introduce a versatile multi-modal large language model, mPLUG-Owl2, which
+effectively leverages modality collaboration to improve performance in both
+text and multi-modal tasks. mPLUG-Owl2 utilizes a modularized network design,
+with the language decoder acting as a universal interface for managing
+different modalities. Specifically, mPLUG-Owl2 incorporates shared functional
+modules to facilitate modality collaboration and introduces a modality-adaptive
+module that preserves modality-specific features. Extensive experiments reveal
+that mPLUG-Owl2 is capable of generalizing both text tasks and multi-modal
+tasks and achieving state-of-the-art performances with a single generic model.
+Notably, mPLUG-Owl2 is the first MLLM model that demonstrates the modality
+collaboration phenomenon in both pure-text and multi-modal scenarios, setting a
+pioneering path in the development of future multi-modal foundation models.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: LRM: Large Reconstruction Model for Single Image to 3D. (arXiv:2311.04400v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04400">http://arxiv.org/abs/2311.04400</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04400]] LRM: Large Reconstruction Model for Single Image to 3D(http://arxiv.org/abs/2311.04400)</code></li>
+<li>Summary: <p>We propose the first Large Reconstruction Model (LRM) that predicts the 3D
+model of an object from a single input image within just 5 seconds. In contrast
+to many previous methods that are trained on small-scale datasets such as
+ShapeNet in a category-specific fashion, LRM adopts a highly scalable
+transformer-based architecture with 500 million learnable parameters to
+directly predict a neural radiance field (NeRF) from the input image. We train
+our model in an end-to-end manner on massive multi-view data containing around
+1 million objects, including both synthetic renderings from Objaverse and real
+captures from MVImgNet. This combination of a high-capacity model and
+large-scale training data empowers our model to be highly generalizable and
+produce high-quality 3D reconstructions from various testing inputs including
+real-world in-the-wild captures and images from generative models. Video demos
+and interactable 3D meshes can be found on this website:
+https://yiconghong.me/LRM/.
+</p></li>
+</ul>
+
+<h3>Title: Social Motion Prediction with Cognitive Hierarchies. (arXiv:2311.04726v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04726">http://arxiv.org/abs/2311.04726</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04726]] Social Motion Prediction with Cognitive Hierarchies(http://arxiv.org/abs/2311.04726)</code></li>
+<li>Summary: <p>Humans exhibit a remarkable capacity for anticipating the actions of others
+and planning their own actions accordingly. In this study, we strive to
+replicate this ability by addressing the social motion prediction problem. We
+introduce a new benchmark, a novel formulation, and a cognition-inspired
+framework. We present Wusi, a 3D multi-person motion dataset under the context
+of team sports, which features intense and strategic human interactions and
+diverse pose distributions. By reformulating the problem from a multi-agent
+reinforcement learning perspective, we incorporate behavioral cloning and
+generative adversarial imitation learning to boost learning efficiency and
+generalization. Furthermore, we take into account the cognitive aspects of the
+human social action planning process and develop a cognitive hierarchy
+framework to predict strategic human social interactions. We conduct
+comprehensive experiments to validate the effectiveness of our proposed dataset
+and approach. Code and data are available at
+https://walter0807.github.io/Social-CH/.
+</p></li>
+</ul>
+
+<h3>Title: GENOME: GenerativE Neuro-symbOlic visual reasoning by growing and reusing ModulEs. (arXiv:2311.04901v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04901">http://arxiv.org/abs/2311.04901</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04901]] GENOME: GenerativE Neuro-symbOlic visual reasoning by growing and reusing ModulEs(http://arxiv.org/abs/2311.04901)</code></li>
+<li>Summary: <p>Recent works have shown that Large Language Models (LLMs) could empower
+traditional neuro-symbolic models via programming capabilities to translate
+language into module descriptions, thus achieving strong visual reasoning
+results while maintaining the model's transparency and efficiency. However,
+these models usually exhaustively generate the entire code snippet given each
+new instance of a task, which is extremely ineffective. We propose generative
+neuro-symbolic visual reasoning by growing and reusing modules. Specifically,
+our model consists of three unique stages, module initialization, module
+generation, and module execution. First, given a vision-language task, we adopt
+LLMs to examine whether we could reuse and grow over established modules to
+handle this new task. If not, we initialize a new module needed by the task and
+specify the inputs and outputs of this new module. After that, the new module
+is created by querying LLMs to generate corresponding code snippets that match
+the requirements. In order to get a better sense of the new module's ability,
+we treat few-shot training examples as test cases to see if our new module
+could pass these cases. If yes, the new module is added to the module library
+for future reuse. Finally, we evaluate the performance of our model on the
+testing set by executing the parsed programs with the newly made visual modules
+to get the results. We find the proposed model possesses several advantages.
+First, it performs competitively on standard tasks like visual question
+answering and referring expression comprehension; Second, the modules learned
+from one task can be seamlessly transferred to new tasks; Last but not least,
+it is able to adapt to new visual reasoning tasks by observing a few training
+examples and reusing modules.
+</p></li>
+</ul>
+
+<h3>Title: Watermarks in the Sand: Impossibility of Strong Watermarking for Generative Models. (arXiv:2311.04378v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04378">http://arxiv.org/abs/2311.04378</a></li>
+<li>Code URL: https://github.com/hlzhang109/impossibility-watermark</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04378]] Watermarks in the Sand: Impossibility of Strong Watermarking for Generative Models(http://arxiv.org/abs/2311.04378)</code></li>
+<li>Summary: <p>Watermarking generative models consists of planting a statistical signal
+(watermark) in a model's output so that it can be later verified that the
+output was generated by the given model. A strong watermarking scheme satisfies
+the property that a computationally bounded attacker cannot erase the watermark
+without causing significant quality degradation. In this paper, we study the
+(im)possibility of strong watermarking schemes. We prove that, under
+well-specified and natural assumptions, strong watermarking is impossible to
+achieve. This holds even in the private detection algorithm setting, where the
+watermark insertion and detection algorithms share a secret key, unknown to the
+attacker. To prove this result, we introduce a generic efficient watermark
+attack; the attacker is not required to know the private key of the scheme or
+even which scheme is used. Our attack is based on two assumptions: (1) The
+attacker has access to a "quality oracle" that can evaluate whether a candidate
+output is a high-quality response to a prompt, and (2) The attacker has access
+to a "perturbation oracle" which can modify an output with a nontrivial
+probability of maintaining quality, and which induces an efficiently mixing
+random walk on high-quality outputs. We argue that both assumptions can be
+satisfied in practice by an attacker with weaker computational capabilities
+than the watermarked model itself, to which the attacker has only black-box
+access. Furthermore, our assumptions will likely only be easier to satisfy over
+time as models grow in capabilities and modalities. We demonstrate the
+feasibility of our attack by instantiating it to attack three existing
+watermarking schemes for large language models: Kirchenbauer et al. (2023),
+Kuditipudi et al. (2023), and Zhao et al. (2023). The same attack successfully
+removes the watermarks planted by all three schemes, with only minor quality
+degradation.
+</p></li>
+</ul>
+
+<h3>Title: Sandi: A System for Accountability and Applications in Direct Communication (Extended Abstract). (arXiv:2311.04861v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04861">http://arxiv.org/abs/2311.04861</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04861]] Sandi: A System for Accountability and Applications in Direct Communication (Extended Abstract)(http://arxiv.org/abs/2311.04861)</code></li>
+<li>Summary: <p>Reputation systems guide our decision making both in life and work: which
+restaurant to eat at, which vendor to buy from, which software dependencies to
+use, and who or what to trust. These systems are often based on old ideas and
+are failing in the face of modern threats. Fraudsters have found ways to
+manipulate them, undermining their integrity and utility. Generative AI adds to
+the problem by enabling the creation of real-looking fake narratives at scale,
+creating a false sense of consensus. Meanwhile, the need for reliable
+reputation concepts is more important than ever, as wrong decisions lead to
+increasingly severe outcomes: wasted time, poor service, and a feeling of
+injustice at best, fraud, identity theft, and ransomware at worst.
+</p>
+<p>In this extended abstract we introduce Sandi, a new kind of reputation system
+with a single well-defined purpose: to create trust through accountability in
+one-to-one transactions. Examples of such transactions include sending an email
+or making a purchase online. Sandi has strong security and privacy properties
+that make it suitable for use also in sensitive contexts. Furthermore, Sandi
+can guarantee reputation integrity and transparency for its registered users.
+</p>
+<p>As a primary application, we envision how Sandi could counter fraud and abuse
+in direct communication. Concretely, message senders request a cryptographic
+tag from Sandi that they send along with their message. If the receiver finds
+the message inappropriate, they can report the sender using this tag. Notably,
+only senders need registered accounts and do not need to manage long-term keys.
+The design of Sandi ensures compatibility with any communication system that
+allows for small binary data transmission.
+</p></li>
+</ul>
+
+<h3>Title: GPT-ST: Generative Pre-Training of Spatio-Temporal Graph Neural Networks. (arXiv:2311.04245v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04245">http://arxiv.org/abs/2311.04245</a></li>
+<li>Code URL: https://github.com/hkuds/gpt-st</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04245]] GPT-ST: Generative Pre-Training of Spatio-Temporal Graph Neural Networks(http://arxiv.org/abs/2311.04245)</code></li>
+<li>Summary: <p>In recent years, there has been a rapid development of spatio-temporal
+prediction techniques in response to the increasing demands of traffic
+management and travel planning. While advanced end-to-end models have achieved
+notable success in improving predictive performance, their integration and
+expansion pose significant challenges. This work aims to address these
+challenges by introducing a spatio-temporal pre-training framework that
+seamlessly integrates with downstream baselines and enhances their performance.
+The framework is built upon two key designs: (i) We propose a spatio-temporal
+mask autoencoder as a pre-training model for learning spatio-temporal
+dependencies. The model incorporates customized parameter learners and
+hierarchical spatial pattern encoding networks. These modules are specifically
+designed to capture spatio-temporal customized representations and intra- and
+inter-cluster region semantic relationships, which have often been neglected in
+existing approaches. (ii) We introduce an adaptive mask strategy as part of the
+pre-training mechanism. This strategy guides the mask autoencoder in learning
+robust spatio-temporal representations and facilitates the modeling of
+different relationships, ranging from intra-cluster to inter-cluster, in an
+easy-to-hard training manner. Extensive experiments conducted on representative
+benchmarks demonstrate the effectiveness of our proposed method. We have made
+our model implementation publicly available at https://github.com/HKUDS/GPT-ST.
+</p></li>
+</ul>
+
+<h3>Title: Identifying Semantic Component for Robust Molecular Property Prediction. (arXiv:2311.04837v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04837">http://arxiv.org/abs/2311.04837</a></li>
+<li>Code URL: https://github.com/dmirlab-group/sci</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04837]] Identifying Semantic Component for Robust Molecular Property Prediction(http://arxiv.org/abs/2311.04837)</code></li>
+<li>Summary: <p>Although graph neural networks have achieved great success in the task of
+molecular property prediction in recent years, their generalization ability
+under out-of-distribution (OOD) settings is still under-explored. Different
+from existing methods that learn discriminative representations for prediction,
+we propose a generative model with semantic-components identifiability, named
+SCI. We demonstrate that the latent variables in this generative model can be
+explicitly identified into semantic-relevant (SR) and semantic-irrelevant (SI)
+components, which contributes to better OOD generalization by involving minimal
+change properties of causal mechanisms. Specifically, we first formulate the
+data generation process from the atom level to the molecular level, where the
+latent space is split into SI substructures, SR substructures, and SR atom
+variables. Sequentially, to reduce misidentification, we restrict the minimal
+changes of the SR atom variables and add a semantic latent substructure
+regularization to mitigate the variance of the SR substructure under augmented
+domain changes. Under mild assumptions, we prove the block-wise identifiability
+of the SR substructure and the comment-wise identifiability of SR atom
+variables. Experimental studies achieve state-of-the-art performance and show
+general improvement on 21 datasets in 3 mainstream benchmarks. Moreover, the
+visualization results of the proposed SCI method provide insightful case
+studies and explanations for the prediction results. The code is available at:
+https://github.com/DMIRLAB-Group/SCI.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: A Deep Learning Approach to Video Anomaly Detection using Convolutional Autoencoders. (arXiv:2311.04351v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04351">http://arxiv.org/abs/2311.04351</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04351]] A Deep Learning Approach to Video Anomaly Detection using Convolutional Autoencoders(http://arxiv.org/abs/2311.04351)</code></li>
+<li>Summary: <p>In this research we propose a deep learning approach for detecting anomalies
+in videos using convolutional autoencoder and decoder neural networks on the
+UCSD dataset.Our method utilizes a convolutional autoencoder to learn the
+spatiotemporal patterns of normal videos and then compares each frame of a test
+video to this learned representation. We evaluated our approach on the UCSD
+dataset and achieved an overall accuracy of 99.35% on the Ped1 dataset and
+99.77% on the Ped2 dataset, demonstrating the effectiveness of our method for
+detecting anomalies in surveillance videos. The results show that our method
+outperforms other state-of-the-art methods, and it can be used in real-world
+applications for video anomaly detection.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
