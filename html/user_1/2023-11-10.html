@@ -1,0 +1,940 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Improved DDIM Sampling with Moment Matching Gaussian Mixtures. (arXiv:2311.04938v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04938">http://arxiv.org/abs/2311.04938</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04938]] Improved DDIM Sampling with Moment Matching Gaussian Mixtures(http://arxiv.org/abs/2311.04938)</code></li>
+<li>Summary: <p>We propose using a Gaussian Mixture Model (GMM) as reverse transition
+operator (kernel) within the Denoising Diffusion Implicit Models (DDIM)
+framework, which is one of the most widely used approaches for accelerated
+sampling from pre-trained Denoising Diffusion Probabilistic Models (DDPM).
+Specifically we match the first and second order central moments of the DDPM
+forward marginals by constraining the parameters of the GMM. We see that moment
+matching is sufficient to obtain samples with equal or better quality than the
+original DDIM with Gaussian kernels. We provide experimental results with
+unconditional models trained on CelebAHQ and FFHQ and class-conditional models
+trained on ImageNet datasets respectively. Our results suggest that using the
+GMM kernel leads to significant improvements in the quality of the generated
+samples when the number of sampling steps is small, as measured by FID and IS
+metrics. For example on ImageNet 256x256, using 10 sampling steps, we achieve a
+FID of 6.94 and IS of 207.85 with a GMM kernel compared to 10.15 and 196.73
+respectively with a Gaussian kernel.
+</p></li>
+</ul>
+
+<h3>Title: Lightweight Diffusion Models with Distillation-Based Block Neural Architecture Search. (arXiv:2311.04950v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04950">http://arxiv.org/abs/2311.04950</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04950]] Lightweight Diffusion Models with Distillation-Based Block Neural Architecture Search(http://arxiv.org/abs/2311.04950)</code></li>
+<li>Summary: <p>Diffusion models have recently shown remarkable generation ability, achieving
+state-of-the-art performance in many tasks. However, the high computational
+cost is still a troubling problem for diffusion models. To tackle this problem,
+we propose to automatically remove the structural redundancy in diffusion
+models with our proposed Diffusion Distillation-based Block-wise Neural
+Architecture Search (DiffNAS). Specifically, given a larger pretrained teacher,
+we leverage DiffNAS to search for the smallest architecture which achieves
+on-par or even better performance than the teacher. Considering current
+diffusion models are based on UNet which naturally has a block-wise structure,
+we perform neural architecture search independently in each block, which
+largely reduces the search space. Different from previous block-wise NAS
+methods, DiffNAS contains a block-wise local search strategy and a retraining
+strategy with a joint dynamic loss. Concretely, during the search process, we
+block-wisely select the best subnet to avoid the unfairness brought by the
+global search strategy used in previous works. When retraining the searched
+architecture, we adopt a dynamic joint loss to maintain the consistency between
+supernet training and subnet retraining, which also provides informative
+objectives for each block and shortens the paths of gradient propagation. We
+demonstrate this joint loss can effectively improve model performance. We also
+prove the necessity of the dynamic adjustment of this loss. The experiments
+show that our method can achieve significant computational reduction,
+especially on latent diffusion models with about 50% MACs and Parameter
+reduction.
+</p></li>
+</ul>
+
+<h3>Title: BrainNetDiff: Generative AI Empowers Brain Network Generation via Multimodal Diffusion Model. (arXiv:2311.05199v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05199">http://arxiv.org/abs/2311.05199</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05199]] BrainNetDiff: Generative AI Empowers Brain Network Generation via Multimodal Diffusion Model(http://arxiv.org/abs/2311.05199)</code></li>
+<li>Summary: <p>Brain network analysis has emerged as pivotal method for gaining a deeper
+understanding of brain functions and disease mechanisms. Despite the existence
+of various network construction approaches, shortcomings persist in the
+learning of correlations between structural and functional brain imaging data.
+In light of this, we introduce a novel method called BrainNetDiff, which
+combines a multi-head Transformer encoder to extract relevant features from
+fMRI time series and integrates a conditional latent diffusion model for brain
+network generation. Leveraging a conditional prompt and a fusion attention
+mechanism, this method significantly improves the accuracy and stability of
+brain network generation. To the best of our knowledge, this represents the
+first framework that employs diffusion for the fusion of the multimodal brain
+imaging and brain network generation from images to graphs. We validate
+applicability of this framework in the construction of brain network across
+healthy and neurologically impaired cohorts using the authentic dataset.
+Experimental results vividly demonstrate the significant effectiveness of the
+proposed method across the downstream disease classification tasks. These
+findings convincingly emphasize the prospective value in the field of brain
+network research, particularly its key significance in neuroimaging analysis
+and disease diagnosis. This research provides a valuable reference for the
+processing of multimodal brain imaging data and introduces a novel, efficient
+solution to the field of neuroimaging.
+</p></li>
+</ul>
+
+<h3>Title: ConRad: Image Constrained Radiance Fields for 3D Generation from a Single Image. (arXiv:2311.05230v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05230">http://arxiv.org/abs/2311.05230</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05230]] ConRad: Image Constrained Radiance Fields for 3D Generation from a Single Image(http://arxiv.org/abs/2311.05230)</code></li>
+<li>Summary: <p>We present a novel method for reconstructing 3D objects from a single RGB
+image. Our method leverages the latest image generation models to infer the
+hidden 3D structure while remaining faithful to the input image. While existing
+methods obtain impressive results in generating 3D models from text prompts,
+they do not provide an easy approach for conditioning on input RGB data.
+Na\"ive extensions of these methods often lead to improper alignment in
+appearance between the input image and the 3D reconstructions. We address these
+challenges by introducing Image Constrained Radiance Fields (ConRad), a novel
+variant of neural radiance fields. ConRad is an efficient 3D representation
+that explicitly captures the appearance of an input image in one viewpoint. We
+propose a training algorithm that leverages the single RGB image in conjunction
+with pretrained Diffusion Models to optimize the parameters of a ConRad
+representation. Extensive experiments show that ConRad representations can
+simplify preservation of image details while producing a realistic 3D
+reconstruction. Compared to existing state-of-the-art baselines, we show that
+our 3D reconstructions remain more faithful to the input and produce more
+consistent 3D models while demonstrating significantly improved quantitative
+performance on a ShapeNet object benchmark.
+</p></li>
+</ul>
+
+<h3>Title: Control3D: Towards Controllable Text-to-3D Generation. (arXiv:2311.05461v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05461">http://arxiv.org/abs/2311.05461</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05461]] Control3D: Towards Controllable Text-to-3D Generation(http://arxiv.org/abs/2311.05461)</code></li>
+<li>Summary: <p>Recent remarkable advances in large-scale text-to-image diffusion models have
+inspired a significant breakthrough in text-to-3D generation, pursuing 3D
+content creation solely from a given text prompt. However, existing text-to-3D
+techniques lack a crucial ability in the creative process: interactively
+control and shape the synthetic 3D contents according to users' desired
+specifications (e.g., sketch). To alleviate this issue, we present the first
+attempt for text-to-3D generation conditioning on the additional hand-drawn
+sketch, namely Control3D, which enhances controllability for users. In
+particular, a 2D conditioned diffusion model (ControlNet) is remoulded to guide
+the learning of 3D scene parameterized as NeRF, encouraging each view of 3D
+scene aligned with the given text prompt and hand-drawn sketch. Moreover, we
+exploit a pre-trained differentiable photo-to-sketch model to directly estimate
+the sketch of the rendered image over synthetic 3D scene. Such estimated sketch
+along with each sampled view is further enforced to be geometrically consistent
+with the given sketch, pursuing better controllable text-to-3D generation.
+Through extensive experiments, we demonstrate that our proposal can generate
+accurate and faithful 3D scenes that align closely with the input text prompts
+and sketches.
+</p></li>
+</ul>
+
+<h3>Title: ControlStyle: Text-Driven Stylized Image Generation Using Diffusion Priors. (arXiv:2311.05463v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05463">http://arxiv.org/abs/2311.05463</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05463]] ControlStyle: Text-Driven Stylized Image Generation Using Diffusion Priors(http://arxiv.org/abs/2311.05463)</code></li>
+<li>Summary: <p>Recently, the multimedia community has witnessed the rise of diffusion models
+trained on large-scale multi-modal data for visual content creation,
+particularly in the field of text-to-image generation. In this paper, we
+propose a new task for ``stylizing'' text-to-image models, namely text-driven
+stylized image generation, that further enhances editability in content
+creation. Given input text prompt and style image, this task aims to produce
+stylized images which are both semantically relevant to input text prompt and
+meanwhile aligned with the style image in style. To achieve this, we present a
+new diffusion model (ControlStyle) via upgrading a pre-trained text-to-image
+model with a trainable modulation network enabling more conditions of text
+prompts and style images. Moreover, diffusion style and content regularizations
+are simultaneously introduced to facilitate the learning of this modulation
+network with these diffusion priors, pursuing high-quality stylized
+text-to-image generation. Extensive experiments demonstrate the effectiveness
+of our ControlStyle in producing more visually pleasing and artistic results,
+surpassing a simple combination of text-to-image model and conventional style
+transfer techniques.
+</p></li>
+</ul>
+
+<h3>Title: 3DStyle-Diffusion: Pursuing Fine-grained Text-driven 3D Stylization with 2D Diffusion Models. (arXiv:2311.05464v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05464">http://arxiv.org/abs/2311.05464</a></li>
+<li>Code URL: https://github.com/yanghb22-fdu/3dstyle-diffusion-official</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05464]] 3DStyle-Diffusion: Pursuing Fine-grained Text-driven 3D Stylization with 2D Diffusion Models(http://arxiv.org/abs/2311.05464)</code></li>
+<li>Summary: <p>3D content creation via text-driven stylization has played a fundamental
+challenge to multimedia and graphics community. Recent advances of cross-modal
+foundation models (e.g., CLIP) have made this problem feasible. Those
+approaches commonly leverage CLIP to align the holistic semantics of stylized
+mesh with the given text prompt. Nevertheless, it is not trivial to enable more
+controllable stylization of fine-grained details in 3D meshes solely based on
+such semantic-level cross-modal supervision. In this work, we propose a new
+3DStyle-Diffusion model that triggers fine-grained stylization of 3D meshes
+with additional controllable appearance and geometric guidance from 2D
+Diffusion models. Technically, 3DStyle-Diffusion first parameterizes the
+texture of 3D mesh into reflectance properties and scene lighting using
+implicit MLP networks. Meanwhile, an accurate depth map of each sampled view is
+achieved conditioned on 3D mesh. Then, 3DStyle-Diffusion leverages a
+pre-trained controllable 2D Diffusion model to guide the learning of rendered
+images, encouraging the synthesized image of each view semantically aligned
+with text prompt and geometrically consistent with depth map. This way
+elegantly integrates both image rendering via implicit MLP networks and
+diffusion process of image synthesis in an end-to-end fashion, enabling a
+high-quality fine-grained stylization of 3D meshes. We also build a new dataset
+derived from Objaverse and the evaluation protocol for this task. Through both
+qualitative and quantitative experiments, we validate the capability of our
+3DStyle-Diffusion. Source code and data are available at
+\url{https://github.com/yanghb22-fdu/3DStyle-Diffusion-Official}.
+</p></li>
+</ul>
+
+<h3>Title: LCM-LoRA: A Universal Stable-Diffusion Acceleration Module. (arXiv:2311.05556v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05556">http://arxiv.org/abs/2311.05556</a></li>
+<li>Code URL: https://github.com/luosiallen/latent-consistency-model</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05556]] LCM-LoRA: A Universal Stable-Diffusion Acceleration Module(http://arxiv.org/abs/2311.05556)</code></li>
+<li>Summary: <p>Latent Consistency Models (LCMs) have achieved impressive performance in
+accelerating text-to-image generative tasks, producing high-quality images with
+minimal inference steps. LCMs are distilled from pre-trained latent diffusion
+models (LDMs), requiring only ~32 A100 GPU training hours. This report further
+extends LCMs' potential in two aspects: First, by applying LoRA distillation to
+Stable-Diffusion models including SD-V1.5, SSD-1B, and SDXL, we have expanded
+LCM's scope to larger models with significantly less memory consumption,
+achieving superior image generation quality. Second, we identify the LoRA
+parameters obtained through LCM distillation as a universal Stable-Diffusion
+acceleration module, named LCM-LoRA. LCM-LoRA can be directly plugged into
+various Stable-Diffusion fine-tuned models or LoRAs without training, thus
+representing a universally applicable accelerator for diverse image generation
+tasks. Compared with previous numerical PF-ODE solvers such as DDIM,
+DPM-Solver, LCM-LoRA can be viewed as a plug-in neural PF-ODE solver that
+possesses strong generalization abilities. Project page:
+https://github.com/luosiallen/latent-consistency-model.
+</p></li>
+</ul>
+
+<h3>Title: Predicting the Position Uncertainty at the Time of Closest Approach with Diffusion Models. (arXiv:2311.05417v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05417">http://arxiv.org/abs/2311.05417</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05417]] Predicting the Position Uncertainty at the Time of Closest Approach with Diffusion Models(http://arxiv.org/abs/2311.05417)</code></li>
+<li>Summary: <p>The risk of collision between resident space objects has significantly
+increased in recent years. As a result, spacecraft collision avoidance
+procedures have become an essential part of satellite operations. To ensure
+safe and effective space activities, satellite owners and operators rely on
+constantly updated estimates of encounters. These estimates include the
+uncertainty associated with the position of each object at the expected TCA.
+These estimates are crucial in planning risk mitigation measures, such as
+collision avoidance manoeuvres. As the TCA approaches, the accuracy of these
+estimates improves, as both objects' orbit determination and propagation
+procedures are made for increasingly shorter time intervals. However, this
+improvement comes at the cost of taking place close to the critical decision
+moment. This means that safe avoidance manoeuvres might not be possible or
+could incur significant costs. Therefore, knowing the evolution of this
+variable in advance can be crucial for operators. This work proposes a machine
+learning model based on diffusion models to forecast the position uncertainty
+of objects involved in a close encounter, particularly for the secondary object
+(usually debris), which tends to be more unpredictable. We compare the
+performance of our model with other state-of-the-art solutions and a na\"ive
+baseline approach, showing that the proposed solution has the potential to
+significantly improve the safety and effectiveness of spacecraft operations.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion Based Causal Representation Learning. (arXiv:2311.05421v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05421">http://arxiv.org/abs/2311.05421</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05421]] Diffusion Based Causal Representation Learning(http://arxiv.org/abs/2311.05421)</code></li>
+<li>Summary: <p>Causal reasoning can be considered a cornerstone of intelligent systems.
+Having access to an underlying causal graph comes with the promise of
+cause-effect estimation and the identification of efficient and safe
+interventions. However, learning causal representations remains a major
+challenge, due to the complexity of many real-world systems. Previous works on
+causal representation learning have mostly focused on Variational Auto-Encoders
+(VAE). These methods only provide representations from a point estimate, and
+they are unsuitable to handle high dimensions. To overcome these problems, we
+proposed a new Diffusion-based Causal Representation Learning (DCRL) algorithm.
+This algorithm uses diffusion-based representations for causal discovery. DCRL
+offers access to infinite dimensional latent codes, which encode different
+levels of information in the latent code. In a first proof of principle, we
+investigate the use of DCRL for causal representation learning. We further
+demonstrate experimentally that this approach performs comparably well in
+identifying the causal structure and causal variables.
+</p></li>
+</ul>
+
+<h3>Title: Bayesian Methods for Media Mix Modelling with shape and funnel effects. (arXiv:2311.05587v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05587">http://arxiv.org/abs/2311.05587</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05587]] Bayesian Methods for Media Mix Modelling with shape and funnel effects(http://arxiv.org/abs/2311.05587)</code></li>
+<li>Summary: <p>In recent years, significant progress in generative AI has highlighted the
+important role of physics-inspired models that utilize advanced mathematical
+concepts based on fundamental physics principles to enhance artificial
+intelligence capabilities. Among these models, those based on diffusion
+equations have greatly improved image quality. This study aims to explore the
+potential uses of Maxwell-Boltzmann equation, which forms the basis of the
+kinetic theory of gases, and the Michaelis-Menten model in Marketing Mix
+Modelling (MMM) applications. We propose incorporating these equations into
+Hierarchical Bayesian models to analyse consumer behaviour in the context of
+advertising. These equation sets excel in accurately describing the random
+dynamics in complex systems like social interactions and consumer-advertising
+interactions.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion-Generative Multi-Fidelity Learning for Physical Simulation. (arXiv:2311.05606v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05606">http://arxiv.org/abs/2311.05606</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05606]] Diffusion-Generative Multi-Fidelity Learning for Physical Simulation(http://arxiv.org/abs/2311.05606)</code></li>
+<li>Summary: <p>Multi-fidelity surrogate learning is important for physical simulation
+related applications in that it avoids running numerical solvers from scratch,
+which is known to be costly, and it uses multi-fidelity examples for training
+and greatly reduces the cost of data collection. Despite the variety of
+existing methods, they all build a model to map the input parameters outright
+to the solution output. Inspired by the recent breakthrough in generative
+models, we take an alternative view and consider the solution output as
+generated from random noises. We develop a diffusion-generative multi-fidelity
+(DGMF) learning method based on stochastic differential equations (SDE), where
+the generation is a continuous denoising process. We propose a conditional
+score model to control the solution generation by the input parameters and the
+fidelity. By conditioning on additional inputs (temporal or spacial variables),
+our model can efficiently learn and predict multi-dimensional solution arrays.
+Our method naturally unifies discrete and continuous fidelity modeling. The
+advantage of our method in several typical applications shows a promising new
+direction for multi-fidelity learning.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: POISE: Pose Guided Human Silhouette Extraction under Occlusions. (arXiv:2311.05077v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05077">http://arxiv.org/abs/2311.05077</a></li>
+<li>Code URL: https://github.com/take2rohit/poise</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05077]] POISE: Pose Guided Human Silhouette Extraction under Occlusions(http://arxiv.org/abs/2311.05077)</code></li>
+<li>Summary: <p>Human silhouette extraction is a fundamental task in computer vision with
+applications in various downstream tasks. However, occlusions pose a
+significant challenge, leading to incomplete and distorted silhouettes. To
+address this challenge, we introduce POISE: Pose Guided Human Silhouette
+Extraction under Occlusions, a novel self-supervised fusion framework that
+enhances accuracy and robustness in human silhouette prediction. By combining
+initial silhouette estimates from a segmentation model with human joint
+predictions from a 2D pose estimation model, POISE leverages the complementary
+strengths of both approaches, effectively integrating precise body shape
+information and spatial information to tackle occlusions. Furthermore, the
+self-supervised nature of \POISE eliminates the need for costly annotations,
+making it scalable and practical. Extensive experimental results demonstrate
+its superiority in improving silhouette extraction under occlusions, with
+promising results in downstream tasks such as gait recognition. The code for
+our method is available https://github.com/take2rohit/poise.
+</p></li>
+</ul>
+
+<h3>Title: A Deep Learning Method for Simultaneous Denoising and Missing Wedge Reconstruction in Cryogenic Electron Tomography. (arXiv:2311.05539v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05539">http://arxiv.org/abs/2311.05539</a></li>
+<li>Code URL: https://github.com/mli-lab/deepdewedge</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05539]] A Deep Learning Method for Simultaneous Denoising and Missing Wedge Reconstruction in Cryogenic Electron Tomography(http://arxiv.org/abs/2311.05539)</code></li>
+<li>Summary: <p>Cryogenic electron tomography (cryo-ET) is a technique for imaging biological
+samples such as viruses, cells, and proteins in 3D. A microscope collects a
+series of 2D projections of the sample, and the goal is to reconstruct the 3D
+density of the sample called the tomogram. This is difficult as the 2D
+projections have a missing wedge of information and are noisy. Tomograms
+reconstructed with conventional methods, such as filtered back-projection,
+suffer from the noise, and from artifacts and anisotropic resolution due to the
+missing wedge of information. To improve the visual quality and resolution of
+such tomograms, we propose a deep-learning approach for simultaneous denoising
+and missing wedge reconstruction called DeepDeWedge. DeepDeWedge is based on
+fitting a neural network to the 2D projections with a self-supervised loss
+inspired by noise2noise-like methods. The algorithm requires no training or
+ground truth data. Experiments on synthetic and real cryo-ET data show that
+DeepDeWedge achieves competitive performance for deep learning-based denoising
+and missing wedge reconstruction of cryo-ET tomograms.
+</p></li>
+</ul>
+
+<h3>Title: High-Performance Transformers for Table Structure Recognition Need Early Convolutions. (arXiv:2311.05565v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05565">http://arxiv.org/abs/2311.05565</a></li>
+<li>Code URL: https://github.com/poloclub/tsr-convstem</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05565]] High-Performance Transformers for Table Structure Recognition Need Early Convolutions(http://arxiv.org/abs/2311.05565)</code></li>
+<li>Summary: <p>Table structure recognition (TSR) aims to convert tabular images into a
+machine-readable format, where a visual encoder extracts image features and a
+textual decoder generates table-representing tokens. Existing approaches use
+classic convolutional neural network (CNN) backbones for the visual encoder and
+transformers for the textual decoder. However, this hybrid CNN-Transformer
+architecture introduces a complex visual encoder that accounts for nearly half
+of the total model parameters, markedly reduces both training and inference
+speed, and hinders the potential for self-supervised learning in TSR. In this
+work, we design a lightweight visual encoder for TSR without sacrificing
+expressive power. We discover that a convolutional stem can match classic CNN
+backbone performance, with a much simpler model. The convolutional stem strikes
+an optimal balance between two crucial factors for high-performance TSR: a
+higher receptive field (RF) ratio and a longer sequence length. This allows it
+to "see" an appropriate portion of the table and "store" the complex table
+structure within sufficient context length for the subsequent transformer. We
+conducted reproducible ablation studies and open-sourced our code at
+https://github.com/poloclub/tsr-convstem to enhance transparency, inspire
+innovations, and facilitate fair comparisons in our domain as tables are a
+promising modality for representation learning.
+</p></li>
+</ul>
+
+<h3>Title: A comparative analysis between Conformer-Transducer, Whisper, and wav2vec2 for improving the child speech recognition. (arXiv:2311.04936v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04936">http://arxiv.org/abs/2311.04936</a></li>
+<li>Code URL: https://github.com/c3imaging/child_asr_conformer</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04936]] A comparative analysis between Conformer-Transducer, Whisper, and wav2vec2 for improving the child speech recognition(http://arxiv.org/abs/2311.04936)</code></li>
+<li>Summary: <p>Automatic Speech Recognition (ASR) systems have progressed significantly in
+their performance on adult speech data; however, transcribing child speech
+remains challenging due to the acoustic differences in the characteristics of
+child and adult voices. This work aims to explore the potential of adapting
+state-of-the-art Conformer-transducer models to child speech to improve child
+speech recognition performance. Furthermore, the results are compared with
+those of self-supervised wav2vec2 models and semi-supervised multi-domain
+Whisper models that were previously finetuned on the same data. We demonstrate
+that finetuning Conformer-transducer models on child speech yields significant
+improvements in ASR performance on child speech, compared to the non-finetuned
+models. We also show Whisper and wav2vec2 adaptation on different child speech
+datasets. Our detailed comparative analysis shows that wav2vec2 provides the
+most consistent performance improvements among the three methods studied.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Tuning-less Object Naming with a Foundation Model. (arXiv:2311.04924v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04924">http://arxiv.org/abs/2311.04924</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04924]] Tuning-less Object Naming with a Foundation Model(http://arxiv.org/abs/2311.04924)</code></li>
+<li>Summary: <p>We implement a real-time object naming system that enables learning a set of
+named entities never seen. Our approach employs an existing foundation model
+that we consider ready to see anything before starting. It turns seen images
+into relatively small feature vectors that we associate with index to a
+gradually built vocabulary without any training of fine-tuning of the model.
+Our contribution is using the association mechanism known from transformers as
+attention. It has features that support generalization from irrelevant
+information for distinguishing the entities and potentially enable associating
+with much more than indices to vocabulary. As a result, the system can work in
+a one-shot manner and correctly name objects named in different contents. We
+also outline implementation details of the system modules integrated by a
+blackboard architecture. Finally, we investigate the system's quality, mainly
+how many objects it can handle in this way.
+</p></li>
+</ul>
+
+<h3>Title: Towards End-to-End Spoken Grammatical Error Correction. (arXiv:2311.05550v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05550">http://arxiv.org/abs/2311.05550</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05550]] Towards End-to-End Spoken Grammatical Error Correction(http://arxiv.org/abs/2311.05550)</code></li>
+<li>Summary: <p>Grammatical feedback is crucial for L2 learners, teachers, and testers.
+Spoken grammatical error correction (GEC) aims to supply feedback to L2
+learners on their use of grammar when speaking. This process usually relies on
+a cascaded pipeline comprising an ASR system, disfluency removal, and GEC, with
+the associated concern of propagating errors between these individual modules.
+In this paper, we introduce an alternative "end-to-end" approach to spoken GEC,
+exploiting a speech recognition foundation model, Whisper. This foundation
+model can be used to replace the whole framework or part of it, e.g., ASR and
+disfluency removal. These end-to-end approaches are compared to more standard
+cascaded approaches on the data obtained from a free-speaking spoken language
+assessment test, Linguaskill. Results demonstrate that end-to-end spoken GEC is
+possible within this architecture, but the lack of available data limits
+current performance compared to a system using large quantities of text-based
+GEC data. Conversely, end-to-end disfluency detection and removal, which is
+easier for the attention-based Whisper to learn, does outperform cascaded
+approaches. Additionally, the paper discusses the challenges of providing
+feedback to candidates when using end-to-end systems for spoken GEC.
+</p></li>
+</ul>
+
+<h3>Title: Multimodal Clinical Benchmark for Emergency Care (MC-BEC): A Comprehensive Benchmark for Evaluating Foundation Models in Emergency Medicine. (arXiv:2311.04937v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04937">http://arxiv.org/abs/2311.04937</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04937]] Multimodal Clinical Benchmark for Emergency Care (MC-BEC): A Comprehensive Benchmark for Evaluating Foundation Models in Emergency Medicine(http://arxiv.org/abs/2311.04937)</code></li>
+<li>Summary: <p>We propose the Multimodal Clinical Benchmark for Emergency Care (MC-BEC), a
+comprehensive benchmark for evaluating foundation models in Emergency Medicine
+using a dataset of 100K+ continuously monitored Emergency Department visits
+from 2020-2022. MC-BEC focuses on clinically relevant prediction tasks at
+timescales from minutes to days, including predicting patient decompensation,
+disposition, and emergency department (ED) revisit, and includes a standardized
+evaluation framework with train-test splits and evaluation metrics. The
+multimodal dataset includes a wide range of detailed clinical data, including
+triage information, prior diagnoses and medications, continuously measured
+vital signs, electrocardiogram and photoplethysmograph waveforms, orders placed
+and medications administered throughout the visit, free-text reports of imaging
+studies, and information on ED diagnosis, disposition, and subsequent revisits.
+We provide performance baselines for each prediction task to enable the
+evaluation of multimodal, multitask models. We believe that MC-BEC will
+encourage researchers to develop more effective, generalizable, and accessible
+foundation models for multimodal clinical data.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Robust Retraining-free GAN Fingerprinting via Personalized Normalization. (arXiv:2311.05478v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05478">http://arxiv.org/abs/2311.05478</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05478]] Robust Retraining-free GAN Fingerprinting via Personalized Normalization(http://arxiv.org/abs/2311.05478)</code></li>
+<li>Summary: <p>In recent years, there has been significant growth in the commercial
+applications of generative models, licensed and distributed by model developers
+to users, who in turn use them to offer services. In this scenario, there is a
+need to track and identify the responsible user in the presence of a violation
+of the license agreement or any kind of malicious usage. Although there are
+methods enabling Generative Adversarial Networks (GANs) to include invisible
+watermarks in the images they produce, generating a model with a different
+watermark, referred to as a fingerprint, for each user is time- and
+resource-consuming due to the need to retrain the model to include the desired
+fingerprint. In this paper, we propose a retraining-free GAN fingerprinting
+method that allows model developers to easily generate model copies with the
+same functionality but different fingerprints. The generator is modified by
+inserting additional Personalized Normalization (PN) layers whose parameters
+(scaling and bias) are generated by two dedicated shallow networks (ParamGen
+Nets) taking the fingerprint as input. A watermark decoder is trained
+simultaneously to extract the fingerprint from the generated images. The
+proposed method can embed different fingerprints inside the GAN by just
+changing the input of the ParamGen Nets and performing a feedforward pass,
+without finetuning or retraining. The performance of the proposed method in
+terms of robustness against both model-level and image-level attacks is also
+superior to the state-of-the-art.
+</p></li>
+</ul>
+
+<h3>Title: L-WaveBlock: A Novel Feature Extractor Leveraging Wavelets for Generative Adversarial Networks. (arXiv:2311.05548v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05548">http://arxiv.org/abs/2311.05548</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05548]] L-WaveBlock: A Novel Feature Extractor Leveraging Wavelets for Generative Adversarial Networks(http://arxiv.org/abs/2311.05548)</code></li>
+<li>Summary: <p>Generative Adversarial Networks (GANs) have risen to prominence in the field
+of deep learning, facilitating the generation of realistic data from random
+noise. The effectiveness of GANs often depends on the quality of feature
+extraction, a critical aspect of their architecture. This paper introduces
+L-WaveBlock, a novel and robust feature extractor that leverages the
+capabilities of the Discrete Wavelet Transform (DWT) with deep learning
+methodologies. L-WaveBlock is catered to quicken the convergence of GAN
+generators while simultaneously enhancing their performance. The paper
+demonstrates the remarkable utility of L-WaveBlock across three datasets, a
+road satellite imagery dataset, the CelebA dataset and the GoPro dataset,
+showcasing its ability to ease feature extraction and make it more efficient.
+By utilizing DWT, L-WaveBlock efficiently captures the intricate details of
+both structural and textural details, and further partitions feature maps into
+orthogonal subbands across multiple scales while preserving essential
+information at the same time. Not only does it lead to faster convergence, but
+also gives competent results on every dataset by employing the L-WaveBlock. The
+proposed method achieves an Inception Score of 3.6959 and a Structural
+Similarity Index of 0.4261 on the maps dataset, a Peak Signal-to-Noise Ratio of
+29.05 and a Structural Similarity Index of 0.874 on the CelebA dataset. The
+proposed method performs competently to the state-of-the-art for the image
+denoising dataset, albeit not better, but still leads to faster convergence
+than conventional methods. With this, L-WaveBlock emerges as a robust and
+efficient tool for enhancing GAN-based image generation, demonstrating superior
+convergence speed and competitive performance across multiple datasets for
+image resolution, image generation and image denoising.
+</p></li>
+</ul>
+
+<h3>Title: Accuracy of a Vision-Language Model on Challenging Medical Cases. (arXiv:2311.05591v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05591">http://arxiv.org/abs/2311.05591</a></li>
+<li>Code URL: https://github.com/2v/gpt4v-image-challenge</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05591]] Accuracy of a Vision-Language Model on Challenging Medical Cases(http://arxiv.org/abs/2311.05591)</code></li>
+<li>Summary: <p>Background: General-purpose large language models that utilize both text and
+images have not been evaluated on a diverse array of challenging medical cases.
+</p>
+<p>Methods: Using 934 cases from the NEJM Image Challenge published between 2005
+and 2023, we evaluated the accuracy of the recently released Generative
+Pre-trained Transformer 4 with Vision model (GPT-4V) compared to human
+respondents overall and stratified by question difficulty, image type, and skin
+tone. We further conducted a physician evaluation of GPT-4V on 69 NEJM
+clinicopathological conferences (CPCs). Analyses were conducted for models
+utilizing text alone, images alone, and both text and images.
+</p>
+<p>Results: GPT-4V achieved an overall accuracy of 61% (95% CI, 58 to 64%)
+compared to 49% (95% CI, 49 to 50%) for humans. GPT-4V outperformed humans at
+all levels of difficulty and disagreement, skin tones, and image types; the
+exception was radiographic images, where performance was equivalent between
+GPT-4V and human respondents. Longer, more informative captions were associated
+with improved performance for GPT-4V but similar performance for human
+respondents. GPT-4V included the correct diagnosis in its differential for 80%
+(95% CI, 68 to 88%) of CPCs when using text alone, compared to 58% (95% CI, 45
+to 70%) of CPCs when using both images and text.
+</p>
+<p>Conclusions: GPT-4V outperformed human respondents on challenging medical
+cases and was able to synthesize information from both images and text, but
+performance deteriorated when images were added to highly informative text.
+Overall, our results suggest that multimodal AI models may be useful in medical
+diagnostic reasoning but that their accuracy may depend heavily on context.
+</p></li>
+</ul>
+
+<h3>Title: Are cascade dialogue state tracking models speaking out of turn in spoken dialogues?. (arXiv:2311.04922v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04922">http://arxiv.org/abs/2311.04922</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04922]] Are cascade dialogue state tracking models speaking out of turn in spoken dialogues?(http://arxiv.org/abs/2311.04922)</code></li>
+<li>Summary: <p>In Task-Oriented Dialogue (TOD) systems, correctly updating the system's
+understanding of the user's needs is key to a smooth interaction. Traditionally
+TOD systems are composed of several modules that interact with one another.
+While each of these components is the focus of active research communities,
+their behavior in interaction can be overlooked. This paper proposes a
+comprehensive analysis of the errors of state of the art systems in complex
+settings such as Dialogue State Tracking which highly depends on the dialogue
+context. Based on spoken MultiWoz, we identify that errors on non-categorical
+slots' values are essential to address in order to bridge the gap between
+spoken and chat-based dialogue systems. We explore potential solutions to
+improve transcriptions and help dialogue state tracking generative models
+correct such errors.
+</p></li>
+</ul>
+
+<h3>Title: More Robots are Coming: Large Multimodal Models (ChatGPT) can Solve Visually Diverse Images of Parsons Problems. (arXiv:2311.04926v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04926">http://arxiv.org/abs/2311.04926</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04926]] More Robots are Coming: Large Multimodal Models (ChatGPT) can Solve Visually Diverse Images of Parsons Problems(http://arxiv.org/abs/2311.04926)</code></li>
+<li>Summary: <p>The advent of large language models is reshaping computing education. Recent
+research has demonstrated that these models can produce better explanations
+than students, answer multiple-choice questions at or above the class average,
+and generate code that can pass automated tests in introductory courses. These
+capabilities have prompted instructors to rapidly adapt their courses and
+assessment methods to accommodate changes in learning objectives and the
+potential for academic integrity violations. While some scholars have advocated
+for the integration of visual problems as a safeguard against the capabilities
+of language models, new multimodal language models now have vision and language
+capabilities that may allow them to analyze and solve visual problems. In this
+paper, we evaluate the performance of two large multimodal models on visual
+assignments, with a specific focus on Parsons problems presented across diverse
+visual representations. Our results show that GPT-4V solved 96.7\% of these
+visual problems, struggling minimally with a single Parsons problem.
+Conversely, Bard performed poorly by only solving 69.2\% of problems,
+struggling with common issues like hallucinations and refusals. These findings
+suggest that merely transitioning to visual programming problems might not be a
+panacea to issues of academic integrity in the generative AI era.
+</p></li>
+</ul>
+
+<h3>Title: PRODIGy: a PROfile-based DIalogue Generation dataset. (arXiv:2311.05195v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05195">http://arxiv.org/abs/2311.05195</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05195]] PRODIGy: a PROfile-based DIalogue Generation dataset(http://arxiv.org/abs/2311.05195)</code></li>
+<li>Summary: <p>Providing dialogue agents with a profile representation can improve their
+consistency and coherence, leading to better conversations. However, current
+profile-based dialogue datasets for training such agents contain either
+explicit profile representations that are simple and dialogue-specific, or
+implicit representations that are difficult to collect. In this work, we
+propose a unified framework in which we bring together both standard and more
+sophisticated profile representations by creating a new resource where each
+dialogue is aligned with all possible speaker representations such as
+communication style, biographies, and personality. This framework allows to
+test several baselines built using generative language models with several
+profile configurations. The automatic evaluation shows that profile-based
+models have better generalisation capabilities than models trained on dialogues
+only, both in-domain and cross-domain settings. These results are consistent
+for fine-tuned models and instruction-based LLMs. Additionally, human
+evaluation demonstrates a clear preference for generations consistent with both
+profile and context. Finally, to account for possible privacy concerns, all
+experiments are done under two configurations: inter-character and
+intra-character. In the former, the LM stores the information about the
+character in its internal representation, while in the latter, the LM does not
+retain any personal information but uses it only at inference time.
+</p></li>
+</ul>
+
+<h3>Title: Cognitively Inspired Components for Social Conversational Agents. (arXiv:2311.05450v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05450">http://arxiv.org/abs/2311.05450</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05450]] Cognitively Inspired Components for Social Conversational Agents(http://arxiv.org/abs/2311.05450)</code></li>
+<li>Summary: <p>Current conversational agents (CA) have seen improvement in conversational
+quality in recent years due to the influence of large language models (LLMs)
+like GPT3. However, two key categories of problem remain. Firstly there are the
+unique technical problems resulting from the approach taken in creating the CA,
+such as scope with retrieval agents and the often nonsensical answers of former
+generative agents. Secondly, humans perceive CAs as social actors, and as a
+result expect the CA to adhere to social convention. Failure on the part of the
+CA in this respect can lead to a poor interaction and even the perception of
+threat by the user. As such, this paper presents a survey highlighting a
+potential solution to both categories of problem through the introduction of
+cognitively inspired additions to the CA. Through computational facsimiles of
+semantic and episodic memory, emotion, working memory, and the ability to
+learn, it is possible to address both the technical and social problems
+encountered by CAs.
+</p></li>
+</ul>
+
+<h3>Title: Leveraging Speculative Sampling and KV-Cache Optimizations Together for Generative AI using OpenVINO. (arXiv:2311.04951v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04951">http://arxiv.org/abs/2311.04951</a></li>
+<li>Code URL: https://github.com/openvinotoolkit/openvino_notebooks</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04951]] Leveraging Speculative Sampling and KV-Cache Optimizations Together for Generative AI using OpenVINO(http://arxiv.org/abs/2311.04951)</code></li>
+<li>Summary: <p>Inference optimizations are critical for improving user experience and
+reducing infrastructure costs and power consumption. In this article, we
+illustrate a form of dynamic execution known as speculative sampling to reduce
+the overall latency of text generation and compare it with standard
+autoregressive sampling. This can be used together with model-based
+optimizations (e.g. quantization) to provide an optimized solution. Both
+sampling methods make use of KV caching. A Jupyter notebook and some sample
+executions are provided.
+</p></li>
+</ul>
+
+<h3>Title: Quantum Generative Modeling of Sequential Data with Trainable Token Embedding. (arXiv:2311.05050v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05050">http://arxiv.org/abs/2311.05050</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05050]] Quantum Generative Modeling of Sequential Data with Trainable Token Embedding(http://arxiv.org/abs/2311.05050)</code></li>
+<li>Summary: <p>Generative models are a class of machine learning models that aim to learn
+the underlying probability distribution of data. Unlike discriminative models,
+generative models focus on capturing the data's inherent structure, allowing
+them to generate new samples that resemble the original data. To fully exploit
+the potential of modeling probability distributions using quantum physics, a
+quantum-inspired generative model known as the Born machines have shown great
+advancements in learning classical and quantum data over matrix product
+state(MPS) framework. The Born machines support tractable log-likelihood,
+autoregressive and mask sampling, and have shown outstanding performance in
+various unsupervised learning tasks. However, much of the current research has
+been centered on improving the expressive power of MPS, predominantly embedding
+each token directly by a corresponding tensor index. In this study, we
+generalize the embedding method into trainable quantum measurement operators
+that can be simultaneously honed with MPS. Our study indicated that combined
+with trainable embedding, Born machines can exhibit better performance and
+learn deeper correlations from the dataset.
+</p></li>
+</ul>
+
+<h3>Title: Social Media Bot Detection using Dropout-GAN. (arXiv:2311.05079v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05079">http://arxiv.org/abs/2311.05079</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05079]] Social Media Bot Detection using Dropout-GAN(http://arxiv.org/abs/2311.05079)</code></li>
+<li>Summary: <p>Bot activity on social media platforms is a pervasive problem, undermining
+the credibility of online discourse and potentially leading to cybercrime. We
+propose an approach to bot detection using Generative Adversarial Networks
+(GAN). We discuss how we overcome the issue of mode collapse by utilizing
+multiple discriminators to train against one generator, while decoupling the
+discriminator to perform social media bot detection and utilizing the generator
+for data augmentation. In terms of classification accuracy, our approach
+outperforms the state-of-the-art techniques in this field. We also show how the
+generator in the GAN can be used to evade such a classification technique.
+</p></li>
+</ul>
+
+<h3>Title: GeoFormer: Predicting Human Mobility using Generative Pre-trained Transformer (GPT). (arXiv:2311.05092v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05092">http://arxiv.org/abs/2311.05092</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05092]] GeoFormer: Predicting Human Mobility using Generative Pre-trained Transformer (GPT)(http://arxiv.org/abs/2311.05092)</code></li>
+<li>Summary: <p>Predicting human mobility holds significant practical value, with
+applications ranging from enhancing disaster risk planning to simulating
+epidemic spread. In this paper, we present the GeoFormer, a decoder-only
+transformer model adapted from the GPT architecture to forecast human mobility.
+Our proposed model is rigorously tested in the context of the HuMob Challenge
+2023 -- a competition designed to evaluate the performance of prediction models
+on standardized datasets to predict human mobility. The challenge leverages two
+datasets encompassing urban-scale data of 25,000 and 100,000 individuals over a
+longitudinal period of 75 days. GeoFormer stands out as a top performer in the
+competition, securing a place in the top-3 ranking. Its success is underscored
+by performing well on both performance metrics chosen for the competition --
+the GEO-BLEU and the Dynamic Time Warping (DTW) measures. The performance of
+the GeoFormer on the HuMob Challenge 2023 underscores its potential to make
+substantial contributions to the field of human mobility prediction, with
+far-reaching implications for disaster preparedness, epidemic control, and
+beyond.
+</p></li>
+</ul>
+
+<h3>Title: Parkinson's Disease Detection through Vocal Biomarkers and Advanced Machine Learning Algorithms: A Comprehensive Study. (arXiv:2311.05435v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05435">http://arxiv.org/abs/2311.05435</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05435]] Parkinson's Disease Detection through Vocal Biomarkers and Advanced Machine Learning Algorithms: A Comprehensive Study(http://arxiv.org/abs/2311.05435)</code></li>
+<li>Summary: <p>Parkinson's disease (PD) is a prevalent neurodegenerative disorder known for
+its impact on motor neurons, causing symptoms like tremors, stiffness, and gait
+difficulties. This study explores the potential of vocal feature alterations in
+PD patients as a means of early disease prediction. This research aims to
+predict the onset of Parkinson's disease. Utilizing a variety of advanced
+machine-learning algorithms, including XGBoost, LightGBM, Bagging, AdaBoost,
+and Support Vector Machine, among others, the study evaluates the predictive
+performance of these models using metrics such as accuracy, area under the
+curve (AUC), sensitivity, and specificity. The findings of this comprehensive
+analysis highlight LightGBM as the most effective model, achieving an
+impressive accuracy rate of 96%, alongside a matching AUC of 96%. LightGBM
+exhibited a remarkable sensitivity of 100% and specificity of 94.43%,
+surpassing other machine learning algorithms in accuracy and AUC scores. Given
+the complexities of Parkinson's disease and its challenges in early diagnosis,
+this study underscores the significance of leveraging vocal biomarkers coupled
+with advanced machine-learning techniques for precise and timely PD detection.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Explained anomaly detection in text reviews: Can subjective scenarios be correctly evaluated?. (arXiv:2311.04948v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04948">http://arxiv.org/abs/2311.04948</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04948]] Explained anomaly detection in text reviews: Can subjective scenarios be correctly evaluated?(http://arxiv.org/abs/2311.04948)</code></li>
+<li>Summary: <p>This paper presents a pipeline to detect and explain anomalous reviews in
+online platforms. The pipeline is made up of three modules and allows the
+detection of reviews that do not generate value for users due to either
+worthless or malicious composition. The classifications are accompanied by a
+normality score and an explanation that justifies the decision made. The
+pipeline's ability to solve the anomaly detection task was evaluated using
+different datasets created from a large Amazon database. Additionally, a study
+comparing three explainability techniques involving 241 participants was
+conducted to assess the explainability module. The study aimed to measure the
+impact of explanations on the respondents' ability to reproduce the
+classification model and their perceived usefulness. This work can be useful to
+automate tasks in review online platforms, such as those for electronic
+commerce, and offers inspiration for addressing similar problems in the field
+of anomaly detection in textual data. We also consider it interesting to have
+carried out a human evaluation of the capacity of different explainability
+techniques in a real and infrequent scenario such as the detection of anomalous
+reviews, as well as to reflect on whether it is possible to explain tasks as
+humanly subjective as this one.
+</p></li>
+</ul>
+
+<h3>Title: RAGLog: Log Anomaly Detection using Retrieval Augmented Generation. (arXiv:2311.05261v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05261">http://arxiv.org/abs/2311.05261</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05261]] RAGLog: Log Anomaly Detection using Retrieval Augmented Generation(http://arxiv.org/abs/2311.05261)</code></li>
+<li>Summary: <p>The ability to detect log anomalies from system logs is a vital activity
+needed to ensure cyber resiliency of systems. It is applied for fault
+identification or facilitate cyber investigation and digital forensics.
+However, as logs belonging to different systems and components differ
+significantly, the challenge to perform such analysis is humanly challenging
+from the volume, variety and velocity of logs. This is further complicated by
+the lack or unavailability of anomalous log entries to develop trained machine
+learning or artificial intelligence models for such purposes. In this research
+work, we explore the use of a Retrieval Augmented Large Language Model that
+leverages a vector database to detect anomalies from logs. We used a Question
+and Answer configuration pipeline. To the best of our knowledge, our experiment
+which we called RAGLog is a novel one and the experimental results show much
+promise.
+</p></li>
+</ul>
+
+<h3>Title: ChatGPT and other Large Language Models for Cybersecurity of Smart Grid Applications. (arXiv:2311.05462v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05462">http://arxiv.org/abs/2311.05462</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05462]] ChatGPT and other Large Language Models for Cybersecurity of Smart Grid Applications(http://arxiv.org/abs/2311.05462)</code></li>
+<li>Summary: <p>Cybersecurity breaches targeting electrical substations constitute a
+significant threat to the integrity of the power grid, necessitating
+comprehensive defense and mitigation strategies. Any anomaly in information and
+communication technology (ICT) should be detected for secure communications
+between devices in digital substations. This paper proposes large language
+models (LLM), e.g., ChatGPT, for the cybersecurity of IEC 61850-based digital
+substation communications. Multicast messages such as generic object oriented
+substation event (GOOSE) and sampled value (SV) are used for case studies. The
+proposed LLM-based cybersecurity framework includes for the first time data
+pre-processing of communication systems and human-in-the-loop (HITL) training
+(considering the cybersecurity guidelines recommended by humans). The results
+show a comparative analysis of detected anomaly data carried out based on the
+performance evaluation metrics for different LLMs. A hardware-in-the-loop (HIL)
+testbed is used to generate and extract a dataset of IEC 61850 communications.
+</p></li>
+</ul>
+
+<h3>Title: RAPID: Training-free Retrieval-based Log Anomaly Detection with PLM considering Token-level information. (arXiv:2311.05160v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05160">http://arxiv.org/abs/2311.05160</a></li>
+<li>Code URL: https://github.com/dsba-lab/rapid</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05160]] RAPID: Training-free Retrieval-based Log Anomaly Detection with PLM considering Token-level information(http://arxiv.org/abs/2311.05160)</code></li>
+<li>Summary: <p>As the IT industry advances, system log data becomes increasingly crucial.
+Many computer systems rely on log texts for management due to restricted access
+to source code. The need for log anomaly detection is growing, especially in
+real-world applications, but identifying anomalies in rapidly accumulating logs
+remains a challenging task. Traditional deep learning-based anomaly detection
+models require dataset-specific training, leading to corresponding delays.
+Notably, most methods only focus on sequence-level log information, which makes
+the detection of subtle anomalies harder, and often involve inference processes
+that are difficult to utilize in real-time. We introduce RAPID, a model that
+capitalizes on the inherent features of log data to enable anomaly detection
+without training delays, ensuring real-time capability. RAPID treats logs as
+natural language, extracting representations using pre-trained language models.
+Given that logs can be categorized based on system context, we implement a
+retrieval-based technique to contrast test logs with the most similar normal
+logs. This strategy not only obviates the need for log-specific training but
+also adeptly incorporates token-level information, ensuring refined and robust
+detection, particularly for unseen logs. We also propose the core set
+technique, which can reduce the computational cost needed for comparison.
+Experimental results show that even without training on log data, RAPID
+demonstrates competitive performance compared to prior models and achieves the
+best performance on certain datasets. Through various research questions, we
+verified its capability for real-time detection without delay.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: LooGLE: Can Long-Context Language Models Understand Long Contexts?. (arXiv:2311.04939v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.04939">http://arxiv.org/abs/2311.04939</a></li>
+<li>Code URL: https://github.com/bigai-nlco/loogle</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.04939]] LooGLE: Can Long-Context Language Models Understand Long Contexts?(http://arxiv.org/abs/2311.04939)</code></li>
+<li>Summary: <p>Large language models (LLMs), despite their impressive performance in various
+language tasks, are typically limited to processing texts within context-window
+size. This limitation has spurred significant research efforts to enhance LLMs'
+long-context understanding with high-quality long-sequence benchmarks. However,
+prior datasets in this regard suffer from shortcomings, such as short context
+length compared to the context window of modern LLMs; outdated documents that
+have data leakage problems; and an emphasis on short dependency tasks rather
+than long dependency tasks. In this paper, we present LooGLE, a Long Context
+Generic Language Evaluation benchmark for LLMs' long context understanding.
+LooGLE features relatively new documents post-2022, with over 24,000 tokens per
+document and 6,000 newly generated questions spanning diverse domains. Human
+annotators meticulously crafted more than 1,100 high-quality question-answer
+pairs to meet the long dependency requirements. These pairs underwent thorough
+cross-validation, yielding the most precise assessment of LLMs' long dependency
+capabilities. The evaluation of eight state-of-the-art LLMs on LooGLE revealed
+key findings: (i) commercial models outperformed open-sourced models; (ii) LLMs
+excelled in short dependency tasks like short question-answering and cloze
+tasks but struggled with more intricate long dependency tasks; (iii) in-context
+learning and chaining thoughts offered only marginal improvements; (iv)
+retrieval-based techniques demonstrated substantial benefits for short
+question-answering, while strategies for extending context window length had
+limited impact on long context understanding. As such, LooGLE not only provides
+a systematic and comprehensive evaluation schema on long-context LLMs, but also
+sheds light on future development of enhanced models towards "true long-context
+understanding".
+</p></li>
+</ul>
+
+<h3>Title: LLM Augmented Hierarchical Agents. (arXiv:2311.05596v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.05596">http://arxiv.org/abs/2311.05596</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.05596]] LLM Augmented Hierarchical Agents(http://arxiv.org/abs/2311.05596)</code></li>
+<li>Summary: <p>Solving long-horizon, temporally-extended tasks using Reinforcement Learning
+(RL) is challenging, compounded by the common practice of learning without
+prior knowledge (or tabula rasa learning). Humans can generate and execute
+plans with temporally-extended actions and quickly learn to perform new tasks
+because we almost never solve problems from scratch. We want autonomous agents
+to have this same ability. Recently, LLMs have been shown to encode a
+tremendous amount of knowledge about the world and to perform impressive
+in-context learning and reasoning. However, using LLMs to solve real world
+problems is hard because they are not grounded in the current task. In this
+paper we exploit the planning capabilities of LLMs while using RL to provide
+learning from the environment, resulting in a hierarchical agent that uses LLMs
+to solve long-horizon tasks. Instead of completely relying on LLMs, they guide
+a high-level policy, making learning significantly more sample efficient. This
+approach is evaluated in simulation environments such as MiniGrid, SkillHack,
+and Crafter, and on a real robot arm in block manipulation tasks. We show that
+agents trained using our approach outperform other baselines methods and, once
+trained, don't need access to LLMs during deployment.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
