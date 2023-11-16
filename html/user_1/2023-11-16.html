@@ -1,0 +1,804 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Finding AI-Generated Faces in the Wild. (arXiv:2311.08577v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08577">http://arxiv.org/abs/2311.08577</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08577]] Finding AI-Generated Faces in the Wild(http://arxiv.org/abs/2311.08577)</code></li>
+<li>Summary: <p>AI-based image generation has continued to rapidly improve, producing
+increasingly more realistic images with fewer obvious visual flaws.
+AI-generated images are being used to create fake online profiles which in turn
+are being used for spam, fraud, and disinformation campaigns. As the general
+problem of detecting any type of manipulated or synthesized content is
+receiving increasing attention, here we focus on a more narrow task of
+distinguishing a real face from an AI-generated face. This is particularly
+applicable when tackling inauthentic online accounts with a fake user profile
+photo. We show that by focusing on only faces, a more resilient and
+general-purpose artifact can be detected that allows for the detection of
+AI-generated faces from a variety of GAN- and diffusion-based synthesis
+engines, and across image resolutions (as low as 128 x 128 pixels) and
+qualities.
+</p></li>
+</ul>
+
+<h3>Title: One-Shot Federated Learning with Classifier-Guided Diffusion Models. (arXiv:2311.08870v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08870">http://arxiv.org/abs/2311.08870</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08870]] One-Shot Federated Learning with Classifier-Guided Diffusion Models(http://arxiv.org/abs/2311.08870)</code></li>
+<li>Summary: <p>One-shot federated learning (OSFL) has gained attention in recent years due
+to its low communication cost. However, most of the existing methods require
+auxiliary datasets or training generators, which hinders their practicality in
+real-world scenarios. In this paper, we explore the novel opportunities that
+diffusion models bring to OSFL and propose FedCADO, utilizing guidance from
+client classifiers to generate data that complies with clients' distributions
+and subsequently training the aggregated model on the server. Specifically, our
+method involves targeted optimizations in two aspects. On one hand, we
+conditionally edit the randomly sampled initial noises, embedding them with
+specified semantics and distributions, resulting in a significant improvement
+in both the quality and stability of generation. On the other hand, we employ
+the BN statistics from the classifiers to provide detailed guidance during
+generation. These tailored optimizations enable us to limitlessly generate
+datasets, which closely resemble the distribution and quality of the original
+client dataset. Our method effectively handles the heterogeneous client models
+and the problems of non-IID features or labels. In terms of privacy protection,
+our method avoids training any generator or transferring any auxiliary
+information on clients, eliminating any additional privacy leakage risks.
+Leveraging the extensive knowledge stored in the pre-trained diffusion model,
+the synthetic datasets can assist us in surpassing the knowledge limitations of
+the client samples, resulting in aggregation models that even outperform the
+performance ceiling of centralized training in some cases, which is
+convincingly demonstrated in the sufficient quantification and visualization
+experiments conducted on three large-scale multi-domain image datasets.
+</p></li>
+</ul>
+
+<h3>Title: A Spectral Diffusion Prior for Hyperspectral Image Super-Resolution. (arXiv:2311.08955v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08955">http://arxiv.org/abs/2311.08955</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08955]] A Spectral Diffusion Prior for Hyperspectral Image Super-Resolution(http://arxiv.org/abs/2311.08955)</code></li>
+<li>Summary: <p>Fusion-based hyperspectral image (HSI) super-resolution aims to produce a
+high-spatial-resolution HSI by fusing a low-spatial-resolution HSI and a
+high-spatial-resolution multispectral image. Such a HSI super-resolution
+process can be modeled as an inverse problem, where the prior knowledge is
+essential for obtaining the desired solution. Motivated by the success of
+diffusion models, we propose a novel spectral diffusion prior for fusion-based
+HSI super-resolution. Specifically, we first investigate the spectrum
+generation problem and design a spectral diffusion model to model the spectral
+data distribution. Then, in the framework of maximum a posteriori, we keep the
+transition information between every two neighboring states during the reverse
+generative process, and thereby embed the knowledge of trained spectral
+diffusion model into the fusion problem in the form of a regularization term.
+At last, we treat each generation step of the final optimization problem as its
+subproblem, and employ the Adam to solve these subproblems in a reverse
+sequence. Experimental results conducted on both synthetic and real datasets
+demonstrate the effectiveness of the proposed approach. The code of the
+proposed approach will be available on https://github.com/liuofficial/SDP.
+</p></li>
+</ul>
+
+<h3>Title: Contrastive Transformer Learning with Proximity Data Generation for Text-Based Person Search. (arXiv:2311.09084v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09084">http://arxiv.org/abs/2311.09084</a></li>
+<li>Code URL: https://github.com/hcplab-sysu/personsearch-ctlg</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09084]] Contrastive Transformer Learning with Proximity Data Generation for Text-Based Person Search(http://arxiv.org/abs/2311.09084)</code></li>
+<li>Summary: <p>Given a descriptive text query, text-based person search (TBPS) aims to
+retrieve the best-matched target person from an image gallery. Such a
+cross-modal retrieval task is quite challenging due to significant modality
+gap, fine-grained differences and insufficiency of annotated data. To better
+align the two modalities, most existing works focus on introducing
+sophisticated network structures and auxiliary tasks, which are complex and
+hard to implement. In this paper, we propose a simple yet effective dual
+Transformer model for text-based person search. By exploiting a hardness-aware
+contrastive learning strategy, our model achieves state-of-the-art performance
+without any special design for local feature alignment or side information.
+Moreover, we propose a proximity data generation (PDG) module to automatically
+produce more diverse data for cross-modal training. The PDG module first
+introduces an automatic generation algorithm based on a text-to-image diffusion
+model, which generates new text-image pair samples in the proximity space of
+original ones. Then it combines approximate text generation and feature-level
+mixup during training to further strengthen the data diversity. The PDG module
+can largely guarantee the reasonability of the generated samples that are
+directly used for training without any human inspection for noise rejection. It
+improves the performance of our model significantly, providing a feasible
+solution to the data insufficiency problem faced by such fine-grained
+visual-linguistic tasks. Extensive experiments on two popular datasets of the
+TBPS task (i.e., CUHK-PEDES and ICFG-PEDES) show that the proposed approach
+outperforms state-of-the-art approaches evidently, e.g., improving by 3.88%,
+4.02%, 2.92% in terms of Top1, Top5, Top10 on CUHK-PEDES. The codes will be
+available at https://github.com/HCPLab-SYSU/PersonSearch-CTLG
+</p></li>
+</ul>
+
+<h3>Title: Fast Detection of Phase Transitions with Multi-Task Learning-by-Confusion. (arXiv:2311.09128v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09128">http://arxiv.org/abs/2311.09128</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09128]] Fast Detection of Phase Transitions with Multi-Task Learning-by-Confusion(http://arxiv.org/abs/2311.09128)</code></li>
+<li>Summary: <p>Machine learning has been successfully used to study phase transitions. One
+of the most popular approaches to identifying critical points from data without
+prior knowledge of the underlying phases is the learning-by-confusion scheme.
+As input, it requires system samples drawn from a grid of the parameter whose
+change is associated with potential phase transitions. Up to now, the scheme
+required training a distinct binary classifier for each possible splitting of
+the grid into two sides, resulting in a computational cost that scales linearly
+with the number of grid points. In this work, we propose and showcase an
+alternative implementation that only requires the training of a single
+multi-class classifier. Ideally, such multi-task learning eliminates the
+scaling with respect to the number of grid points. In applications to the Ising
+model and an image dataset generated with Stable Diffusion, we find significant
+speedups that closely correspond to the ideal case, with only minor deviations.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Combining Past, Present and Future: A Self-Supervised Approach for Class Incremental Learning. (arXiv:2311.08764v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08764">http://arxiv.org/abs/2311.08764</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08764]] Combining Past, Present and Future: A Self-Supervised Approach for Class Incremental Learning(http://arxiv.org/abs/2311.08764)</code></li>
+<li>Summary: <p>Class Incremental Learning (CIL) aims to handle the scenario where data of
+novel classes occur continuously and sequentially. The model should recognize
+the sequential novel classes while alleviating the catastrophic forgetting. In
+the self-supervised manner, it becomes more challenging to avoid the conflict
+between the feature embedding spaces of novel classes and old ones without any
+class labels. To address the problem, we propose a self-supervised CIL
+framework CPPF, meaning Combining Past, Present and Future. In detail, CPPF
+consists of a prototype clustering module (PC), an embedding space reserving
+module (ESR) and a multi-teacher distillation module (MTD). 1) The PC and the
+ESR modules reserve embedding space for subsequent phases at the prototype
+level and the feature level respectively to prepare for knowledge learned in
+the future. 2) The MTD module maintains the representations of the current
+phase without the interference of past knowledge. One of the teacher networks
+retains the representations of the past phases, and the other teacher network
+distills relation information of the current phase to the student network.
+Extensive experiments on CIFAR100 and ImageNet100 datasets demonstrate that our
+proposed method boosts the performance of self-supervised class incremental
+learning. We will release code in the near future.
+</p></li>
+</ul>
+
+<h3>Title: Self-Supervised Disentanglement by Leveraging Structure in Data Augmentations. (arXiv:2311.08815v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08815">http://arxiv.org/abs/2311.08815</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08815]] Self-Supervised Disentanglement by Leveraging Structure in Data Augmentations(http://arxiv.org/abs/2311.08815)</code></li>
+<li>Summary: <p>Self-supervised representation learning often uses data augmentations to
+induce some invariance to "style" attributes of the data. However, with
+downstream tasks generally unknown at training time, it is difficult to deduce
+a priori which attributes of the data are indeed "style" and can be safely
+discarded. To address this, we introduce a more principled approach that seeks
+to disentangle style features rather than discard them. The key idea is to add
+multiple style embedding spaces where: (i) each is invariant to all-but-one
+augmentation; and (ii) joint entropy is maximized. We formalize our structured
+data-augmentation procedure from a causal latent-variable-model perspective,
+and prove identifiability of both content and (multiple blocks of) style
+variables. We empirically demonstrate the benefits of our approach on synthetic
+datasets and then present promising but limited results on ImageNet.
+</p></li>
+</ul>
+
+<h3>Title: Toulouse Hyperspectral Data Set: a benchmark data set to assess semi-supervised spectral representation learning and pixel-wise classification techniques. (arXiv:2311.08863v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08863">http://arxiv.org/abs/2311.08863</a></li>
+<li>Code URL: https://github.com/romain3ch216/tlse-experiments</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08863]] Toulouse Hyperspectral Data Set: a benchmark data set to assess semi-supervised spectral representation learning and pixel-wise classification techniques(http://arxiv.org/abs/2311.08863)</code></li>
+<li>Summary: <p>Airborne hyperspectral images can be used to map the land cover in large
+urban areas, thanks to their very high spatial and spectral resolutions on a
+wide spectral domain. While the spectral dimension of hyperspectral images is
+highly informative of the chemical composition of the land surface, the use of
+state-of-the-art machine learning algorithms to map the land cover has been
+dramatically limited by the availability of training data. To cope with the
+scarcity of annotations, semi-supervised and self-supervised techniques have
+lately raised a lot of interest in the community. Yet, the publicly available
+hyperspectral data sets commonly used to benchmark machine learning models are
+not totally suited to evaluate their generalization performances due to one or
+several of the following properties: a limited geographical coverage (which
+does not reflect the spectral diversity in metropolitan areas), a small number
+of land cover classes and a lack of appropriate standard train / test splits
+for semi-supervised and self-supervised learning. Therefore, we release in this
+paper the Toulouse Hyperspectral Data Set that stands out from other data sets
+in the above-mentioned respects in order to meet key issues in spectral
+representation learning and classification over large-scale hyperspectral
+images with very few labeled pixels. Besides, we discuss and experiment the
+self-supervised task of Masked Autoencoders and establish a baseline for
+pixel-wise classification based on a conventional autoencoder combined with a
+Random Forest classifier achieving 82% overall accuracy and 74% F1 score. The
+Toulouse Hyperspectral Data Set and our code are publicly available at
+https://www.toulouse-hyperspectral-data-set.com and
+https://www.github.com/Romain3Ch216/tlse-experiments, respectively.
+</p></li>
+</ul>
+
+<h3>Title: Simple but Effective Unsupervised Classification for Specified Domain Images: A Case Study on Fungi Images. (arXiv:2311.08995v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08995">http://arxiv.org/abs/2311.08995</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08995]] Simple but Effective Unsupervised Classification for Specified Domain Images: A Case Study on Fungi Images(http://arxiv.org/abs/2311.08995)</code></li>
+<li>Summary: <p>High-quality labeled datasets are essential for deep learning. Traditional
+manual annotation methods are not only costly and inefficient but also pose
+challenges in specialized domains where expert knowledge is needed.
+Self-supervised methods, despite leveraging unlabeled data for feature
+extraction, still require hundreds or thousands of labeled instances to guide
+the model for effective specialized image classification. Current unsupervised
+learning methods offer automatic classification without prior annotation but
+often compromise on accuracy. As a result, efficiently procuring high-quality
+labeled datasets remains a pressing challenge for specialized domain images
+devoid of annotated data. Addressing this, an unsupervised classification
+method with three key ideas is introduced: 1) dual-step feature dimensionality
+reduction using a pre-trained model and manifold learning, 2) a voting
+mechanism from multiple clustering algorithms, and 3) post-hoc instead of prior
+manual annotation. This approach outperforms supervised methods in
+classification accuracy, as demonstrated with fungal image data, achieving
+94.1% and 96.7% on public and private datasets respectively. The proposed
+unsupervised classification method reduces dependency on pre-annotated
+datasets, enabling a closed-loop for data classification. The simplicity and
+ease of use of this method will also bring convenience to researchers in
+various fields in building datasets, promoting AI applications for images in
+specialized domains.
+</p></li>
+</ul>
+
+<h3>Title: Cross-view and Cross-pose Completion for 3D Human Understanding. (arXiv:2311.09104v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09104">http://arxiv.org/abs/2311.09104</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09104]] Cross-view and Cross-pose Completion for 3D Human Understanding(http://arxiv.org/abs/2311.09104)</code></li>
+<li>Summary: <p>Human perception and understanding is a major domain of computer vision
+which, like many other vision subdomains recently, stands to gain from the use
+of large models pre-trained on large datasets. We hypothesize that the most
+common pre-training strategy of relying on general purpose, object-centric
+image datasets such as ImageNet, is limited by an important domain shift. On
+the other hand, collecting domain specific ground truth such as 2D or 3D labels
+does not scale well. Therefore, we propose a pre-training approach based on
+self-supervised learning that works on human-centric data using only images.
+Our method uses pairs of images of humans: the first is partially masked and
+the model is trained to reconstruct the masked parts given the visible ones and
+a second image. It relies on both stereoscopic (cross-view) pairs, and temporal
+(cross-pose) pairs taken from videos, in order to learn priors about 3D as well
+as human motion. We pre-train a model for body-centric tasks and one for
+hand-centric tasks. With a generic transformer architecture, these models
+outperform existing self-supervised pre-training methods on a wide set of
+human-centric downstream tasks, and obtain state-of-the-art performance for
+instance when fine-tuning for model-based and model-free human mesh recovery.
+</p></li>
+</ul>
+
+<h3>Title: R-Spin: Efficient Speaker and Noise-invariant Representation Learning with Acoustic Pieces. (arXiv:2311.09117v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09117">http://arxiv.org/abs/2311.09117</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09117]] R-Spin: Efficient Speaker and Noise-invariant Representation Learning with Acoustic Pieces(http://arxiv.org/abs/2311.09117)</code></li>
+<li>Summary: <p>This paper introduces Robust Spin (R-Spin), a data-efficient self-supervised
+fine-tuning framework for speaker and noise-invariant speech representations by
+learning discrete acoustic units with speaker-invariant clustering (Spin).
+R-Spin resolves Spin's issues and enhances content representations by learning
+to predict acoustic pieces. R-Spin offers a 12X reduction in computational
+resources compared to previous state-of-the-art methods while outperforming
+them in severely distorted speech scenarios. This paper provides detailed
+analyses to show how discrete units contribute to speech encoder training and
+improving robustness in diverse acoustic environments.
+</p></li>
+</ul>
+
+<h3>Title: Approaching adverse event detection utilizing transformers on clinical time-series. (arXiv:2311.09165v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09165">http://arxiv.org/abs/2311.09165</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09165]] Approaching adverse event detection utilizing transformers on clinical time-series(http://arxiv.org/abs/2311.09165)</code></li>
+<li>Summary: <p>Patients being admitted to a hospital will most often be associated with a
+certain clinical development during their stay. However, there is always a risk
+of patients being subject to the wrong diagnosis or to a certain treatment not
+pertaining to the desired effect, potentially leading to adverse events. Our
+research aims to develop an anomaly detection system for identifying deviations
+from expected clinical trajectories. To address this goal we analyzed 16 months
+of vital sign recordings obtained from the Nordland Hospital Trust (NHT). We
+employed an self-supervised framework based on the STraTS transformer
+architecture to represent the time series data in a latent space. These
+representations were then subjected to various clustering techniques to explore
+potential patient phenotypes based on their clinical progress. While our
+preliminary results from this ongoing research are promising, they underscore
+the importance of enhancing the dataset with additional demographic information
+from patients. This additional data will be crucial for a more comprehensive
+evaluation of the method's performance.
+</p></li>
+</ul>
+
+<h3>Title: Self-Supervised Curriculum Generation for Autonomous Reinforcement Learning without Task-Specific Knowledge. (arXiv:2311.09195v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09195">http://arxiv.org/abs/2311.09195</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09195]] Self-Supervised Curriculum Generation for Autonomous Reinforcement Learning without Task-Specific Knowledge(http://arxiv.org/abs/2311.09195)</code></li>
+<li>Summary: <p>A significant bottleneck in applying current reinforcement learning
+algorithms to real-world scenarios is the need to reset the environment between
+every episode. This reset process demands substantial human intervention,
+making it difficult for the agent to learn continuously and autonomously.
+Several recent works have introduced autonomous reinforcement learning (ARL)
+algorithms that generate curricula for jointly training reset and forward
+policies. While their curricula can reduce the number of required manual resets
+by taking into account the agent's learning progress, they rely on
+task-specific knowledge, such as predefined initial states or reset reward
+functions. In this paper, we propose a novel ARL algorithm that can generate a
+curriculum adaptive to the agent's learning progress without task-specific
+knowledge. Our curriculum empowers the agent to autonomously reset to diverse
+and informative initial states. To achieve this, we introduce a success
+discriminator that estimates the success probability from each initial state
+when the agent follows the forward policy. The success discriminator is trained
+with relabeled transitions in a self-supervised manner. Our experimental
+results demonstrate that our ARL algorithm can generate an adaptive curriculum
+and enable the agent to efficiently bootstrap to solve sparse-reward maze
+navigation tasks, outperforming baselines with significantly fewer manual
+resets.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Leveraging Foundation Models to Improve Lightweight Clients in Federated Learning. (arXiv:2311.08479v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08479">http://arxiv.org/abs/2311.08479</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08479]] Leveraging Foundation Models to Improve Lightweight Clients in Federated Learning(http://arxiv.org/abs/2311.08479)</code></li>
+<li>Summary: <p>Federated Learning (FL) is a distributed training paradigm that enables
+clients scattered across the world to cooperatively learn a global model
+without divulging confidential data. However, FL faces a significant challenge
+in the form of heterogeneous data distributions among clients, which leads to a
+reduction in performance and robustness. A recent approach to mitigating the
+impact of heterogeneous data distributions is through the use of foundation
+models, which offer better performance at the cost of larger computational
+overheads and slower inference speeds. We introduce foundation model
+distillation to assist in the federated training of lightweight client models
+and increase their performance under heterogeneous data settings while keeping
+inference costs low. Our results show improvement in the global model
+performance on a balanced testing set, which contains rarely observed samples,
+even under extreme non-IID client data distributions. We conduct a thorough
+evaluation of our framework with different foundation model backbones on
+CIFAR10, with varying degrees of heterogeneous data distributions ranging from
+class-specific data partitions across clients to dirichlet data sampling,
+parameterized by values between 0.01 and 1.0.
+</p></li>
+</ul>
+
+<h3>Title: WildlifeDatasets: An open-source toolkit for animal re-identification. (arXiv:2311.09118v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09118">http://arxiv.org/abs/2311.09118</a></li>
+<li>Code URL: https://github.com/wildlifedatasets/wildlife-datasets</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09118]] WildlifeDatasets: An open-source toolkit for animal re-identification(http://arxiv.org/abs/2311.09118)</code></li>
+<li>Summary: <p>In this paper, we present WildlifeDatasets
+(https://github.com/WildlifeDatasets/wildlife-datasets) - an open-source
+toolkit intended primarily for ecologists and computer-vision /
+machine-learning researchers. The WildlifeDatasets is written in Python, allows
+straightforward access to publicly available wildlife datasets, and provides a
+wide variety of methods for dataset pre-processing, performance analysis, and
+model fine-tuning. We showcase the toolkit in various scenarios and baseline
+experiments, including, to the best of our knowledge, the most comprehensive
+experimental comparison of datasets and methods for wildlife re-identification,
+including both local descriptors and deep learning approaches. Furthermore, we
+provide the first-ever foundation model for individual re-identification within
+a wide range of species - MegaDescriptor - that provides state-of-the-art
+performance on animal re-identification datasets and outperforms other
+pre-trained models such as CLIP and DINOv2 by a significant margin. To make the
+model available to the general public and to allow easy integration with any
+existing wildlife monitoring applications, we provide multiple MegaDescriptor
+flavors (i.e., Small, Medium, and Large) through the HuggingFace hub
+(https://huggingface.co/BVRA).
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Violet: A Vision-Language Model for Arabic Image Captioning with Gemini Decoder. (arXiv:2311.08844v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08844">http://arxiv.org/abs/2311.08844</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08844]] Violet: A Vision-Language Model for Arabic Image Captioning with Gemini Decoder(http://arxiv.org/abs/2311.08844)</code></li>
+<li>Summary: <p>Although image captioning has a vast array of applications, it has not
+reached its full potential in languages other than English. Arabic, for
+instance, although the native language of more than 400 million people, remains
+largely underrepresented in this area. This is due to the lack of labeled data
+and powerful Arabic generative models. We alleviate this issue by presenting a
+novel vision-language model dedicated to Arabic, dubbed \textit{Violet}. Our
+model is based on a vision encoder and a Gemini text decoder that maintains
+generation fluency while allowing fusion between the vision and language
+components. To train our model, we introduce a new method for automatically
+acquiring data from available English datasets. We also manually prepare a new
+dataset for evaluation. \textit{Violet} performs sizeably better than our
+baselines on all of our evaluation datasets. For example, it reaches a CIDEr
+score of $61.2$ on our manually annotated dataset and achieves an improvement
+of $13$ points on Flickr8k.
+</p></li>
+</ul>
+
+<h3>Title: Controlling the Output of a Generative Model by Latent Feature Vector Shifting. (arXiv:2311.08850v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08850">http://arxiv.org/abs/2311.08850</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08850]] Controlling the Output of a Generative Model by Latent Feature Vector Shifting(http://arxiv.org/abs/2311.08850)</code></li>
+<li>Summary: <p>State-of-the-art generative models (e.g. StyleGAN3 \cite{karras2021alias})
+often generate photorealistic images based on vectors sampled from their latent
+space. However, the ability to control the output is limited. Here we present
+our novel method for latent vector shifting for controlled output image
+modification utilizing semantic features of the generated images. In our
+approach we use a pre-trained model of StyleGAN3 that generates images of
+realistic human faces in relatively high resolution. We complement the
+generative model with a convolutional neural network classifier, namely
+ResNet34, trained to classify the generated images with binary facial features
+from the CelebA dataset. Our latent feature shifter is a neural network model
+with a task to shift the latent vectors of a generative model into a specified
+feature direction. We have trained latent feature shifter for multiple facial
+features, and outperformed our baseline method in the number of generated
+images with the desired feature. To train our latent feature shifter neural
+network, we have designed a dataset of pairs of latent vectors with and without
+a certain feature. Based on the evaluation, we conclude that our latent feature
+shifter approach was successful in the controlled generation of the StyleGAN3
+generator.
+</p></li>
+</ul>
+
+<h3>Title: Leveraging Activation Maximization and Generative Adversarial Training to Recognize and Explain Patterns in Natural Areas in Satellite Imagery. (arXiv:2311.08923v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08923">http://arxiv.org/abs/2311.08923</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08923]] Leveraging Activation Maximization and Generative Adversarial Training to Recognize and Explain Patterns in Natural Areas in Satellite Imagery(http://arxiv.org/abs/2311.08923)</code></li>
+<li>Summary: <p>Natural protected areas are vital for biodiversity, climate change
+mitigation, and supporting ecological processes. Despite their significance,
+comprehensive mapping is hindered by a lack of understanding of their
+characteristics and a missing land cover class definition. This paper aims to
+advance the explanation of the designating patterns forming protected and wild
+areas. To this end, we propose a novel framework that uses activation
+maximization and a generative adversarial model. With this, we aim to generate
+satellite images that, in combination with domain knowledge, are capable of
+offering complete and valid explanations for the spatial and spectral patterns
+that define the natural authenticity of these regions. Our proposed framework
+produces more precise attribution maps pinpointing the designating patterns
+forming the natural authenticity of protected areas. Our approach fosters our
+understanding of the ecological integrity of the protected natural areas and
+may contribute to future monitoring and preservation efforts.
+</p></li>
+</ul>
+
+<h3>Title: RBPGAN: Recurrent Back-Projection GAN for Video Super Resolution. (arXiv:2311.09178v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09178">http://arxiv.org/abs/2311.09178</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09178]] RBPGAN: Recurrent Back-Projection GAN for Video Super Resolution(http://arxiv.org/abs/2311.09178)</code></li>
+<li>Summary: <p>Recently, video super resolution (VSR) has become a very impactful task in
+the area of Computer Vision due to its various applications. In this paper, we
+propose Recurrent Back-Projection Generative Adversarial Network (RBPGAN) for
+VSR in an attempt to generate temporally coherent solutions while preserving
+spatial details. RBPGAN integrates two state-of-the-art models to get the best
+in both worlds without compromising the accuracy of produced video. The
+generator of the model is inspired by RBPN system, while the discriminator is
+inspired by TecoGAN. We also utilize Ping-Pong loss to increase temporal
+consistency over time. Our contribution together results in a model that
+outperforms earlier work in terms of temporally consistent details, as we will
+demonstrate qualitatively and quantitatively using different datasets.
+</p></li>
+</ul>
+
+<h3>Title: ACID: Abstractive, Content-Based IDs for Document Retrieval with Language Models. (arXiv:2311.08593v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08593">http://arxiv.org/abs/2311.08593</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08593]] ACID: Abstractive, Content-Based IDs for Document Retrieval with Language Models(http://arxiv.org/abs/2311.08593)</code></li>
+<li>Summary: <p>Generative retrieval (Wang et al., 2022; Tay et al., 2022) is a new approach
+for end-to-end document retrieval that directly generates document identifiers
+given an input query. Techniques for designing effective, high-quality document
+IDs remain largely unexplored. We introduce ACID, in which each document's ID
+is composed of abstractive keyphrases generated by a large language model,
+rather than an integer ID sequence as done in past work. We compare our method
+with the current state-of-the-art technique for ID generation, which produces
+IDs through hierarchical clustering of document embeddings. We also examine
+simpler methods to generate natural-language document IDs, including the naive
+approach of using the first k words of each document as its ID or words with
+high BM25 scores in that document. We show that using ACID improves top-10 and
+top-20 accuracy by 15.6% and 14.4% (relative) respectively versus the
+state-of-the-art baseline on the MSMARCO 100k retrieval task, and 4.4% and 4.0%
+respectively on the Natural Questions 100k retrieval task. Our results
+demonstrate the effectiveness of human-readable, natural-language IDs in
+generative retrieval with LMs. The code for reproducing our results and the
+keyword-augmented datasets will be released on formal publication.
+</p></li>
+</ul>
+
+<h3>Title: Understanding Calibration for Multilingual Question Answering Models. (arXiv:2311.08669v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08669">http://arxiv.org/abs/2311.08669</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08669]] Understanding Calibration for Multilingual Question Answering Models(http://arxiv.org/abs/2311.08669)</code></li>
+<li>Summary: <p>Multilingual pre-trained language models are incredibly effective at Question
+Answering (QA), a core task in Natural Language Understanding, achieving high
+accuracies on several multilingual benchmarks. However, little is known about
+how well they are calibrated. In this paper, we study the calibration
+properties of several pre-trained multilingual large language models (LLMs) on
+a variety of question-answering tasks. We perform extensive experiments,
+spanning both extractive and generative QA model designs and diverse languages,
+spanning both high-resource and low-resource ones. We study different
+dimensions of calibration in in-distribution, out-of-distribution, and
+cross-lingual transfer settings, and investigate strategies to improve it,
+including post-hoc methods and regularized fine-tuning. We demonstrate
+automatically translated data augmentation as a highly effective technique to
+improve model calibration. We also conduct a number of ablation experiments to
+study the effect of model size on calibration and how multilingual models
+compare with their monolingual counterparts for diverse tasks and languages.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: k-Parameter Approach for False In-Season Anomaly Suppression in Daily Time Series Anomaly Detection. (arXiv:2311.08422v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08422">http://arxiv.org/abs/2311.08422</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08422]] k-Parameter Approach for False In-Season Anomaly Suppression in Daily Time Series Anomaly Detection(http://arxiv.org/abs/2311.08422)</code></li>
+<li>Summary: <p>Detecting anomalies in a daily time series with a weekly pattern is a common
+task with a wide range of applications. A typical way of performing the task is
+by using decomposition method. However, the method often generates false
+positive results where a data point falls within its weekly range but is just
+off from its weekday position. We refer to this type of anomalies as "in-season
+anomalies", and propose a k-parameter approach to address the issue. The
+approach provides configurable extra tolerance for in-season anomalies to
+suppress misleading alerts while preserving real positives. It yields favorable
+result.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Selecting Shots for Demographic Fairness in Few-Shot Learning with Large Language Models. (arXiv:2311.08472v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08472">http://arxiv.org/abs/2311.08472</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08472]] Selecting Shots for Demographic Fairness in Few-Shot Learning with Large Language Models(http://arxiv.org/abs/2311.08472)</code></li>
+<li>Summary: <p>Recently, work in NLP has shifted to few-shot (in-context) learning, with
+large language models (LLMs) performing well across a range of tasks. However,
+while fairness evaluations have become a standard for supervised methods,
+little is known about the fairness of LLMs as prediction systems. Further,
+common standard methods for fairness involve access to models weights or are
+applied during finetuning, which are not applicable in few-shot learning. Do
+LLMs exhibit prediction biases when used for standard NLP tasks? In this work,
+we explore the effect of shots, which directly affect the performance of
+models, on the fairness of LLMs as NLP classification systems. We consider how
+different shot selection strategies, both existing and new demographically
+sensitive methods, affect model fairness across three standard fairness
+datasets. We discuss how future work can include LLM fairness evaluations.
+</p></li>
+</ul>
+
+<h3>Title: XplainLLM: A QA Explanation Dataset for Understanding LLM Decision-Making. (arXiv:2311.08614v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08614">http://arxiv.org/abs/2311.08614</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08614]] XplainLLM: A QA Explanation Dataset for Understanding LLM Decision-Making(http://arxiv.org/abs/2311.08614)</code></li>
+<li>Summary: <p>Large Language Models (LLMs) have recently made impressive strides in natural
+language understanding tasks. Despite their remarkable performance,
+understanding their decision-making process remains a big challenge. In this
+paper, we look into bringing some transparency to this process by introducing a
+new explanation dataset for question answering (QA) tasks that integrates
+knowledge graphs (KGs) in a novel way. Our dataset includes 12,102
+question-answer-explanation (QAE) triples. Each explanation in the dataset
+links the LLM's reasoning to entities and relations in the KGs. The explanation
+component includes a why-choose explanation, a why-not-choose explanation, and
+a set of reason-elements that underlie the LLM's decision. We leverage KGs and
+graph attention networks (GAT) to find the reason-elements and transform them
+into why-choose and why-not-choose explanations that are comprehensible to
+humans. Through quantitative and qualitative evaluations, we demonstrate the
+potential of our dataset to improve the in-context learning of LLMs, and
+enhance their interpretability and explainability. Our work contributes to the
+field of explainable AI by enabling a deeper understanding of the LLMs
+decision-making process to make them more transparent and thereby, potentially
+more reliable, to researchers and practitioners alike. Our dataset is available
+at: https://github.com/chen-zichen/XplainLLM_dataset.git
+</p></li>
+</ul>
+
+<h3>Title: Multistage Collaborative Knowledge Distillation from Large Language Models. (arXiv:2311.08640v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08640">http://arxiv.org/abs/2311.08640</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08640]] Multistage Collaborative Knowledge Distillation from Large Language Models(http://arxiv.org/abs/2311.08640)</code></li>
+<li>Summary: <p>We study semi-supervised sequence prediction tasks where labeled data are too
+scarce to effectively finetune a model and at the same time few-shot prompting
+of a large language model (LLM) has suboptimal performance. This happens when a
+task, such as parsing, is expensive to annotate and also unfamiliar to a
+pretrained LLM. In this paper, we present a discovery that student models
+distilled from a prompted LLM can often generalize better than their teacher on
+such tasks. Leveraging this finding, we propose a new distillation method,
+multistage collaborative knowledge distillation from an LLM (MCKD), for such
+tasks. MCKD first prompts an LLM using few-shot in-context learning to produce
+pseudolabels for unlabeled data. Then, at each stage of distillation, a pair of
+students are trained on disjoint partitions of the pseudolabeled data. Each
+student subsequently produces new and improved pseudolabels for the unseen
+partition to supervise the next round of student(s) with. We show the benefit
+of multistage cross-partition labeling on two constituency parsing tasks. On
+CRAFT biomedical parsing, 3-stage MCKD with 50 labeled examples matches the
+performance of supervised finetuning with 500 examples and outperforms the
+prompted LLM and vanilla KD by 7.5% and 3.7% parsing F1, respectively.
+</p></li>
+</ul>
+
+<h3>Title: Explore Spurious Correlations at the Concept Level in Language Models for Text Classification. (arXiv:2311.08648v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08648">http://arxiv.org/abs/2311.08648</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08648]] Explore Spurious Correlations at the Concept Level in Language Models for Text Classification(http://arxiv.org/abs/2311.08648)</code></li>
+<li>Summary: <p>Language models (LMs) have gained great achievement in various NLP tasks for
+both fine-tuning and in-context learning (ICL) methods. Despite its outstanding
+performance, evidence shows that spurious correlations caused by imbalanced
+label distributions in training data (or exemplars in ICL) lead to robustness
+issues. However, previous studies mostly focus on word- and phrase-level
+features and fail to tackle it from the concept level, partly due to the lack
+of concept labels and subtle and diverse expressions of concepts in text. In
+this paper, we first use the LLM to label the concept for each text and then
+measure the concept bias of models for fine-tuning or ICL on the test data.
+Second, we propose a data rebalancing method to mitigate the spurious
+correlations by adding the LLM-generated counterfactual data to make a balanced
+label distribution for each concept. We verify the effectiveness of our
+mitigation method and show its superiority over the token removal method.
+Overall, our results show that there exist label distribution biases in
+concepts across multiple text classification datasets, and LMs will utilize
+these shortcuts to make predictions in both fine-tuning and ICL methods.
+</p></li>
+</ul>
+
+<h3>Title: Can Large Language Models Follow Concept Annotation Guidelines? A Case Study on Scientific and Financial Domains. (arXiv:2311.08704v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08704">http://arxiv.org/abs/2311.08704</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08704]] Can Large Language Models Follow Concept Annotation Guidelines? A Case Study on Scientific and Financial Domains(http://arxiv.org/abs/2311.08704)</code></li>
+<li>Summary: <p>Although large language models (LLMs) exhibit remarkable capacity to leverage
+in-context demonstrations, it is still unclear to what extent they can learn
+new concepts or facts from ground-truth labels. To address this question, we
+examine the capacity of instruction-tuned LLMs to follow in-context concept
+guidelines for sentence labeling tasks. We design guidelines that present
+different types of factual and counterfactual concept definitions, which are
+used as prompts for zero-shot sentence classification tasks. Our results show
+that although concept definitions consistently help in task performance, only
+the larger models (with 70B parameters or more) have limited ability to work
+under counterfactual contexts. Importantly, only proprietary models such as
+GPT-3.5 and GPT-4 can recognize nonsensical guidelines, which we hypothesize is
+due to more sophisticated alignment methods. Finally, we find that
+Falcon-180B-chat is outperformed by Llama-2-70B-chat is most cases, which
+indicates that careful fine-tuning is more effective than increasing model
+scale. Altogether, our simple evaluation method reveals significant gaps in
+concept understanding between the most capable open-source language models and
+the leading proprietary APIs.
+</p></li>
+</ul>
+
+<h3>Title: Enabling Large Language Models to Learn from Rules. (arXiv:2311.08883v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08883">http://arxiv.org/abs/2311.08883</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08883]] Enabling Large Language Models to Learn from Rules(http://arxiv.org/abs/2311.08883)</code></li>
+<li>Summary: <p>Large language models (LLMs) have shown incredible performance in completing
+various real-world tasks. The current knowledge learning paradigm of LLMs is
+mainly based on learning from examples, in which LLMs learn the internal rule
+implicitly from a certain number of supervised examples. However, the learning
+paradigm may not well learn those complicated rules, especially when the
+training examples are limited. We are inspired that humans can learn the new
+tasks or knowledge in another way by learning from rules. That is, humans can
+grasp the new tasks or knowledge quickly and generalize well given only a
+detailed rule and a few optional examples. Therefore, in this paper, we aim to
+explore the feasibility of this new learning paradigm, which encodes the
+rule-based knowledge into LLMs. We propose rule distillation, which first uses
+the strong in-context abilities of LLMs to extract the knowledge from the
+textual rules and then explicitly encode the knowledge into LLMs' parameters by
+learning from the above in-context signals produced inside the model. Our
+experiments show that making LLMs learn from rules by our method is much more
+efficient than example-based learning in both the sample size and
+generalization ability.
+</p></li>
+</ul>
+
+<h3>Title: Combining Transfer Learning with In-context Learning using Blackbox LLMs for Zero-shot Knowledge Base Question Answering. (arXiv:2311.08894v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08894">http://arxiv.org/abs/2311.08894</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08894]] Combining Transfer Learning with In-context Learning using Blackbox LLMs for Zero-shot Knowledge Base Question Answering(http://arxiv.org/abs/2311.08894)</code></li>
+<li>Summary: <p>We address the zero-shot transfer learning setting for the knowledge base
+question answering (KBQA) problem, where a large volume of labeled training
+data is available for the source domain, but no such labeled examples are
+available for the target domain. Transfer learning for KBQA makes use of large
+volumes of unlabeled data in the target in addition to the labeled data in the
+source. More recently, few-shot in-context learning using Black-box Large
+Language Models (BLLMs) has been adapted for KBQA without considering any
+source domain data. In this work, we show how to meaningfully combine these two
+paradigms for KBQA so that their benefits add up. Specifically, we preserve the
+two stage retrieve-then-generate pipeline of supervised KBQA and introduce
+interaction between in-context learning using BLLMs and transfer learning from
+the source for both stages. In addition, we propose execution-guided
+self-refinement using BLLMs, decoupled from the transfer setting. With the help
+of experiments using benchmark datasets GrailQA as the source and WebQSP as the
+target, we show that the proposed combination brings significant improvements
+to both stages and also outperforms by a large margin state-of-the-art
+supervised KBQA models trained on the source. We also show that in the
+in-domain setting, the proposed BLLM augmentation significantly outperforms
+state-of-the-art supervised models, when the volume of labeled data is limited,
+and also outperforms these marginally even when using the entire large training
+dataset.
+</p></li>
+</ul>
+
+<h3>Title: Self-Improving for Zero-Shot Named Entity Recognition with Large Language Models. (arXiv:2311.08921v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08921">http://arxiv.org/abs/2311.08921</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08921]] Self-Improving for Zero-Shot Named Entity Recognition with Large Language Models(http://arxiv.org/abs/2311.08921)</code></li>
+<li>Summary: <p>Exploring the application of powerful large language models (LLMs) on the
+fundamental named entity recognition (NER) task has drawn much attention
+recently. This work aims to investigate the possibilities of pushing the
+boundary of zero-shot NER with LLM via a training-free self-improving strategy.
+We propose a self-improving framework, which utilize an unlabeled corpus to
+stimulate the self-learning ability of LLMs on NER. First, we use LLM to make
+predictions on the unlabeled corpus and obtain the self-annotated data. Second,
+we explore various strategies to select reliable samples from the
+self-annotated dataset as demonstrations, considering the similarity, diversity
+and reliability of demonstrations. Finally, we conduct inference for the test
+query via in-context learning with the selected self-annotated demonstrations.
+Through comprehensive experimental analysis, our study yielded the following
+findings: (1) The self-improving framework further pushes the boundary of
+zero-shot NER with LLMs, and achieves an obvious performance improvement; (2)
+Iterative self-improving or naively increasing the size of unlabeled corpus
+does not guarantee improvements; (3) There might still be space for improvement
+via more advanced strategy for reliable entity selection.
+</p></li>
+</ul>
+
+<h3>Title: When does In-context Learning Fall Short and Why? A Study on Specification-Heavy Tasks. (arXiv:2311.08993v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.08993">http://arxiv.org/abs/2311.08993</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.08993]] When does In-context Learning Fall Short and Why? A Study on Specification-Heavy Tasks(http://arxiv.org/abs/2311.08993)</code></li>
+<li>Summary: <p>In-context learning (ICL) has become the default method for using large
+language models (LLMs), making the exploration of its limitations and
+understanding the underlying causes crucial. In this paper, we find that ICL
+falls short of handling specification-heavy tasks, which are tasks with
+complicated and extensive task specifications, requiring several hours for
+ordinary humans to master, such as traditional information extraction tasks.
+The performance of ICL on these tasks mostly cannot reach half of the
+state-of-the-art results. To explore the reasons behind this failure, we
+conduct comprehensive experiments on 18 specification-heavy tasks with various
+LLMs and identify three primary reasons: inability to specifically understand
+context, misalignment in task schema comprehension with humans, and inadequate
+long-text understanding ability. Furthermore, we demonstrate that through
+fine-tuning, LLMs can achieve decent performance on these tasks, indicating
+that the failure of ICL is not an inherent flaw of LLMs, but rather a drawback
+of existing alignment methods that renders LLMs incapable of handling
+complicated specification-heavy tasks via ICL. To substantiate this, we perform
+dedicated instruction tuning on LLMs for these tasks and observe a notable
+improvement. We hope the analyses in this paper could facilitate advancements
+in alignment methods enabling LLMs to meet more sophisticated human demands.
+</p></li>
+</ul>
+
+<h3>Title: MELA: Multilingual Evaluation of Linguistic Acceptability. (arXiv:2311.09033v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.09033">http://arxiv.org/abs/2311.09033</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.09033]] MELA: Multilingual Evaluation of Linguistic Acceptability(http://arxiv.org/abs/2311.09033)</code></li>
+<li>Summary: <p>Recent benchmarks for Large Language Models (LLMs) have mostly focused on
+application-driven tasks such as complex reasoning and code generation, and
+this has led to a scarcity in purely linguistic evaluation of LLMs. Against
+this background, we introduce Multilingual Evaluation of Linguistic
+Acceptability -- MELA, the first multilingual benchmark on linguistic
+acceptability with 48K samples covering 10 languages from a diverse set of
+language families. We establish baselines of commonly used LLMs along with
+supervised models, and conduct cross-lingual transfer and multi-task learning
+experiments with XLM-R. In pursuit of multilingual interpretability, we analyze
+the weights of fine-tuned XLM-R to explore the possibility of identifying
+transfer difficulty between languages. Our results show that ChatGPT benefits
+much from in-context examples but still lags behind fine-tuned XLM-R, while the
+performance of GPT-4 is on par with fine-tuned XLM-R even in zero-shot setting.
+Cross-lingual and multi-task learning experiments show that unlike semantic
+tasks, in-language training data is crucial in acceptability judgements.
+Results in layerwise probing indicate that the upper layers of XLM-R become a
+task-specific but language-agnostic region for multilingual acceptability
+judgment. We also introduce the concept of conflicting weight, which could be a
+potential indicator for the difficulty of cross-lingual transfer between
+languages. Our data will be available at https://github.com/sjtu-compling/MELA.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
