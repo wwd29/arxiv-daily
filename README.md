@@ -1,37 +1,37 @@
 # arxiv-daily
-updated on 2023-11-22 22:10:47
+updated on 2023-11-23 22:12:05
 ## user_0
 | keyword | count |
 | - | - |
-| secure | 1 |
+| secure | 3 |
 | security | 6 |
-| privacy | 4 |
-| protect | 3 |
-| defense | 2 |
-| attack | 5 |
+| privacy | 5 |
+| protect | 1 |
+| defense | 1 |
+| attack | 4 |
 | robust | 18 |
-| biometric | 0 |
-| steal | 1 |
+| biometric | 1 |
+| steal | 0 |
 | extraction | 5 |
 | membership infer | 0 |
-| federate | 2 |
-| fair | 3 |
-| interpretability | 3 |
-| explainability | 1 |
+| federate | 5 |
+| fair | 0 |
+| interpretability | 1 |
+| explainability | 2 |
 | watermark | 0 |
-| diffusion | 8 |
+| diffusion | 16 |
 | noise learning | 0 |
 | data-free | 0 |
-| transformer | 13 |
-| generative | 4 |
-| large language model | 14 |
-| segmentation | 11 |
+| transformer | 16 |
+| generative | 6 |
+| large language model | 15 |
+| segmentation | 12 |
 ## user_1
 | keyword | count |
 | - | - |
-| diffusion | 10 |
-| self-supervised | 6 |
-| foundation model | 5 |
-| generative | 5 |
-| anomaly | 0 |
-| in-context | 4 |
+| diffusion | 18 |
+| self-supervised | 2 |
+| foundation model | 1 |
+| generative | 8 |
+| anomaly | 1 |
+| in-context | 2 |
