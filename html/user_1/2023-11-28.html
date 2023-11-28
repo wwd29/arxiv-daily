@@ -1,0 +1,620 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: SinSR: Diffusion-Based Image Super-Resolution in a Single Step. (arXiv:2311.14760v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14760">http://arxiv.org/abs/2311.14760</a></li>
+<li>Code URL: https://github.com/wyf0912/sinsr</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14760]] SinSR: Diffusion-Based Image Super-Resolution in a Single Step(http://arxiv.org/abs/2311.14760)</code></li>
+<li>Summary: <p>While super-resolution (SR) methods based on diffusion models exhibit
+promising results, their practical application is hindered by the substantial
+number of required inference steps. Recent methods utilize degraded images in
+the initial state, thereby shortening the Markov chain. Nevertheless, these
+solutions either rely on a precise formulation of the degradation process or
+still necessitate a relatively lengthy generation path (e.g., 15 iterations).
+To enhance inference speed, we propose a simple yet effective method for
+achieving single-step SR generation, named SinSR. Specifically, we first derive
+a deterministic sampling process from the most recent state-of-the-art (SOTA)
+method for accelerating diffusion-based SR. This allows the mapping between the
+input random noise and the generated high-resolution image to be obtained in a
+reduced and acceptable number of inference steps during training. We show that
+this deterministic mapping can be distilled into a student model that performs
+SR within only one inference step. Additionally, we propose a novel
+consistency-preserving loss to simultaneously leverage the ground-truth image
+during the distillation process, ensuring that the performance of the student
+model is not solely bound by the feature manifold of the teacher model,
+resulting in further performance improvement. Extensive experiments conducted
+on synthetic and real-world datasets demonstrate that the proposed method can
+achieve comparable or even superior performance compared to both previous SOTA
+methods and the teacher model, in just one sampling step, resulting in a
+remarkable up to x10 speedup for inference. Our code will be released at
+https://github.com/wyf0912/SinSR
+</p></li>
+</ul>
+
+<h3>Title: SafeSea: Synthetic Data Generation for Adverse & Low Probability Maritime Conditions. (arXiv:2311.14764v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14764">http://arxiv.org/abs/2311.14764</a></li>
+<li>Code URL: https://github.com/martin-3240/safesea</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14764]] SafeSea: Synthetic Data Generation for Adverse & Low Probability Maritime Conditions(http://arxiv.org/abs/2311.14764)</code></li>
+<li>Summary: <p>High-quality training data is essential for enhancing the robustness of
+object detection models. Within the maritime domain, obtaining a diverse real
+image dataset is particularly challenging due to the difficulty of capturing
+sea images with the presence of maritime objects , especially in stormy
+conditions. These challenges arise due to resource limitations, in addition to
+the unpredictable appearance of maritime objects. Nevertheless, acquiring data
+from stormy conditions is essential for training effective maritime detection
+models, particularly for search and rescue, where real-world conditions can be
+unpredictable. In this work, we introduce SafeSea, which is a stepping stone
+towards transforming actual sea images with various Sea State backgrounds while
+retaining maritime objects. Compared to existing generative methods such as
+Stable Diffusion Inpainting~\cite{stableDiffusion}, this approach reduces the
+time and effort required to create synthetic datasets for training maritime
+object detection models. The proposed method uses two automated filters to only
+pass generated images that meet the criteria. In particular, these filters will
+first classify the sea condition according to its Sea State level and then it
+will check whether the objects from the input image are still preserved. This
+method enabled the creation of the SafeSea dataset, offering diverse weather
+condition backgrounds to supplement the training of maritime models. Lastly, we
+observed that a maritime object detection model faced challenges in detecting
+objects in stormy sea backgrounds, emphasizing the impact of weather conditions
+on detection accuracy. The code, and dataset are available at
+https://github.com/martin-3240/SafeSea.
+</p></li>
+</ul>
+
+<h3>Title: AdaDiff: Adaptive Step Selection for Fast Diffusion. (arXiv:2311.14768v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14768">http://arxiv.org/abs/2311.14768</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14768]] AdaDiff: Adaptive Step Selection for Fast Diffusion(http://arxiv.org/abs/2311.14768)</code></li>
+<li>Summary: <p>Diffusion models, as a type of generative models, have achieved impressive
+results in generating images and videos conditioned on textual conditions.
+However, the generation process of diffusion models involves denoising for
+dozens of steps to produce photorealistic images/videos, which is
+computationally expensive. Unlike previous methods that design
+``one-size-fits-all'' approaches for speed up, we argue denoising steps should
+be sample-specific conditioned on the richness of input texts. To this end, we
+introduce AdaDiff, a lightweight framework designed to learn instance-specific
+step usage policies, which are then used by the diffusion model for generation.
+AdaDiff is optimized using a policy gradient method to maximize a carefully
+designed reward function, balancing inference time and generation quality. We
+conduct experiments on three image generation and two video generation
+benchmarks and demonstrate that our approach achieves similar results in terms
+of visual quality compared to the baseline using a fixed 50 denoising steps
+while reducing inference time by at least 33%, going as high as 40%.
+Furthermore, our qualitative analysis shows that our method allocates more
+steps to more informative text conditions and fewer steps to simpler text
+conditions.
+</p></li>
+</ul>
+
+<h3>Title: Resfusion: Prior Residual Noise embedded Denoising Diffusion Probabilistic Models. (arXiv:2311.14900v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14900">http://arxiv.org/abs/2311.14900</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14900]] Resfusion: Prior Residual Noise embedded Denoising Diffusion Probabilistic Models(http://arxiv.org/abs/2311.14900)</code></li>
+<li>Summary: <p>Recently, Denoising Diffusion Probabilistic Models have been widely used in
+image segmentation, by generating segmentation masks conditioned on the input
+image. However, previous works can not seamlessly integrate existing end-to-end
+models with denoising diffusion models. Existing research can only select
+acceleration steps based on experience rather than calculating them
+specifically. Moreover, most methods are limited to small models and
+small-scale datasets, unable to generalize to general datasets and a wider
+range of tasks. Therefore, we propose Resfusion with a novel resnoise-diffusion
+process, which gradually generates segmentation masks or any type of target
+image, seamlessly integrating state-of-the-art end-to-end models and denoising
+diffusion models. Resfusion bridges the discrepancy between the likelihood
+output and the ground truth output through a Markov process. Through the novel
+smooth equivalence transformation in resnoise-diffusion process, we determine
+the optimal acceleration step. Experimental results demonstrate that Resfusion
+combines the capabilities of existing end-to-end models and denoising diffusion
+models, further enhancing performance and achieving outstanding results.
+Moreover, Resfusion is not limited to segmentation tasks, it can easily
+generalize to any general tasks of image generation and exhibit strong
+competitiveness.
+</p></li>
+</ul>
+
+<h3>Title: DECap: Towards Generalized Explicit Caption Editing via Diffusion Mechanism. (arXiv:2311.14920v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14920">http://arxiv.org/abs/2311.14920</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14920]] DECap: Towards Generalized Explicit Caption Editing via Diffusion Mechanism(http://arxiv.org/abs/2311.14920)</code></li>
+<li>Summary: <p>Explicit Caption Editing (ECE) -- refining reference image captions through a
+sequence of explicit edit operations (e.g., KEEP, DETELE) -- has raised
+significant attention due to its explainable and human-like nature. After
+training with carefully designed reference and ground-truth caption pairs,
+state-of-the-art ECE models exhibit limited generalization ability beyond the
+original training data distribution, i.e., they are tailored to refine content
+details only in in-domain samples but fail to correct errors in out-of-domain
+samples. To this end, we propose a new Diffusion-based Explicit Caption editing
+method: DECap. Specifically, we reformulate the ECE task as a denoising process
+under the diffusion mechanism, and introduce innovative edit-based noising and
+denoising processes. Thanks to this design, the noising process can help to
+eliminate the need for meticulous paired data selection by directly introducing
+word-level noises for training, learning diverse distribution over input
+reference caption. The denoising process involves the explicit predictions of
+edit operations and corresponding content words, refining reference captions
+through iterative step-wise editing. To further efficiently implement our
+diffusion process and improve the inference speed, DECap discards the prevalent
+multi-stage design and directly generates edit operations and content words
+simultaneously. Extensive ablations have demonstrated the strong generalization
+ability of DECap in various scenarios. More interestingly, it even shows great
+potential in improving the quality and controllability of caption generation.
+</p></li>
+</ul>
+
+<h3>Title: GBD-TS: Goal-based Pedestrian Trajectory Prediction with Diffusion using Tree Sampling Algorithm. (arXiv:2311.14922v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14922">http://arxiv.org/abs/2311.14922</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14922]] GBD-TS: Goal-based Pedestrian Trajectory Prediction with Diffusion using Tree Sampling Algorithm(http://arxiv.org/abs/2311.14922)</code></li>
+<li>Summary: <p>Predicting pedestrian trajectories is crucial for improving the safety and
+effectiveness of autonomous driving and mobile robots. However, this task is
+nontrivial due to the inherent stochasticity of human motion, which naturally
+requires the predictor to generate multi-model prediction. Previous works have
+used various generative methods, such as GAN and VAE, for pedestrian trajectory
+prediction. Nevertheless, these methods may suffer from problems, including
+mode collapse and relatively low-quality results. The denoising diffusion
+probabilistic model (DDPM) has recently been applied to trajectory prediction
+due to its simple training process and powerful reconstruction ability.
+However, current diffusion-based methods are straightforward without fully
+leveraging input information and usually require many denoising iterations
+leading to a long inference time or an additional network for initialization.
+To address these challenges and promote the application of diffusion models in
+trajectory prediction, we propose a novel scene-aware multi-modal pedestrian
+trajectory prediction framework called GBD. GBD combines goal prediction with
+the diffusion network. First, the goal predictor produces multiple goals, and
+then the diffusion network generates multi-modal trajectories conditioned on
+these goals. Furthermore, we introduce a new diffusion sampling algorithm named
+tree sampling (TS), which leverages common feature to reduce the inference time
+and improve accuracy for multi-modal prediction. Experimental results
+demonstrate that our GBD-TS method achieves state-of-the-art performance with
+real-time inference speed.
+</p></li>
+</ul>
+
+<h3>Title: FreePIH: Training-Free Painterly Image Harmonization with Diffusion Model. (arXiv:2311.14926v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14926">http://arxiv.org/abs/2311.14926</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14926]] FreePIH: Training-Free Painterly Image Harmonization with Diffusion Model(http://arxiv.org/abs/2311.14926)</code></li>
+<li>Summary: <p>This paper provides an efficient training-free painterly image harmonization
+(PIH) method, dubbed FreePIH, that leverages only a pre-trained diffusion model
+to achieve state-of-the-art harmonization results. Unlike existing methods that
+require either training auxiliary networks or fine-tuning a large pre-trained
+backbone, or both, to harmonize a foreground object with a painterly-style
+background image, our FreePIH tames the denoising process as a plug-in module
+for foreground image style transfer. Specifically, we find that the very last
+few steps of the denoising (i.e., generation) process strongly correspond to
+the stylistic information of images, and based on this, we propose to augment
+the latent features of both the foreground and background images with Gaussians
+for a direct denoising-based harmonization. To guarantee the fidelity of the
+harmonized image, we make use of multi-scale features to enforce the
+consistency of the content and stability of the foreground objects in the
+latent space, and meanwhile, aligning both fore-/back-grounds with the same
+style. Moreover, to accommodate the generation with more structural and
+textural details, we further integrate text prompts to attend to the latent
+features, hence improving the generation quality. Quantitative and qualitative
+evaluations on COCO and LAION 5B datasets demonstrate that our method can
+surpass representative baselines by large margins.
+</p></li>
+</ul>
+
+<h3>Title: Point Cloud Pre-training with Diffusion Models. (arXiv:2311.14960v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14960">http://arxiv.org/abs/2311.14960</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14960]] Point Cloud Pre-training with Diffusion Models(http://arxiv.org/abs/2311.14960)</code></li>
+<li>Summary: <p>Pre-training a model and then fine-tuning it on downstream tasks has
+demonstrated significant success in the 2D image and NLP domains. However, due
+to the unordered and non-uniform density characteristics of point clouds, it is
+non-trivial to explore the prior knowledge of point clouds and pre-train a
+point cloud backbone. In this paper, we propose a novel pre-training method
+called Point cloud Diffusion pre-training (PointDif). We consider the point
+cloud pre-training task as a conditional point-to-point generation problem and
+introduce a conditional point generator. This generator aggregates the features
+extracted by the backbone and employs them as the condition to guide the
+point-to-point recovery from the noisy point cloud, thereby assisting the
+backbone in capturing both local and global geometric priors as well as the
+global point density distribution of the object. We also present a recurrent
+uniform sampling optimization strategy, which enables the model to uniformly
+recover from various noise levels and learn from balanced supervision. Our
+PointDif achieves substantial improvement across various real-world datasets
+for diverse downstream tasks such as classification, segmentation and
+detection. Specifically, PointDif attains 70.0% mIoU on S3DIS Area 5 for the
+segmentation task and achieves an average improvement of 2.4% on ScanObjectNN
+for the classification task compared to TAP. Furthermore, our pre-training
+framework can be flexibly applied to diverse point cloud backbones and bring
+considerable gains.
+</p></li>
+</ul>
+
+<h3>Title: InstaStyle: Inversion Noise of a Stylized Image is Secretly a Style Adviser. (arXiv:2311.15040v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.15040">http://arxiv.org/abs/2311.15040</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.15040]] InstaStyle: Inversion Noise of a Stylized Image is Secretly a Style Adviser(http://arxiv.org/abs/2311.15040)</code></li>
+<li>Summary: <p>Stylized text-to-image generation focuses on creating images from textual
+descriptions while adhering to a style specified by a few reference images.
+However, subtle style variations within different reference images can hinder
+the model from accurately learning the target style. In this paper, we propose
+InstaStyle, a novel approach that excels in generating high-fidelity stylized
+images with only a single reference image. Our approach is based on the finding
+that the inversion noise from a stylized reference image inherently carries the
+style signal, as evidenced by their non-zero signal-to-noise ratio. We employ
+DDIM inversion to extract this noise from the reference image and leverage a
+diffusion model to generate new stylized images from the ``style" noise.
+Additionally, the inherent ambiguity and bias of textual prompts impede the
+precise conveying of style. To address this, we introduce a learnable style
+token via prompt refinement, which enhances the accuracy of the style
+description for the reference image. Qualitative and quantitative experimental
+results demonstrate that InstaStyle achieves superior performance compared to
+current benchmarks. Furthermore, our approach also showcases its capability in
+the creative task of style combination with mixed inversion noise.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: PointOBB: Learning Oriented Object Detection via Single Point Supervision. (arXiv:2311.14757v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14757">http://arxiv.org/abs/2311.14757</a></li>
+<li>Code URL: https://github.com/luo-z13/pointobb</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14757]] PointOBB: Learning Oriented Object Detection via Single Point Supervision(http://arxiv.org/abs/2311.14757)</code></li>
+<li>Summary: <p>Single point-supervised object detection is gaining attention due to its
+cost-effectiveness. However, existing approaches focus on generating horizontal
+bounding boxes (HBBs) while ignoring oriented bounding boxes (OBBs) commonly
+used for objects in aerial images. This paper proposes PointOBB, the first
+single Point-based OBB generation method, for oriented object detection.
+PointOBB operates through the collaborative utilization of three distinctive
+views: an original view, a resized view, and a rotated/flipped (rot/flp) view.
+Upon the original view, we leverage the resized and rot/flp views to build a
+scale augmentation module and an angle acquisition module, respectively. In the
+former module, a Scale-Sensitive Consistency (SSC) loss is designed to enhance
+the deep network's ability to perceive the object scale. For accurate object
+angle predictions, the latter module incorporates self-supervised learning to
+predict angles, which is associated with a scale-guided Dense-to-Sparse (DS)
+matching strategy for aggregating dense angles corresponding to sparse objects.
+The resized and rot/flp views are switched using a progressive multi-view
+switching strategy during training to achieve coupled optimization of scale and
+angle. Experimental results on the DIOR-R and DOTA-v1.0 datasets demonstrate
+that PointOBB achieves promising performance, and significantly outperforms
+potential point-supervised baselines.
+</p></li>
+</ul>
+
+<h3>Title: Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network. (arXiv:2311.14897v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14897">http://arxiv.org/abs/2311.14897</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14897]] Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network(http://arxiv.org/abs/2311.14897)</code></li>
+<li>Summary: <p>Recently, 3D anomaly detection, a crucial problem involving fine-grained
+geometry discrimination, is getting more attention. However, the lack of
+abundant real 3D anomaly data limits the scalability of current models. To
+enable scalable anomaly data collection, we propose a 3D anomaly synthesis
+pipeline to adapt existing large-scale 3Dmodels for 3D anomaly detection.
+Specifically, we construct a synthetic dataset, i.e., Anomaly-ShapeNet, basedon
+ShapeNet. Anomaly-ShapeNet consists of 1600 point cloud samples under 40
+categories, which provides a rich and varied collection of data, enabling
+efficient training and enhancing adaptability to industrial scenarios.
+Meanwhile,to enable scalable representation learning for 3D anomaly
+localization, we propose a self-supervised method, i.e., Iterative Mask
+Reconstruction Network (IMRNet). During training, we propose a geometry-aware
+sample module to preserve potentially anomalous local regions during point
+cloud down-sampling. Then, we randomly mask out point patches and sent the
+visible patches to a transformer for reconstruction-based self-supervision.
+During testing, the point cloud repeatedly goes through the Mask Reconstruction
+Network, with each iteration's output becoming the next input. By merging and
+contrasting the final reconstructed point cloud with the initial input, our
+method successfully locates anomalies. Experiments show that IMRNet outperforms
+previous state-of-the-art methods, achieving 66.1% in I-AUC on Anomaly-ShapeNet
+dataset and 72.5% in I-AUC on Real3D-AD dataset. Our dataset will be released
+at https://github.com/Chopper-233/Anomaly-ShapeNet
+</p></li>
+</ul>
+
+<h3>Title: SAME++: A Self-supervised Anatomical eMbeddings Enhanced medical image registration framework using stable sampling and regularized transformation. (arXiv:2311.14986v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14986">http://arxiv.org/abs/2311.14986</a></li>
+<li>Code URL: https://github.com/alibaba-damo-academy/same</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14986]] SAME++: A Self-supervised Anatomical eMbeddings Enhanced medical image registration framework using stable sampling and regularized transformation(http://arxiv.org/abs/2311.14986)</code></li>
+<li>Summary: <p>Image registration is a fundamental medical image analysis task. Ideally,
+registration should focus on aligning semantically corresponding voxels, i.e.,
+the same anatomical locations. However, existing methods often optimize
+similarity measures computed directly on intensities or on hand-crafted
+features, which lack anatomical semantic information. These similarity measures
+may lead to sub-optimal solutions where large deformations, complex anatomical
+differences, or cross-modality imagery exist. In this work, we introduce a fast
+and accurate method for unsupervised 3D medical image registration building on
+top of a Self-supervised Anatomical eMbedding (SAM) algorithm, which is capable
+of computing dense anatomical correspondences between two images at the voxel
+level. We name our approach SAM-Enhanced registration (SAME++), which
+decomposes image registration into four steps: affine transformation, coarse
+deformation, deep non-parametric transformation, and instance optimization.
+Using SAM embeddings, we enhance these steps by finding more coherent
+correspondence and providing features with better semantic guidance. We
+extensively evaluated SAME++ using more than 50 labeled organs on three
+challenging inter-subject registration tasks of different body parts. As a
+complete registration framework, SAME++ markedly outperforms leading methods by
+$4.2\%$ - $8.2\%$ in terms of Dice score while being orders of magnitude faster
+than numerical optimization-based methods. Code is available at
+\url{https://github.com/alibaba-damo-academy/same}.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: VSCode: General Visual Salient and Camouflaged Object Detection with 2D Prompt Learning. (arXiv:2311.15011v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.15011">http://arxiv.org/abs/2311.15011</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.15011]] VSCode: General Visual Salient and Camouflaged Object Detection with 2D Prompt Learning(http://arxiv.org/abs/2311.15011)</code></li>
+<li>Summary: <p>Salient object detection (SOD) and camouflaged object detection (COD) are
+related yet distinct binary mapping tasks. These tasks involve multiple
+modalities, sharing commonalities and unique cues. Existing research often
+employs intricate task-specific specialist models, potentially leading to
+redundancy and suboptimal results. We introduce VSCode, a generalist model with
+novel 2D prompt learning, to jointly address four SOD tasks and three COD
+tasks. We utilize VST as the foundation model and introduce 2D prompts within
+the encoder-decoder architecture to learn domain and task-specific knowledge on
+two separate dimensions. A prompt discrimination loss helps disentangle
+peculiarities to benefit model optimization. VSCode outperforms
+state-of-the-art methods across six tasks on 26 datasets and exhibits zero-shot
+generalization to unseen tasks by combining 2D prompts, such as RGB-D COD.
+</p></li>
+</ul>
+
+<h3>Title: A Baseline Analysis of Reward Models' Ability To Accurately Analyze Foundation Models Under Distribution Shift. (arXiv:2311.14743v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14743">http://arxiv.org/abs/2311.14743</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14743]] A Baseline Analysis of Reward Models' Ability To Accurately Analyze Foundation Models Under Distribution Shift(http://arxiv.org/abs/2311.14743)</code></li>
+<li>Summary: <p>Foundation models, specifically Large Language Models (LLM's), have lately
+gained wide-spread attention and adoption. Reinforcement Learning with Human
+Feedback (RLHF) involves training a reward model to capture desired behaviors,
+which is then used to align an LLM. These reward models are additionally used
+at inference-time to estimate how well LLM responses adhere to those desired
+behaviors. However, there is little work measuring how robust these reward
+models are to distribution shifts. In this work, we evaluate how reward model
+performance - measured via accuracy and calibration (i.e. alignment between
+accuracy and confidence) - is affected by distribution shift. We show novel
+calibration patterns and accuracy drops due to OOD prompts and responses, and
+that the reward model is more sensitive to shifts in responses than prompts.
+Additionally, we adapt an OOD detection technique commonly used in
+classification to the reward model setting in order to detect these
+distribution shifts in prompts and responses.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Parkinson Disease classification Using Contrastive Graph Cross-View Learning with Multimodal Fusion of SPECT Images and Clinical Features. (arXiv:2311.14902v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14902">http://arxiv.org/abs/2311.14902</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14902]] Parkinson Disease classification Using Contrastive Graph Cross-View Learning with Multimodal Fusion of SPECT Images and Clinical Features(http://arxiv.org/abs/2311.14902)</code></li>
+<li>Summary: <p>Parkinson's Disease (PD) is a neurodegenerative neurological disorder that
+impacts movement and afflicts over 10 million people worldwide. Previous
+researches have come up with deep learning models for predicting Parkinson's
+disease primarily using medical images and didn't leverage the manifold
+structure in the dataset. Our study introduces a multimodal approach with both
+image and non-image features with a contrastive cross-view graph fusion for
+Parkinson's disease classification. Specifically, we designed a multimodal
+co-attention module to integrate embeddings from two distinct graph views
+derived from low dimensional representation of images and clinical features,
+enabling the extraction of more stable and structured features from the
+multiview data. Additionally, we have devised a simplified fusion method
+utilizing a contrastive loss for positive and negative pairs, to enhance the
+model's overall cross-view fusion learning capabilities. In our experiments,
+the graph-view multimodal approach can achieve an accuracy rate of 91% and an
+AUC of 92.8% in five-fold cross-validation, and it also demonstrates superior
+predictive capabilities on non-image data as compared to methods that rely
+solely on machine learning methods.
+</p></li>
+</ul>
+
+<h3>Title: Benefits and Harms of Large Language Models in Digital Mental Health. (arXiv:2311.14693v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14693">http://arxiv.org/abs/2311.14693</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14693]] Benefits and Harms of Large Language Models in Digital Mental Health(http://arxiv.org/abs/2311.14693)</code></li>
+<li>Summary: <p>The past decade has been transformative for mental health research and
+practice. The ability to harness large repositories of data, whether from
+electronic health records (EHR), mobile devices, or social media, has revealed
+a potential for valuable insights into patient experiences, promising early,
+proactive interventions, as well as personalized treatment plans. Recent
+developments in generative artificial intelligence, particularly large language
+models (LLMs), show promise in leading digital mental health to uncharted
+territory. Patients are arriving at doctors' appointments with information
+sourced from chatbots, state-of-the-art LLMs are being incorporated in medical
+software and EHR systems, and chatbots from an ever-increasing number of
+startups promise to serve as AI companions, friends, and partners. This article
+presents contemporary perspectives on the opportunities and risks posed by LLMs
+in the design, development, and implementation of digital mental health tools.
+We adopt an ecological framework and draw on the affordances offered by LLMs to
+discuss four application areas -- care-seeking behaviors from individuals in
+need of care, community care provision, institutional and medical care
+provision, and larger care ecologies at the societal level. We engage in a
+thoughtful consideration of whether and how LLM-based technologies could or
+should be employed for enhancing mental health. The benefits and harms our
+article surfaces could serve to help shape future research, advocacy, and
+regulatory efforts focused on creating more responsible, user-friendly,
+equitable, and secure LLM-based tools for mental health treatment and
+intervention.
+</p></li>
+</ul>
+
+<h3>Title: Zero-Shot Question Answering over Financial Documents using Large Language Models. (arXiv:2311.14722v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14722">http://arxiv.org/abs/2311.14722</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14722]] Zero-Shot Question Answering over Financial Documents using Large Language Models(http://arxiv.org/abs/2311.14722)</code></li>
+<li>Summary: <p>We introduce a large language model (LLM) based approach to answer complex
+questions requiring multi-hop numerical reasoning over financial reports. While
+LLMs have exhibited remarkable performance on various natural language and
+reasoning tasks, complex reasoning problems often rely on few-shot prompts that
+require carefully crafted examples. In contrast, our approach uses novel
+zero-shot prompts that guide the LLM to encode the required reasoning into a
+Python program or a domain specific language. The generated program is then
+executed by a program interpreter, thus mitigating the limitations of LLM in
+performing accurate arithmetic calculations.
+</p>
+<p>We evaluate the proposed approach on three financial datasets using some of
+the recently developed generative pretrained transformer (GPT) models and
+perform comparisons with various zero-shot baselines. The experimental results
+demonstrate that our approach significantly improves the accuracy for all the
+LLMs over their respective baselines. We provide a detailed analysis of the
+results, generating insights to support our findings. The success of our
+approach demonstrates the enormous potential to extract complex domain specific
+numerical reasoning by designing zero-shot prompts to effectively exploit the
+knowledge embedded in LLMs.
+</p></li>
+</ul>
+
+<h3>Title: MemoryCompanion: A Smart Healthcare Solution to Empower Efficient Alzheimer's Care Via Unleashing Generative AI. (arXiv:2311.14730v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14730">http://arxiv.org/abs/2311.14730</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14730]] MemoryCompanion: A Smart Healthcare Solution to Empower Efficient Alzheimer's Care Via Unleashing Generative AI(http://arxiv.org/abs/2311.14730)</code></li>
+<li>Summary: <p>With the rise of Large Language Models (LLMs), notably characterized by GPT
+frameworks, there emerges a catalyst for novel healthcare applications. Earlier
+iterations of chatbot caregivers, though existent, have yet to achieve a
+dimension of human-like authenticity. This paper unveils `MemoryCompanion' a
+pioneering digital health solution explicitly tailored for Alzheimer's disease
+(AD) patients and their caregivers. Drawing upon the nuances of GPT technology
+and prompt engineering, MemoryCompanion manifests a personalized caregiving
+paradigm, fostering interactions via voice-cloning and talking-face mechanisms
+that resonate with the familiarity of known companions. Using advanced
+prompt-engineering, the system intricately adapts to each patient's distinct
+profile, curating its content and communication style accordingly. This
+approach strives to counteract prevalent issues of social isolation and
+loneliness frequently observed in AD demographics. Our methodology, grounded in
+its innovative design, addresses both the caregiving and technological
+challenges intrinsic to this domain.
+</p></li>
+</ul>
+
+<h3>Title: Vector-Quantized Prompt Learning for Paraphrase Generation. (arXiv:2311.14949v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14949">http://arxiv.org/abs/2311.14949</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14949]] Vector-Quantized Prompt Learning for Paraphrase Generation(http://arxiv.org/abs/2311.14949)</code></li>
+<li>Summary: <p>Deep generative modeling of natural languages has achieved many successes,
+such as producing fluent sentences and translating from one language into
+another. However, the development of generative modeling techniques for
+paraphrase generation still lags behind largely due to the challenges in
+addressing the complex conflicts between expression diversity and semantic
+preservation. This paper proposes to generate diverse and high-quality
+paraphrases by exploiting the pre-trained models with instance-dependent
+prompts. To learn generalizable prompts, we assume that the number of abstract
+transforming patterns of paraphrase generation (governed by prompts) is finite
+and usually not large. Therefore, we present vector-quantized prompts as the
+cues to control the generation of pre-trained models. Extensive experiments
+demonstrate that the proposed method achieves new state-of-art results on three
+benchmark datasets, including Quora, Wikianswers, and MSCOCO. We will release
+all the code upon acceptance.
+</p></li>
+</ul>
+
+<h3>Title: A unified framework for learning with nonlinear model classes from arbitrary linear samples. (arXiv:2311.14886v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14886">http://arxiv.org/abs/2311.14886</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14886]] A unified framework for learning with nonlinear model classes from arbitrary linear samples(http://arxiv.org/abs/2311.14886)</code></li>
+<li>Summary: <p>This work considers the fundamental problem of learning an unknown object
+from training data using a given model class. We introduce a unified framework
+that allows for objects in arbitrary Hilbert spaces, general types of (random)
+linear measurements as training data and general types of nonlinear model
+classes. We establish a series of learning guarantees for this framework. These
+guarantees provide explicit relations between the amount of training data and
+properties of the model class to ensure near-best generalization bounds. In
+doing so, we also introduce and develop the key notion of the variation of a
+model class with respect to a distribution of sampling operators. To exhibit
+the versatility of this framework, we show that it can accommodate many
+different types of well-known problems of interest. We present examples such as
+matrix sketching by random sampling, compressed sensing with isotropic vectors,
+active learning in regression and compressed sensing with generative models. In
+all cases, we show how known results become straightforward corollaries of our
+general learning guarantees. For compressed sensing with generative models, we
+also present a number of generalizations and improvements of recent results. In
+summary, our work not only introduces a unified way to study learning unknown
+objects from general types of data, but also establishes a series of general
+theoretical guarantees which consolidate and improve various known results.
+</p></li>
+</ul>
+
+<h3>Title: Training a Hopfield Variational Autoencoder with Equilibrium Propagation. (arXiv:2311.15047v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.15047">http://arxiv.org/abs/2311.15047</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.15047]] Training a Hopfield Variational Autoencoder with Equilibrium Propagation(http://arxiv.org/abs/2311.15047)</code></li>
+<li>Summary: <p>On dedicated analog hardware, equilibrium propagation is an energy-efficient
+alternative to backpropagation. In spite of its theoretical guarantees, its
+application in the AI domain remains limited to the discriminative setting.
+Meanwhile, despite its high computational demands, generative AI is on the
+rise. In this paper, we demonstrate the application of Equilibrium Propagation
+in training a variational autoencoder (VAE) for generative modeling. Leveraging
+the symmetric nature of Hopfield networks, we propose using a single model to
+serve as both the encoder and decoder which could effectively halve the
+required chip size for VAE implementations, paving the way for more efficient
+analog hardware configurations.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Set Features for Anomaly Detection. (arXiv:2311.14773v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14773">http://arxiv.org/abs/2311.14773</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14773]] Set Features for Anomaly Detection(http://arxiv.org/abs/2311.14773)</code></li>
+<li>Summary: <p>This paper proposes set features for detecting anomalies in samples that
+consist of unusual combinations of normal elements. Many leading methods
+discover anomalies by detecting an unusual part of a sample. For example,
+state-of-the-art segmentation-based approaches, first classify each element of
+the sample (e.g., image patch) as normal or anomalous and then classify the
+entire sample as anomalous if it contains anomalous elements. However, such
+approaches do not extend well to scenarios where the anomalies are expressed by
+an unusual combination of normal elements. In this paper, we overcome this
+limitation by proposing set features that model each sample by the distribution
+of its elements. We compute the anomaly score of each sample using a simple
+density estimation method, using fixed features. Our approach outperforms the
+previous state-of-the-art in image-level logical anomaly detection and
+sequence-level time series anomaly detection.
+</p></li>
+</ul>
+
+<h3>Title: One Fits All: Universal Time Series Analysis by Pretrained LM and Specially Designed Adaptors. (arXiv:2311.14782v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2311.14782">http://arxiv.org/abs/2311.14782</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2311.14782]] One Fits All: Universal Time Series Analysis by Pretrained LM and Specially Designed Adaptors(http://arxiv.org/abs/2311.14782)</code></li>
+<li>Summary: <p>Despite the impressive achievements of pre-trained models in the fields of
+natural language processing (NLP) and computer vision (CV), progress in the
+domain of time series analysis has been limited. In contrast to NLP and CV,
+where a single model can handle various tasks, time series analysis still
+relies heavily on task-specific methods for activities such as classification,
+anomaly detection, forecasting, and few-shot learning. The primary obstacle to
+developing a pre-trained model for time series analysis is the scarcity of
+sufficient training data. In our research, we overcome this obstacle by
+utilizing pre-trained models from language or CV, which have been trained on
+billions of data points, and apply them to time series analysis. We assess the
+effectiveness of the pre-trained transformer model in two ways. Initially, we
+maintain the original structure of the self-attention and feedforward layers in
+the residual blocks of the pre-trained language or image model, using the
+Frozen Pre-trained Transformer (FPT) for time series analysis with the addition
+of projection matrices for input and output. Additionally, we introduce four
+unique adapters, designed specifically for downstream tasks based on the
+pre-trained model, including forecasting and anomaly detection. These adapters
+are further enhanced with efficient parameter tuning, resulting in superior
+performance compared to all state-of-the-art methods.Our comprehensive
+experimental studies reveal that (a) the simple FPT achieves top-tier
+performance across various time series analysis tasks; and (b) fine-tuning the
+FPT with the custom-designed adapters can further elevate its performance,
+outshining specialized task-specific models.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
