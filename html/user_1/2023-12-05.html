@@ -1,0 +1,679 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: Probing and Mitigating Intersectional Social Biases in Vision-Language Models with Counterfactual Examples. (arXiv:2312.00825v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00825">http://arxiv.org/abs/2312.00825</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00825]] Probing and Mitigating Intersectional Social Biases in Vision-Language Models with Counterfactual Examples(http://arxiv.org/abs/2312.00825)</code></li>
+<li>Summary: <p>While vision-language models (VLMs) have achieved remarkable performance
+improvements recently, there is growing evidence that these models also posses
+harmful biases with respect to social attributes such as gender and race. Prior
+studies have primarily focused on probing such bias attributes individually
+while ignoring biases associated with intersections between social attributes.
+This could be due to the difficulty of collecting an exhaustive set of
+image-text pairs for various combinations of social attributes. To address this
+challenge, we employ text-to-image diffusion models to produce counterfactual
+examples for probing intserctional social biases at scale. Our approach
+utilizes Stable Diffusion with cross attention control to produce sets of
+counterfactual image-text pairs that are highly similar in their depiction of a
+subject (e.g., a given occupation) while differing only in their depiction of
+intersectional social attributes (e.g., race &amp; gender). Through our
+over-generate-then-filter methodology, we produce SocialCounterfactuals, a
+high-quality dataset containing over 171k image-text pairs for probing
+intersectional biases related to gender, race, and physical characteristics. We
+conduct extensive experiments to demonstrate the usefulness of our generated
+dataset for probing and mitigating intersectional social biases in
+state-of-the-art VLMs.
+</p></li>
+</ul>
+
+<h3>Title: Lasagna: Layered Score Distillation for Disentangled Object Relighting. (arXiv:2312.00833v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00833">http://arxiv.org/abs/2312.00833</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00833]] Lasagna: Layered Score Distillation for Disentangled Object Relighting(http://arxiv.org/abs/2312.00833)</code></li>
+<li>Summary: <p>Professional artists, photographers, and other visual content creators use
+object relighting to establish their photo's desired effect. Unfortunately,
+manual tools that allow relighting have a steep learning curve and are
+difficult to master. Although generative editing methods now enable some forms
+of image editing, relighting is still beyond today's capabilities; existing
+methods struggle to keep other aspects of the image -- colors, shapes, and
+textures -- consistent after the edit. We propose Lasagna, a method that
+enables intuitive text-guided relighting control. Lasagna learns a lighting
+prior by using score distillation sampling to distill the prior of a diffusion
+model, which has been finetuned on synthetic relighting data. To train Lasagna,
+we curate a new synthetic dataset ReLiT, which contains 3D object assets re-lit
+from multiple light source locations. Despite training on synthetic images,
+quantitative results show that Lasagna relights real-world images while
+preserving other aspects of the input image, outperforming state-of-the-art
+text-guided image editing methods. Lasagna enables realistic and controlled
+results on natural images and digital art pieces and is preferred by humans
+over other methods in over 91% of cases. Finally, we demonstrate the
+versatility of our learning objective by extending it to allow colorization,
+another form of image editing.
+</p></li>
+</ul>
+
+<h3>Title: VMC: Video Motion Customization using Temporal Attention Adaption for Text-to-Video Diffusion Models. (arXiv:2312.00845v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00845">http://arxiv.org/abs/2312.00845</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00845]] VMC: Video Motion Customization using Temporal Attention Adaption for Text-to-Video Diffusion Models(http://arxiv.org/abs/2312.00845)</code></li>
+<li>Summary: <p>Text-to-video diffusion models have advanced video generation significantly.
+However, customizing these models to generate videos with tailored motions
+presents a substantial challenge. In specific, they encounter hurdles in (a)
+accurately reproducing motion from a target video, and (b) creating diverse
+visual variations. For example, straightforward extensions of static image
+customization methods to video often lead to intricate entanglements of
+appearance and motion data. To tackle this, here we present the Video Motion
+Customization (VMC) framework, a novel one-shot tuning approach crafted to
+adapt temporal attention layers within video diffusion models. Our approach
+introduces a novel motion distillation objective using residual vectors between
+consecutive frames as a motion reference. The diffusion process then preserves
+low-frequency motion trajectories while mitigating high-frequency
+motion-unrelated noise in image space. We validate our method against
+state-of-the-art video generative models across diverse real-world motions and
+contexts. Our codes, data and the project demo can be found at
+https://video-motion-customization.github.io
+</p></li>
+</ul>
+
+<h3>Title: Beyond First-Order Tweedie: Solving Inverse Problems using Latent Diffusion. (arXiv:2312.00852v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00852">http://arxiv.org/abs/2312.00852</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00852]] Beyond First-Order Tweedie: Solving Inverse Problems using Latent Diffusion(http://arxiv.org/abs/2312.00852)</code></li>
+<li>Summary: <p>Sampling from the posterior distribution poses a major computational
+challenge in solving inverse problems using latent diffusion models. Common
+methods rely on Tweedie's first-order moments, which are known to induce a
+quality-limiting bias. Existing second-order approximations are impractical due
+to prohibitive computational costs, making standard reverse diffusion processes
+intractable for posterior sampling. This paper introduces Second-order Tweedie
+sampler from Surrogate Loss (STSL), a novel sampler that offers efficiency
+comparable to first-order Tweedie with a tractable reverse process using
+second-order approximation. Our theoretical results reveal that the
+second-order approximation is lower bounded by our surrogate loss that only
+requires $O(1)$ compute using the trace of the Hessian, and by the lower bound
+we derive a new drift term to make the reverse process tractable. Our method
+surpasses SoTA solvers PSLD and P2L, achieving 4X and 8X reduction in neural
+function evaluations, respectively, while notably enhancing sampling quality on
+FFHQ, ImageNet, and COCO benchmarks. In addition, we show STSL extends to
+text-guided image editing and addresses residual distortions present from
+corrupted images in leading text-guided image editing methods. To our best
+knowledge, this is the first work to offer an efficient second-order
+approximation in solving inverse problems using latent diffusion and editing
+real-world images with corruptions.
+</p></li>
+</ul>
+
+<h3>Title: Motion-Guided Latent Diffusion for Temporally Consistent Real-world Video Super-resolution. (arXiv:2312.00853v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00853">http://arxiv.org/abs/2312.00853</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00853]] Motion-Guided Latent Diffusion for Temporally Consistent Real-world Video Super-resolution(http://arxiv.org/abs/2312.00853)</code></li>
+<li>Summary: <p>Real-world low-resolution (LR) videos have diverse and complex degradations,
+imposing great challenges on video super-resolution (VSR) algorithms to
+reproduce their high-resolution (HR) counterparts with high quality. Recently,
+the diffusion models have shown compelling performance in generating realistic
+details for image restoration tasks. However, the diffusion process has
+randomness, making it hard to control the contents of restored images. This
+issue becomes more serious when applying diffusion models to VSR tasks because
+temporal consistency is crucial to the perceptual quality of videos. In this
+paper, we propose an effective real-world VSR algorithm by leveraging the
+strength of pre-trained latent diffusion models. To ensure the content
+consistency among adjacent frames, we exploit the temporal dynamics in LR
+videos to guide the diffusion process by optimizing the latent sampling path
+with a motion-guided loss, ensuring that the generated HR video maintains a
+coherent and continuous visual flow. To further mitigate the discontinuity of
+generated details, we insert temporal module to the decoder and fine-tune it
+with an innovative sequence-oriented loss. The proposed motion-guided latent
+diffusion (MGLD) based VSR algorithm achieves significantly better perceptual
+quality than state-of-the-arts on real-world VSR benchmark datasets, validating
+the effectiveness of the proposed model design and training strategies.
+</p></li>
+</ul>
+
+<h3>Title: DeepCache: Accelerating Diffusion Models for Free. (arXiv:2312.00858v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00858">http://arxiv.org/abs/2312.00858</a></li>
+<li>Code URL: https://github.com/horseee/deepcache</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00858]] DeepCache: Accelerating Diffusion Models for Free(http://arxiv.org/abs/2312.00858)</code></li>
+<li>Summary: <p>Diffusion models have recently gained unprecedented attention in the field of
+image synthesis due to their remarkable generative capabilities.
+Notwithstanding their prowess, these models often incur substantial
+computational costs, primarily attributed to the sequential denoising process
+and cumbersome model size. Traditional methods for compressing diffusion models
+typically involve extensive retraining, presenting cost and feasibility
+challenges. In this paper, we introduce DeepCache, a novel training-free
+paradigm that accelerates diffusion models from the perspective of model
+architecture. DeepCache capitalizes on the inherent temporal redundancy
+observed in the sequential denoising steps of diffusion models, which caches
+and retrieves features across adjacent denoising stages, thereby curtailing
+redundant computations. Utilizing the property of the U-Net, we reuse the
+high-level features while updating the low-level features in a very cheap way.
+This innovative strategy, in turn, enables a speedup factor of 2.3$\times$ for
+Stable Diffusion v1.5 with only a 0.05 decline in CLIP Score, and 4.1$\times$
+for LDM-4-G with a slight decrease of 0.22 in FID on ImageNet. Our experiments
+also demonstrate DeepCache's superiority over existing pruning and distillation
+methods that necessitate retraining and its compatibility with current sampling
+techniques. Furthermore, we find that under the same throughput, DeepCache
+effectively achieves comparable or even marginally improved results with DDIM
+or PLMS. The code is available at https://github.com/horseee/DeepCache
+</p></li>
+</ul>
+
+<h3>Title: 3DiFACE: Diffusion-based Speech-driven 3D Facial Animation and Editing. (arXiv:2312.00870v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00870">http://arxiv.org/abs/2312.00870</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00870]] 3DiFACE: Diffusion-based Speech-driven 3D Facial Animation and Editing(http://arxiv.org/abs/2312.00870)</code></li>
+<li>Summary: <p>We present 3DiFACE, a novel method for personalized speech-driven 3D facial
+animation and editing. While existing methods deterministically predict facial
+animations from speech, they overlook the inherent one-to-many relationship
+between speech and facial expressions, i.e., there are multiple reasonable
+facial expression animations matching an audio input. It is especially
+important in content creation to be able to modify generated motion or to
+specify keyframes. To enable stochasticity as well as motion editing, we
+propose a lightweight audio-conditioned diffusion model for 3D facial motion.
+This diffusion model can be trained on a small 3D motion dataset, maintaining
+expressive lip motion output. In addition, it can be finetuned for specific
+subjects, requiring only a short video of the person. Through quantitative and
+qualitative evaluations, we show that our method outperforms existing
+state-of-the-art techniques and yields speech-driven animations with greater
+fidelity and diversity.
+</p></li>
+</ul>
+
+<h3>Title: Enhancing Diffusion Models with 3D Perspective Geometry Constraints. (arXiv:2312.00944v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00944">http://arxiv.org/abs/2312.00944</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00944]] Enhancing Diffusion Models with 3D Perspective Geometry Constraints(http://arxiv.org/abs/2312.00944)</code></li>
+<li>Summary: <p>While perspective is a well-studied topic in art, it is generally taken for
+granted in images. However, for the recent wave of high-quality image synthesis
+methods such as latent diffusion models, perspective accuracy is not an
+explicit requirement. Since these methods are capable of outputting a wide
+gamut of possible images, it is difficult for these synthesized images to
+adhere to the principles of linear perspective. We introduce a novel geometric
+constraint in the training process of generative models to enforce perspective
+accuracy. We show that outputs of models trained with this constraint both
+appear more realistic and improve performance of downstream models trained on
+generated images. Subjective human trials show that images generated with
+latent diffusion models trained with our constraint are preferred over images
+from the Stable Diffusion V2 model 70% of the time. SOTA monocular depth
+estimation models such as DPT and PixelFormer, fine-tuned on our images,
+outperform the original models trained on real images by up to 7.03% in RMSE
+and 19.3% in SqRel on the KITTI test set for zero-shot transfer.
+</p></li>
+</ul>
+
+<h3>Title: Consistent Mesh Diffusion. (arXiv:2312.00971v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00971">http://arxiv.org/abs/2312.00971</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00971]] Consistent Mesh Diffusion(http://arxiv.org/abs/2312.00971)</code></li>
+<li>Summary: <p>Given a 3D mesh with a UV parameterization, we introduce a novel approach to
+generating textures from text prompts. While prior work uses optimization from
+Text-to-Image Diffusion models to generate textures and geometry, this is slow
+and requires significant compute resources. Alternatively, there are projection
+based approaches that use the same Text-to-Image models that paint images onto
+a mesh, but lack consistency at different viewing angles, we propose a method
+that uses a single Depth-to-Image diffusion network, and generates a single
+consistent texture when rendered on the 3D surface by first unifying multiple
+2D image's diffusion paths, and hoisting that to 3D with
+MultiDiffusion~\cite{multidiffusion}. We demonstrate our approach on a dataset
+containing 30 meshes, taking approximately 5 minutes per mesh. To evaluate the
+quality of our approach, we use CLIP-score~\cite{clipscore} and Frechet
+Inception Distance (FID)~\cite{frechet} to evaluate the quality of the
+rendering, and show our improvement over prior work.
+</p></li>
+</ul>
+
+<h3>Title: Taming Latent Diffusion Models to See in the Dark. (arXiv:2312.01027v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.01027">http://arxiv.org/abs/2312.01027</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.01027]] Taming Latent Diffusion Models to See in the Dark(http://arxiv.org/abs/2312.01027)</code></li>
+<li>Summary: <p>Enhancing a low-light noisy RAW image into a well-exposed and clean sRGB
+image is a significant challenge in computational photography. Due to the
+limitation of large-scale paired data, prior approaches have difficulty in
+recovering fine details and true colors in extremely low-light regions.
+Meanwhile, recent advancements in generative diffusion models have shown
+promising generating capabilities, which inspires this work to explore
+generative priors from a diffusion model trained on a large-scale open-domain
+dataset to benefit the low-light image enhancement (LLIE) task. Based on this
+intention, we propose a novel diffusion-model-based LLIE method, dubbed
+LDM-SID. LDM-SID aims at inserting a set of proposed taming modules into a
+frozen pre-trained diffusion model to steer its generating process.
+Specifically, the taming module fed with low-light information serves to output
+a pair of affine transformation parameters to modulate the intermediate feature
+in the diffusion model. Additionally, based on the observation of dedicated
+generative priors across different portions of the diffusion model, we propose
+to apply 2D discrete wavelet transforms on the input RAW image, resulting in
+dividing the LLIE task into two essential parts: low-frequency content
+generation and high-frequency detail maintenance. This enables us to skillfully
+tame the diffusion model for optimized structural generation and detail
+enhancement. Extensive experiments demonstrate the proposed method not only
+achieves state-of-the-art performance in quantitative evaluations but also
+shows significant superiority in visual comparisons. These findings highlight
+the effectiveness of leveraging a pre-trained diffusion model as a generative
+prior to the LLIE task.
+</p></li>
+</ul>
+
+<h3>Title: Non-Cross Diffusion for Semantic Consistency. (arXiv:2312.00820v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00820">http://arxiv.org/abs/2312.00820</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00820]] Non-Cross Diffusion for Semantic Consistency(http://arxiv.org/abs/2312.00820)</code></li>
+<li>Summary: <p>In diffusion models, deviations from a straight generative flow are a common
+issue, resulting in semantic inconsistencies and suboptimal generations. To
+address this challenge, we introduce `Non-Cross Diffusion', an innovative
+approach in generative modeling for learning ordinary differential equation
+(ODE) models. Our methodology strategically incorporates an ascending dimension
+of input to effectively connect points sampled from two distributions with
+uncrossed paths. This design is pivotal in ensuring enhanced semantic
+consistency throughout the inference process, which is especially critical for
+applications reliant on consistent generative flows, including various
+distillation methods and deterministic sampling, which are fundamental in image
+editing and interpolation tasks. Our empirical results demonstrate the
+effectiveness of Non-Cross Diffusion, showing a substantial reduction in
+semantic inconsistencies at different inference steps and a notable enhancement
+in the overall performance of diffusion models.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Variational Self-Supervised Contrastive Learning Using Beta Divergence. (arXiv:2312.00824v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00824">http://arxiv.org/abs/2312.00824</a></li>
+<li>Code URL: https://github.com/verimsu/VCL</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00824]] Variational Self-Supervised Contrastive Learning Using Beta Divergence(http://arxiv.org/abs/2312.00824)</code></li>
+<li>Summary: <p>Learning a discriminative semantic space using unlabelled and noisy data
+remains unaddressed in a multi-label setting. We present a contrastive
+self-supervised learning method which is robust to data noise, grounded in the
+domain of variational methods. The method (VCL) utilizes variational
+contrastive learning with beta-divergence to learn robustly from unlabelled
+datasets, including uncurated and noisy datasets. We demonstrate the
+effectiveness of the proposed method through rigorous experiments including
+linear evaluation and fine-tuning scenarios with multi-label datasets in the
+face understanding domain. In almost all tested scenarios, VCL surpasses the
+performance of state-of-the-art self-supervised methods, achieving a noteworthy
+increase in accuracy.
+</p></li>
+</ul>
+
+<h3>Title: Improve Supervised Representation Learning with Masked Image Modeling. (arXiv:2312.00950v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00950">http://arxiv.org/abs/2312.00950</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00950]] Improve Supervised Representation Learning with Masked Image Modeling(http://arxiv.org/abs/2312.00950)</code></li>
+<li>Summary: <p>Training visual embeddings with labeled data supervision has been the de
+facto setup for representation learning in computer vision. Inspired by recent
+success of adopting masked image modeling (MIM) in self-supervised
+representation learning, we propose a simple yet effective setup that can
+easily integrate MIM into existing supervised training paradigms. In our
+design, in addition to the original classification task applied to a vision
+transformer image encoder, we add a shallow transformer-based decoder on top of
+the encoder and introduce an MIM task which tries to reconstruct image tokens
+based on masked image inputs. We show with minimal change in architecture and
+no overhead in inference that this setup is able to improve the quality of the
+learned representations for downstream tasks such as classification, image
+retrieval, and semantic segmentation. We conduct a comprehensive study and
+evaluation of our setup on public benchmarks. On ImageNet-1k, our ViT-B/14
+model achieves 81.72% validation accuracy, 2.01% higher than the baseline
+model. On K-Nearest-Neighbor image retrieval evaluation with ImageNet-1k, the
+same model outperforms the baseline by 1.32%. We also show that this setup can
+be easily scaled to larger models and datasets. Code and checkpoints will be
+released.
+</p></li>
+</ul>
+
+<h3>Title: Spatiotemporal Transformer for Imputing Sparse Data: A Deep Learning Approach. (arXiv:2312.00963v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00963">http://arxiv.org/abs/2312.00963</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00963]] Spatiotemporal Transformer for Imputing Sparse Data: A Deep Learning Approach(http://arxiv.org/abs/2312.00963)</code></li>
+<li>Summary: <p>Effective management of environmental resources and agricultural
+sustainability heavily depends on accurate soil moisture data. However,
+datasets like the SMAP/Sentinel-1 soil moisture product often contain missing
+values across their spatiotemporal grid, which poses a significant challenge.
+This paper introduces a novel Spatiotemporal Transformer model (ST-Transformer)
+specifically designed to address the issue of missing values in sparse
+spatiotemporal datasets, particularly focusing on soil moisture data. The
+ST-Transformer employs multiple spatiotemporal attention layers to capture the
+complex spatiotemporal correlations in the data and can integrate additional
+spatiotemporal covariates during the imputation process, thereby enhancing its
+accuracy. The model is trained using a self-supervised approach, enabling it to
+autonomously predict missing values from observed data points. Our model's
+efficacy is demonstrated through its application to the SMAP 1km soil moisture
+data over a 36 x 36 km grid in Texas. It showcases superior accuracy compared
+to well-known imputation methods. Additionally, our simulation studies on other
+datasets highlight the model's broader applicability in various spatiotemporal
+imputation tasks.
+</p></li>
+</ul>
+
+<h3>Title: Spectral Temporal Contrastive Learning. (arXiv:2312.00966v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00966">http://arxiv.org/abs/2312.00966</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00966]] Spectral Temporal Contrastive Learning(http://arxiv.org/abs/2312.00966)</code></li>
+<li>Summary: <p>Learning useful data representations without requiring labels is a
+cornerstone of modern deep learning. Self-supervised learning methods,
+particularly contrastive learning (CL), have proven successful by leveraging
+data augmentations to define positive pairs. This success has prompted a number
+of theoretical studies to better understand CL and investigate theoretical
+bounds for downstream linear probing tasks. This work is concerned with the
+temporal contrastive learning (TCL) setting where the sequential structure of
+the data is used instead to define positive pairs, which is more commonly used
+in RL and robotics contexts. In this paper, we adapt recent work on Spectral CL
+to formulate Spectral Temporal Contrastive Learning (STCL). We discuss a
+population loss based on a state graph derived from a time-homogeneous
+reversible Markov chain with uniform stationary distribution. The STCL loss
+enables to connect the linear probing performance to the spectral properties of
+the graph, and can be estimated by considering previously observed data
+sequences as an ensemble of MCMC chains.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Segment Any 3D Gaussians. (arXiv:2312.00860v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00860">http://arxiv.org/abs/2312.00860</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00860]] Segment Any 3D Gaussians(http://arxiv.org/abs/2312.00860)</code></li>
+<li>Summary: <p>Interactive 3D segmentation in radiance fields is an appealing task since its
+importance in 3D scene understanding and manipulation. However, existing
+methods face challenges in either achieving fine-grained, multi-granularity
+segmentation or contending with substantial computational overhead, inhibiting
+real-time interaction. In this paper, we introduce Segment Any 3D GAussians
+(SAGA), a novel 3D interactive segmentation approach that seamlessly blends a
+2D segmentation foundation model with 3D Gaussian Splatting (3DGS), a recent
+breakthrough of radiance fields. SAGA efficiently embeds multi-granularity 2D
+segmentation results generated by the segmentation foundation model into 3D
+Gaussian point features through well-designed contrastive training. Evaluation
+on existing benchmarks demonstrates that SAGA can achieve competitive
+performance with state-of-the-art methods. Moreover, SAGA achieves
+multi-granularity segmentation and accommodates various prompts, including
+points, scribbles, and 2D masks. Notably, SAGA can finish the 3D segmentation
+within milliseconds, achieving nearly 1000x acceleration compared to previous
+SOTA. The project page is at https://jumpat.github.io/SAGA.
+</p></li>
+</ul>
+
+<h3>Title: Grounding Everything: Emerging Localization Properties in Vision-Language Transformers. (arXiv:2312.00878v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00878">http://arxiv.org/abs/2312.00878</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00878]] Grounding Everything: Emerging Localization Properties in Vision-Language Transformers(http://arxiv.org/abs/2312.00878)</code></li>
+<li>Summary: <p>Vision-language foundation models have shown remarkable performance in
+various zero-shot settings such as image retrieval, classification, or
+captioning. But so far, those models seem to fall behind when it comes to
+zero-shot localization of referential expressions and objects in images. As a
+result, they need to be fine-tuned for this task. In this paper, we show that
+pretrained vision-language (VL) models allow for zero-shot open-vocabulary
+object localization without any fine-tuning. To leverage those capabilities, we
+propose a Grounding Everything Module (GEM) that generalizes the idea of
+value-value attention introduced by CLIPSurgery to a self-self attention path.
+We show that the concept of self-self attention corresponds to clustering, thus
+enforcing groups of tokens arising from the same object to be similar while
+preserving the alignment with the language space. To further guide the group
+formation, we propose a set of regularizations that allows the model to finally
+generalize across datasets and backbones. We evaluate the proposed GEM
+framework on various benchmark tasks and datasets for semantic segmentation. It
+shows that GEM not only outperforms other training-free open-vocabulary
+localization methods, but also achieves state-of-the-art results on the
+recently proposed OpenImagesV7 large-scale segmentation benchmark.
+</p></li>
+</ul>
+
+<h3>Title: Object 6D pose estimation meets zero-shot learning. (arXiv:2312.00947v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00947">http://arxiv.org/abs/2312.00947</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00947]] Object 6D pose estimation meets zero-shot learning(http://arxiv.org/abs/2312.00947)</code></li>
+<li>Summary: <p>Object 6D pose estimation methods can achieve high accuracy when trained and
+tested on the same objects. However, estimating the pose of objects that are
+absent at training time is still a challenge. In this work, we advance the
+state-of-the-art in zero-shot object 6D pose estimation by proposing the first
+method that fuses the contribution of pre-trained geometric and vision
+foundation models. Unlike state-of-the-art approaches that train their pipeline
+on data specifically crafted for the 6D pose estimation task, our method does
+not require task-specific finetuning. Instead, our method, which we name PoMZ,
+combines geometric descriptors learned from point cloud data with visual
+features learned from large-scale web images to produce distinctive 3D
+point-level descriptors. By applying an off-the-shelf registration algorithm,
+like RANSAC, PoMZ outperforms all state-of-the-art zero-shot object 6D pose
+estimation approaches. We extensively evaluate PoMZ across the seven core
+datasets of the BOP Benchmark, encompassing over a hundred objects and 20
+thousand images captured in diverse scenarios. PoMZ ranks first in the BOP
+Benchmark under the category Task 4: 6D localization of unseen objects. We will
+release the source code publicly.
+</p></li>
+</ul>
+
+<h3>Title: Exploring the Robustness of Decentralized Training for Large Language Models. (arXiv:2312.00843v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00843">http://arxiv.org/abs/2312.00843</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00843]] Exploring the Robustness of Decentralized Training for Large Language Models(http://arxiv.org/abs/2312.00843)</code></li>
+<li>Summary: <p>Decentralized training of large language models has emerged as an effective
+way to democratize this technology. However, the potential threats associated
+with this approach have not been carefully discussed, which would hinder the
+development of decentralized training infrastructures. This paper aims to
+initiate discussion towards this end by exploring the robustness of
+decentralized training from three main perspectives. First, we demonstrate the
+vulnerabilities inherent in decentralized training frameworks in terms of
+hardware, data, and models. Second, we highlight the fundamental difference
+between decentralized foundation model training and vanilla federated learning,
+where the security techniques employed in federated learning cannot be applied
+directly. Third, we discuss the essential components required for a robust and
+efficient decentralized training framework and present a case study by modeling
+a concrete threat model. Our objective in this vision paper is to emphasize the
+importance of addressing security concerns in the context of decentralized
+training for large language models.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Omni-SMoLA: Boosting Generalist Multimodal Models with Soft Mixture of Low-rank Experts. (arXiv:2312.00968v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00968">http://arxiv.org/abs/2312.00968</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00968]] Omni-SMoLA: Boosting Generalist Multimodal Models with Soft Mixture of Low-rank Experts(http://arxiv.org/abs/2312.00968)</code></li>
+<li>Summary: <p>Large multi-modal models (LMMs) exhibit remarkable performance across
+numerous tasks. However, generalist LMMs often suffer from performance
+degradation when tuned over a large collection of tasks. Recent research
+suggests that Mixture of Experts (MoE) architectures are useful for instruction
+tuning, but for LMMs of parameter size around O(50-100B), the prohibitive cost
+of replicating and storing the expert models severely limits the number of
+experts we can use. We propose Omni-SMoLA, an architecture that uses the Soft
+MoE approach to (softly) mix many multimodal low rank experts, and avoids
+introducing a significant number of new parameters compared to conventional MoE
+models. The core intuition here is that the large model provides a foundational
+backbone, while different lightweight experts residually learn specialized
+knowledge, either per-modality or multimodally. Extensive experiments
+demonstrate that the SMoLA approach helps improve the generalist performance
+across a broad range of generative vision-and-language tasks, achieving new
+SoTA generalist performance that often matches or outperforms single
+specialized LMM baselines, as well as new SoTA specialist performance.
+</p></li>
+</ul>
+
+<h3>Title: Deep Generative Attacks and Countermeasures for Data-Driven Offline Signature Verification. (arXiv:2312.00987v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00987">http://arxiv.org/abs/2312.00987</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00987]] Deep Generative Attacks and Countermeasures for Data-Driven Offline Signature Verification(http://arxiv.org/abs/2312.00987)</code></li>
+<li>Summary: <p>While previous studies have explored attacks via random, simple, and skilled
+forgeries, generative attacks have received limited attention in the
+data-driven signature verification (DASV) process. Thus, this paper explores
+the impact of generative attacks on DASV and proposes practical and
+interpretable countermeasures. We investigate the power of two prominent Deep
+Generative Models (DGMs), Variational Auto-encoders (VAE) and Conditional
+Generative Adversarial Networks (CGAN), on their ability to generate signatures
+that would successfully deceive DASV. Additionally, we evaluate the quality of
+generated images using the Structural Similarity Index measure (SSIM) and use
+the same to explain the attack's success. Finally, we propose countermeasures
+that effectively reduce the impact of deep generative attacks on DASV.
+</p>
+<p>We first generated six synthetic datasets from three benchmark
+offline-signature datasets viz. CEDAR, BHSig260- Bengali, and BHSig260-Hindi
+using VAE and CGAN. Then, we built baseline DASVs using Xception, ResNet152V2,
+and DenseNet201. These DASVs achieved average (over the three datasets) False
+Accept Rates (FARs) of 2.55%, 3.17%, and 1.06%, respectively. Then, we attacked
+these baselines using the synthetic datasets. The VAE-generated signatures
+increased average FARs to 10.4%, 10.1%, and 7.5%, while CGAN-generated
+signatures to 32.5%, 30%, and 26.1%. The variation in the effectiveness of
+attack for VAE and CGAN was investigated further and explained by a strong (rho
+= -0.86) negative correlation between FARs and SSIMs. We created another set of
+synthetic datasets and used the same to retrain the DASVs. The retained
+baseline showed significant robustness to random, skilled, and generative
+attacks as the FARs shrank to less than 1% on average. The findings underscore
+the importance of studying generative attacks and potential countermeasures for
+DASV.
+</p></li>
+</ul>
+
+<h3>Title: Gender inference: can chatGPT outperform common commercial tools?. (arXiv:2312.00805v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00805">http://arxiv.org/abs/2312.00805</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00805]] Gender inference: can chatGPT outperform common commercial tools?(http://arxiv.org/abs/2312.00805)</code></li>
+<li>Summary: <p>An increasing number of studies use gender information to understand
+phenomena such as gender bias, inequity in access and participation, or the
+impact of the Covid pandemic response. Unfortunately, most datasets do not
+include self-reported gender information, making it necessary for researchers
+to infer gender from other information, such as names or names and country
+information. An important limitation of these tools is that they fail to
+appropriately capture the fact that gender exists on a non-binary scale,
+however, it remains important to evaluate and compare how well these tools
+perform in a variety of contexts. In this paper, we compare the performance of
+a generative Artificial Intelligence (AI) tool ChatGPT with three commercially
+available list-based and machine learning-based gender inference tools (Namsor,
+Gender-API, and genderize.io) on a unique dataset. Specifically, we use a large
+Olympic athlete dataset and report how variations in the input (e.g., first
+name and first and last name, with and without country information) impact the
+accuracy of their predictions. We report results for the full set, as well as
+for the subsets: medal versus non-medal winners, athletes from the largest
+English-speaking countries, and athletes from East Asia. On these sets, we find
+that Namsor is the best traditional commercially available tool. However,
+ChatGPT performs at least as well as Namsor and often outperforms it,
+especially for the female sample when country and/or last name information is
+available. All tools perform better on medalists versus non-medalists and on
+names from English-speaking countries. Although not designed for this purpose,
+ChatGPT may be a cost-effective tool for gender prediction. In the future, it
+might even be possible for ChatGPT or other large scale language models to
+better identify self-reported gender rather than report gender on a binary
+scale.
+</p></li>
+</ul>
+
+<h3>Title: Quick Back-Translation for Unsupervised Machine Translation. (arXiv:2312.00912v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00912">http://arxiv.org/abs/2312.00912</a></li>
+<li>Code URL: https://github.com/bbrimacombe/quick-back-translation</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00912]] Quick Back-Translation for Unsupervised Machine Translation(http://arxiv.org/abs/2312.00912)</code></li>
+<li>Summary: <p>The field of unsupervised machine translation has seen significant
+advancement from the marriage of the Transformer and the back-translation
+algorithm. The Transformer is a powerful generative model, and back-translation
+leverages Transformer's high-quality translations for iterative
+self-improvement. However, the Transformer is encumbered by the run-time of
+autoregressive inference during back-translation, and back-translation is
+limited by a lack of synthetic data efficiency. We propose a two-for-one
+improvement to Transformer back-translation: Quick Back-Translation (QBT). QBT
+re-purposes the encoder as a generative model, and uses encoder-generated
+sequences to train the decoder in conjunction with the original autoregressive
+back-translation step, improving data throughput and utilization. Experiments
+on various WMT benchmarks demonstrate that a relatively small number of
+refining steps of QBT improve current unsupervised machine translation models,
+and that QBT dramatically outperforms standard back-translation only method in
+terms of training efficiency for comparable translation qualities.
+</p></li>
+</ul>
+
+<h3>Title: TimelyGPT: Recurrent Convolutional Transformer for Long Time-series Representation. (arXiv:2312.00817v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00817">http://arxiv.org/abs/2312.00817</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00817]] TimelyGPT: Recurrent Convolutional Transformer for Long Time-series Representation(http://arxiv.org/abs/2312.00817)</code></li>
+<li>Summary: <p>Pre-trained models (PTMs) have gained prominence in Natural Language
+Processing and Computer Vision domains. When it comes to time-series PTMs,
+their development has been limited. Previous research on time-series
+transformers has mainly been devoted to small-scale tasks, yet these models
+have not consistently outperformed traditional models. Additionally, the
+performance of these transformers on large-scale data remains unexplored. These
+findings raise doubts about Transformer's capabilities to scale up and capture
+temporal dependencies. In this study, we re-examine time-series transformers
+and identify the shortcomings of prior studies. Drawing from these insights, we
+then introduce a pioneering architecture called Timely Generative Pre-trained
+Transformer (\model). This architecture integrates recurrent attention and
+temporal convolution modules to effectively capture global-local temporal
+dependencies in long sequences. The relative position embedding with time decay
+can effectively deal with trend and periodic patterns from time-series. Our
+experiments show that \model~excels in modeling continuously monitored
+biosignal as well as irregularly-sampled time-series data commonly observed in
+longitudinal electronic health records. This breakthrough suggests a priority
+shift in time-series deep learning research, moving from small-scale modeling
+from scratch to large-scale pre-training.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Eliciting Latent Knowledge from Quirky Language Models. (arXiv:2312.01037v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.01037">http://arxiv.org/abs/2312.01037</a></li>
+<li>Code URL: https://github.com/eleutherai/elk-generalization</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.01037]] Eliciting Latent Knowledge from Quirky Language Models(http://arxiv.org/abs/2312.01037)</code></li>
+<li>Summary: <p>Eliciting Latent Knowledge (ELK) aims to find patterns in a neural network's
+activations which robustly track the true state of the world, even when the
+network's overt output is false or misleading. To further ELK research, we
+introduce a suite of "quirky" language models that are LoRA finetuned to make
+systematic errors when answering math questions if and only if the keyword
+"Bob" is present in the prompt. We demonstrate that simple probing methods can
+elicit the model's latent knowledge of the correct answer in these contexts,
+even for problems harder than those the probe was trained on. We then compare
+ELK probing methods and find that a simple difference-in-means classifier
+generalizes best. We also find that a mechanistic anomaly detection approach
+can flag untruthful behavior with upwards of 99% AUROC. Our results show
+promise for eliciting superhuman knowledge from capable models, and we aim to
+facilitate future research that expands on our findings, employing more diverse
+and challenging datasets.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: DEVIAS: Learning Disentangled Video Representations of Action and Scene for Holistic Video Understanding. (arXiv:2312.00826v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.00826">http://arxiv.org/abs/2312.00826</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.00826]] DEVIAS: Learning Disentangled Video Representations of Action and Scene for Holistic Video Understanding(http://arxiv.org/abs/2312.00826)</code></li>
+<li>Summary: <p>When watching a video, humans can naturally extract human actions from the
+surrounding scene context, even when action-scene combinations are unusual.
+However, unlike humans, video action recognition models often learn
+scene-biased action representations from the spurious correlation in training
+data, leading to poor performance in out-of-context scenarios. While
+scene-debiased models achieve improved performance in out-of-context scenarios,
+they often overlook valuable scene information in the data. Addressing this
+challenge, we propose Disentangled VIdeo representations of Action and Scene
+(DEVIAS), which aims to achieve holistic video understanding. Disentangled
+action and scene representations with our method could provide flexibility to
+adjust the emphasis on action or scene information depending on downstream task
+and dataset characteristics. Disentangled action and scene representations
+could be beneficial for both in-context and out-of-context video understanding.
+To this end, we employ slot attention to learn disentangled action and scene
+representations with a single model, along with auxiliary tasks that further
+guide slot attention. We validate the proposed method on both in-context
+datasets: UCF-101 and Kinetics-400, and out-of-context datasets: SCUBA and HAT.
+Our proposed method shows favorable performance across different datasets
+compared to the baselines, demonstrating its effectiveness in diverse video
+understanding scenarios.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
