@@ -1,0 +1,540 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h2>diffusion</h2>
+<h3>Title: StableQ: Enhancing Data-Scarce Quantization with Text-to-Image Data. (arXiv:2312.05272v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05272">http://arxiv.org/abs/2312.05272</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05272]] StableQ: Enhancing Data-Scarce Quantization with Text-to-Image Data(http://arxiv.org/abs/2312.05272)</code></li>
+<li>Summary: <p>Though low-bit quantization enables efficient storage and inference of deep
+neural networks, it often requires the use of training data to maintain
+resilience against quantization errors. However, training data are frequently
+subject to privacy or copyright concerns. In this work, we address the
+challenge of Data-Scarce Quantization, where access to training data is
+severely limited or non-existent for quantization purposes. Conventional
+approaches typically rely on inverting dummy images or jointly training
+generative models to produce synthetic input samples. However, these methods
+struggle to accurately recreate complex objects in large-scale datasets like
+ImageNet. To overcome these limitations, we introduce StableQ, a novel method
+that utilizes an advanced text-to-image diffusion model to generate
+high-resolution, photo-realistic synthetic data. To verify the quality of the
+generated data, we implement two robust filtering mechanisms. These mechanisms
+are designed to select images that closely resemble the intrinsic
+characteristics of the actual training data. Furthermore, in scenarios where
+limited training data are available, we use these data to guide the synthetic
+data generation process by inverting a learnable token embedding in the text
+encoder. Our extensive experimental results demonstrate that StbaleQ sets a new
+benchmark in both zero-shot and few-shot quantization, outperforming existing
+methods in terms of accuracy and efficiency.
+</p></li>
+</ul>
+
+<h3>Title: Target to Source: Guidance-Based Diffusion Model for Test-Time Adaptation. (arXiv:2312.05274v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05274">http://arxiv.org/abs/2312.05274</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05274]] Target to Source: Guidance-Based Diffusion Model for Test-Time Adaptation(http://arxiv.org/abs/2312.05274)</code></li>
+<li>Summary: <p>Most recent works of test-time adaptation (TTA) aim to alleviate domain shift
+problems by re-training source classifiers in each domain. On the other hand,
+the emergence of the diffusion model provides another solution to TTA, which
+directly maps the test data from the target domain to the source domain based
+on a diffusion model pre-trained in the source domain. The source classifier
+does not need to be fine-tuned. However, 1) the semantic information loss from
+test data to the source domain and 2) the model shift between the source
+classifier and diffusion model would prevent the diffusion model from mapping
+the test data back to the source domain correctly. In this paper, we propose a
+novel guidance-based diffusion-driven adaptation (GDDA) to overcome the data
+shift and let the diffusion model find a better way to go back to the source.
+Concretely, we first propose detail and global guidance to better keep the
+common semantics of the test and source data. The two guidance include a
+contrastive loss and mean squared error to alleviate the information loss by
+fully exploring the diffusion model and the test data. Meanwhile, we propose a
+classifier-aware guidance to reduce the bias caused by the model shift, which
+can incorporate the source classifier's information into the generation process
+of the diffusion model. Extensive experiments on three image datasets with
+three classifier backbones demonstrate that GDDA significantly performs better
+than the state-of-the-art baselines. On CIFAR-10C, CIFAR-100C, and ImageNetC,
+GDDA achieves 11.54\%, 19.05\%, and 11.63\% average accuracy improvements,
+respectively. GDDA even achieves equal performance compared with methods of
+re-training classifiers. The code is available in the supplementary material.
+</p></li>
+</ul>
+
+<h3>Title: MotionCrafter: One-Shot Motion Customization of Diffusion Models. (arXiv:2312.05288v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05288">http://arxiv.org/abs/2312.05288</a></li>
+<li>Code URL: https://github.com/zyxelsa/motioncrafter</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05288]] MotionCrafter: One-Shot Motion Customization of Diffusion Models(http://arxiv.org/abs/2312.05288)</code></li>
+<li>Summary: <p>The essence of a video lies in its dynamic motions, including character
+actions, object movements, and camera movements. While text-to-video generative
+diffusion models have recently advanced in creating diverse contents,
+controlling specific motions through text prompts remains a significant
+challenge. A primary issue is the coupling of appearance and motion, often
+leading to overfitting on appearance. To tackle this challenge, we introduce
+MotionCrafter, a novel one-shot instance-guided motion customization method.
+MotionCrafter employs a parallel spatial-temporal architecture that injects the
+reference motion into the temporal component of the base model, while the
+spatial module is independently adjusted for character or style control. To
+enhance the disentanglement of motion and appearance, we propose an innovative
+dual-branch motion disentanglement approach, comprising a motion
+disentanglement loss and an appearance prior enhancement strategy. During
+training, a frozen base model provides appearance normalization, effectively
+separating appearance from motion and thereby preserving diversity.
+Comprehensive quantitative and qualitative experiments, along with user
+preference tests, demonstrate that MotionCrafter can successfully integrate
+dynamic motions while preserving the coherence and quality of the base model
+with a wide range of appearance generation capabilities. Codes are available at
+https://github.com/zyxElsa/MotionCrafter.
+</p></li>
+</ul>
+
+<h3>Title: NoiseCLR: A Contrastive Learning Approach for Unsupervised Discovery of Interpretable Directions in Diffusion Models. (arXiv:2312.05390v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05390">http://arxiv.org/abs/2312.05390</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05390]] NoiseCLR: A Contrastive Learning Approach for Unsupervised Discovery of Interpretable Directions in Diffusion Models(http://arxiv.org/abs/2312.05390)</code></li>
+<li>Summary: <p>Generative models have been very popular in the recent years for their image
+generation capabilities. GAN-based models are highly regarded for their
+disentangled latent space, which is a key feature contributing to their success
+in controlled image editing. On the other hand, diffusion models have emerged
+as powerful tools for generating high-quality images. However, the latent space
+of diffusion models is not as thoroughly explored or understood. Existing
+methods that aim to explore the latent space of diffusion models usually relies
+on text prompts to pinpoint specific semantics. However, this approach may be
+restrictive in areas such as art, fashion, or specialized fields like medicine,
+where suitable text prompts might not be available or easy to conceive thus
+limiting the scope of existing work. In this paper, we propose an unsupervised
+method to discover latent semantics in text-to-image diffusion models without
+relying on text prompts. Our method takes a small set of unlabeled images from
+specific domains, such as faces or cats, and a pre-trained diffusion model, and
+discovers diverse semantics in unsupervised fashion using a contrastive
+learning objective. Moreover, the learned directions can be applied
+simultaneously, either within the same domain (such as various types of facial
+edits) or across different domains (such as applying cat and face edits within
+the same image) without interfering with each other. Our extensive experiments
+show that our method achieves highly disentangled edits, outperforming existing
+approaches in both diffusion-based and GAN-based latent space editing methods.
+</p></li>
+</ul>
+
+<h3>Title: CMMD: Contrastive Multi-Modal Diffusion for Video-Audio Conditional Modeling. (arXiv:2312.05412v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05412">http://arxiv.org/abs/2312.05412</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05412]] CMMD: Contrastive Multi-Modal Diffusion for Video-Audio Conditional Modeling(http://arxiv.org/abs/2312.05412)</code></li>
+<li>Summary: <p>We introduce a multi-modal diffusion model tailored for the bi-directional
+conditional generation of video and audio. Recognizing the importance of
+accurate alignment between video and audio events in multi-modal generation
+tasks, we propose a joint contrastive training loss to enhance the
+synchronization between visual and auditory occurrences. Our research
+methodology involves conducting comprehensive experiments on multiple datasets
+to thoroughly evaluate the efficacy of our proposed model. The assessment of
+generation quality and alignment performance is carried out from various
+angles, encompassing both objective and subjective metrics. Our findings
+demonstrate that the proposed model outperforms the baseline, substantiating
+its effectiveness and efficiency. Notably, the incorporation of the contrastive
+loss results in improvements in audio-visual alignment, particularly in the
+high-correlation video-to-audio generation task. These results indicate the
+potential of our proposed model as a robust solution for improving the quality
+and alignment of multi-modal generation, thereby contributing to the
+advancement of video and audio conditional generation systems.
+</p></li>
+</ul>
+
+<h3>Title: Efficient Quantization Strategies for Latent Diffusion Models. (arXiv:2312.05431v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05431">http://arxiv.org/abs/2312.05431</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05431]] Efficient Quantization Strategies for Latent Diffusion Models(http://arxiv.org/abs/2312.05431)</code></li>
+<li>Summary: <p>Latent Diffusion Models (LDMs) capture the dynamic evolution of latent
+variables over time, blending patterns and multimodality in a generative
+system. Despite the proficiency of LDM in various applications, such as
+text-to-image generation, facilitated by robust text encoders and a variational
+autoencoder, the critical need to deploy large generative models on edge
+devices compels a search for more compact yet effective alternatives. Post
+Training Quantization (PTQ), a method to compress the operational size of deep
+learning models, encounters challenges when applied to LDM due to temporal and
+structural complexities. This study proposes a quantization strategy that
+efficiently quantize LDMs, leveraging Signal-to-Quantization-Noise Ratio (SQNR)
+as a pivotal metric for evaluation. By treating the quantization discrepancy as
+relative noise and identifying sensitive part(s) of a model, we propose an
+efficient quantization approach encompassing both global and local strategies.
+The global quantization process mitigates relative quantization noise by
+initiating higher-precision quantization on sensitive blocks, while local
+treatments address specific challenges in quantization-sensitive and
+time-sensitive modules. The outcomes of our experiments reveal that the
+implementation of both global and local treatments yields a highly efficient
+and effective Post Training Quantization (PTQ) of LDMs.
+</p></li>
+</ul>
+
+<h3>Title: Identifying and Mitigating Model Failures through Few-shot CLIP-aided Diffusion Generation. (arXiv:2312.05464v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05464">http://arxiv.org/abs/2312.05464</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05464]] Identifying and Mitigating Model Failures through Few-shot CLIP-aided Diffusion Generation(http://arxiv.org/abs/2312.05464)</code></li>
+<li>Summary: <p>Deep learning models can encounter unexpected failures, especially when
+dealing with challenging sub-populations. One common reason for these failures
+is the occurrence of objects in backgrounds that are rarely seen during
+training. To gain a better understanding of these failure modes,
+human-interpretable descriptions are crucial for further analysis and
+improvement which is expensive. In this study, we propose an end-to-end
+framework that utilizes the capabilities of large language models (ChatGPT) and
+vision-language deep models (CLIP) to generate text descriptions of failure
+modes associated with spurious correlations (e.g. rarely seen backgrounds)
+without human-in-the-loop intervention. These descriptions can be used to
+generate synthetic data using generative models, such as diffusion models. The
+model can now use this generated data to learn from its weaknesses and enhance
+its performance on backgrounds that are uncommon for each class of data. Our
+approach serves as a broad solution, promising progress in comprehending model
+failure modes and strengthening deep learning models across a wide range of
+failure scenarios (e.g. bacckgrounds, colors) automatically in a few-shot
+manner. Our experiments have shown remarkable \textbf{improvements in accuracy
+($\sim \textbf{21%}$)} on hard sub-populations (particularly for wrong
+background association) across $40$ different models, such as ResNets,
+EfficientNets, DenseNets, Vision Transformer (ViT), SwAVs, MoCos, DINOs, and
+CLIPs on various datasets such as ImageNet-1000, CIFAR-10, and CIFAR-100.
+</p></li>
+</ul>
+
+<h3>Title: BARET : Balanced Attention based Real image Editing driven by Target-text Inversion. (arXiv:2312.05482v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05482">http://arxiv.org/abs/2312.05482</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05482]] BARET : Balanced Attention based Real image Editing driven by Target-text Inversion(http://arxiv.org/abs/2312.05482)</code></li>
+<li>Summary: <p>Image editing approaches with diffusion models have been rapidly developed,
+yet their applicability are subject to requirements such as specific editing
+types (e.g., foreground or background object editing, style transfer), multiple
+conditions (e.g., mask, sketch, caption), and time consuming fine-tuning of
+diffusion models. For alleviating these limitations and realizing efficient
+real image editing, we propose a novel editing technique that only requires an
+input image and target text for various editing types including non-rigid edits
+without fine-tuning diffusion model. Our method contains three novelties:(I)
+Target-text Inversion Schedule (TTIS) is designed to fine-tune the input target
+text embedding to achieve fast image reconstruction without image caption and
+acceleration of convergence.(II) Progressive Transition Scheme applies
+progressive linear interpolation between target text embedding and its
+fine-tuned version to generate transition embedding for maintaining non-rigid
+editing capability.(III) Balanced Attention Module (BAM) balances the tradeoff
+between textual description and image semantics.By the means of combining
+self-attention map from reconstruction process and cross-attention map from
+transition process, the guidance of target text embeddings in diffusion process
+is optimized.In order to demonstrate editing capability, effectiveness and
+efficiency of the proposed BARET, we have conducted extensive qualitative and
+quantitative experiments. Moreover, results derived from user study and
+ablation study further prove the superiority over other methods.
+</p></li>
+</ul>
+
+<h3>Title: DPoser: Diffusion Model as Robust 3D Human Pose Prior. (arXiv:2312.05541v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05541">http://arxiv.org/abs/2312.05541</a></li>
+<li>Code URL: https://github.com/moonbow721/dposer</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05541]] DPoser: Diffusion Model as Robust 3D Human Pose Prior(http://arxiv.org/abs/2312.05541)</code></li>
+<li>Summary: <p>Modeling human pose is a cornerstone in applications from human-robot
+interaction to augmented reality, yet crafting a robust human pose prior
+remains a challenge due to biomechanical constraints and diverse human
+movements. Traditional priors like VAEs and NDFs often fall short in realism
+and generalization, especially in extreme conditions such as unseen noisy
+poses. To address these issues, we introduce DPoser, a robust and versatile
+human pose prior built upon diffusion models. Designed with optimization
+frameworks, DPoser seamlessly integrates into various pose-centric
+applications, including human mesh recovery, pose completion, and motion
+denoising. Specifically, by formulating these tasks as inverse problems, we
+employ variational diffusion sampling for efficient solving. Furthermore,
+acknowledging the disparity between the articulated poses we focus on and
+structured images in previous research, we propose a truncated timestep
+scheduling to boost performance on downstream tasks. Our exhaustive experiments
+demonstrate DPoser's superiority over existing state-of-the-art pose priors
+across multiple tasks.
+</p></li>
+</ul>
+
+<h3>Title: Cross Domain Generative Augmentation: Domain Generalization with Latent Diffusion Models. (arXiv:2312.05387v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05387">http://arxiv.org/abs/2312.05387</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05387]] Cross Domain Generative Augmentation: Domain Generalization with Latent Diffusion Models(http://arxiv.org/abs/2312.05387)</code></li>
+<li>Summary: <p>Despite the huge effort in developing novel regularizers for Domain
+Generalization (DG), adding simple data augmentation to the vanilla ERM which
+is a practical implementation of the Vicinal Risk Minimization principle (VRM)
+\citep{chapelle2000vicinal} outperforms or stays competitive with many of the
+proposed regularizers. The VRM reduces the estimation error in ERM by replacing
+the point-wise kernel estimates with a more precise estimation of true data
+distribution that reduces the gap between data points \textbf{within each
+domain}. However, in the DG setting, the estimation error of true data
+distribution by ERM is mainly caused by the distribution shift \textbf{between
+domains} which cannot be fully addressed by simple data augmentation techniques
+within each domain. Inspired by this limitation of VRM, we propose a novel data
+augmentation named Cross Domain Generative Augmentation (CDGA) that replaces
+the pointwise kernel estimates in ERM with new density estimates in the
+\textbf{vicinity of domain pairs} so that the gap between domains is further
+reduced. To this end, CDGA, which is built upon latent diffusion models (LDM),
+generates synthetic images to fill the gap between all domains and as a result,
+reduces the non-iidness. We show that CDGA outperforms SOTA DG methods under
+the Domainbed benchmark. To explain the effectiveness of CDGA, we generate more
+than 5 Million synthetic images and perform extensive ablation studies
+including data scaling laws, distribution visualization, domain shift
+quantification, adversarial robustness, and loss landscape analysis.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: A Review of Machine Learning Methods Applied to Video Analysis Systems. (arXiv:2312.05352v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05352">http://arxiv.org/abs/2312.05352</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05352]] A Review of Machine Learning Methods Applied to Video Analysis Systems(http://arxiv.org/abs/2312.05352)</code></li>
+<li>Summary: <p>The paper provides a survey of the development of machine-learning techniques
+for video analysis. The survey provides a summary of the most popular deep
+learning methods used for human activity recognition. We discuss how popular
+architectures perform on standard datasets and highlight the differences from
+real-life datasets dominated by multiple activities performed by multiple
+participants over long periods. For real-life datasets, we describe the use of
+low-parameter models (with 200X or 1,000X fewer parameters) that are trained to
+detect a single activity after the relevant objects have been successfully
+detected. Our survey then turns to a summary of machine learning methods that
+are specifically developed for working with a small number of labeled video
+samples. Our goal here is to describe modern techniques that are specifically
+designed so as to minimize the amount of ground truth that is needed for
+training and testing video analysis systems. We provide summaries of the
+development of self-supervised learning, semi-supervised learning, active
+learning, and zero-shot learning for applications in video analysis. For each
+method, we provide representative examples.
+</p></li>
+</ul>
+
+<h3>Title: HumanReg: Self-supervised Non-rigid Registration of Human Point Cloud. (arXiv:2312.05462v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05462">http://arxiv.org/abs/2312.05462</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05462]] HumanReg: Self-supervised Non-rigid Registration of Human Point Cloud(http://arxiv.org/abs/2312.05462)</code></li>
+<li>Summary: <p>In this paper, we present a novel registration framework, HumanReg, that
+learns a non-rigid transformation between two human point clouds end-to-end. We
+introduce body prior into the registration process to efficiently handle this
+type of point cloud. Unlike most exsisting supervised registration techniques
+that require expensive point-wise flow annotations, HumanReg can be trained in
+a self-supervised manner benefiting from a set of novel loss functions. To make
+our model better converge on real-world data, we also propose a pretraining
+strategy, and a synthetic dataset (HumanSyn4D) consists of dynamic, sparse
+human point clouds and their auto-generated ground truth annotations. Our
+experiments shows that HumanReg achieves state-of-the-art performance on
+CAPE-512 dataset and gains a qualitative result on another more challenging
+real-world dataset. Furthermore, our ablation studies demonstrate the
+effectiveness of our synthetic dataset and novel loss functions. Our code and
+synthetic dataset is available at https://github.com/chenyifanthu/HumanReg.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Enhancing Robustness of Foundation Model Representations under Provenance-related Distribution Shifts. (arXiv:2312.05435v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05435">http://arxiv.org/abs/2312.05435</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05435]] Enhancing Robustness of Foundation Model Representations under Provenance-related Distribution Shifts(http://arxiv.org/abs/2312.05435)</code></li>
+<li>Summary: <p>Foundation models are a current focus of attention in both industry and
+academia. While they have shown their capabilities in a variety of tasks,
+in-depth research is required to determine their robustness to distribution
+shift when used as a basis for supervised machine learning. This is especially
+important in the context of clinical data, with particular limitations related
+to data accessibility, lack of pretraining materials, and limited availability
+of high-quality annotations. In this work, we examine the stability of models
+based on representations from foundation models under distribution shift. We
+focus on confounding by provenance, a form of distribution shift that emerges
+in the context of multi-institutional datasets when there are differences in
+source-specific language use and class distributions. Using a sampling strategy
+that synthetically induces varying degrees of distribution shift, we evaluate
+the extent to which representations from foundation models result in
+predictions that are inherently robust to confounding by provenance.
+Additionally, we examine the effectiveness of a straightforward confounding
+adjustment method inspired by Pearl's conception of backdoor adjustment.
+Results indicate that while foundation models do show some out-of-the-box
+robustness to confounding-by-provenance related distribution shifts, this can
+be considerably improved through adjustment. These findings suggest a need for
+deliberate adjustment of predictive models using representations from
+foundation models in the context of source-specific distributional differences.
+</p></li>
+</ul>
+
+<h3>Title: Large-scale Training of Foundation Models for Wearable Biosignals. (arXiv:2312.05409v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05409">http://arxiv.org/abs/2312.05409</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05409]] Large-scale Training of Foundation Models for Wearable Biosignals(http://arxiv.org/abs/2312.05409)</code></li>
+<li>Summary: <p>Tracking biosignals is crucial for monitoring wellness and preempting the
+development of severe medical conditions. Today, wearable devices can
+conveniently record various biosignals, creating the opportunity to monitor
+health status without disruption to one's daily routine. Despite widespread use
+of wearable devices and existing digital biomarkers, the absence of curated
+data with annotated medical labels hinders the development of new biomarkers to
+measure common health conditions. In fact, medical datasets are usually small
+in comparison to other domains, which is an obstacle for developing neural
+network models for biosignals. To address this challenge, we have employed
+self-supervised learning using the unlabeled sensor data collected under
+informed consent from the large longitudinal Apple Heart and Movement Study
+(AHMS) to train foundation models for two common biosignals:
+photoplethysmography (PPG) and electrocardiogram (ECG) recorded on Apple Watch.
+We curated PPG and ECG datasets from AHMS that include data from ~141K
+participants spanning ~3 years. Our self-supervised learning framework includes
+participant level positive pair selection, stochastic augmentation module and a
+regularized contrastive loss optimized with momentum training, and generalizes
+well to both PPG and ECG modalities. We show that the pre-trained foundation
+models readily encode information regarding participants' demographics and
+health conditions. To the best of our knowledge, this is the first study that
+builds foundation models using large-scale PPG and ECG data collected via
+wearable consumer devices $\unicode{x2013}$ prior works have commonly used
+smaller-size datasets collected in clinical and experimental settings. We
+believe PPG and ECG foundation models can enhance future wearable devices by
+reducing the reliance on labeled data and hold the potential to help the users
+improve their health.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: 3D Copy-Paste: Physically Plausible Object Insertion for Monocular 3D Detection. (arXiv:2312.05277v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05277">http://arxiv.org/abs/2312.05277</a></li>
+<li>Code URL: https://github.com/gyhandy/3d-copy-paste</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05277]] 3D Copy-Paste: Physically Plausible Object Insertion for Monocular 3D Detection(http://arxiv.org/abs/2312.05277)</code></li>
+<li>Summary: <p>A major challenge in monocular 3D object detection is the limited diversity
+and quantity of objects in real datasets. While augmenting real scenes with
+virtual objects holds promise to improve both the diversity and quantity of the
+objects, it remains elusive due to the lack of an effective 3D object insertion
+method in complex real captured scenes. In this work, we study augmenting
+complex real indoor scenes with virtual objects for monocular 3D object
+detection. The main challenge is to automatically identify plausible physical
+properties for virtual assets (e.g., locations, appearances, sizes, etc.) in
+cluttered real scenes. To address this challenge, we propose a physically
+plausible indoor 3D object insertion approach to automatically copy virtual
+objects and paste them into real scenes. The resulting objects in scenes have
+3D bounding boxes with plausible physical locations and appearances. In
+particular, our method first identifies physically feasible locations and poses
+for the inserted objects to prevent collisions with the existing room layout.
+Subsequently, it estimates spatially-varying illumination for the insertion
+location, enabling the immersive blending of the virtual objects into the
+original scene with plausible appearances and cast shadows. We show that our
+augmentation method significantly improves existing monocular 3D object models
+and achieves state-of-the-art performance. For the first time, we demonstrate
+that a physically plausible 3D object insertion, serving as a generative data
+augmentation technique, can lead to significant improvements for discriminative
+downstream tasks such as monocular 3D object detection. Project website:
+https://gyhandy.github.io/3D-Copy-Paste/
+</p></li>
+</ul>
+
+<h3>Title: Multi-view Inversion for 3D-aware Generative Adversarial Networks. (arXiv:2312.05330v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05330">http://arxiv.org/abs/2312.05330</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05330]] Multi-view Inversion for 3D-aware Generative Adversarial Networks(http://arxiv.org/abs/2312.05330)</code></li>
+<li>Summary: <p>Current 3D GAN inversion methods for human heads typically use only one
+single frontal image to reconstruct the whole 3D head model. This leaves out
+meaningful information when multi-view data or dynamic videos are available.
+Our method builds on existing state-of-the-art 3D GAN inversion techniques to
+allow for consistent and simultaneous inversion of multiple views of the same
+subject. We employ a multi-latent extension to handle inconsistencies present
+in dynamic face videos to re-synthesize consistent 3D representations from the
+sequence. As our method uses additional information about the target subject,
+we observe significant enhancements in both geometric accuracy and image
+quality, particularly when rendering from wide viewing angles. Moreover, we
+demonstrate the editability of our inverted 3D renderings, which distinguishes
+them from NeRF-based scene reconstructions.
+</p></li>
+</ul>
+
+<h3>Title: Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models. (arXiv:2312.05434v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05434">http://arxiv.org/abs/2312.05434</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05434]] Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models(http://arxiv.org/abs/2312.05434)</code></li>
+<li>Summary: <p>The age of social media is rife with memes. Understanding and detecting
+harmful memes pose a significant challenge due to their implicit meaning that
+is not explicitly conveyed through the surface text and image. However,
+existing harmful meme detection approaches only recognize superficial
+harm-indicative signals in an end-to-end classification manner but ignore
+in-depth cognition of the meme text and image. In this paper, we attempt to
+detect harmful memes based on advanced reasoning over the interplay of
+multimodal information in memes. Inspired by the success of Large Language
+Models (LLMs) on complex reasoning, we first conduct abductive reasoning with
+LLMs. Then we propose a novel generative framework to learn reasonable thoughts
+from LLMs for better multimodal fusion and lightweight fine-tuning, which
+consists of two training stages: 1) Distill multimodal reasoning knowledge from
+LLMs; and 2) Fine-tune the generative framework to infer harmfulness. Extensive
+experiments conducted on three meme datasets demonstrate that our proposed
+approach achieves superior performance than state-of-the-art methods on the
+harmful meme detection task.
+</p></li>
+</ul>
+
+<h3>Title: Using Captum to Explain Generative Language Models. (arXiv:2312.05491v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05491">http://arxiv.org/abs/2312.05491</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05491]] Using Captum to Explain Generative Language Models(http://arxiv.org/abs/2312.05491)</code></li>
+<li>Summary: <p>Captum is a comprehensive library for model explainability in PyTorch,
+offering a range of methods from the interpretability literature to enhance
+users' understanding of PyTorch models. In this paper, we introduce new
+features in Captum that are specifically designed to analyze the behavior of
+generative language models. We provide an overview of the available
+functionalities and example applications of their potential for understanding
+learned associations within generative language models.
+</p></li>
+</ul>
+
+<h3>Title: Consistency Models for Scalable and Fast Simulation-Based Inference. (arXiv:2312.05440v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05440">http://arxiv.org/abs/2312.05440</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05440]] Consistency Models for Scalable and Fast Simulation-Based Inference(http://arxiv.org/abs/2312.05440)</code></li>
+<li>Summary: <p>Simulation-based inference (SBI) is constantly in search of more expressive
+algorithms for accurately inferring the parameters of complex models from noisy
+data. We present consistency models for neural posterior estimation (CMPE), a
+new free-form conditional sampler for scalable, fast, and amortized SBI with
+generative neural networks. CMPE combines the advantages of normalizing flows
+and flow matching methods into a single generative architecture: It essentially
+distills a continuous probability flow and enables rapid few-shot inference
+with an unconstrained architecture that can be tailored to the structure of the
+estimation problem. Our empirical evaluation demonstrates that CMPE not only
+outperforms current state-of-the-art algorithms on three hard low-dimensional
+problems, but also achieves competitive performance in a high-dimensional
+Bayesian denoising experiment and in estimating a computationally demanding
+multi-scale model of tumor spheroid growth.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Reinforcement Neighborhood Selection for Unsupervised Graph Anomaly Detection. (arXiv:2312.05526v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.05526">http://arxiv.org/abs/2312.05526</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.05526]] Reinforcement Neighborhood Selection for Unsupervised Graph Anomaly Detection(http://arxiv.org/abs/2312.05526)</code></li>
+<li>Summary: <p>Unsupervised graph anomaly detection is crucial for various practical
+applications as it aims to identify anomalies in a graph that exhibit rare
+patterns deviating significantly from the majority of nodes. Recent
+advancements have utilized Graph Neural Networks (GNNs) to learn high-quality
+node representations for anomaly detection by aggregating information from
+neighborhoods. However, the presence of anomalies may render the observed
+neighborhood unreliable and result in misleading information aggregation for
+node representation learning. Selecting the proper neighborhood is critical for
+graph anomaly detection but also challenging due to the absence of
+anomaly-oriented guidance and the interdependence with representation learning.
+To address these issues, we utilize the advantages of reinforcement learning in
+adaptively learning in complex environments and propose a novel method that
+incorporates Reinforcement neighborhood selection for unsupervised graph
+ANomaly Detection (RAND). RAND begins by enriching the candidate neighbor pool
+of the given central node with multiple types of indirect neighbors. Next, RAND
+designs a tailored reinforcement anomaly evaluation module to assess the
+reliability and reward of considering the given neighbor. Finally, RAND selects
+the most reliable subset of neighbors based on these rewards and introduces an
+anomaly-aware aggregator to amplify messages from reliable neighbors while
+diminishing messages from unreliable ones. Extensive experiments on both three
+synthetic and two real-world datasets demonstrate that RAND outperforms the
+state-of-the-art methods.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>

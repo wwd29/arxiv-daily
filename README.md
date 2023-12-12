@@ -1,54 +1,54 @@
 # arxiv-daily
-updated on 2023-12-11 22:12:31
+updated on 2023-12-12 22:11:40
 ## user_1
 | keyword | count |
 | - | - |
-| diffusion | 24 |
-| self-supervised | 5 |
-| foundation model | 1 |
-| generative | 8 |
-| anomaly | 2 |
-| in-context | 2 |
+| diffusion | 10 |
+| self-supervised | 2 |
+| foundation model | 2 |
+| generative | 5 |
+| anomaly | 1 |
+| in-context | 0 |
 ## user_0
 | keyword | count |
 | - | - |
-| secure | 4 |
-| security | 7 |
-| privacy | 9 |
-| protect | 0 |
-| defense | 1 |
-| attack | 9 |
-| robust | 15 |
+| secure | 1 |
+| security | 2 |
+| privacy | 1 |
+| protect | 2 |
+| defense | 0 |
+| attack | 1 |
+| robust | 9 |
 | biometric | 0 |
 | steal | 0 |
-| extraction | 3 |
+| extraction | 1 |
 | membership infer | 0 |
-| federate | 2 |
+| federate | 4 |
 | fair | 0 |
 | interpretability | 1 |
-| explainability | 0 |
-| watermark | 1 |
-| diffusion | 19 |
+| explainability | 1 |
+| watermark | 0 |
+| diffusion | 8 |
 | noise learning | 0 |
-| data-free | 0 |
-| transformer | 7 |
-| generative | 3 |
-| large language model | 9 |
-| segmentation | 9 |
+| data-free | 1 |
+| transformer | 6 |
+| generative | 4 |
+| large language model | 7 |
+| segmentation | 2 |
 ## user_2
 | keyword | count |
 | - | - |
 | language model | 15 |
-| gpt | 3 |
+| gpt | 2 |
 | llm | 1 |
 | long context | 0 |
-| lora | 0 |
-| hallucination | 2 |
-| prompt | 2 |
-| code | 6 |
-| chat | 0 |
+| lora | 3 |
+| hallucination | 0 |
+| prompt | 0 |
+| code | 10 |
+| chat | 1 |
 | retrieval augmented generation | 0 |
-| rag | 14 |
+| rag | 5 |
 | multi-run | 0 |
-| chain-of-thought | 1 |
+| chain-of-thought | 0 |
 | tree-of-thought | 0 |
