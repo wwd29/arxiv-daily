@@ -1,54 +1,54 @@
 # arxiv-daily
-updated on 2023-12-13 22:13:12
+updated on 2023-12-14 22:13:09
+## user_2
+| keyword | count |
+| - | - |
+| language model | 21 |
+| gpt | 1 |
+| llm | 6 |
+| long context | 0 |
+| lora | 2 |
+| hallucination | 0 |
+| prompt | 3 |
+| code | 14 |
+| chat | 0 |
+| retrieval augmented generation | 0 |
+| rag | 13 |
+| multi-run | 0 |
+| chain-of-thought | 0 |
+| tree-of-thought | 0 |
 ## user_1
 | keyword | count |
 | - | - |
-| diffusion | 26 |
-| self-supervised | 5 |
-| foundation model | 6 |
-| generative | 4 |
-| anomaly | 0 |
-| in-context | 4 |
+| diffusion | 19 |
+| self-supervised | 10 |
+| foundation model | 2 |
+| generative | 9 |
+| anomaly | 1 |
+| in-context | 2 |
 ## user_0
 | keyword | count |
 | - | - |
 | secure | 2 |
-| security | 7 |
+| security | 10 |
 | privacy | 4 |
-| protect | 0 |
+| protect | 2 |
 | defense | 1 |
-| attack | 6 |
-| robust | 24 |
+| attack | 5 |
+| robust | 9 |
 | biometric | 0 |
-| steal | 0 |
-| extraction | 3 |
-| membership infer | 0 |
-| federate | 4 |
-| fair | 1 |
-| interpretability | 1 |
+| steal | 1 |
+| extraction | 10 |
+| membership infer | 1 |
+| federate | 2 |
+| fair | 0 |
+| interpretability | 3 |
 | explainability | 1 |
-| watermark | 0 |
-| diffusion | 24 |
+| watermark | 2 |
+| diffusion | 15 |
 | noise learning | 0 |
 | data-free | 0 |
-| transformer | 15 |
-| generative | 3 |
-| large language model | 21 |
-| segmentation | 19 |
-## user_2
-| keyword | count |
-| - | - |
-| language model | 26 |
-| gpt | 3 |
-| llm | 8 |
-| long context | 1 |
-| lora | 3 |
-| hallucination | 0 |
-| prompt | 2 |
-| code | 11 |
-| chat | 0 |
-| retrieval augmented generation | 0 |
-| rag | 10 |
-| multi-run | 0 |
-| chain-of-thought | 0 |
-| tree-of-thought | 0 |
+| transformer | 14 |
+| generative | 8 |
+| large language model | 13 |
+| segmentation | 15 |
