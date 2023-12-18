@@ -39,7 +39,6 @@ def parse_rss(info):
                 if keyword is None:
                     continue
                 code_url = get_code_url(entry.id.split('/')[-1])
-                code_url = 'null' if code_url is None else code_url
                 item = get_item(entry.link, entry.title, code_url,
                                 entry.summary)
 
@@ -51,13 +50,14 @@ def parse_rss(info):
 def get_item(paper_url, title, code_url, summary):
     id = paper_url.split('/')[-1]
     sub_title = title.split(".")[0]
+    code_url = 'null' if code_url is None else f'<a href="{code_url}">{code_url}</a>'
     item = f'<h3>Title: {title}</h3>\n' \
-            f'<ul>\n' \
-            f'<li>Paper URL: <a href="{paper_url}">{paper_url}</a></li>\n' \
-            f'<li>Code URL: {code_url}</li>\n' \
-            f'<li>Copy Paste: <code><input type="checkbox">[[{id}]] {sub_title}({paper_url})</code></li>\n' \
-            f'<li>Summary: {summary}</li>\n' \
-            f'</ul>\n'
+        f'<ul>\n' \
+        f'<li>Paper URL: <a href="{paper_url}">{paper_url}</a></li>\n' \
+        f'<li>Code URL: {code_url}</li>\n' \
+        f'<li>Copy Paste: <code><input type="checkbox">[[{id}]] {sub_title}({paper_url})</code></li>\n' \
+        f'<li>Summary: {summary}</li>\n' \
+        f'</ul>\n'
     return item
 
 
@@ -102,8 +102,8 @@ def main():
             print(f'<link rel="stylesheet" href="../../css/markdown.css" />',
                   file=f)
             print(f'<article class="markdown-body">', file=f)
+            print(f'<h1>{date}</h1>', file=f)
             for keyword, items in info.items():
-
                 print(f'<h2>{keyword}</h2>', file=f)
                 for item in items:
                     print(item, file=f)
