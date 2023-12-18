@@ -1,0 +1,594 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2023-12-18</h1>
+<h2>diffusion</h2>
+<h3>Title: LatentEditor: Text Driven Local Editing of 3D Scenes. (arXiv:2312.09313v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09313">http://arxiv.org/abs/2312.09313</a></li>
+<li>Code URL: <a href="https://github.com/umarkhalidAI/LatentEditor">https://github.com/umarkhalidAI/LatentEditor</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09313]] LatentEditor: Text Driven Local Editing of 3D Scenes(http://arxiv.org/abs/2312.09313)</code></li>
+<li>Summary: <p>While neural fields have made significant strides in view synthesis and scene
+reconstruction, editing them poses a formidable challenge due to their implicit
+encoding of geometry and texture information from multi-view inputs. In this
+paper, we introduce \textsc{LatentEditor}, an innovative framework designed to
+empower users with the ability to perform precise and locally controlled
+editing of neural fields using text prompts. Leveraging denoising diffusion
+models, we successfully embed real-world scenes into the latent space,
+resulting in a faster and more adaptable NeRF backbone for editing compared to
+traditional methods. To enhance editing precision, we introduce a delta score
+to calculate the 2D mask in the latent space that serves as a guide for local
+modifications while preserving irrelevant regions. Our novel pixel-level
+scoring approach harnesses the power of InstructPix2Pix (IP2P) to discern the
+disparity between IP2P conditional and unconditional noise predictions in the
+latent space. The edited latents conditioned on the 2D masks are then
+iteratively updated in the training set to achieve 3D local editing. Our
+approach achieves faster editing speeds and superior output quality compared to
+existing 3D editing models, bridging the gap between textual instructions and
+high-quality 3D scene editing in latent space. We show the superiority of our
+approach on four benchmark 3D datasets, LLFF, IN2N, NeRFStudio and NeRF-Art.
+</p></li>
+</ul>
+
+<h3>Title: Single PW takes a shortcut to compound PW in US imaging. (arXiv:2312.09514v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09514">http://arxiv.org/abs/2312.09514</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09514]] Single PW takes a shortcut to compound PW in US imaging(http://arxiv.org/abs/2312.09514)</code></li>
+<li>Summary: <p>Reconstruction of ultrasound (US) images from radio-frequency data can be
+conceptualized as a linear inverse problem. Traditional deep learning
+approaches, which aim to improve the quality of US images by directly learning
+priors, often encounter challenges in generalization. Recently, diffusion-based
+generative models have received significant attention within the research
+community due to their robust performance in image reconstruction tasks.
+However, a limitation of these models is their inherent low speed in generating
+image samples from pure Gaussian noise progressively. In this study, we exploit
+the inherent similarity between the US images reconstructed from a single plane
+wave (PW) and PW compounding PWC). We hypothesize that a single PW can take a
+shortcut to reach the diffusion trajectory of PWC, removing the need to begin
+with Gaussian noise. By employing an advanced diffusion model, we demonstrate
+its effectiveness in US image reconstruction, achieving a substantial reduction
+in sampling steps. In-vivo experimental results indicate that our approach can
+reduce sampling steps by 60%, while preserving comparable performance metrics
+with the conventional diffusion model.
+</p></li>
+</ul>
+
+<h3>Title: CAGE: Controllable Articulation GEneration. (arXiv:2312.09570v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09570">http://arxiv.org/abs/2312.09570</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09570]] CAGE: Controllable Articulation GEneration(http://arxiv.org/abs/2312.09570)</code></li>
+<li>Summary: <p>We address the challenge of generating 3D articulated objects in a
+controllable fashion. Currently, modeling articulated 3D objects is either
+achieved through laborious manual authoring, or using methods from prior work
+that are hard to scale and control directly. We leverage the interplay between
+part shape, connectivity, and motion using a denoising diffusion-based method
+with attention modules designed to extract correlations between part
+attributes. Our method takes an object category label and a part connectivity
+graph as input and generates an object's geometry and motion parameters. The
+generated objects conform to user-specified constraints on the object category,
+part shape, and part articulation. Our experiments show that our method
+outperforms the state-of-the-art in articulated object generation, producing
+more realistic objects while conforming better to user constraints.
+</p>
+<p>Video Summary at: <a href="http://youtu.be/cH_rbKbyTpE">this http URL</a>
+</p></li>
+</ul>
+
+<h3>Title: Faster Diffusion: Rethinking the Role of UNet Encoder in Diffusion Models. (arXiv:2312.09608v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09608">http://arxiv.org/abs/2312.09608</a></li>
+<li>Code URL: <a href="https://github.com/hutaihang/faster-diffusion">https://github.com/hutaihang/faster-diffusion</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09608]] Faster Diffusion: Rethinking the Role of UNet Encoder in Diffusion Models(http://arxiv.org/abs/2312.09608)</code></li>
+<li>Summary: <p>One of the key components within diffusion models is the UNet for noise
+prediction. While several works have explored basic properties of the UNet
+decoder, its encoder largely remains unexplored. In this work, we conduct the
+first comprehensive study of the UNet encoder. We empirically analyze the
+encoder features and provide insights to important questions regarding their
+changes at the inference process. In particular, we find that encoder features
+change gently, whereas the decoder features exhibit substantial variations
+across different time-steps. This finding inspired us to omit the encoder at
+certain adjacent time-steps and reuse cyclically the encoder features in the
+previous time-steps for the decoder. Further based on this observation, we
+introduce a simple yet effective encoder propagation scheme to accelerate the
+diffusion sampling for a diverse set of tasks. By benefiting from our
+propagation scheme, we are able to perform in parallel the decoder at certain
+adjacent time-steps. Additionally, we introduce a prior noise injection method
+to improve the texture details in the generated image. Besides the standard
+text-to-image task, we also validate our approach on other tasks:
+text-to-video, personalized generation and reference-guided generation. Without
+utilizing any knowledge distillation technique, our approach accelerates both
+the Stable Diffusion (SD) and the DeepFloyd-IF models sampling by 41$\%$ and
+24$\%$ respectively, while maintaining high-quality generation performance. Our
+code is available in
+\href{https://github.com/hutaiHang/Faster-Diffusion}{FasterDiffusion}.
+</p></li>
+</ul>
+
+<h3>Title: TF-CLIP: Learning Text-free CLIP for Video-based Person Re-Identification. (arXiv:2312.09627v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09627">http://arxiv.org/abs/2312.09627</a></li>
+<li>Code URL: <a href="https://github.com/asuradayuci/tf-clip">https://github.com/asuradayuci/tf-clip</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09627]] TF-CLIP: Learning Text-free CLIP for Video-based Person Re-Identification(http://arxiv.org/abs/2312.09627)</code></li>
+<li>Summary: <p>Large-scale language-image pre-trained models (e.g., CLIP) have shown
+superior performances on many cross-modal retrieval tasks. However, the problem
+of transferring the knowledge learned from such models to video-based person
+re-identification (ReID) has barely been explored. In addition, there is a lack
+of decent text descriptions in current ReID benchmarks. To address these
+issues, in this work, we propose a novel one-stage text-free CLIP-based
+learning framework named TF-CLIP for video-based person ReID. More
+specifically, we extract the identity-specific sequence feature as the
+CLIP-Memory to replace the text feature. Meanwhile, we design a
+Sequence-Specific Prompt (SSP) module to update the CLIP-Memory online. To
+capture temporal information, we further propose a Temporal Memory Diffusion
+(TMD) module, which consists of two key components: Temporal Memory
+Construction (TMC) and Memory Diffusion (MD). Technically, TMC allows the
+frame-level memories in a sequence to communicate with each other, and to
+extract temporal information based on the relations within the sequence. MD
+further diffuses the temporal memories to each token in the original features
+to obtain more robust sequence features. Extensive experiments demonstrate that
+our proposed method shows much better results than other state-of-the-art
+methods on MARS, LS-VID and iLIDS-VID. The code is available at
+https://github.com/AsuradaYuci/TF-CLIP.
+</p></li>
+</ul>
+
+<h3>Title: Exploring the Feasibility of Generating Realistic 3D Models of Endangered Species Using DreamGaussian: An Analysis of Elevation Angle's Impact on Model Generation. (arXiv:2312.09682v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09682">http://arxiv.org/abs/2312.09682</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09682]] Exploring the Feasibility of Generating Realistic 3D Models of Endangered Species Using DreamGaussian: An Analysis of Elevation Angle's Impact on Model Generation(http://arxiv.org/abs/2312.09682)</code></li>
+<li>Summary: <p>Many species face the threat of extinction. It's important to study these
+species and gather information about them as much as possible to preserve
+biodiversity. Due to the rarity of endangered species, there is a limited
+amount of data available, making it difficult to apply data requiring
+generative AI methods to this domain. We aim to study the feasibility of
+generating consistent and real-like 3D models of endangered animals using
+limited data. Such a phenomenon leads us to utilize zero-shot stable diffusion
+models that can generate a 3D model out of a single image of the target
+species. This paper investigates the intricate relationship between elevation
+angle and the output quality of 3D model generation, focusing on the innovative
+approach presented in DreamGaussian. DreamGaussian, a novel framework utilizing
+Generative Gaussian Splatting along with novel mesh extraction and refinement
+algorithms, serves as the focal point of our study. We conduct a comprehensive
+analysis, analyzing the effect of varying elevation angles on DreamGaussian's
+ability to reconstruct 3D scenes accurately. Through an empirical evaluation,
+we demonstrate how changes in elevation angle impact the generated images'
+spatial coherence, structural integrity, and perceptual realism. We observed
+that giving a correct elevation angle with the input image significantly
+affects the result of the generated 3D model. We hope this study to be
+influential for the usability of AI to preserve endangered animals; while the
+penultimate aim is to obtain a model that can output biologically consistent 3D
+models via small samples, the qualitative interpretation of an existing
+state-of-the-art model such as DreamGaussian will be a step forward in our
+goal.
+</p></li>
+</ul>
+
+<h3>Title: DreamTalk: When Expressive Talking Head Generation Meets Diffusion Probabilistic Models. (arXiv:2312.09767v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09767">http://arxiv.org/abs/2312.09767</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09767]] DreamTalk: When Expressive Talking Head Generation Meets Diffusion Probabilistic Models(http://arxiv.org/abs/2312.09767)</code></li>
+<li>Summary: <p>Diffusion models have shown remarkable success in a variety of downstream
+generative tasks, yet remain under-explored in the important and challenging
+expressive talking head generation. In this work, we propose a DreamTalk
+framework to fulfill this gap, which employs meticulous design to unlock the
+potential of diffusion models in generating expressive talking heads.
+Specifically, DreamTalk consists of three crucial components: a denoising
+network, a style-aware lip expert, and a style predictor. The diffusion-based
+denoising network is able to consistently synthesize high-quality audio-driven
+face motions across diverse expressions. To enhance the expressiveness and
+accuracy of lip motions, we introduce a style-aware lip expert that can guide
+lip-sync while being mindful of the speaking styles. To eliminate the need for
+expression reference video or text, an extra diffusion-based style predictor is
+utilized to predict the target expression directly from the audio. By this
+means, DreamTalk can harness powerful diffusion models to generate expressive
+faces effectively and reduce the reliance on expensive style references.
+Experimental results demonstrate that DreamTalk is capable of generating
+photo-realistic talking faces with diverse speaking styles and achieving
+accurate lip motions, surpassing existing state-of-the-art counterparts.
+</p></li>
+</ul>
+
+<h3>Title: Latent Diffusion Models with Image-Derived Annotations for Enhanced AI-Assisted Cancer Diagnosis in Histopathology. (arXiv:2312.09792v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09792">http://arxiv.org/abs/2312.09792</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09792]] Latent Diffusion Models with Image-Derived Annotations for Enhanced AI-Assisted Cancer Diagnosis in Histopathology(http://arxiv.org/abs/2312.09792)</code></li>
+<li>Summary: <p>Artificial Intelligence (AI) based image analysis has an immense potential to
+support diagnostic histopathology, including cancer diagnostics. However,
+developing supervised AI methods requires large-scale annotated datasets. A
+potentially powerful solution is to augment training data with synthetic data.
+Latent diffusion models, which can generate high-quality, diverse synthetic
+images, are promising. However, the most common implementations rely on
+detailed textual descriptions, which are not generally available in this
+domain. This work proposes a method that constructs structured textual prompts
+from automatically extracted image features. We experiment with the PCam
+dataset, composed of tissue patches only loosely annotated as healthy or
+cancerous. We show that including image-derived features in the prompt, as
+opposed to only healthy and cancerous labels, improves the Fr\'echet Inception
+Distance (FID) from 178.8 to 90.2. We also show that pathologists find it
+challenging to detect synthetic images, with a median sensitivity/specificity
+of 0.55/0.55. Finally, we show that synthetic data effectively trains AI
+models.
+</p></li>
+</ul>
+
+<h3>Title: Socio-Economic Deprivation Analysis: Diffusion Maps. (arXiv:2312.09830v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09830">http://arxiv.org/abs/2312.09830</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09830]] Socio-Economic Deprivation Analysis: Diffusion Maps(http://arxiv.org/abs/2312.09830)</code></li>
+<li>Summary: <p>This report proposes a model to predict the location of the most deprived
+areas in a city using data from the census. A census data is very high
+dimensional and needs to be simplified. We use a novel algorithm to reduce
+dimensionality and find patterns: The diffusion map. Features are defined by
+eigenvectors of the Laplacian matrix that defines the diffusion map.
+Eigenvectors corresponding to the smallest eigenvalues indicate specific
+population features. Previous work has found qualitatively that the second most
+important dimension for describing the census data in Bristol is linked to
+deprivation. In this report, we analyse how good this dimension is as a model
+for predicting deprivation by comparing with the recognised measures. The
+Pearson correlation coefficient was found to be over 0.7. The top 10 per cent
+of deprived areas in the UK which also locate in Bristol are extracted to test
+the accuracy of the model. There are 52 most deprived areas, and 38 areas are
+correctly identified by comparing to the model. The influence of scores of IMD
+domains that do not correlate with the models, Eigenvector 2 entries of
+non-deprived OAs and orthogonality of Eigenvectors cause the model to fail the
+prediction of 14 deprived areas.
+</p>
+<p>However, overall, the model shows a high performance to predict the future
+deprivation of overall areas where the project considers. This project is
+expected to support the government to allocate resources and funding.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: CNC-Net: Self-Supervised Learning for CNC Machining Operations. (arXiv:2312.09925v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09925">http://arxiv.org/abs/2312.09925</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09925]] CNC-Net: Self-Supervised Learning for CNC Machining Operations(http://arxiv.org/abs/2312.09925)</code></li>
+<li>Summary: <p>CNC manufacturing is a process that employs computer numerical control (CNC)
+machines to govern the movements of various industrial tools and machinery,
+encompassing equipment ranging from grinders and lathes to mills and CNC
+routers. However, the reliance on manual CNC programming has become a
+bottleneck, and the requirement for expert knowledge can result in significant
+costs. Therefore, we introduce a pioneering approach named CNC-Net,
+representing the use of deep neural networks (DNNs) to simulate CNC machines
+and grasp intricate operations when supplied with raw materials. CNC-Net
+constitutes a self-supervised framework that exclusively takes an input 3D
+model and subsequently generates the essential operation parameters required by
+the CNC machine to construct the object. Our method has the potential to
+transformative automation in manufacturing by offering a cost-effective
+alternative to the high costs of manual CNC programming while maintaining
+exceptional precision in 3D object production. Our experiments underscore the
+effectiveness of our CNC-Net in constructing the desired 3D objects through the
+utilization of CNC operations. Notably, it excels in preserving finer local
+details, exhibiting a marked enhancement in precision compared to the
+state-of-the-art 3D CAD reconstruction approaches.
+</p></li>
+</ul>
+
+<h3>Title: Generative Context-aware Fine-tuning of Self-supervised Speech Models. (arXiv:2312.09895v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09895">http://arxiv.org/abs/2312.09895</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09895]] Generative Context-aware Fine-tuning of Self-supervised Speech Models(http://arxiv.org/abs/2312.09895)</code></li>
+<li>Summary: <p>When performing tasks like automatic speech recognition or spoken language
+understanding for a given utterance, access to preceding text or audio provides
+contextual information can improve performance. Considering the recent advances
+in generative large language models (LLM), we hypothesize that an LLM could
+generate useful context information using the preceding text. With appropriate
+prompts, LLM could generate a prediction of the next sentence or abstractive
+text like titles or topics. In this paper, we study the use of LLM-generated
+context information and propose an approach to distill the generated
+information during fine-tuning of self-supervised speech models, which we refer
+to as generative context-aware fine-tuning. This approach allows the fine-tuned
+model to make improved predictions without access to the true surrounding
+segments or to the LLM at inference time, while requiring only a very small
+additional context module. We evaluate the proposed approach using the SLUE and
+Libri-light benchmarks for several downstream tasks: automatic speech
+recognition, named entity recognition, and sentiment analysis. The results show
+that generative context-aware fine-tuning outperforms a context injection
+fine-tuning approach that accesses the ground-truth previous text, and is
+competitive with a generative context injection fine-tuning approach that
+requires the LLM at inference time.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Collaborating Foundation models for Domain Generalized Semantic Segmentation. (arXiv:2312.09788v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09788">http://arxiv.org/abs/2312.09788</a></li>
+<li>Code URL: <a href="https://github.com/yasserben/clouds">https://github.com/yasserben/clouds</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09788]] Collaborating Foundation models for Domain Generalized Semantic Segmentation(http://arxiv.org/abs/2312.09788)</code></li>
+<li>Summary: <p>Domain Generalized Semantic Segmentation (DGSS) deals with training a model
+on a labeled source domain with the aim of generalizing to unseen domains
+during inference. Existing DGSS methods typically effectuate robust features by
+means of Domain Randomization (DR). Such an approach is often limited as it can
+only account for style diversification and not content. In this work, we take
+an orthogonal approach to DGSS and propose to use an assembly of CoLlaborative
+FOUndation models for Domain Generalized Semantic Segmentation (CLOUDS). In
+detail, CLOUDS is a framework that integrates FMs of various kinds: (i) CLIP
+backbone for its robust feature representation, (ii) generative models to
+diversify the content, thereby covering various modes of the possible target
+distribution, and (iii) Segment Anything Model (SAM) for iteratively refining
+the predictions of the segmentation model. Extensive experiments show that our
+CLOUDS excels in adapting from synthetic to real DGSS benchmarks and under
+varying weather conditions, notably outperforming prior methods by 5.6% and
+6.7% on averaged miou, respectively. The code is available at :
+https://github.com/yasserben/CLOUDS
+</p></li>
+</ul>
+
+<h3>Title: PathoDuet: Foundation Models for Pathological Slide Analysis of H&E and IHC Stains. (arXiv:2312.09894v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09894">http://arxiv.org/abs/2312.09894</a></li>
+<li>Code URL: <a href="https://github.com/openmedlab/pathoduet">https://github.com/openmedlab/pathoduet</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09894]] PathoDuet: Foundation Models for Pathological Slide Analysis of H&E and IHC Stains(http://arxiv.org/abs/2312.09894)</code></li>
+<li>Summary: <p>Large amounts of digitized histopathological data display a promising future
+for developing pathological foundation models via self-supervised learning
+methods. Foundation models pretrained with these methods serve as a good basis
+for downstream tasks. However, the gap between natural and histopathological
+images hinders the direct application of existing methods. In this work, we
+present PathoDuet, a series of pretrained models on histopathological images,
+and a new self-supervised learning framework in histopathology. The framework
+is featured by a newly-introduced pretext token and later task raisers to
+explicitly utilize certain relations between images, like multiple
+magnifications and multiple stains. Based on this, two pretext tasks,
+cross-scale positioning and cross-stain transferring, are designed to pretrain
+the model on Hematoxylin and Eosin (H\&amp;E) images and transfer the model to
+immunohistochemistry (IHC) images, respectively. To validate the efficacy of
+our models, we evaluate the performance over a wide variety of downstream
+tasks, including patch-level colorectal cancer subtyping and whole slide image
+(WSI)-level classification in H\&amp;E field, together with expression level
+prediction of IHC marker and tumor identification in IHC field. The
+experimental results show the superiority of our models over most tasks and the
+efficacy of proposed pretext tasks. The codes and models are available at
+https://github.com/openmedlab/PathoDuet.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Image Deblurring using GAN. (arXiv:2312.09496v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09496">http://arxiv.org/abs/2312.09496</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09496]] Image Deblurring using GAN(http://arxiv.org/abs/2312.09496)</code></li>
+<li>Summary: <p>In recent years, deep generative models, such as Generative Adversarial
+Network (GAN), has grabbed significant attention in the field of computer
+vision. This project focuses on the application of GAN in image deblurring with
+the aim of generating clearer images from blurry inputs caused by factors such
+as motion blur. However, traditional image restoration techniques have
+limitations in handling complex blurring patterns. Hence, a GAN-based framework
+is proposed as a solution to generate high-quality deblurred images. The
+project defines a GAN model in Tensorflow and trains it with GoPRO dataset. The
+Generator will intake blur images directly to create fake images to convince
+the Discriminator which will receive clear images at the same time and
+distinguish between the real image and the fake image. After obtaining the
+trained parameters, the model was used to deblur motion-blur images taken in
+daily life as well as testing set for validation. The result shows that the
+pretrained network of GAN can obtain sharper pixels in image, achieving an
+average of 29.3 Peak Signal-to-Noise Ratio (PSNR) and 0.72 Structural
+Similarity Assessment (SSIM). This help to effectively address the challenges
+posed by image blurring, leading to the generation of visually pleasing and
+sharp images. By exploiting the adversarial learning framework, the proposed
+approach enhances the potential for real-world applications in image
+restoration.
+</p></li>
+</ul>
+
+<h3>Title: Fast Sampling generative model for Ultrasound image reconstruction. (arXiv:2312.09510v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09510">http://arxiv.org/abs/2312.09510</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09510]] Fast Sampling generative model for Ultrasound image reconstruction(http://arxiv.org/abs/2312.09510)</code></li>
+<li>Summary: <p>Image reconstruction from radio-frequency data is pivotal in ultrafast plane
+wave ultrasound imaging. Unlike the conventional delay-and-sum (DAS) technique,
+which relies on somewhat imprecise assumptions, deep learning-based methods
+perform image reconstruction by training on paired data, leading to a notable
+enhancement in image quality. Nevertheless, these strategies often exhibit
+limited generalization capabilities. Recently, denoising diffusion models have
+become the preferred paradigm for image reconstruction tasks. However, their
+reliance on an iterative sampling procedure results in prolonged generation
+time. In this paper, we propose a novel sampling framework that concurrently
+enforces data consistency of ultrasound signals and data-driven priors. By
+leveraging the advanced diffusion model, the generation of high-quality images
+is substantially expedited. Experimental evaluations on an in-vivo dataset
+indicate that our approach with a single plane wave surpasses DAS with spatial
+coherent compounding of 75 plane waves.
+</p></li>
+</ul>
+
+<h3>Title: Style Generation in Robot Calligraphy with Deep Generative Adversarial Networks. (arXiv:2312.09673v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09673">http://arxiv.org/abs/2312.09673</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09673]] Style Generation in Robot Calligraphy with Deep Generative Adversarial Networks(http://arxiv.org/abs/2312.09673)</code></li>
+<li>Summary: <p>Robot calligraphy is an emerging exploration of artificial intelligence in
+the fields of art and education. Traditional calligraphy generation researches
+mainly focus on methods such as tool-based image processing, generative models,
+and style transfer. Unlike the English alphabet, the number of Chinese
+characters is tens of thousands, which leads to difficulties in the generation
+of a style consistent Chinese calligraphic font with over 6000 characters. Due
+to the lack of high-quality data sets, formal definitions of calligraphy
+knowledge, and scientific art evaluation methods, The results generated are
+frequently of low quality and falls short of professional-level requirements.
+To address the above problem, this paper proposes an automatic calligraphy
+generation model based on deep generative adversarial networks (deepGAN) that
+can generate style calligraphy fonts with professional standards. The key
+highlights of the proposed method include: (1) The datasets use a
+high-precision calligraphy synthesis method to ensure its high quality and
+sufficient quantity; (2) Professional calligraphers are invited to conduct a
+series of Turing tests to evaluate the gap between model generation results and
+human artistic level; (3) Experimental results indicate that the proposed model
+is the state-of-the-art among current calligraphy generation methods. The
+Turing tests and similarity evaluations validate the effectiveness of the
+proposed method.
+</p></li>
+</ul>
+
+<h3>Title: GSQA: An End-to-End Model for Generative Spoken Question Answering. (arXiv:2312.09781v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09781">http://arxiv.org/abs/2312.09781</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09781]] GSQA: An End-to-End Model for Generative Spoken Question Answering(http://arxiv.org/abs/2312.09781)</code></li>
+<li>Summary: <p>In recent advancements in spoken question answering (QA), end-to-end models
+have made significant strides. However, previous research has primarily focused
+on extractive span selection. While this extractive-based approach is effective
+when answers are present directly within the input, it falls short in
+addressing abstractive questions, where answers are not directly extracted but
+inferred from the given information. To bridge this gap, we introduce the first
+end-to-end Generative Spoken Question Answering (GSQA) model that empowers the
+system to engage in abstractive reasoning. The challenge in training our GSQA
+model lies in the absence of a spoken abstractive QA dataset. We propose using
+text models for initialization and leveraging the extractive QA dataset to
+transfer knowledge from the text generative model to the spoken generative
+model. Experimental results indicate that our model surpasses the previous
+extractive model by 3% on extractive QA datasets. Furthermore, the GSQA model
+has only been fine-tuned on the spoken extractive QA dataset. Despite not
+having seen any spoken abstractive QA data, it can still closely match the
+performance of the cascade model. In conclusion, our GSQA model shows the
+potential to generalize to a broad spectrum of questions, thus further
+expanding spoken question answering capabilities of abstractive QA. Our code is
+available at
+\href{https://voidful.github.io/GSQA}{https://voidful.github.io/GSQA}
+</p></li>
+</ul>
+
+<h3>Title: A Malware Classification Survey on Adversarial Attacks and Defences. (arXiv:2312.09636v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09636">http://arxiv.org/abs/2312.09636</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09636]] A Malware Classification Survey on Adversarial Attacks and Defences(http://arxiv.org/abs/2312.09636)</code></li>
+<li>Summary: <p>As the number and complexity of malware attacks continue to increase, there
+is an urgent need for effective malware detection systems. While deep learning
+models are effective at detecting malware, they are vulnerable to adversarial
+attacks. Attacks like this can create malicious files that are resistant to
+detection, creating a significant cybersecurity risk. Recent research has seen
+the development of several adversarial attack and response approaches aiming at
+strengthening deep learning models' resilience to such attacks. This survey
+study offers an in-depth look at current research in adversarial attack and
+defensive strategies for malware classification in cybersecurity. The methods
+are classified into four categories: generative models, feature-based
+approaches, ensemble methods, and hybrid tactics. The article outlines
+cutting-edge procedures within each area, assessing their benefits and
+drawbacks. Each topic presents cutting-edge approaches and explores their
+advantages and disadvantages. In addition, the study discusses the datasets and
+assessment criteria that are often utilized on this subject. Finally, it
+identifies open research difficulties and suggests future study options. This
+document is a significant resource for malware categorization and cyber
+security researchers and practitioners.
+</p></li>
+</ul>
+
+<h3>Title: Unbiasing Enhanced Sampling on a High-dimensional Free Energy Surface with Deep Generative Model. (arXiv:2312.09404v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09404">http://arxiv.org/abs/2312.09404</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09404]] Unbiasing Enhanced Sampling on a High-dimensional Free Energy Surface with Deep Generative Model(http://arxiv.org/abs/2312.09404)</code></li>
+<li>Summary: <p>Biased enhanced sampling methods utilizing collective variables (CVs) are
+powerful tools for sampling conformational ensembles. Due to high intrinsic
+dimensions, efficiently generating conformational ensembles for complex systems
+requires enhanced sampling on high-dimensional free energy surfaces. While
+methods like temperature-accelerated molecular dynamics (TAMD) can adopt many
+CVs in a simulation, unbiasing the simulation requires accurate modeling of a
+high-dimensional CV probability distribution, which is challenging for
+traditional density estimation techniques. Here we propose an unbiasing method
+based on the score-based diffusion model, a deep generative learning method
+that excels in density estimation across complex data landscapes. We test the
+score-based diffusion unbiasing method on TAMD simulations. The results
+demonstrate that this unbiasing approach significantly outperforms traditional
+unbiasing methods, and can generate accurate unbiased conformational ensembles
+for simulations with a number of CVs higher than usual ranges.
+</p></li>
+</ul>
+
+<h3>Title: Automating reward function configuration for drug design. (arXiv:2312.09865v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09865">http://arxiv.org/abs/2312.09865</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09865]] Automating reward function configuration for drug design(http://arxiv.org/abs/2312.09865)</code></li>
+<li>Summary: <p>Designing reward functions that guide generative molecular design (GMD)
+algorithms to desirable areas of chemical space is of critical importance in
+AI-driven drug discovery. Traditionally, this has been a manual and error-prone
+task; the selection of appropriate computational methods to approximate
+biological assays is challenging and the aggregation of computed values into a
+single score even more so, leading to potential reliance on trial-and-error
+approaches. We propose a novel approach for automated reward configuration that
+relies solely on experimental data, mitigating the challenges of manual reward
+adjustment on drug discovery projects. Our method achieves this by constructing
+a ranking over experimental data based on Pareto dominance over the
+multi-objective space, then training a neural network to approximate the reward
+function such that rankings determined by the predicted reward correlate with
+those determined by the Pareto dominance relation. We validate our method using
+two case studies. In the first study we simulate Design-Make-Test-Analyse
+(DMTA) cycles by alternating reward function updates and generative runs guided
+by that function. We show that the learned function adapts over time to yield
+compounds that score highly with respect to evaluation functions taken from the
+literature. In the second study we apply our algorithm to historical data from
+four real drug discovery projects. We show that our algorithm yields reward
+functions that outperform the predictive accuracy of human-defined functions,
+achieving an improvement of up to 0.4 in Spearman's correlation against a
+ground truth evaluation function that encodes the target drug profile for that
+project. Our method provides an efficient data-driven way to configure reward
+functions for GMD, and serves as a strong baseline for future research into
+transformative approaches for the automation of drug discovery.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: TAB: Text-Align Anomaly Backbone Model for Industrial Inspection Tasks. (arXiv:2312.09480v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09480">http://arxiv.org/abs/2312.09480</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09480]] TAB: Text-Align Anomaly Backbone Model for Industrial Inspection Tasks(http://arxiv.org/abs/2312.09480)</code></li>
+<li>Summary: <p>In recent years, the focus on anomaly detection and localization in
+industrial inspection tasks has intensified. While existing studies have
+demonstrated impressive outcomes, they often rely heavily on extensive training
+datasets or robust features extracted from pre-trained models trained on
+diverse datasets like ImageNet. In this work, we propose a novel framework
+leveraging the visual-linguistic CLIP model to adeptly train a backbone model
+tailored to the manufacturing domain. Our approach concurrently considers
+visual and text-aligned embedding spaces for normal and abnormal conditions.
+The resulting pre-trained backbone markedly enhances performance in industrial
+downstream tasks, particularly in anomaly detection and localization. Notably,
+this improvement is substantiated through experiments conducted on multiple
+datasets such as MVTecAD, BTAD, and KSDD2. Furthermore, using our pre-trained
+backbone weights allows previous works to achieve superior performance in
+few-shot scenarios with less training data. The proposed anomaly backbone
+provides a foundation model for more precise anomaly detection and
+localization.
+</p></li>
+</ul>
+
+<h3>Title: Entropy Causal Graphs for Multivariate Time Series Anomaly Detection. (arXiv:2312.09478v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.09478">http://arxiv.org/abs/2312.09478</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.09478]] Entropy Causal Graphs for Multivariate Time Series Anomaly Detection(http://arxiv.org/abs/2312.09478)</code></li>
+<li>Summary: <p>Many multivariate time series anomaly detection frameworks have been proposed
+and widely applied. However, most of these frameworks do not consider intrinsic
+relationships between variables in multivariate time series data, thus ignoring
+the causal relationship among variables and degrading anomaly detection
+performance. This work proposes a novel framework called CGAD, an entropy
+Causal Graph for multivariate time series Anomaly Detection. CGAD utilizes
+transfer entropy to construct graph structures that unveil the underlying
+causal relationships among time series data. Weighted graph convolutional
+networks combined with causal convolutions are employed to model both the
+causal graph structures and the temporal patterns within multivariate time
+series data. Furthermore, CGAD applies anomaly scoring, leveraging median
+absolute deviation-based normalization to improve the robustness of the anomaly
+identification process. Extensive experiments demonstrate that CGAD outperforms
+state-of-the-art methods on real-world datasets with a 15% average improvement
+based on three different multivariate time series anomaly detection metrics.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
