@@ -1,0 +1,402 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2023-12-19</h1>
+<h2>diffusion</h2>
+<h3>Title: Plasticine3D: Non-rigid 3D editting with text guidance. (arXiv:2312.10111v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10111">http://arxiv.org/abs/2312.10111</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10111]] Plasticine3D: Non-rigid 3D editting with text guidance(http://arxiv.org/abs/2312.10111)</code></li>
+<li>Summary: <p>With the help of Score Distillation Sampling(SDS) and the rapid development
+of various trainable 3D representations, Text-to-Image(T2I) diffusion models
+have been applied to 3D generation tasks and achieved considerable results.
+There are also some attempts toward the task of editing 3D objects leveraging
+this Text-to-3D pipeline. However, most methods currently focus on adding
+additional geometries, overwriting textures or both. But few of them can
+perform non-rigid transformation of 3D objects. For those who can perform
+non-rigid editing, on the other hand, suffer from low-resolution, lack of
+fidelity and poor flexibility. In order to address these issues, we present:
+Plasticine3D, a general, high-fidelity, photo-realistic and controllable
+non-rigid editing pipeline. Firstly, our work divides the editing process into
+a geometry editing stage and a texture editing stage to achieve more detailed
+and photo-realistic results ; Secondly, in order to perform non-rigid
+transformation with controllable results while maintain the fidelity towards
+original 3D models in the same time, we propose a multi-view-embedding(MVE)
+optimization strategy to ensure that the diffusion model learns the overall
+features of the original object and an embedding-fusion(EF) to control the
+degree of editing by adjusting the value of the fusing rate. We also design a
+geometry processing step before optimizing on the base geometry to cope with
+different needs of various editing tasks. Further more, to fully leverage the
+geometric prior from the original 3D object, we provide an optional replacement
+of score distillation sampling named score projection sampling(SPS) which
+enables us to directly perform optimization from the origin 3D mesh in most
+common median non-rigid editing scenarios. We demonstrate the effectiveness of
+our method on both the non-rigid 3D editing task and general 3D editing task.
+</p></li>
+</ul>
+
+<h3>Title: Focus on Your Instruction: Fine-grained and Multi-instruction Image Editing by Attention Modulation. (arXiv:2312.10113v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10113">http://arxiv.org/abs/2312.10113</a></li>
+<li>Code URL: <a href="https://github.com/guoqincode/focus-on-your-instruction">https://github.com/guoqincode/focus-on-your-instruction</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10113]] Focus on Your Instruction: Fine-grained and Multi-instruction Image Editing by Attention Modulation(http://arxiv.org/abs/2312.10113)</code></li>
+<li>Summary: <p>Recently, diffusion-based methods, like InstructPix2Pix (IP2P), have achieved
+effective instruction-based image editing, requiring only natural language
+instructions from the user. However, these methods often inadvertently alter
+unintended areas and struggle with multi-instruction editing, resulting in
+compromised outcomes. To address these issues, we introduce the Focus on Your
+Instruction (FoI), a method designed to ensure precise and harmonious editing
+across multiple instructions without extra training or test-time optimization.
+In the FoI, we primarily emphasize two aspects: (1) precisely extracting
+regions of interest for each instruction and (2) guiding the denoising process
+to concentrate within these regions of interest. For the first objective, we
+identify the implicit grounding capability of IP2P from the cross-attention
+between instruction and image, then develop an effective mask extraction
+method. For the second objective, we introduce a cross attention modulation
+module for rough isolation of target editing regions and unrelated regions.
+Additionally, we introduce a mask-guided disentangle sampling strategy to
+further ensure clear region isolation. Experimental results demonstrate that
+FoI surpasses existing methods in both quantitative and qualitative
+evaluations, especially excelling in multi-instruction editing task.
+</p></li>
+</ul>
+
+<h3>Title: MVHuman: Tailoring 2D Diffusion with Multi-view Sampling For Realistic 3D Human Generation. (arXiv:2312.10120v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10120">http://arxiv.org/abs/2312.10120</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10120]] MVHuman: Tailoring 2D Diffusion with Multi-view Sampling For Realistic 3D Human Generation(http://arxiv.org/abs/2312.10120)</code></li>
+<li>Summary: <p>Recent months have witnessed rapid progress in 3D generation based on
+diffusion models. Most advances require fine-tuning existing 2D Stable
+Diffsuions into multi-view settings or tedious distilling operations and hence
+fall short of 3D human generation due to the lack of diverse 3D human datasets.
+We present an alternative scheme named MVHuman to generate human radiance
+fields from text guidance, with consistent multi-view images directly sampled
+from pre-trained Stable Diffsuions without any fine-tuning or distilling. Our
+core is a multi-view sampling strategy to tailor the denoising processes of the
+pre-trained network for generating consistent multi-view images. It encompasses
+view-consistent conditioning, replacing the original noises with
+``consistency-guided noises'', optimizing latent codes, as well as utilizing
+cross-view attention layers. With the multi-view images through the sampling
+process, we adopt geometry refinement and 3D radiance field generation followed
+by a subsequent neural blending scheme for free-view rendering. Extensive
+experiments demonstrate the efficacy of our method, as well as its superiority
+to state-of-the-art 3D human generation methods.
+</p></li>
+</ul>
+
+<h3>Title: Tell Me What You See: Text-Guided Real-World Image Denoising. (arXiv:2312.10191v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10191">http://arxiv.org/abs/2312.10191</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10191]] Tell Me What You See: Text-Guided Real-World Image Denoising(http://arxiv.org/abs/2312.10191)</code></li>
+<li>Summary: <p>Image reconstruction in low-light conditions is a challenging problem. Many
+solutions have been proposed for it, where the main approach is trying to learn
+a good prior of natural images along with modeling the true statistics of the
+noise in the scene. In the presence of very low lighting conditions, such
+approaches are usually not enough, and additional information is required,
+e.g., in the form of using multiple captures. In this work, we suggest as an
+alternative to add a description of the scene as prior, which can be easily
+done by the photographer who is capturing the scene. Using a text-conditioned
+diffusion model, we show that adding image caption information improves
+significantly the image reconstruction in low-light conditions on both
+synthetic and real-world images.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: From-Ground-To-Objects: Coarse-to-Fine Self-supervised Monocular Depth Estimation of Dynamic Objects with Ground Contact Prior. (arXiv:2312.10118v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10118">http://arxiv.org/abs/2312.10118</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10118]] From-Ground-To-Objects: Coarse-to-Fine Self-supervised Monocular Depth Estimation of Dynamic Objects with Ground Contact Prior(http://arxiv.org/abs/2312.10118)</code></li>
+<li>Summary: <p>Self-supervised monocular depth estimation (DE) is an approach to learning
+depth without costly depth ground truths. However, it often struggles with
+moving objects that violate the static scene assumption during training. To
+address this issue, we introduce a coarse-to-fine training strategy leveraging
+the ground contacting prior based on the observation that most moving objects
+in outdoor scenes contact the ground. In the coarse training stage, we exclude
+the objects in dynamic classes from the reprojection loss calculation to avoid
+inaccurate depth learning. To provide precise supervision on the depth of the
+objects, we present a novel Ground-contacting-prior Disparity Smoothness Loss
+(GDS-Loss) that encourages a DE network to align the depth of the objects with
+their ground-contacting points. Subsequently, in the fine training stage, we
+refine the DE network to learn the detailed depth of the objects from the
+reprojection loss, while ensuring accurate DE on the moving object regions by
+employing our regularization loss with a cost-volume-based weighting factor.
+Our overall coarse-to-fine training strategy can easily be integrated with
+existing DE methods without any modifications, significantly enhancing DE
+performance on challenging Cityscapes and KITTI datasets, especially in the
+moving object regions.
+</p></li>
+</ul>
+
+<h3>Title: Test-Time Domain Adaptation by Learning Domain-Aware Batch Normalization. (arXiv:2312.10165v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10165">http://arxiv.org/abs/2312.10165</a></li>
+<li>Code URL: <a href="https://github.com/ynanwu/mabn">https://github.com/ynanwu/mabn</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10165]] Test-Time Domain Adaptation by Learning Domain-Aware Batch Normalization(http://arxiv.org/abs/2312.10165)</code></li>
+<li>Summary: <p>Test-time domain adaptation aims to adapt the model trained on source domains
+to unseen target domains using a few unlabeled images. Emerging research has
+shown that the label and domain information is separately embedded in the
+weight matrix and batch normalization (BN) layer. Previous works normally
+update the whole network naively without explicitly decoupling the knowledge
+between label and domain. As a result, it leads to knowledge interference and
+defective distribution adaptation. In this work, we propose to reduce such
+learning interference and elevate the domain knowledge learning by only
+manipulating the BN layer. However, the normalization step in BN is
+intrinsically unstable when the statistics are re-estimated from a few samples.
+We find that ambiguities can be greatly reduced when only updating the two
+affine parameters in BN while keeping the source domain statistics. To further
+enhance the domain knowledge extraction from unlabeled data, we construct an
+auxiliary branch with label-independent self-supervised learning (SSL) to
+provide supervision. Moreover, we propose a bi-level optimization based on
+meta-learning to enforce the alignment of two learning objectives of auxiliary
+and main branches. The goal is to use the auxiliary branch to adapt the domain
+and benefit main task for subsequent inference. Our method keeps the same
+computational cost at inference as the auxiliary branch can be thoroughly
+discarded after adaptation. Extensive experiments show that our method
+outperforms the prior works on five WILDS real-world domain shift datasets. Our
+method can also be integrated with methods with label-dependent optimization to
+further push the performance boundary. Our code is available at
+https://github.com/ynanwu/MABN.
+</p></li>
+</ul>
+
+<h3>Title: T-MAE: Temporal Masked Autoencoders for Point Cloud Representation Learning. (arXiv:2312.10217v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10217">http://arxiv.org/abs/2312.10217</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10217]] T-MAE: Temporal Masked Autoencoders for Point Cloud Representation Learning(http://arxiv.org/abs/2312.10217)</code></li>
+<li>Summary: <p>The scarcity of annotated data in outdoor point cloud segmentation poses a
+significant obstacle in harnessing the modeling capabilities of advanced
+networks like transformers. Consequently, scholars have been actively
+investigating efficacious self-supervised pre-training strategies, e.g.
+contrasting learning and reconstruction-based pretext tasks. Nevertheless,
+temporal information, which is inherent in the LiDAR point cloud sequence, is
+consistently disregarded. To better utilize this property, we propose an
+effective pre-training strategy, namely Temporal Masked AutoEncoders (T-MAE),
+which takes as input temporally adjacent frames and learns temporal dependency.
+A SiamWCA backbone, containing a Siamese encoder and a window-based
+cross-attention (WCA) module, is established for the two-frame input. Taking
+into account that the motion of an ego-vehicle alters the illumination angles
+of the same instance, temporal modeling also serves as a robust and natural
+data augmentation, enhancing the comprehension of target objects. Moreover,
+instead of utilizing consecutive frames, it is more cost-effective and powerful
+by using distant historical frames. SiamWCA is a powerful architecture but
+heavily relies on annotated data. With our T-MAE pre-training strategy, we
+achieve the best performance on the Waymo dataset among self-supervised
+learning methods. Comprehensive experiments are conducted to validate all
+components of our proposal. Upon acceptance, the source code will be made
+accessible.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: FoMo-Bench: a multi-modal, multi-scale and multi-task Forest Monitoring Benchmark for remote sensing foundation models. (arXiv:2312.10114v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10114">http://arxiv.org/abs/2312.10114</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10114]] FoMo-Bench: a multi-modal, multi-scale and multi-task Forest Monitoring Benchmark for remote sensing foundation models(http://arxiv.org/abs/2312.10114)</code></li>
+<li>Summary: <p>Forests are an essential part of Earth's ecosystems and natural systems, as
+well as providing services on which humanity depends, yet they are rapidly
+changing as a result of land use decisions and climate change. Understanding
+and mitigating negative effects requires parsing data on forests at global
+scale from a broad array of sensory modalities, and recently many such problems
+have been approached using machine learning algorithms for remote sensing. To
+date, forest-monitoring problems have largely been approached in isolation.
+Inspired by the rise of foundation models for computer vision and remote
+sensing, we here present the first unified Forest Monitoring Benchmark
+(FoMo-Bench). FoMo-Bench consists of 15 diverse datasets encompassing
+satellite, aerial, and inventory data, covering a variety of geographical
+regions, and including multispectral, red-green-blue, synthetic aperture radar
+(SAR) and LiDAR data with various temporal, spatial and spectral resolutions.
+FoMo-Bench includes multiple types of forest-monitoring tasks, spanning
+classification, segmentation, and object detection. To further enhance the
+diversity of tasks and geographies represented in FoMo-Bench, we introduce a
+novel global dataset, TalloS, combining satellite imagery with ground-based
+annotations for tree species classification, spanning 1,000+ hierarchical
+taxonomic levels (species, genus, family). Finally, we propose FoMo-Net, a
+foundation model baseline designed for forest monitoring with the flexibility
+to process any combination of commonly used sensors in remote sensing. This
+work aims to inspire research collaborations between machine learning and
+forest biology researchers in exploring scalable multi-modal and multi-task
+models for forest monitoring. All code and data will be made publicly
+available.
+</p></li>
+</ul>
+
+<h3>Title: SkySense: A Multi-Modal Remote Sensing Foundation Model Towards Universal Interpretation for Earth Observation Imagery. (arXiv:2312.10115v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10115">http://arxiv.org/abs/2312.10115</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10115]] SkySense: A Multi-Modal Remote Sensing Foundation Model Towards Universal Interpretation for Earth Observation Imagery(http://arxiv.org/abs/2312.10115)</code></li>
+<li>Summary: <p>Prior studies on Remote Sensing Foundation Model (RSFM) reveal immense
+potential towards a generic model for Earth Observation. Nevertheless, these
+works primarily focus on a single modality without temporal and geo-context
+modeling, hampering their capabilities for diverse tasks. In this study, we
+present SkySense, a generic billion-scale model, pre-trained on a curated
+multi-modal Remote Sensing Imagery (RSI) dataset with 21.5 million temporal
+sequences. SkySense incorporates a factorized multi-modal spatiotemporal
+encoder taking temporal sequences of optical and Synthetic Aperture Radar (SAR)
+data as input. This encoder is pre-trained by our proposed Multi-Granularity
+Contrastive Learning to learn representations across different modal and
+spatial granularities. To further enhance the RSI representations by the
+geo-context clue, we introduce Geo-Context Prototype Learning to learn
+region-aware prototypes upon RSI's multi-modal spatiotemporal features. To our
+best knowledge, SkySense is the largest Multi-Modal RSFM to date, whose modules
+can be flexibly combined or used individually to accommodate various tasks. It
+demonstrates remarkable generalization capabilities on a thorough evaluation
+encompassing 16 datasets over 7 tasks, from single- to multi-modal, static to
+temporal, and classification to localization. SkySense surpasses 18 recent
+RSFMs in all test scenarios. Specifically, it outperforms the latest models
+such as GFM, SatLas and Scale-MAE by a large margin, i.e., 2.76%, 3.67% and
+3.61% on average respectively. We will release the pre-trained weights to
+facilitate future research and Earth Observation applications.
+</p></li>
+</ul>
+
+<h3>Title: Towards the Unification of Generative and Discriminative Visual Foundation Model: A Survey. (arXiv:2312.10163v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10163">http://arxiv.org/abs/2312.10163</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10163]] Towards the Unification of Generative and Discriminative Visual Foundation Model: A Survey(http://arxiv.org/abs/2312.10163)</code></li>
+<li>Summary: <p>The advent of foundation models, which are pre-trained on vast datasets, has
+ushered in a new era of computer vision, characterized by their robustness and
+remarkable zero-shot generalization capabilities. Mirroring the transformative
+impact of foundation models like large language models (LLMs) in natural
+language processing, visual foundation models (VFMs) have become a catalyst for
+groundbreaking developments in computer vision. This review paper delineates
+the pivotal trajectories of VFMs, emphasizing their scalability and proficiency
+in generative tasks such as text-to-image synthesis, as well as their adeptness
+in discriminative tasks including image segmentation. While generative and
+discriminative models have historically charted distinct paths, we undertake a
+comprehensive examination of the recent strides made by VFMs in both domains,
+elucidating their origins, seminal breakthroughs, and pivotal methodologies.
+Additionally, we collate and discuss the extensive resources that facilitate
+the development of VFMs and address the challenges that pave the way for future
+research endeavors. A crucial direction for forthcoming innovation is the
+amalgamation of generative and discriminative paradigms. The nascent
+application of generative models within discriminative contexts signifies the
+early stages of this confluence. This survey aspires to be a contemporary
+compendium for scholars and practitioners alike, charting the course of VFMs
+and illuminating their multifaceted landscape.
+</p></li>
+</ul>
+
+<h3>Title: Low-resource classification of mobility functioning information in clinical sentences using large language models. (arXiv:2312.10202v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10202">http://arxiv.org/abs/2312.10202</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10202]] Low-resource classification of mobility functioning information in clinical sentences using large language models(http://arxiv.org/abs/2312.10202)</code></li>
+<li>Summary: <p>Objective: Function is increasingly recognized as an important indicator of
+whole-person health. This study evaluates the ability of publicly available
+large language models (LLMs) to accurately identify the presence of functioning
+information from clinical notes. We explore various strategies to improve the
+performance on this task. Materials and Methods: We collect a balanced binary
+classification dataset of 1000 sentences from the Mobility NER dataset, which
+was curated from n2c2 clinical notes. For evaluation, we construct zero-shot
+and few-shot prompts to query the LLMs whether a given sentence contains
+mobility functioning information. Two sampling techniques, random sampling and
+k-nearest neighbor (kNN)-based sampling, are used to select the few-shot
+examples. Furthermore, we apply a parameter-efficient prompt-based fine-tuning
+method to the LLMs and evaluate their performance under various training
+settings. Results: Flan-T5-xxl outperforms all other models in both zero-shot
+and few-shot settings, achieving a F1 score of 0.865 with a single
+demonstrative example selected by kNN sampling. In prompt-based fine-tuning
+experiments, this foundation model also demonstrates superior performance
+across all low-resource settings, particularly achieving an impressive F1 score
+of 0.922 using the full training dataset. The smaller model, Flan-T5-xl,
+requires fine-tuning with only 2.3M additional parameters to achieve comparable
+performance to the fully fine-tuned Gatortron-base model, both surpassing 0.9
+F1 score. Conclusion: Open-source instruction-tuned LLMs demonstrate impressive
+in-context learning capability in the mobility functioning classification task.
+The performance of these models can be further improved by continuing
+fine-tuning on a task-specific dataset.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: NM-FlowGAN: Modeling sRGB Noise with a Hybrid Approach based on Normalizing Flows and Generative Adversarial Networks. (arXiv:2312.10112v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10112">http://arxiv.org/abs/2312.10112</a></li>
+<li>Code URL: <a href="https://github.com/YoungJooHan/NM-FlowGAN">https://github.com/YoungJooHan/NM-FlowGAN</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10112]] NM-FlowGAN: Modeling sRGB Noise with a Hybrid Approach based on Normalizing Flows and Generative Adversarial Networks(http://arxiv.org/abs/2312.10112)</code></li>
+<li>Summary: <p>Modeling and synthesizing real sRGB noise is crucial for various low-level
+vision tasks. The distribution of real sRGB noise is highly complex and
+affected by a multitude of factors, making its accurate modeling extremely
+challenging. Therefore, recent studies have proposed methods that employ
+data-driven generative models, such as generative adversarial networks (GAN)
+and Normalizing Flows. These studies achieve more accurate modeling of sRGB
+noise compared to traditional noise modeling methods. However, there are
+performance limitations due to the inherent characteristics of each generative
+model. To address this issue, we propose NM-FlowGAN, a hybrid approach that
+exploits the strengths of both GAN and Normalizing Flows. We simultaneously
+employ a pixel-wise noise modeling network based on Normalizing Flows, and
+spatial correlation modeling networks based on GAN. In our experiments, our
+NM-FlowGAN outperforms other baselines on the sRGB noise synthesis task.
+Moreover, the denoising neural network, trained with synthesized image pairs
+from our model, also shows superior performance compared to other baselines.
+Our code is available at: https://github.com/YoungJooHan/NM-FlowGAN
+</p></li>
+</ul>
+
+<h3>Title: Data-Efficient Multimodal Fusion on a Single GPU. (arXiv:2312.10144v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10144">http://arxiv.org/abs/2312.10144</a></li>
+<li>Code URL: <a href="https://github.com/layer6ai-labs/fusemix">https://github.com/layer6ai-labs/fusemix</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10144]] Data-Efficient Multimodal Fusion on a Single GPU(http://arxiv.org/abs/2312.10144)</code></li>
+<li>Summary: <p>The goal of multimodal alignment is to learn a single latent space that is
+shared between multimodal inputs. The most powerful models in this space have
+been trained using massive datasets of paired inputs and large-scale
+computational resources, making them prohibitively expensive to train in many
+practical scenarios. We surmise that existing unimodal encoders pre-trained on
+large amounts of unimodal data should provide an effective bootstrap to create
+multimodal models from unimodal ones at much lower costs. We therefore propose
+FuseMix, a multimodal augmentation scheme that operates on the latent spaces of
+arbitrary pre-trained unimodal encoders. Using FuseMix for multimodal
+alignment, we achieve competitive performance -- and in certain cases
+outperform state-of-the art methods -- in both image-text and audio-text
+retrieval, with orders of magnitude less compute and data: for example, we
+outperform CLIP on the Flickr30K text-to-image retrieval task with $\sim \!
+600\times$ fewer GPU days and $\sim \! 80\times$ fewer image-text pairs.
+Additionally, we show how our method can be applied to convert pre-trained
+text-to-image generative models into audio-to-image ones. Code is available at:
+https://github.com/layer6ai-labs/fusemix.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h2>in-context</h2>
+<h3>Title: ICD-LM: Configuring Vision-Language In-Context Demonstrations by Language Modeling. (arXiv:2312.10104v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.10104">http://arxiv.org/abs/2312.10104</a></li>
+<li>Code URL: <a href="https://github.com/forjadeforest/icd-lm">https://github.com/forjadeforest/icd-lm</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.10104]] ICD-LM: Configuring Vision-Language In-Context Demonstrations by Language Modeling(http://arxiv.org/abs/2312.10104)</code></li>
+<li>Summary: <p>This paper studies how to configure powerful In-Context Demonstration (ICD)
+sequences for a Large Vision-Language Model (LVLM) to solve Vision-Language
+tasks through In-Context Learning (ICL). After observing that configuring an
+ICD sequence is a mirror process of composing a sentence, i.e., just as a
+sentence can be composed word by word via a Language Model, an ICD sequence can
+also be configured one by one. Consequently, we introduce an ICD Language Model
+(ICD-LM) specifically designed to generate effective ICD sequences. This
+involves creating a dataset of hand-crafted ICD sequences for various query
+samples and using it to train the ICD-LM. Our approach, diverging from
+traditional methods in NLP that select and order ICDs separately, enables to
+simultaneously learn how to select and order ICDs, enhancing the effect of the
+sequences. Moreover, during data construction, we use the LVLM intended for ICL
+implementation to validate the strength of each ICD sequence, resulting in a
+model-specific dataset and the ICD-LM trained by this dataset is also
+model-specific. We validate our methodology through experiments in Visual
+Question Answering and Image Captioning, confirming the viability of using a
+Language Model for ICD configuration. Our comprehensive ablation studies
+further explore the impact of various dataset construction and ICD-LM
+development settings on the outcomes. The code is given in
+https://github.com/ForJadeForest/ICD-LM.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
