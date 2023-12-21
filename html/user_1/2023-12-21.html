@@ -1,0 +1,971 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2023-12-21</h1>
+<h2>diffusion</h2>
+<h3>Title: DiffSpectralNet : Unveiling the Potential of Diffusion Models for Hyperspectral Image Classification. (arXiv:2312.12441v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12441">http://arxiv.org/abs/2312.12441</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12441]] DiffSpectralNet : Unveiling the Potential of Diffusion Models for Hyperspectral Image Classification(http://arxiv.org/abs/2312.12441)</code></li>
+<li>Summary: <p>Hyperspectral images (HSI) have become popular for analysing remotely sensed
+images in multiple domain like agriculture, medical. However, existing models
+struggle with complex relationships and characteristics of spectral-spatial
+data due to the multi-band nature and data redundancy of hyperspectral data. To
+address this limitation, we propose a new network called DiffSpectralNet, which
+combines diffusion and transformer techniques. Our approach involves a two-step
+process. First, we use an unsupervised learning framework based on the
+diffusion model to extract both high-level and low-level spectral-spatial
+features. The diffusion method is capable of extracting diverse and meaningful
+spectral-spatial features, leading to improvement in HSI classification. Then,
+we employ a pretrained denoising U-Net to extract intermediate hierarchical
+features for classification. Finally, we use a supervised transformer-based
+classifier to perform the HSI classification. Through comprehensive experiments
+on HSI datasets, we evaluate the classification performance of DiffSpectralNet.
+The results demonstrate that our framework significantly outperforms existing
+approaches, achieving state-of-the-art performance.
+</p></li>
+</ul>
+
+<h3>Title: MaskINT: Video Editing via Interpolative Non-autoregressive Masked Transformers. (arXiv:2312.12468v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12468">http://arxiv.org/abs/2312.12468</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12468]] MaskINT: Video Editing via Interpolative Non-autoregressive Masked Transformers(http://arxiv.org/abs/2312.12468)</code></li>
+<li>Summary: <p>Recent advances in generative AI have significantly enhanced image and video
+editing, particularly in the context of text prompt control. State-of-the-art
+approaches predominantly rely on diffusion models to accomplish these tasks.
+However, the computational demands of diffusion-based methods are substantial,
+often necessitating large-scale paired datasets for training, and therefore
+challenging the deployment in practical applications. This study addresses this
+challenge by breaking down the text-based video editing process into two
+separate stages. In the first stage, we leverage an existing text-to-image
+diffusion model to simultaneously edit a few keyframes without additional
+fine-tuning. In the second stage, we introduce an efficient model called
+MaskINT, which is built on non-autoregressive masked generative transformers
+and specializes in frame interpolation between the keyframes, benefiting from
+structural guidance provided by intermediate frames. Our comprehensive set of
+experiments illustrates the efficacy and efficiency of MaskINT when compared to
+other diffusion-based methodologies. This research offers a practical solution
+for text-based video editing and showcases the potential of non-autoregressive
+masked generative transformers in this domain.
+</p></li>
+</ul>
+
+<h3>Title: Atlantis: Enabling Underwater Depth Estimation with Stable Diffusion. (arXiv:2312.12471v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12471">http://arxiv.org/abs/2312.12471</a></li>
+<li>Code URL: <a href="https://github.com/zkawfanx/atlantis">https://github.com/zkawfanx/atlantis</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12471]] Atlantis: Enabling Underwater Depth Estimation with Stable Diffusion(http://arxiv.org/abs/2312.12471)</code></li>
+<li>Summary: <p>Monocular depth estimation has experienced significant progress on
+terrestrial images in recent years, largely due to deep learning advancements.
+However, it remains inadequate for underwater scenes, primarily because of data
+scarcity. Given the inherent challenges of light attenuation and backscattering
+in water, acquiring clear underwater images or precise depth information is
+notably difficult and costly. Consequently, learning-based approaches often
+rely on synthetic data or turn to unsupervised or self-supervised methods to
+mitigate this lack of data. Nonetheless, the performance of these methods is
+often constrained by the domain gap and looser constraints. In this paper, we
+propose a novel pipeline for generating photorealistic underwater images using
+accurate terrestrial depth data. This approach facilitates the training of
+supervised models for underwater depth estimation, effectively reducing the
+performance disparity between terrestrial and underwater environments. Contrary
+to prior synthetic datasets that merely apply style transfer to terrestrial
+images without altering the scene content, our approach uniquely creates
+vibrant, non-existent underwater scenes by leveraging terrestrial depth data
+through the innovative Stable Diffusion model. Specifically, we introduce a
+unique Depth2Underwater ControlNet, trained on specially prepared \{Underwater,
+Depth, Text\} data triplets, for this generation task. Our newly developed
+dataset enables terrestrial depth estimation models to achieve considerable
+improvements, both quantitatively and qualitatively, on unseen underwater
+images, surpassing their terrestrial pre-trained counterparts. Moreover, the
+enhanced depth accuracy for underwater scenes also aids underwater image
+restoration techniques that rely on depth maps, further demonstrating our
+dataset's utility. The dataset will be available at
+https://github.com/zkawfanx/Atlantis.
+</p></li>
+</ul>
+
+<h3>Title: InstructVideo: Instructing Video Diffusion Models with Human Feedback. (arXiv:2312.12490v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12490">http://arxiv.org/abs/2312.12490</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12490]] InstructVideo: Instructing Video Diffusion Models with Human Feedback(http://arxiv.org/abs/2312.12490)</code></li>
+<li>Summary: <p>Diffusion models have emerged as the de facto paradigm for video generation.
+However, their reliance on web-scale data of varied quality often yields
+results that are visually unappealing and misaligned with the textual prompts.
+To tackle this problem, we propose InstructVideo to instruct text-to-video
+diffusion models with human feedback by reward fine-tuning. InstructVideo has
+two key ingredients: 1) To ameliorate the cost of reward fine-tuning induced by
+generating through the full DDIM sampling chain, we recast reward fine-tuning
+as editing. By leveraging the diffusion process to corrupt a sampled video,
+InstructVideo requires only partial inference of the DDIM sampling chain,
+reducing fine-tuning cost while improving fine-tuning efficiency. 2) To
+mitigate the absence of a dedicated video reward model for human preferences,
+we repurpose established image reward models, e.g., HPSv2. To this end, we
+propose Segmental Video Reward, a mechanism to provide reward signals based on
+segmental sparse sampling, and Temporally Attenuated Reward, a method that
+mitigates temporal modeling degradation during fine-tuning. Extensive
+experiments, both qualitative and quantitative, validate the practicality and
+efficacy of using image reward models in InstructVideo, significantly enhancing
+the visual quality of generated videos without compromising generalization
+capabilities. Code and models will be made publicly available.
+</p></li>
+</ul>
+
+<h3>Title: StreamDiffusion: A Pipeline-level Solution for Real-time Interactive Generation. (arXiv:2312.12491v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12491">http://arxiv.org/abs/2312.12491</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12491]] StreamDiffusion: A Pipeline-level Solution for Real-time Interactive Generation(http://arxiv.org/abs/2312.12491)</code></li>
+<li>Summary: <p>We introduce StreamDiffusion, a real-time diffusion pipeline designed for
+interactive image generation. Existing diffusion models are adept at creating
+images from text or image prompts, yet they often fall short in real-time
+interaction. This limitation becomes particularly evident in scenarios
+involving continuous input, such as Metaverse, live video streaming, and
+broadcasting, where high throughput is imperative. To address this, we present
+a novel approach that transforms the original sequential denoising into the
+batching denoising process. Stream Batch eliminates the conventional
+wait-and-interact approach and enables fluid and high throughput streams. To
+handle the frequency disparity between data input and model throughput, we
+design a novel input-output queue for parallelizing the streaming process.
+Moreover, the existing diffusion pipeline uses classifier-free guidance(CFG),
+which requires additional U-Net computation. To mitigate the redundant
+computations, we propose a novel residual classifier-free guidance (RCFG)
+algorithm that reduces the number of negative conditional denoising steps to
+only one or even zero. Besides, we introduce a stochastic similarity
+filter(SSF) to optimize power consumption. Our Stream Batch achieves around
+1.5x speedup compared to the sequential denoising method at different denoising
+levels. The proposed RCFG leads to speeds up to 2.05x higher than the
+conventional CFG. Combining the proposed strategies and existing mature
+acceleration tools makes the image-to-image generation achieve up-to 91.07fps
+on one RTX4090, improving the throughputs of AutoPipline developed by Diffusers
+over 59.56x. Furthermore, our proposed StreamDiffusion also significantly
+reduces the energy consumption by 2.39x on one RTX3060 and 1.99x on one
+RTX4090, respectively.
+</p></li>
+</ul>
+
+<h3>Title: Fixed-point Inversion for Text-to-image diffusion models. (arXiv:2312.12540v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12540">http://arxiv.org/abs/2312.12540</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12540]] Fixed-point Inversion for Text-to-image diffusion models(http://arxiv.org/abs/2312.12540)</code></li>
+<li>Summary: <p>Text-guided diffusion models offer powerful new ways to generate and
+manipulate images. Several applications of these models, including image
+editing interpolation, and semantic augmentation, require diffusion inversion.
+This is the process of finding a noise seed that can be used to generate a
+given image. Current techniques for inverting a given image can be slow or
+inaccurate. The technical challenge for inverting the diffusion process arises
+from an implicit equation over the latent that cannot be solved in closed form.
+Previous approaches proposed to solve this issue by approximation or various
+learning schemes. Here, we formulate the problem as a fixed-point equation
+problem and solve it using fixed-point iterations, a well-studied approach in
+numerical analysis. We further identify a source of inconsistency that
+significantly hurts the inversion of real images encoded to the latent space.
+We show how to correct it by applying a prompt-aware adjustment of the
+encoding. Our solution, Fixed-point inversion, is much faster than previous
+techniques like EDICT and Null-text, with similar inversion quality. It can be
+combined with any pretrained diffusion model and requires no model training,
+prompt tuning, or additional parameters. In a series of experiments, we find
+that Fixed-point inversion shows improved results in several downstream tasks:
+image editing, image interpolation, and generation of rare objects.
+</p></li>
+</ul>
+
+<h3>Title: RealCraft: Attention Control as A Solution for Zero-shot Long Video Editing. (arXiv:2312.12635v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12635">http://arxiv.org/abs/2312.12635</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12635]] RealCraft: Attention Control as A Solution for Zero-shot Long Video Editing(http://arxiv.org/abs/2312.12635)</code></li>
+<li>Summary: <p>Although large-scale text-to-image generative models have shown promising
+performance in synthesizing high-quality images, directly applying these models
+to image editing remains a significant challenge. This challenge is further
+amplified in video editing due to the additional dimension of time. Especially
+for editing real videos as it necessitates maintaining a stable semantic layout
+across the frames while executing localized edits precisely without disrupting
+the existing backgrounds. In this paper, we propose \textit{RealCraft}, an
+attention-control-based method for zero-shot editing in real videos. By
+employing the object-centric manipulation of cross-attention between prompts
+and frames and spatial-temporal attention within the frames, we achieve precise
+shape-wise editing along with enhanced consistency. Our model can be used
+directly with Stable Diffusion and operates without the need for additional
+localized information. We showcase our zero-shot attention-control-based method
+across a range of videos, demonstrating localized, high-fidelity, shape-precise
+and time-consistent editing in videos of various lengths, up to 64 frames.
+</p></li>
+</ul>
+
+<h3>Title: AMD:Anatomical Motion Diffusion with Interpretable Motion Decomposition and Fusion. (arXiv:2312.12763v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12763">http://arxiv.org/abs/2312.12763</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12763]] AMD:Anatomical Motion Diffusion with Interpretable Motion Decomposition and Fusion(http://arxiv.org/abs/2312.12763)</code></li>
+<li>Summary: <p>Generating realistic human motion sequences from text descriptions is a
+challenging task that requires capturing the rich expressiveness of both
+natural language and human motion.Recent advances in diffusion models have
+enabled significant progress in human motion synthesis.However, existing
+methods struggle to handle text inputs that describe complex or long motions.In
+this paper, we propose the Adaptable Motion Diffusion (AMD) model, which
+leverages a Large Language Model (LLM) to parse the input text into a sequence
+of concise and interpretable anatomical scripts that correspond to the target
+motion.This process exploits the LLM's ability to provide anatomical guidance
+for complex motion synthesis.We then devise a two-branch fusion scheme that
+balances the influence of the input text and the anatomical scripts on the
+inverse diffusion process, which adaptively ensures the semantic fidelity and
+diversity of the synthesized motion.Our method can effectively handle texts
+with complex or long motion descriptions, where existing methods often fail.
+Experiments on datasets with relatively more complex motions, such as CLCD1 and
+CLCD2, demonstrate that our AMD significantly outperforms existing
+state-of-the-art models.
+</p></li>
+</ul>
+
+<h3>Title: All but One: Surgical Concept Erasing with Model Preservation in Text-to-Image Diffusion Models. (arXiv:2312.12807v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12807">http://arxiv.org/abs/2312.12807</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12807]] All but One: Surgical Concept Erasing with Model Preservation in Text-to-Image Diffusion Models(http://arxiv.org/abs/2312.12807)</code></li>
+<li>Summary: <p>Text-to-Image models such as Stable Diffusion have shown impressive image
+generation synthesis, thanks to the utilization of large-scale datasets.
+However, these datasets may contain sexually explicit, copyrighted, or
+undesirable content, which allows the model to directly generate them. Given
+that retraining these large models on individual concept deletion requests is
+infeasible, fine-tuning algorithms have been developed to tackle concept
+erasing in diffusion models. While these algorithms yield good concept erasure,
+they all present one of the following issues: 1) the corrupted feature space
+yields synthesis of disintegrated objects, 2) the initially synthesized content
+undergoes a divergence in both spatial structure and semantics in the generated
+images, and 3) sub-optimal training updates heighten the model's susceptibility
+to utility harm. These issues severely degrade the original utility of
+generative models. In this work, we present a new approach that solves all of
+these challenges. We take inspiration from the concept of classifier guidance
+and propose a surgical update on the classifier guidance term while
+constraining the drift of the unconditional score term. Furthermore, our
+algorithm empowers the user to select an alternative to the erasing concept,
+allowing for more controllability. Our experimental results show that our
+algorithm not only erases the target concept effectively but also preserves the
+model's generation capability.
+</p></li>
+</ul>
+
+<h3>Title: ReCo-Diff: Explore Retinex-Based Condition Strategy in Diffusion Model for Low-Light Image Enhancement. (arXiv:2312.12826v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12826">http://arxiv.org/abs/2312.12826</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12826]] ReCo-Diff: Explore Retinex-Based Condition Strategy in Diffusion Model for Low-Light Image Enhancement(http://arxiv.org/abs/2312.12826)</code></li>
+<li>Summary: <p>Low-light image enhancement (LLIE) has achieved promising performance by
+employing conditional diffusion models. In this study, we propose ReCo-Diff, a
+novel approach that incorporates Retinex-based prior as an additional
+pre-processing condition to regulate the generating capabilities of the
+diffusion model. ReCo-Diff first leverages a pre-trained decomposition network
+to produce initial reflectance and illumination maps of the low-light image.
+Then, an adjustment network is introduced to suppress the noise in the
+reflectance map and brighten the illumination map, thus forming the learned
+Retinex-based condition. The condition is integrated into a refinement network,
+implementing Retinex-based conditional modules that offer sufficient guidance
+at both feature- and image-levels. By treating Retinex theory as a condition,
+ReCo-Diff presents a unique perspective for establishing an LLIE-specific
+diffusion model. Extensive experiments validate the rationality and superiority
+of our ReCo-Diff approach. The code will be made publicly available.
+</p></li>
+</ul>
+
+<h3>Title: RadEdit: stress-testing biomedical vision models via diffusion image editing. (arXiv:2312.12865v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12865">http://arxiv.org/abs/2312.12865</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12865]] RadEdit: stress-testing biomedical vision models via diffusion image editing(http://arxiv.org/abs/2312.12865)</code></li>
+<li>Summary: <p>Biomedical imaging datasets are often small and biased, meaning that
+real-world performance of predictive models can be substantially lower than
+expected from internal testing. This work proposes using generative image
+editing to simulate dataset shifts and diagnose failure modes of biomedical
+vision models; this can be used in advance of deployment to assess readiness,
+potentially reducing cost and patient harm. Existing editing methods can
+produce undesirable changes, with spurious correlations learned due to the
+co-occurrence of disease and treatment interventions, limiting practical
+applicability. To address this, we train a text-to-image diffusion model on
+multiple chest X-ray datasets and introduce a new editing method RadEdit that
+uses multiple masks, if present, to constrain changes and ensure consistency in
+the edited images. We consider three types of dataset shifts: acquisition
+shift, manifestation shift, and population shift, and demonstrate that our
+approach can diagnose failures and quantify model robustness without additional
+data collection, complementing more qualitative tools for explainable AI.
+</p></li>
+</ul>
+
+<h3>Title: DiffPortrait3D: Controllable Diffusion for Zero-Shot Portrait View Synthesis. (arXiv:2312.13016v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13016">http://arxiv.org/abs/2312.13016</a></li>
+<li>Code URL: <a href="https://github.com/FreedomGu/DiffPortrait3D">https://github.com/FreedomGu/DiffPortrait3D</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13016]] DiffPortrait3D: Controllable Diffusion for Zero-Shot Portrait View Synthesis(http://arxiv.org/abs/2312.13016)</code></li>
+<li>Summary: <p>We present DiffPortrait3D, a conditional diffusion model that is capable of
+synthesizing 3D-consistent photo-realistic novel views from as few as a single
+in-the-wild portrait. Specifically, given a single RGB input, we aim to
+synthesize plausible but consistent facial details rendered from novel camera
+views with retained both identity and facial expression. In lieu of
+time-consuming optimization and fine-tuning, our zero-shot method generalizes
+well to arbitrary face portraits with unposed camera views, extreme facial
+expressions, and diverse artistic depictions. At its core, we leverage the
+generative prior of 2D diffusion models pre-trained on large-scale image
+datasets as our rendering backbone, while the denoising is guided with
+disentangled attentive control of appearance and camera pose. To achieve this,
+we first inject the appearance context from the reference image into the
+self-attention layers of the frozen UNets. The rendering view is then
+manipulated with a novel conditional control module that interprets the camera
+pose by watching a condition image of a crossed subject from the same view.
+Furthermore, we insert a trainable cross-view attention module to enhance view
+consistency, which is further strengthened with a novel 3D-aware noise
+generation process during inference. We demonstrate state-of-the-art results
+both qualitatively and quantitatively on our challenging in-the-wild and
+multi-view benchmarks.
+</p></li>
+</ul>
+
+<h3>Title: Adaptive Guidance: Training-free Acceleration of Conditional Diffusion Models. (arXiv:2312.12487v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12487">http://arxiv.org/abs/2312.12487</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12487]] Adaptive Guidance: Training-free Acceleration of Conditional Diffusion Models(http://arxiv.org/abs/2312.12487)</code></li>
+<li>Summary: <p>This paper presents a comprehensive study on the role of Classifier-Free
+Guidance (CFG) in text-conditioned diffusion models from the perspective of
+inference efficiency. In particular, we relax the default choice of applying
+CFG in all diffusion steps and instead search for efficient guidance policies.
+We formulate the discovery of such policies in the differentiable Neural
+Architecture Search framework. Our findings suggest that the denoising steps
+proposed by CFG become increasingly aligned with simple conditional steps,
+which renders the extra neural network evaluation of CFG redundant, especially
+in the second half of the denoising process. Building upon this insight, we
+propose "Adaptive Guidance" (AG), an efficient variant of CFG, that adaptively
+omits network evaluations when the denoising process displays convergence. Our
+experiments demonstrate that AG preserves CFG's image quality while reducing
+computation by 25%. Thus, AG constitutes a plug-and-play alternative to
+Guidance Distillation, achieving 50% of the speed-ups of the latter while being
+training-free and retaining the capacity to handle negative prompts. Finally,
+we uncover further redundancies of CFG in the first half of the diffusion
+process, showing that entire neural function evaluations can be replaced by
+simple affine transformations of past score estimates. This method, termed
+LinearAG, offers even cheaper inference at the cost of deviating from the
+baseline model. Our findings provide insights into the efficiency of the
+conditional denoising process that contribute to more practical and swift
+deployment of text-conditioned diffusion models.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Adaptive Distribution Masked Autoencoders for Continual Test-Time Adaptation. (arXiv:2312.12480v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12480">http://arxiv.org/abs/2312.12480</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12480]] Adaptive Distribution Masked Autoencoders for Continual Test-Time Adaptation(http://arxiv.org/abs/2312.12480)</code></li>
+<li>Summary: <p>Continual Test-Time Adaptation (CTTA) is proposed to migrate a source
+pre-trained model to continually changing target distributions, addressing
+real-world dynamism. Existing CTTA methods mainly rely on entropy minimization
+or teacher-student pseudo-labeling schemes for knowledge extraction in
+unlabeled target domains. However, dynamic data distributions cause
+miscalibrated predictions and noisy pseudo-labels in existing self-supervised
+learning methods, hindering the effective mitigation of error accumulation and
+catastrophic forgetting problems during the continual adaptation process. To
+tackle these issues, we propose a continual self-supervised method, Adaptive
+Distribution Masked Autoencoders (ADMA), which enhances the extraction of
+target domain knowledge while mitigating the accumulation of distribution
+shifts. Specifically, we propose a Distribution-aware Masking (DaM) mechanism
+to adaptively sample masked positions, followed by establishing consistency
+constraints between the masked target samples and the original target samples.
+Additionally, for masked tokens, we utilize an efficient decoder to reconstruct
+a hand-crafted feature descriptor (e.g., Histograms of Oriented Gradients),
+leveraging its invariant properties to boost task-relevant representations.
+Through conducting extensive experiments on four widely recognized benchmarks,
+our proposed method attains state-of-the-art performance in both classification
+and segmentation CTTA tasks.
+</p></li>
+</ul>
+
+<h3>Title: TADAP: Trajectory-Aided Drivable area Auto-labeling with Pre-trained self-supervised features in winter driving conditions. (arXiv:2312.12954v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12954">http://arxiv.org/abs/2312.12954</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12954]] TADAP: Trajectory-Aided Drivable area Auto-labeling with Pre-trained self-supervised features in winter driving conditions(http://arxiv.org/abs/2312.12954)</code></li>
+<li>Summary: <p>Detection of the drivable area in all conditions is crucial for autonomous
+driving and advanced driver assistance systems. However, the amount of labeled
+data in adverse driving conditions is limited, especially in winter, and
+supervised methods generalize poorly to conditions outside the training
+distribution. For easy adaption to all conditions, the need for human
+annotation should be removed from the learning process. In this paper,
+Trajectory-Aided Drivable area Auto-labeling with Pre-trained self-supervised
+features (TADAP) is presented for automated annotation of the drivable area in
+winter driving conditions. A sample of the drivable area is extracted based on
+the trajectory estimate from the global navigation satellite system. Similarity
+with the sample area is determined based on pre-trained self-supervised visual
+features. Image areas similar to the sample area are considered to be drivable.
+These TADAP labels were evaluated with a novel winter-driving dataset,
+collected in varying driving scenes. A prediction model trained with the TADAP
+labels achieved a +9.6 improvement in intersection over union compared to the
+previous state-of-the-art of self-supervised drivable area detection.
+</p></li>
+</ul>
+
+<h3>Title: No More Shortcuts: Realizing the Potential of Temporal Self-Supervision. (arXiv:2312.13008v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13008">http://arxiv.org/abs/2312.13008</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13008]] No More Shortcuts: Realizing the Potential of Temporal Self-Supervision(http://arxiv.org/abs/2312.13008)</code></li>
+<li>Summary: <p>Self-supervised approaches for video have shown impressive results in video
+understanding tasks. However, unlike early works that leverage temporal
+self-supervision, current state-of-the-art methods primarily rely on tasks from
+the image domain (e.g., contrastive learning) that do not explicitly promote
+the learning of temporal features. We identify two factors that limit existing
+temporal self-supervision: 1) tasks are too simple, resulting in saturated
+training performance, and 2) we uncover shortcuts based on local appearance
+statistics that hinder the learning of high-level features. To address these
+issues, we propose 1) a more challenging reformulation of temporal
+self-supervision as frame-level (rather than clip-level) recognition tasks and
+2) an effective augmentation strategy to mitigate shortcuts. Our model extends
+a representation of single video frames, pre-trained through contrastive
+learning, with a transformer that we train through temporal self-supervision.
+We demonstrate experimentally that our more challenging frame-level task
+formulations and the removal of shortcuts drastically improve the quality of
+features learned through temporal self-supervision. The generalization
+capability of our self-supervised video method is evidenced by its
+state-of-the-art performance in a wide range of high-level semantic tasks,
+including video retrieval, action classification, and video attribute
+recognition (such as object and scene identification), as well as low-level
+temporal correspondence tasks like video object segmentation and pose tracking.
+Additionally, we show that the video representations learned through our method
+exhibit increased robustness to the input perturbations.
+</p></li>
+</ul>
+
+<h3>Title: PPEA-Depth: Progressive Parameter-Efficient Adaptation for Self-Supervised Monocular Depth Estimation. (arXiv:2312.13066v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13066">http://arxiv.org/abs/2312.13066</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13066]] PPEA-Depth: Progressive Parameter-Efficient Adaptation for Self-Supervised Monocular Depth Estimation(http://arxiv.org/abs/2312.13066)</code></li>
+<li>Summary: <p>Self-supervised monocular depth estimation is of significant importance with
+applications spanning across autonomous driving and robotics. However, the
+reliance on self-supervision introduces a strong static-scene assumption,
+thereby posing challenges in achieving optimal performance in dynamic scenes,
+which are prevalent in most real-world situations. To address these issues, we
+propose PPEA-Depth, a Progressive Parameter-Efficient Adaptation approach to
+transfer a pre-trained image model for self-supervised depth estimation. The
+training comprises two sequential stages: an initial phase trained on a dataset
+primarily composed of static scenes, succeeded by an expansion to more
+intricate datasets involving dynamic scenes. To facilitate this process, we
+design compact encoder and decoder adapters to enable parameter-efficient
+tuning, allowing the network to adapt effectively. They not only uphold
+generalized patterns from pre-trained image models but also retain knowledge
+gained from the preceding phase into the subsequent one. Extensive experiments
+demonstrate that PPEA-Depth achieves state-of-the-art performance on KITTI,
+CityScapes and DDAD datasets.
+</p></li>
+</ul>
+
+<h3>Title: Improving Semantic Correspondence with Viewpoint-Guided Spherical Maps. (arXiv:2312.13216v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13216">http://arxiv.org/abs/2312.13216</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13216]] Improving Semantic Correspondence with Viewpoint-Guided Spherical Maps(http://arxiv.org/abs/2312.13216)</code></li>
+<li>Summary: <p>Recent progress in self-supervised representation learning has resulted in
+models that are capable of extracting image features that are not only
+effective at encoding image level, but also pixel-level, semantics. These
+features have been shown to be effective for dense visual semantic
+correspondence estimation, even outperforming fully-supervised methods.
+Nevertheless, current self-supervised approaches still fail in the presence of
+challenging image characteristics such as symmetries and repeated parts. To
+address these limitations, we propose a new approach for semantic
+correspondence estimation that supplements discriminative self-supervised
+features with 3D understanding via a weak geometric spherical prior. Compared
+to more involved 3D pipelines, our model only requires weak viewpoint
+information, and the simplicity of our spherical representation enables us to
+inject informative geometric priors into the model during training. We propose
+a new evaluation metric that better accounts for repeated part and
+symmetry-induced mistakes. We present results on the challenging SPair-71k
+dataset, where we show that our approach demonstrates is capable of
+distinguishing between symmetric views and repeated parts across many object
+categories, and also demonstrate that we can generalize to unseen classes on
+the AwA dataset.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h2>generative</h2>
+<h3>Title: Unveiling Spaces: Architecturally meaningful semantic descriptions from images of interior spaces. (arXiv:2312.12481v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12481">http://arxiv.org/abs/2312.12481</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12481]] Unveiling Spaces: Architecturally meaningful semantic descriptions from images of interior spaces(http://arxiv.org/abs/2312.12481)</code></li>
+<li>Summary: <p>There has been a growing adoption of computer vision tools and technologies
+in architectural design workflows over the past decade. Notable use cases
+include point cloud generation, visual content analysis, and spatial awareness
+for robotic fabrication. Multiple image classification, object detection, and
+semantic pixel segmentation models have become popular for the extraction of
+high-level symbolic descriptions and semantic content from two-dimensional
+images and videos. However, a major challenge in this regard has been the
+extraction of high-level architectural structures (walls, floors, ceilings
+windows etc.) from diverse imagery where parts of these elements are occluded
+by furniture, people, or other non-architectural elements. This project aims to
+tackle this problem by proposing models that are capable of extracting
+architecturally meaningful semantic descriptions from two-dimensional scenes of
+populated interior spaces. 1000 virtual classrooms are parametrically
+generated, randomized along key spatial parameters such as length, width,
+height, and door/window positions. The positions of cameras, and
+non-architectural visual obstructions (furniture/objects) are also randomized.
+A Generative Adversarial Network (GAN) for image-to-image translation (Pix2Pix)
+is trained on synthetically generated rendered images of these enclosures,
+along with corresponding image abstractions representing high-level
+architectural structure. The model is then tested on unseen synthetic imagery
+of new enclosures, and outputs are compared to ground truth using pixel-wise
+comparison for evaluation. A similar model evaluation is also carried out on
+photographs of existing indoor enclosures, to measure its performance in
+real-world settings.
+</p></li>
+</ul>
+
+<h3>Title: How Good Are Deep Generative Models for Solving Inverse Problems?. (arXiv:2312.12691v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12691">http://arxiv.org/abs/2312.12691</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12691]] How Good Are Deep Generative Models for Solving Inverse Problems?(http://arxiv.org/abs/2312.12691)</code></li>
+<li>Summary: <p>Deep generative models, such as diffusion models, GANs, and IMLE, have shown
+impressive capability in tackling inverse problems. However, the validity of
+model-generated solutions w.r.t. the forward problem and the reliability of
+associated uncertainty estimates remain understudied. This study evaluates
+recent diffusion-based, GAN-based, and IMLE-based methods on three inverse
+problems, i.e., $16\times$ super-resolution, colourization, and image
+decompression. We assess the validity of these models' outputs as solutions to
+the inverse problems and conduct a thorough analysis of the reliability of the
+models' estimates of uncertainty over the solution. Overall, we find that the
+IMLE-based CHIMLE method outperforms other methods in terms of producing valid
+solutions and reliable uncertainty estimates.
+</p></li>
+</ul>
+
+<h3>Title: Quantifying Bias in Text-to-Image Generative Models. (arXiv:2312.13053v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13053">http://arxiv.org/abs/2312.13053</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13053]] Quantifying Bias in Text-to-Image Generative Models(http://arxiv.org/abs/2312.13053)</code></li>
+<li>Summary: <p>Bias in text-to-image (T2I) models can propagate unfair social
+representations and may be used to aggressively market ideas or push
+controversial agendas. Existing T2I model bias evaluation methods only focus on
+social biases. We look beyond that and instead propose an evaluation
+methodology to quantify general biases in T2I generative models, without any
+preconceived notions. We assess four state-of-the-art T2I models and compare
+their baseline bias characteristics to their respective variants (two for
+each), where certain biases have been intentionally induced. We propose three
+evaluation metrics to assess model biases including: (i) Distribution bias,
+(ii) Jaccard hallucination and (iii) Generative miss-rate. We conduct two
+evaluation studies, modelling biases under general, and task-oriented
+conditions, using a marketing scenario as the domain for the latter. We also
+quantify social biases to compare our findings to related works. Finally, our
+methodology is transferred to evaluate captioned-image datasets and measure
+their bias. Our approach is objective, domain-agnostic and consistently
+measures different forms of T2I model biases. We have developed a web
+application and practical implementation of what has been proposed in this
+work, which is at https://huggingface.co/spaces/JVice/try-before-you-bias. A
+video series with demonstrations is available at
+https://www.youtube.com/channel/UCk-0xyUyT0MSd_hkp4jQt1Q
+</p></li>
+</ul>
+
+<h3>Title: SEER-ZSL: Semantic Encoder-Enhanced Representations for Generalized Zero-Shot Learning. (arXiv:2312.13100v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13100">http://arxiv.org/abs/2312.13100</a></li>
+<li>Code URL: <a href="https://github.com/william-heyden/seer-zeroshotlearning">https://github.com/william-heyden/seer-zeroshotlearning</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13100]] SEER-ZSL: Semantic Encoder-Enhanced Representations for Generalized Zero-Shot Learning(http://arxiv.org/abs/2312.13100)</code></li>
+<li>Summary: <p>Generalized Zero-Shot Learning (GZSL) recognizes unseen classes by
+transferring knowledge from the seen classes, depending on the inherent
+interactions between visual and semantic data. However, the discrepancy between
+well-prepared training data and unpredictable real-world test scenarios remains
+a significant challenge. This paper introduces a dual strategy to address the
+generalization gap. Firstly, we incorporate semantic information through an
+innovative encoder. This encoder effectively integrates class-specific semantic
+information by targeting the performance disparity, enhancing the produced
+features to enrich the semantic space for class-specific attributes. Secondly,
+we refine our generative capabilities using a novel compositional loss
+function. This approach generates discriminative classes, effectively
+classifying both seen and unseen classes. In addition, we extend the
+exploitation of the learned latent space by utilizing controlled semantic
+inputs, ensuring the robustness of the model in varying environments. This
+approach yields a model that outperforms the state-of-the-art models in terms
+of both generalization and diverse settings, notably without requiring
+hyperparameter tuning or domain-specific adaptations. We also propose a set of
+novel evaluation metrics to provide a more detailed assessment of the
+reliability and reproducibility of the results. The complete code is made
+available on https://github.com/william-heyden/SEER-ZeroShotLearning/.
+</p></li>
+</ul>
+
+<h3>Title: Building a Llama2-finetuned LLM for Odia Language Utilizing Domain Knowledge Instruction Set. (arXiv:2312.12624v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12624">http://arxiv.org/abs/2312.12624</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12624]] Building a Llama2-finetuned LLM for Odia Language Utilizing Domain Knowledge Instruction Set(http://arxiv.org/abs/2312.12624)</code></li>
+<li>Summary: <p>Building LLMs for languages other than English is in great demand due to the
+unavailability and performance of multilingual LLMs, such as understanding the
+local context. The problem is critical for low-resource languages due to the
+need for instruction sets. In a multilingual country like India, there is a
+need for LLMs supporting Indic languages to provide generative AI and LLM-based
+technologies and services to its citizens.
+</p>
+<p>This paper presents our approach of i) generating a large Odia instruction
+set, including domain knowledge data suitable for LLM fine-tuning, and ii)
+building a Llama2-finetuned model tailored for enhanced performance in the Odia
+domain. The proposed work will help researchers build an instruction set and
+LLM, particularly for Indic languages. We will release the model and
+instruction set for the public for research and noncommercial purposes.
+</p></li>
+</ul>
+
+<h3>Title: Turning English-centric LLMs Into Polyglots: How Much Multilinguality Is Needed?. (arXiv:2312.12683v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12683">http://arxiv.org/abs/2312.12683</a></li>
+<li>Code URL: <a href="https://github.com/zurichnlp/multilingual-instruction-tuning">https://github.com/zurichnlp/multilingual-instruction-tuning</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12683]] Turning English-centric LLMs Into Polyglots: How Much Multilinguality Is Needed?(http://arxiv.org/abs/2312.12683)</code></li>
+<li>Summary: <p>The vast majority of today's large language models are English-centric,
+having been pretrained predominantly on English text. Yet, in order to meet
+user expectations, models need to be able to respond appropriately in multiple
+languages once deployed in downstream applications. Given limited exposure to
+other languages during pretraining, cross-lingual transfer is important for
+achieving decent performance in non-English settings. In this work, we
+investigate just how much multilinguality is required during finetuning to
+elicit strong cross-lingual generalisation across a range of tasks and target
+languages. We find that, compared to English-only finetuning, multilingual
+instruction tuning with as few as three languages significantly improves a
+model's cross-lingual transfer abilities on generative tasks that assume
+input/output language agreement, while being of less importance for highly
+structured tasks. Our code and data is available at
+https://github.com/ZurichNLP/multilingual-instruction-tuning.
+</p></li>
+</ul>
+
+<h3>Title: In Generative AI we Trust: Can Chatbots Effectively Verify Political Information?. (arXiv:2312.13096v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13096">http://arxiv.org/abs/2312.13096</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13096]] In Generative AI we Trust: Can Chatbots Effectively Verify Political Information?(http://arxiv.org/abs/2312.13096)</code></li>
+<li>Summary: <p>This article presents a comparative analysis of the ability of two large
+language model (LLM)-based chatbots, ChatGPT and Bing Chat, recently rebranded
+to Microsoft Copilot, to detect veracity of political information. We use AI
+auditing methodology to investigate how chatbots evaluate true, false, and
+borderline statements on five topics: COVID-19, Russian aggression against
+Ukraine, the Holocaust, climate change, and LGBTQ+ related debates. We compare
+how the chatbots perform in high- and low-resource languages by using prompts
+in English, Russian, and Ukrainian. Furthermore, we explore the ability of
+chatbots to evaluate statements according to political communication concepts
+of disinformation, misinformation, and conspiracy theory, using
+definition-oriented prompts. We also systematically test how such evaluations
+are influenced by source bias which we model by attributing specific claims to
+various political and social actors. The results show high performance of
+ChatGPT for the baseline veracity evaluation task, with 72 percent of the cases
+evaluated correctly on average across languages without pre-training. Bing Chat
+performed worse with a 67 percent accuracy. We observe significant disparities
+in how chatbots evaluate prompts in high- and low-resource languages and how
+they adapt their evaluations to political communication concepts with ChatGPT
+providing more nuanced outputs than Bing Chat. Finally, we find that for some
+veracity detection-related tasks, the performance of chatbots varied depending
+on the topic of the statement or the source to which it is attributed. These
+findings highlight the potential of LLM-based chatbots in tackling different
+forms of false information in online environments, but also points to the
+substantial variation in terms of how such potential is realized due to
+specific factors, such as language of the prompt or the topic.
+</p></li>
+</ul>
+
+<h3>Title: LlaMaVAE: Guiding Large Language Model Generation via Continuous Latent Sentence Spaces. (arXiv:2312.13208v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13208">http://arxiv.org/abs/2312.13208</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13208]] LlaMaVAE: Guiding Large Language Model Generation via Continuous Latent Sentence Spaces(http://arxiv.org/abs/2312.13208)</code></li>
+<li>Summary: <p>Deep generative neural networks, such as Variational AutoEncoders (VAEs),
+offer an opportunity to better understand and control language models from the
+perspective of sentence-level latent spaces. To combine the controllability of
+VAE latent spaces with the state-of-the-art performance of recent large
+language models (LLMs), we present in this work LlaMaVAE, which combines
+expressive encoder and decoder models (sentenceT5 and LlaMA) with a VAE
+architecture, aiming to provide better text generation control to LLMs. In
+addition, to conditionally guide the VAE generation, we investigate a new
+approach based on flow-based invertible neural networks (INNs) named Invertible
+CVAE. Experimental results reveal that LlaMaVAE can outperform the previous
+state-of-the-art VAE language model, Optimus, across various tasks, including
+language modelling, semantic textual similarity and definition modelling.
+Qualitative analysis on interpolation and traversal experiments also indicates
+an increased degree of semantic clustering and geometric consistency, which
+enables better generation control.
+</p></li>
+</ul>
+
+<h3>Title: A self-attention-based differentially private tabular GAN with high data utility. (arXiv:2312.13031v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13031">http://arxiv.org/abs/2312.13031</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13031]] A self-attention-based differentially private tabular GAN with high data utility(http://arxiv.org/abs/2312.13031)</code></li>
+<li>Summary: <p>Generative Adversarial Networks (GANs) have become a ubiquitous technology
+for data generation, with their prowess in image generation being
+well-established. However, their application in generating tabular data has
+been less than ideal. Furthermore, attempting to incorporate differential
+privacy technology into these frameworks has often resulted in a degradation of
+data utility. To tackle these challenges, this paper introduces DP-SACTGAN, a
+novel Conditional Generative Adversarial Network (CGAN) framework for
+differentially private tabular data generation, aiming to surmount these
+obstacles. Experimental findings demonstrate that DP-SACTGAN not only
+accurately models the distribution of the original data but also effectively
+satisfies the requirements of differential privacy.
+</p></li>
+</ul>
+
+<h3>Title: A Performance Evaluation of a Quantized Large Language Model on Various Smartphones. (arXiv:2312.12472v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12472">http://arxiv.org/abs/2312.12472</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12472]] A Performance Evaluation of a Quantized Large Language Model on Various Smartphones(http://arxiv.org/abs/2312.12472)</code></li>
+<li>Summary: <p>This paper explores the feasibility and performance of on-device large
+language model (LLM) inference on various Apple iPhone models. Amidst the rapid
+evolution of generative AI, on-device LLMs offer solutions to privacy,
+security, and connectivity challenges inherent in cloud-based models.
+Leveraging existing literature on running multi-billion parameter LLMs on
+resource-limited devices, our study examines the thermal effects and
+interaction speeds of a high-performing LLM across different smartphone
+generations. We present real-world performance results, providing insights into
+on-device inference capabilities.
+</p></li>
+</ul>
+
+<h3>Title: FSscore: A Machine Learning-based Synthetic Feasibility Score Leveraging Human Expertise. (arXiv:2312.12737v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12737">http://arxiv.org/abs/2312.12737</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12737]] FSscore: A Machine Learning-based Synthetic Feasibility Score Leveraging Human Expertise(http://arxiv.org/abs/2312.12737)</code></li>
+<li>Summary: <p>Determining whether a molecule can be synthesized is crucial for many aspects
+of chemistry and drug discovery, allowing prioritization of experimental work
+and ranking molecules in de novo design tasks. Existing scoring approaches to
+assess synthetic feasibility struggle to extrapolate to out-of-distribution
+chemical spaces or fail to discriminate based on minor differences such as
+chirality that might be obvious to trained chemists. This work aims to address
+these limitations by introducing the Focused Synthesizability score (FSscore),
+which learns to rank structures based on binary preferences using a graph
+attention network. First, a baseline trained on an extensive set of
+reactant-product pairs is established that subsequently is fine-tuned with
+expert human feedback on a chemical space of interest. Fine-tuning on focused
+datasets improves performance on these chemical scopes over the pre-trained
+model exhibiting moderate performance and generalizability. This enables
+distinguishing hard- from easy-to-synthesize molecules and improving the
+synthetic accessibility of generative model outputs. On very complex scopes
+with limited labels achieving satisfactory gains remains challenging. The
+FSscore showcases how human expert feedback can be utilized to optimize the
+assessment of synthetic feasibility for a variety of applications.
+</p></li>
+</ul>
+
+<h3>Title: PGN: A perturbation generation network against deep reinforcement learning. (arXiv:2312.12904v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12904">http://arxiv.org/abs/2312.12904</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12904]] PGN: A perturbation generation network against deep reinforcement learning(http://arxiv.org/abs/2312.12904)</code></li>
+<li>Summary: <p>Deep reinforcement learning has advanced greatly and applied in many areas.
+In this paper, we explore the vulnerability of deep reinforcement learning by
+proposing a novel generative model for creating effective adversarial examples
+to attack the agent. Our proposed model can achieve both targeted attacks and
+untargeted attacks. Considering the specificity of deep reinforcement learning,
+we propose the action consistency ratio as a measure of stealthiness, and a new
+measurement index of effectiveness and stealthiness. Experiment results show
+that our method can ensure the effectiveness and stealthiness of attack
+compared with other algorithms. Moreover, our methods are considerably faster
+and thus can achieve rapid and efficient verification of the vulnerability of
+deep reinforcement learning.
+</p></li>
+</ul>
+
+<h3>Title: Class Conditional Time Series Generation with Structured Noise Space GAN. (arXiv:2312.12946v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12946">http://arxiv.org/abs/2312.12946</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12946]] Class Conditional Time Series Generation with Structured Noise Space GAN(http://arxiv.org/abs/2312.12946)</code></li>
+<li>Summary: <p>This paper introduces Structured Noise Space GAN (SNS-GAN), a novel approach
+in the field of generative modeling specifically tailored for class-conditional
+generation in both image and time series data. It addresses the challenge of
+effectively integrating class labels into generative models without requiring
+structural modifications to the network. The SNS-GAN method embeds class
+conditions within the generator's noise space, simplifying the training process
+and enhancing model versatility. The model's efficacy is demonstrated through
+qualitative validations in the image domain and superior performance in time
+series generation compared to baseline models. This research opens new avenues
+for the application of GANs in various domains, including but not limited to
+time series and image data generation.
+</p></li>
+</ul>
+
+<h3>Title: Pre-training of Molecular GNNs as Conditional Boltzmann Generator. (arXiv:2312.13110v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13110">http://arxiv.org/abs/2312.13110</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13110]] Pre-training of Molecular GNNs as Conditional Boltzmann Generator(http://arxiv.org/abs/2312.13110)</code></li>
+<li>Summary: <p>Learning representations of molecular structures using deep learning is a
+fundamental problem in molecular property prediction tasks. Molecules
+inherently exist in the real world as three-dimensional structures;
+furthermore, they are not static but in continuous motion in the 3D Euclidean
+space, forming a potential energy surface. Therefore, it is desirable to
+generate multiple conformations in advance and extract molecular
+representations using a 4D-QSAR model that incorporates multiple conformations.
+However, this approach is impractical for drug and material discovery tasks
+because of the computational cost of obtaining multiple conformations. To
+address this issue, we propose a pre-training method for molecular GNNs using
+an existing dataset of molecular conformations to generate a latent vector
+universal to multiple conformations from a 2D molecular graph. Our method,
+called Boltzmann GNN, is formulated by maximizing the conditional marginal
+likelihood of a conditional generative model for conformations generation. We
+show that our model has a better prediction performance for molecular
+properties than existing pre-training methods using molecular graphs and
+three-dimensional molecular structures.
+</p></li>
+</ul>
+
+<h3>Title: Neural Stochastic Differential Equations with Change Points: A Generative Adversarial Approach. (arXiv:2312.13152v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13152">http://arxiv.org/abs/2312.13152</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13152]] Neural Stochastic Differential Equations with Change Points: A Generative Adversarial Approach(http://arxiv.org/abs/2312.13152)</code></li>
+<li>Summary: <p>Stochastic differential equations (SDEs) have been widely used to model real
+world random phenomena. Existing works mainly focus on the case where the time
+series is modeled by a single SDE, which might be restrictive for modeling time
+series with distributional shift. In this work, we propose a change point
+detection algorithm for time series modeled as neural SDEs. Given a time series
+dataset, the proposed method jointly learns the unknown change points and the
+parameters of distinct neural SDE models corresponding to each change point.
+Specifically, the SDEs are learned under the framework of generative
+adversarial networks (GANs) and the change points are detected based on the
+output of the GAN discriminator in a forward pass. At each step of the proposed
+algorithm, the change points and the SDE model parameters are updated in an
+alternating fashion. Numerical results on both synthetic and real datasets are
+provided to validate the performance of our algorithm in comparison to
+classical change point detection benchmarks, standard GAN-based neural SDEs,
+and other state-of-the-art deep generative models for time series data.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Produce Once, Utilize Twice for Anomaly Detection. (arXiv:2312.12913v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12913">http://arxiv.org/abs/2312.12913</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12913]] Produce Once, Utilize Twice for Anomaly Detection(http://arxiv.org/abs/2312.12913)</code></li>
+<li>Summary: <p>Visual anomaly detection aims at classifying and locating the regions that
+deviate from the normal appearance. Embedding-based methods and
+reconstruction-based methods are two main approaches for this task. However,
+they are either not efficient or not precise enough for the industrial
+detection. To deal with this problem, we derive POUTA (Produce Once Utilize
+Twice for Anomaly detection), which improves both the accuracy and efficiency
+by reusing the discriminant information potential in the reconstructive
+network. We observe that the encoder and decoder representations of the
+reconstructive network are able to stand for the features of the original and
+reconstructed image respectively. And the discrepancies between the symmetric
+reconstructive representations provides roughly accurate anomaly information.
+To refine this information, a coarse-to-fine process is proposed in POUTA,
+which calibrates the semantics of each discriminative layer by the high-level
+representations and supervision loss. Equipped with the above modules, POUTA is
+endowed with the ability to provide a more precise anomaly location than the
+prior arts. Besides, the representation reusage also enables to exclude the
+feature extraction process in the discriminative network, which reduces the
+parameters and improves the efficiency. Extensive experiments show that, POUTA
+is superior or comparable to the prior methods with even less cost.
+Furthermore, POUTA also achieves better performance than the state-of-the-art
+few-shot anomaly detection methods without any special design, showing that
+POUTA has strong ability to learn representations inherent in the training
+data.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: Can Transformers Learn Sequential Function Classes In Context?. (arXiv:2312.12655v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12655">http://arxiv.org/abs/2312.12655</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12655]] Can Transformers Learn Sequential Function Classes In Context?(http://arxiv.org/abs/2312.12655)</code></li>
+<li>Summary: <p>In-context learning (ICL) has revolutionized the capabilities of transformer
+models in NLP. In our project, we extend the understanding of the mechanisms
+underpinning ICL by exploring whether transformers can learn from sequential,
+non-textual function class data distributions. We introduce a novel sliding
+window sequential function class and employ toy-sized transformers with a GPT-2
+architecture to conduct our experiments. Our analysis indicates that these
+models can indeed leverage ICL when trained on non-textual sequential function
+classes. Additionally, our experiments with randomized y-label sequences
+highlights that transformers retain some ICL capabilities even when the label
+associations are obfuscated. We provide evidence that transformers can reason
+with and understand sequentiality encoded within function classes, as reflected
+by the effective learning of our proposed tasks. Our results also show that the
+performance deteriorated with increasing randomness in the labels, though not
+to the extent one might expect, implying a potential robustness of learned
+sequentiality against label noise. Future research may want to look into how
+previous explanations of transformers, such as induction heads and task
+vectors, relate to sequentiality in ICL in these toy examples. Our
+investigation lays the groundwork for further research into how transformers
+process and perceive sequential data.
+</p></li>
+</ul>
+
+<h3>Title: Fine-tuning Large Language Models for Adaptive Machine Translation. (arXiv:2312.12740v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12740">http://arxiv.org/abs/2312.12740</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12740]] Fine-tuning Large Language Models for Adaptive Machine Translation(http://arxiv.org/abs/2312.12740)</code></li>
+<li>Summary: <p>This paper presents the outcomes of fine-tuning Mistral 7B, a general-purpose
+large language model (LLM), for adaptive machine translation (MT). The
+fine-tuning process involves utilising a combination of zero-shot and one-shot
+translation prompts within the medical domain. The primary objective is to
+enhance real-time adaptive MT capabilities of Mistral 7B, enabling it to adapt
+translations to the required domain at inference time. The results,
+particularly for Spanish-to-English MT, showcase the efficacy of the fine-tuned
+model, demonstrating quality improvements in both zero-shot and one-shot
+translation scenarios, surpassing Mistral 7B's baseline performance. Notably,
+the fine-tuned Mistral outperforms ChatGPT "gpt-3.5-turbo" in zero-shot
+translation while achieving comparable one-shot translation quality. Moreover,
+the zero-shot translation of the fine-tuned Mistral matches NLLB 3.3B's
+performance, and its one-shot translation quality surpasses that of NLLB 3.3B.
+These findings emphasise the significance of fine-tuning efficient LLMs like
+Mistral 7B to yield high-quality zero-shot translations comparable to
+task-oriented models like NLLB 3.3B. Additionally, the adaptive gains achieved
+in one-shot translation are comparable to those of commercial LLMs such as
+ChatGPT. Our experiments demonstrate that, with a relatively small dataset of
+20,000 segments that incorporate a mix of zero-shot and one-shot prompts,
+fine-tuning significantly enhances Mistral's in-context learning ability,
+especially for real-time adaptive MT.
+</p></li>
+</ul>
+
+<h3>Title: Benchmarking and Analyzing In-context Learning, Fine-tuning and Supervised Learning for Biomedical Knowledge Curation: a focused study on chemical entities of biological interest. (arXiv:2312.12989v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.12989">http://arxiv.org/abs/2312.12989</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.12989]] Benchmarking and Analyzing In-context Learning, Fine-tuning and Supervised Learning for Biomedical Knowledge Curation: a focused study on chemical entities of biological interest(http://arxiv.org/abs/2312.12989)</code></li>
+<li>Summary: <p>Automated knowledge curation for biomedical ontologies is key to ensure that
+they remain comprehensive, high-quality and up-to-date. In the era of
+foundational language models, this study compares and analyzes three NLP
+paradigms for curation tasks: in-context learning (ICL), fine-tuning (FT), and
+supervised learning (ML). Using the Chemical Entities of Biological Interest
+(ChEBI) database as a model ontology, three curation tasks were devised. For
+ICL, three prompting strategies were employed with GPT-4, GPT-3.5, BioGPT.
+PubmedBERT was chosen for the FT paradigm. For ML, six embedding models were
+utilized for training Random Forest and Long-Short Term Memory models. Five
+setups were designed to assess ML and FT model performance across different
+data availability scenarios.Datasets for curation tasks included: task 1
+(620,386), task 2 (611,430), and task 3 (617,381), maintaining a 50:50 positive
+versus negative ratio. For ICL models, GPT-4 achieved best accuracy scores of
+0.916, 0.766 and 0.874 for tasks 1-3 respectively. In a direct comparison, ML
+(trained on ~260,000 triples) outperformed ICL in accuracy across all tasks.
+(accuracy differences: +.11, +.22 and +.17). Fine-tuned PubmedBERT performed
+similarly to leading ML models in tasks 1 &amp; 2 (F1 differences: -.014 and
++.002), but worse in task 3 (-.048). Simulations revealed performance declines
+in both ML and FT models with smaller and higher imbalanced training data.
+where ICL (particularly GPT-4) excelled in tasks 1 &amp; 3. GPT-4 excelled in tasks
+1 and 3 with less than 6,000 triples, surpassing ML/FT. ICL underperformed
+ML/FT in task 2.ICL-augmented foundation models can be good assistants for
+knowledge curation with correct prompting, however, not making ML and FT
+paradigms obsolete. The latter two require task-specific data to beat ICL. In
+such cases, ML relies on small pretrained embeddings, minimizing computational
+demands.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
