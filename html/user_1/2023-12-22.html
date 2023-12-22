@@ -1,0 +1,1065 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2023-12-22</h1>
+<h2>diffusion</h2>
+<h3>Title: Not All Steps are Equal: Efficient Generation with Progressive Diffusion Models. (arXiv:2312.13307v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13307">http://arxiv.org/abs/2312.13307</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13307]] Not All Steps are Equal: Efficient Generation with Progressive Diffusion Models(http://arxiv.org/abs/2312.13307)</code></li>
+<li>Summary: <p>Diffusion models have demonstrated remarkable efficacy in various generative
+tasks with the predictive prowess of denoising model. Currently, these models
+employ a uniform denoising approach across all timesteps. However, the inherent
+variations in noisy latents at each timestep lead to conflicts during training,
+constraining the potential of diffusion models. To address this challenge, we
+propose a novel two-stage training strategy termed Step-Adaptive Training. In
+the initial stage, a base denoising model is trained to encompass all
+timesteps. Subsequently, we partition the timesteps into distinct groups,
+fine-tuning the model within each group to achieve specialized denoising
+capabilities. Recognizing that the difficulties of predicting noise at
+different timesteps vary, we introduce a diverse model size requirement. We
+dynamically adjust the model size for each timestep by estimating task
+difficulty based on its signal-to-noise ratio before fine-tuning. This
+adjustment is facilitated by a proxy-based structural importance assessment
+mechanism, enabling precise and efficient pruning of the base denoising model.
+Our experiments validate the effectiveness of the proposed training strategy,
+demonstrating an improvement in the FID score on CIFAR10 by over 0.3 while
+utilizing only 80\% of the computational resources. This innovative approach
+not only enhances model performance but also significantly reduces
+computational costs, opening new avenues for the development and application of
+diffusion models.
+</p></li>
+</ul>
+
+<h3>Title: Generate E-commerce Product Background by Integrating Category Commonality and Personalized Style. (arXiv:2312.13309v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13309">http://arxiv.org/abs/2312.13309</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13309]] Generate E-commerce Product Background by Integrating Category Commonality and Personalized Style(http://arxiv.org/abs/2312.13309)</code></li>
+<li>Summary: <p>The state-of-the-art methods for e-commerce product background generation
+suffer from the inefficiency of designing product-wise prompts when scaling up
+the production, as well as the ineffectiveness of describing fine-grained
+styles when customizing personalized backgrounds for some specific brands. To
+address these obstacles, we integrate the category commonality and personalized
+style into diffusion models. Concretely, we propose a Category-Wise Generator
+to enable large-scale background generation for the first time. A unique
+identifier in the prompt is assigned to each category, whose attention is
+located on the background by a mask-guided cross attention layer to learn the
+category-wise style. Furthermore, for products with specific and fine-grained
+requirements in layout, elements, etc, a Personality-Wise Generator is devised
+to learn such personalized style directly from a reference image to resolve
+textual ambiguities, and is trained in a self-supervised manner for more
+efficient training data usage. To advance research in this field, the first
+large-scale e-commerce product background generation dataset BG60k is
+constructed, which covers more than 60k product images from over 2k categories.
+Experiments demonstrate that our method could generate high-quality backgrounds
+for different categories, and maintain the personalized background style of
+reference images. The link to BG60k and codes will be available soon.
+</p></li>
+</ul>
+
+<h3>Title: Unlocking Pre-trained Image Backbones for Semantic Image Synthesis. (arXiv:2312.13314v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13314">http://arxiv.org/abs/2312.13314</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13314]] Unlocking Pre-trained Image Backbones for Semantic Image Synthesis(http://arxiv.org/abs/2312.13314)</code></li>
+<li>Summary: <p>Semantic image synthesis, i.e., generating images from user-provided semantic
+label maps, is an important conditional image generation task as it allows to
+control both the content as well as the spatial layout of generated images.
+Although diffusion models have pushed the state of the art in generative image
+modeling, the iterative nature of their inference process makes them
+computationally demanding. Other approaches such as GANs are more efficient as
+they only need a single feed-forward pass for generation, but the image quality
+tends to suffer on large and diverse datasets. In this work, we propose a new
+class of GAN discriminators for semantic image synthesis that generates highly
+realistic images by exploiting feature backbone networks pre-trained for tasks
+such as image classification. We also introduce a new generator architecture
+with better context modeling and using cross-attention to inject noise into
+latent variables, leading to more diverse generated images. Our model, which we
+dub DP-SIMS, achieves state-of-the-art results in terms of image quality and
+consistency with the input label maps on ADE-20K, COCO-Stuff, and Cityscapes,
+surpassing recent diffusion models while requiring two orders of magnitude less
+compute for inference.
+</p></li>
+</ul>
+
+<h3>Title: ShowRoom3D: Text to High-Quality 3D Room Generation Using 3D Priors. (arXiv:2312.13324v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13324">http://arxiv.org/abs/2312.13324</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13324]] ShowRoom3D: Text to High-Quality 3D Room Generation Using 3D Priors(http://arxiv.org/abs/2312.13324)</code></li>
+<li>Summary: <p>We introduce ShowRoom3D, a three-stage approach for generating high-quality
+3D room-scale scenes from texts. Previous methods using 2D diffusion priors to
+optimize neural radiance fields for generating room-scale scenes have shown
+unsatisfactory quality. This is primarily attributed to the limitations of 2D
+priors lacking 3D awareness and constraints in the training methodology. In
+this paper, we utilize a 3D diffusion prior, MVDiffusion, to optimize the 3D
+room-scale scene. Our contributions are in two aspects. Firstly, we propose a
+progressive view selection process to optimize NeRF. This involves dividing the
+training process into three stages, gradually expanding the camera sampling
+scope. Secondly, we propose the pose transformation method in the second stage.
+It will ensure MVDiffusion provide the accurate view guidance. As a result,
+ShowRoom3D enables the generation of rooms with improved structural integrity,
+enhanced clarity from any view, reduced content repetition, and higher
+consistency across different perspectives. Extensive experiments demonstrate
+that our method, significantly outperforms state-of-the-art approaches by a
+large margin in terms of user study.
+</p></li>
+</ul>
+
+<h3>Title: DREAM-Talk: Diffusion-based Realistic Emotional Audio-driven Method for Single Image Talking Face Generation. (arXiv:2312.13578v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13578">http://arxiv.org/abs/2312.13578</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13578]] DREAM-Talk: Diffusion-based Realistic Emotional Audio-driven Method for Single Image Talking Face Generation(http://arxiv.org/abs/2312.13578)</code></li>
+<li>Summary: <p>The generation of emotional talking faces from a single portrait image
+remains a significant challenge. The simultaneous achievement of expressive
+emotional talking and accurate lip-sync is particularly difficult, as
+expressiveness is often compromised for the accuracy of lip-sync. As widely
+adopted by many prior works, the LSTM network often fails to capture the
+subtleties and variations of emotional expressions. To address these
+challenges, we introduce DREAM-Talk, a two-stage diffusion-based audio-driven
+framework, tailored for generating diverse expressions and accurate lip-sync
+concurrently. In the first stage, we propose EmoDiff, a novel diffusion module
+that generates diverse highly dynamic emotional expressions and head poses in
+accordance with the audio and the referenced emotion style. Given the strong
+correlation between lip motion and audio, we then refine the dynamics with
+enhanced lip-sync accuracy using audio features and emotion style. To this end,
+we deploy a video-to-video rendering module to transfer the expressions and lip
+motions from our proxy 3D avatar to an arbitrary portrait. Both quantitatively
+and qualitatively, DREAM-Talk outperforms state-of-the-art methods in terms of
+expressiveness, lip-sync accuracy and perceptual quality.
+</p></li>
+</ul>
+
+<h3>Title: Diff-Oracle: Diffusion Model for Oracle Character Generation with Controllable Styles and Contents. (arXiv:2312.13631v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13631">http://arxiv.org/abs/2312.13631</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13631]] Diff-Oracle: Diffusion Model for Oracle Character Generation with Controllable Styles and Contents(http://arxiv.org/abs/2312.13631)</code></li>
+<li>Summary: <p>Deciphering the oracle bone script plays a significant role in Chinese
+archaeology and philology. However, it is significantly challenging due to the
+scarcity of oracle character images. To overcome this issue, we propose
+Diff-Oracle, based on diffusion models (DMs), to generate sufficient
+controllable oracle characters. In contrast to most DMs that rely on text
+prompts, we incorporate a style encoder to control style information during the
+generation process. This encoder extracts style prompts from existing oracle
+character images, where style details are converted from a CLIP model into a
+text embedding format. Inspired by ControlNet, we introduce a content encoder
+to capture desired content information from content images, ensuring the
+fidelity of character glyphs. To train Diff-Oracle effectively, we propose to
+obtain pixel-level paired oracle character images (i.e., style and content
+images) by a pre-trained image-to-image translation model. Extensive
+qualitative and quantitative experiments conducted on two benchmark datasets,
+Oracle-241 and OBC306, demonstrate that our Diff-Oracle outperforms existing
+generative methods in terms of image generation, further enhancing recognition
+accuracy. Source codes will be available.
+</p></li>
+</ul>
+
+<h3>Title: Free-Editor: Zero-shot Text-driven 3D Scene Editing. (arXiv:2312.13663v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13663">http://arxiv.org/abs/2312.13663</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13663]] Free-Editor: Zero-shot Text-driven 3D Scene Editing(http://arxiv.org/abs/2312.13663)</code></li>
+<li>Summary: <p>Text-to-Image (T2I) diffusion models have gained popularity recently due to
+their multipurpose and easy-to-use nature, e.g. image and video generation as
+well as editing. However, training a diffusion model specifically for 3D scene
+editing is not straightforward due to the lack of large-scale datasets. To
+date, editing 3D scenes requires either re-training the model to adapt to
+various 3D edited scenes or design-specific methods for each special editing
+type. Furthermore, state-of-the-art (SOTA) methods require multiple
+synchronized edited images from the same scene to facilitate the scene editing.
+Due to the current limitations of T2I models, it is very challenging to apply
+consistent editing effects to multiple images, i.e. multi-view inconsistency in
+editing. This in turn compromises the desired 3D scene editing performance if
+these images are used. In our work, we propose a novel training-free 3D scene
+editing technique, Free-Editor, which allows users to edit 3D scenes without
+further re-training the model during test time. Our proposed method
+successfully avoids the multi-view style inconsistency issue in SOTA methods
+with the help of a "single-view editing" scheme. Specifically, we show that
+editing a particular 3D scene can be performed by only modifying a single view.
+To this end, we introduce an Edit Transformer that enforces intra-view
+consistency and inter-view style transfer by utilizing self- and
+cross-attention, respectively. Since it is no longer required to re-train the
+model and edit every view in a scene, the editing time, as well as memory
+resources, are reduced significantly, e.g., the runtime being $\sim \textbf{20}
+\times$ faster than SOTA. We have conducted extensive experiments on a wide
+range of benchmark datasets and achieve diverse editing capabilities with our
+proposed technique.
+</p></li>
+</ul>
+
+<h3>Title: DreamTuner: Single Image is Enough for Subject-Driven Generation. (arXiv:2312.13691v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13691">http://arxiv.org/abs/2312.13691</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13691]] DreamTuner: Single Image is Enough for Subject-Driven Generation(http://arxiv.org/abs/2312.13691)</code></li>
+<li>Summary: <p>Diffusion-based models have demonstrated impressive capabilities for
+text-to-image generation and are expected for personalized applications of
+subject-driven generation, which require the generation of customized concepts
+with one or a few reference images. However, existing methods based on
+fine-tuning fail to balance the trade-off between subject learning and the
+maintenance of the generation capabilities of pretrained models. Moreover,
+other methods that utilize additional image encoders tend to lose important
+details of the subject due to encoding compression. To address these
+challenges, we propose DreamTurner, a novel method that injects reference
+information from coarse to fine to achieve subject-driven image generation more
+effectively. DreamTurner introduces a subject-encoder for coarse subject
+identity preservation, where the compressed general subject features are
+introduced through an attention layer before visual-text cross-attention. We
+then modify the self-attention layers within pretrained text-to-image models to
+self-subject-attention layers to refine the details of the target subject. The
+generated image queries detailed features from both the reference image and
+itself in self-subject-attention. It is worth emphasizing that
+self-subject-attention is an effective, elegant, and training-free method for
+maintaining the detailed features of customized subjects and can serve as a
+plug-and-play solution during inference. Finally, with additional
+subject-driven fine-tuning, DreamTurner achieves remarkable performance in
+subject-driven image generation, which can be controlled by a text or other
+conditions such as pose. For further details, please visit the project page at
+https://dreamtuner-diffusion.github.io/.
+</p></li>
+</ul>
+
+<h3>Title: Align Your Gaussians: Text-to-4D with Dynamic 3D Gaussians and Composed Diffusion Models. (arXiv:2312.13763v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13763">http://arxiv.org/abs/2312.13763</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13763]] Align Your Gaussians: Text-to-4D with Dynamic 3D Gaussians and Composed Diffusion Models(http://arxiv.org/abs/2312.13763)</code></li>
+<li>Summary: <p>Text-guided diffusion models have revolutionized image and video generation
+and have also been successfully used for optimization-based 3D object
+synthesis. Here, we instead focus on the underexplored text-to-4D setting and
+synthesize dynamic, animated 3D objects using score distillation methods with
+an additional temporal dimension. Compared to previous work, we pursue a novel
+compositional generation-based approach, and combine text-to-image,
+text-to-video, and 3D-aware multiview diffusion models to provide feedback
+during 4D object optimization, thereby simultaneously enforcing temporal
+consistency, high-quality visual appearance and realistic geometry. Our method,
+called Align Your Gaussians (AYG), leverages dynamic 3D Gaussian Splatting with
+deformation fields as 4D representation. Crucial to AYG is a novel method to
+regularize the distribution of the moving 3D Gaussians and thereby stabilize
+the optimization and induce motion. We also propose a motion amplification
+mechanism as well as a new autoregressive synthesis scheme to generate and
+combine multiple 4D sequences for longer generation. These techniques allow us
+to synthesize vivid dynamic scenes, outperform previous work qualitatively and
+quantitatively and achieve state-of-the-art text-to-4D performance. Due to the
+Gaussian 4D representation, different 4D animations can be seamlessly combined,
+as we demonstrate. AYG opens up promising avenues for animation, simulation and
+digital content creation as well as synthetic data generation.
+</p></li>
+</ul>
+
+<h3>Title: Fairy: Fast Parallelized Instruction-Guided Video-to-Video Synthesis. (arXiv:2312.13834v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13834">http://arxiv.org/abs/2312.13834</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13834]] Fairy: Fast Parallelized Instruction-Guided Video-to-Video Synthesis(http://arxiv.org/abs/2312.13834)</code></li>
+<li>Summary: <p>In this paper, we introduce Fairy, a minimalist yet robust adaptation of
+image-editing diffusion models, enhancing them for video editing applications.
+Our approach centers on the concept of anchor-based cross-frame attention, a
+mechanism that implicitly propagates diffusion features across frames, ensuring
+superior temporal coherence and high-fidelity synthesis. Fairy not only
+addresses limitations of previous models, including memory and processing
+speed. It also improves temporal consistency through a unique data augmentation
+strategy. This strategy renders the model equivariant to affine transformations
+in both source and target images. Remarkably efficient, Fairy generates
+120-frame 512x384 videos (4-second duration at 30 FPS) in just 14 seconds,
+outpacing prior works by at least 44x. A comprehensive user study, involving
+1000 generated samples, confirms that our approach delivers superior quality,
+decisively outperforming established methods.
+</p></li>
+</ul>
+
+<h3>Title: Paint3D: Paint Anything 3D with Lighting-Less Texture Diffusion Models. (arXiv:2312.13913v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13913">http://arxiv.org/abs/2312.13913</a></li>
+<li>Code URL: <a href="https://github.com/opentexture/paint3d">https://github.com/opentexture/paint3d</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13913]] Paint3D: Paint Anything 3D with Lighting-Less Texture Diffusion Models(http://arxiv.org/abs/2312.13913)</code></li>
+<li>Summary: <p>This paper presents Paint3D, a novel coarse-to-fine generative framework that
+is capable of producing high-resolution, lighting-less, and diverse 2K UV
+texture maps for untextured 3D meshes conditioned on text or image inputs. The
+key challenge addressed is generating high-quality textures without embedded
+illumination information, which allows the textures to be re-lighted or
+re-edited within modern graphics pipelines. To achieve this, our method first
+leverages a pre-trained depth-aware 2D diffusion model to generate
+view-conditional images and perform multi-view texture fusion, producing an
+initial coarse texture map. However, as 2D models cannot fully represent 3D
+shapes and disable lighting effects, the coarse texture map exhibits incomplete
+areas and illumination artifacts. To resolve this, we train separate UV
+Inpainting and UVHD diffusion models specialized for the shape-aware refinement
+of incomplete areas and the removal of illumination artifacts. Through this
+coarse-to-fine process, Paint3D can produce high-quality 2K UV textures that
+maintain semantic consistency while being lighting-less, significantly
+advancing the state-of-the-art in texturing 3D objects.
+</p></li>
+</ul>
+
+<h3>Title: Controllable 3D Face Generation with Conditional Style Code Diffusion. (arXiv:2312.13941v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13941">http://arxiv.org/abs/2312.13941</a></li>
+<li>Code URL: <a href="https://github.com/sxl142/tex-face">https://github.com/sxl142/tex-face</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13941]] Controllable 3D Face Generation with Conditional Style Code Diffusion(http://arxiv.org/abs/2312.13941)</code></li>
+<li>Summary: <p>Generating photorealistic 3D faces from given conditions is a challenging
+task. Existing methods often rely on time-consuming one-by-one optimization
+approaches, which are not efficient for modeling the same distribution content,
+e.g., faces. Additionally, an ideal controllable 3D face generation model
+should consider both facial attributes and expressions. Thus we propose a novel
+approach called TEx-Face(TExt &amp; Expression-to-Face) that addresses these
+challenges by dividing the task into three components, i.e., 3D GAN Inversion,
+Conditional Style Code Diffusion, and 3D Face Decoding. For 3D GAN inversion,
+we introduce two methods which aim to enhance the representation of style codes
+and alleviate 3D inconsistencies. Furthermore, we design a style code denoiser
+to incorporate multiple conditions into the style code and propose a data
+augmentation strategy to address the issue of insufficient paired
+visual-language data. Extensive experiments conducted on FFHQ, CelebA-HQ, and
+CelebA-Dialog demonstrate the promising performance of our TEx-Face in
+achieving the efficient and controllable generation of photorealistic 3D faces.
+The code will be available at https://github.com/sxl142/TEx-Face.
+</p></li>
+</ul>
+
+<h3>Title: Carve3D: Improving Multi-view Reconstruction Consistency for Diffusion Models with RL Finetuning. (arXiv:2312.13980v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13980">http://arxiv.org/abs/2312.13980</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13980]] Carve3D: Improving Multi-view Reconstruction Consistency for Diffusion Models with RL Finetuning(http://arxiv.org/abs/2312.13980)</code></li>
+<li>Summary: <p>Recent advancements in the text-to-3D task leverage finetuned text-to-image
+diffusion models to generate multi-view images, followed by NeRF
+reconstruction. Yet, existing supervised finetuned (SFT) diffusion models still
+suffer from multi-view inconsistency and the resulting NeRF artifacts. Although
+training longer with SFT improves consistency, it also causes distribution
+shift, which reduces diversity and realistic details. We argue that the SFT of
+multi-view diffusion models resembles the instruction finetuning stage of the
+LLM alignment pipeline and can benefit from RL finetuning (RLFT) methods.
+Essentially, RLFT methods optimize models beyond their SFT data distribution by
+using their own outputs, effectively mitigating distribution shift. To this
+end, we introduce Carve3D, a RLFT method coupled with the Multi-view
+Reconstruction Consistency (MRC) metric, to improve the consistency of
+multi-view diffusion models. To compute MRC on a set of multi-view images, we
+compare them with their corresponding renderings of the reconstructed NeRF at
+the same viewpoints. We validate the robustness of MRC with extensive
+experiments conducted under controlled inconsistency levels. We enhance the
+base RLFT algorithm to stabilize the training process, reduce distribution
+shift, and identify scaling laws. Through qualitative and quantitative
+experiments, along with a user study, we demonstrate Carve3D's improved
+multi-view consistency, the resulting superior NeRF reconstruction quality, and
+minimal distribution shift compared to longer SFT. Project webpage:
+https://desaixie.github.io/carve-3d.
+</p></li>
+</ul>
+
+<h3>Title: HD-Painter: High-Resolution and Prompt-Faithful Text-Guided Image Inpainting with Diffusion Models. (arXiv:2312.14091v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14091">http://arxiv.org/abs/2312.14091</a></li>
+<li>Code URL: <a href="https://github.com/picsart-ai-research/hd-painter">https://github.com/picsart-ai-research/hd-painter</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14091]] HD-Painter: High-Resolution and Prompt-Faithful Text-Guided Image Inpainting with Diffusion Models(http://arxiv.org/abs/2312.14091)</code></li>
+<li>Summary: <p>Recent progress in text-guided image inpainting, based on the unprecedented
+success of text-to-image diffusion models, has led to exceptionally realistic
+and visually plausible results. However, there is still significant potential
+for improvement in current text-to-image inpainting models, particularly in
+better aligning the inpainted area with user prompts and performing
+high-resolution inpainting. Therefore, in this paper we introduce HD-Painter, a
+completely training-free approach that accurately follows to prompts and
+coherently scales to high-resolution image inpainting. To this end, we design
+the Prompt-Aware Introverted Attention (PAIntA) layer enhancing self-attention
+scores by prompt information and resulting in better text alignment
+generations. To further improve the prompt coherence we introduce the
+Reweighting Attention Score Guidance (RASG) mechanism seamlessly integrating a
+post-hoc sampling strategy into general form of DDIM to prevent
+out-of-distribution latent shifts. Moreover, HD-Painter allows extension to
+larger scales by introducing a specialized super-resolution technique
+customized for inpainting, enabling the completion of missing regions in images
+of up to 2K resolution. Our experiments demonstrate that HD-Painter surpasses
+existing state-of-the-art approaches qualitatively and quantitatively,
+achieving an impressive generation accuracy improvement of 61.4% vs 51.9%. We
+will make the codes publicly available at:
+https://github.com/Picsart-AI-Research/HD-Painter
+</p></li>
+</ul>
+
+<h3>Title: Neural Point Cloud Diffusion for Disentangled 3D Shape and Appearance Generation. (arXiv:2312.14124v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14124">http://arxiv.org/abs/2312.14124</a></li>
+<li>Code URL: <a href="https://github.com/lmb-freiburg/neural-point-cloud-diffusion">https://github.com/lmb-freiburg/neural-point-cloud-diffusion</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14124]] Neural Point Cloud Diffusion for Disentangled 3D Shape and Appearance Generation(http://arxiv.org/abs/2312.14124)</code></li>
+<li>Summary: <p>Controllable generation of 3D assets is important for many practical
+applications like content creation in movies, games and engineering, as well as
+in AR/VR. Recently, diffusion models have shown remarkable results in
+generation quality of 3D objects. However, none of the existing models enable
+disentangled generation to control the shape and appearance separately. For the
+first time, we present a suitable representation for 3D diffusion models to
+enable such disentanglement by introducing a hybrid point cloud and neural
+radiance field approach. We model a diffusion process over point positions
+jointly with a high-dimensional feature space for a local density and radiance
+decoder. While the point positions represent the coarse shape of the object,
+the point features allow modeling the geometry and appearance details. This
+disentanglement enables us to sample both independently and therefore to
+control both separately. Our approach sets a new state of the art in generation
+compared to previous disentanglement-capable methods by reduced FID scores of
+30-90% and is on-par with other non disentanglement-capable state-of-the art
+methods.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion Reward: Learning Rewards via Conditional Video Diffusion. (arXiv:2312.14134v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14134">http://arxiv.org/abs/2312.14134</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14134]] Diffusion Reward: Learning Rewards via Conditional Video Diffusion(http://arxiv.org/abs/2312.14134)</code></li>
+<li>Summary: <p>Learning rewards from expert videos offers an affordable and effective
+solution to specify the intended behaviors for reinforcement learning tasks. In
+this work, we propose Diffusion Reward, a novel framework that learns rewards
+from expert videos via conditional video diffusion models for solving complex
+visual RL problems. Our key insight is that lower generative diversity is
+observed when conditioned on expert trajectories. Diffusion Reward is
+accordingly formalized by the negative of conditional entropy that encourages
+productive exploration of expert-like behaviors. We show the efficacy of our
+method over 10 robotic manipulation tasks from MetaWorld and Adroit with visual
+input and sparse reward. Moreover, Diffusion Reward could even solve unseen
+tasks successfully and effectively, largely surpassing baseline methods.
+Project page and code: https://diffusion-reward.github.io/.
+</p></li>
+</ul>
+
+<h3>Title: Navigating the Structured What-If Spaces: Counterfactual Generation via Structured Diffusion. (arXiv:2312.13616v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13616">http://arxiv.org/abs/2312.13616</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13616]] Navigating the Structured What-If Spaces: Counterfactual Generation via Structured Diffusion(http://arxiv.org/abs/2312.13616)</code></li>
+<li>Summary: <p>Generating counterfactual explanations is one of the most effective
+approaches for uncovering the inner workings of black-box neural network models
+and building user trust. While remarkable strides have been made in generative
+modeling using diffusion models in domains like vision, their utility in
+generating counterfactual explanations in structured modalities remains
+unexplored. In this paper, we introduce Structured Counterfactual Diffuser or
+SCD, the first plug-and-play framework leveraging diffusion for generating
+counterfactual explanations in structured data. SCD learns the underlying data
+distribution via a diffusion model which is then guided at test time to
+generate counterfactuals for any arbitrary black-box model, input, and desired
+prediction. Our experiments show that our counterfactuals not only exhibit high
+plausibility compared to the existing state-of-the-art but also show
+significantly better proximity and diversity.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Towards More Faithful Natural Language Explanation Using Multi-Level Contrastive Learning in VQA. (arXiv:2312.13594v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13594">http://arxiv.org/abs/2312.13594</a></li>
+<li>Code URL: <a href="https://github.com/laichengen/mcle">https://github.com/laichengen/mcle</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13594]] Towards More Faithful Natural Language Explanation Using Multi-Level Contrastive Learning in VQA(http://arxiv.org/abs/2312.13594)</code></li>
+<li>Summary: <p>Natural language explanation in visual question answer (VQA-NLE) aims to
+explain the decision-making process of models by generating natural language
+sentences to increase users' trust in the black-box systems. Existing post-hoc
+methods have achieved significant progress in obtaining a plausible
+explanation. However, such post-hoc explanations are not always aligned with
+human logical inference, suffering from the issues on: 1) Deductive
+unsatisfiability, the generated explanations do not logically lead to the
+answer; 2) Factual inconsistency, the model falsifies its counterfactual
+explanation for answers without considering the facts in images; and 3)
+Semantic perturbation insensitivity, the model can not recognize the semantic
+changes caused by small perturbations. These problems reduce the faithfulness
+of explanations generated by models. To address the above issues, we propose a
+novel self-supervised \textbf{M}ulti-level \textbf{C}ontrastive
+\textbf{L}earning based natural language \textbf{E}xplanation model (MCLE) for
+VQA with semantic-level, image-level, and instance-level factual and
+counterfactual samples. MCLE extracts discriminative features and aligns the
+feature spaces from explanations with visual question and answer to generate
+more consistent explanations. We conduct extensive experiments, ablation
+analysis, and case study to demonstrate the effectiveness of our method on two
+VQA-NLE benchmarks.
+</p></li>
+</ul>
+
+<h3>Title: Geometric Awareness in Neural Fields for 3D Human Registration. (arXiv:2312.14024v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14024">http://arxiv.org/abs/2312.14024</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14024]] Geometric Awareness in Neural Fields for 3D Human Registration(http://arxiv.org/abs/2312.14024)</code></li>
+<li>Summary: <p>Aligning a template to 3D human point clouds is a long-standing problem
+crucial for tasks like animation, reconstruction, and enabling supervised
+learning pipelines. Recent data-driven methods leverage predicted surface
+correspondences; however, they are not robust to varied poses or distributions.
+In contrast, industrial solutions often rely on expensive manual annotations or
+multi-view capturing systems. Recently, neural fields have shown promising
+results, but their purely data-driven nature lacks geometric awareness, often
+resulting in a trivial misalignment of the template registration. In this work,
+we propose two solutions: LoVD, a novel neural field model that predicts the
+direction towards the localized SMPL vertices on the target surface; and INT,
+the first self-supervised task dedicated to neural fields that, at test time,
+refines the backbone, exploiting the target geometry. We combine them into
+INLoVD, a robust 3D Human body registration pipeline trained on a large MoCap
+dataset. INLoVD is efficient (takes less than a minute), solidly achieves the
+state of the art over public benchmarks, and provides unprecedented
+generalization on out-of-distribution data. We will release code and
+checkpoints in \url{url}.
+</p></li>
+</ul>
+
+<h3>Title: Fed-QSSL: A Framework for Personalized Federated Learning under Bitwidth and Data Heterogeneity. (arXiv:2312.13380v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13380">http://arxiv.org/abs/2312.13380</a></li>
+<li>Code URL: <a href="https://github.com/yiyuec/fed-qssl">https://github.com/yiyuec/fed-qssl</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13380]] Fed-QSSL: A Framework for Personalized Federated Learning under Bitwidth and Data Heterogeneity(http://arxiv.org/abs/2312.13380)</code></li>
+<li>Summary: <p>Motivated by high resource costs of centralized machine learning schemes as
+well as data privacy concerns, federated learning (FL) emerged as an efficient
+alternative that relies on aggregating locally trained models rather than
+collecting clients' potentially private data. In practice, available resources
+and data distributions vary from one client to another, creating an inherent
+system heterogeneity that leads to deterioration of the performance of
+conventional FL algorithms. In this work, we present a federated
+quantization-based self-supervised learning scheme (Fed-QSSL) designed to
+address heterogeneity in FL systems. At clients' side, to tackle data
+heterogeneity we leverage distributed self-supervised learning while utilizing
+low-bit quantization to satisfy constraints imposed by local infrastructure and
+limited communication resources. At server's side, Fed-QSSL deploys
+de-quantization, weighted aggregation and re-quantization, ultimately creating
+models personalized to both data distribution as well as specific
+infrastructure of each client's device. We validated the proposed algorithm on
+real world datasets, demonstrating its efficacy, and theoretically analyzed
+impact of low-bit training on the convergence and robustness of the learned
+models.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: SimQ-NAS: Simultaneous Quantization Policy and Neural Architecture Search. (arXiv:2312.13301v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13301">http://arxiv.org/abs/2312.13301</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13301]] SimQ-NAS: Simultaneous Quantization Policy and Neural Architecture Search(http://arxiv.org/abs/2312.13301)</code></li>
+<li>Summary: <p>Recent one-shot Neural Architecture Search algorithms rely on training a
+hardware-agnostic super-network tailored to a specific task and then extracting
+efficient sub-networks for different hardware platforms. Popular approaches
+separate the training of super-networks from the search for sub-networks, often
+employing predictors to alleviate the computational overhead associated with
+search. Additionally, certain methods also incorporate the quantization policy
+within the search space. However, while the quantization policy search for
+convolutional neural networks is well studied, the extension of these methods
+to transformers and especially foundation models remains under-explored. In
+this paper, we demonstrate that by using multi-objective search algorithms
+paired with lightly trained predictors, we can efficiently search for both the
+sub-network architecture and the corresponding quantization policy and
+outperform their respective baselines across different performance objectives
+such as accuracy, model size, and latency. Specifically, we demonstrate that
+our approach performs well across both uni-modal (ViT and BERT) and multi-modal
+(BEiT-3) transformer-based architectures as well as convolutional architectures
+(ResNet). For certain networks, we demonstrate an improvement of up to $4.80x$
+and $3.44x$ for latency and model size respectively, without degradation in
+accuracy compared to the fully quantized INT8 baselines.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: SPDGAN: A Generative Adversarial Network based on SPD Manifold Learning for Automatic Image Colorization. (arXiv:2312.13506v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13506">http://arxiv.org/abs/2312.13506</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13506]] SPDGAN: A Generative Adversarial Network based on SPD Manifold Learning for Automatic Image Colorization(http://arxiv.org/abs/2312.13506)</code></li>
+<li>Summary: <p>This paper addresses the automatic colorization problem, which converts a
+gray-scale image to a colorized one. Recent deep-learning approaches can
+colorize automatically grayscale images. However, when it comes to different
+scenes which contain distinct color styles, it is difficult to accurately
+capture the color characteristics. In this work, we propose a fully automatic
+colorization approach based on Symmetric Positive Definite (SPD) Manifold
+Learning with a generative adversarial network (SPDGAN) that improves the
+quality of the colorization results. Our SPDGAN model establishes an
+adversarial game between two discriminators and a generator. The latter is
+based on ResNet architecture with few alterations. Its goal is to generate fake
+colorized images without losing color information across layers through
+residual connections. Then, we employ two discriminators from different
+domains. The first one is devoted to the image pixel domain, while the second
+one is to the Riemann manifold domain which helps to avoid color misalignment.
+Extensive experiments are conducted on the Places365 and COCO-stuff databases
+to test the effect of each component of our SPDGAN. In addition, quantitative
+and qualitative comparisons with state-of-the-art methods demonstrate the
+effectiveness of our model by achieving more realistic colorized images with
+less artifacts visually, and good results of PSNR, SSIM, and FID values.
+</p></li>
+</ul>
+
+<h3>Title: Ponymation: Learning 3D Animal Motions from Unlabeled Online Videos. (arXiv:2312.13604v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13604">http://arxiv.org/abs/2312.13604</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13604]] Ponymation: Learning 3D Animal Motions from Unlabeled Online Videos(http://arxiv.org/abs/2312.13604)</code></li>
+<li>Summary: <p>We introduce Ponymation, a new method for learning a generative model of
+articulated 3D animal motions from raw, unlabeled online videos. Unlike
+existing approaches for motion synthesis, our model does not require any pose
+annotations or parametric shape models for training, and is learned purely from
+a collection of raw video clips obtained from the Internet. We build upon a
+recent work, MagicPony, which learns articulated 3D animal shapes purely from
+single image collections, and extend it on two fronts. First, instead of
+training on static images, we augment the framework with a video training
+pipeline that incorporates temporal regularizations, achieving more accurate
+and temporally consistent reconstructions. Second, we learn a generative model
+of the underlying articulated 3D motion sequences via a spatio-temporal
+transformer VAE, simply using 2D reconstruction losses without relying on any
+explicit pose annotations. At inference time, given a single 2D image of a new
+animal instance, our model reconstructs an articulated, textured 3D mesh, and
+generates plausible 3D animations by sampling from the learned motion latent
+space.
+</p></li>
+</ul>
+
+<h3>Title: A Comprehensive End-to-End Computer Vision Framework for Restoration and Recognition of Low-Quality Engineering Drawings. (arXiv:2312.13620v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13620">http://arxiv.org/abs/2312.13620</a></li>
+<li>Code URL: <a href="https://github.com/Lattle-y/AI-recognition-for-lq-ed">https://github.com/Lattle-y/AI-recognition-for-lq-ed</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13620]] A Comprehensive End-to-End Computer Vision Framework for Restoration and Recognition of Low-Quality Engineering Drawings(http://arxiv.org/abs/2312.13620)</code></li>
+<li>Summary: <p>The digitization of engineering drawings is crucial for efficient reuse,
+distribution, and archiving. Existing computer vision approaches for digitizing
+engineering drawings typically assume the input drawings have high quality.
+However, in reality, engineering drawings are often blurred and distorted due
+to improper scanning, storage, and transmission, which may jeopardize the
+effectiveness of existing approaches. This paper focuses on restoring and
+recognizing low-quality engineering drawings, where an end-to-end framework is
+proposed to improve the quality of the drawings and identify the graphical
+symbols on them. The framework uses K-means clustering to classify different
+engineering drawing patches into simple and complex texture patches based on
+their gray level co-occurrence matrix statistics. Computer vision operations
+and a modified Enhanced Super-Resolution Generative Adversarial Network
+(ESRGAN) model are then used to improve the quality of the two types of
+patches, respectively. A modified Faster Region-based Convolutional Neural
+Network (Faster R-CNN) model is used to recognize the quality-enhanced
+graphical symbols. Additionally, a multi-stage task-driven collaborative
+learning strategy is proposed to train the modified ESRGAN and Faster R-CNN
+models to improve the resolution of engineering drawings in the direction that
+facilitates graphical symbol recognition, rather than human visual perception.
+A synthetic data generation method is also proposed to construct
+quality-degraded samples for training the framework. Experiments on real-world
+electrical diagrams show that the proposed framework achieves an accuracy of
+98.98% and a recall of 99.33%, demonstrating its superiority over previous
+approaches. Moreover, the framework is integrated into a widely-used power
+system software application to showcase its practicality.
+</p></li>
+</ul>
+
+<h3>Title: Gaussian Splitting Algorithm with Color and Opacity Depended on Viewing Direction. (arXiv:2312.13729v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13729">http://arxiv.org/abs/2312.13729</a></li>
+<li>Code URL: <a href="https://github.com/gmum/ViewingDirectionGaussianSplatting">https://github.com/gmum/ViewingDirectionGaussianSplatting</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13729]] Gaussian Splitting Algorithm with Color and Opacity Depended on Viewing Direction(http://arxiv.org/abs/2312.13729)</code></li>
+<li>Summary: <p>Neural Radiance Fields (NeRFs) have demonstrated the remarkable potential of
+neural networks to capture the intricacies of 3D objects. By encoding the shape
+and color information within neural network weights, NeRFs excel at producing
+strikingly sharp novel views of 3D objects. Recently, numerous generalizations
+of NeRFs utilizing generative models have emerged, expanding its versatility.
+In contrast, Gaussian Splatting (GS) offers a similar renders quality with
+faster training and inference as it does not need neural networks to work. We
+encode information about the 3D objects in the set of Gaussian distributions
+that can be rendered in 3D similarly to classical meshes. Unfortunately, GS are
+difficult to condition since they usually require circa hundred thousand
+Gaussian components. To mitigate the caveats of both models, we propose a
+hybrid model that uses GS representation of the 3D object's shape and
+NeRF-based encoding of color and opacity. Our model uses Gaussian distributions
+with trainable positions (i.e. means of Gaussian), shape (i.e. covariance of
+Gaussian), color and opacity, and neural network, which takes parameters of
+Gaussian and viewing direction to produce changes in color and opacity.
+Consequently, our model better describes shadows, light reflections, and
+transparency of 3D objects.
+</p></li>
+</ul>
+
+<h3>Title: Open-Set: ID Card Presentation Attack Detection using Neural Transfer Style. (arXiv:2312.13993v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13993">http://arxiv.org/abs/2312.13993</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13993]] Open-Set: ID Card Presentation Attack Detection using Neural Transfer Style(http://arxiv.org/abs/2312.13993)</code></li>
+<li>Summary: <p>The accurate detection of ID card Presentation Attacks (PA) is becoming
+increasingly important due to the rising number of online/remote services that
+require the presentation of digital photographs of ID cards for digital
+onboarding or authentication. Furthermore, cybercriminals are continuously
+searching for innovative ways to fool authentication systems to gain
+unauthorized access to these services. Although advances in neural network
+design and training have pushed image classification to the state of the art,
+one of the main challenges faced by the development of fraud detection systems
+is the curation of representative datasets for training and evaluation. The
+handcrafted creation of representative presentation attack samples often
+requires expertise and is very time-consuming, thus an automatic process of
+obtaining high-quality data is highly desirable. This work explores ID card
+Presentation Attack Instruments (PAI) in order to improve the generation of
+samples with four Generative Adversarial Networks (GANs) based image
+translation models and analyses the effectiveness of the generated data for
+training fraud detection systems. Using open-source data, we show that
+synthetic attack presentations are an adequate complement for additional real
+attack presentations, where we obtain an EER performance increase of 0.63%
+points for print attacks and a loss of 0.29% for screen capture attacks.
+</p></li>
+</ul>
+
+<h3>Title: VideoPoet: A Large Language Model for Zero-Shot Video Generation. (arXiv:2312.14125v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14125">http://arxiv.org/abs/2312.14125</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14125]] VideoPoet: A Large Language Model for Zero-Shot Video Generation(http://arxiv.org/abs/2312.14125)</code></li>
+<li>Summary: <p>We present VideoPoet, a language model capable of synthesizing high-quality
+video, with matching audio, from a large variety of conditioning signals.
+VideoPoet employs a decoder-only transformer architecture that processes
+multimodal inputs -- including images, videos, text, and audio. The training
+protocol follows that of Large Language Models (LLMs), consisting of two
+stages: pretraining and task-specific adaptation. During pretraining, VideoPoet
+incorporates a mixture of multimodal generative objectives within an
+autoregressive Transformer framework. The pretrained LLM serves as a foundation
+that can be adapted for a range of video generation tasks. We present empirical
+results demonstrating the model's state-of-the-art capabilities in zero-shot
+video generation, specifically highlighting VideoPoet's ability to generate
+high-fidelity motions. Project page: <a href="http://sites.research.google/videopoet/">this http URL</a>
+</p></li>
+</ul>
+
+<h3>Title: HeadCraft: Modeling High-Detail Shape Variations for Animated 3DMMs. (arXiv:2312.14140v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14140">http://arxiv.org/abs/2312.14140</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14140]] HeadCraft: Modeling High-Detail Shape Variations for Animated 3DMMs(http://arxiv.org/abs/2312.14140)</code></li>
+<li>Summary: <p>Current advances in human head modeling allow to generate plausible-looking
+3D head models via neural representations. Nevertheless, constructing complete
+high-fidelity head models with explicitly controlled animation remains an
+issue. Furthermore, completing the head geometry based on a partial
+observation, e.g. coming from a depth sensor, while preserving details is often
+problematic for the existing methods. We introduce a generative model for
+detailed 3D head meshes on top of an articulated 3DMM which allows explicit
+animation and high-detail preservation at the same time. Our method is trained
+in two stages. First, we register a parametric head model with vertex
+displacements to each mesh of the recently introduced NPHM dataset of accurate
+3D head scans. The estimated displacements are baked into a hand-crafted UV
+layout. Second, we train a StyleGAN model in order to generalize over the UV
+maps of displacements. The decomposition of the parametric model and
+high-quality vertex displacements allows us to animate the model and modify it
+semantically. We demonstrate the results of unconditional generation and
+fitting to the full or partial observation. The project page is available at
+https://seva100.github.io/headcraft.
+</p></li>
+</ul>
+
+<h3>Title: Virtual Pets: Animatable Animal Generation in 3D Scenes. (arXiv:2312.14154v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14154">http://arxiv.org/abs/2312.14154</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14154]] Virtual Pets: Animatable Animal Generation in 3D Scenes(http://arxiv.org/abs/2312.14154)</code></li>
+<li>Summary: <p>Toward unlocking the potential of generative models in immersive 4D
+experiences, we introduce Virtual Pet, a novel pipeline to model realistic and
+diverse motions for target animal species within a 3D environment. To
+circumvent the limited availability of 3D motion data aligned with
+environmental geometry, we leverage monocular internet videos and extract
+deformable NeRF representations for the foreground and static NeRF
+representations for the background. For this, we develop a reconstruction
+strategy, encompassing species-level shared template learning and per-video
+fine-tuning. Utilizing the reconstructed data, we then train a conditional 3D
+motion model to learn the trajectory and articulation of foreground animals in
+the context of 3D backgrounds. We showcase the efficacy of our pipeline with
+comprehensive qualitative and quantitative evaluations using cat videos. We
+also demonstrate versatility across unseen cats and indoor environments,
+producing temporally coherent 4D outputs for enriched virtual experiences.
+</p></li>
+</ul>
+
+<h3>Title: Structure-Aware Path Inference for Neural Finite State Transducers. (arXiv:2312.13614v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13614">http://arxiv.org/abs/2312.13614</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13614]] Structure-Aware Path Inference for Neural Finite State Transducers(http://arxiv.org/abs/2312.13614)</code></li>
+<li>Summary: <p>Neural finite-state transducers (NFSTs) form an expressive family of
+neurosymbolic sequence transduction models. An NFST models each string pair as
+having been generated by a latent path in a finite-state transducer. As they
+are deep generative models, both training and inference of NFSTs require
+inference networks that approximate posterior distributions over such latent
+variables. In this paper, we focus on the resulting challenge of imputing the
+latent alignment path that explains a given pair of input and output strings
+(e.g., during training). We train three autoregressive approximate models for
+amortized inference of the path, which can then be used as proposal
+distributions for importance sampling. All three models perform lookahead. Our
+most sophisticated (and novel) model leverages the FST structure to consider
+the graph of future paths; unfortunately, we find that it loses out to the
+simpler approaches -- except on an artificial task that we concocted to confuse
+the simpler approaches.
+</p></li>
+</ul>
+
+<h3>Title: ChatGPT as a commenter to the news: can LLMs generate human-like opinions?. (arXiv:2312.13961v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13961">http://arxiv.org/abs/2312.13961</a></li>
+<li>Code URL: <a href="https://github.com/raydentseng/generated_opinions">https://github.com/raydentseng/generated_opinions</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13961]] ChatGPT as a commenter to the news: can LLMs generate human-like opinions?(http://arxiv.org/abs/2312.13961)</code></li>
+<li>Summary: <p>ChatGPT, GPT-3.5, and other large language models (LLMs) have drawn
+significant attention since their release, and the abilities of these models
+have been investigated for a wide variety of tasks. In this research we
+investigate to what extent GPT-3.5 can generate human-like comments on Dutch
+news articles. We define human likeness as `not distinguishable from human
+comments', approximated by the difficulty of automatic classification between
+human and GPT comments. We analyze human likeness across multiple prompting
+techniques. In particular, we utilize zero-shot, few-shot and context prompts,
+for two generated personas. We found that our fine-tuned BERT models can easily
+distinguish human-written comments from GPT-3.5 generated comments, with none
+of the used prompting methods performing noticeably better. We further analyzed
+that human comments consistently showed higher lexical diversity than
+GPT-generated comments. This indicates that although generative LLMs can
+generate fluent text, their capability to create human-like opinionated
+comments is still limited.
+</p></li>
+</ul>
+
+<h3>Title: HW-V2W-Map: Hardware Vulnerability to Weakness Mapping Framework for Root Cause Analysis with GPT-assisted Mitigation Suggestion. (arXiv:2312.13530v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13530">http://arxiv.org/abs/2312.13530</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13530]] HW-V2W-Map: Hardware Vulnerability to Weakness Mapping Framework for Root Cause Analysis with GPT-assisted Mitigation Suggestion(http://arxiv.org/abs/2312.13530)</code></li>
+<li>Summary: <p>The escalating complexity of modern computing frameworks has resulted in a
+surge in the cybersecurity vulnerabilities reported to the National
+Vulnerability Database (NVD) by practitioners. Despite the fact that the
+stature of NVD is one of the most significant databases for the latest insights
+into vulnerabilities, extracting meaningful trends from such a large amount of
+unstructured data is still challenging without the application of suitable
+technological methodologies. Previous efforts have mostly concentrated on
+software vulnerabilities; however, a holistic strategy incorporates approaches
+for mitigating vulnerabilities, score prediction, and a knowledge-generating
+system that may extract relevant insights from the Common Weakness Enumeration
+(CWE) and Common Vulnerability Exchange (CVE) databases is notably absent. As
+the number of hardware attacks on Internet of Things (IoT) devices continues to
+rapidly increase, we present the Hardware Vulnerability to Weakness Mapping
+(HW-V2W-Map) Framework, which is a Machine Learning (ML) framework focusing on
+hardware vulnerabilities and IoT security. The architecture that we have
+proposed incorporates an Ontology-driven Storytelling framework, which
+automates the process of updating the ontology in order to recognize patterns
+and evolution of vulnerabilities over time and provides approaches for
+mitigating the vulnerabilities. The repercussions of vulnerabilities can be
+mitigated as a result of this, and conversely, future exposures can be
+predicted and prevented. Furthermore, our proposed framework utilized
+Generative Pre-trained Transformer (GPT) Large Language Models (LLMs) to
+provide mitigation suggestions.
+</p></li>
+</ul>
+
+<h3>Title: RealGen: Retrieval Augmented Generation for Controllable Traffic Scenarios. (arXiv:2312.13303v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13303">http://arxiv.org/abs/2312.13303</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13303]] RealGen: Retrieval Augmented Generation for Controllable Traffic Scenarios(http://arxiv.org/abs/2312.13303)</code></li>
+<li>Summary: <p>Simulation plays a crucial role in the development of autonomous vehicles
+(AVs) due to the potential risks associated with real-world testing. Although
+significant progress has been made in the visual aspects of simulators,
+generating complex behavior among agents remains a formidable challenge. It is
+not only imperative to ensure realism in the scenarios generated but also
+essential to incorporate preferences and conditions to facilitate controllable
+generation for AV training and evaluation. Traditional methods, mainly relying
+on memorizing the distribution of training datasets, often fall short in
+generating unseen scenarios. Inspired by the success of retrieval augmented
+generation in large language models, we present RealGen, a novel
+retrieval-based in-context learning framework for traffic scenario generation.
+RealGen synthesizes new scenarios by combining behaviors from multiple
+retrieved examples in a gradient-free way, which may originate from templates
+or tagged scenarios. This in-context learning framework endows versatile
+generative capabilities, including the ability to edit scenarios, compose
+various behaviors, and produce critical scenarios. Evaluations show that
+RealGen offers considerable flexibility and controllability, marking a new
+direction in the field of controllable traffic scenario generation. Check our
+project website for more information: https://realgen.github.io.
+</p></li>
+</ul>
+
+<h3>Title: Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns. (arXiv:2312.13583v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13583">http://arxiv.org/abs/2312.13583</a></li>
+<li>Code URL: <a href="https://github.com/zjunet/G-Tuning">https://github.com/zjunet/G-Tuning</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13583]] Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns(http://arxiv.org/abs/2312.13583)</code></li>
+<li>Summary: <p>Recently, the paradigm of pre-training and fine-tuning graph neural networks
+has been intensively studied and applied in a wide range of graph mining tasks.
+Its success is generally attributed to the structural consistency between
+pre-training and downstream datasets, which, however, does not hold in many
+real-world scenarios. Existing works have shown that the structural divergence
+between pre-training and downstream graphs significantly limits the
+transferability when using the vanilla fine-tuning strategy. This divergence
+leads to model overfitting on pre-training graphs and causes difficulties in
+capturing the structural properties of the downstream graphs. In this paper, we
+identify the fundamental cause of structural divergence as the discrepancy of
+generative patterns between the pre-training and downstream graphs.
+Furthermore, we propose G-Tuning to preserve the generative patterns of
+downstream graphs. Given a downstream graph G, the core idea is to tune the
+pre-trained GNN so that it can reconstruct the generative patterns of G, the
+graphon W. However, the exact reconstruction of a graphon is known to be
+computationally expensive. To overcome this challenge, we provide a theoretical
+analysis that establishes the existence of a set of alternative graphons called
+graphon bases for any given graphon. By utilizing a linear combination of these
+graphon bases, we can efficiently approximate W. This theoretical finding forms
+the basis of our proposed model, as it enables effective learning of the
+graphon bases and their associated coefficients. Compared with existing
+algorithms, G-Tuning demonstrates an average improvement of 0.5% and 2.6% on
+in-domain and out-of-domain transfer learning experiments, respectively.
+</p></li>
+</ul>
+
+<h3>Title: Adapt & Align: Continual Learning with Generative Models Latent Space Alignment. (arXiv:2312.13699v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13699">http://arxiv.org/abs/2312.13699</a></li>
+<li>Code URL: <a href="https://github.com/jrx-napoli/cl_classifier">https://github.com/jrx-napoli/cl_classifier</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13699]] Adapt & Align: Continual Learning with Generative Models Latent Space Alignment(http://arxiv.org/abs/2312.13699)</code></li>
+<li>Summary: <p>In this work, we introduce Adapt &amp; Align, a method for continual learning of
+neural networks by aligning latent representations in generative models. Neural
+Networks suffer from abrupt loss in performance when retrained with additional
+training data from different distributions. At the same time, training with
+additional data without access to the previous examples rarely improves the
+model's performance. In this work, we propose a new method that mitigates those
+problems by employing generative models and splitting the process of their
+update into two parts. In the first one, we train a local generative model
+using only data from a new task. In the second phase, we consolidate latent
+representations from the local model with a global one that encodes knowledge
+of all past experiences. We introduce our approach with Variational
+Auteoncoders and Generative Adversarial Networks. Moreover, we show how we can
+use those generative models as a general method for continual knowledge
+consolidation that can be used in downstream tasks such as classification.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Few Shot Part Segmentation Reveals Compositional Logic for Industrial Anomaly Detection. (arXiv:2312.13783v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13783">http://arxiv.org/abs/2312.13783</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13783]] Few Shot Part Segmentation Reveals Compositional Logic for Industrial Anomaly Detection(http://arxiv.org/abs/2312.13783)</code></li>
+<li>Summary: <p>Logical anomalies (LA) refer to data violating underlying logical constraints
+e.g., the quantity, arrangement, or composition of components within an image.
+Detecting accurately such anomalies requires models to reason about various
+component types through segmentation. However, curation of pixel-level
+annotations for semantic segmentation is both time-consuming and expensive.
+Although there are some prior few-shot or unsupervised co-part segmentation
+algorithms, they often fail on images with industrial object. These images have
+components with similar textures and shapes, and a precise differentiation
+proves challenging. In this study, we introduce a novel component segmentation
+model for LA detection that leverages a few labeled samples and unlabeled
+images sharing logical constraints. To ensure consistent segmentation across
+unlabeled images, we employ a histogram matching loss in conjunction with an
+entropy loss. As segmentation predictions play a crucial role, we propose to
+enhance both local and global sample validity detection by capturing key
+aspects from visual semantics via three memory banks: class histograms,
+component composition embeddings and patch-level representations. For effective
+LA detection, we propose an adaptive scaling strategy to standardize anomaly
+scores from different memory banks in inference. Extensive experiments on the
+public benchmark MVTec LOCO AD reveal our method achieves 98.1% AUROC in LA
+detection vs. 89.6% from competing methods.
+</p></li>
+</ul>
+
+<h3>Title: Investigation of Multi-stage Attack and Defense Simulation for Data Synthesis. (arXiv:2312.13697v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13697">http://arxiv.org/abs/2312.13697</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13697]] Investigation of Multi-stage Attack and Defense Simulation for Data Synthesis(http://arxiv.org/abs/2312.13697)</code></li>
+<li>Summary: <p>The power grid is a critical infrastructure that plays a vital role in modern
+society. Its availability is of utmost importance, as a loss can endanger human
+lives. However, with the increasing digitalization of the power grid, it also
+becomes vulnerable to new cyberattacks that can compromise its availability. To
+counter these threats, intrusion detection systems are developed and deployed
+to detect cyberattacks targeting the power grid. Among intrusion detection
+systems, anomaly detection models based on machine learning have shown
+potential in detecting unknown attack vectors. However, the scarcity of data
+for training these models remains a challenge due to confidentiality concerns.
+To overcome this challenge, this study proposes a model for generating
+synthetic data of multi-stage cyber attacks in the power grid, using attack
+trees to model the attacker's sequence of steps and a game-theoretic approach
+to incorporate the defender's actions. This model aims to create diverse attack
+data on which machine learning algorithms can be trained.
+</p></li>
+</ul>
+
+<h3>Title: Benchmark Evaluation of Anomaly-Based Intrusion Detection Systems in the Context of Smart Grids. (arXiv:2312.13705v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13705">http://arxiv.org/abs/2312.13705</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13705]] Benchmark Evaluation of Anomaly-Based Intrusion Detection Systems in the Context of Smart Grids(http://arxiv.org/abs/2312.13705)</code></li>
+<li>Summary: <p>The increasing digitization of smart grids has made addressing cybersecurity
+issues crucial in order to secure the power supply. Anomaly detection has
+emerged as a key technology for cybersecurity in smart grids, enabling the
+detection of unknown threats. Many research efforts have proposed various
+machine-learning-based approaches for anomaly detection in grid operations.
+However, there is a need for a reproducible and comprehensive evaluation
+environment to investigate and compare different approaches to anomaly
+detection. The assessment process is highly dependent on the specific
+application and requires an evaluation that considers representative datasets
+from the use case as well as the specific characteristics of the use case. In
+this work, we present an evaluation environment for anomaly detection methods
+in smart grids that facilitates reproducible and comprehensive evaluation of
+different anomaly detection methods.
+</p></li>
+</ul>
+
+<h3>Title: Comparative Evaluation of Anomaly Detection Methods for Fraud Detection in Online Credit Card Payments. (arXiv:2312.13896v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13896">http://arxiv.org/abs/2312.13896</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13896]] Comparative Evaluation of Anomaly Detection Methods for Fraud Detection in Online Credit Card Payments(http://arxiv.org/abs/2312.13896)</code></li>
+<li>Summary: <p>This study explores the application of anomaly detection (AD) methods in
+imbalanced learning tasks, focusing on fraud detection using real online credit
+card payment data. We assess the performance of several recent AD methods and
+compare their effectiveness against standard supervised learning methods.
+Offering evidence of distribution shift within our dataset, we analyze its
+impact on the tested models' performances. Our findings reveal that LightGBM
+exhibits significantly superior performance across all evaluated metrics but
+suffers more from distribution shifts than AD methods. Furthermore, our
+investigation reveals that LightGBM also captures the majority of frauds
+detected by AD methods. This observation challenges the potential benefits of
+ensemble methods to combine supervised, and AD approaches to enhance
+performance. In summary, this research provides practical insights into the
+utility of these techniques in real-world scenarios, showing LightGBM's
+superiority in fraud detection while highlighting challenges related to
+distribution shifts.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<h3>Title: On Task Performance and Model Calibration with Supervised and Self-Ensembled In-Context Learning. (arXiv:2312.13772v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13772">http://arxiv.org/abs/2312.13772</a></li>
+<li>Code URL: <a href="https://github.com/cambridgeltl/ensembled-sicl">https://github.com/cambridgeltl/ensembled-sicl</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13772]] On Task Performance and Model Calibration with Supervised and Self-Ensembled In-Context Learning(http://arxiv.org/abs/2312.13772)</code></li>
+<li>Summary: <p>Following the standard supervised fine-tuning (SFT) paradigm, in-context
+learning (ICL) has become an efficient approach propelled by the recent
+advancements in large language models (LLMs), yielding promising performance
+across various tasks in few-shot data setups. However, both paradigms are prone
+to suffer from the critical problem of overconfidence (i.e., miscalibration),
+especially in such limited data setups. In this work, we deliver an in-depth
+analysis of the behavior across different choices of learning methods from the
+perspective of both performance and calibration, as well as their interplay.
+Through extensive controlled experiments, we find that simultaneous gains for
+both task performance and calibration are difficult to achieve, and the problem
+of miscalibration exists across all learning methods in low-resource
+scenarios.To address this challenging trade-off between performance and
+calibration, we then investigate the potential of self-ensembling techniques
+applied at different modeling stages (e.g., variations of in-context examples
+or variations in prompts or different ensembling strategies). We justify the
+feasibility of self-ensembling on SFT in addition to ICL, to make the
+predictions more calibrated and have comparable or even better performance. Our
+work sheds light on which learning paradigm to choose and how to enhance both
+task performance and calibration of LLMs.
+</p></li>
+</ul>
+
+<h3>Title: In-Context Reinforcement Learning for Variable Action Spaces. (arXiv:2312.13327v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.13327">http://arxiv.org/abs/2312.13327</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.13327]] In-Context Reinforcement Learning for Variable Action Spaces(http://arxiv.org/abs/2312.13327)</code></li>
+<li>Summary: <p>Recent work has shown that supervised pre-training on learning histories of
+RL algorithms results in a model that captures the learning process and is able
+to improve in-context on novel tasks through interactions with an environment.
+Despite the progress in this area, there is still a gap in the existing
+literature, particularly in the in-context generalization to new action spaces.
+While existing methods show high performance on new tasks created by different
+reward distributions, their architectural design and training process are not
+suited for the introduction of new actions during evaluation. We aim to bridge
+this gap by developing an architecture and training methodology specifically
+for the task of generalizing to new action spaces. Inspired by Headless LLM, we
+remove the dependence on the number of actions by directly predicting the
+action embeddings. Furthermore, we use random embeddings to force the semantic
+inference of actions from context and to prepare for the new unseen embeddings
+during test time. Using multi-armed bandit environments with a variable number
+of arms, we show that our model achieves the performance of the data generation
+algorithm without requiring retraining for each new environment.
+</p></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
