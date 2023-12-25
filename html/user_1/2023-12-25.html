@@ -1,0 +1,856 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2023-12-25</h1>
+<h2>diffusion</h2>
+<h3>Title: DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models. (arXiv:2312.14216v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14216">http://arxiv.org/abs/2312.14216</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14216]] DreamDistribution: Prompt Distribution Learning for Text-to-Image Diffusion Models(http://arxiv.org/abs/2312.14216)</code></li>
+<li>Summary: <p>The popularization of Text-to-Image (T2I) diffusion models enables the
+generation of high-quality images from text descriptions. However, generating
+diverse customized images with reference visual attributes remains challenging.
+This work focuses on personalizing T2I diffusion models at a more abstract
+concept or category level, adapting commonalities from a set of reference
+images while creating new instances with sufficient variations. We introduce a
+solution that allows a pretrained T2I diffusion model to learn a set of soft
+prompts, enabling the generation of novel images by sampling prompts from the
+learned distribution. These prompts offer text-guided editing capabilities and
+additional flexibility in controlling variation and mixing between multiple
+distributions. We also show the adaptability of the learned prompt distribution
+to other tasks, such as text-to-3D. Finally we demonstrate effectiveness of our
+approach through quantitative analysis including automatic evaluation and human
+assessment. Project website: https://briannlongzhao.github.io/DreamDistribution
+</p></li>
+</ul>
+
+<h3>Title: Fast Diffusion-Based Counterfactuals for Shortcut Removal and Generation. (arXiv:2312.14223v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14223">http://arxiv.org/abs/2312.14223</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14223]] Fast Diffusion-Based Counterfactuals for Shortcut Removal and Generation(http://arxiv.org/abs/2312.14223)</code></li>
+<li>Summary: <p>Shortcut learning is when a model -- e.g. a cardiac disease classifier --
+exploits correlations between the target label and a spurious shortcut feature,
+e.g. a pacemaker, to predict the target label based on the shortcut rather than
+real discriminative features. This is common in medical imaging, where
+treatment and clinical annotations correlate with disease labels, making them
+easy shortcuts to predict disease. We propose a novel detection and
+quantification of the impact of potential shortcut features via a fast
+diffusion-based counterfactual image generation that can synthetically remove
+or add shortcuts. Via a novel inpainting-based modification we spatially limit
+the changes made with no extra inference step, encouraging the removal of
+spatially constrained shortcut features while ensuring that the shortcut-free
+counterfactuals preserve their remaining image features to a high degree. Using
+these, we assess how shortcut features influence model predictions.
+</p>
+<p>This is enabled by our second contribution: An efficient diffusion-based
+counterfactual explanation method with significant inference speed-up at
+comparable image quality as state-of-the-art. We confirm this on two large
+chest X-ray datasets, a skin lesion dataset, and CelebA.
+</p></li>
+</ul>
+
+<h3>Title: Tuning-Free Inversion-Enhanced Control for Consistent Image Editing. (arXiv:2312.14611v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14611">http://arxiv.org/abs/2312.14611</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14611]] Tuning-Free Inversion-Enhanced Control for Consistent Image Editing(http://arxiv.org/abs/2312.14611)</code></li>
+<li>Summary: <p>Consistent editing of real images is a challenging task, as it requires
+performing non-rigid edits (e.g., changing postures) to the main objects in the
+input image without changing their identity or attributes. To guarantee
+consistent attributes, some existing methods fine-tune the entire model or the
+textual embedding for structural consistency, but they are time-consuming and
+fail to perform non-rigid edits. Other works are tuning-free, but their
+performances are weakened by the quality of Denoising Diffusion Implicit Model
+(DDIM) reconstruction, which often fails in real-world scenarios. In this
+paper, we present a novel approach called Tuning-free Inversion-enhanced
+Control (TIC), which directly correlates features from the inversion process
+with those from the sampling process to mitigate the inconsistency in DDIM
+reconstruction. Specifically, our method effectively obtains inversion features
+from the key and value features in the self-attention layers, and enhances the
+sampling process by these inversion features, thus achieving accurate
+reconstruction and content-consistent editing. To extend the applicability of
+our method to general editing scenarios, we also propose a mask-guided
+attention concatenation strategy that combines contents from both the inversion
+and the naive DDIM editing processes. Experiments show that the proposed method
+outperforms previous works in reconstruction and consistent editing, and
+produces impressive results in various settings.
+</p></li>
+</ul>
+
+<h3>Title: Harnessing Diffusion Models for Visual Perception with Meta Prompts. (arXiv:2312.14733v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14733">http://arxiv.org/abs/2312.14733</a></li>
+<li>Code URL: <a href="https://github.com/fudan-zvg/meta-prompts">https://github.com/fudan-zvg/meta-prompts</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14733]] Harnessing Diffusion Models for Visual Perception with Meta Prompts(http://arxiv.org/abs/2312.14733)</code></li>
+<li>Summary: <p>The issue of generative pretraining for vision models has persisted as a
+long-standing conundrum. At present, the text-to-image (T2I) diffusion model
+demonstrates remarkable proficiency in generating high-definition images
+matching textual inputs, a feat made possible through its pre-training on
+large-scale image-text pairs. This leads to a natural inquiry: can diffusion
+models be utilized to tackle visual perception tasks? In this paper, we propose
+a simple yet effective scheme to harness a diffusion model for visual
+perception tasks. Our key insight is to introduce learnable embeddings (meta
+prompts) to the pre-trained diffusion models to extract proper features for
+perception. The effect of meta prompts are two-fold. First, as a direct
+replacement of the text embeddings in the T2I models, it can activate
+task-relevant features during feature extraction. Second, it will be used to
+re-arrange the extracted features to ensures that the model focuses on the most
+pertinent features for the task on hand. Additionally, we design a recurrent
+refinement training strategy that fully leverages the property of diffusion
+models, thereby yielding stronger visual features. Extensive experiments across
+various benchmarks validate the effectiveness of our approach. Our approach
+achieves new performance records in depth estimation tasks on NYU depth V2 and
+KITTI, and in semantic segmentation task on CityScapes. Concurrently, the
+proposed method attains results comparable to the current state-of-the-art in
+semantic segmentation on ADE20K and pose estimation on COCO datasets, further
+exemplifying its robustness and versatility.
+</p></li>
+</ul>
+
+<h3>Title: Plan, Posture and Go: Towards Open-World Text-to-Motion Generation. (arXiv:2312.14828v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14828">http://arxiv.org/abs/2312.14828</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14828]] Plan, Posture and Go: Towards Open-World Text-to-Motion Generation(http://arxiv.org/abs/2312.14828)</code></li>
+<li>Summary: <p>Conventional text-to-motion generation methods are usually trained on limited
+text-motion pairs, making them hard to generalize to open-world scenarios. Some
+works use the CLIP model to align the motion space and the text space, aiming
+to enable motion generation from natural language motion descriptions. However,
+they are still constrained to generate limited and unrealistic in-place
+motions. To address these issues, we present a divide-and-conquer framework
+named PRO-Motion, which consists of three modules as motion planner,
+posture-diffuser and go-diffuser. The motion planner instructs Large Language
+Models (LLMs) to generate a sequence of scripts describing the key postures in
+the target motion. Differing from natural languages, the scripts can describe
+all possible postures following very simple text templates. This significantly
+reduces the complexity of posture-diffuser, which transforms a script to a
+posture, paving the way for open-world generation. Finally, go-diffuser,
+implemented as another diffusion model, estimates whole-body translations and
+rotations for all postures, resulting in realistic motions. Experimental
+results have shown the superiority of our method with other counterparts, and
+demonstrated its capability of generating diverse and realistic motions from
+complex open-world prompts such as "Experiencing a profound sense of joy". The
+project page is available at https://moonsliu.github.io/Pro-Motion.
+</p></li>
+</ul>
+
+<h3>Title: BrainVis: Exploring the Bridge between Brain and Visual Signals via Image Reconstruction. (arXiv:2312.14871v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14871">http://arxiv.org/abs/2312.14871</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14871]] BrainVis: Exploring the Bridge between Brain and Visual Signals via Image Reconstruction(http://arxiv.org/abs/2312.14871)</code></li>
+<li>Summary: <p>Analyzing and reconstructing visual stimuli from brain signals effectively
+advances understanding of the human visual system. However, the EEG signals are
+complex and contain a amount of noise. This leads to substantial limitations in
+existing works of visual stimuli reconstruction from EEG, such as difficulties
+in aligning EEG embeddings with the fine-grained semantic information and a
+heavy reliance on additional large self-collected dataset for training. To
+address these challenges, we propose a novel approach called BrainVis. Firstly,
+we divide the EEG signals into various units and apply a self-supervised
+approach on them to obtain EEG time-domain features, in an attempt to ease the
+training difficulty. Additionally, we also propose to utilize the
+frequency-domain features to enhance the EEG representations. Then, we
+simultaneously align EEG time-frequency embeddings with the interpolation of
+the coarse and fine-grained semantics in the CLIP space, to highlight the
+primary visual components and reduce the cross-modal alignment difficulty.
+Finally, we adopt the cascaded diffusion models to reconstruct images. Our
+proposed BrainVis outperforms state of the arts in both semantic fidelity
+reconstruction and generation quality. Notably, we reduce the training data
+scale to 10% of the previous work.
+</p></li>
+</ul>
+
+<h3>Title: MACS: Mass Conditioned 3D Hand and Object Motion Synthesis. (arXiv:2312.14929v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14929">http://arxiv.org/abs/2312.14929</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14929]] MACS: Mass Conditioned 3D Hand and Object Motion Synthesis(http://arxiv.org/abs/2312.14929)</code></li>
+<li>Summary: <p>The physical properties of an object, such as mass, significantly affect how
+we manipulate it with our hands. Surprisingly, this aspect has so far been
+neglected in prior work on 3D motion synthesis. To improve the naturalness of
+the synthesized 3D hand object motions, this work proposes MACS the first MAss
+Conditioned 3D hand and object motion Synthesis approach. Our approach is based
+on cascaded diffusion models and generates interactions that plausibly adjust
+based on the object mass and interaction type. MACS also accepts a manually
+drawn 3D object trajectory as input and synthesizes the natural 3D hand motions
+conditioned by the object mass. This flexibility enables MACS to be used for
+various downstream applications, such as generating synthetic training data for
+ML tasks, fast animation of hands for graphics workflows, and generating
+character interactions for computer games. We show experimentally that a
+small-scale dataset is sufficient for MACS to reasonably generalize across
+interpolated and extrapolated object masses unseen during the training.
+Furthermore, MACS shows moderate generalization to unseen objects, thanks to
+the mass-conditioned contact labels generated by our surface contact synthesis
+model ConNet. Our comprehensive user study confirms that the synthesized 3D
+hand-object interactions are highly plausible and realistic.
+</p></li>
+</ul>
+
+<h3>Title: Non-Denoising Forward-Time Diffusions. (arXiv:2312.14589v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14589">http://arxiv.org/abs/2312.14589</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14589]] Non-Denoising Forward-Time Diffusions(http://arxiv.org/abs/2312.14589)</code></li>
+<li>Summary: <p>The scope of this paper is generative modeling through diffusion processes.
+An approach falling within this paradigm is the work of Song et al. (2021),
+which relies on a time-reversal argument to construct a diffusion process
+targeting the desired data distribution. We show that the time-reversal
+argument, common to all denoising diffusion probabilistic modeling proposals,
+is not necessary. We obtain diffusion processes targeting the desired data
+distribution by taking appropriate mixtures of diffusion bridges. The resulting
+transport is exact by construction, allows for greater flexibility in choosing
+the dynamics of the underlying diffusion, and can be approximated by means of a
+neural network via novel training objectives. We develop a unifying view of the
+drift adjustments corresponding to our and to time-reversal approaches and make
+use of this representation to inspect the inner workings of diffusion-based
+generative models. Finally, we leverage on scalable simulation and inference
+techniques common in spatial statistics to move beyond fully factorial
+distributions in the underlying diffusion dynamics. The methodological advances
+contained in this work contribute toward establishing a general framework for
+generative modeling based on diffusion processes.
+</p></li>
+</ul>
+
+<h3>Title: Diffusion Maps for Signal Filtering in Graph Learning. (arXiv:2312.14758v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14758">http://arxiv.org/abs/2312.14758</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14758]] Diffusion Maps for Signal Filtering in Graph Learning(http://arxiv.org/abs/2312.14758)</code></li>
+<li>Summary: <p>This paper explores the application diffusion maps as graph shift operators
+in understanding the underlying geometry of graph signals. The study evaluates
+the improvements in graph learning when using diffusion map generated filters
+to the Markov Variation minimization problem. The paper showcases the
+effectiveness of this approach through examples involving synthetically
+generated and real-world temperature sensor data. These examples also compare
+the diffusion map graph signal model with other commonly used graph signal
+operators. The results provide new approaches for the analysis and
+understanding of complex, non-Euclidean data structures.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Scalable 3D Reconstruction From Single Particle X-Ray Diffraction Images Based on Online Machine Learning. (arXiv:2312.14432v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14432">http://arxiv.org/abs/2312.14432</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14432]] Scalable 3D Reconstruction From Single Particle X-Ray Diffraction Images Based on Online Machine Learning(http://arxiv.org/abs/2312.14432)</code></li>
+<li>Summary: <p>X-ray free-electron lasers (XFELs) offer unique capabilities for measuring
+the structure and dynamics of biomolecules, helping us understand the basic
+building blocks of life. Notably, high-repetition-rate XFELs enable single
+particle imaging (X-ray SPI) where individual, weakly scattering biomolecules
+are imaged under near-physiological conditions with the opportunity to access
+fleeting states that cannot be captured in cryogenic or crystallized
+conditions. Existing X-ray SPI reconstruction algorithms, which estimate the
+unknown orientation of a particle in each captured image as well as its shared
+3D structure, are inadequate in handling the massive datasets generated by
+these emerging XFELs. Here, we introduce X-RAI, an online reconstruction
+framework that estimates the structure of a 3D macromolecule from large X-ray
+SPI datasets. X-RAI consists of a convolutional encoder, which amortizes pose
+estimation over large datasets, as well as a physics-based decoder, which
+employs an implicit neural representation to enable high-quality 3D
+reconstruction in an end-to-end, self-supervised manner. We demonstrate that
+X-RAI achieves state-of-the-art performance for small-scale datasets in
+simulation and challenging experimental settings and demonstrate its
+unprecedented ability to process large datasets containing millions of
+diffraction images in an online fashion. These abilities signify a paradigm
+shift in X-ray SPI towards real-time capture and reconstruction.
+</p></li>
+</ul>
+
+<h3>Title: Multimodal Attention Merging for Improved Speech Recognition and Audio Event Classification. (arXiv:2312.14378v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14378">http://arxiv.org/abs/2312.14378</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14378]] Multimodal Attention Merging for Improved Speech Recognition and Audio Event Classification(http://arxiv.org/abs/2312.14378)</code></li>
+<li>Summary: <p>Training large foundation models using self-supervised objectives on
+unlabeled data, followed by fine-tuning on downstream tasks, has emerged as a
+standard procedure. Unfortunately, the efficacy of this approach is often
+constrained by both limited fine-tuning compute and scarcity in labeled
+downstream data. We introduce Multimodal Attention Merging (MAM), an attempt
+that facilitates direct knowledge transfer from attention matrices of models
+rooted in high resource modalities, text and images, to those in
+resource-constrained domains, speech and audio, employing a zero-shot paradigm.
+MAM reduces the relative Word Error Rate (WER) of an Automatic Speech
+Recognition (ASR) model by up to 6.70%, and relative classification error of an
+Audio Event Classification (AEC) model by 10.63%. In cases where some
+data/compute is available, we present Learnable-MAM, a data-driven approach to
+merging attention matrices, resulting in a further 2.90% relative reduction in
+WER for ASR and 18.42% relative reduction in AEC compared to fine-tuning.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Parrot Captions Teach CLIP to Spot Text. (arXiv:2312.14232v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14232">http://arxiv.org/abs/2312.14232</a></li>
+<li>Code URL: <a href="https://github.com/opendatalab/clip-parrot-bias">https://github.com/opendatalab/clip-parrot-bias</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14232]] Parrot Captions Teach CLIP to Spot Text(http://arxiv.org/abs/2312.14232)</code></li>
+<li>Summary: <p>Despite CLIP being the foundation model in numerous vision-language
+applications, the CLIP suffers from a severe text spotting bias. Such bias
+causes CLIP models to `Parrot' the visual text embedded within images while
+disregarding the authentic visual semantics. We uncover that in the most
+popular image-text dataset LAION-2B, the captions also densely parrot (spell)
+the text embedded in images. Our analysis shows that around \textbf{50\%} of
+images are embedded with visual text content, and \textbf{90\%} of their
+captions more or less parrot the visual text. Based on such observation, we
+thoroughly inspect the different release d versions of CLIP models and verify
+that the visual text is the dominant factor in measuring the LAION-style
+image-text similarity for these models. To examine whether these parrot
+captions shape the text spotting bias, we train a series of CLIP models with
+LAION subsets curated by different parrot-caption-oriented criteria. We show
+that training with parrot captions easily shapes such bias but harms the
+expected visual-language representation learning in CLIP models. This suggests
+that it is urgent to revisit either the design of CLIP-like models or the
+existing image-text dataset curation pipeline built on CLIP score filtering.
+</p></li>
+</ul>
+
+<h3>Title: InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks. (arXiv:2312.14238v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14238">http://arxiv.org/abs/2312.14238</a></li>
+<li>Code URL: <a href="https://github.com/opengvlab/internvl">https://github.com/opengvlab/internvl</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14238]] InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks(http://arxiv.org/abs/2312.14238)</code></li>
+<li>Summary: <p>The exponential growth of large language models (LLMs) has opened up numerous
+possibilities for multi-modal AGI systems. However, the progress in vision and
+vision-language foundation models, which are also critical elements of
+multi-modal AGI, has not kept pace with LLMs. In this work, we design a
+large-scale vision-language foundation model (InternVL), which scales up the
+vision foundation model to 6 billion parameters and progressively aligns it
+with the large language model, using web-scale image-text data from various
+sources. This model can be broadly applied to and achieve state-of-the-art
+performance on visual perception tasks such as image-level or pixel-level
+recognition, vision-language tasks such as zero-shot image/video
+classification, zero-shot image/video-text retrieval, and link with LLMs to
+create multi-modal dialogue systems. We hope that our research could contribute
+to the development of multi-modal large models. Code and models are available
+at https://github.com/OpenGVLab/InternVL.
+</p></li>
+</ul>
+
+<h3>Title: FM-OV3D: Foundation Model-based Cross-modal Knowledge Blending for Open-Vocabulary 3D Detection. (arXiv:2312.14465v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14465">http://arxiv.org/abs/2312.14465</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14465]] FM-OV3D: Foundation Model-based Cross-modal Knowledge Blending for Open-Vocabulary 3D Detection(http://arxiv.org/abs/2312.14465)</code></li>
+<li>Summary: <p>The superior performances of pre-trained foundation models in various visual
+tasks underscore their potential to enhance the 2D models' open-vocabulary
+ability. Existing methods explore analogous applications in the 3D space.
+However, most of them only center around knowledge extraction from singular
+foundation models, which limits the open-vocabulary ability of 3D models. We
+hypothesize that leveraging complementary pre-trained knowledge from various
+foundation models can improve knowledge transfer from 2D pre-trained visual
+language models to the 3D space. In this work, we propose FM-OV3D, a method of
+Foundation Model-based Cross-modal Knowledge Blending for Open-Vocabulary 3D
+Detection, which improves the open-vocabulary localization and recognition
+abilities of 3D model by blending knowledge from multiple pre-trained
+foundation models, achieving true open-vocabulary without facing constraints
+from original 3D datasets. Specifically, to learn the open-vocabulary 3D
+localization ability, we adopt the open-vocabulary localization knowledge of
+the Grounded-Segment-Anything model. For open-vocabulary 3D recognition
+ability, We leverage the knowledge of generative foundation models, including
+GPT-3 and Stable Diffusion models, and cross-modal discriminative models like
+CLIP. The experimental results on two popular benchmarks for open-vocabulary 3D
+object detection show that our model efficiently learns knowledge from multiple
+foundation models to enhance the open-vocabulary ability of the 3D model and
+successfully achieves state-of-the-art performance in open-vocabulary 3D object
+detection tasks. Code is released at
+https://github.com/dmzhang0425/FM-OV3D.git.
+</p></li>
+</ul>
+
+<h3>Title: Part to Whole: Collaborative Prompting for Surgical Instrument Segmentation. (arXiv:2312.14481v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14481">http://arxiv.org/abs/2312.14481</a></li>
+<li>Code URL: <a href="https://github.com/wenxi-yue/surgicalpart-sam">https://github.com/wenxi-yue/surgicalpart-sam</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14481]] Part to Whole: Collaborative Prompting for Surgical Instrument Segmentation(http://arxiv.org/abs/2312.14481)</code></li>
+<li>Summary: <p>Foundation models like the Segment Anything Model (SAM) have demonstrated
+promise in generic object segmentation. However, directly applying SAM to
+surgical instrument segmentation presents key challenges. First, SAM relies on
+per-frame point-or-box prompts which complicate surgeon-computer interaction.
+Also, SAM yields suboptimal performance on segmenting surgical instruments,
+owing to insufficient surgical data in its pre-training as well as the complex
+structure and fine-grained details of various surgical instruments. To address
+these challenges, in this paper, we investigate text promptable surgical
+instrument segmentation and propose SP-SAM (SurgicalPart-SAM), a novel
+efficient-tuning approach that integrates surgical instrument structure
+knowledge with the generic segmentation knowledge of SAM. Specifically, we
+achieve this by proposing (1) collaborative prompts in the text form "[part
+name] of [instrument category name]" that decompose instruments into
+fine-grained parts; (2) a Cross-Modal Prompt Encoder that encodes text prompts
+jointly with visual embeddings into discriminative part-level representations;
+and (3) a Part-to-Whole Selective Fusion and a Hierarchical Decoding strategy
+that selectively assemble the part-level representations into a whole for
+accurate instrument segmentation. Built upon them, SP-SAM acquires a better
+capability to comprehend surgical instrument structures and distinguish between
+various categories. Extensive experiments on both the EndoVis2018 and
+EndoVis2017 datasets demonstrate SP-SAM's state-of-the-art performance with
+minimal tunable parameters. Code is at
+https://github.com/wenxi-yue/SurgicalPart-SAM.
+</p></li>
+</ul>
+
+<h3>Title: Revisiting Few-Shot Object Detection with Vision-Language Models. (arXiv:2312.14494v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14494">http://arxiv.org/abs/2312.14494</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14494]] Revisiting Few-Shot Object Detection with Vision-Language Models(http://arxiv.org/abs/2312.14494)</code></li>
+<li>Summary: <p>Few-shot object detection (FSOD) benchmarks have advanced techniques for
+detecting new categories with limited annotations. Existing benchmarks
+repurpose well-established datasets like COCO by partitioning categories into
+base and novel classes for pre-training and fine-tuning respectively. However,
+these benchmarks do not reflect how FSOD is deployed in practice. Rather than
+only pre-training on a small number of base categories, we argue that it is
+more practical to fine-tune a foundation model (e.g., a vision-language model
+(VLM) pre-trained on web-scale data) for a target domain. Surprisingly, we find
+that zero-shot inference from VLMs like GroundingDINO significantly outperforms
+the state-of-the-art (48.3 vs. 33.1 AP) on COCO. However, such zero-shot models
+can still be misaligned to target concepts of interest. For example, trailers
+on the web may be different from trailers in the context of autonomous
+vehicles. In this work, we propose Foundational FSOD, a new benchmark protocol
+that evaluates detectors pre-trained on any external datasets and fine-tuned on
+K-shots per target class. Further, we note that current FSOD benchmarks are
+actually federated datasets containing exhaustive annotations for each category
+on a subset of the data. We leverage this insight to propose simple strategies
+for fine-tuning VLMs with federated losses. We demonstrate the effectiveness of
+our approach on LVIS and nuImages, improving over prior work by 5.9 AP.
+</p></li>
+</ul>
+
+<h3>Title: Hazards from Increasingly Accessible Fine-Tuning of Downloadable Foundation Models. (arXiv:2312.14751v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14751">http://arxiv.org/abs/2312.14751</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14751]] Hazards from Increasingly Accessible Fine-Tuning of Downloadable Foundation Models(http://arxiv.org/abs/2312.14751)</code></li>
+<li>Summary: <p>Public release of the weights of pretrained foundation models, otherwise
+known as downloadable access \citep{solaiman_gradient_2023}, enables
+fine-tuning without the prohibitive expense of pretraining. Our work argues
+that increasingly accessible fine-tuning of downloadable models may increase
+hazards. First, we highlight research to improve the accessibility of
+fine-tuning. We split our discussion into research that A) reduces the
+computational cost of fine-tuning and B) improves the ability to share that
+cost across more actors. Second, we argue that increasingly accessible
+fine-tuning methods may increase hazard through facilitating malicious use and
+making oversight of models with potentially dangerous capabilities more
+difficult. Third, we discuss potential mitigatory measures, as well as benefits
+of more accessible fine-tuning. Given substantial remaining uncertainty about
+hazards, we conclude by emphasizing the urgent need for the development of
+mitigations.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: ZeroShape: Regression-based Zero-shot Shape Reconstruction. (arXiv:2312.14198v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14198">http://arxiv.org/abs/2312.14198</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14198]] ZeroShape: Regression-based Zero-shot Shape Reconstruction(http://arxiv.org/abs/2312.14198)</code></li>
+<li>Summary: <p>We study the problem of single-image zero-shot 3D shape reconstruction.
+Recent works learn zero-shot shape reconstruction through generative modeling
+of 3D assets, but these models are computationally expensive at train and
+inference time. In contrast, the traditional approach to this problem is
+regression-based, where deterministic models are trained to directly regress
+the object shape. Such regression methods possess much higher computational
+efficiency than generative methods. This raises a natural question: is
+generative modeling necessary for high performance, or conversely, are
+regression-based approaches still competitive? To answer this, we design a
+strong regression-based model, called ZeroShape, based on the converging
+findings in this field and a novel insight. We also curate a large real-world
+evaluation benchmark, with objects from three different real-world 3D datasets.
+This evaluation benchmark is more diverse and an order of magnitude larger than
+what prior works use to quantitatively evaluate their models, aiming at
+reducing the evaluation variance in our field. We show that ZeroShape not only
+achieves superior performance over state-of-the-art methods, but also
+demonstrates significantly higher computational and data efficiency.
+</p></li>
+</ul>
+
+<h3>Title: Learning Socio-Temporal Graphs for Multi-Agent Trajectory Prediction. (arXiv:2312.14373v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14373">http://arxiv.org/abs/2312.14373</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14373]] Learning Socio-Temporal Graphs for Multi-Agent Trajectory Prediction(http://arxiv.org/abs/2312.14373)</code></li>
+<li>Summary: <p>In order to predict a pedestrian's trajectory in a crowd accurately, one has
+to take into account her/his underlying socio-temporal interactions with other
+pedestrians consistently. Unlike existing work that represents the relevant
+information separately, partially, or implicitly, we propose a complete
+representation for it to be fully and explicitly captured and analyzed. In
+particular, we introduce a Directed Acyclic Graph-based structure, which we
+term Socio-Temporal Graph (STG), to explicitly capture pair-wise socio-temporal
+interactions among a group of people across both space and time. Our model is
+built on a time-varying generative process, whose latent variables determine
+the structure of the STGs. We design an attention-based model named STGformer
+that affords an end-to-end pipeline to learn the structure of the STGs for
+trajectory prediction. Our solution achieves overall state-of-the-art
+prediction accuracy in two large-scale benchmark datasets. Our analysis shows
+that a person's past trajectory is critical for predicting another person's
+future path. Our model learns this relationship with a strong notion of
+socio-temporal localities. Statistics show that utilizing this information
+explicitly for prediction yields a noticeable performance gain with respect to
+the trajectory-only approaches.
+</p></li>
+</ul>
+
+<h3>Title: AdvCloak: Customized Adversarial Cloak for Privacy Protection. (arXiv:2312.14407v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14407">http://arxiv.org/abs/2312.14407</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14407]] AdvCloak: Customized Adversarial Cloak for Privacy Protection(http://arxiv.org/abs/2312.14407)</code></li>
+<li>Summary: <p>With extensive face images being shared on social media, there has been a
+notable escalation in privacy concerns. In this paper, we propose AdvCloak, an
+innovative framework for privacy protection using generative models. AdvCloak
+is designed to automatically customize class-wise adversarial masks that can
+maintain superior image-level naturalness while providing enhanced
+feature-level generalization ability. Specifically, AdvCloak sequentially
+optimizes the generative adversarial networks by employing a two-stage training
+strategy. This strategy initially focuses on adapting the masks to the unique
+individual faces via image-specific training and then enhances their
+feature-level generalization ability to diverse facial variations of
+individuals via person-specific training. To fully utilize the limited training
+data, we combine AdvCloak with several general geometric modeling methods, to
+better describe the feature subspace of source identities. Extensive
+quantitative and qualitative evaluations on both common and celebrity datasets
+demonstrate that AdvCloak outperforms existing state-of-the-art methods in
+terms of efficiency and effectiveness.
+</p></li>
+</ul>
+
+<h3>Title: Environment-Specific People. (arXiv:2312.14579v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14579">http://arxiv.org/abs/2312.14579</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14579]] Environment-Specific People(http://arxiv.org/abs/2312.14579)</code></li>
+<li>Summary: <p>Despite significant progress in generative image synthesis and full-body
+generation in particular, state-of-the-art methods are either
+context-independent, overly reliant to text prompts, or bound to the curated
+training datasets, such as fashion images with monotonous backgrounds. Here,
+our goal is to generate people in clothing that is semantically appropriate for
+a given scene. To this end, we present ESP, a novel method for context-aware
+full-body generation, that enables photo-realistic inpainting of people into
+existing "in-the-wild" photographs. ESP is conditioned on a 2D pose and
+contextual cues that are extracted from the environment photograph and
+integrated into the generation process. Our models are trained on a dataset
+containing a set of in-the-wild photographs of people covering a wide range of
+different environments. The method is analyzed quantitatively and
+qualitatively, and we show that ESP outperforms state-of-the-art on the task of
+contextual full-body generation.
+</p></li>
+</ul>
+
+<h3>Title: Towards Loose-Fitting Garment Animation via Generative Model of Deformation Decomposition. (arXiv:2312.14619v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14619">http://arxiv.org/abs/2312.14619</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14619]] Towards Loose-Fitting Garment Animation via Generative Model of Deformation Decomposition(http://arxiv.org/abs/2312.14619)</code></li>
+<li>Summary: <p>Existing data-driven methods for garment animation, usually driven by linear
+skinning, although effective on tight garments, do not handle loose-fitting
+garments with complex deformations well. To address these limitations, we
+develop a garment generative model based on deformation decomposition to
+efficiently simulate loose garment deformation without directly using linear
+skinning. Specifically, we learn a garment generative space with the proposed
+generative model, where we decouple the latent representation into unposed
+deformed garments and dynamic offsets during the decoding stage. With explicit
+garment deformations decomposition, our generative model is able to generate
+complex pose-driven deformations on canonical garment shapes. Furthermore, we
+learn to transfer the body motions and previous state of the garment to the
+latent space to regenerate dynamic results. In addition, we introduce a detail
+enhancement module in an adversarial training setup to learn high-frequency
+wrinkles. We demonstrate our method outperforms state-of-the-art data-driven
+alternatives through extensive experiments and show qualitative and
+quantitative analysis of results.
+</p></li>
+</ul>
+
+<h3>Title: Compressing Image-to-Image Translation GANs Using Local Density Structures on Their Learned Manifold. (arXiv:2312.14776v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14776">http://arxiv.org/abs/2312.14776</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14776]] Compressing Image-to-Image Translation GANs Using Local Density Structures on Their Learned Manifold(http://arxiv.org/abs/2312.14776)</code></li>
+<li>Summary: <p>Generative Adversarial Networks (GANs) have shown remarkable success in
+modeling complex data distributions for image-to-image translation. Still,
+their high computational demands prohibit their deployment in practical
+scenarios like edge devices. Existing GAN compression methods mainly rely on
+knowledge distillation or convolutional classifiers' pruning techniques. Thus,
+they neglect the critical characteristic of GANs: their local density structure
+over their learned manifold. Accordingly, we approach GAN compression from a
+new perspective by explicitly encouraging the pruned model to preserve the
+density structure of the original parameter-heavy model on its learned
+manifold. We facilitate this objective for the pruned model by partitioning the
+learned manifold of the original generator into local neighborhoods around its
+generated samples. Then, we propose a novel pruning objective to regularize the
+pruned model to preserve the local density structure over each neighborhood,
+resembling the kernel density estimation method. Also, we develop a
+collaborative pruning scheme in which the discriminator and generator are
+pruned by two pruning agents. We design the agents to capture interactions
+between the generator and discriminator by exchanging their peer's feedback
+when determining corresponding models' architectures. Thanks to such a design,
+our pruning method can efficiently find performant sub-networks and can
+maintain the balance between the generator and discriminator more effectively
+compared to baselines during pruning, thereby showing more stable pruning
+dynamics. Our experiments on image translation GAN models, Pix2Pix and
+CycleGAN, with various benchmark datasets and architectures demonstrate our
+method's effectiveness.
+</p></li>
+</ul>
+
+<h3>Title: The Rate-Distortion-Perception-Classification Tradeoff: Joint Source Coding and Modulation via Inverse-Domain GANs. (arXiv:2312.14792v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14792">http://arxiv.org/abs/2312.14792</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14792]] The Rate-Distortion-Perception-Classification Tradeoff: Joint Source Coding and Modulation via Inverse-Domain GANs(http://arxiv.org/abs/2312.14792)</code></li>
+<li>Summary: <p>The joint source coding and modulation (JSCM) framework was enabled by recent
+developments in deep learning, which allows to automatically learn from data,
+and in an end-to-end fashion, the best compression codes and modulation
+schemes. In this paper, we show the existence of a strict tradeoff between
+channel rate, distortion, perception, and classification accuracy in a JSCM
+scenario. We then propose two image compression methods to navigate that
+tradeoff: an inverse-domain generative adversarial network (ID-GAN), which
+achieves extreme compression, and a simpler, heuristic method that reveals
+insights about the performance of ID-GAN. Experiment results not only
+corroborate the theoretical findings, but also demonstrate that the proposed
+ID-GAN algorithm significantly improves system performance compared to
+traditional separation-based methods and recent deep JSCM architectures.
+</p></li>
+</ul>
+
+<h3>Title: ChatGPT, Llama, can you write my report? An experiment on assisted digital forensics reports written using (Local) Large Language Models. (arXiv:2312.14607v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14607">http://arxiv.org/abs/2312.14607</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14607]] ChatGPT, Llama, can you write my report? An experiment on assisted digital forensics reports written using (Local) Large Language Models(http://arxiv.org/abs/2312.14607)</code></li>
+<li>Summary: <p>Generative AIs, especially Large Language Models (LLMs) such as ChatGPT or
+Llama, have advanced significantly, positioning them as valuable tools for
+digital forensics. While initial studies have explored the potential of ChatGPT
+in the context of investigations, the question of to what extent LLMs can
+assist the forensic report writing process remains unresolved. To answer the
+question, this article first examines forensic reports with the goal of
+generalization (e.g., finding the `average structure' of a report). We then
+evaluate the strengths and limitations of LLMs for generating the different
+parts of the forensic report using a case study. This work thus provides
+valuable insights into the automation of report writing, a critical facet of
+digital forensics investigations. We conclude that combined with thorough
+proofreading and corrections, LLMs may assist practitioners during the report
+writing process but at this point cannot replace them.
+</p></li>
+</ul>
+
+<h3>Title: Maximum entropy GFlowNets with soft Q-learning. (arXiv:2312.14331v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14331">http://arxiv.org/abs/2312.14331</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14331]] Maximum entropy GFlowNets with soft Q-learning(http://arxiv.org/abs/2312.14331)</code></li>
+<li>Summary: <p>Generative Flow Networks (GFNs) have emerged as a powerful tool for sampling
+discrete objects from unnormalized distributions, offering a scalable
+alternative to Markov Chain Monte Carlo (MCMC) methods. While GFNs draw
+inspiration from maximum entropy reinforcement learning (RL), the connection
+between the two has largely been unclear and seemingly applicable only in
+specific cases. This paper addresses the connection by constructing an
+appropriate reward function, thereby establishing an exact relationship between
+GFNs and maximum entropy RL. This construction allows us to introduce maximum
+entropy GFNs, which, in contrast to GFNs with uniform backward policy, achieve
+the maximum entropy attainable by GFNs without constraints on the state space.
+</p></li>
+</ul>
+
+<h3>Title: Generative Pretraining at Scale: Transformer-Based Encoding of Transactional Behavior for Fraud Detection. (arXiv:2312.14406v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14406">http://arxiv.org/abs/2312.14406</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14406]] Generative Pretraining at Scale: Transformer-Based Encoding of Transactional Behavior for Fraud Detection(http://arxiv.org/abs/2312.14406)</code></li>
+<li>Summary: <p>In this work, we introduce an innovative autoregressive model leveraging
+Generative Pretrained Transformer (GPT) architectures, tailored for fraud
+detection in payment systems. Our approach innovatively confronts token
+explosion and reconstructs behavioral sequences, providing a nuanced
+understanding of transactional behavior through temporal and contextual
+analysis. Utilizing unsupervised pretraining, our model excels in feature
+representation without the need for labeled data. Additionally, we integrate a
+differential convolutional approach to enhance anomaly detection, bolstering
+the security and efficacy of one of the largest online payment merchants in
+China. The scalability and adaptability of our model promise broad
+applicability in various transactional contexts.
+</p></li>
+</ul>
+
+<h3>Title: SAVAE: Leveraging the variational Bayes autoencoder for survival analysis. (arXiv:2312.14651v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14651">http://arxiv.org/abs/2312.14651</a></li>
+<li>Code URL: <a href="https://github.com/patricia-a-apellaniz/savae">https://github.com/patricia-a-apellaniz/savae</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14651]] SAVAE: Leveraging the variational Bayes autoencoder for survival analysis(http://arxiv.org/abs/2312.14651)</code></li>
+<li>Summary: <p>As in many fields of medical research, survival analysis has witnessed a
+growing interest in the application of deep learning techniques to model
+complex, high-dimensional, heterogeneous, incomplete, and censored medical
+data. Current methods often make assumptions about the relations between data
+that may not be valid in practice. In response, we introduce SAVAE (Survival
+Analysis Variational Autoencoder), a novel approach based on Variational
+Autoencoders. SAVAE contributes significantly to the field by introducing a
+tailored ELBO formulation for survival analysis, supporting various parametric
+distributions for covariates and survival time (as long as the log-likelihood
+is differentiable). It offers a general method that consistently performs well
+on various metrics, demonstrating robustness and stability through different
+experiments. Our proposal effectively estimates time-to-event, accounting for
+censoring, covariate interactions, and time-varying risk associations. We
+validate our model in diverse datasets, including genomic, clinical, and
+demographic data, with varying levels of censoring. This approach demonstrates
+competitive performance compared to state-of-the-art techniques, as assessed by
+the Concordance Index and the Integrated Brier Score. SAVAE also offers an
+interpretable model that parametrically models covariates and time. Moreover,
+its generative architecture facilitates further applications such as
+clustering, data imputation, and the generation of synthetic patient data
+through latent space inference from survival data.
+</p></li>
+</ul>
+
+<h3>Title: Time-changed normalizing flows for accurate SDE modeling. (arXiv:2312.14698v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14698">http://arxiv.org/abs/2312.14698</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14698]] Time-changed normalizing flows for accurate SDE modeling(http://arxiv.org/abs/2312.14698)</code></li>
+<li>Summary: <p>The generative paradigm has become increasingly important in machine learning
+and deep learning models. Among popular generative models are normalizing
+flows, which enable exact likelihood estimation by transforming a base
+distribution through diffeomorphic transformations. Extending the normalizing
+flow framework to handle time-indexed flows gave dynamic normalizing flows, a
+powerful tool to model time series, stochastic processes, and neural stochastic
+differential equations (SDEs). In this work, we propose a novel variant of
+dynamic normalizing flows, a Time Changed Normalizing Flow (TCNF), based on
+time deformation of a Brownian motion which constitutes a versatile and
+extensive family of Gaussian processes. This approach enables us to effectively
+model some SDEs, that cannot be modeled otherwise, including standard ones such
+as the well-known Ornstein-Uhlenbeck process, and generalizes prior
+methodologies, leading to improved results and better inference and prediction
+capability.
+</p></li>
+</ul>
+
+<h3>Title: SutraNets: Sub-series Autoregressive Networks for Long-Sequence, Probabilistic Forecasting. (arXiv:2312.14880v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14880">http://arxiv.org/abs/2312.14880</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14880]] SutraNets: Sub-series Autoregressive Networks for Long-Sequence, Probabilistic Forecasting(http://arxiv.org/abs/2312.14880)</code></li>
+<li>Summary: <p>We propose SutraNets, a novel method for neural probabilistic forecasting of
+long-sequence time series. SutraNets use an autoregressive generative model to
+factorize the likelihood of long sequences into products of conditional
+probabilities. When generating long sequences, most autoregressive approaches
+suffer from harmful error accumulation, as well as challenges in modeling
+long-distance dependencies. SutraNets treat long, univariate prediction as
+multivariate prediction over lower-frequency sub-series. Autoregression
+proceeds across time and across sub-series in order to ensure coherent
+multivariate (and, hence, high-frequency univariate) outputs. Since sub-series
+can be generated using fewer steps, SutraNets effectively reduce error
+accumulation and signal path distances. We find SutraNets to significantly
+improve forecasting accuracy over competitive alternatives on six real-world
+datasets, including when we vary the number of sub-series and scale up the
+depth and width of the underlying sequence models.
+</p></li>
+</ul>
+
+<h3>Title: FAST: Feature Aware Similarity Thresholding for Weak Unlearning in Black-Box Generative Models. (arXiv:2312.14895v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14895">http://arxiv.org/abs/2312.14895</a></li>
+<li>Code URL: <a href="https://github.com/Subhodip123/weak-unlearning-gan">https://github.com/Subhodip123/weak-unlearning-gan</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14895]] FAST: Feature Aware Similarity Thresholding for Weak Unlearning in Black-Box Generative Models(http://arxiv.org/abs/2312.14895)</code></li>
+<li>Summary: <p>The heightened emphasis on the regulation of deep generative models,
+propelled by escalating concerns pertaining to privacy and compliance with
+regulatory frameworks, underscores the imperative need for precise control
+mechanisms over these models. This urgency is particularly underscored by
+instances in which generative models generate outputs that encompass
+objectionable, offensive, or potentially injurious content. In response,
+machine unlearning has emerged to selectively forget specific knowledge or
+remove the influence of undesirable data subsets from pre-trained models.
+However, modern machine unlearning approaches typically assume access to model
+parameters and architectural details during unlearning, which is not always
+feasible. In multitude of downstream tasks, these models function as black-box
+systems, with inaccessible pre-trained parameters, architectures, and training
+data. In such scenarios, the possibility of filtering undesired outputs becomes
+a practical alternative. The primary goal of this study is twofold: first, to
+elucidate the relationship between filtering and unlearning processes, and
+second, to formulate a methodology aimed at mitigating the display of
+undesirable outputs generated from models characterized as black-box systems.
+Theoretical analysis in this study demonstrates that, in the context of
+black-box models, filtering can be seen as a form of weak unlearning. Our
+proposed \textbf{\textit{Feature Aware Similarity Thresholding(FAST)}} method
+effectively suppresses undesired outputs by systematically encoding the
+representation of unwanted features in the latent space.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Invariant Anomaly Detection under Distribution Shifts: A Causal Perspective. (arXiv:2312.14329v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14329">http://arxiv.org/abs/2312.14329</a></li>
+<li>Code URL: <a href="https://github.com/joaocarv/invariant-anomaly-detection">https://github.com/joaocarv/invariant-anomaly-detection</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14329]] Invariant Anomaly Detection under Distribution Shifts: A Causal Perspective(http://arxiv.org/abs/2312.14329)</code></li>
+<li>Summary: <p>Anomaly detection (AD) is the machine learning task of identifying highly
+discrepant abnormal samples by solely relying on the consistency of the normal
+training samples. Under the constraints of a distribution shift, the assumption
+that training samples and test samples are drawn from the same distribution
+breaks down. In this work, by leveraging tools from causal inference we attempt
+to increase the resilience of anomaly detection models to different kinds of
+distribution shifts. We begin by elucidating a simple yet necessary statistical
+property that ensures invariant representations, which is critical for robust
+AD under both domain and covariate shifts. From this property, we derive a
+regularization term which, when minimized, leads to partial distribution
+invariance across environments. Through extensive experimental evaluation on
+both synthetic and real-world tasks, covering a range of six different AD
+methods, we demonstrated significant improvements in out-of-distribution
+performance. Under both covariate and domain shift, models regularized with our
+proposed term showed marked increased robustness. Code is available at:
+https://github.com/JoaoCarv/invariant-anomaly-detection.
+</p></li>
+</ul>
+
+<h3>Title: ADA-GAD: Anomaly-Denoised Autoencoders for Graph Anomaly Detection. (arXiv:2312.14535v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14535">http://arxiv.org/abs/2312.14535</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14535]] ADA-GAD: Anomaly-Denoised Autoencoders for Graph Anomaly Detection(http://arxiv.org/abs/2312.14535)</code></li>
+<li>Summary: <p>Graph anomaly detection is crucial for identifying nodes that deviate from
+regular behavior within graphs, benefiting various domains such as fraud
+detection and social network. Although existing reconstruction-based methods
+have achieved considerable success, they may face the \textit{Anomaly
+Overfitting} and \textit{Homophily Trap} problems caused by the abnormal
+patterns in the graph, breaking the assumption that normal nodes are often
+better reconstructed than abnormal ones. Our observations indicate that models
+trained on graphs with fewer anomalies exhibit higher detection performance.
+Based on this insight, we introduce a novel two-stage framework called
+Anomaly-Denoised Autoencoders for Graph Anomaly Detection (ADA-GAD). In the
+first stage, we design a learning-free anomaly-denoised augmentation method to
+generate graphs with reduced anomaly levels. We pretrain graph autoencoders on
+these augmented graphs at multiple levels, which enables the graph autoencoders
+to capture normal patterns. In the next stage, the decoders are retrained for
+detection on the original graph, benefiting from the multi-level
+representations learned in the previous stage. Meanwhile, we propose the node
+anomaly distribution regularization to further alleviate \textit{Anomaly
+Overfitting}. We validate the effectiveness of our approach through extensive
+experiments on both synthetic and real-world datasets.
+</p></li>
+</ul>
+
+<h3>Title: Progressing from Anomaly Detection to Automated Log Labeling and Pioneering Root Cause Analysis. (arXiv:2312.14748v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2312.14748">http://arxiv.org/abs/2312.14748</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2312.14748]] Progressing from Anomaly Detection to Automated Log Labeling and Pioneering Root Cause Analysis(http://arxiv.org/abs/2312.14748)</code></li>
+<li>Summary: <p>The realm of AIOps is transforming IT landscapes with the power of AI and ML.
+Despite the challenge of limited labeled data, supervised models show promise,
+emphasizing the importance of leveraging labels for training, especially in
+deep learning contexts. This study enhances the field by introducing a taxonomy
+for log anomalies and exploring automated data labeling to mitigate labeling
+challenges. It goes further by investigating the potential of diverse anomaly
+detection techniques and their alignment with specific anomaly types. However,
+the exploration doesn't stop at anomaly detection. The study envisions a future
+where root cause analysis follows anomaly detection, unraveling the underlying
+triggers of anomalies. This uncharted territory holds immense potential for
+revolutionizing IT systems management. In essence, this paper enriches our
+understanding of anomaly detection, and automated labeling, and sets the stage
+for transformative root cause analysis. Together, these advances promise more
+resilient IT systems, elevating operational efficiency and user satisfaction in
+an ever-evolving technological landscape.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
