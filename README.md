@@ -1,56 +1,56 @@
 # arxiv-daily
-updated on 2023-12-29 22:12:03
+updated on 2024-01-01 22:14:22
 ## user_2
 | keyword | count |
 | - | - |
-| language model | 9 |
+| language model | 21 |
 | gpt | 0 |
-| llm | 3 |
+| llm | 4 |
 | long context | 0 |
-| lora | 5 |
+| lora | 0 |
 | hallucination | 0 |
-| prompt | 1 |
-| code | 11 |
-| chat | 0 |
+| prompt | 2 |
+| code | 6 |
+| chat | 1 |
 | retrieval augmented generation | 0 |
 | retrieval-augmented generation | 0 |
-| rag | 12 |
+| rag | 4 |
 | multi-run | 0 |
 | chain-of-thought | 0 |
 | tree-of-thought | 0 |
-| agent | 4 |
+| agent | 3 |
 ## user_1
 | keyword | count |
 | - | - |
-| diffusion | 9 |
-| self-supervised | 4 |
-| foundation model | 3 |
-| generative | 6 |
+| diffusion | 5 |
+| self-supervised | 3 |
+| foundation model | 0 |
+| generative | 11 |
 | anomaly | 1 |
 | in-context | 1 |
 ## user_0
 | keyword | count |
 | - | - |
 | secure | 1 |
-| security | 5 |
-| privacy | 2 |
+| security | 4 |
+| privacy | 0 |
 | protect | 0 |
-| defense | 0 |
-| attack | 3 |
-| robust | 12 |
+| defense | 3 |
+| attack | 4 |
+| robust | 8 |
 | biometric | 0 |
 | steal | 0 |
-| extraction | 0 |
+| extraction | 5 |
 | membership infer | 0 |
-| federate | 2 |
-| fair | 2 |
-| interpretability | 0 |
-| explainability | 0 |
+| federate | 3 |
+| fair | 0 |
+| interpretability | 2 |
+| explainability | 1 |
 | watermark | 1 |
-| diffusion | 8 |
+| diffusion | 5 |
 | noise learning | 0 |
 | data-free | 0 |
-| transformer | 13 |
+| transformer | 12 |
 | generative | 5 |
-| large language model | 9 |
-| segmentation | 3 |
+| large language model | 15 |
+| segmentation | 5 |
