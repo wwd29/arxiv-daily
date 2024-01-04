@@ -1,0 +1,556 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2024-01-04</h1>
+<h2>diffusion</h2>
+<h3>Title: DiffAugment: Diffusion based Long-Tailed Visual Relationship Recognition. (arXiv:2401.01387v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01387">http://arxiv.org/abs/2401.01387</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01387]] DiffAugment: Diffusion based Long-Tailed Visual Relationship Recognition(http://arxiv.org/abs/2401.01387)</code></li>
+<li>Summary: <p>The task of Visual Relationship Recognition (VRR) aims to identify
+relationships between two interacting objects in an image and is particularly
+challenging due to the widely-spread and highly imbalanced distribution of
+&lt;subject, relation, object&gt; triplets. To overcome the resultant performance
+bias in existing VRR approaches, we introduce DiffAugment -- a method which
+first augments the tail classes in the linguistic space by making use of
+WordNet and then utilizes the generative prowess of Diffusion Models to expand
+the visual space for minority classes. We propose a novel hardness-aware
+component in diffusion which is based upon the hardness of each &lt;S,R,O&gt; triplet
+and demonstrate the effectiveness of hardness-aware diffusion in generating
+visual embeddings for the tail classes. We also propose a novel subject and
+object based seeding strategy for diffusion sampling which improves the
+discriminative capability of the generated visual embeddings. Extensive
+experimentation on the GQA-LT dataset shows favorable gains in the
+subject/object and relation average per-class accuracy using Diffusion
+augmented samples.
+</p></li>
+</ul>
+
+<h3>Title: ColorizeDiffusion: Adjustable Sketch Colorization with Reference Image and Text. (arXiv:2401.01456v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01456">http://arxiv.org/abs/2401.01456</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01456]] ColorizeDiffusion: Adjustable Sketch Colorization with Reference Image and Text(http://arxiv.org/abs/2401.01456)</code></li>
+<li>Summary: <p>Recently, diffusion models have demonstrated their effectiveness in
+generating extremely high-quality images and have found wide-ranging
+applications, including automatic sketch colorization. However, most existing
+models use text to guide the conditional generation, with fewer attempts
+exploring the potential advantages of using image tokens as conditional inputs
+for networks. As such, this paper exhaustively investigates image-guided
+models, specifically targeting reference-based sketch colorization, which aims
+to colorize sketch images using reference color images. We investigate three
+critical aspects of reference-based diffusion models: the shortcomings compared
+to text-based counterparts, the training strategies, and the capability in
+zero-shot, sequential text-based manipulation. We introduce two variations of
+an image-guided latent diffusion model using different image tokens from the
+pre-trained CLIP image encoder, and we propose corresponding manipulation
+methods to adjust their results sequentially using weighted text inputs. We
+conduct comprehensive evaluations of our models through qualitative and
+quantitative experiments, as well as a user study.
+</p></li>
+</ul>
+
+<h3>Title: S$^{2}$-DMs:Skip-Step Diffusion Models. (arXiv:2401.01520v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01520">http://arxiv.org/abs/2401.01520</a></li>
+<li>Code URL: <a href="https://github.com/kingkingofall/skip-step-diffusion">https://github.com/kingkingofall/skip-step-diffusion</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01520]] S$^{2}$-DMs:Skip-Step Diffusion Models(http://arxiv.org/abs/2401.01520)</code></li>
+<li>Summary: <p>Diffusion models have emerged as powerful generative tools, rivaling GANs in
+sample quality and mirroring the likelihood scores of autoregressive models. A
+subset of these models, exemplified by DDIMs, exhibit an inherent asymmetry:
+they are trained over $T$ steps but only sample from a subset of $T$ during
+generation. This selective sampling approach, though optimized for speed,
+inadvertently misses out on vital information from the unsampled steps, leading
+to potential compromises in sample quality. To address this issue, we present
+the S$^{2}$-DMs, which is a new training method by using an innovative
+$L_{skip}$, meticulously designed to reintegrate the information omitted during
+the selective sampling phase. The benefits of this approach are manifold: it
+notably enhances sample quality, is exceptionally simple to implement, requires
+minimal code modifications, and is flexible enough to be compatible with
+various sampling algorithms. On the CIFAR10 dataset, models trained using our
+algorithm showed an improvement of 3.27% to 14.06% over models trained with
+traditional methods across various sampling algorithms (DDIMs, PNDMs, DEIS) and
+different numbers of sampling steps (10, 20, ..., 1000). On the CELEBA dataset,
+the improvement ranged from 8.97% to 27.08%. Access to the code and additional
+resources is provided in the github.
+</p></li>
+</ul>
+
+<h3>Title: SIGNeRF: Scene Integrated Generation for Neural Radiance Fields. (arXiv:2401.01647v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01647">http://arxiv.org/abs/2401.01647</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01647]] SIGNeRF: Scene Integrated Generation for Neural Radiance Fields(http://arxiv.org/abs/2401.01647)</code></li>
+<li>Summary: <p>Advances in image diffusion models have recently led to notable improvements
+in the generation of high-quality images. In combination with Neural Radiance
+Fields (NeRFs), they enabled new opportunities in 3D generation. However, most
+generative 3D approaches are object-centric and applying them to editing
+existing photorealistic scenes is not trivial. We propose SIGNeRF, a novel
+approach for fast and controllable NeRF scene editing and scene-integrated
+object generation. A new generative update strategy ensures 3D consistency
+across the edited images, without requiring iterative optimization. We find
+that depth-conditioned diffusion models inherently possess the capability to
+generate 3D consistent views by requesting a grid of images instead of single
+views. Based on these insights, we introduce a multi-view reference sheet of
+modified images. Our method updates an image collection consistently based on
+the reference sheet and refines the original NeRF with the newly generated
+image set in one go. By exploiting the depth conditioning mechanism of the
+image diffusion model, we gain fine control over the spatial location of the
+edit and enforce shape guidance by a selected region or an external mesh.
+</p></li>
+</ul>
+
+<h3>Title: DiffYOLO: Object Detection for Anti-Noise via YOLO and Diffusion Models. (arXiv:2401.01659v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01659">http://arxiv.org/abs/2401.01659</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01659]] DiffYOLO: Object Detection for Anti-Noise via YOLO and Diffusion Models(http://arxiv.org/abs/2401.01659)</code></li>
+<li>Summary: <p>Object detection models represented by YOLO series have been widely used and
+have achieved great results on the high quality datasets, but not all the
+working conditions are ideal. To settle down the problem of locating targets on
+low quality datasets, the existing methods either train a new object detection
+network, or need a large collection of low-quality datasets to train. However,
+we propose a framework in this paper and apply it on the YOLO models called
+DiffYOLO. Specifically, we extract feature maps from the denoising diffusion
+probabilistic models to enhance the well-trained models, which allows us
+fine-tune YOLO on high-quality datasets and test on low-quality datasets. The
+results proved this framework can not only prove the performance on noisy
+datasets, but also prove the detection results on high-quality test datasets.
+We will supplement more experiments later (with various datasets and network
+architectures).
+</p></li>
+</ul>
+
+<h3>Title: Simultaneous q-Space Sampling Optimization and Reconstruction for Fast and High-fidelity Diffusion Magnetic Resonance Imaging. (arXiv:2401.01662v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01662">http://arxiv.org/abs/2401.01662</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01662]] Simultaneous q-Space Sampling Optimization and Reconstruction for Fast and High-fidelity Diffusion Magnetic Resonance Imaging(http://arxiv.org/abs/2401.01662)</code></li>
+<li>Summary: <p>Diffusion Magnetic Resonance Imaging (dMRI) plays a crucial role in the
+noninvasive investigation of tissue microstructural properties and structural
+connectivity in the \textit{in vivo} human brain. However, to effectively
+capture the intricate characteristics of water diffusion at various directions
+and scales, it is important to employ comprehensive q-space sampling.
+Unfortunately, this requirement leads to long scan times, limiting the clinical
+applicability of dMRI. To address this challenge, we propose SSOR, a
+Simultaneous q-Space sampling Optimization and Reconstruction framework. We
+jointly optimize a subset of q-space samples using a continuous representation
+of spherical harmonic functions and a reconstruction network. Additionally, we
+integrate the unique properties of diffusion magnetic resonance imaging (dMRI)
+in both the q-space and image domains by applying $l1$-norm and total-variation
+regularization. The experiments conducted on HCP data demonstrate that SSOR has
+promising strengths both quantitatively and qualitatively and exhibits
+robustness to noise.
+</p></li>
+</ul>
+
+<h3>Title: AID-DTI: Accelerating High-fidelity Diffusion Tensor Imaging with Detail-Preserving Model-based Deep Learning. (arXiv:2401.01693v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01693">http://arxiv.org/abs/2401.01693</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01693]] AID-DTI: Accelerating High-fidelity Diffusion Tensor Imaging with Detail-Preserving Model-based Deep Learning(http://arxiv.org/abs/2401.01693)</code></li>
+<li>Summary: <p>Deep learning has shown great potential in accelerating diffusion tensor
+imaging (DTI). Nevertheless, existing methods tend to suffer from Rician noise
+and detail loss in reconstructing the DTI-derived parametric maps especially
+when sparsely sampled q-space data are used. This paper proposes a novel
+method, AID-DTI (Accelerating hIgh fiDelity Diffusion Tensor Imaging), to
+facilitate fast and accurate DTI with only six measurements. AID-DTI is
+equipped with a newly designed Singular Value Decomposition (SVD)-based
+regularizer, which can effectively capture fine details while suppressing noise
+during network training. Experimental results on Human Connectome Project (HCP)
+data consistently demonstrate that the proposed method estimates DTI parameter
+maps with fine-grained details and outperforms three state-of-the-art methods
+both quantitatively and qualitatively.
+</p></li>
+</ul>
+
+<h3>Title: aMUSEd: An Open MUSE Reproduction. (arXiv:2401.01808v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01808">http://arxiv.org/abs/2401.01808</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01808]] aMUSEd: An Open MUSE Reproduction(http://arxiv.org/abs/2401.01808)</code></li>
+<li>Summary: <p>We present aMUSEd, an open-source, lightweight masked image model (MIM) for
+text-to-image generation based on MUSE. With 10 percent of MUSE's parameters,
+aMUSEd is focused on fast image generation. We believe MIM is under-explored
+compared to latent diffusion, the prevailing approach for text-to-image
+generation. Compared to latent diffusion, MIM requires fewer inference steps
+and is more interpretable. Additionally, MIM can be fine-tuned to learn
+additional styles with only a single image. We hope to encourage further
+exploration of MIM by demonstrating its effectiveness on large-scale
+text-to-image generation and releasing reproducible training code. We also
+release checkpoints for two models which directly produce images at 256x256 and
+512x512 resolutions.
+</p></li>
+</ul>
+
+<h3>Title: Moonshot: Towards Controllable Video Generation and Editing with Multimodal Conditions. (arXiv:2401.01827v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01827">http://arxiv.org/abs/2401.01827</a></li>
+<li>Code URL: <a href="https://github.com/salesforce/lavis">https://github.com/salesforce/lavis</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01827]] Moonshot: Towards Controllable Video Generation and Editing with Multimodal Conditions(http://arxiv.org/abs/2401.01827)</code></li>
+<li>Summary: <p>Most existing video diffusion models (VDMs) are limited to mere text
+conditions. Thereby, they are usually lacking in control over visual appearance
+and geometry structure of the generated videos. This work presents Moonshot, a
+new video generation model that conditions simultaneously on multimodal inputs
+of image and text. The model builts upon a core module, called multimodal video
+block (MVB), which consists of conventional spatialtemporal layers for
+representing video features, and a decoupled cross-attention layer to address
+image and text inputs for appearance conditioning. In addition, we carefully
+design the model architecture such that it can optionally integrate with
+pre-trained image ControlNet modules for geometry visual conditions, without
+needing of extra training overhead as opposed to prior methods. Experiments
+show that with versatile multimodal conditioning mechanisms, Moonshot
+demonstrates significant improvement on visual quality and temporal consistency
+compared to existing models. In addition, the model can be easily repurposed
+for a variety of generative applications, such as personalized video
+generation, image animation and video editing, unveiling its potential to serve
+as a fundamental architecture for controllable video generation. Models will be
+made public on https://github.com/salesforce/LAVIS.
+</p></li>
+</ul>
+
+<h3>Title: From Audio to Photoreal Embodiment: Synthesizing Humans in Conversations. (arXiv:2401.01885v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01885">http://arxiv.org/abs/2401.01885</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01885]] From Audio to Photoreal Embodiment: Synthesizing Humans in Conversations(http://arxiv.org/abs/2401.01885)</code></li>
+<li>Summary: <p>We present a framework for generating full-bodied photorealistic avatars that
+gesture according to the conversational dynamics of a dyadic interaction. Given
+speech audio, we output multiple possibilities of gestural motion for an
+individual, including face, body, and hands. The key behind our method is in
+combining the benefits of sample diversity from vector quantization with the
+high-frequency details obtained through diffusion to generate more dynamic,
+expressive motion. We visualize the generated motion using highly
+photorealistic avatars that can express crucial nuances in gestures (e.g.
+sneers and smirks). To facilitate this line of research, we introduce a
+first-of-its-kind multi-view conversational dataset that allows for
+photorealistic reconstruction. Experiments show our model generates appropriate
+and diverse gestures, outperforming both diffusion- and VQ-only methods.
+Furthermore, our perceptual evaluation highlights the importance of
+photorealism (vs. meshes) in accurately assessing subtle motion details in
+conversational gestures. Code and dataset available online.
+</p></li>
+</ul>
+
+<h3>Title: DGDNN: Decoupled Graph Diffusion Neural Network for Stock Movement Prediction. (arXiv:2401.01846v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01846">http://arxiv.org/abs/2401.01846</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01846]] DGDNN: Decoupled Graph Diffusion Neural Network for Stock Movement Prediction(http://arxiv.org/abs/2401.01846)</code></li>
+<li>Summary: <p>Forecasting future stock trends remains challenging for academia and industry
+due to stochastic inter-stock dynamics and hierarchical intra-stock dynamics
+influencing stock prices. In recent years, graph neural networks have achieved
+remarkable performance in this problem by formulating multiple stocks as
+graph-structured data. However, most of these approaches rely on artificially
+defined factors to construct static stock graphs, which fail to capture the
+intrinsic interdependencies between stocks that rapidly evolve. In addition,
+these methods often ignore the hierarchical features of the stocks and lose
+distinctive information within. In this work, we propose a novel graph learning
+approach implemented without expert knowledge to address these issues. First,
+our approach automatically constructs dynamic stock graphs by entropy-driven
+edge generation from a signal processing perspective. Then, we further learn
+task-optimal dependencies between stocks via a generalized graph diffusion
+process on constructed stock graphs. Last, a decoupled representation learning
+scheme is adopted to capture distinctive hierarchical intra-stock features.
+Experimental results demonstrate substantial improvements over state-of-the-art
+baselines on real-world datasets. Moreover, the ablation study and sensitivity
+study further illustrate the effectiveness of the proposed method in modeling
+the time-evolving inter-stock and intra-stock dynamics.
+</p></li>
+</ul>
+
+<h2>self-supervised</h2>
+<h3>Title: Multimodal self-supervised learning for lesion localization. (arXiv:2401.01524v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01524">http://arxiv.org/abs/2401.01524</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01524]] Multimodal self-supervised learning for lesion localization(http://arxiv.org/abs/2401.01524)</code></li>
+<li>Summary: <p>Multimodal deep learning utilizing imaging and diagnostic reports has made
+impressive progress in the field of medical imaging diagnostics, demonstrating
+a particularly strong capability for auxiliary diagnosis in cases where
+sufficient annotation information is lacking. Nonetheless, localizing diseases
+accurately without detailed positional annotations remains a challenge.
+Although existing methods have attempted to utilize local information to
+achieve fine-grained semantic alignment, their capability in extracting the
+fine-grained semantics of the comprehensive contextual within reports is
+limited. To solve this problem, we introduce a new method that takes full
+sentences from textual reports as the basic units for local semantic alignment.
+Our approach combines chest X-ray images with their corresponding textual
+reports, performing contrastive learning at both global and local levels. The
+leading results obtained by our method on multiple datasets confirm its
+efficacy in the task of lesion localization.
+</p></li>
+</ul>
+
+<h3>Title: A Vision Check-up for Language Models. (arXiv:2401.01862v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01862">http://arxiv.org/abs/2401.01862</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01862]] A Vision Check-up for Language Models(http://arxiv.org/abs/2401.01862)</code></li>
+<li>Summary: <p>What does learning to model relationships between strings teach large
+language models (LLMs) about the visual world? We systematically evaluate LLMs'
+abilities to generate and recognize an assortment of visual concepts of
+increasing complexity and then demonstrate how a preliminary visual
+representation learning system can be trained using models of text. As language
+models lack the ability to consume or output visual information as pixels, we
+use code to represent images in our study. Although LLM-generated images do not
+look like natural images, results on image generation and the ability of models
+to correct these generated images indicate that precise modeling of strings can
+teach language models about numerous aspects of the visual world. Furthermore,
+experiments on self-supervised visual representation learning, utilizing images
+generated with text models, highlight the potential to train vision models
+capable of making semantic assessments of natural images using just LLMs.
+</p></li>
+</ul>
+
+<h3>Title: Evaluating Fairness in Self-supervised and Supervised Models for Sequential Data. (arXiv:2401.01640v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01640">http://arxiv.org/abs/2401.01640</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01640]] Evaluating Fairness in Self-supervised and Supervised Models for Sequential Data(http://arxiv.org/abs/2401.01640)</code></li>
+<li>Summary: <p>Self-supervised learning (SSL) has become the de facto training paradigm of
+large models where pre-training is followed by supervised fine-tuning using
+domain-specific data and labels. Hypothesizing that SSL models would learn more
+generic, hence less biased, representations, this study explores the impact of
+pre-training and fine-tuning strategies on fairness (i.e., performing equally
+on different demographic breakdowns). Motivated by human-centric applications
+on real-world timeseries data, we interpret inductive biases on the model,
+layer, and metric levels by systematically comparing SSL models to their
+supervised counterparts. Our findings demonstrate that SSL has the capacity to
+achieve performance on par with supervised methods while significantly
+enhancing fairness--exhibiting up to a 27% increase in fairness with a mere 1%
+loss in performance through self-supervision. Ultimately, this work underscores
+SSL's potential in human-centric computing, particularly high-stakes,
+data-scarce application domains like healthcare.
+</p></li>
+</ul>
+
+<h3>Title: Zero-shot Active Learning Using Self Supervised Learning. (arXiv:2401.01690v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01690">http://arxiv.org/abs/2401.01690</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01690]] Zero-shot Active Learning Using Self Supervised Learning(http://arxiv.org/abs/2401.01690)</code></li>
+<li>Summary: <p>Deep learning algorithms are often said to be data hungry. The performance of
+such algorithms generally improve as more and more annotated data is fed into
+the model. While collecting unlabelled data is easier (as they can be scraped
+easily from the internet), annotating them is a tedious and expensive task.
+Given a fixed budget available for data annotation, Active Learning helps
+selecting the best subset of data for annotation, such that the deep learning
+model when trained over that subset will have maximum generalization
+performance under this budget. In this work, we aim to propose a new Active
+Learning approach which is model agnostic as well as one doesn't require an
+iterative process. We aim to leverage self-supervised learnt features for the
+task of Active Learning. The benefit of self-supervised learning, is that one
+can get useful feature representation of the input data, without having any
+annotation.
+</p></li>
+</ul>
+
+<h2>foundation model</h2>
+<h3>Title: Enhancing the medical foundation model with multi-scale and cross-modality feature learning. (arXiv:2401.01583v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01583">http://arxiv.org/abs/2401.01583</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01583]] Enhancing the medical foundation model with multi-scale and cross-modality feature learning(http://arxiv.org/abs/2401.01583)</code></li>
+<li>Summary: <p>The development of multi-modal medical foundation models has attracted
+significant attention in the field of medicine and healthcare due to their
+promising prospects in various clinical applications. One area of focus in this
+research direction is the extractions of features at different scales. While
+previous studies have explored feature learning at individual scales,
+investigation on integrating the diverse scales and modalities of information
+is lacking, which may hinder the potential for mutual reinforcement among these
+features. This paper aims to bridge this gap by proposing a method that
+effectively exploits multi-scale and cross-modality information to enhance the
+performance of medical foundation models. The proposed method simultaneously
+exploit features at the local, instance, modality and global aspects,
+facilitating comprehensive representation learning within the models. We
+evaluate the effectiveness of the proposed method on six open-source datasets
+across different clinical tasks, demonstrating its ability to enhance the
+performance of medical foundation models.
+</p></li>
+</ul>
+
+<h3>Title: Few-shot Adaptation of Multi-modal Foundation Models: A Survey. (arXiv:2401.01736v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01736">http://arxiv.org/abs/2401.01736</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01736]] Few-shot Adaptation of Multi-modal Foundation Models: A Survey(http://arxiv.org/abs/2401.01736)</code></li>
+<li>Summary: <p>Multi-modal (vision-language) models, such as CLIP, are replacing traditional
+supervised pre-training models (e.g., ImageNet-based pre-training) as the new
+generation of visual foundation models. These models with robust and aligned
+semantic representations learned from billions of internet image-text pairs and
+can be applied to various downstream tasks in a zero-shot manner. However, in
+some fine-grained domains like medical imaging and remote sensing, the
+performance of multi-modal foundation models often leaves much to be desired.
+Consequently, many researchers have begun to explore few-shot adaptation
+methods for these models, gradually deriving three main technical approaches:
+1) prompt-based methods, 2) adapter-based methods, and 3) external
+knowledge-based methods. Nevertheless, this rapidly developing field has
+produced numerous results without a comprehensive survey to systematically
+organize the research progress. Therefore, in this survey, we introduce and
+analyze the research advancements in few-shot adaptation methods for
+multi-modal models, summarizing commonly used datasets and experimental setups,
+and comparing the results of different methods. In addition, due to the lack of
+reliable theoretical support for existing methods, we derive the few-shot
+adaptation generalization error bound for multi-modal models. The theorem
+reveals that the generalization error of multi-modal foundation models is
+constrained by three factors: domain gap, model capacity, and sample size.
+Based on this, we propose three possible solutions from the following aspects:
+1) adaptive domain generalization, 2) adaptive model selection, and 3) adaptive
+knowledge utilization.
+</p></li>
+</ul>
+
+<h2>generative</h2>
+<h3>Title: Few-shot Image Generation via Information Transfer from the Built Geodesic Surface. (arXiv:2401.01749v1 [cs.CV])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01749">http://arxiv.org/abs/2401.01749</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01749]] Few-shot Image Generation via Information Transfer from the Built Geodesic Surface(http://arxiv.org/abs/2401.01749)</code></li>
+<li>Summary: <p>Images generated by most of generative models trained with limited data often
+exhibit deficiencies in either fidelity, diversity, or both. One effective
+solution to address the limitation is few-shot generative model adaption.
+However, the type of approaches typically rely on a large-scale pre-trained
+model, serving as a source domain, to facilitate information transfer to the
+target domain. In this paper, we propose a method called Information Transfer
+from the Built Geodesic Surface (ITBGS), which contains two module: Feature
+Augmentation on Geodesic Surface (FAGS); Interpolation and Regularization
+(I\&amp;R). With the FAGS module, a pseudo-source domain is created by projecting
+image features from the training dataset into the Pre-Shape Space, subsequently
+generating new features on the Geodesic surface. Thus, no pre-trained models is
+needed for the adaption process during the training of generative models with
+FAGS. I\&amp;R module are introduced for supervising the interpolated images and
+regularizing their relative distances, respectively, to further enhance the
+quality of generated images. Through qualitative and quantitative experiments,
+we demonstrate that the proposed method consistently achieves optimal or
+comparable results across a diverse range of semantically distinct datasets,
+even in extremely few-shot scenarios.
+</p></li>
+</ul>
+
+<h3>Title: Physio: An LLM-Based Physiotherapy Advisor. (arXiv:2401.01825v1 [cs.CL])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01825">http://arxiv.org/abs/2401.01825</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01825]] Physio: An LLM-Based Physiotherapy Advisor(http://arxiv.org/abs/2401.01825)</code></li>
+<li>Summary: <p>The capabilities of the most recent language models have increased the
+interest in integrating them into real-world applications. However, the fact
+that these models generate plausible, yet incorrect text poses a constraint
+when considering their use in several domains. Healthcare is a prime example of
+a domain where text-generative trustworthiness is a hard requirement to
+safeguard patient well-being. In this paper, we present Physio, a chat-based
+application for physical rehabilitation. Physio is capable of making an initial
+diagnosis while citing reliable health sources to support the information
+provided. Furthermore, drawing upon external knowledge databases, Physio can
+recommend rehabilitation exercises and over-the-counter medication for symptom
+relief. By combining these features, Physio can leverage the power of
+generative models for language processing while also conditioning its response
+on dependable and verifiable sources. A live demo of Physio is available at
+https://physio.inesctec.pt.
+</p></li>
+</ul>
+
+<h3>Title: Theoretical guarantees on the best-of-n alignment policy. (arXiv:2401.01879v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01879">http://arxiv.org/abs/2401.01879</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01879]] Theoretical guarantees on the best-of-n alignment policy(http://arxiv.org/abs/2401.01879)</code></li>
+<li>Summary: <p>A simple and effective method for the alignment of generative models is the
+best-of-$n$ policy, where $n$ samples are drawn from a base policy, and ranked
+based on a reward function, and the highest ranking one is selected. A commonly
+used analytical expression in the literature claims that the KL divergence
+between the best-of-$n$ policy and the base policy is equal to $\log (n) -
+(n-1)/n.$ We disprove the validity of this claim, and show that it is an upper
+bound on the actual KL divergence. We also explore the tightness of this upper
+bound in different regimes. Finally, we propose a new estimator for the KL
+divergence and empirically show that it provides a tight approximation through
+a few examples.
+</p></li>
+</ul>
+
+<h3>Title: Modular Learning of Deep Causal Generative Models for High-dimensional Causal Inference. (arXiv:2401.01426v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01426">http://arxiv.org/abs/2401.01426</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01426]] Modular Learning of Deep Causal Generative Models for High-dimensional Causal Inference(http://arxiv.org/abs/2401.01426)</code></li>
+<li>Summary: <p>Pearl's causal hierarchy establishes a clear separation between
+observational, interventional, and counterfactual questions. Researchers
+proposed sound and complete algorithms to compute identifiable causal queries
+at a given level of the hierarchy using the causal structure and data from the
+lower levels of the hierarchy. However, most of these algorithms assume that we
+can accurately estimate the probability distribution of the data, which is an
+impractical assumption for high-dimensional variables such as images. On the
+other hand, modern generative deep learning architectures can be trained to
+learn how to accurately sample from such high-dimensional distributions.
+Especially with the recent rise of foundation models for images, it is
+desirable to leverage pre-trained models to answer causal queries with such
+high-dimensional data. To address this, we propose a sequential training
+algorithm that, given the causal structure and a pre-trained conditional
+generative model, can train a deep causal generative model, which utilizes the
+pre-trained model and can provably sample from identifiable interventional and
+counterfactual distributions. Our algorithm, called Modular-DCM, uses
+adversarial training to learn the network weights, and to the best of our
+knowledge, is the first algorithm that can make use of pre-trained models and
+provably sample from any identifiable causal query in the presence of latent
+confounders with high-dimensional data. We demonstrate the utility of our
+algorithm using semi-synthetic and real-world datasets containing images as
+variables in the causal structure.
+</p></li>
+</ul>
+
+<h3>Title: Towards a Foundation Purchasing Model: Pretrained Generative Autoregression on Transaction Sequences. (arXiv:2401.01641v1 [cs.LG])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01641">http://arxiv.org/abs/2401.01641</a></li>
+<li>Code URL: <a href="https://github.com/featurespace/foundation-model-paper">https://github.com/featurespace/foundation-model-paper</a></li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01641]] Towards a Foundation Purchasing Model: Pretrained Generative Autoregression on Transaction Sequences(http://arxiv.org/abs/2401.01641)</code></li>
+<li>Summary: <p>Machine learning models underpin many modern financial systems for use cases
+such as fraud detection and churn prediction. Most are based on supervised
+learning with hand-engineered features, which relies heavily on the
+availability of labelled data. Large self-supervised generative models have
+shown tremendous success in natural language processing and computer vision,
+yet so far they haven't been adapted to multivariate time series of financial
+transactions. In this paper, we present a generative pretraining method that
+can be used to obtain contextualised embeddings of financial transactions.
+Benchmarks on public datasets demonstrate that it outperforms state-of-the-art
+self-supervised methods on a range of downstream tasks. We additionally perform
+large-scale pretraining of an embedding model using a corpus of data from 180
+issuing banks containing 5.1 billion transactions and apply it to the card
+fraud detection problem on hold-out datasets. The embedding model significantly
+improves value detection rate at high precision thresholds and transfers well
+to out-of-domain distributions.
+</p></li>
+</ul>
+
+<h2>anomaly</h2>
+<h3>Title: Securing the Digital World: Protecting smart infrastructures and digital industries with Artificial Intelligence (AI)-enabled malware and intrusion detection. (arXiv:2401.01342v1 [cs.CR])</h3>
+<ul>
+<li>Paper URL: <a href="http://arxiv.org/abs/2401.01342">http://arxiv.org/abs/2401.01342</a></li>
+<li>Code URL: null</li>
+<li>Copy Paste: <code><input type="checkbox">[[2401.01342]] Securing the Digital World: Protecting smart infrastructures and digital industries with Artificial Intelligence (AI)-enabled malware and intrusion detection(http://arxiv.org/abs/2401.01342)</code></li>
+<li>Summary: <p>The last decades have been characterized by unprecedented technological
+advances, many of them powered by modern technologies such as Artificial
+Intelligence (AI) and Machine Learning (ML). The world has become more
+digitally connected than ever, but we face major challenges. One of the most
+significant is cybercrime, which has emerged as a global threat to governments,
+businesses, and civil societies. The pervasiveness of digital technologies
+combined with a constantly shifting technological foundation has created a
+complex and powerful playground for cybercriminals, which triggered a surge in
+demand for intelligent threat detection systems based on machine and deep
+learning. This paper investigates AI-based cyber threat detection to protect
+our modern digital ecosystems. The primary focus is on evaluating ML-based
+classifiers and ensembles for anomaly-based malware detection and network
+intrusion detection and how to integrate those models in the context of network
+security, mobile security, and IoT security. The discussion highlights the
+challenges when deploying and integrating AI-enabled cybersecurity solutions
+into existing enterprise systems and IT infrastructures, including options to
+overcome those challenges. Finally, the paper provides future research
+directions to further increase the security and resilience of our modern
+digital industries, infrastructures, and ecosystems.
+</p></li>
+</ul>
+
+<h2>in-context</h2>
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
