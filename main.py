@@ -4,7 +4,8 @@ from datetime import datetime
 import feedparser
 import yaml
 
-from utils.utils import check_title, find_keyword, get_code_url, get_week_dates
+from utils.utils import (check_title, find_keyword, get_code_url,
+                         get_week_dates, translate)
 
 
 def parse_user():
@@ -39,15 +40,16 @@ def parse_rss(info):
                 if keyword is None:
                     continue
                 code_url = get_code_url(entry.id.split('/')[-1])
+                summary_zh = translate(entry.summary)
                 item = get_item(entry.link, entry.title, code_url,
-                                entry.summary)
+                                entry.summary, summary_zh)
 
                 keywords_bin[keyword].append(item)
                 paper_ids.add(entry.id)
     return keywords_bin
 
 
-def get_item(paper_url, title, code_url, summary):
+def get_item(paper_url, title, code_url, summary, summary_zh):
     id = paper_url.split('/')[-1]
     sub_title = title.split(".")[0]
     code_url = 'null' if code_url is None else f'<a href="{code_url}">{code_url}</a>'
@@ -57,6 +59,7 @@ def get_item(paper_url, title, code_url, summary):
         f'<li>Code URL: {code_url}</li>\n' \
         f'<li>Copy Paste: <code><input type="checkbox">[[{id}]] {sub_title}({paper_url})</code></li>\n' \
         f'<li>Summary: {summary}</li>\n' \
+        f'<li>摘要：{summary_zh}</li>\n' \
         f'</ul>\n'
     return item
 

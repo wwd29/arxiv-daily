@@ -1,10 +1,17 @@
+import html
 import os
 import random
+import re
+import textwrap
 import time
 from collections import defaultdict
 from datetime import datetime
+from urllib import parse
 
 import requests
+
+GOOGLE_TRANSLATE_URL = 'https://translate.google.com/m?q=%s&tl=%s&sl=%s'
+
 
 headers = {
     'User-Agent':
@@ -49,3 +56,22 @@ def get_week_dates(root):
         week = datetime.strptime(date, '%Y-%m-%d').strftime('%Y-W%W')
         week_dates[week].append(date)
     return week_dates
+
+
+def translate(text, to_language="zh-CN", text_language="en"):
+    time.sleep(random.random())
+    text = textwrap.replace('\n', ' ')
+    text = parse.quote(text)
+    url = GOOGLE_TRANSLATE_URL % (text, to_language, text_language)
+    try:
+        response = requests.get(url, timeout=2)
+    except Exception:
+        return ""
+
+    data = response.text
+    expr = r'(?s)class="(?:t0|result-container)">(.*?)<'
+    result = re.findall(expr, data)
+    if (len(result) == 0):
+        return ""
+
+    return textwrap.fill(html.unescape(result[0]), width=79)
