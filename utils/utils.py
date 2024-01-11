@@ -60,7 +60,7 @@ def get_week_dates(root):
 
 def translate(text, to_language="zh-CN", text_language="en"):
     time.sleep(random.random())
-    text = textwrap.replace('\n', ' ')
+    text = text.replace('\n', ' ')
     text = parse.quote(text)
     url = GOOGLE_TRANSLATE_URL % (text, to_language, text_language)
     try:
