@@ -40,6 +40,7 @@ def parse_rss(info):
                 if keyword is None:
                     continue
                 code_url = get_code_url(entry.id.split('/')[-1])
+                entry.summary = entry.summary.replace('\n', ' ')
                 summary_zh = translate(entry.summary)
                 item = get_item(entry.link, entry.title, code_url,
                                 entry.summary, summary_zh)
@@ -51,7 +52,7 @@ def parse_rss(info):
 
 def get_item(paper_url, title, code_url, summary, summary_zh):
     id = paper_url.split('/')[-1]
-    sub_title = title.split(".")[0]
+    sub_title = title.split(". (arXiv:")[0]
     code_url = 'null' if code_url is None else f'<a href="{code_url}">{code_url}</a>'
     item = f'<h3>Title: {title}</h3>\n' \
         f'<ul>\n' \

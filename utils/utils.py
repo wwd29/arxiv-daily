@@ -2,7 +2,6 @@ import html
 import os
 import random
 import re
-import textwrap
 import time
 from collections import defaultdict
 from datetime import datetime
@@ -60,7 +59,6 @@ def get_week_dates(root):
 
 def translate(text, to_language="zh-CN", text_language="en"):
     time.sleep(random.random())
-    text = text.replace('\n', ' ')
     text = parse.quote(text)
     url = GOOGLE_TRANSLATE_URL % (text, to_language, text_language)
     try:
@@ -74,4 +72,4 @@ def translate(text, to_language="zh-CN", text_language="en"):
     if (len(result) == 0):
         return ""
 
-    return textwrap.fill(html.unescape(result[0]), width=79)
+    return html.unescape(result[0])
