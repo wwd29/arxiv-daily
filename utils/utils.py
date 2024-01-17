@@ -30,15 +30,20 @@ def translate(text, to_language="zh-CN", text_language="en"):
     time.sleep(random.random() + 1)
     text = parse.quote(text)
     url = GOOGLE_TRANSLATE_URL % (text, to_language, text_language)
-    try:
-        response = requests.get(url, timeout=2)
-    except Exception:
+    response = None
+    for i in range(5):
+        try:
+            response = requests.get(url, timeout=2)
+            break
+        except Exception:
+            time.sleep(1)
+    if response is None:
         return ""
 
     data = response.text
     expr = r'(?s)class="(?:t0|result-container)">(.*?)<'
     result = re.findall(expr, data)
-    if (len(result) == 0):
+    if len(result) == 0:
         return ""
 
     return html.unescape(result[0])
