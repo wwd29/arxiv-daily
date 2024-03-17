@@ -3,6 +3,7 @@ import re
 from datetime import datetime
 from urllib import request
 
+import dateutil.parser
 import yaml
 from bs4 import BeautifulSoup
 
@@ -77,12 +78,13 @@ def main():
 
     new_url = 'https://arxiv.org/list/cs/new'
     req = request.Request(url=new_url, headers=HEADERS)
-    page = request.urlopen(req, timeout=5)
+    page = request.urlopen(req, timeout=20)
     bs = BeautifulSoup(page, features='html.parser')
     content = bs.body.find('div', {'id': 'content'})
 
     dts = content.dl.find_all('dt')
     dds = content.dl.find_all('dd')
+    parse_date = dateutil.parser.parse(content.h3.text.replace('New submissions for ', ''))
 
     assert len(dts) == len(dds)
 
@@ -117,8 +119,8 @@ def main():
 
     out_root = 'html'
 
-    date = datetime.strftime(now, '%Y-%m-%d')
-    week = datetime.strftime(now, '%Y-W%W')
+    date = datetime.strftime(parse_date, '%Y-%m-%d')
+    week = datetime.strftime(parse_date, '%Y-W%W')
     # 更新index
     with open('index.html', 'w', encoding='utf-8') as f:
         print(f'<link rel="stylesheet" href="css/markdown.css" />', file=f)
