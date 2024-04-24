@@ -1,7 +1,7 @@
 # arxiv-daily
-updated on 2024-04-23 06:25:40
+updated on 2024-04-24 06:37:40
 | name | count |
 | - | - |
-| user_2 | 59 |
-| user_1 | 66 |
-| user_0 | 221 |
+| user_2 | 49 |
+| user_1 | 44 |
+| user_0 | 138 |
