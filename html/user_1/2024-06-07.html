@@ -1,0 +1,735 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2024-06-07</h1>
+<h3>Title: Title:
+          Mutual Information Guided Backdoor Mitigation for Pre-trained Encoders</h3>
+<ul>
+<li><strong>Authors: </strong>Tingxu Han, Weisong Sun, Ziqi Ding, Chunrong Fang, Hanwei Qian, Jiaxun Li, Zhenyu Chen, Xiangyu Zhang</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Mutual Information Guided Backdoor Mitigation for Pre-trained Encoders(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Self-supervised learning (SSL) is increasingly attractive for pre-training encoders without requiring labeled data. Downstream tasks built on top of those pre-trained encoders can achieve nearly state-of-the-art performance. The pre-trained encoders by SSL, however, are vulnerable to backdoor attacks as demonstrated by existing studies. Numerous backdoor mitigation techniques are designed for downstream task models. However, their effectiveness is impaired and limited when adapted to pre-trained encoders, due to the lack of label information when pre-training. To address backdoor attacks against pre-trained encoders, in this paper, we innovatively propose a mutual information guided backdoor mitigation technique, named MIMIC. MIMIC treats the potentially backdoored encoder as the teacher net and employs knowledge distillation to distill a clean student encoder from the teacher net. Different from existing knowledge distillation approaches, MIMIC initializes the student with random weights, inheriting no backdoors from teacher nets. Then MIMIC leverages mutual information between each layer and extracted features to locate where benign knowledge lies in the teacher net, with which distillation is deployed to clone clean features from teacher to student. We craft the distillation loss with two aspects, including clone loss and attention loss, aiming to mitigate backdoors and maintain encoder performance at the same time. Our evaluation conducted on two backdoor attacks in SSL demonstrates that MIMIC can significantly reduce the attack success rate by only utilizing <5% of clean data, surpassing seven state-of-the-art backdoor mitigation techniques.</li>
+</ul>
+
+<h3>Title: Title:
+          VideoPhy: Evaluating Physical Commonsense for Video Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Hritik Bansal, Zongyu Lin, Tianyi Xie, Zeshun Zong, Michal Yarom, Yonatan Bitton, Chenfanfu Jiang, Yizhou Sun, Kai-Wei Chang, Aditya Grover</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          VideoPhy: Evaluating Physical Commonsense for Video Generation(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Recent advances in internet-scale video data pretraining have led to the development of text-to-video generative models that can create high-quality videos across a broad range of visual concepts and styles. Due to their ability to synthesize realistic motions and render complex objects, these generative models have the potential to become general-purpose simulators of the physical world. However, it is unclear how far we are from this goal with the existing text-to-video generative models. To this end, we present VideoPhy, a benchmark designed to assess whether the generated videos follow physical commonsense for real-world activities (e.g. marbles will roll down when placed on a slanted surface). Specifically, we curate a list of 688 captions that involve interactions between various material types in the physical world (e.g., solid-solid, solid-fluid, fluid-fluid). We then generate videos conditioned on these captions from diverse state-of-the-art text-to-video generative models, including open models (e.g., VideoCrafter2) and closed models (e.g., Lumiere from Google, Pika). Further, our human evaluation reveals that the existing models severely lack the ability to generate videos adhering to the given text prompts, while also lack physical commonsense. Specifically, the best performing model, Pika, generates videos that adhere to the caption and physical laws for only 19.7% of the instances. VideoPhy thus highlights that the video generative models are far from accurately simulating the physical world. Finally, we also supplement the dataset with an auto-evaluator, VideoCon-Physics, to assess semantic adherence and physical commonsense at scale.</li>
+</ul>
+
+<h3>Title: Title:
+          A Geometric View of Data Complexity: Efficient Local Intrinsic Dimension Estimation with Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Hamidreza Kamkari, Brendan Leigh Ross, Rasa Hosseinzadeh, Jesse C. Cresswell, Gabriel Loaiza-Ganem</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          A Geometric View of Data Complexity: Efficient Local Intrinsic Dimension Estimation with Diffusion Models(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>High-dimensional data commonly lies on low-dimensional submanifolds, and estimating the local intrinsic dimension (LID) of a datum -- i.e. the dimension of the submanifold it belongs to -- is a longstanding problem. LID can be understood as the number of local factors of variation: the more factors of variation a datum has, the more complex it tends to be. Estimating this quantity has proven useful in contexts ranging from generalization in neural networks to detection of out-of-distribution data, adversarial examples, and AI-generated text. The recent successes of deep generative models present an opportunity to leverage them for LID estimation, but current methods based on generative models produce inaccurate estimates, require more than a single pre-trained model, are computationally intensive, or do not exploit the best available deep generative models, i.e. diffusion models (DMs). In this work, we show that the Fokker-Planck equation associated with a DM can provide a LID estimator which addresses all the aforementioned deficiencies. Our estimator, called FLIPD, is compatible with all popular DMs, and outperforms existing baselines on LID estimation benchmarks. We also apply FLIPD on natural images where the true LID is unknown. Compared to competing estimators, FLIPD exhibits a higher correlation with non-LID measures of complexity, better matches a qualitative assessment of complexity, and is the only estimator to remain tractable with high-resolution images at the scale of Stable Diffusion.</li>
+</ul>
+
+<h3>Title: Title:
+          Npix2Cpix: A GAN-based Image-to-Image Translation Network with Retrieval-Classification Integration for Watermark Retrieval from Historical Document Images</h3>
+<ul>
+<li><strong>Authors: </strong>Utsab Saha, Sawradip Saha, Shaikh Anowarul Fattah, Mohammad Saquib</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Npix2Cpix: A GAN-based Image-to-Image Translation Network with Retrieval-Classification Integration for Watermark Retrieval from Historical Document Images(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The identification and restoration of ancient watermarks have long been a major topic in codicology and history. Classifying historical documents based on watermarks can be difficult due to the diversity of watermarks, crowded and noisy samples, multiple modes of representation, and minor distinctions between classes and intra-class changes. This paper proposes a U-net-based conditional generative adversarial network (GAN) to translate noisy raw historical watermarked images into clean, handwriting-free images with just watermarks. Considering its ability to perform image translation from degraded (noisy) pixels to clean pixels, the proposed network is termed as Npix2Cpix. Instead of employing directly degraded watermarked images, the proposed network uses image-to-image translation using adversarial learning to create clutter and handwriting-free images for restoring and categorizing the watermarks for the first time. In order to learn the mapping from input noisy image to output clean image, the generator and discriminator of the proposed U-net-based GAN are trained using two separate loss functions, each of which is based on the distance between images. After using the proposed GAN to pre-process noisy watermarked images, Siamese-based one-shot learning is used to classify watermarks. According to experimental results on a large-scale historical watermark dataset, extracting watermarks from tainted images can result in high one-shot classification accuracy. The qualitative and quantitative evaluation of the retrieved watermarks illustrates the effectiveness of the proposed approach.</li>
+</ul>
+
+<h3>Title: Title:
+          Understanding the Limitations of Diffusion Concept Algebra Through Food</h3>
+<ul>
+<li><strong>Authors: </strong>E. Zhixuan Zeng, Yuhao Chen, Alexander Wong</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Understanding the Limitations of Diffusion Concept Algebra Through Food(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Image generation techniques, particularly latent diffusion models, have exploded in popularity in recent years. Many techniques have been developed to manipulate and clarify the semantic concepts these large-scale models learn, offering crucial insights into biases and concept relationships. However, these techniques are often only validated in conventional realms of human or animal faces and artistic style transitions. The food domain offers unique challenges through complex compositions and regional biases, which can shed light on the limitations and opportunities within existing methods. Through the lens of food imagery, we analyze both qualitative and quantitative patterns within a concept traversal technique. We reveal measurable insights into the model's ability to capture and represent the nuances of culinary diversity, while also identifying areas where the model's biases and limitations emerge.</li>
+</ul>
+
+<h3>Title: Title:
+          Knowledge-Infused Legal Wisdom: Navigating LLM Consultation through the Lens of Diagnostics and Positive-Unlabeled Reinforcement Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Yang Wu, Chenghao Wang, Ece Gumusel, Xiaozhong Liu</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Knowledge-Infused Legal Wisdom: Navigating LLM Consultation through the Lens of Diagnostics and Positive-Unlabeled Reinforcement Learning(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The integration of generative Large Language Models (LLMs) into various applications, including the legal domain, has been accelerated by their expansive and versatile nature. However, when facing a legal case, users without a legal background often struggle to formulate professional queries and may inadvertently overlook critical legal factors when presenting their case narrative to LLMs. To address this issue, we propose the Diagnostic Legal Large Language Model (D3LM), which utilizes adaptive lawyer-like diagnostic questions to collect additional case information and then provides high-quality feedback. D3LM incorporates an innovative graph-based Positive-Unlabeled Reinforcement Learning (PURL) algorithm, enabling the generation of critical questions and enhancing user-LLM interactions. Moreover, an integrated LLM-based stopping criterion facilitates precise Court Views Generation (CVG). Our research also introduces a new English-language CVG dataset based on the US case law database, enriching the realm of LLM research and deployment with a vital dimension. D3LM surpasses classical LLMs by delivering outstanding performance and a remarkable user experience in the legal domain.</li>
+</ul>
+
+<h3>Title: Title:
+          Alignment Calibration: Machine Unlearning for Contrastive Learning under Auditing</h3>
+<ul>
+<li><strong>Authors: </strong>Yihan Wang, Yiwei Lu, Guojun Zhang, Franziska Boenisch, Adam Dziedzic, Yaoliang Yu, Xiao-Shan Gao</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Alignment Calibration: Machine Unlearning for Contrastive Learning under Auditing(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Machine unlearning provides viable solutions to revoke the effect of certain training data on pre-trained model parameters. Existing approaches provide unlearning recipes for classification and generative models. However, a category of important machine learning models, i.e., contrastive learning (CL) methods, is overlooked. In this paper, we fill this gap by first proposing the framework of Machine Unlearning for Contrastive learning (MUC) and adapting existing methods. Furthermore, we observe that several methods are mediocre unlearners and existing auditing tools may not be sufficient for data owners to validate the unlearning effects in contrastive learning. We thus propose a novel method called Alignment Calibration (AC) by explicitly considering the properties of contrastive learning and optimizing towards novel auditing metrics to easily verify unlearning. We empirically compare AC with baseline methods on SimCLR, MoCo and CLIP. We observe that AC addresses drawbacks of existing methods: (1) achieving state-of-the-art performance and approximating exact unlearning (retraining); (2) allowing data owners to clearly visualize the effect caused by unlearning through black-box auditing.</li>
+</ul>
+
+<h3>Title: Title:
+          Advancing Anomaly Detection: Non-Semantic Financial Data Encoding with LLMs</h3>
+<ul>
+<li><strong>Authors: </strong>Alexander Bakumenko (1), Kateřina Hlaváčková-Schindler (2), Claudia Plant (2), Nina C. Hubig (1) ((1) Clemson University, USA, (2) University of Vienna, Austria)</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CL, q-fin.RM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Advancing Anomaly Detection: Non-Semantic Financial Data Encoding with LLMs(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Detecting anomalies in general ledger data is of utmost importance to ensure trustworthiness of financial records. Financial audits increasingly rely on machine learning (ML) algorithms to identify irregular or potentially fraudulent journal entries, each characterized by a varying number of transactions. In machine learning, heterogeneity in feature dimensions adds significant complexity to data analysis. In this paper, we introduce a novel approach to anomaly detection in financial data using Large Language Models (LLMs) embeddings. To encode non-semantic categorical data from real-world financial records, we tested 3 pre-trained general purpose sentence-transformer models. For the downstream classification task, we implemented and evaluated 5 optimized ML models including Logistic Regression, Random Forest, Gradient Boosting Machines, Support Vector Machines, and Neural Networks. Our experiments demonstrate that LLMs contribute valuable information to anomaly detection as our models outperform the baselines, in selected settings even by a large margin. The findings further underscore the effectiveness of LLMs in enhancing anomaly detection in financial journal entries, particularly by tackling feature sparsity. We discuss a promising perspective on using LLM embeddings for non-semantic data in the financial context and beyond.</li>
+</ul>
+
+<h3>Title: Title:
+          Discovering Bias in Latent Space: An Unsupervised Debiasing Approach</h3>
+<ul>
+<li><strong>Authors: </strong>Dyah Adila, Shuai Zhang, Boran Han, Yuyang Wang</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Discovering Bias in Latent Space: An Unsupervised Debiasing Approach(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>The question-answering (QA) capabilities of foundation models are highly sensitive to prompt variations, rendering their performance susceptible to superficial, non-meaning-altering changes. This vulnerability often stems from the model's preference or bias towards specific input characteristics, such as option position or superficial image features in multi-modal settings. We propose to rectify this bias directly in the model's internal representation. Our approach, SteerFair, finds the bias direction in the model's representation space and steers activation values away from it during inference. Specifically, we exploit the observation that bias often adheres to simple association rules, such as the spurious association between the first option and correctness likelihood. Next, we construct demonstrations of these rules from unlabeled samples and use them to identify the bias directions. We empirically show that SteerFair significantly reduces instruction-tuned model performance variance across prompt modifications on three benchmark tasks. Remarkably, our approach surpasses a supervised baseline with 100 labels by an average of 10.86% accuracy points and 12.95 score points and matches the performance with 500 labels.</li>
+</ul>
+
+<h3>Title: Title:
+          Bayesian Power Steering: An Effective Approach for Domain Adaptation of Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Ding Huang, Ting Li, Jian Huang</a></li>
+<li><strong>Subjects: </strong>cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Bayesian Power Steering: An Effective Approach for Domain Adaptation of Diffusion Models(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>We propose a Bayesian framework for fine-tuning large diffusion models with a novel network structure called Bayesian Power Steering (BPS). We clarify the meaning behind adaptation from a \textit{large probability space} to a \textit{small probability space} and explore the task of fine-tuning pre-trained models using learnable modules from a Bayesian perspective. BPS extracts task-specific knowledge from a pre-trained model's learned prior distribution. It efficiently leverages large diffusion models, differentially intervening different hidden features with a head-heavy and foot-light configuration. Experiments highlight the superiority of BPS over contemporary methods across a range of tasks even with limited amount of data. Notably, BPS attains an FID score of 10.49 under the sketch condition on the COCO17 dataset.</li>
+</ul>
+
+<h3>Title: Title:
+          Principles of Designing Robust Remote Face Anti-Spoofing Systems</h3>
+<ul>
+<li><strong>Authors: </strong>Xiang Xu, Tianchen Zhao, Zheng Zhang, Zhihua Li, Jon Wu, Alessandro Achille, Mani Srivastava</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.CR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Principles of Designing Robust Remote Face Anti-Spoofing Systems(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Protecting digital identities of human face from various attack vectors is paramount, and face anti-spoofing plays a crucial role in this endeavor. Current approaches primarily focus on detecting spoofing attempts within individual frames to detect presentation attacks. However, the emergence of hyper-realistic generative models capable of real-time operation has heightened the risk of digitally generated attacks. In light of these evolving threats, this paper aims to address two key aspects. First, it sheds light on the vulnerabilities of state-of-the-art face anti-spoofing methods against digital attacks. Second, it presents a comprehensive taxonomy of common threats encountered in face anti-spoofing systems. Through a series of experiments, we demonstrate the limitations of current face anti-spoofing detection techniques and their failure to generalize to novel digital attack scenarios. Notably, the existing models struggle with digital injection attacks including adversarial noise, realistic deepfake attacks, and digital replay attacks. To aid in the design and implementation of robust face anti-spoofing systems resilient to these emerging vulnerabilities, the paper proposes key design principles from model accuracy and robustness to pipeline robustness and even platform robustness. Especially, we suggest to implement the proactive face anti-spoofing system using active sensors to significant reduce the risks for unseen attack vectors and improve the user experience.</li>
+</ul>
+
+<h3>Title: Title:
+          BindGPT: A Scalable Framework for 3D Molecular Design via Language Modeling and Reinforcement Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Artem Zholus, Maksim Kuznetsov, Roman Schutski, Rim Shayakhmetov, Daniil Polykovskiy, Sarath Chandar, Alex Zhavoronkov</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          BindGPT: A Scalable Framework for 3D Molecular Design via Language Modeling and Reinforcement Learning(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Generating novel active molecules for a given protein is an extremely challenging task for generative models that requires an understanding of the complex physical interactions between the molecule and its environment. In this paper, we present a novel generative model, BindGPT which uses a conceptually simple but powerful approach to create 3D molecules within the protein's binding site. Our model produces molecular graphs and conformations jointly, eliminating the need for an extra graph reconstruction step. We pretrain BindGPT on a large-scale dataset and fine-tune it with reinforcement learning using scores from external simulation software. We demonstrate how a single pretrained language model can serve at the same time as a 3D molecular generative model, conformer generator conditioned on the molecular graph, and a pocket-conditioned 3D molecule generator. Notably, the model does not make any representational equivariance assumptions about the domain of generation. We show how such simple conceptual approach combined with pretraining and scaling can perform on par or better than the current best specialized diffusion models, language models, and graph neural networks while being two orders of magnitude cheaper to sample.</li>
+</ul>
+
+<h3>Title: Title:
+          Evaluating the World Model Implicit in a Generative Model</h3>
+<ul>
+<li><strong>Authors: </strong>Keyon Vafa, Justin Y. Chen, Jon Kleinberg, Sendhil Mullainathan, Ashesh Rambachan</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Evaluating the World Model Implicit in a Generative Model(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Recent work suggests that large language models may implicitly learn world models. How should we assess this possibility? We formalize this question for the case where the underlying reality is governed by a deterministic finite automaton. This includes problems as diverse as simple logical reasoning, geographic navigation, game-playing, and chemistry. We propose new evaluation metrics for world model recovery inspired by the classic Myhill-Nerode theorem from language theory. We illustrate their utility in three domains: game playing, logic puzzles, and navigation. In all domains, the generative models we consider do well on existing diagnostics for assessing world models, but our evaluation metrics reveal their world models to be far less coherent than they appear. Such incoherence creates fragility: using a generative model to solve related but subtly different tasks can lead it to fail badly. Building generative models that meaningfully capture the underlying logic of the domains they model would be immensely valuable; our results suggest new ways to assess how close a given model is to that goal.</li>
+</ul>
+
+<h3>Title: Title:
+          Generalization-Enhanced Code Vulnerability Detection via Multi-Task Instruction Fine-Tuning</h3>
+<ul>
+<li><strong>Authors: </strong>Xiaohu Du, Ming Wen, Jiahao Zhu, Zifan Xie, Bin Ji, Huijun Liu, Xuanhua Shi, Hai Jin</a></li>
+<li><strong>Subjects: </strong>cs.CR, cs.AI, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Generalization-Enhanced Code Vulnerability Detection via Multi-Task Instruction Fine-Tuning(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Code Pre-trained Models (CodePTMs) based vulnerability detection have achieved promising results over recent years. However, these models struggle to generalize as they typically learn superficial mapping from source code to labels instead of understanding the root causes of code vulnerabilities, resulting in poor performance in real-world scenarios beyond the training instances. To tackle this challenge, we introduce VulLLM, a novel framework that integrates multi-task learning with Large Language Models (LLMs) to effectively mine deep-seated vulnerability features. Specifically, we construct two auxiliary tasks beyond the vulnerability detection task. First, we utilize the vulnerability patches to construct a vulnerability localization task. Second, based on the vulnerability features extracted from patches, we leverage GPT-4 to construct a vulnerability interpretation task. VulLLM innovatively augments vulnerability classification by leveraging generative LLMs to understand complex vulnerability patterns, thus compelling the model to capture the root causes of vulnerabilities rather than overfitting to spurious features of a single task. The experiments conducted on six large datasets demonstrate that VulLLM surpasses seven state-of-the-art models in terms of effectiveness, generalization, and robustness.</li>
+</ul>
+
+<h3>Title: Title:
+          JIGMARK: A Black-Box Approach for Enhancing Image Watermarks against Diffusion Model Edits</h3>
+<ul>
+<li><strong>Authors: </strong>Minzhou Pan, Yi Zeng, Xue Lin, Ning Yu, Cho-Jui Hsieh, Peter Henderson, Ruoxi Jia</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.MM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          JIGMARK: A Black-Box Approach for Enhancing Image Watermarks against Diffusion Model Edits(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>In this study, we investigate the vulnerability of image watermarks to diffusion-model-based image editing, a challenge exacerbated by the computational cost of accessing gradient information and the closed-source nature of many diffusion models. To address this issue, we introduce JIGMARK. This first-of-its-kind watermarking technique enhances robustness through contrastive learning with pairs of images, processed and unprocessed by diffusion models, without needing a direct backpropagation of the diffusion process. Our evaluation reveals that JIGMARK significantly surpasses existing watermarking solutions in resilience to diffusion-model edits, demonstrating a True Positive Rate more than triple that of leading baselines at a 1% False Positive Rate while preserving image quality. At the same time, it consistently improves the robustness against other conventional perturbations (like JPEG, blurring, etc.) and malicious watermark attacks over the state-of-the-art, often by a large margin. Furthermore, we propose the Human Aligned Variation (HAV) score, a new metric that surpasses traditional similarity measures in quantifying the number of image derivatives from image editing.</li>
+</ul>
+
+<h3>Title: Title:
+          FastGAS: Fast Graph-based Annotation Selection for In-Context Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Zihan Chen, Song Wang, Cong Shen, Jundong Li</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          FastGAS: Fast Graph-based Annotation Selection for In-Context Learning(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>In-context learning (ICL) empowers large language models (LLMs) to tackle new tasks by using a series of training instances as prompts. Since generating the prompts needs to sample from a vast pool of instances and annotate them (e.g., add labels in classification task), existing methods have proposed to select a subset of unlabeled examples for annotation, thus enhancing the quality of prompts and concurrently mitigating annotation costs. However, these methods often require a long time to select instances due to their complexity, hindering their practical viability. To address this limitation, we propose a graph-based selection method, FastGAS, designed to efficiently identify high-quality instances while minimizing computational overhead. Initially, we construct a data similarity graph based on instance similarities. Subsequently, employing a graph partitioning algorithm, we partition the graph into pieces. Within each piece (i.e., subgraph), we adopt a greedy approach to pick the most representative nodes. By aggregating nodes from diverse pieces and annotating the corresponding instances, we identify a set of diverse and representative instances for ICL. Compared to prior approaches, our method not only exhibits superior performance on different tasks but also significantly reduces selection time. In addition, we demonstrate the efficacy of our approach in LLMs of larger sizes.</li>
+</ul>
+
+<h3>Title: Title:
+          Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data</h3>
+<ul>
+<li><strong>Authors: </strong>Jingyang Ou, Shen Nie, Kaiwen Xue, Fengqi Zhu, Jiacheng Sun, Zhenguo Li, Chongxuan Li</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Discrete diffusion models with absorbing processes have shown promise in language modeling. The key quantities to be estimated are the ratios between the marginal probabilities of two transitive states at all timesteps, called the concrete score. In this paper, we reveal that the concrete score in absorbing diffusion can be expressed as conditional probabilities of clean data, multiplied by a time-dependent scalar in an analytic form. Motivated by the finding, we propose reparameterized absorbing discrete diffusion (RADD), a dedicated diffusion model that characterizes the time-independent conditional probabilities. Besides its simplicity, RADD can reduce the number of function evaluations (NFEs) by caching the output of the time-independent network when the noisy sample remains unchanged in a sampling interval. Empirically, RADD is up to 3.5 times faster while consistently achieving a better performance than the strongest baseline. Built upon the new factorization of the concrete score, we further prove a surprising result that the exact likelihood of absorbing diffusion can be rewritten to a simple form (named denoising cross-entropy) and then estimated efficiently by the Monte Carlo method. The resulting approach also applies to the original parameterization of the concrete score. It significantly advances the state-of-the-art discrete diffusion on 5 zero-shot language modeling benchmarks (measured by perplexity) at the GPT-2 scale.</li>
+</ul>
+
+<h3>Title: Title:
+          ReDistill: Residual Encoded Distillation for Peak Memory Reduction</h3>
+<ul>
+<li><strong>Authors: </strong>Fang Chen, Gourav Datta, Mujahid Al Rafi, Hyeran Jeon, Meng Tang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          ReDistill: Residual Encoded Distillation for Peak Memory Reduction(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>The expansion of neural network sizes and the enhancement of image resolution through modern camera sensors result in heightened memory and power demands for neural networks. Reducing peak memory, which is the maximum memory consumed during the execution of a neural network, is critical to deploy neural networks on edge devices with limited memory budget. A naive approach to reducing peak memory is aggressive down-sampling of feature maps via pooling with large stride, which often results in unacceptable degradation in network performance. To mitigate this problem, we propose residual encoded distillation (ReDistill) for peak memory reduction in a teacher-student framework, in which a student network with less memory is derived from the teacher network using aggressive pooling. We apply our distillation method to multiple problems in computer vision including image classification and diffusion based image generation. For image classification, our method yields 2x-3.2x measured peak memory on an edge GPU with negligible degradation in accuracy for most CNN based architectures. Additionally, our method yields improved test accuracy for tiny vision transformer (ViT) based models distilled from large CNN based teacher architectures. For diffusion-based image generation, our proposed distillation method yields a denoising network with 4x lower theoretical peak memory while maintaining decent diversity and fidelity for image generation. Experiments demonstrate our method's superior performance compared to other feature-based and response-based distillation methods.</li>
+</ul>
+
+<h3>Title: Title:
+          Enhancing In-Context Learning Performance with just SVD-Based Weight Pruning: A Theoretical Perspective</h3>
+<ul>
+<li><strong>Authors: </strong>Xinhao Yao, Xiaolin Hu, Shenzhi Yang, Yong Liu</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Enhancing In-Context Learning Performance with just SVD-Based Weight Pruning: A Theoretical Perspective(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Pre-trained large language models (LLMs) based on Transformer have demonstrated striking in-context learning (ICL) abilities. With a few demonstration input-label pairs, they can predict the label for an unseen input without any parameter updates. In this paper, we show an exciting phenomenon that SVD-based weight pruning can enhance ICL performance, and more surprising, pruning weights in deep layers often results in more stable performance improvements in shallow layers. However, the underlying mechanism of those findings still remains an open question. To reveal those findings, we conduct an in-depth theoretical analysis by presenting the implicit gradient descent (GD) trajectories of ICL and giving the mutual information based generalization bounds of ICL via full implicit GD trajectories. This helps us reasonably explain the surprising experimental findings. Besides, based on all our experimental and theoretical insights, we intuitively propose a simple, model-compression and derivative-free algorithm for downstream tasks in enhancing ICL inference. Experiments on benchmark datasets and open source LLMs display the method effectiveness\footnote{The code is available at \url{this https URL}}.</li>
+</ul>
+
+<h3>Title: Title:
+          Light-PEFT: Lightening Parameter-Efficient Fine-Tuning via Early Pruning</h3>
+<ul>
+<li><strong>Authors: </strong>Naibin Gu, Peng Fu, Xiyu Liu, Bowen Shen, Zheng Lin, Weiping Wang</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Light-PEFT: Lightening Parameter-Efficient Fine-Tuning via Early Pruning(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Parameter-efficient fine-tuning (PEFT) has emerged as the predominant technique for fine-tuning in the era of large language models. However, existing PEFT methods still have inadequate training efficiency. Firstly, the utilization of large-scale foundation models during the training process is excessively redundant for certain fine-tuning tasks. Secondly, as the model size increases, the growth in trainable parameters of empirically added PEFT modules becomes non-negligible and redundant, leading to inefficiency. To achieve task-specific efficient fine-tuning, we propose the Light-PEFT framework, which includes two methods: Masked Early Pruning of the Foundation Model and Multi-Granularity Early Pruning of PEFT. The Light-PEFT framework allows for the simultaneous estimation of redundant parameters in both the foundation model and PEFT modules during the early stage of training. These parameters can then be pruned for more efficient fine-tuning. We validate our approach on GLUE, SuperGLUE, QA tasks, and various models. With Light-PEFT, parameters of the foundation model can be pruned by up to over 40%, while still controlling trainable parameters to be only 25% of the original PEFT method. Compared to utilizing the PEFT method directly, Light-PEFT achieves training and inference speedup, reduces memory usage, and maintains comparable performance and the plug-and-play feature of PEFT.</li>
+</ul>
+
+<h3>Title: Title:
+          AutoJailbreak: Exploring Jailbreak Attacks and Defenses through a Dependency Lens</h3>
+<ul>
+<li><strong>Authors: </strong>Lin Lu, Hai Yan, Zenghui Yuan, Jiawen Shi, Wenqi Wei, Pin-Yu Chen, Pan Zhou</a></li>
+<li><strong>Subjects: </strong>cs.CR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          AutoJailbreak: Exploring Jailbreak Attacks and Defenses through a Dependency Lens(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Jailbreak attacks in large language models (LLMs) entail inducing the models to generate content that breaches ethical and legal norm through the use of malicious prompts, posing a substantial threat to LLM security. Current strategies for jailbreak attack and defense often focus on optimizing locally within specific algorithmic frameworks, resulting in ineffective optimization and limited scalability. In this paper, we present a systematic analysis of the dependency relationships in jailbreak attack and defense techniques, generalizing them to all possible attack surfaces. We employ directed acyclic graphs (DAGs) to position and analyze existing jailbreak attacks, defenses, and evaluation methodologies, and propose three comprehensive, automated, and logical frameworks. \texttt{AutoAttack} investigates dependencies in two lines of jailbreak optimization strategies: genetic algorithm (GA)-based attacks and adversarial-generation-based attacks, respectively. We then introduce an ensemble jailbreak attack to exploit these dependencies. \texttt{AutoDefense} offers a mixture-of-defenders approach by leveraging the dependency relationships in pre-generative and post-generative defense strategies. \texttt{AutoEvaluation} introduces a novel evaluation method that distinguishes hallucinations, which are often overlooked, from jailbreak attack and defense responses. Through extensive experiments, we demonstrate that the proposed ensemble jailbreak attack and defense framework significantly outperforms existing research.</li>
+</ul>
+
+<h3>Title: Title:
+          LLplace: The 3D Indoor Scene Layout Generation and Editing via Large Language Model</h3>
+<ul>
+<li><strong>Authors: </strong>Yixuan Yang, Junru Lu, Zixiang Zhao, Zhen Luo, James J.Q. Yu, Victor Sanchez, Feng Zheng</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          LLplace: The 3D Indoor Scene Layout Generation and Editing via Large Language Model(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, in-context</a></li>
+<li><strong>Abstract: </strong>Designing 3D indoor layouts is a crucial task with significant applications in virtual reality, interior design, and automated space planning. Existing methods for 3D layout design either rely on diffusion models, which utilize spatial relationship priors, or heavily leverage the inferential capabilities of proprietary Large Language Models (LLMs), which require extensive prompt engineering and in-context exemplars via black-box trials. These methods often face limitations in generalization and dynamic scene editing. In this paper, we introduce LLplace, a novel 3D indoor scene layout designer based on lightweight fine-tuned open-source LLM Llama3. LLplace circumvents the need for spatial relationship priors and in-context exemplars, enabling efficient and credible room layout generation based solely on user inputs specifying the room type and desired objects. We curated a new dialogue dataset based on the 3D-Front dataset, expanding the original data volume and incorporating dialogue data for adding and removing objects. This dataset can enhance the LLM's spatial understanding. Furthermore, through dialogue, LLplace activates the LLM's capability to understand 3D layouts and perform dynamic scene editing, enabling the addition and removal of objects. Our approach demonstrates that LLplace can effectively generate and edit 3D indoor layouts interactively and outperform existing methods in delivering high-quality 3D design solutions. Code and dataset will be released.</li>
+</ul>
+
+<h3>Title: Title:
+          HeSum: a Novel Dataset for Abstractive Text Summarization in Hebrew</h3>
+<ul>
+<li><strong>Authors: </strong>Tzuf Paz-Argaman, Itai Mondshine, Asaf Achi Mordechai, Reut Tsarfaty</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          HeSum: a Novel Dataset for Abstractive Text Summarization in Hebrew(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>While large language models (LLMs) excel in various natural language tasks in English, their performance in lower-resourced languages like Hebrew, especially for generative tasks such as abstractive summarization, remains unclear. The high morphological richness in Hebrew adds further challenges due to the ambiguity in sentence comprehension and the complexities in meaning construction. In this paper, we address this resource and evaluation gap by introducing HeSum, a novel benchmark specifically designed for abstractive text summarization in Modern Hebrew. HeSum consists of 10,000 article-summary pairs sourced from Hebrew news websites written by professionals. Linguistic analysis confirms HeSum's high abstractness and unique morphological challenges. We show that HeSum presents distinct difficulties for contemporary state-of-the-art LLMs, establishing it as a valuable testbed for generative language technology in Hebrew, and MRLs generative challenges in general.</li>
+</ul>
+
+<h3>Title: Title:
+          Exploring the Zero-Shot Capabilities of Vision-Language Models for Improving Gaze Following</h3>
+<ul>
+<li><strong>Authors: </strong>Anshul Gupta, Pierre Vuillecard, Arya Farkhondeh, Jean-Marc Odobez</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Exploring the Zero-Shot Capabilities of Vision-Language Models for Improving Gaze Following(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Contextual cues related to a person's pose and interactions with objects and other people in the scene can provide valuable information for gaze following. While existing methods have focused on dedicated cue extraction methods, in this work we investigate the zero-shot capabilities of Vision-Language Models (VLMs) for extracting a wide array of contextual cues to improve gaze following performance. We first evaluate various VLMs, prompting strategies, and in-context learning (ICL) techniques for zero-shot cue recognition performance. We then use these insights to extract contextual cues for gaze following, and investigate their impact when incorporated into a state of the art model for the task. Our analysis indicates that BLIP-2 is the overall top performing VLM and that ICL can improve performance. We also observe that VLMs are sensitive to the choice of the text prompt although ensembling over multiple text prompts can provide more robust performance. Additionally, we discover that using the entire image along with an ellipse drawn around the target person is the most effective strategy for visual prompting. For gaze following, incorporating the extracted cues results in better generalization performance, especially when considering a larger set of cues, highlighting the potential of this approach.</li>
+</ul>
+
+<h3>Title: Title:
+          Weight-based Decomposition: A Case for Bilinear MLPs</h3>
+<ul>
+<li><strong>Authors: </strong>Michael T. Pearce, Thomas Dooms, Alice Rigg</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Weight-based Decomposition: A Case for Bilinear MLPs(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Gated Linear Units (GLUs) have become a common building block in modern foundation models. Bilinear layers drop the non-linearity in the "gate" but still have comparable performance to other GLUs. An attractive quality of bilinear layers is that they can be fully expressed in terms of a third-order tensor and linear operations. Leveraging this, we develop a method to decompose the bilinear tensor into a set of sparsely interacting eigenvectors that show promising interpretability properties in preliminary experiments for shallow image classifiers (MNIST) and small language models (Tiny Stories). Since the decomposition is fully equivalent to the model's original computations, bilinear layers may be an interpretability-friendly architecture that helps connect features to the model weights. Application of our method may not be limited to pretrained bilinear models since we find that language models such as TinyLlama-1.1B can be finetuned into bilinear variants.</li>
+</ul>
+
+<h3>Title: Title:
+          A + B: A General Generator-Reader Framework for Optimizing LLMs to Unleash Synergy Potential</h3>
+<ul>
+<li><strong>Authors: </strong>Wei Tang, Yixin Cao, Jiahao Ying, Bo Wang, Yuyue Zhao, Yong Liao, Pengyuan Zhou</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          A + B: A General Generator-Reader Framework for Optimizing LLMs to Unleash Synergy Potential(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Retrieval-Augmented Generation (RAG) is an effective solution to supplement necessary knowledge to large language models (LLMs). Targeting its bottleneck of retriever performance, "generate-then-read" pipeline is proposed to replace the retrieval stage with generation from the LLM itself. Although promising, this research direction is underexplored and still cannot work in the scenario when source knowledge is given. In this paper, we formalize a general "A + B" framework with varying combinations of foundation models and types for systematic investigation. We explore the efficacy of the base and chat versions of LLMs and found their different functionalities suitable for generator A and reader B, respectively. Their combinations consistently outperform single models, especially in complex scenarios. Furthermore, we extend the application of the "A + B" framework to scenarios involving source documents through continuous learning, enabling the direct integration of external knowledge into LLMs. This approach not only facilitates effective acquisition of new knowledge but also addresses the challenges of safety and helpfulness post-adaptation. The paper underscores the versatility of the "A + B" framework, demonstrating its potential to enhance the practical application of LLMs across various domains.</li>
+</ul>
+
+<h3>Title: Title:
+          Shaping History: Advanced Machine Learning Techniques for the Analysis and Dating of Cuneiform Tablets over Three Millennia</h3>
+<ul>
+<li><strong>Authors: </strong>Danielle Kapon, Michael Fire, Shai Gordin</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG, cs.SI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Shaping History: Advanced Machine Learning Techniques for the Analysis and Dating of Cuneiform Tablets over Three Millennia(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Cuneiform tablets, emerging in ancient Mesopotamia around the late fourth millennium BCE, represent one of humanity's earliest writing systems. Characterized by wedge-shaped marks on clay tablets, these artifacts provided insight into Mesopotamian civilization across various domains. Traditionally, the analysis and dating of these tablets rely on subjective assessment of shape and writing style, leading to uncertainties in pinpointing their exact temporal origins. Recent advances in digitization have revolutionized the study of cuneiform by enhancing accessibility and analytical capabilities. Our research uniquely focuses on the silhouette of tablets as significant indicators of their historical periods, diverging from most studies that concentrate on textual content. Utilizing an unprecedented dataset of over 94,000 images from the Cuneiform Digital Library Initiative collection, we apply deep learning methods to classify cuneiform tablets, covering over 3,000 years of history. By leveraging statistical, computational techniques, and generative modeling through Variational Auto-Encoders (VAEs), we achieve substantial advancements in the automatic classification of these ancient documents, focusing on the tablets' silhouettes as key predictors. Our classification approach begins with a Decision Tree using height-to-width ratios and culminates with a ResNet50 model, achieving a 61% macro F1-score for tablet silhouettes. Moreover, we introduce novel VAE-powered tools to enhance explainability and enable researchers to explore changes in tablet shapes across different eras and genres. This research contributes to document analysis and diplomatics by demonstrating the value of large-scale data analysis combined with statistical methods. These insights offer valuable tools for historians and epigraphists, enriching our understanding of cuneiform tablets and the cultures that produced them.</li>
+</ul>
+
+<h3>Title: Title:
+          Energy-based Epistemic Uncertainty for Graph Neural Networks</h3>
+<ul>
+<li><strong>Authors: </strong>Dominik Fuchsgruber, Tom Wollschläger, Stephan Günnemann</a></li>
+<li><strong>Subjects: </strong>cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Energy-based Epistemic Uncertainty for Graph Neural Networks(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, anomaly</a></li>
+<li><strong>Abstract: </strong>In domains with interdependent data, such as graphs, quantifying the epistemic uncertainty of a Graph Neural Network (GNN) is challenging as uncertainty can arise at different structural scales. Existing techniques neglect this issue or only distinguish between structure-aware and structure-agnostic uncertainty without combining them into a single measure. We propose GEBM, an energy-based model (EBM) that provides high-quality uncertainty estimates by aggregating energy at different structural levels that naturally arise from graph diffusion. In contrast to logit-based EBMs, we provably induce an integrable density in the data space by regularizing the energy function. We introduce an evidential interpretation of our EBM that significantly improves the predictive robustness of the GNN. Our framework is a simple and effective post hoc method applicable to any pre-trained GNN that is sensitive to various distribution shifts. It consistently achieves the best separation of in-distribution and out-of-distribution data on 6 out of 7 anomaly types while having the best average rank over shifts on \emph{all} datasets.</li>
+</ul>
+
+<h3>Title: Title:
+          Enhancing Weather Predictions: Super-Resolution via Deep Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Jan Martinů, Petr Šimánek</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Enhancing Weather Predictions: Super-Resolution via Deep Diffusion Models(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>This study investigates the application of deep-learning diffusion models for the super-resolution of weather data, a novel approach aimed at enhancing the spatial resolution and detail of meteorological variables. Leveraging the capabilities of diffusion models, specifically the SR3 and ResDiff architectures, we present a methodology for transforming low-resolution weather data into high-resolution outputs. Our experiments, conducted using the WeatherBench dataset, focus on the super-resolution of the two-meter temperature variable, demonstrating the models' ability to generate detailed and accurate weather maps. The results indicate that the ResDiff model, further improved by incorporating physics-based modifications, significantly outperforms traditional SR3 methods in terms of Mean Squared Error (MSE), Structural Similarity Index (SSIM), and Peak Signal-to-Noise Ratio (PSNR). This research highlights the potential of diffusion models in meteorological applications, offering insights into their effectiveness, challenges, and prospects for future advancements in weather prediction and climate analysis.</li>
+</ul>
+
+<h3>Title: Title:
+          Multistep Distillation of Diffusion Models via Moment Matching</h3>
+<ul>
+<li><strong>Authors: </strong>Tim Salimans, Thomas Mensink, Jonathan Heek, Emiel Hoogeboom</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CV, cs.NE</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Multistep Distillation of Diffusion Models via Moment Matching(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>We present a new method for making diffusion models faster to sample. The method distills many-step diffusion models into few-step models by matching conditional expectations of the clean data given noisy data along the sampling trajectory. Our approach extends recently proposed one-step methods to the multi-step case, and provides a new perspective by interpreting these approaches in terms of moment matching. By using up to 8 sampling steps, we obtain distilled models that outperform not only their one-step versions but also their original many-step teacher models, obtaining new state-of-the-art results on the Imagenet dataset. We also show promising results on a large text-to-image model where we achieve fast generation of high resolution images directly in image space, without needing autoencoders or upsamplers.</li>
+</ul>
+
+<h3>Title: Title:
+          Every Answer Matters: Evaluating Commonsense with Probabilistic Measures</h3>
+<ul>
+<li><strong>Authors: </strong>Qi Cheng, Michael Boratko, Pranay Kumar Yelugam, Tim O'Gorman, Nalini Singh, Andrew McCallum, Xiang Lorraine Li</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Every Answer Matters: Evaluating Commonsense with Probabilistic Measures(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Large language models have demonstrated impressive performance on commonsense tasks; however, these tasks are often posed as multiple-choice questions, allowing models to exploit systematic biases. Commonsense is also inherently probabilistic with multiple correct answers. The purpose of "boiling water" could be making tea and cooking, but it also could be killing germs. Existing tasks do not capture the probabilistic nature of common sense. To this end, we present commonsense frame completion (CFC), a new generative task that evaluates common sense via multiple open-ended generations. We also propose a method of probabilistic evaluation that strongly correlates with human judgments. Humans drastically outperform strong language model baselines on our dataset, indicating this approach is both a challenging and useful evaluation of machine common sense.</li>
+</ul>
+
+<h3>Title: Title:
+          A Voxel-based Approach for Simulating Microbial Decomposition in Soil: Comparison with LBM and Improvement of Morphological Models</h3>
+<ul>
+<li><strong>Authors: </strong>Mouad Klai, Olivier Monga, Mohamed Soufiane Jouini, Valérie Pot</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          A Voxel-based Approach for Simulating Microbial Decomposition in Soil: Comparison with LBM and Improvement of Morphological Models(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>This study presents a new computational approach for simulating the microbial decomposition of organic matter, from 3D micro-computed tomography (micro-CT) images of soil. The method employs a valuated graph of connected voxels to simulate transformation and diffusion processes involved in microbial decomposition within the complex soil matrix. The resulting model can be adapted to simulate any diffusion-transformation processes in porous media. We implemented parallelization strategies and explored different numerical methods, including implicit, explicit, synchronous, and asynchronous schemes. To validate our method, we compared simulation outputs with those provided by LBioS and by Mosaic models. LBioS uses a lattice-Boltzmann method for diffusion and Mosaic takes benefit of Pore Network Geometrical Modelling (PNGM) by means of geometrical primitives such as spheres and ellipsoids. This approach achieved comparable results to traditional LBM-based simulations, but required only one-fourth of the computing time. Compared to Mosaic simulation, the proposed method is slower but more accurate and does not require any calibration. Furthermore, we present a theoretical framework and an application example to enhance PNGM-based simulations. This is accomplished by approximating the diffusional conductance coefficients using stochastic gradient descent and data generated by the current approach.</li>
+</ul>
+
+<h3>Title: Title:
+          Diffusion-based image inpainting with internal learning</h3>
+<ul>
+<li><strong>Authors: </strong>Nicolas Cherel, Andrés Almansa, Yann Gousseau, Alasdair Newson</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Diffusion-based image inpainting with internal learning(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion models are now the undisputed state-of-the-art for image generation and image restoration. However, they require large amounts of computational power for training and inference. In this paper, we propose lightweight diffusion models for image inpainting that can be trained on a single image, or a few images. We show that our approach competes with large state-of-the-art models in specific cases. We also show that training a model on a single image is particularly relevant for image acquisition modality that differ from the RGB images of standard learning databases. We show results in three different contexts: texture images, line drawing images, and materials BRDF, for which we achieve state-of-the-art results in terms of realism, with a computational load that is greatly reduced compared to concurrent methods.</li>
+</ul>
+
+<h3>Title: Title:
+          What Do Language Models Learn in Context? The Structured Task Hypothesis</h3>
+<ul>
+<li><strong>Authors: </strong>Jiaoda Li, Yifan Hou, Mrinmaya Sachan, Ryan Cotterell</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          What Do Language Models Learn in Context? The Structured Task Hypothesis(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Large language models (LLMs) exhibit an intriguing ability to learn a novel task from in-context examples presented in a demonstration, termed in-context learning (ICL). Understandably, a swath of research has been dedicated to uncovering the theories underpinning ICL. One popular hypothesis explains ICL by task selection. LLMs identify the task based on the demonstration and generalize it to the prompt. Another popular hypothesis is that ICL is a form of meta-learning, i.e., the models learn a learning algorithm at pre-training time and apply it to the demonstration. Finally, a third hypothesis argues that LLMs use the demonstration to select a composition of tasks learned during pre-training to perform ICL. In this paper, we empirically explore these three hypotheses that explain LLMs' ability to learn in context with a suite of experiments derived from common text classification tasks. We invalidate the first two hypotheses with counterexamples and provide evidence in support of the last hypothesis. Our results suggest an LLM could learn a novel task in context via composing tasks learned during pre-training.</li>
+</ul>
+
+<h3>Title: Title:
+          Rethinking LLM and Linguistic Steganalysis: An Efficient Detection of Strongly Concealed Stego</h3>
+<ul>
+<li><strong>Authors: </strong>Yifan Tang, Yihao Wang, Ru Zhang, Jianyi Liu</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Rethinking LLM and Linguistic Steganalysis: An Efficient Detection of Strongly Concealed Stego(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>To detect stego (steganographic text) in complex scenarios, linguistic steganalysis (LS) with various motivations has been proposed and achieved excellent performance. However, with the development of generative steganography, some stegos have strong concealment, especially after the emergence of LLMs-based steganography, the existing LS has low detection or even cannot detect them. We designed a novel LS with two modes called LSGC. In the generation mode, we created an LS-task "description" and used the generation ability of LLM to explain whether texts to be detected are stegos. On this basis, we rethought the principle of LS and LLMs, and proposed the classification mode. In this mode, LSGC deleted the LS-task "description" and changed the "causalLM" LLMs to the "sequenceClassification" architecture. The LS features can be extracted by only one pass of the model, and a linear layer with initialization weights is added to obtain the classification probability. Experiments on strongly concealed stegos show that LSGC significantly improves detection and reaches SOTA performance. Additionally, LSGC in classification mode greatly reduces training time while maintaining high performance.</li>
+</ul>
+
+<h3>Title: Title:
+          Solving Inverse Problems in Protein Space Using Diffusion-Based Priors</h3>
+<ul>
+<li><strong>Authors: </strong>Axel Levy, Eric R. Chan, Sara Fridovich-Keil, Frédéric Poitevin, Ellen D. Zhong, Gordon Wetzstein</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Solving Inverse Problems in Protein Space Using Diffusion-Based Priors(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>The interaction of a protein with its environment can be understood and controlled via its 3D structure. Experimental methods for protein structure determination, such as X-ray crystallography or cryogenic electron microscopy, shed light on biological processes but introduce challenging inverse problems. Learning-based approaches have emerged as accurate and efficient methods to solve these inverse problems for 3D structure determination, but are specialized for a predefined type of measurement. Here, we introduce a versatile framework to turn raw biophysical measurements of varying types into 3D atomic models. Our method combines a physics-based forward model of the measurement process with a pretrained generative model providing a task-agnostic, data-driven prior. Our method outperforms posterior sampling baselines on both linear and non-linear inverse problems. In particular, it is the first diffusion-based method for refining atomic models from cryo-EM density maps.</li>
+</ul>
+
+<h3>Title: Title:
+          A Survey on 3D Human Avatar Modeling -- From Reconstruction to Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Ruihe Wang, Yukang Cao, Kai Han, Kwan-Yee K. Wong</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          A Survey on 3D Human Avatar Modeling -- From Reconstruction to Generation(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>3D modeling has long been an important area in computer vision and computer graphics. Recently, thanks to the breakthroughs in neural representations and generative models, we witnessed a rapid development of 3D modeling. 3D human modeling, lying at the core of many real-world applications, such as gaming and animation, has attracted significant attention. Over the past few years, a large body of work on creating 3D human avatars has been introduced, forming a new and abundant knowledge base for 3D human modeling. The scale of the literature makes it difficult for individuals to keep track of all the works. This survey aims to provide a comprehensive overview of these emerging techniques for 3D human avatar modeling, from both reconstruction and generation perspectives. Firstly, we review representative methods for 3D human reconstruction, including methods based on pixel-aligned implicit function, neural radiance field, and 3D Gaussian Splatting, etc. We then summarize representative methods for 3D human generation, especially those using large language models like CLIP, diffusion models, and various 3D representations, which demonstrate state-of-the-art performance. Finally, we discuss our reflection on existing methods and open challenges for 3D human avatar modeling, shedding light on future research.</li>
+</ul>
+
+<h3>Title: Title:
+          GeoGen: Geometry-Aware Generative Modeling via Signed Distance Functions</h3>
+<ul>
+<li><strong>Authors: </strong>Salvatore Esposito, Qingshan Xu, Kacper Kania, Charlie Hewitt, Octave Mariotti, Lohit Petikam, Julien Valentin, Arno Onken, Oisin Mac Aodha</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          GeoGen: Geometry-Aware Generative Modeling via Signed Distance Functions(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We introduce a new generative approach for synthesizing 3D geometry and images from single-view collections. Most existing approaches predict volumetric density to render multi-view consistent images. By employing volumetric rendering using neural radiance fields, they inherit a key limitation: the generated geometry is noisy and unconstrained, limiting the quality and utility of the output meshes. To address this issue, we propose GeoGen, a new SDF-based 3D generative model trained in an end-to-end manner. Initially, we reinterpret the volumetric density as a Signed Distance Function (SDF). This allows us to introduce useful priors to generate valid meshes. However, those priors prevent the generative model from learning details, limiting the applicability of the method to real-world scenarios. To alleviate that problem, we make the transformation learnable and constrain the rendered depth map to be consistent with the zero-level set of the SDF. Through the lens of adversarial training, we encourage the network to produce higher fidelity details on the output meshes. For evaluation, we introduce a synthetic dataset of human avatars captured from 360-degree camera angles, to overcome the challenges presented by real-world datasets, which often lack 3D consistency and do not cover all camera angles. Our experiments on multiple datasets show that GeoGen produces visually and quantitatively better geometry than the previous generative models based on neural radiance fields.</li>
+</ul>
+
+<h3>Title: Title:
+          Open-Endedness is Essential for Artificial Superhuman Intelligence</h3>
+<ul>
+<li><strong>Authors: </strong>Edward Hughes, Michael Dennis, Jack Parker-Holder, Feryal Behbahani, Aditi Mavalankar, Yuge Shi, Tom Schaul, Tim Rocktaschel</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Open-Endedness is Essential for Artificial Superhuman Intelligence(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>In recent years there has been a tremendous surge in the general capabilities of AI systems, mainly fuelled by training foundation models on internetscale data. Nevertheless, the creation of openended, ever self-improving AI remains elusive. In this position paper, we argue that the ingredients are now in place to achieve openendedness in AI systems with respect to a human observer. Furthermore, we claim that such open-endedness is an essential property of any artificial superhuman intelligence (ASI). We begin by providing a concrete formal definition of open-endedness through the lens of novelty and learnability. We then illustrate a path towards ASI via open-ended systems built on top of foundation models, capable of making novel, humanrelevant discoveries. We conclude by examining the safety implications of generally-capable openended AI. We expect that open-ended foundation models will prove to be an increasingly fertile and safety-critical area of research in the near future.</li>
+</ul>
+
+<h3>Title: Title:
+          Generative AI-in-the-loop: Integrating LLMs and GPTs into the Next Generation Networks</h3>
+<ul>
+<li><strong>Authors: </strong>Han Zhang, Akram Bin Sediq, Ali Afana, Melike Erol-Kantarci</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Generative AI-in-the-loop: Integrating LLMs and GPTs into the Next Generation Networks(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>In recent years, machine learning (ML) techniques have created numerous opportunities for intelligent mobile networks and have accelerated the automation of network operations. However, complex network tasks may involve variables and considerations even beyond the capacity of traditional ML algorithms. On the other hand, large language models (LLMs) have recently emerged, demonstrating near-human-level performance in cognitive tasks across various fields. However, they remain prone to hallucinations and often lack common sense in basic tasks. Therefore, they are regarded as assistive tools for humans. In this work, we propose the concept of "generative AI-in-the-loop" and utilize the semantic understanding, context awareness, and reasoning abilities of LLMs to assist humans in handling complex or unforeseen situations in mobile communication networks. We believe that combining LLMs and ML models allows both to leverage their respective capabilities and achieve better results than either model alone. To support this idea, we begin by analyzing the capabilities of LLMs and compare them with traditional ML algorithms. We then explore potential LLM-based applications in line with the requirements of next-generation networks. We further examine the integration of ML and LLMs, discussing how they can be used together in mobile networks. Unlike existing studies, our research emphasizes the fusion of LLMs with traditional ML-driven next-generation networks and serves as a comprehensive refinement of existing surveys. Finally, we provide a case study to enhance ML-based network intrusion detection with synthesized data generated by LLMs. Our case study further demonstrates the advantages of our proposed idea.</li>
+</ul>
+
+<h3>Title: Title:
+          VideoTetris: Towards Compositional Text-to-Video Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Ye Tian, Ling Yang, Haotian Yang, Yuan Gao, Yufan Deng, Jingmin Chen, Xintao Wang, Zhaochen Yu, Xin Tao, Pengfei Wan, Di Zhang, Bin Cui</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          VideoTetris: Towards Compositional Text-to-Video Generation(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion models have demonstrated great success in text-to-video (T2V) generation. However, existing methods may face challenges when handling complex (long) video generation scenarios that involve multiple objects or dynamic changes in object numbers. To address these limitations, we propose VideoTetris, a novel framework that enables compositional T2V generation. Specifically, we propose spatio-temporal compositional diffusion to precisely follow complex textual semantics by manipulating and composing the attention maps of denoising networks spatially and temporally. Moreover, we propose an enhanced video data preprocessing to enhance the training data regarding motion dynamics and prompt understanding, equipped with a new reference frame attention mechanism to improve the consistency of auto-regressive video generation. Extensive experiments demonstrate that our VideoTetris achieves impressive qualitative and quantitative results in compositional T2V generation. Code is available at: this https URL</li>
+</ul>
+
+<h3>Title: Title:
+          ABEX: Data Augmentation for Low-Resource NLU via Expanding Abstract Descriptions</h3>
+<ul>
+<li><strong>Authors: </strong>Sreyan Ghosh, Utkarsh Tyagi, Sonal Kumar, C. K. Evuru, S Ramaneswaran, S Sakshi, Dinesh Manocha</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          ABEX: Data Augmentation for Low-Resource NLU via Expanding Abstract Descriptions(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We present ABEX, a novel and effective generative data augmentation methodology for low-resource Natural Language Understanding (NLU) tasks. ABEX is based on ABstract-and-EXpand, a novel paradigm for generating diverse forms of an input document -- we first convert a document into its concise, abstract description and then generate new documents based on expanding the resultant abstraction. To learn the task of expanding abstract descriptions, we first train BART on a large-scale synthetic dataset with abstract-document pairs. Next, to generate abstract descriptions for a document, we propose a simple, controllable, and training-free method based on editing AMR graphs. ABEX brings the best of both worlds: by expanding from abstract representations, it preserves the original semantic properties of the documents, like style and meaning, thereby maintaining alignment with the original label and data distribution. At the same time, the fundamental process of elaborating on abstract descriptions facilitates diverse generations. We demonstrate the effectiveness of ABEX on 4 NLU tasks spanning 12 datasets and 4 low-resource settings. ABEX outperforms all our baselines qualitatively with improvements of 0.04% - 38.8%. Qualitatively, ABEX outperforms all prior methods from literature in terms of context and length diversity.</li>
+</ul>
+
+<h3>Title: Title:
+          Everything to the Synthetic: Diffusion-driven Test-time Adaptation via Synthetic-Domain Alignment</h3>
+<ul>
+<li><strong>Authors: </strong>Jiayi Guo, Junhao Zhao, Chunjiang Ge, Chaoqun Du, Zanlin Ni, Shiji Song, Humphrey Shi, Gao Huang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Everything to the Synthetic: Diffusion-driven Test-time Adaptation via Synthetic-Domain Alignment(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Test-time adaptation (TTA) aims to enhance the performance of source-domain pretrained models when tested on unknown shifted target domains. Traditional TTA methods primarily adapt model weights based on target data streams, making model performance sensitive to the amount and order of target data. Recently, diffusion-driven TTA methods have demonstrated strong performance by using an unconditional diffusion model, which is also trained on the source domain to transform target data into synthetic data as a source domain projection. This allows the source model to make predictions without weight adaptation. In this paper, we argue that the domains of the source model and the synthetic data in diffusion-driven TTA methods are not aligned. To adapt the source model to the synthetic domain of the unconditional diffusion model, we introduce a Synthetic-Domain Alignment (SDA) framework to fine-tune the source model with synthetic data. Specifically, we first employ a conditional diffusion model to generate labeled samples, creating a synthetic dataset. Subsequently, we use the aforementioned unconditional diffusion model to add noise to and denoise each sample before fine-tuning. This process mitigates the potential domain gap between the conditional and unconditional models. Extensive experiments across various models and benchmarks demonstrate that SDA achieves superior domain alignment and consistently outperforms existing diffusion-driven TTA methods. Our code is available at this https URL.</li>
+</ul>
+
+<h3>Title: Title:
+          ReNO: Enhancing One-step Text-to-Image Models through Reward-based Noise Optimization</h3>
+<ul>
+<li><strong>Authors: </strong>Luca Eyring, Shyamgopal Karthik, Karsten Roth, Alexey Dosovitskiy, Zeynep Akata</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          ReNO: Enhancing One-step Text-to-Image Models through Reward-based Noise Optimization(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Text-to-Image (T2I) models have made significant advancements in recent years, but they still struggle to accurately capture intricate details specified in complex compositional prompts. While fine-tuning T2I models with reward objectives has shown promise, it suffers from "reward hacking" and may not generalize well to unseen prompt distributions. In this work, we propose Reward-based Noise Optimization (ReNO), a novel approach that enhances T2I models at inference by optimizing the initial noise based on the signal from one or multiple human preference reward models. Remarkably, solving this optimization problem with gradient ascent for 50 iterations yields impressive results on four different one-step models across two competitive benchmarks, T2I-CompBench and GenEval. Within a computational budget of 20-50 seconds, ReNO-enhanced one-step models consistently surpass the performance of all current open-source Text-to-Image models. Extensive user studies demonstrate that our model is preferred nearly twice as often compared to the popular SDXL model and is on par with the proprietary Stable Diffusion 3 with 8B parameters. Moreover, given the same computational resources, a ReNO-optimized one-step model outperforms widely-used open-source models such as SDXL and PixArt-$\alpha$, highlighting the efficiency and effectiveness of ReNO in enhancing T2I model performance at inference time. Code is available at this https URL.</li>
+</ul>
+
+<h3>Title: Title:
+          Step-aware Preference Optimization: Aligning Preference with Denoising Performance at Each Step</h3>
+<ul>
+<li><strong>Authors: </strong>Zhanhao Liang, Yuhui Yuan, Shuyang Gu, Bohan Chen, Tiankai Hang, Ji Li, Liang Zheng</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Step-aware Preference Optimization: Aligning Preference with Denoising Performance at Each Step(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recently, Direct Preference Optimization (DPO) has extended its success from aligning large language models (LLMs) to aligning text-to-image diffusion models with human preferences. Unlike most existing DPO methods that assume all diffusion steps share a consistent preference order with the final generated images, we argue that this assumption neglects step-specific denoising performance and that preference labels should be tailored to each step's contribution. To address this limitation, we propose Step-aware Preference Optimization (SPO), a novel post-training approach that independently evaluates and adjusts the denoising performance at each step, using a step-aware preference model and a step-wise resampler to ensure accurate step-aware supervision. Specifically, at each denoising step, we sample a pool of images, find a suitable win-lose pair, and, most importantly, randomly select a single image from the pool to initialize the next denoising step. This step-wise resampler process ensures the next win-lose image pair comes from the same image, making the win-lose comparison independent of the previous step. To assess the preferences at each step, we train a separate step-aware preference model that can be applied to both noisy and clean images. Our experiments with Stable Diffusion v1.5 and SDXL demonstrate that SPO significantly outperforms the latest Diffusion-DPO in aligning generated images with complex, detailed prompts and enhancing aesthetics, while also achieving more than 20x times faster in training efficiency. Code and model: this https URL</li>
+</ul>
+
+<h3>Title: Title:
+          Chimera: Effectively Modeling Multivariate Time Series with 2-Dimensional State Space Models</h3>
+<ul>
+<li><strong>Authors: </strong>Ali Behrouz, Michele Santacatterina, Ramin Zabih</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Chimera: Effectively Modeling Multivariate Time Series with 2-Dimensional State Space Models(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Modeling multivariate time series is a well-established problem with a wide range of applications from healthcare to financial markets. Traditional State Space Models (SSMs) are classical approaches for univariate time series modeling due to their simplicity and expressive power to represent linear dependencies. They, however, have fundamentally limited expressive power to capture non-linear dependencies, are slow in practice, and fail to model the inter-variate information flow. Despite recent attempts to improve the expressive power of SSMs by using deep structured SSMs, the existing methods are either limited to univariate time series, fail to model complex patterns (e.g., seasonal patterns), fail to dynamically model the dependencies of variate and time dimensions, and/or are input-independent. We present Chimera that uses two input-dependent 2-D SSM heads with different discretization processes to learn long-term progression and seasonal patterns. To improve the efficiency of complex 2D recurrence, we present a fast training using a new 2-dimensional parallel selective scan. We further present and discuss 2-dimensional Mamba and Mamba-2 as the spacial cases of our 2D SSM. Our experimental evaluation shows the superior performance of Chimera on extensive and diverse benchmarks, including ECG and speech time series classification, long-term and short-term time series forecasting, and time series anomaly detection.</li>
+</ul>
+
+<h3>Title: Title:
+          DIRECT-3D: Learning Direct Text-to-3D Generation on Massive Noisy 3D Data</h3>
+<ul>
+<li><strong>Authors: </strong>Qihao Liu, Yi Zhang, Song Bai, Adam Kortylewski, Alan Yuille</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          DIRECT-3D: Learning Direct Text-to-3D Generation on Massive Noisy 3D Data(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>We present DIRECT-3D, a diffusion-based 3D generative model for creating high-quality 3D assets (represented by Neural Radiance Fields) from text prompts. Unlike recent 3D generative models that rely on clean and well-aligned 3D data, limiting them to single or few-class generation, our model is directly trained on extensive noisy and unaligned `in-the-wild' 3D assets, mitigating the key challenge (i.e., data scarcity) in large-scale 3D generation. In particular, DIRECT-3D is a tri-plane diffusion model that integrates two innovations: 1) A novel learning framework where noisy data are filtered and aligned automatically during the training process. Specifically, after an initial warm-up phase using a small set of clean data, an iterative optimization is introduced in the diffusion process to explicitly estimate the 3D pose of objects and select beneficial data based on conditional density. 2) An efficient 3D representation that is achieved by disentangling object geometry and color features with two separate conditional diffusion models that are optimized hierarchically. Given a prompt input, our model generates high-quality, high-resolution, realistic, and complex 3D objects with accurate geometric details in seconds. We achieve state-of-the-art performance in both single-class generation and text-to-3D generation. We also demonstrate that DIRECT-3D can serve as a useful 3D geometric prior of objects, for example to alleviate the well-known Janus problem in 2D-lifting methods such as DreamFusion. The code and models are available for research purposes at: this https URL.</li>
+</ul>
+
+<h3>Title: Title:
+          ATraDiff: Accelerating Online Reinforcement Learning with Imaginary Trajectories</h3>
+<ul>
+<li><strong>Authors: </strong>Qianlan Yang, Yu-Xiong Wang</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          ATraDiff: Accelerating Online Reinforcement Learning with Imaginary Trajectories(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Training autonomous agents with sparse rewards is a long-standing problem in online reinforcement learning (RL), due to low data efficiency. Prior work overcomes this challenge by extracting useful knowledge from offline data, often accomplished through the learning of action distribution from offline data and utilizing the learned distribution to facilitate online RL. However, since the offline data are given and fixed, the extracted knowledge is inherently limited, making it difficult to generalize to new tasks. We propose a novel approach that leverages offline data to learn a generative diffusion model, coined as Adaptive Trajectory Diffuser (ATraDiff). This model generates synthetic trajectories, serving as a form of data augmentation and consequently enhancing the performance of online RL methods. The key strength of our diffuser lies in its adaptability, allowing it to effectively handle varying trajectory lengths and mitigate distribution shifts between online and offline data. Because of its simplicity, ATraDiff seamlessly integrates with a wide spectrum of RL methods. Empirical evaluation shows that ATraDiff consistently achieves state-of-the-art performance across a variety of environments, with particularly pronounced improvements in complicated settings. Our code and demo video are available at this https URL .</li>
+</ul>
+
+<h3>Title: Title:
+          SF-V: Single Forward Video Generation Model</h3>
+<ul>
+<li><strong>Authors: </strong>Zhixing Zhang, Yanyu Li, Yushu Wu, Yanwu Xu, Anil Kag, Ivan Skorokhodov, Willi Menapace, Aliaksandr Siarohin, Junli Cao, Dimitris Metaxas, Sergey Tulyakov, Jian Ren</a></li>
+<li><strong>Subjects: </strong>cs.CV, eess.IV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          SF-V: Single Forward Video Generation Model(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion-based video generation models have demonstrated remarkable success in obtaining high-fidelity videos through the iterative denoising process. However, these models require multiple denoising steps during sampling, resulting in high computational costs. In this work, we propose a novel approach to obtain single-step video generation models by leveraging adversarial training to fine-tune pre-trained video diffusion models. We show that, through the adversarial training, the multi-steps video diffusion model, i.e., Stable Video Diffusion (SVD), can be trained to perform single forward pass to synthesize high-quality videos, capturing both temporal and spatial dependencies in the video data. Extensive experiments demonstrate that our method achieves competitive generation quality of synthesized videos with significantly reduced computational overhead for the denoising process (i.e., around $23\times$ speedup compared with SVD and $6\times$ speedup compared with existing works, with even better generation quality), paving the way for real-time video synthesis and editing. More visualization results are made publicly available at this https URL.</li>
+</ul>
+
+<h3>Title: Title:
+          The Brain's Bitter Lesson: Scaling Speech Decoding With Self-Supervised Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Dulhan Jayalath, Gilad Landau, Brendan Shillingford, Mark Woolrich, Oiwi Parker Jones</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          The Brain's Bitter Lesson: Scaling Speech Decoding With Self-Supervised Learning(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>The past few years have produced a series of spectacular advances in the decoding of speech from brain activity. The engine of these advances has been the acquisition of labelled data, with increasingly large datasets acquired from single subjects. However, participants exhibit anatomical and other individual differences, and datasets use varied scanners and task designs. As a result, prior work has struggled to leverage data from multiple subjects, multiple datasets, multiple tasks, and unlabelled datasets. In turn, the field has not benefited from the rapidly growing number of open neural data repositories to exploit large-scale data and deep learning. To address this, we develop an initial set of neuroscience-inspired self-supervised objectives, together with a neural architecture, for representation learning from heterogeneous and unlabelled neural recordings. Experimental results show that representations learned with these objectives generalise across subjects, datasets, and tasks, and are also learned faster than using only labelled data. In addition, we set new benchmarks for two foundational speech decoding tasks. Taken together, these methods now unlock the potential for training speech decoding models with orders of magnitude more existing data.</li>
+</ul>
+
+<h3>Title: Title:
+          Simplified and Generalized Masked Diffusion for Discrete Data</h3>
+<ul>
+<li><strong>Authors: </strong>Jiaxin Shi, Kehang Han, Zhe Wang, Arnaud Doucet, Michalis K. Titsias</a></li>
+<li><strong>Subjects: </strong>cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Simplified and Generalized Masked Diffusion for Discrete Data(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Masked (or absorbing) diffusion is actively explored as an alternative to autoregressive models for generative modeling of discrete data. However, existing work in this area has been hindered by unnecessarily complex model formulations and unclear relationships between different perspectives, leading to suboptimal parameterization, training objectives, and ad hoc adjustments to counteract these issues. In this work, we aim to provide a simple and general framework that unlocks the full potential of masked diffusion models. We show that the continuous-time variational objective of masked diffusion models is a simple weighted integral of cross-entropy losses. Our framework also enables training generalized masked diffusion models with state-dependent masking schedules. When evaluated by perplexity, our models trained on OpenWebText surpass prior diffusion language models at GPT-2 scale and demonstrate superior performance on 4 out of 5 zero-shot language modeling tasks. Furthermore, our models vastly outperform previous discrete diffusion models on pixel-level image modeling, achieving 2.78~(CIFAR-10) and 3.42 (ImageNet 64$\times$64) bits per dimension that are comparable or better than autoregressive models of similar sizes.</li>
+</ul>
+
+<h3>Title: Title:
+          Parameter-Inverted Image Pyramid Networks</h3>
+<ul>
+<li><strong>Authors: </strong>Xizhou Zhu, Xue Yang, Zhaokai Wang, Hao Li, Wenhan Dou, Junqi Ge, Lewei Lu, Yu Qiao, Jifeng Dai</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Parameter-Inverted Image Pyramid Networks(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Image pyramids are commonly used in modern computer vision tasks to obtain multi-scale features for precise understanding of images. However, image pyramids process multiple resolutions of images using the same large-scale model, which requires significant computational cost. To overcome this issue, we propose a novel network architecture known as the Parameter-Inverted Image Pyramid Networks (PIIP). Our core idea is to use models with different parameter sizes to process different resolution levels of the image pyramid, thereby balancing computational efficiency and performance. Specifically, the input to PIIP is a set of multi-scale images, where higher resolution images are processed by smaller networks. We further propose a feature interaction mechanism to allow features of different resolutions to complement each other and effectively integrate information from different spatial scales. Extensive experiments demonstrate that the PIIP achieves superior performance in tasks such as object detection, segmentation, and image classification, compared to traditional image pyramid methods and single-branch networks, while reducing computational cost. Notably, when applying our method on a large-scale vision foundation model InternViT-6B, we improve its performance by 1%-2% on detection and segmentation with only 40%-60% of the original computation. These results validate the effectiveness of the PIIP approach and provide a new technical direction for future vision computing tasks. Our code and models are available at this https URL.</li>
+</ul>
+
+<h3>Title: Title:
+          BitsFusion: 1.99 bits Weight Quantization of Diffusion Model</h3>
+<ul>
+<li><strong>Authors: </strong>Yang Sui, Yanyu Li, Anil Kag, Yerlan Idelbayev, Junli Cao, Ju Hu, Dhritiman Sagar, Bo Yuan, Sergey Tulyakov, Jian Ren</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          BitsFusion: 1.99 bits Weight Quantization of Diffusion Model(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion-based image generation models have achieved great success in recent years by showing the capability of synthesizing high-quality content. However, these models contain a huge number of parameters, resulting in a significantly large model size. Saving and transferring them is a major bottleneck for various applications, especially those running on resource-constrained devices. In this work, we develop a novel weight quantization method that quantizes the UNet from Stable Diffusion v1.5 to 1.99 bits, achieving a model with 7.9X smaller size while exhibiting even better generation quality than the original one. Our approach includes several novel techniques, such as assigning optimal bits to each layer, initializing the quantized model for better performance, and improving the training strategy to dramatically reduce quantization error. Furthermore, we extensively evaluate our quantized model across various benchmark datasets and through human evaluation to demonstrate its superior generation quality.</li>
+</ul>
+
+<h3>Title: Title:
+          Coherent Zero-Shot Visual Instruction Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Quynh Phung, Songwei Ge, Jia-Bin Huang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Coherent Zero-Shot Visual Instruction Generation(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Despite the advances in text-to-image synthesis, particularly with diffusion models, generating visual instructions that require consistent representation and smooth state transitions of objects across sequential steps remains a formidable challenge. This paper introduces a simple, training-free framework to tackle the issues, capitalizing on the advancements in diffusion models and large language models (LLMs). Our approach systematically integrates text comprehension and image generation to ensure visual instructions are visually appealing and maintain consistency and accuracy throughout the instruction sequence. We validate the effectiveness by testing multi-step instructions and comparing the text alignment and consistency with several baselines. Our experiments show that our approach can visualize coherent and visually pleasing instructions</li>
+</ul>
+
+<h3>Title: Title:
+          Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion</h3>
+<ul>
+<li><strong>Authors: </strong>Fangfu Liu, Hanyang Wang, Shunyu Yao, Shengjun Zhang, Jie Zhou, Yueqi Duan</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.GR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>In recent years, there has been rapid development in 3D generation models, opening up new possibilities for applications such as simulating the dynamic movements of 3D objects and customizing their behaviors. However, current 3D generative models tend to focus only on surface features such as color and shape, neglecting the inherent physical properties that govern the behavior of objects in the real world. To accurately simulate physics-aligned dynamics, it is essential to predict the physical properties of materials and incorporate them into the behavior prediction process. Nonetheless, predicting the diverse materials of real-world objects is still challenging due to the complex nature of their physical attributes. In this paper, we propose \textbf{Physics3D}, a novel method for learning various physical properties of 3D objects through a video diffusion model. Our approach involves designing a highly generalizable physical simulation system based on a viscoelastic material model, which enables us to simulate a wide range of materials with high-fidelity capabilities. Moreover, we distill the physical priors from a video diffusion model that contains more understanding of realistic object materials. Extensive experiments demonstrate the effectiveness of our method with both elastic and plastic materials. Physics3D shows great potential for bridging the gap between the physical world and virtual neural space, providing a better integration and application of realistic physical principles in virtual environments. Project page: this https URL.</li>
+</ul>
+
+<h3>Title: Title:
+          GLACE: Global Local Accelerated Coordinate Encoding</h3>
+<ul>
+<li><strong>Authors: </strong>Fangjinhua Wang, Xudong Jiang, Silvano Galliani, Christoph Vogel, Marc Pollefeys</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/">https://arxiv.org/abs/</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/">https://arxiv.org/pdf/</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[]] Title:
+          GLACE: Global Local Accelerated Coordinate Encoding(https://arxiv.org/abs/)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Scene coordinate regression (SCR) methods are a family of visual localization methods that directly regress 2D-3D matches for camera pose estimation. They are effective in small-scale scenes but face significant challenges in large-scale scenes that are further amplified in the absence of ground truth 3D point clouds for supervision. Here, the model can only rely on reprojection constraints and needs to implicitly triangulate the points. The challenges stem from a fundamental dilemma: The network has to be invariant to observations of the same landmark at different viewpoints and lighting conditions, etc., but at the same time discriminate unrelated but similar observations. The latter becomes more relevant and severe in larger scenes. In this work, we tackle this problem by introducing the concept of co-visibility to the network. We propose GLACE, which integrates pre-trained global and local encodings and enables SCR to scale to large scenes with only a single small-sized network. Specifically, we propose a novel feature diffusion technique that implicitly groups the reprojection constraints with co-visibility and avoids overfitting to trivial solutions. Additionally, our position decoder parameterizes the output positions for large-scale scenes more effectively. Without using 3D models or depth maps for supervision, our method achieves state-of-the-art results on large-scale scenes with a low-map-size model. On Cambridge landmarks, with a single model, we achieve 17% lower median position error than Poker, the ensemble variant of the state-of-the-art SCR method ACE. Code is available at: this https URL.</li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
