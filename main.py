@@ -35,7 +35,7 @@ class Paper:
         self.pdf_url = self.pdf_prefix + self.id
 
         self.title = dd.find(
-            'div', {'class': 'list-title mathjax'}).text.replace('Title: ', '').strip()
+            'div', {'class': 'list-title mathjax'}).text.replace('Title:', '').strip()
         self.authors = dd.find('div', {'class': 'list-authors'}).text.replace('Authors:\n', '').replace(
             '\n', '').strip()
         self.subjects = CONTENT_IN_BRACKET.findall(
