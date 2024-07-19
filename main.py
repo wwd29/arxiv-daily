@@ -30,7 +30,7 @@ class Paper:
         self.pdf_prefix = 'https://arxiv.org/pdf/'
 
     def parse(self, dt, dd):
-        self.id = dt.text.strip().split(' ')[2].split(':')[-1]
+        self.id = re.findall(r'\d+\.\d+', dt.text)[0]
         self.abs_url = self.abs_prefix + self.id
         self.pdf_url = self.pdf_prefix + self.id
 
