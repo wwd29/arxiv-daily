@@ -144,7 +144,7 @@ def main():
             print(f'<button id="copy">Copy All</button>', file=f)
             print(f'</article>', file=f)
             print(
-                f'<script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>',
+                f'<script src="../../javascript/clipboard.min.js"></script>',
                 file=f)
             print(f'<script src="../../javascript/clipboard.js"></script>',
                   file=f)
