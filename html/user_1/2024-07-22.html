@@ -1,0 +1,359 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2024-07-22</h1>
+<h3>Title: X-Former: Unifying Contrastive and Reconstruction Learning for MLLMs</h3>
+<ul>
+<li><strong>Authors: </strong>Sirnam Swetha, Jinyu Yang, Tal Neiman, Mamshad Nayeem Rizve, Son Tran, Benjamin Yao, Trishul Chilimbi, Mubarak Shah</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG, cs.MM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.13851">https://arxiv.org/abs/2407.13851</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.13851">https://arxiv.org/pdf/2407.13851</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.13851]] X-Former: Unifying Contrastive and Reconstruction Learning for MLLMs(https://arxiv.org/abs/2407.13851)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Recent advancements in Multimodal Large Language Models (MLLMs) have revolutionized the field of vision-language understanding by integrating visual perception capabilities into Large Language Models (LLMs). The prevailing trend in this field involves the utilization of a vision encoder derived from vision-language contrastive learning (CL), showing expertise in capturing overall representations while facing difficulties in capturing detailed local patterns. In this work, we focus on enhancing the visual representations for MLLMs by combining high-frequency and detailed visual representations, obtained through masked image modeling (MIM), with semantically-enriched low-frequency representations captured by CL. To achieve this goal, we introduce X-Former which is a lightweight transformer module designed to exploit the complementary strengths of CL and MIM through an innovative interaction mechanism. Specifically, X-Former first bootstraps vision-language representation learning and multimodal-to-multimodal generative learning from two frozen vision encoders, i.e., CLIP-ViT (CL-based) and MAE-ViT (MIM-based). It further bootstraps vision-to-language generative learning from a frozen LLM to ensure visual features from X-Former can be interpreted by the LLM. To demonstrate the effectiveness of our approach, we assess its performance on tasks demanding detailed visual understanding. Extensive evaluations indicate that X-Former excels in visual reasoning tasks involving both structural and semantic categories in the GQA dataset. Assessment on fine-grained visual perception benchmark further confirms its superior capabilities in visual understanding.</li>
+</ul>
+
+<h3>Title: A Closer Look at GAN Priors: Exploiting Intermediate Features for Enhanced Model Inversion Attacks</h3>
+<ul>
+<li><strong>Authors: </strong>Yixiang Qiu, Hao Fang, Hongyao Yu, Bin Chen, MeiKang Qiu, Shu-Tao Xia</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.13863">https://arxiv.org/abs/2407.13863</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.13863">https://arxiv.org/pdf/2407.13863</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.13863]] A Closer Look at GAN Priors: Exploiting Intermediate Features for Enhanced Model Inversion Attacks(https://arxiv.org/abs/2407.13863)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Model Inversion (MI) attacks aim to reconstruct privacy-sensitive training data from released models by utilizing output information, raising extensive concerns about the security of Deep Neural Networks (DNNs). Recent advances in generative adversarial networks (GANs) have contributed significantly to the improved performance of MI attacks due to their powerful ability to generate realistic images with high fidelity and appropriate semantics. However, previous MI attacks have solely disclosed private information in the latent space of GAN priors, limiting their semantic extraction and transferability across multiple target models and datasets. To address this challenge, we propose a novel method, Intermediate Features enhanced Generative Model Inversion (IF-GMI), which disassembles the GAN structure and exploits features between intermediate blocks. This allows us to extend the optimization space from latent code to intermediate features with enhanced expressive capabilities. To prevent GAN priors from generating unrealistic images, we apply a L1 ball constraint to the optimization process. Experiments on multiple benchmarks demonstrate that our method significantly outperforms previous approaches and achieves state-of-the-art results under various settings, especially in the out-of-distribution (OOD) scenario. Our code is available at: this https URL</li>
+</ul>
+
+<h3>Title: Learning Goal-Conditioned Representations for Language Reward Models</h3>
+<ul>
+<li><strong>Authors: </strong>Vaskar Nath, Dylan Slack, Jeff Da, Yuntao Ma, Hugh Zhang, Spencer Whitehead, Sean Hendryx</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.13887">https://arxiv.org/abs/2407.13887</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.13887">https://arxiv.org/pdf/2407.13887</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.13887]] Learning Goal-Conditioned Representations for Language Reward Models(https://arxiv.org/abs/2407.13887)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Techniques that learn improved representations via offline data or self-supervised objectives have shown impressive results in traditional reinforcement learning (RL). Nevertheless, it is unclear how improved representation learning can benefit reinforcement learning from human feedback (RLHF) on language models (LMs). In this work, we propose training reward models (RMs) in a contrastive, $\textit{goal-conditioned}$ fashion by increasing the representation similarity of future states along sampled preferred trajectories and decreasing the similarity along randomly sampled dispreferred trajectories. This objective significantly improves RM performance by up to 0.09 AUROC across challenging benchmarks, such as MATH and GSM8k. These findings extend to general alignment as well -- on the Helpful-Harmless dataset, we observe $2.3\%$ increase in accuracy. Beyond improving reward model performance, we show this way of training RM representations enables improved $\textit{steerability}$ because it allows us to evaluate the likelihood of an action achieving a particular goal-state (e.g., whether a solution is correct or helpful). Leveraging this insight, we find that we can filter up to $55\%$ of generated tokens during majority voting by discarding trajectories likely to end up in an "incorrect" state, which leads to significant cost savings. We additionally find that these representations can perform fine-grained control by conditioning on desired future goal-states. For example, we show that steering a Llama 3 model towards helpful generations with our approach improves helpfulness by $9.6\%$ over a supervised-fine-tuning trained baseline. Similarly, steering the model towards complex generations improves complexity by $21.6\%$ over the baseline. Overall, we find that training RMs in this contrastive, goal-conditioned fashion significantly improves performance and enables model steerability.</li>
+</ul>
+
+<h3>Title: Synthetic Counterfactual Faces</h3>
+<ul>
+<li><strong>Authors: </strong>Guruprasad V Ramesh, Harrison Rosenberg, Ashish Hooda, Kassem Fawaz</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.13922">https://arxiv.org/abs/2407.13922</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.13922">https://arxiv.org/pdf/2407.13922</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.13922]] Synthetic Counterfactual Faces(https://arxiv.org/abs/2407.13922)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Computer vision systems have been deployed in various applications involving biometrics like human faces. These systems can identify social media users, search for missing persons, and verify identity of individuals. While computer vision models are often evaluated for accuracy on available benchmarks, more annotated data is necessary to learn about their robustness and fairness against semantic distributional shifts in input data, especially in face data. Among annotated data, counterfactual examples grant strong explainability characteristics. Because collecting natural face data is prohibitively expensive, we put forth a generative AI-based framework to construct targeted, counterfactual, high-quality synthetic face data. Our synthetic data pipeline has many use cases, including face recognition systems sensitivity evaluations and image understanding system probes. The pipeline is validated with multiple user studies. We showcase the efficacy of our face generation pipeline on a leading commercial vision model. We identify facial attributes that cause vision systems to fail.</li>
+</ul>
+
+<h3>Title: FANTAstic SEquences and Where to Find Them: Faithful and Efficient API Call Generation through State-tracked Constrained Decoding and Reranking</h3>
+<ul>
+<li><strong>Authors: </strong>Zhuoer Wang, Leonardo F. R. Ribeiro, Alexandros Papangelis, Rohan Mukherjee, Tzu-Yen Wang, Xinyan Zhao, Arijit Biswas, James Caverlee, Angeliki Metallinou</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.13945">https://arxiv.org/abs/2407.13945</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.13945">https://arxiv.org/pdf/2407.13945</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.13945]] FANTAstic SEquences and Where to Find Them: Faithful and Efficient API Call Generation through State-tracked Constrained Decoding and Reranking(https://arxiv.org/abs/2407.13945)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>API call generation is the cornerstone of large language models' tool-using ability that provides access to the larger world. However, existing supervised and in-context learning approaches suffer from high training costs, poor data efficiency, and generated API calls that can be unfaithful to the API documentation and the user's request. To address these limitations, we propose an output-side optimization approach called FANTASE. Two of the unique contributions of FANTASE are its State-Tracked Constrained Decoding (SCD) and Reranking components. SCD dynamically incorporates appropriate API constraints in the form of Token Search Trie for efficient and guaranteed generation faithfulness with respect to the API documentation. The Reranking component efficiently brings in the supervised signal by leveraging a lightweight model as the discriminator to rerank the beam-searched candidate generations of the large language model. We demonstrate the superior performance of FANTASE in API call generation accuracy, inference efficiency, and context efficiency with DSTC8 and API Bank datasets.</li>
+</ul>
+
+<h3>Title: BRSR-OpGAN: Blind Radar Signal Restoration using Operational Generative Adversarial Network</h3>
+<ul>
+<li><strong>Authors: </strong>Muhammad Uzair Zahid, Serkan Kiranyaz, Alper Yildirim, Moncef Gabbouj</a></li>
+<li><strong>Subjects: </strong>cs.LG, eess.SP</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.13949">https://arxiv.org/abs/2407.13949</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.13949">https://arxiv.org/pdf/2407.13949</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.13949]] BRSR-OpGAN: Blind Radar Signal Restoration using Operational Generative Adversarial Network(https://arxiv.org/abs/2407.13949)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Objective: Many studies on radar signal restoration in the literature focus on isolated restoration problems, such as denoising over a certain type of noise, while ignoring other types of artifacts. Additionally, these approaches usually assume a noisy environment with a limited set of fixed signal-to-noise ratio (SNR) levels. However, real-world radar signals are often corrupted by a blend of artifacts, including but not limited to unwanted echo, sensor noise, intentional jamming, and interference, each of which can vary in type, severity, and duration. This study introduces Blind Radar Signal Restoration using an Operational Generative Adversarial Network (BRSR-OpGAN), which uses a dual domain loss in the temporal and spectral domains. This approach is designed to improve the quality of radar signals, regardless of the diversity and intensity of the corruption. Methods: The BRSR-OpGAN utilizes 1D Operational GANs, which use a generative neuron model specifically optimized for blind restoration of corrupted radar signals. This approach leverages GANs' flexibility to adapt dynamically to a wide range of artifact characteristics. Results: The proposed approach has been extensively evaluated using a well-established baseline and a newly curated extended dataset called the Blind Radar Signal Restoration (BRSR) dataset. This dataset was designed to simulate real-world conditions and includes a variety of artifacts, each varying in severity. The evaluation shows an average SNR improvement over 15.1 dB and 14.3 dB for the baseline and BRSR datasets, respectively. Finally, even on resource-constrained platforms, the proposed approach can be applied in real-time.</li>
+</ul>
+
+<h3>Title: PlacidDreamer: Advancing Harmony in Text-to-3D Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Shuo Huang, Shikun Sun, Zixuan Wang, Xiaoyu Qin, Yanmin Xiong, Yuan Zhang, Pengfei Wan, Di Zhang, Jia Jia</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.13976">https://arxiv.org/abs/2407.13976</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.13976">https://arxiv.org/pdf/2407.13976</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.13976]] PlacidDreamer: Advancing Harmony in Text-to-3D Generation(https://arxiv.org/abs/2407.13976)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recently, text-to-3D generation has attracted significant attention, resulting in notable performance enhancements. Previous methods utilize end-to-end 3D generation models to initialize 3D Gaussians, multi-view diffusion models to enforce multi-view consistency, and text-to-image diffusion models to refine details with score distillation algorithms. However, these methods exhibit two limitations. Firstly, they encounter conflicts in generation directions since different models aim to produce diverse 3D assets. Secondly, the issue of over-saturation in score distillation has not been thoroughly investigated and solved. To address these limitations, we propose PlacidDreamer, a text-to-3D framework that harmonizes initialization, multi-view generation, and text-conditioned generation with a single multi-view diffusion model, while simultaneously employing a novel score distillation algorithm to achieve balanced saturation. To unify the generation direction, we introduce the Latent-Plane module, a training-friendly plug-in extension that enables multi-view diffusion models to provide fast geometry reconstruction for initialization and enhanced multi-view images to personalize the text-to-image diffusion model. To address the over-saturation problem, we propose to view score distillation as a multi-objective optimization problem and introduce the Balanced Score Distillation algorithm, which offers a Pareto Optimal solution that achieves both rich details and balanced saturation. Extensive experiments validate the outstanding capabilities of our PlacidDreamer. The code is available at \url{this https URL}.</li>
+</ul>
+
+<h3>Title: PASS++: A Dual Bias Reduction Framework for Non-Exemplar Class-Incremental Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Fei Zhu, Xu-Yao Zhang, Zhen Cheng, Cheng-Lin Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14029">https://arxiv.org/abs/2407.14029</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14029">https://arxiv.org/pdf/2407.14029</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14029]] PASS++: A Dual Bias Reduction Framework for Non-Exemplar Class-Incremental Learning(https://arxiv.org/abs/2407.14029)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Class-incremental learning (CIL) aims to recognize new classes incrementally while maintaining the discriminability of old classes. Most existing CIL methods are exemplar-based, i.e., storing a part of old data for retraining. Without relearning old data, those methods suffer from catastrophic forgetting. In this paper, we figure out two inherent problems in CIL, i.e., representation bias and classifier bias, that cause catastrophic forgetting of old knowledge. To address these two biases, we present a simple and novel dual bias reduction framework that employs self-supervised transformation (SST) in input space and prototype augmentation (protoAug) in deep feature space. On the one hand, SST alleviates the representation bias by learning generic and diverse representations that can transfer across different tasks. On the other hand, protoAug overcomes the classifier bias by explicitly or implicitly augmenting prototypes of old classes in the deep feature space, which poses tighter constraints to maintain previously learned decision boundaries. We further propose hardness-aware prototype augmentation and multi-view ensemble strategies, leading to significant improvements. The proposed framework can be easily integrated with pre-trained models. Without storing any samples of old classes, our method can perform comparably with state-of-the-art exemplar-based approaches which store plenty of old data. We hope to draw the attention of researchers back to non-exemplar CIL by rethinking the necessity of storing old samples in CIL.</li>
+</ul>
+
+<h3>Title: Semantic-CC: Boosting Remote Sensing Image Change Captioning via Foundational Knowledge and Semantic Guidance</h3>
+<ul>
+<li><strong>Authors: </strong>Yongshuo Zhu, Lu Li, Keyan Chen, Chenyang Liu, Fugen Zhou, Zhenwei Shi</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14032">https://arxiv.org/abs/2407.14032</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14032">https://arxiv.org/pdf/2407.14032</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14032]] Semantic-CC: Boosting Remote Sensing Image Change Captioning via Foundational Knowledge and Semantic Guidance(https://arxiv.org/abs/2407.14032)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Remote sensing image change captioning (RSICC) aims to articulate the changes in objects of interest within bi-temporal remote sensing images using natural language. Given the limitations of current RSICC methods in expressing general features across multi-temporal and spatial scenarios, and their deficiency in providing granular, robust, and precise change descriptions, we introduce a novel change captioning (CC) method based on the foundational knowledge and semantic guidance, which we term Semantic-CC. Semantic-CC alleviates the dependency of high-generalization algorithms on extensive annotations by harnessing the latent knowledge of foundation models, and it generates more comprehensive and accurate change descriptions guided by pixel-level semantics from change detection (CD). Specifically, we propose a bi-temporal SAM-based encoder for dual-image feature extraction; a multi-task semantic aggregation neck for facilitating information interaction between heterogeneous tasks; a straightforward multi-scale change detection decoder to provide pixel-level semantic guidance; and a change caption decoder based on the large language model (LLM) to generate change description sentences. Moreover, to ensure the stability of the joint training of CD and CC, we propose a three-stage training strategy that supervises different tasks at various stages. We validate the proposed method on the LEVIR-CC and LEVIR-CD datasets. The experimental results corroborate the complementarity of CD and CC, demonstrating that Semantic-CC can generate more accurate change descriptions and achieve optimal performance across both tasks.</li>
+</ul>
+
+<h3>Title: Generative Language Model for Catalyst Discovery</h3>
+<ul>
+<li><strong>Authors: </strong>Dong Hyeon Mok, Seoin Back</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14040">https://arxiv.org/abs/2407.14040</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14040">https://arxiv.org/pdf/2407.14040</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14040]] Generative Language Model for Catalyst Discovery(https://arxiv.org/abs/2407.14040)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model, generative</a></li>
+<li><strong>Abstract: </strong>Discovery of novel and promising materials is a critical challenge in the field of chemistry and material science, traditionally approached through methodologies ranging from trial-and-error to machine learning-driven inverse design. Recent studies suggest that transformer-based language models can be utilized as material generative models to expand chemical space and explore materials with desired properties. In this work, we introduce the Catalyst Generative Pretrained Transformer (CatGPT), trained to generate string representations of inorganic catalyst structures from a vast chemical space. CatGPT not only demonstrates high performance in generating valid and accurate catalyst structures but also serves as a foundation model for generating desired types of catalysts by fine-tuning with sparse and specified datasets. As an example, we fine-tuned the pretrained CatGPT using a binary alloy catalyst dataset designed for screening two-electron oxygen reduction reaction (2e-ORR) catalyst and generate catalyst structures specialized for 2e-ORR. Our work demonstrates the potential of language models as generative tools for catalyst discovery.</li>
+</ul>
+
+<h3>Title: Not All Noises Are Created Equally:Diffusion Noise Selection and Optimization</h3>
+<ul>
+<li><strong>Authors: </strong>Zipeng Qi, Lichen Bai, Haoyi Xiong, and Zeke Xie</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14041">https://arxiv.org/abs/2407.14041</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14041">https://arxiv.org/pdf/2407.14041</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14041]] Not All Noises Are Created Equally:Diffusion Noise Selection and Optimization(https://arxiv.org/abs/2407.14041)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Diffusion models that can generate high-quality data from randomly sampled Gaussian noises have become the mainstream generative method in both academia and industry. Are randomly sampled Gaussian noises equally good for diffusion models? While a large body of works tried to understand and improve diffusion models, previous works overlooked the possibility to select or optimize the sampled noise the possibility of selecting or optimizing sampled noises for improving diffusion models. In this paper, we mainly made three contributions. First, we report that not all noises are created equally for diffusion models. We are the first to hypothesize and empirically observe that the generation quality of diffusion models significantly depend on the noise inversion stability. This naturally provides us a noise selection method according to the inversion stability. Second, we further propose a novel noise optimization method that actively enhances the inversion stability of arbitrary given noises. Our method is the first one that works on noise space to generally improve generated results without fine-tuning diffusion models. Third, our extensive experiments demonstrate that the proposed noise selection and noise optimization methods both significantly improve representative diffusion models, such as SDXL and SDXL-turbo, in terms of human preference and other objective evaluation metrics. For example, the human preference winning rates of noise selection and noise optimization over the baselines can be up to 57% and 72.5%, respectively, on DrawBench.</li>
+</ul>
+
+<h3>Title: ECCO: Can We Improve Model-Generated Code Efficiency Without Sacrificing Functional Correctness?</h3>
+<ul>
+<li><strong>Authors: </strong>Siddhant Waghjale, Vishruth Veerendranath, Zora Zhiruo Wang, Daniel Fried</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14044">https://arxiv.org/abs/2407.14044</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14044">https://arxiv.org/pdf/2407.14044</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14044]] ECCO: Can We Improve Model-Generated Code Efficiency Without Sacrificing Functional Correctness?(https://arxiv.org/abs/2407.14044)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Although large language models (LLMs) have been largely successful in generating functionally correct programs, conditioning models to produce efficient solutions while ensuring correctness remains a challenge. Further, unreliability in benchmarking code efficiency is a hurdle across varying hardware specifications for popular interpreted languages such as Python. In this paper, we present ECCO, a reproducible benchmark for evaluating program efficiency via two paradigms: natural language (NL) based code generation and history-based code editing. On ECCO, we adapt and thoroughly investigate the three most promising existing LLM-based approaches: in-context learning, iterative refinement with execution or NL feedback, and fine-tuning conditioned on execution and editing history. While most methods degrade functional correctness and moderately increase program efficiency, we find that adding execution information often helps maintain functional correctness, and NL feedback enhances more on efficiency. We release our benchmark to support future work on LLM-based generation of efficient code.</li>
+</ul>
+
+<h3>Title: OCTrack: Benchmarking the Open-Corpus Multi-Object Tracking</h3>
+<ul>
+<li><strong>Authors: </strong>Zekun Qian, Ruize Han, Wei Feng, Junhui Hou, Linqi Song, Song Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14047">https://arxiv.org/abs/2407.14047</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14047">https://arxiv.org/pdf/2407.14047</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14047]] OCTrack: Benchmarking the Open-Corpus Multi-Object Tracking(https://arxiv.org/abs/2407.14047)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We study a novel yet practical problem of open-corpus multi-object tracking (OCMOT), which extends the MOT into localizing, associating, and recognizing generic-category objects of both seen (base) and unseen (novel) classes, but without the category text list as prompt. To study this problem, the top priority is to build a benchmark. In this work, we build OCTrackB, a large-scale and comprehensive benchmark, to provide a standard evaluation platform for the OCMOT problem. Compared to previous datasets, OCTrackB has more abundant and balanced base/novel classes and the corresponding samples for evaluation with less bias. We also propose a new multi-granularity recognition metric to better evaluate the generative object recognition in OCMOT. By conducting the extensive benchmark evaluation, we report and analyze the results of various state-of-the-art methods, which demonstrate the rationale of OCMOT, as well as the usefulness and advantages of OCTrackB.</li>
+</ul>
+
+<h3>Title: Prompted Aspect Key Point Analysis for Quantitative Review Summarization</h3>
+<ul>
+<li><strong>Authors: </strong>An Quang Tang, Xiuzhen Zhang, Minh Ngoc Dinh, Erik Cambria</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14049">https://arxiv.org/abs/2407.14049</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14049">https://arxiv.org/pdf/2407.14049</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14049]] Prompted Aspect Key Point Analysis for Quantitative Review Summarization(https://arxiv.org/abs/2407.14049)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Key Point Analysis (KPA) aims for quantitative summarization that provides key points (KPs) as succinct textual summaries and quantities measuring their prevalence. KPA studies for arguments and reviews have been reported in the literature. A majority of KPA studies for reviews adopt supervised learning to extract short sentences as KPs before matching KPs to review comments for quantification of KP prevalence. Recent abstractive approaches still generate KPs based on sentences, often leading to KPs with overlapping and hallucinated opinions, and inaccurate quantification. In this paper, we propose Prompted Aspect Key Point Analysis (PAKPA) for quantitative review summarization. PAKPA employs aspect sentiment analysis and prompted in-context learning with Large Language Models (LLMs) to generate and quantify KPs grounded in aspects for business entities, which achieves faithful KPs with accurate quantification, and removes the need for large amounts of annotated data for supervised training. Experiments on the popular review dataset Yelp and the aspect-oriented review summarization dataset SPACE show that our framework achieves state-of-the-art performance. Source code and data are available at: this https URL</li>
+</ul>
+
+<h3>Title: PointRegGPT: Boosting 3D Point Cloud Registration using Generative Point-Cloud Pairs for Training</h3>
+<ul>
+<li><strong>Authors: </strong>Suyi Chen, Hao Xu, Haipeng Li, Kunming Luo, Guanghui Liu, Chi-Wing Fu, Ping Tan, Shuaicheng Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14054">https://arxiv.org/abs/2407.14054</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14054">https://arxiv.org/pdf/2407.14054</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14054]] PointRegGPT: Boosting 3D Point Cloud Registration using Generative Point-Cloud Pairs for Training(https://arxiv.org/abs/2407.14054)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Data plays a crucial role in training learning-based methods for 3D point cloud registration. However, the real-world dataset is expensive to build, while rendering-based synthetic data suffers from domain gaps. In this work, we present PointRegGPT, boosting 3D point cloud registration using generative point-cloud pairs for training. Given a single depth map, we first apply a random camera motion to re-project it into a target depth map. Converting them to point clouds gives a training pair. To enhance the data realism, we formulate a generative model as a depth inpainting diffusion to process the target depth map with the re-projected source depth map as the condition. Also, we design a depth correction module to alleviate artifacts caused by point penetration during the re-projection. To our knowledge, this is the first generative approach that explores realistic data generation for indoor point cloud registration. When equipped with our approach, several recent algorithms can improve their performance significantly and achieve SOTA consistently on two common benchmarks. The code and dataset will be released on this https URL.</li>
+</ul>
+
+<h3>Title: Self-Supervised Video Representation Learning in a Heuristic Decoupled Perspective</h3>
+<ul>
+<li><strong>Authors: </strong>Zeen Song, Jingyao Wang, Jianqi Zhang, Changwen Zheng, Wenwen Qiang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14069">https://arxiv.org/abs/2407.14069</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14069">https://arxiv.org/pdf/2407.14069</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14069]] Self-Supervised Video Representation Learning in a Heuristic Decoupled Perspective(https://arxiv.org/abs/2407.14069)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Video contrastive learning (v-CL) has gained prominence as a leading framework for unsupervised video representation learning, showcasing impressive performance across various tasks such as action classification and detection. In the field of video representation learning, a feature extractor should ideally capture both static and dynamic semantics. However, our series of experiments reveals that existing v-CL methods predominantly capture static semantics, with limited capturing of dynamic semantics. Through causal analysis, we identify the root cause: the v-CL objective lacks explicit modeling of dynamic features and the measurement of dynamic similarity is confounded by static semantics, while the measurement of static similarity is confounded by dynamic semantics. In response, we propose "Bi-level Optimization of Learning Dynamic with Decoupling and Intervention" (BOLD-DI) to capture both static and dynamic semantics in a decoupled manner. Our method can be seamlessly integrated into the existing v-CL methods and experimental results highlight the significant improvements.</li>
+</ul>
+
+<h3>Title: Stable-Hair: Real-World Hair Transfer via Diffusion Model</h3>
+<ul>
+<li><strong>Authors: </strong>Yuxuan Zhang, Qing Zhang, Yiren Song, Jiaming Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14078">https://arxiv.org/abs/2407.14078</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14078">https://arxiv.org/pdf/2407.14078</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14078]] Stable-Hair: Real-World Hair Transfer via Diffusion Model(https://arxiv.org/abs/2407.14078)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Current hair transfer methods struggle to handle diverse and intricate hairstyles, thus limiting their applicability in real-world scenarios. In this paper, we propose a novel diffusion-based hair transfer framework, named \textit{Stable-Hair}, which robustly transfers a wide range of real-world hairstyles onto user-provided faces for virtual hair try-on. To achieve this goal, our Stable-Hair framework is designed as a two-stage pipeline. In the first stage, we train a Bald Converter alongside stable diffusion to remove hair from the user-provided face images, resulting in bald images. In the second stage, we specifically designed three modules: a Hair Extractor, a Latent IdentityNet, and Hair Cross-Attention Layers to transfer the target hairstyle with highly detailed and high-fidelity to the bald image. Specifically, the Hair Extractor is trained to encode reference images with the desired hairstyles. To preserve the consistency of identity content and background between the source images and the transfer results, we employ a Latent IdentityNet to encode the source images. With the assistance of our Hair Cross-Attention Layers in the U-Net, we can accurately and precisely transfer the highly detailed and high-fidelity hairstyle to the bald image. Extensive experiments have demonstrated that our approach delivers state-of-the-art (SOTA) results among existing hair transfer methods. Project page: \textcolor{red}{\url{this https URL}}</li>
+</ul>
+
+<h3>Title: Zero-Shot Underwater Gesture Recognition</h3>
+<ul>
+<li><strong>Authors: </strong>Sandipan Sarma, Gundameedi Sai Ram Mohan, Hariansh Sehgal, Arijit Sur</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14103">https://arxiv.org/abs/2407.14103</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14103">https://arxiv.org/pdf/2407.14103</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14103]] Zero-Shot Underwater Gesture Recognition(https://arxiv.org/abs/2407.14103)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Hand gesture recognition allows humans to interact with machines non-verbally, which has a huge application in underwater exploration using autonomous underwater vehicles. Recently, a new gesture-based language called CADDIAN has been devised for divers, and supervised learning methods have been applied to recognize the gestures with high accuracy. However, such methods fail when they encounter unseen gestures in real time. In this work, we advocate the need for zero-shot underwater gesture recognition (ZSUGR), where the objective is to train a model with visual samples of gestures from a few ``seen'' classes only and transfer the gained knowledge at test time to recognize semantically-similar unseen gesture classes as well. After discussing the problem and dataset-specific challenges, we propose new seen-unseen splits for gesture classes in CADDY dataset. Then, we present a two-stage framework, where a novel transformer learns strong visual gesture cues and feeds them to a conditional generative adversarial network that learns to mimic feature distribution. We use the trained generator as a feature synthesizer for unseen classes, enabling zero-shot learning. Extensive experiments demonstrate that our method outperforms the existing zero-shot techniques. We conclude by providing useful insights into our framework and suggesting directions for future research.</li>
+</ul>
+
+<h3>Title: Seismic Fault SAM: Adapting SAM with Lightweight Modules and 2.5D Strategy for Fault Detection</h3>
+<ul>
+<li><strong>Authors: </strong>Ran Chen, Zeren Zhang, Jinwen Ma</a></li>
+<li><strong>Subjects: </strong>cs.CV, eess.IV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14121">https://arxiv.org/abs/2407.14121</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14121">https://arxiv.org/pdf/2407.14121</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14121]] Seismic Fault SAM: Adapting SAM with Lightweight Modules and 2.5D Strategy for Fault Detection(https://arxiv.org/abs/2407.14121)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Seismic fault detection holds significant geographical and practical application value, aiding experts in subsurface structure interpretation and resource exploration. Despite some progress made by automated methods based on deep learning, research in the seismic domain faces significant challenges, particularly because it is difficult to obtain high-quality, large-scale, open-source, and diverse datasets, which hinders the development of general foundation models. Therefore, this paper proposes Seismic Fault SAM, which, for the first time, applies the general pre-training foundation model-Segment Anything Model (SAM)-to seismic fault interpretation. This method aligns the universal knowledge learned from a vast amount of images with the seismic domain tasks through an Adapter design. Specifically, our innovative points include designing lightweight Adapter modules, freezing most of the pre-training weights, and only updating a small number of parameters to allow the model to converge quickly and effectively learn fault features; combining 2.5D input strategy to capture 3D spatial patterns with 2D models; integrating geological constraints into the model through prior-based data augmentation techniques to enhance the model's generalization capability. Experimental results on the largest publicly available seismic dataset, Thebe, show that our method surpasses existing 3D models on both OIS and ODS metrics, achieving state-of-the-art performance and providing an effective extension scheme for other seismic domain downstream tasks that lack labeled data.</li>
+</ul>
+
+<h3>Title: Mono-ViFI: A Unified Learning Framework for Self-supervised Single- and Multi-frame Monocular Depth Estimation</h3>
+<ul>
+<li><strong>Authors: </strong>Jinfeng Liu, Lingtong Kong, Bo Li, Zerong Wang, Hong Gu, Jinwei Chen</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14126">https://arxiv.org/abs/2407.14126</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14126">https://arxiv.org/pdf/2407.14126</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14126]] Mono-ViFI: A Unified Learning Framework for Self-supervised Single- and Multi-frame Monocular Depth Estimation(https://arxiv.org/abs/2407.14126)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Self-supervised monocular depth estimation has gathered notable interest since it can liberate training from dependency on depth annotations. In monocular video training case, recent methods only conduct view synthesis between existing camera views, leading to insufficient guidance. To tackle this, we try to synthesize more virtual camera views by flow-based video frame interpolation (VFI), termed as temporal augmentation. For multi-frame inference, to sidestep the problem of dynamic objects encountered by explicit geometry-based methods like ManyDepth, we return to the feature fusion paradigm and design a VFI-assisted multi-frame fusion module to align and aggregate multi-frame features, using motion and occlusion information obtained by the flow-based VFI model. Finally, we construct a unified self-supervised learning framework, named Mono-ViFI, to bilaterally connect single- and multi-frame depth. In this framework, spatial data augmentation through image affine transformation is incorporated for data diversity, along with a triplet depth consistency loss for regularization. The single- and multi-frame models can share weights, making our framework compact and memory-efficient. Extensive experiments demonstrate that our method can bring significant improvements to current advanced architectures. Source code is available at this https URL.</li>
+</ul>
+
+<h3>Title: Visual Text Generation in the Wild</h3>
+<ul>
+<li><strong>Authors: </strong>Yuanzhi Zhu, Jiawei Liu, Feiyu Gao, Wenyu Liu, Xinggang Wang, Peng Wang, Fei Huang, Cong Yao, Zhibo Yang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14138">https://arxiv.org/abs/2407.14138</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14138">https://arxiv.org/pdf/2407.14138</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14138]] Visual Text Generation in the Wild(https://arxiv.org/abs/2407.14138)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Recently, with the rapid advancements of generative models, the field of visual text generation has witnessed significant progress. However, it is still challenging to render high-quality text images in real-world scenarios, as three critical criteria should be satisfied: (1) Fidelity: the generated text images should be photo-realistic and the contents are expected to be the same as specified in the given conditions; (2) Reasonability: the regions and contents of the generated text should cohere with the scene; (3) Utility: the generated text images can facilitate related tasks (e.g., text detection and recognition). Upon investigation, we find that existing methods, either rendering-based or diffusion-based, can hardly meet all these aspects simultaneously, limiting their application range. Therefore, we propose in this paper a visual text generator (termed SceneVTG), which can produce high-quality text images in the wild. Following a two-stage paradigm, SceneVTG leverages a Multimodal Large Language Model to recommend reasonable text regions and contents across multiple scales and levels, which are used by a conditional diffusion model as conditions to generate text images. Extensive experiments demonstrate that the proposed SceneVTG significantly outperforms traditional rendering-based methods and recent diffusion-based methods in terms of fidelity and reasonability. Besides, the generated images provide superior utility for tasks involving text detection and text recognition. Code and datasets are available at AdvancedLiterateMachinery.</li>
+</ul>
+
+<h3>Title: Normative Diffusion Autoencoders: Application to Amyotrophic Lateral Sclerosis</h3>
+<ul>
+<li><strong>Authors: </strong>Ayodeji Ijishakin, Adamos Hadjasavilou, Ahmed Abdulaal, Nina Montana-Brown, Florence Townend, Edoardo Spinelli, Massimo Fillipi, Federica Agosta, James Cole, Andrea Malaspina</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14191">https://arxiv.org/abs/2407.14191</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14191">https://arxiv.org/pdf/2407.14191</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14191]] Normative Diffusion Autoencoders: Application to Amyotrophic Lateral Sclerosis(https://arxiv.org/abs/2407.14191)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Predicting survival in Amyotrophic Lateral Sclerosis (ALS) is a challenging task. Magnetic resonance imaging (MRI) data provide in vivo insight into brain health, but the low prevalence of the condition and resultant data scarcity limit training set sizes for prediction models. Survival models are further hindered by the subtle and often highly localised profile of ALS-related neurodegeneration. Normative models present a solution as they increase statistical power by leveraging large healthy cohorts. Separately, diffusion models excel in capturing the semantics embedded within images including subtle signs of accelerated brain ageing, which may help predict survival in ALS. Here, we combine the benefits of generative and normative modelling by introducing the normative diffusion autoencoder framework. To our knowledge, this is the first use of normative modelling within a diffusion autoencoder, as well as the first application of normative modelling to ALS. Our approach outperforms generative and non-generative normative modelling benchmarks in ALS prognostication, demonstrating enhanced predictive accuracy in the context of ALS survival prediction and normative modelling in general.</li>
+</ul>
+
+<h3>Title: Unlearning Concepts from Text-to-Video Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Shiqi Liu, Yihua Tan</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14209">https://arxiv.org/abs/2407.14209</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14209">https://arxiv.org/pdf/2407.14209</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14209]] Unlearning Concepts from Text-to-Video Diffusion Models(https://arxiv.org/abs/2407.14209)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>With the advancement of computer vision and natural language processing, text-to-video generation, enabled by text-to-video diffusion models, has become more prevalent. These models are trained using a large amount of data from the internet. However, the training data often contain copyrighted content, including cartoon character icons and artist styles, private portraits, and unsafe videos. Since filtering the data and retraining the model is challenging, methods for unlearning specific concepts from text-to-video diffusion models have been investigated. However, due to the high computational complexity and relative large optimization scale, there is little work on unlearning methods for text-to-video diffusion models. We propose a novel concept-unlearning method by transferring the unlearning capability of the text encoder of text-to-image diffusion models to text-to-video diffusion models. Specifically, the method optimizes the text encoder using few-shot unlearning, where several generated images are used. We then use the optimized text encoder in text-to-video diffusion models to generate videos. Our method costs low computation resources and has small optimization scale. We discuss the generated videos after unlearning a concept. The experiments demonstrates that our method can unlearn copyrighted cartoon characters, artist styles, objects and people's facial characteristics. Our method can unlearn a concept within about 100 seconds on an RTX 3070. Since there was no concept unlearning method for text-to-video diffusion models before, we make concept unlearning feasible and more accessible in the text-to-video domain.</li>
+</ul>
+
+<h3>Title: OpenSU3D: Open World 3D Scene Understanding using Foundation Models</h3>
+<ul>
+<li><strong>Authors: </strong>Rafay Mohiuddin, Sai Manoj Prakhya, Fiona Collins, Ziyuan Liu, André Borrmann</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14279">https://arxiv.org/abs/2407.14279</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14279">https://arxiv.org/pdf/2407.14279</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14279]] OpenSU3D: Open World 3D Scene Understanding using Foundation Models(https://arxiv.org/abs/2407.14279)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>In this paper, we present a novel, scalable approach for constructing open set, instance-level 3D scene representations, advancing open world understanding of 3D environments. Existing methods require pre-constructed 3D scenes and face scalability issues due to per-point feature vector learning, limiting their efficacy with complex queries. Our method overcomes these limitations by incrementally building instance-level 3D scene representations using 2D foundation models, efficiently aggregating instance-level details such as masks, feature vectors, names, and captions. We introduce fusion schemes for feature vectors to enhance their contextual knowledge and performance on complex queries. Additionally, we explore large language models for robust automatic annotation and spatial reasoning tasks. We evaluate our proposed approach on multiple scenes from ScanNet and Replica datasets demonstrating zero-shot generalization capabilities, exceeding current state-of-the-art methods in open world 3D scene understanding.</li>
+</ul>
+
+<h3>Title: How to Blend Concepts in Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Giorgio Longari, Lorenzo Olearo, Simone Melzi, Rafael Peñaloza, Alessandro Raganato</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14280">https://arxiv.org/abs/2407.14280</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14280">https://arxiv.org/pdf/2407.14280</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14280]] How to Blend Concepts in Diffusion Models(https://arxiv.org/abs/2407.14280)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>For the last decade, there has been a push to use multi-dimensional (latent) spaces to represent concepts; and yet how to manipulate these concepts or reason with them remains largely unclear. Some recent methods exploit multiple latent representations and their connection, making this research question even more entangled. Our goal is to understand how operations in the latent space affect the underlying concepts. To that end, we explore the task of concept blending through diffusion models. Diffusion models are based on a connection between a latent representation of textual prompts and a latent space that enables image reconstruction and generation. This task allows us to try different text-based combination strategies, and evaluate easily through a visual analysis. Our conclusion is that concept blending through space manipulation is possible, although the best strategy depends on the context of the blend.</li>
+</ul>
+
+<h3>Title: Panoptic Segmentation of Mammograms with Text-To-Image Diffusion Model</h3>
+<ul>
+<li><strong>Authors: </strong>Kun Zhao, Jakub Prokop, Javier Montalt Tordera, Sadegh Mohammadi</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14326">https://arxiv.org/abs/2407.14326</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14326">https://arxiv.org/pdf/2407.14326</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14326]] Panoptic Segmentation of Mammograms with Text-To-Image Diffusion Model(https://arxiv.org/abs/2407.14326)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Mammography is crucial for breast cancer surveillance and early diagnosis. However, analyzing mammography images is a demanding task for radiologists, who often review hundreds of mammograms daily, leading to overdiagnosis and overtreatment. Computer-Aided Diagnosis (CAD) systems have been developed to assist in this process, but their capabilities, particularly in lesion segmentation, remained limited. With the contemporary advances in deep learning their performance may be improved. Recently, vision-language diffusion models emerged, demonstrating outstanding performance in image generation and transferability to various downstream tasks. We aim to harness their capabilities for breast lesion segmentation in a panoptic setting, which encompasses both semantic and instance-level predictions. Specifically, we propose leveraging pretrained features from a Stable Diffusion model as inputs to a state-of-the-art panoptic segmentation architecture, resulting in accurate delineation of individual breast lesions. To bridge the gap between natural and medical imaging domains, we incorporated a mammography-specific MAM-E diffusion model and BiomedCLIP image and text encoders into this framework. We evaluated our approach on two recently published mammography datasets, CDD-CESM and VinDr-Mammo. For the instance segmentation task, we noted 40.25 AP0.1 and 46.82 AP0.05, as well as 25.44 PQ0.1 and 26.92 PQ0.05. For the semantic segmentation task, we achieved Dice scores of 38.86 and 40.92, respectively.</li>
+</ul>
+
+<h3>Title: HOTS3D: Hyper-Spherical Optimal Transport for Semantic Alignment of Text-to-3D Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Zezeng Li, Weimin Wang, WenHai Li, Na Lei, Xianfeng Gu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14419">https://arxiv.org/abs/2407.14419</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14419">https://arxiv.org/pdf/2407.14419</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14419]] HOTS3D: Hyper-Spherical Optimal Transport for Semantic Alignment of Text-to-3D Generation(https://arxiv.org/abs/2407.14419)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recent CLIP-guided 3D generation methods have achieved promising results but struggle with generating faithful 3D shapes that conform with input text due to the gap between text and image embeddings. To this end, this paper proposes HOTS3D which makes the first attempt to effectively bridge this gap by aligning text features to the image features with spherical optimal transport (SOT). However, in high-dimensional situations, solving the SOT remains a challenge. To obtain the SOT map for high-dimensional features obtained from CLIP encoding of two modalities, we mathematically formulate and derive the solution based on Villani's theorem, which can directly align two hyper-sphere distributions without manifold exponential maps. Furthermore, we implement it by leveraging input convex neural networks (ICNNs) for the optimal Kantorovich potential. With the optimally mapped features, a diffusion-based generator and a Nerf-based decoder are subsequently utilized to transform them into 3D shapes. Extensive qualitative and qualitative comparisons with state-of-the-arts demonstrate the superiority of the proposed HOTS3D for 3D shape generation, especially on the consistency with text semantics.</li>
+</ul>
+
+<h3>Title: Controllable and Efficient Multi-Class Pathology Nuclei Data Augmentation using Text-Conditioned Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Hyun-Jic Oh, Won-Ki Jeong</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14426">https://arxiv.org/abs/2407.14426</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14426">https://arxiv.org/pdf/2407.14426</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14426]] Controllable and Efficient Multi-Class Pathology Nuclei Data Augmentation using Text-Conditioned Diffusion Models(https://arxiv.org/abs/2407.14426)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>In the field of computational pathology, deep learning algorithms have made significant progress in tasks such as nuclei segmentation and classification. However, the potential of these advanced methods is limited by the lack of available labeled data. Although image synthesis via recent generative models has been actively explored to address this challenge, existing works have barely addressed label augmentation and are mostly limited to single-class and unconditional label generation. In this paper, we introduce a novel two-stage framework for multi-class nuclei data augmentation using text-conditional diffusion models. In the first stage, we innovate nuclei label synthesis by generating multi-class semantic labels and corresponding instance maps through a joint diffusion model conditioned by text prompts that specify the label structure information. In the second stage, we utilize a semantic and text-conditional latent diffusion model to efficiently generate high-quality pathology images that align with the generated nuclei label images. We demonstrate the effectiveness of our method on large and diverse pathology nuclei datasets, with evaluations including qualitative and quantitative analyses, as well as assessments of downstream tasks.</li>
+</ul>
+
+<h3>Title: Co-synthesis of Histopathology Nuclei Image-Label Pairs using a Context-Conditioned Joint Diffusion Model</h3>
+<ul>
+<li><strong>Authors: </strong>Seonghui Min, Hyun-Jic Oh, Won-Ki Jeong</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14434">https://arxiv.org/abs/2407.14434</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14434">https://arxiv.org/pdf/2407.14434</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14434]] Co-synthesis of Histopathology Nuclei Image-Label Pairs using a Context-Conditioned Joint Diffusion Model(https://arxiv.org/abs/2407.14434)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>In multi-class histopathology nuclei analysis tasks, the lack of training data becomes a main bottleneck for the performance of learning-based methods. To tackle this challenge, previous methods have utilized generative models to increase data by generating synthetic samples. However, existing methods often overlook the importance of considering the context of biological tissues (e.g., shape, spatial layout, and tissue type) in the synthetic data. Moreover, while generative models have shown superior performance in synthesizing realistic histopathology images, none of the existing methods are capable of producing image-label pairs at the same time. In this paper, we introduce a novel framework for co-synthesizing histopathology nuclei images and paired semantic labels using a context-conditioned joint diffusion model. We propose conditioning of a diffusion model using nucleus centroid layouts with structure-related text prompts to incorporate spatial and structural context information into the generation targets. Moreover, we enhance the granularity of our synthesized semantic labels by generating instance-wise nuclei labels using distance maps synthesized concurrently in conjunction with the images and semantic labels. We demonstrate the effectiveness of our framework in generating high-quality samples on multi-institutional, multi-organ, and multi-modality datasets. Our synthetic data consistently outperforms existing augmentation methods in the downstream tasks of nuclei segmentation and classification.</li>
+</ul>
+
+<h3>Title: M2D2M: Multi-Motion Generation from Text with Discrete Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Seunggeun Chi, Hyung-gun Chi, Hengbo Ma, Nakul Agarwal, Faizan Siddiqui, Karthik Ramani, Kwonjoon Lee</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14502">https://arxiv.org/abs/2407.14502</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14502">https://arxiv.org/pdf/2407.14502</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14502]] M2D2M: Multi-Motion Generation from Text with Discrete Diffusion Models(https://arxiv.org/abs/2407.14502)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>We introduce the Multi-Motion Discrete Diffusion Models (M2D2M), a novel approach for human motion generation from textual descriptions of multiple actions, utilizing the strengths of discrete diffusion models. This approach adeptly addresses the challenge of generating multi-motion sequences, ensuring seamless transitions of motions and coherence across a series of actions. The strength of M2D2M lies in its dynamic transition probability within the discrete diffusion model, which adapts transition probabilities based on the proximity between motion tokens, encouraging mixing between different modes. Complemented by a two-phase sampling strategy that includes independent and joint denoising steps, M2D2M effectively generates long-term, smooth, and contextually coherent human motion sequences, utilizing a model trained for single-motion generation. Extensive experiments demonstrate that M2D2M surpasses current state-of-the-art benchmarks for motion generation from text descriptions, showcasing its efficacy in interpreting language semantics and generating dynamic, realistic motions.</li>
+</ul>
+
+<h3>Title: T2V-CompBench: A Comprehensive Benchmark for Compositional Text-to-video Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Kaiyue Sun, Kaiyi Huang, Xian Liu, Yue Wu, Zihan Xu, Zhenguo Li, Xihui Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14505">https://arxiv.org/abs/2407.14505</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14505">https://arxiv.org/pdf/2407.14505</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14505]] T2V-CompBench: A Comprehensive Benchmark for Compositional Text-to-video Generation(https://arxiv.org/abs/2407.14505)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Text-to-video (T2V) generation models have advanced significantly, yet their ability to compose different objects, attributes, actions, and motions into a video remains unexplored. Previous text-to-video benchmarks also neglect this important ability for evaluation. In this work, we conduct the first systematic study on compositional text-to-video generation. We propose T2V-CompBench, the first benchmark tailored for compositional text-to-video generation. T2V-CompBench encompasses diverse aspects of compositionality, including consistent attribute binding, dynamic attribute binding, spatial relationships, motion binding, action binding, object interactions, and generative numeracy. We further carefully design evaluation metrics of MLLM-based metrics, detection-based metrics, and tracking-based metrics, which can better reflect the compositional text-to-video generation quality of seven proposed categories with 700 text prompts. The effectiveness of the proposed metrics is verified by correlation with human evaluations. We also benchmark various text-to-video generative models and conduct in-depth analysis across different models and different compositional categories. We find that compositional text-to-video generation is highly challenging for current models, and we hope that our attempt will shed light on future research in this direction.</li>
+</ul>
+
+<h3>Title: DEPICT: Diffusion-Enabled Permutation Importance for Image Classification Tasks</h3>
+<ul>
+<li><strong>Authors: </strong>Sarah Jabbour, Gregory Kondas, Ella Kazerooni, Michael Sjoding, David Fouhey, Jenna Wiens</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2407.14509">https://arxiv.org/abs/2407.14509</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2407.14509">https://arxiv.org/pdf/2407.14509</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2407.14509]] DEPICT: Diffusion-Enabled Permutation Importance for Image Classification Tasks(https://arxiv.org/abs/2407.14509)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>We propose a permutation-based explanation method for image classifiers. Current image-model explanations like activation maps are limited to instance-based explanations in the pixel space, making it difficult to understand global model behavior. In contrast, permutation based explanations for tabular data classifiers measure feature importance by comparing model performance on data before and after permuting a feature. We propose an explanation method for image-based models that permutes interpretable concepts across dataset images. Given a dataset of images labeled with specific concepts like captions, we permute a concept across examples in the text space and then generate images via a text-conditioned diffusion model. Feature importance is then reflected by the change in model performance relative to unpermuted data. When applied to a set of concepts, the method generates a ranking of feature importance. We show this approach recovers underlying model feature importance on synthetic and real-world image classification tasks.</li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="../../javascript/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
