@@ -1,0 +1,546 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2024-08-30</h1>
+<h3>Title: SPICED: Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection</h3>
+<ul>
+<li><strong>Authors: </strong>Jayeeta Chaudhuri, Dhruv Thapar, Arjun Chaudhuri, Farshad Firouzi, Krishnendu Chakrabarty</a></li>
+<li><strong>Subjects: </strong>cs.CR, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16018">https://arxiv.org/abs/2408.16018</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16018">https://arxiv.org/pdf/2408.16018</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16018]] SPICED: Syntactical Bug and Trojan Pattern Identification in A/MS Circuits using LLM-Enhanced Detection(https://arxiv.org/abs/2408.16018)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Analog and mixed-signal (A/MS) integrated circuits (ICs) are crucial in modern electronics, playing key roles in signal processing, amplification, sensing, and power management. Many IC companies outsource manufacturing to third-party foundries, creating security risks such as stealthy analog Trojans. Traditional detection methods, including embedding circuit watermarks or conducting hardware-based monitoring, often impose significant area and power overheads, and may not effectively identify all types of Trojans. To address these shortcomings, we propose SPICED, a Large Language Model (LLM)-based framework that operates within the software domain, eliminating the need for hardware modifications for Trojan detection and localization. This is the first work using LLM-aided techniques for detecting and localizing syntactical bugs and analog Trojans in circuit netlists, requiring no explicit training and incurring zero area overhead. Our framework employs chain-of-thought reasoning and few-shot examples to teach anomaly detection rules to LLMs. With the proposed method, we achieve an average Trojan coverage of 93.32% and an average true positive rate of 93.4% in identifying Trojan-impacted nodes for the evaluated analog benchmark circuits. These experimental results validate the effectiveness of LLMs in detecting and locating both syntactical bugs and Trojans within analog netlists.</li>
+</ul>
+
+<h3>Title: ANVIL: Anomaly-based Vulnerability Identification without Labelled Training Data</h3>
+<ul>
+<li><strong>Authors: </strong>Weizhou Wang, Eric Liu, Xiangyu Guo, David Lie</a></li>
+<li><strong>Subjects: </strong>cs.CR, cs.LG, cs.SE</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16028">https://arxiv.org/abs/2408.16028</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16028">https://arxiv.org/pdf/2408.16028</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16028]] ANVIL: Anomaly-based Vulnerability Identification without Labelled Training Data(https://arxiv.org/abs/2408.16028)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Supervised learning-based software vulnerability detectors often fall short due to the inadequate availability of labelled training data. In contrast, Large Language Models (LLMs) such as GPT-4, are not trained on labelled data, but when prompted to detect vulnerabilities, LLM prediction accuracy is only marginally better than random guessing. In this paper, we explore a different approach by reframing vulnerability detection as one of anomaly detection. Since the vast majority of code does not contain vulnerabilities and LLMs are trained on massive amounts of such code, vulnerable code can be viewed as an anomaly from the LLM's predicted code distribution, freeing the model from the need for labelled data to provide a learnable representation of vulnerable code. Leveraging this perspective, we demonstrate that LLMs trained for code generation exhibit a significant gap in prediction accuracy when prompted to reconstruct vulnerable versus non-vulnerable code. Using this insight, we implement ANVIL, a detector that identifies software vulnerabilities at line-level granularity. Our experiments explore the discriminating power of different anomaly scoring methods, as well as the sensitivity of ANVIL to context size. We also study the effectiveness of ANVIL on various LLM families, and conduct leakage experiments on vulnerabilities that were discovered after the knowledge cutoff of our evaluated LLMs. On a collection of vulnerabilities from the Magma benchmark, ANVIL outperforms state-of-the-art line-level vulnerability detectors, LineVul and LineVD, which have been trained with labelled data, despite ANVIL having never been trained with labelled vulnerabilities. Specifically, our approach achieves $1.62\times$ to $2.18\times$ better Top-5 accuracies and $1.02\times$ to $1.29\times$ times better ROC scores on line-level vulnerability detection tasks.</li>
+</ul>
+
+<h3>Title: EMP: Enhance Memory in Data Pruning</h3>
+<ul>
+<li><strong>Authors: </strong>Jinying Xiao, Ping Li, Jie Nie, Zhe Tang</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16031">https://arxiv.org/abs/2408.16031</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16031">https://arxiv.org/pdf/2408.16031</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16031]] EMP: Enhance Memory in Data Pruning(https://arxiv.org/abs/2408.16031)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Recently, large language and vision models have shown strong performance, but due to high pre-training and fine-tuning costs, research has shifted towards faster training via dataset pruning. Previous methods used sample loss as an evaluation criterion, aiming to select the most "difficult" samples for training. However, when the pruning rate increases, the number of times each sample is trained becomes more evenly distributed, which causes many critical or general samples to not be effectively fitted. We refer to this as Low-Frequency Learning (LFL). In other words, LFL prevents the model from remembering most samples. In our work, we decompose the scoring function of LFL, provide a theoretical explanation for the inefficiency of LFL, and propose adding a memory term to the scoring function to enhance the model's memory capability, along with an approximation of this memory term. Similarly, we explore memory in Self-Supervised Learning (SSL), marking the first discussion on SSL memory. Using contrastive learning, we derive the memory term both theoretically and experimentally. Finally, we propose Enhance Memory Pruning (EMP), which addresses the issue of insufficient memory under high pruning rates by enhancing the model's memory of data, thereby improving its performance. We evaluated the performance of EMP in tasks such as image classification, natural language understanding, and model pre-training. The results show that EMP can improve model performance under extreme pruning rates. For example, in the CIFAR100-ResNet50 pre-training task, with 70\% pruning, EMP outperforms current methods by 2.2\%.</li>
+</ul>
+
+<h3>Title: An Extremely Data-efficient and Generative LLM-based Reinforcement Learning Agent for Recommenders</h3>
+<ul>
+<li><strong>Authors: </strong>Shuang Feng, Grace Feng</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.IR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16032">https://arxiv.org/abs/2408.16032</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16032">https://arxiv.org/pdf/2408.16032</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16032]] An Extremely Data-efficient and Generative LLM-based Reinforcement Learning Agent for Recommenders(https://arxiv.org/abs/2408.16032)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Recent advancements in large language models (LLMs) have enabled understanding webpage contexts, product details, and human instructions. Utilizing LLMs as the foundational architecture for either reward models or policies in reinforcement learning has gained popularity -- a notable achievement is the success of InstructGPT. RL algorithms have been instrumental in maximizing long-term customer satisfaction and avoiding short-term, myopic goals in industrial recommender systems, which often rely on deep learning models to predict immediate clicks or purchases. In this project, several RL methods are implemented and evaluated using the WebShop benchmark environment, data, simulator, and pre-trained model checkpoints. The goal is to train an RL agent to maximize the purchase reward given a detailed human instruction describing a desired product. The RL agents are developed by fine-tuning a pre-trained BERT model with various objectives, learning from preferences without a reward model, and employing contemporary training techniques such as Proximal Policy Optimization (PPO) as used in InstructGPT, and Direct Preference Optimization (DPO). This report also evaluates the RL agents trained using generative trajectories. Evaluations were conducted using Thompson sampling in the WebShop simulator environment. The simulated online experiments demonstrate that agents trained on generated trajectories exhibited comparable task performance to those trained using human trajectories. This has demonstrated an example of an extremely low-cost data-efficient way of training reinforcement learning agents. Also, with limited training time (<2hours), without utilizing any images, a DPO agent achieved a 19% success rate after approximately 3000 steps or 30 minutes of training on T4 GPUs, compared to a PPO agent, which reached a 15% success rate.</li>
+</ul>
+
+<h3>Title: Systematic Evaluation of Synthetic Data Augmentation for Multi-class NetFlow Traffic</h3>
+<ul>
+<li><strong>Authors: </strong>Maximilian Wolf, Dieter Landes, Andreas Hotho, Daniel Schlör</a></li>
+<li><strong>Subjects: </strong>cs.CR, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16034">https://arxiv.org/abs/2408.16034</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16034">https://arxiv.org/pdf/2408.16034</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16034]] Systematic Evaluation of Synthetic Data Augmentation for Multi-class NetFlow Traffic(https://arxiv.org/abs/2408.16034)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The detection of cyber-attacks in computer networks is a crucial and ongoing research challenge. Machine learning-based attack classification offers a promising solution, as these models can be continuously updated with new data, enhancing the effectiveness of network intrusion detection systems (NIDS). Unlike binary classification models that simply indicate the presence of an attack, multi-class models can identify specific types of attacks, allowing for more targeted and effective incident responses. However, a significant drawback of these classification models is their sensitivity to imbalanced training data. Recent advances suggest that generative models can assist in data augmentation, claiming to offer superior solutions for imbalanced datasets. Classical balancing methods, although less novel, also provide potential remedies for this issue. Despite these claims, a comprehensive comparison of these methods within the NIDS domain is lacking. Most existing studies focus narrowly on individual methods, making it difficult to compare results due to varying experimental setups. To close this gap, we designed a systematic framework to compare classical and generative resampling methods for class balancing across multiple popular classification models in the NIDS domain, evaluated on several NIDS benchmark datasets. Our experiments indicate that resampling methods for balancing training data do not reliably improve classification performance. Although some instances show performance improvements, the majority of results indicate decreased performance, with no consistent trend in favor of a specific resampling technique enhancing a particular classifier.</li>
+</ul>
+
+<h3>Title: Scaling Up Diffusion and Flow-based XGBoost Models</h3>
+<ul>
+<li><strong>Authors: </strong>Jesse C. Cresswell, Taewoo Kim</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16046">https://arxiv.org/abs/2408.16046</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16046">https://arxiv.org/pdf/2408.16046</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16046]] Scaling Up Diffusion and Flow-based XGBoost Models(https://arxiv.org/abs/2408.16046)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Novel machine learning methods for tabular data generation are often developed on small datasets which do not match the scale required for scientific applications. We investigate a recent proposal to use XGBoost as the function approximator in diffusion and flow-matching models on tabular data, which proved to be extremely memory intensive, even on tiny datasets. In this work, we conduct a critical analysis of the existing implementation from an engineering perspective, and show that these limitations are not fundamental to the method; with better implementation it can be scaled to datasets 370x larger than previously used. Our efficient implementation also unlocks scaling models to much larger sizes which we show directly leads to improved performance on benchmark tasks. We also propose algorithmic improvements that can further benefit resource usage and model performance, including multi-output trees which are well-suited to generative modeling. Finally, we present results on large-scale scientific datasets derived from experimental particle physics as part of the Fast Calorimeter Simulation Challenge. Code is available at this https URL.</li>
+</ul>
+
+<h3>Title: ChartEye: A Deep Learning Framework for Chart Information Extraction</h3>
+<ul>
+<li><strong>Authors: </strong>Osama Mustafa, Muhammad Khizer Ali, Momina Moetesum, Imran Siddiqi</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16123">https://arxiv.org/abs/2408.16123</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16123">https://arxiv.org/pdf/2408.16123</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16123]] ChartEye: A Deep Learning Framework for Chart Information Extraction(https://arxiv.org/abs/2408.16123)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The widespread use of charts and infographics as a means of data visualization in various domains has inspired recent research in automated chart understanding. However, information extraction from chart images is a complex multitasked process due to style variations and, as a consequence, it is challenging to design an end-to-end system. In this study, we propose a deep learning-based framework that provides a solution for key steps in the chart information extraction pipeline. The proposed framework utilizes hierarchal vision transformers for the tasks of chart-type and text-role classification, while YOLOv7 for text detection. The detected text is then enhanced using Super Resolution Generative Adversarial Networks to improve the recognition output of the OCR. Experimental results on a benchmark dataset show that our proposed framework achieves excellent performance at every stage with F1-scores of 0.97 for chart-type classification, 0.91 for text-role classification, and a mean Average Precision of 0.95 for text detection.</li>
+</ul>
+
+<h3>Title: Using Backbone Foundation Model for Evaluating Fairness in Chest Radiography Without Demographic Data</h3>
+<ul>
+<li><strong>Authors: </strong>Dilermando Queiroz, André Anjos, Lilian Berton</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16130">https://arxiv.org/abs/2408.16130</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16130">https://arxiv.org/pdf/2408.16130</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16130]] Using Backbone Foundation Model for Evaluating Fairness in Chest Radiography Without Demographic Data(https://arxiv.org/abs/2408.16130)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Ensuring consistent performance across diverse populations and incorporating fairness into machine learning models are crucial for advancing medical image diagnostics and promoting equitable healthcare. However, many databases do not provide protected attributes or contain unbalanced representations of demographic groups, complicating the evaluation of model performance across different demographics and the application of bias mitigation techniques that rely on these attributes. This study aims to investigate the effectiveness of using the backbone of Foundation Models as an embedding extractor for creating groups that represent protected attributes, such as gender and age. We propose utilizing these groups in different stages of bias mitigation, including pre-processing, in-processing, and evaluation. Using databases in and out-of-distribution scenarios, it is possible to identify that the method can create groups that represent gender in both databases and reduce in 4.44% the difference between the gender attribute in-distribution and 6.16% in out-of-distribution. However, the model lacks robustness in handling age attributes, underscoring the need for more fundamentally fair and robust Foundation models. These findings suggest a role in promoting fairness assessment in scenarios where we lack knowledge of attributes, contributing to the development of more equitable medical diagnostics.</li>
+</ul>
+
+<h3>Title: Does Data-Efficient Generalization Exacerbate Bias in Foundation Models?</h3>
+<ul>
+<li><strong>Authors: </strong>Dilermando Queiroz, Anderson Carlos, Maíra Fatoretto, André Anjos, Lilian Berton, Luis Filipe Nakayama</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16154">https://arxiv.org/abs/2408.16154</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16154">https://arxiv.org/pdf/2408.16154</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16154]] Does Data-Efficient Generalization Exacerbate Bias in Foundation Models?(https://arxiv.org/abs/2408.16154)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Foundation models have emerged as robust models with label efficiency in diverse domains. In medical imaging, these models contribute to the advancement of medical diagnoses due to the difficulty in obtaining labeled data. However, it is unclear whether using a large amount of unlabeled data, biased by the presence of sensitive attributes during pre-training, influences the fairness of the model. This research examines the bias in the Foundation model (RetFound) when it is applied to fine-tune the Brazilian Multilabel Ophthalmological Dataset (BRSET), which has a different population than the pre-training dataset. The model evaluation, in comparison with supervised learning, shows that the Foundation Model has the potential to reduce the gap between the maximum AUC and minimum AUC evaluations across gender and age groups. However, in a data-efficient generalization, the model increases the bias when the data amount decreases. These findings suggest that when deploying a Foundation Model in real-life scenarios with limited data, the possibility of fairness issues should be considered.</li>
+</ul>
+
+<h3>Title: LeMON: Learning to Learn Multi-Operator Networks</h3>
+<ul>
+<li><strong>Authors: </strong>Jingmin Sun, Zecheng Zhang, Hayden Schaeffer</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16168">https://arxiv.org/abs/2408.16168</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16168">https://arxiv.org/pdf/2408.16168</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16168]] LeMON: Learning to Learn Multi-Operator Networks(https://arxiv.org/abs/2408.16168)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Single-operator learning involves training a deep neural network to learn a specific operator, whereas recent work in multi-operator learning uses an operator embedding structure to train a single neural network on data from multiple operators. Thus, multi-operator learning is capable of predicting a range of operators within one model. In this work, we propose pretraining and fine-tuning strategies for solving PDEs using multi-operator learning. One key aspect is that by increasing the number of families of operators used in pretraining, a PDE foundation model can be fine-tuned to downstream tasks involving new PDEs with a limited number of samples, thus outperforming single operator neural networks. Specifically, a multi-operator learning model pre-trained with data from diverse PDE families can predict unseen operators after fine-tuning with only a limited number of operators from the new family, enabling them to serve as a data-free PDE solver. We also show that the proposed training and fine-tuning method is able to predict new operators in zero-shot prediction without samples. Additionally, we introduce a PDE-agnostic meta-learning algorithm to improve the adaptability of the model to various PDEs by providing a better parameter initialization process. To address the needs of applications with limited computing resources, we explore low-rank adaptation methods that reduce computational costs while enhancing solver accuracy. Lastly, by examining the scaling law with respect to the number of operator families, we establish and highlight its potential for broad adaptation in PDE-solving tasks.</li>
+</ul>
+
+<h3>Title: Simulating realistic short tandem repeat capillary electrophoretic signal using a generative adversarial network</h3>
+<ul>
+<li><strong>Authors: </strong>Duncan Taylor, Melissa Humphries</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16169">https://arxiv.org/abs/2408.16169</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16169">https://arxiv.org/pdf/2408.16169</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16169]] Simulating realistic short tandem repeat capillary electrophoretic signal using a generative adversarial network(https://arxiv.org/abs/2408.16169)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>DNA profiles are made up from multiple series of electrophoretic signal measuring fluorescence over time. Typically, human DNA analysts 'read' DNA profiles using their experience to distinguish instrument noise, artefactual signal, and signal corresponding to DNA fragments of interest. Recent work has developed an artificial neural network, ANN, to carry out the task of classifying fluorescence types into categories in DNA profile electrophoretic signal. But the creation of the necessarily large amount of labelled training data for the ANN is time consuming and expensive, and a limiting factor in the ability to robustly train the ANN. If realistic, prelabelled, training data could be simulated then this would remove the barrier to training an ANN with high efficacy. Here we develop a generative adversarial network, GAN, modified from the pix2pix GAN to achieve this task. With 1078 DNA profiles we train the GAN and achieve the ability to simulate DNA profile information, and then use the generator from the GAN as a 'realism filter' that applies the noise and artefact elements exhibited in typical electrophoretic signal.</li>
+</ul>
+
+<h3>Title: Real-Time Energy Pricing in New Zealand: An Evolving Stream Analysis</h3>
+<ul>
+<li><strong>Authors: </strong>Yibin Sun, Heitor Murilo Gomes, Bernhard Pfahringer, Albert Bifet</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16187">https://arxiv.org/abs/2408.16187</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16187">https://arxiv.org/pdf/2408.16187</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16187]] Real-Time Energy Pricing in New Zealand: An Evolving Stream Analysis(https://arxiv.org/abs/2408.16187)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>This paper introduces a group of novel datasets representing real-time time-series and streaming data of energy prices in New Zealand, sourced from the Electricity Market Information (EMI) website maintained by the New Zealand government. The datasets are intended to address the scarcity of proper datasets for streaming regression learning tasks. We conduct extensive analyses and experiments on these datasets, covering preprocessing techniques, regression tasks, prediction intervals, concept drift detection, and anomaly detection. Our experiments demonstrate the datasets' utility and highlight the challenges and opportunities for future research in energy price forecasting.</li>
+</ul>
+
+<h3>Title: DLM-VMTL:A Double Layer Mapper for heterogeneous data video Multi-task prompt learning</h3>
+<ul>
+<li><strong>Authors: </strong>Zeyi Bo (1), Wuxi Sun (1), Ye Jin (1) ((1) Harbin Institute of Technology)</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16195">https://arxiv.org/abs/2408.16195</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16195">https://arxiv.org/pdf/2408.16195</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16195]] DLM-VMTL:A Double Layer Mapper for heterogeneous data video Multi-task prompt learning(https://arxiv.org/abs/2408.16195)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>In recent years, the parameters of backbones of Video Understanding tasks continue to increase and even reach billion-level. Whether fine-tuning a specific task on the Video Foundation Model or pre-training the model designed for the specific task, incurs a lot of overhead. How to make these models play other values than their own tasks becomes a worthy question. Multi-Task Learning(MTL) makes the visual task acquire the rich shareable knowledge from other tasks while joint training. It is fully explored in Image Recognition tasks especially dense predict tasks. Nevertheless, it is rarely used in video domain due to the lack of multi-labels video data. In this paper, a heterogenous data video multi-task prompt learning (VMTL) method is proposed to address above problem. It's different from it in image domain, a Double-Layers Mapper(DLM) is proposed to extract the shareable knowledge into visual promptS and align it with representation of primary task. Extensive experiments prove that our DLM-VMTL performs better than baselines on 6 different video understanding tasks and 11 datasets.</li>
+</ul>
+
+<h3>Title: Uni-3DAD: GAN-Inversion Aided Universal 3D Anomaly Detection on Model-free Products</h3>
+<ul>
+<li><strong>Authors: </strong>Jiayu Liu, Shancong Mou, Nathan Gaw, Yinan Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16201">https://arxiv.org/abs/2408.16201</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16201">https://arxiv.org/pdf/2408.16201</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16201]] Uni-3DAD: GAN-Inversion Aided Universal 3D Anomaly Detection on Model-free Products(https://arxiv.org/abs/2408.16201)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Anomaly detection is a long-standing challenge in manufacturing systems. Traditionally, anomaly detection has relied on human inspectors. However, 3D point clouds have gained attention due to their robustness to environmental factors and their ability to represent geometric data. Existing 3D anomaly detection methods generally fall into two categories. One compares scanned 3D point clouds with design files, assuming these files are always available. However, such assumptions are often violated in many real-world applications where model-free products exist, such as fresh produce (i.e., ``Cookie", ``Potato", etc.), dentures, bone, etc. The other category compares patches of scanned 3D point clouds with a library of normal patches named memory bank. However, those methods usually fail to detect incomplete shapes, which is a fairly common defect type (i.e., missing pieces of different products). The main challenge is that missing areas in 3D point clouds represent the absence of scanned points. This makes it infeasible to compare the missing region with existing point cloud patches in the memory bank. To address these two challenges, we proposed a unified, unsupervised 3D anomaly detection framework capable of identifying all types of defects on model-free products. Our method integrates two detection modules: a feature-based detection module and a reconstruction-based detection module. Feature-based detection covers geometric defects, such as dents, holes, and cracks, while the reconstruction-based method detects missing regions. Additionally, we employ a One-class Support Vector Machine (OCSVM) to fuse the detection results from both modules. The results demonstrate that (1) our proposed method outperforms the state-of-the-art methods in identifying incomplete shapes and (2) it still maintains comparable performance with the SOTA methods in detecting all other types of anomalies.</li>
+</ul>
+
+<h3>Title: ReXamine-Global: A Framework for Uncovering Inconsistencies in Radiology Report Generation Metrics</h3>
+<ul>
+<li><strong>Authors: </strong>Oishi Banerjee, Agustina Saenz, Kay Wu, Warren Clements, Adil Zia, Dominic Buensalido, Helen Kavnoudias, Alain S. Abi-Ghanem, Nour El Ghawi, Cibele Luna, Patricia Castillo, Khaled Al-Surimi, Rayyan A. Daghistani, Yuh-Min Chen, Heng-sheng Chao, Lars Heiliger, Moon Kim, Johannes Haubold, Frederic Jonske, Pranav Rajpurkar</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16208">https://arxiv.org/abs/2408.16208</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16208">https://arxiv.org/pdf/2408.16208</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16208]] ReXamine-Global: A Framework for Uncovering Inconsistencies in Radiology Report Generation Metrics(https://arxiv.org/abs/2408.16208)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Given the rapidly expanding capabilities of generative AI models for radiology, there is a need for robust metrics that can accurately measure the quality of AI-generated radiology reports across diverse hospitals. We develop ReXamine-Global, a LLM-powered, multi-site framework that tests metrics across different writing styles and patient populations, exposing gaps in their generalization. First, our method tests whether a metric is undesirably sensitive to reporting style, providing different scores depending on whether AI-generated reports are stylistically similar to ground-truth reports or not. Second, our method measures whether a metric reliably agrees with experts, or whether metric and expert scores of AI-generated report quality diverge for some sites. Using 240 reports from 6 hospitals around the world, we apply ReXamine-Global to 7 established report evaluation metrics and uncover serious gaps in their generalizability. Developers can apply ReXamine-Global when designing new report evaluation metrics, ensuring their robustness across sites. Additionally, our analysis of existing metrics can guide users of those metrics towards evaluation procedures that work reliably at their sites of interest.</li>
+</ul>
+
+<h3>Title: Enhancing Conditional Image Generation with Explainable Latent Space Manipulation</h3>
+<ul>
+<li><strong>Authors: </strong>Kshitij Pathania</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16232">https://arxiv.org/abs/2408.16232</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16232">https://arxiv.org/pdf/2408.16232</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16232]] Enhancing Conditional Image Generation with Explainable Latent Space Manipulation(https://arxiv.org/abs/2408.16232)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>In the realm of image synthesis, achieving fidelity to a reference image while adhering to conditional prompts remains a significant challenge. This paper proposes a novel approach that integrates a diffusion model with latent space manipulation and gradient-based selective attention mechanisms to address this issue. Leveraging Grad-SAM (Gradient-based Selective Attention Manipulation), we analyze the cross attention maps of the cross attention layers and gradients for the denoised latent vector, deriving importance scores of elements of denoised latent vector related to the subject of interest. Using this information, we create masks at specific timesteps during denoising to preserve subjects while seamlessly integrating the reference image features. This approach ensures the faithful formation of subjects based on conditional prompts, while concurrently refining the background for a more coherent composition. Our experiments on places365 dataset demonstrate promising results, with our proposed model achieving the lowest mean and median Frechet Inception Distance (FID) scores compared to baseline models, indicating superior fidelity preservation. Furthermore, our model exhibits competitive performance in aligning the generated images with provided textual descriptions, as evidenced by high CLIP scores. These results highlight the effectiveness of our approach in both fidelity preservation and textual context preservation, offering a significant advancement in text-to-image synthesis tasks.</li>
+</ul>
+
+<h3>Title: Making the Most of your Model: Methods for Finetuning and Applying Pretrained Transformers</h3>
+<ul>
+<li><strong>Authors: </strong>Davis Yoshida</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16241">https://arxiv.org/abs/2408.16241</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16241">https://arxiv.org/pdf/2408.16241</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16241]] Making the Most of your Model: Methods for Finetuning and Applying Pretrained Transformers(https://arxiv.org/abs/2408.16241)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>This thesis provides methods and analysis of models which make progress on this goal. The techniques outlined are task agnostic, and should provide benefit when used with nearly any transformer LM. We introduce two new finetuning methods which add new capabilities to the models they are used on. The first adds a recurrence mechanism, which removes the fixed-window sized constraint and improves the efficiency of a transformer decoder. The second allows masked language models (MLMs) to be used for initialization of both the encoder and decoder of a non-autoregressive sequence-to-sequence transformer, opening up generative applications of models which were previously only used for natural language understanding tasks. We also introduce two new techniques for improving the quality of predictions of any transformer decoder without additional finetuning. One, hidden state optimization, can be applied to any transformer decoder to improve the quality of predictions at inference time, especially for few-shot classification. The other, conditional beam search, allows practitioners to search for natural language generation (NLG) model outputs with high likelihood while conditioning on the event that the output is not degenerate (e.g. empty, repetitive, etc.). Finally, we provide theoretical and empirical insights on the divergence of model-likelihood and output quality which has widely been observed in prior work. These insights apply to any model which represents a distribution over text, and apply to language models which are not transformers or even autoregressive. We argue that the NLP community has, to some extent, misunderstood the implications of these findings, and encourage a point of view which has more nuance.</li>
+</ul>
+
+<h3>Title: Large-Scale Multi-omic Biosequence Transformers for Modeling Peptide-Nucleotide Interactions</h3>
+<ul>
+<li><strong>Authors: </strong>Sully F. Chen, Robert J. Steele, Beakal Lemeneh, Shivanand P. Lad, Eric Oermann</a></li>
+<li><strong>Subjects: </strong>cs.LG, q-bio.BM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16245">https://arxiv.org/abs/2408.16245</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16245">https://arxiv.org/pdf/2408.16245</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16245]] Large-Scale Multi-omic Biosequence Transformers for Modeling Peptide-Nucleotide Interactions(https://arxiv.org/abs/2408.16245)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>The transformer architecture has revolutionized bioinformatics and driven progress in the understanding and prediction of the properties of biomolecules. Almost all research on large-scale biosequence transformers has focused on one domain at a time (single-omic), usually nucleotides or peptides. These models have seen incredible success in downstream tasks in each domain and have achieved particularly noteworthy breakthroughs in sequences of peptides and structural modeling. However, these single-omic models are naturally incapable of modeling multi-omic tasks, one of the most biologically critical being nucleotide-peptide interactions. We present our work training the first multi-omic nucleotide-peptide foundation models. We show that these multi-omic models (MOMs) can learn joint representations between various single-omic distributions that are emergently consistent with the Central Dogma of molecular biology, despite only being trained on unlabeled biosequences. We further demonstrate that MOMs can be fine-tuned to achieve state-of-the-art results on peptide-nucleotide interaction tasks, namely predicting the change in Gibbs free energy ({\Delta}G) of the binding interaction between a given oligonucleotide and peptide, as well as the effect on this binding interaction due to mutations in the oligonucleotide sequence ({\Delta}{\Delta}G). Remarkably, we show that multi-omic biosequence transformers emergently learn useful structural information without any prior structural training, allowing us to predict which peptide residues are most involved in the peptide-nucleotide binding interaction. Lastly, we provide evidence that multi-omic biosequence models are non-inferior to foundation models trained on single-omics distributions, suggesting a more generalized or foundational approach to building these models.</li>
+</ul>
+
+<h3>Title: EvLight++: Low-Light Video Enhancement with an Event Camera: A Large-Scale Real-World Dataset, Novel Method, and More</h3>
+<ul>
+<li><strong>Authors: </strong>Kanghao Chen, Guoqiang Liang, Hangyu Li, Yunfan Lu, Lin Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16254">https://arxiv.org/abs/2408.16254</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16254">https://arxiv.org/pdf/2408.16254</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16254]] EvLight++: Low-Light Video Enhancement with an Event Camera: A Large-Scale Real-World Dataset, Novel Method, and More(https://arxiv.org/abs/2408.16254)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Event cameras offer significant advantages for low-light video enhancement, primarily due to their high dynamic range. Current research, however, is severely limited by the absence of large-scale, real-world, and spatio-temporally aligned event-video datasets. To address this, we introduce a large-scale dataset with over 30,000 pairs of frames and events captured under varying illumination. This dataset was curated using a robotic arm that traces a consistent non-linear trajectory, achieving spatial alignment precision under 0.03mm and temporal alignment with errors under 0.01s for 90% of the dataset. Based on the dataset, we propose \textbf{EvLight++}, a novel event-guided low-light video enhancement approach designed for robust performance in real-world scenarios. Firstly, we design a multi-scale holistic fusion branch to integrate structural and textural information from both images and events. To counteract variations in regional illumination and noise, we introduce Signal-to-Noise Ratio (SNR)-guided regional feature selection, enhancing features from high SNR regions and augmenting those from low SNR regions by extracting structural information from events. To incorporate temporal information and ensure temporal coherence, we further introduce a recurrent module and temporal loss in the whole pipeline. Extensive experiments on our and the synthetic SDSD dataset demonstrate that EvLight++ significantly outperforms both single image- and video-based methods by 1.37 dB and 3.71 dB, respectively. To further explore its potential in downstream tasks like semantic segmentation and monocular depth estimation, we extend our datasets by adding pseudo segmentation and depth labels via meticulous annotation efforts with foundation models. Experiments under diverse low-light scenes show that the enhanced results achieve a 15.97% improvement in mIoU for semantic segmentation.</li>
+</ul>
+
+<h3>Title: Improving Diffusion-based Data Augmentation with Inversion Spherical Interpolation</h3>
+<ul>
+<li><strong>Authors: </strong>Yanghao Wang, Long Chen</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16266">https://arxiv.org/abs/2408.16266</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16266">https://arxiv.org/pdf/2408.16266</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16266]] Improving Diffusion-based Data Augmentation with Inversion Spherical Interpolation(https://arxiv.org/abs/2408.16266)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Data Augmentation (DA), \ie, synthesizing faithful and diverse samples to expand the original training set, is a prevalent and effective strategy to improve various visual recognition tasks. With the powerful image generation ability, diffusion-based DA has shown strong performance gains on different benchmarks. In this paper, we analyze today's diffusion-based DA methods, and argue that they cannot take account of both faithfulness and diversity, which are two critical keys for generating high-quality samples and boosting final classification performance. To this end, we propose a novel Diffusion-based Inversion Interpolation DA method: Diff-II. Specifically, Diff-II consists of three main steps: 1) Category concepts learning: Learning concept embeddings for each category. 2) Inversion interpolation: Calculating the inversion for each image, and conducting spherical interpolation for two randomly sampled inversions from the same category. 3) Two-stage denoising: Using different prompts to generate synthesized images in a coarse-to-fine manner. Extensive experiments on multiple image classification tasks (\eg, few-shot, long-tailed, and out-of-distribution classification) have demonstrated its effectiveness over state-of-the-art diffusion-based DA methods.</li>
+</ul>
+
+<h3>Title: SAU: A Dual-Branch Network to Enhance Long-Tailed Recognition via Generative Models</h3>
+<ul>
+<li><strong>Authors: </strong>Guangxi Li, Yinsheng Song, Mingkai Zheng</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16273">https://arxiv.org/abs/2408.16273</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16273">https://arxiv.org/pdf/2408.16273</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16273]] SAU: A Dual-Branch Network to Enhance Long-Tailed Recognition via Generative Models(https://arxiv.org/abs/2408.16273)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Long-tailed distributions in image recognition pose a considerable challenge due to the severe imbalance between a few dominant classes with numerous examples and many minority classes with few samples. Recently, the use of large generative models to create synthetic data for image classification has been realized, but utilizing synthetic data to address the challenge of long-tailed recognition remains relatively unexplored. In this work, we proposed the use of synthetic data as a complement to long-tailed datasets to eliminate the impact of data imbalance. To tackle this real-synthetic mixed dataset, we designed a two-branch model that contains Synthetic-Aware and Unaware branches (SAU). The core ideas are (1) a synthetic-unaware branch for classification that mixes real and synthetic data and treats all data equally without distinguishing between them. (2) A synthetic-aware branch for improving the robustness of the feature extractor by distinguishing between real and synthetic data and learning their discrepancies. Extensive experimental results demonstrate that our method can improve the accuracy of long-tailed image recognition. Notably, our approach achieves state-of-the-art Top-1 accuracy and significantly surpasses other methods on CIFAR-10-LT and CIFAR-100-LT datasets across various imbalance factors. Our code is available at this https URL.</li>
+</ul>
+
+<h3>Title: Bootstrap Segmentation Foundation Model under Distribution Shift via Object-Centric Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Luyao Tang, Yuxuan Yuan, Chaoqi Chen, Kunze Huang, Xinghao Ding, Yue Huang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16310">https://arxiv.org/abs/2408.16310</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16310">https://arxiv.org/pdf/2408.16310</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16310]] Bootstrap Segmentation Foundation Model under Distribution Shift via Object-Centric Learning(https://arxiv.org/abs/2408.16310)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised, foundation model</a></li>
+<li><strong>Abstract: </strong>Foundation models have made incredible strides in achieving zero-shot or few-shot generalization, leveraging prompt engineering to mimic the problem-solving approach of human intelligence. However, when it comes to some foundation models like Segment Anything, there is still a challenge in performing well on out-of-distribution data, including camouflaged and medical images. Inconsistent prompting strategies during fine-tuning and testing further compound the issue, leading to decreased performance. Drawing inspiration from how human cognition processes new environments, we introduce SlotSAM, a method that reconstructs features from the encoder in a self-supervised manner to create object-centric representations. These representations are then integrated into the foundation model, bolstering its object-level perceptual capabilities while reducing the impact of distribution-related variables. The beauty of SlotSAM lies in its simplicity and adaptability to various tasks, making it a versatile solution that significantly enhances the generalization abilities of foundation models. Through limited parameter fine-tuning in a bootstrap manner, our approach paves the way for improved generalization in novel environments. The code is available at this http URL.</li>
+</ul>
+
+<h3>Title: P2P-Bridge: Diffusion Bridges for 3D Point Cloud Denoising</h3>
+<ul>
+<li><strong>Authors: </strong>Mathias Vogel, Keisuke Tateno, Marc Pollefeys, Federico Tombari, Marie-Julie Rakotosaona, Francis Engelmann</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16325">https://arxiv.org/abs/2408.16325</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16325">https://arxiv.org/pdf/2408.16325</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16325]] P2P-Bridge: Diffusion Bridges for 3D Point Cloud Denoising(https://arxiv.org/abs/2408.16325)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>In this work, we tackle the task of point cloud denoising through a novel framework that adapts Diffusion Schrödinger bridges to points clouds. Unlike previous approaches that predict point-wise displacements from point features or learned noise distributions, our method learns an optimal transport plan between paired point clouds. Experiments on object datasets like PU-Net and real-world datasets such as ScanNet++ and ARKitScenes show that P2P-Bridge achieves significant improvements over existing methods. While our approach demonstrates strong results using only point coordinates, we also show that incorporating additional features, such as color information or point-wise DINOv2 features, further enhances the performance. Code and pretrained models are available at this https URL.</li>
+</ul>
+
+<h3>Title: Self-Improving Diffusion Models with Synthetic Data</h3>
+<ul>
+<li><strong>Authors: </strong>Sina Alemohammad, Ahmed Imtiaz Humayun, Shruti Agarwal, John Collomosse, Richard Baraniuk</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16333">https://arxiv.org/abs/2408.16333</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16333">https://arxiv.org/pdf/2408.16333</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16333]] Self-Improving Diffusion Models with Synthetic Data(https://arxiv.org/abs/2408.16333)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>The artificial intelligence (AI) world is running out of real data for training increasingly large generative models, resulting in accelerating pressure to train on synthetic data. Unfortunately, training new generative models with synthetic data from current or past generation models creates an autophagous (self-consuming) loop that degrades the quality and/or diversity of the synthetic data in what has been termed model autophagy disorder (MAD) and model collapse. Current thinking around model autophagy recommends that synthetic data is to be avoided for model training lest the system deteriorate into MADness. In this paper, we take a different tack that treats synthetic data differently from real data. Self-IMproving diffusion models with Synthetic data (SIMS) is a new training concept for diffusion models that uses self-synthesized data to provide negative guidance during the generation process to steer a model's generative process away from the non-ideal synthetic data manifold and towards the real data distribution. We demonstrate that SIMS is capable of self-improvement; it establishes new records based on the Fréchet inception distance (FID) metric for CIFAR-10 and ImageNet-64 generation and achieves competitive results on FFHQ-64 and ImageNet-512. Moreover, SIMS is, to the best of our knowledge, the first prophylactic generative AI algorithm that can be iteratively trained on self-generated synthetic data without going MAD. As a bonus, SIMS can adjust a diffusion model's synthetic data distribution to match any desired in-domain target distribution to help mitigate biases and ensure fairness.</li>
+</ul>
+
+<h3>Title: Toward Robust Early Detection of Alzheimer's Disease via an Integrated Multimodal Learning Approach</h3>
+<ul>
+<li><strong>Authors: </strong>Yifei Chen, Shenghao Zhu, Zhaojie Fang, Chang Liu, Binfeng Zou, Yuhe Wang, Shuo Chang, Fan Jia, Feiwei Qin, Jin Fan, Yong Peng, Changmiao Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16343">https://arxiv.org/abs/2408.16343</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16343">https://arxiv.org/pdf/2408.16343</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16343]] Toward Robust Early Detection of Alzheimer's Disease via an Integrated Multimodal Learning Approach(https://arxiv.org/abs/2408.16343)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Alzheimer's Disease (AD) is a complex neurodegenerative disorder marked by memory loss, executive dysfunction, and personality changes. Early diagnosis is challenging due to subtle symptoms and varied presentations, often leading to misdiagnosis with traditional unimodal diagnostic methods due to their limited scope. This study introduces an advanced multimodal classification model that integrates clinical, cognitive, neuroimaging, and EEG data to enhance diagnostic accuracy. The model incorporates a feature tagger with a tabular data coding architecture and utilizes the TimesBlock module to capture intricate temporal patterns in Electroencephalograms (EEG) data. By employing Cross-modal Attention Aggregation module, the model effectively fuses Magnetic Resonance Imaging (MRI) spatial information with EEG temporal data, significantly improving the distinction between AD, Mild Cognitive Impairment, and Normal Cognition. Simultaneously, we have constructed the first AD classification dataset that includes three modalities: EEG, MRI, and tabular data. Our innovative approach aims to facilitate early diagnosis and intervention, potentially slowing the progression of AD. The source code and our private ADMC dataset are available at this https URL.</li>
+</ul>
+
+<h3>Title: IBO: Inpainting-Based Occlusion to Enhance Explainable Artificial Intelligence Evaluation in Histopathology</h3>
+<ul>
+<li><strong>Authors: </strong>Pardis Afshar, Sajjad Hashembeiki, Pouya Khani, Emad Fatemizadeh, Mohammad Hossein Rohban</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16395">https://arxiv.org/abs/2408.16395</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16395">https://arxiv.org/pdf/2408.16395</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16395]] IBO: Inpainting-Based Occlusion to Enhance Explainable Artificial Intelligence Evaluation in Histopathology(https://arxiv.org/abs/2408.16395)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Histopathological image analysis is crucial for accurate cancer diagnosis and treatment planning. While deep learning models, especially convolutional neural networks, have advanced this field, their "black-box" nature raises concerns about interpretability and trustworthiness. Explainable Artificial Intelligence (XAI) techniques aim to address these concerns, but evaluating their effectiveness remains challenging. A significant issue with current occlusion-based XAI methods is that they often generate Out-of-Distribution (OoD) samples, leading to inaccurate evaluations. In this paper, we introduce Inpainting-Based Occlusion (IBO), a novel occlusion strategy that utilizes a Denoising Diffusion Probabilistic Model to inpaint occluded regions in histopathological images. By replacing cancerous areas with realistic, non-cancerous tissue, IBO minimizes OoD artifacts and preserves data integrity. We evaluate our method on the CAMELYON16 dataset through two phases: first, by assessing perceptual similarity using the Learned Perceptual Image Patch Similarity (LPIPS) metric, and second, by quantifying the impact on model predictions through Area Under the Curve (AUC) analysis. Our results demonstrate that IBO significantly improves perceptual fidelity, achieving nearly twice the improvement in LPIPS scores compared to the best existing occlusion strategy. Additionally, IBO increased the precision of XAI performance prediction from 42% to 71% compared to traditional methods. These results demonstrate IBO's potential to provide more reliable evaluations of XAI techniques, benefiting histopathology and other applications. The source code for this study is available at this https URL.</li>
+</ul>
+
+<h3>Title: COIN: Control-Inpainting Diffusion Prior for Human and Camera Motion Estimation</h3>
+<ul>
+<li><strong>Authors: </strong>Jiefeng Li, Ye Yuan, Davis Rempe, Haotian Zhang, Pavlo Molchanov, Cewu Lu, Jan Kautz, Umar Iqbal</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16426">https://arxiv.org/abs/2408.16426</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16426">https://arxiv.org/pdf/2408.16426</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16426]] COIN: Control-Inpainting Diffusion Prior for Human and Camera Motion Estimation(https://arxiv.org/abs/2408.16426)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Estimating global human motion from moving cameras is challenging due to the entanglement of human and camera motions. To mitigate the ambiguity, existing methods leverage learned human motion priors, which however often result in oversmoothed motions with misaligned 2D projections. To tackle this problem, we propose COIN, a control-inpainting motion diffusion prior that enables fine-grained control to disentangle human and camera motions. Although pre-trained motion diffusion models encode rich motion priors, we find it non-trivial to leverage such knowledge to guide global motion estimation from RGB videos. COIN introduces a novel control-inpainting score distillation sampling method to ensure well-aligned, consistent, and high-quality motion from the diffusion prior within a joint optimization framework. Furthermore, we introduce a new human-scene relation loss to alleviate the scale ambiguity by enforcing consistency among the humans, camera, and scene. Experiments on three challenging benchmarks demonstrate the effectiveness of COIN, which outperforms the state-of-the-art methods in terms of global human motion estimation and camera motion estimation. As an illustrative example, COIN outperforms the state-of-the-art method by 33% in world joint position error (W-MPJPE) on the RICH dataset.</li>
+</ul>
+
+<h3>Title: Enhancing Sound Source Localization via False Negative Elimination</h3>
+<ul>
+<li><strong>Authors: </strong>Zengjie Song, Jiangshe Zhang, Yuxi Wang, Junsong Fan, Zhaoxiang Zhang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16448">https://arxiv.org/abs/2408.16448</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16448">https://arxiv.org/pdf/2408.16448</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16448]] Enhancing Sound Source Localization via False Negative Elimination(https://arxiv.org/abs/2408.16448)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Sound source localization aims to localize objects emitting the sound in visual scenes. Recent works obtaining impressive results typically rely on contrastive learning. However, the common practice of randomly sampling negatives in prior arts can lead to the false negative issue, where the sounds semantically similar to visual instance are sampled as negatives and incorrectly pushed away from the visual anchor/query. As a result, this misalignment of audio and visual features could yield inferior performance. To address this issue, we propose a novel audio-visual learning framework which is instantiated with two individual learning schemes: self-supervised predictive learning (SSPL) and semantic-aware contrastive learning (SACL). SSPL explores image-audio positive pairs alone to discover semantically coherent similarities between audio and visual features, while a predictive coding module for feature alignment is introduced to facilitate the positive-only learning. In this regard SSPL acts as a negative-free method to eliminate false negatives. By contrast, SACL is designed to compact visual features and remove false negatives, providing reliable visual anchor and audio negatives for contrast. Different from SSPL, SACL releases the potential of audio-visual contrastive learning, offering an effective alternative to achieve the same goal. Comprehensive experiments demonstrate the superiority of our approach over the state-of-the-arts. Furthermore, we highlight the versatility of the learned representation by extending the approach to audio-visual event classification and object detection tasks. Code and models are available at: this https URL.</li>
+</ul>
+
+<h3>Title: What to Preserve and What to Transfer: Faithful, Identity-Preserving Diffusion-based Hairstyle Transfer</h3>
+<ul>
+<li><strong>Authors: </strong>Chaeyeon Chung, Sunghyun Park, Jeongho Kim, Jaegul Choo</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16450">https://arxiv.org/abs/2408.16450</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16450">https://arxiv.org/pdf/2408.16450</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16450]] What to Preserve and What to Transfer: Faithful, Identity-Preserving Diffusion-based Hairstyle Transfer(https://arxiv.org/abs/2408.16450)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Hairstyle transfer is a challenging task in the image editing field that modifies the hairstyle of a given face image while preserving its other appearance and background features. The existing hairstyle transfer approaches heavily rely on StyleGAN, which is pre-trained on cropped and aligned face images. Hence, they struggle to generalize under challenging conditions such as extreme variations of head poses or focal lengths. To address this issue, we propose a one-stage hairstyle transfer diffusion model, HairFusion, that applies to real-world scenarios. Specifically, we carefully design a hair-agnostic representation as the input of the model, where the original hair information is thoroughly eliminated. Next, we introduce a hair align cross-attention (Align-CA) to accurately align the reference hairstyle with the face image while considering the difference in their face shape. To enhance the preservation of the face image's original features, we leverage adaptive hair blending during the inference, where the output's hair regions are estimated by the cross-attention map in Align-CA and blended with non-hair areas of the face image. Our experimental results show that our method achieves state-of-the-art performance compared to the existing methods in preserving the integrity of both the transferred hairstyle and the surrounding features. The codes are available at this https URL.</li>
+</ul>
+
+<h3>Title: HYGENE: A Diffusion-based Hypergraph Generation Method</h3>
+<ul>
+<li><strong>Authors: </strong>Dorian Gailhard, Enzo Tartaglione, Lirida Naviner De Barros, Jhony H. Giraldo</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.DM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16457">https://arxiv.org/abs/2408.16457</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16457">https://arxiv.org/pdf/2408.16457</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16457]] HYGENE: A Diffusion-based Hypergraph Generation Method(https://arxiv.org/abs/2408.16457)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Hypergraphs are powerful mathematical structures that can model complex, high-order relationships in various domains, including social networks, bioinformatics, and recommender systems. However, generating realistic and diverse hypergraphs remains challenging due to their inherent complexity and lack of effective generative models. In this paper, we introduce a diffusion-based Hypergraph Generation (HYGENE) method that addresses these challenges through a progressive local expansion approach. HYGENE works on the bipartite representation of hypergraphs, starting with a single pair of connected nodes and iteratively expanding it to form the target hypergraph. At each step, nodes and hyperedges are added in a localized manner using a denoising diffusion process, which allows for the construction of the global structure before refining local details. Our experiments demonstrated the effectiveness of HYGENE, proving its ability to closely mimic a variety of properties in hypergraphs. To the best of our knowledge, this is the first attempt to employ deep learning models for hypergraph generation, and our work aims to lay the groundwork for future research in this area.</li>
+</ul>
+
+<h3>Title: Self-Alignment: Improving Alignment of Cultural Values in LLMs via In-Context Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Rochelle Choenni, Ekaterina Shutova</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16482">https://arxiv.org/abs/2408.16482</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16482">https://arxiv.org/pdf/2408.16482</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16482]] Self-Alignment: Improving Alignment of Cultural Values in LLMs via In-Context Learning(https://arxiv.org/abs/2408.16482)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Improving the alignment of Large Language Models (LLMs) with respect to the cultural values that they encode has become an increasingly important topic. In this work, we study whether we can exploit existing knowledge about cultural values at inference time to adjust model responses to cultural value probes. We present a simple and inexpensive method that uses a combination of in-context learning (ICL) and human survey data, and show that we can improve the alignment to cultural values across 5 models that include both English-centric and multilingual LLMs. Importantly, we show that our method could prove useful in test languages other than English and can improve alignment to the cultural values that correspond to a range of culturally diverse countries.</li>
+</ul>
+
+<h3>Title: Learning from Negative Samples in Generative Biomedical Entity Linking</h3>
+<ul>
+<li><strong>Authors: </strong>Chanhwi Kim, Hyunjae Kim, Sihyeon Park, Jiwoo Lee, Mujeen Sung, Jaewoo Kang</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16493">https://arxiv.org/abs/2408.16493</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16493">https://arxiv.org/pdf/2408.16493</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16493]] Learning from Negative Samples in Generative Biomedical Entity Linking(https://arxiv.org/abs/2408.16493)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Generative models have become widely used in biomedical entity linking (BioEL) due to their excellent performance and efficient memory usage. However, these models are usually trained only with positive samples--entities that match the input mention's identifier--and do not explicitly learn from hard negative samples, which are entities that look similar but have different meanings. To address this limitation, we introduce ANGEL (Learning from Negative Samples in Generative Biomedical Entity Linking), the first framework that trains generative BioEL models using negative samples. Specifically, a generative model is initially trained to generate positive samples from the knowledge base for given input entities. Subsequently, both correct and incorrect outputs are gathered from the model's top-k predictions. The model is then updated to prioritize the correct predictions through direct preference optimization. Our models fine-tuned with ANGEL outperform the previous best baseline models by up to an average top-1 accuracy of 1.4% on five benchmarks. When incorporating our framework into pre-training, the performance improvement further increases to 1.7%, demonstrating its effectiveness in both the pre-training and fine-tuning stages. Our code is available at this https URL.</li>
+</ul>
+
+<h3>Title: LLMs vs Established Text Augmentation Techniques for Classification: When do the Benefits Outweight the Costs?</h3>
+<ul>
+<li><strong>Authors: </strong>Jan Cegin, Jakub Simko, Peter Brusilovsky</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16502">https://arxiv.org/abs/2408.16502</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16502">https://arxiv.org/pdf/2408.16502</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16502]] LLMs vs Established Text Augmentation Techniques for Classification: When do the Benefits Outweight the Costs?(https://arxiv.org/abs/2408.16502)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The generative large language models (LLMs) are increasingly being used for data augmentation tasks, where text samples are LLM-paraphrased and then used for classifier fine-tuning. However, a research that would confirm a clear cost-benefit advantage of LLMs over more established augmentation methods is largely missing. To study if (and when) is the LLM-based augmentation advantageous, we compared the effects of recent LLM augmentation methods with established ones on 6 datasets, 3 classifiers and 2 fine-tuning methods. We also varied the number of seeds and collected samples to better explore the downstream model accuracy space. Finally, we performed a cost-benefit analysis and show that LLM-based methods are worthy of deployment only when very small number of seeds is used. Moreover, in many cases, established methods lead to similar or better model accuracies.</li>
+</ul>
+
+<h3>Title: A Simple and Generalist Approach for Panoptic Segmentation</h3>
+<ul>
+<li><strong>Authors: </strong>Nedyalko Prisadnikov, Wouter Van Gansbeke, Danda Pani Paudel, Luc Van Gool</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16504">https://arxiv.org/abs/2408.16504</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16504">https://arxiv.org/pdf/2408.16504</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16504]] A Simple and Generalist Approach for Panoptic Segmentation(https://arxiv.org/abs/2408.16504)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Generalist vision models aim for one and the same architecture for a variety of vision tasks. While such shared architecture may seem attractive, generalist models tend to be outperformed by their bespoken counterparts, especially in the case of panoptic segmentation. We address this problem by introducing two key contributions, without compromising the desirable properties of generalist models. These contributions are: (i) a positional-embedding (PE) based loss for improved centroid regressions; (ii) Edge Distance Sampling (EDS) for the better separation of instance boundaries. The PE-based loss facilitates a better per-pixel regression of the associated instance's centroid, whereas EDS contributes by carefully handling the void regions (caused by missing labels) and smaller instances. These two simple yet effective modifications significantly improve established baselines, while achieving state-of-the-art results among all generalist solutions. More specifically, our method achieves a panoptic quality(PQ) of 52.5 on the COCO dataset, which is an improvement of 10 points over the best model with similar approach (Painter), and is superior by 2 to the best performing diffusion-based method Pix2Seq-$\mathcal{D}$. Furthermore, we provide insights into and an in-depth analysis of our contributions through exhaustive experiments. Our source code and model weights will be made publicly available.</li>
+</ul>
+
+<h3>Title: Multitask learning for improved scour detection: A dynamic wave tank study</h3>
+<ul>
+<li><strong>Authors: </strong>Simon M. Brealy, Aidan J. Hughes, Tina A. Dardeno, Lawrence A. Bull, Robin S. Mills, Nikolaos Dervilis, Keith Worden</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16527">https://arxiv.org/abs/2408.16527</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16527">https://arxiv.org/pdf/2408.16527</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16527]] Multitask learning for improved scour detection: A dynamic wave tank study(https://arxiv.org/abs/2408.16527)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Population-based structural health monitoring (PBSHM), aims to share information between members of a population. An offshore wind (OW) farm could be considered as a population of nominally-identical wind-turbine structures. However, benign variations exist among members, such as geometry, sea-bed conditions and temperature differences. These factors could influence structural properties and therefore the dynamic response, making it more difficult to detect structural problems via traditional SHM techniques. This paper explores the use of a Bayesian hierarchical model as a means of multitask learning, to infer foundation stiffness distribution parameters at both population and local levels. To do this, observations of natural frequency from populations of structures were first generated from both numerical and experimental models. These observations were then used in a partially-pooled Bayesian hierarchical model in tandem with surrogate FE models of the structures to infer foundation stiffness parameters. Finally, it is demonstrated how the learned parameters may be used as a basis to perform more robust anomaly detection (as compared to a no-pooling approach) e.g. as a result of scour.</li>
+</ul>
+
+<h3>Title: GRPose: Learning Graph Relations for Human Image Generation with Pose Priors</h3>
+<ul>
+<li><strong>Authors: </strong>Xiangchen Yin, Donglin Di, Lei Fan, Hao Li, Chen Wei, Xiaofei Gou, Yang Song, Xiao Sun, Xun Yang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16540">https://arxiv.org/abs/2408.16540</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16540">https://arxiv.org/pdf/2408.16540</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16540]] GRPose: Learning Graph Relations for Human Image Generation with Pose Priors(https://arxiv.org/abs/2408.16540)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recent methods using diffusion models have made significant progress in human image generation with various additional controls such as pose priors. However, existing approaches still struggle to generate high-quality images with consistent pose alignment, resulting in unsatisfactory outputs. In this paper, we propose a framework delving into the graph relations of pose priors to provide control information for human image generation. The main idea is to establish a graph topological structure between the pose priors and latent representation of diffusion models to capture the intrinsic associations between different pose parts. A Progressive Graph Integrator (PGI) is designed to learn the spatial relationships of the pose priors with the graph structure, adopting a hierarchical strategy within an Adapter to gradually propagate information across different pose parts. A pose perception loss is further introduced based on a pretrained pose estimation network to minimize the pose differences. Extensive qualitative and quantitative experiments conducted on the Human-Art and LAION-Human datasets demonstrate that our model achieves superior performance, with a 9.98% increase in pose average precision compared to the latest benchmark model. The code is released on *******.</li>
+</ul>
+
+<h3>Title: OP-Align: Object-level and Part-level Alignment for Self-supervised Category-level Articulated Object Pose Estimation</h3>
+<ul>
+<li><strong>Authors: </strong>Yuchen Che, Ryo Furukawa, Asako Kanezaki</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16547">https://arxiv.org/abs/2408.16547</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16547">https://arxiv.org/pdf/2408.16547</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16547]] OP-Align: Object-level and Part-level Alignment for Self-supervised Category-level Articulated Object Pose Estimation(https://arxiv.org/abs/2408.16547)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Category-level articulated object pose estimation focuses on the pose estimation of unknown articulated objects within known categories. Despite its significance, this task remains challenging due to the varying shapes and poses of objects, expensive dataset annotation costs, and complex real-world environments. In this paper, we propose a novel self-supervised approach that leverages a single-frame point cloud to solve this task. Our model consistently generates reconstruction with a canonical pose and joint state for the entire input object, and it estimates object-level poses that reduce overall pose variance and part-level poses that align each part of the input with its corresponding part of the reconstruction. Experimental results demonstrate that our approach significantly outperforms previous self-supervised methods and is comparable to the state-of-the-art supervised methods. To assess the performance of our model in real-world scenarios, we also introduce a new real-world articulated object benchmark dataset.</li>
+</ul>
+
+<h3>Title: Data Quality Monitoring through Transfer Learning on Anomaly Detection for the Hadron Calorimeters</h3>
+<ul>
+<li><strong>Authors: </strong>Mulugeta Weldezgina Asres, Christian Walter Omlin, Long Wang, Pavel Parygin, David Yu, Jay Dittmann, The CMS-HCAL Collaboration</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16612">https://arxiv.org/abs/2408.16612</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16612">https://arxiv.org/pdf/2408.16612</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16612]] Data Quality Monitoring through Transfer Learning on Anomaly Detection for the Hadron Calorimeters(https://arxiv.org/abs/2408.16612)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>The proliferation of sensors brings an immense volume of spatio-temporal (ST) data in many domains for various purposes, including monitoring, diagnostics, and prognostics applications. Data curation is a time-consuming process for a large volume of data, making it challenging and expensive to deploy data analytics platforms in new environments. Transfer learning (TL) mechanisms promise to mitigate data sparsity and model complexity by utilizing pre-trained models for a new task. Despite the triumph of TL in fields like computer vision and natural language processing, efforts on complex ST models for anomaly detection (AD) applications are limited. In this study, we present the potential of TL within the context of AD for the Hadron Calorimeter of the Compact Muon Solenoid experiment at CERN. We have transferred the ST AD models trained on data collected from one part of a calorimeter to another. We have investigated different configurations of TL on semi-supervised autoencoders of the ST AD models -- transferring convolutional, graph, and recurrent neural networks of both the encoder and decoder networks. The experiment results demonstrate that TL effectively enhances the model learning accuracy on a target subdetector. The TL achieves promising data reconstruction and AD performance while substantially reducing the trainable parameters of the AD models. It also improves robustness against anomaly contamination in the training data sets of the semi-supervised AD models.</li>
+</ul>
+
+<h3>Title: Blending Low and High-Level Semantics of Time Series for Better Masked Time Series Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Johan Vik Mathisen, Erlend Lokna, Daesoo Lee, Erlend Aune</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16613">https://arxiv.org/abs/2408.16613</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16613">https://arxiv.org/pdf/2408.16613</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16613]] Blending Low and High-Level Semantics of Time Series for Better Masked Time Series Generation(https://arxiv.org/abs/2408.16613)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>State-of-the-art approaches in time series generation (TSG), such as TimeVQVAE, utilize vector quantization-based tokenization to effectively model complex distributions of time series. These approaches first learn to transform time series into a sequence of discrete latent vectors, and then a prior model is learned to model the sequence. The discrete latent vectors, however, only capture low-level semantics (\textit{e.g.,} shapes). We hypothesize that higher-fidelity time series can be generated by training a prior model on more informative discrete latent vectors that contain both low and high-level semantics (\textit{e.g.,} characteristic dynamics). In this paper, we introduce a novel framework, termed NC-VQVAE, to integrate self-supervised learning into those TSG methods to derive a discrete latent space where low and high-level semantics are captured. Our experimental results demonstrate that NC-VQVAE results in a considerable improvement in the quality of synthetic samples.</li>
+</ul>
+
+<h3>Title: DriveGenVLM: Real-world Video Generation for Vision Language Model based Autonomous Driving</h3>
+<ul>
+<li><strong>Authors: </strong>Yongjie Fu, Anmol Jain, Xuan Di, Xu Chen, Zhaobin Mo</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16647">https://arxiv.org/abs/2408.16647</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16647">https://arxiv.org/pdf/2408.16647</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16647]] DriveGenVLM: Real-world Video Generation for Vision Language Model based Autonomous Driving(https://arxiv.org/abs/2408.16647)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, in-context</a></li>
+<li><strong>Abstract: </strong>The advancement of autonomous driving technologies necessitates increasingly sophisticated methods for understanding and predicting real-world scenarios. Vision language models (VLMs) are emerging as revolutionary tools with significant potential to influence autonomous driving. In this paper, we propose the DriveGenVLM framework to generate driving videos and use VLMs to understand them. To achieve this, we employ a video generation framework grounded in denoising diffusion probabilistic models (DDPM) aimed at predicting real-world video sequences. We then explore the adequacy of our generated videos for use in VLMs by employing a pre-trained model known as Efficient In-context Learning on Egocentric Videos (EILEV). The diffusion model is trained with the Waymo open dataset and evaluated using the Fréchet Video Distance (FVD) score to ensure the quality and realism of the generated videos. Corresponding narrations are provided by EILEV for these generated videos, which may be beneficial in the autonomous driving domain. These narrations can enhance traffic scene understanding, aid in navigation, and improve planning capabilities. The integration of video generation with VLMs in the DriveGenVLM framework represents a significant step forward in leveraging advanced AI models to address complex challenges in autonomous driving.</li>
+</ul>
+
+<h3>Title: Space3D-Bench: Spatial 3D Question Answering Benchmark</h3>
+<ul>
+<li><strong>Authors: </strong>Emilia Szymanska, Mihai Dusmanu, Jan-Willem Buurlage, Mahdi Rad, Marc Pollefeys</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16662">https://arxiv.org/abs/2408.16662</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16662">https://arxiv.org/pdf/2408.16662</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16662]] Space3D-Bench: Spatial 3D Question Answering Benchmark(https://arxiv.org/abs/2408.16662)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Answering questions about the spatial properties of the environment poses challenges for existing language and vision foundation models due to a lack of understanding of the 3D world notably in terms of relationships between objects. To push the field forward, multiple 3D Q&A datasets were proposed which, overall, provide a variety of questions, but they individually focus on particular aspects of 3D reasoning or are limited in terms of data modalities. To address this, we present Space3D-Bench - a collection of 1000 general spatial questions and answers related to scenes of the Replica dataset which offers a variety of data modalities: point clouds, posed RGB-D images, navigation meshes and 3D object detections. To ensure that the questions cover a wide range of 3D objectives, we propose an indoor spatial questions taxonomy inspired by geographic information systems and use it to balance the dataset accordingly. Moreover, we provide an assessment system that grades natural language responses based on predefined ground-truth answers by leveraging a Vision Language Model's comprehension of both text and images to compare the responses with ground-truth textual information or relevant visual data. Finally, we introduce a baseline called RAG3D-Chat integrating the world understanding of foundation models with rich context retrieval, achieving an accuracy of 67% on the proposed dataset.</li>
+</ul>
+
+<h3>Title: GradBias: Unveiling Word Influence on Bias in Text-to-Image Generative Models</h3>
+<ul>
+<li><strong>Authors: </strong>Moreno D'Incà, Elia Peruzzo, Massimiliano Mancini, Xingqian Xu, Humphrey Shi, Nicu Sebe</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16700">https://arxiv.org/abs/2408.16700</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16700">https://arxiv.org/pdf/2408.16700</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16700]] GradBias: Unveiling Word Influence on Bias in Text-to-Image Generative Models(https://arxiv.org/abs/2408.16700)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model, generative</a></li>
+<li><strong>Abstract: </strong>Recent progress in Text-to-Image (T2I) generative models has enabled high-quality image generation. As performance and accessibility increase, these models are gaining significant attraction and popularity: ensuring their fairness and safety is a priority to prevent the dissemination and perpetuation of biases. However, existing studies in bias detection focus on closed sets of predefined biases (e.g., gender, ethnicity). In this paper, we propose a general framework to identify, quantify, and explain biases in an open set setting, i.e. without requiring a predefined set. This pipeline leverages a Large Language Model (LLM) to propose biases starting from a set of captions. Next, these captions are used by the target generative model for generating a set of images. Finally, Vision Question Answering (VQA) is leveraged for bias evaluation. We show two variations of this framework: OpenBias and GradBias. OpenBias detects and quantifies biases, while GradBias determines the contribution of individual prompt words on biases. OpenBias effectively detects both well-known and novel biases related to people, objects, and animals and highly aligns with existing closed-set bias detection methods and human judgment. GradBias shows that neutral words can significantly influence biases and it outperforms several baselines, including state-of-the-art foundation models. Code available here: this https URL.</li>
+</ul>
+
+<h3>Title: One-Shot Learning Meets Depth Diffusion in Multi-Object Videos</h3>
+<ul>
+<li><strong>Authors: </strong>Anisha Jain</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16704">https://arxiv.org/abs/2408.16704</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16704">https://arxiv.org/pdf/2408.16704</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16704]] One-Shot Learning Meets Depth Diffusion in Multi-Object Videos(https://arxiv.org/abs/2408.16704)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Creating editable videos that depict complex interactions between multiple objects in various artistic styles has long been a challenging task in filmmaking. Progress is often hampered by the scarcity of data sets that contain paired text descriptions and corresponding videos that showcase these interactions. This paper introduces a novel depth-conditioning approach that significantly advances this field by enabling the generation of coherent and diverse videos from just a single text-video pair using a pre-trained depth-aware Text-to-Image (T2I) model. Our method fine-tunes the pre-trained model to capture continuous motion by employing custom-designed spatial and temporal attention mechanisms. During inference, we use the DDIM inversion to provide structural guidance for video generation. This innovative technique allows for continuously controllable depth in videos, facilitating the generation of multiobject interactions while maintaining the concept generation and compositional strengths of the original T2I model across various artistic styles, such as photorealism, animation, and impressionism.</li>
+</ul>
+
+<h3>Title: Assessing Large Language Models for Online Extremism Research: Identification, Explanation, and New Knowledge</h3>
+<ul>
+<li><strong>Authors: </strong>Beidi Dong, Jin R. Lee, Ziwei Zhu, Balassubramanian Srinivasan</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16749">https://arxiv.org/abs/2408.16749</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16749">https://arxiv.org/pdf/2408.16749</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16749]] Assessing Large Language Models for Online Extremism Research: Identification, Explanation, and New Knowledge(https://arxiv.org/abs/2408.16749)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The United States has experienced a significant increase in violent extremism, prompting the need for automated tools to detect and limit the spread of extremist ideology online. This study evaluates the performance of Bidirectional Encoder Representations from Transformers (BERT) and Generative Pre-Trained Transformers (GPT) in detecting and classifying online domestic extremist posts. We collected social media posts containing "far-right" and "far-left" ideological keywords and manually labeled them as extremist or non-extremist. Extremist posts were further classified into one or more of five contributing elements of extremism based on a working definitional framework. The BERT model's performance was evaluated based on training data size and knowledge transfer between categories. We also compared the performance of GPT 3.5 and GPT 4 models using different prompts: naïve, layperson-definition, role-playing, and professional-definition. Results showed that the best performing GPT models outperformed the best performing BERT models, with more detailed prompts generally yielding better results. However, overly complex prompts may impair performance. Different versions of GPT have unique sensitives to what they consider extremist. GPT 3.5 performed better at classifying far-left extremist posts, while GPT 4 performed better at classifying far-right extremist posts. Large language models, represented by GPT models, hold significant potential for online extremism classification tasks, surpassing traditional BERT models in a zero-shot setting. Future research should explore human-computer interactions in optimizing GPT models for extremist detection and classification tasks to develop more efficient (e.g., quicker, less effort) and effective (e.g., fewer errors or mistakes) methods for identifying extremist content.</li>
+</ul>
+
+<h3>Title: A Gradient Analysis Framework for Rewarding Good and Penalizing Bad Examples in Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Yi-Lin Tuan, William Yang Wang</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16751">https://arxiv.org/abs/2408.16751</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16751">https://arxiv.org/pdf/2408.16751</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16751]] A Gradient Analysis Framework for Rewarding Good and Penalizing Bad Examples in Language Models(https://arxiv.org/abs/2408.16751)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Beyond maximum likelihood estimation (MLE), the standard objective of a language model (LM) that optimizes good examples probabilities, many studies have explored ways that also penalize bad examples for enhancing the quality of output distribution, including unlikelihood training, exponential maximizing average treatment effect (ExMATE), and direct preference optimization (DPO). To systematically compare these methods and further provide a unified recipe for LM optimization, in this paper, we present a unique angle of gradient analysis of loss functions that simultaneously reward good examples and penalize bad ones in LMs. Through both mathematical results and experiments on CausalDialogue and Anthropic HH-RLHF datasets, we identify distinct functional characteristics among these methods. We find that ExMATE serves as a superior surrogate for MLE, and that combining DPO with ExMATE instead of MLE further enhances both the statistical (5-7%) and generative (+18% win rate) performance.</li>
+</ul>
+
+<h3>Title: UV-free Texture Generation with Denoising and Geodesic Heat Diffusions</h3>
+<ul>
+<li><strong>Authors: </strong>Simone Foti, Stefanos Zafeiriou, Tolga Birdal</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.GR, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16762">https://arxiv.org/abs/2408.16762</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16762">https://arxiv.org/pdf/2408.16762</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16762]] UV-free Texture Generation with Denoising and Geodesic Heat Diffusions(https://arxiv.org/abs/2408.16762)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Seams, distortions, wasted UV space, vertex-duplication, and varying resolution over the surface are the most prominent issues of the standard UV-based texturing of meshes. These issues are particularly acute when automatic UV-unwrapping techniques are used. For this reason, instead of generating textures in automatically generated UV-planes like most state-of-the-art methods, we propose to represent textures as coloured point-clouds whose colours are generated by a denoising diffusion probabilistic model constrained to operate on the surface of 3D objects. Our sampling and resolution agnostic generative model heavily relies on heat diffusion over the surface of the meshes for spatial communication between points. To enable processing of arbitrarily sampled point-cloud textures and ensure long-distance texture consistency we introduce a fast re-sampling of the mesh spectral properties used during the heat diffusion and introduce a novel heat-diffusion-based self-attention mechanism. Our code and pre-trained models are available at this http URL.</li>
+</ul>
+
+<h3>Title: A Score-Based Density Formula, with Applications in Diffusion Generative Models</h3>
+<ul>
+<li><strong>Authors: </strong>Gen Li, Yuling Yan</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, math.PR, math.ST, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16765">https://arxiv.org/abs/2408.16765</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16765">https://arxiv.org/pdf/2408.16765</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16765]] A Score-Based Density Formula, with Applications in Diffusion Generative Models(https://arxiv.org/abs/2408.16765)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Score-based generative models (SGMs) have revolutionized the field of generative modeling, achieving unprecedented success in generating realistic and diverse content. Despite empirical advances, the theoretical basis for why optimizing the evidence lower bound (ELBO) on the log-likelihood is effective for training diffusion generative models, such as DDPMs, remains largely unexplored. In this paper, we address this question by establishing a density formula for a continuous-time diffusion process, which can be viewed as the continuous-time limit of the forward process in an SGM. This formula reveals the connection between the target density and the score function associated with each step of the forward process. Building on this, we demonstrate that the minimizer of the optimization objective for training DDPMs nearly coincides with that of the true objective, providing a theoretical foundation for optimizing DDPMs using the ELBO. Furthermore, we offer new insights into the role of score-matching regularization in training GANs, the use of ELBO in diffusion classifiers, and the recently proposed diffusion loss.</li>
+</ul>
+
+<h3>Title: CSGO: Content-Style Composition in Text-to-Image Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Peng Xing, Haofan Wang, Yanpeng Sun, Qixun Wang, Xu Bai, Hao Ai, Renyuan Huang, Zechao Li</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16766">https://arxiv.org/abs/2408.16766</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16766">https://arxiv.org/pdf/2408.16766</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16766]] CSGO: Content-Style Composition in Text-to-Image Generation(https://arxiv.org/abs/2408.16766)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>The diffusion model has shown exceptional capabilities in controlled image generation, which has further fueled interest in image style transfer. Existing works mainly focus on training free-based methods (e.g., image inversion) due to the scarcity of specific data. In this study, we present a data construction pipeline for content-style-stylized image triplets that generates and automatically cleanses stylized data triplets. Based on this pipeline, we construct a dataset IMAGStyle, the first large-scale style transfer dataset containing 210k image triplets, available for the community to explore and research. Equipped with IMAGStyle, we propose CSGO, a style transfer model based on end-to-end training, which explicitly decouples content and style features employing independent feature injection. The unified CSGO implements image-driven style transfer, text-driven stylized synthesis, and text editing-driven stylized synthesis. Extensive experiments demonstrate the effectiveness of our approach in enhancing style control capabilities in image generation. Additional visualization and access to the source code can be located on the project page: \url{this https URL}.</li>
+</ul>
+
+<h3>Title: ReconX: Reconstruct Any Scene from Sparse Views with Video Diffusion Model</h3>
+<ul>
+<li><strong>Authors: </strong>Fangfu Liu, Wenqiang Sun, Hanyang Wang, Yikai Wang, Haowen Sun, Junliang Ye, Jun Zhang, Yueqi Duan</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.GR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2408.16767">https://arxiv.org/abs/2408.16767</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2408.16767">https://arxiv.org/pdf/2408.16767</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2408.16767]] ReconX: Reconstruct Any Scene from Sparse Views with Video Diffusion Model(https://arxiv.org/abs/2408.16767)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Advancements in 3D scene reconstruction have transformed 2D images from the real world into 3D models, producing realistic 3D results from hundreds of input photos. Despite great success in dense-view reconstruction scenarios, rendering a detailed scene from insufficient captured views is still an ill-posed optimization problem, often resulting in artifacts and distortions in unseen areas. In this paper, we propose ReconX, a novel 3D scene reconstruction paradigm that reframes the ambiguous reconstruction challenge as a temporal generation task. The key insight is to unleash the strong generative prior of large pre-trained video diffusion models for sparse-view reconstruction. However, 3D view consistency struggles to be accurately preserved in directly generated video frames from pre-trained models. To address this, given limited input views, the proposed ReconX first constructs a global point cloud and encodes it into a contextual space as the 3D structure condition. Guided by the condition, the video diffusion model then synthesizes video frames that are both detail-preserved and exhibit a high degree of 3D consistency, ensuring the coherence of the scene from various perspectives. Finally, we recover the 3D scene from the generated video through a confidence-aware 3D Gaussian Splatting optimization scheme. Extensive experiments on various real-world datasets show the superiority of our ReconX over state-of-the-art methods in terms of quality and generalizability.</li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="../../javascript/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
