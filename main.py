@@ -84,7 +84,7 @@ def main():
 
     dts = content.dl.find_all('dt')
     dds = content.dl.find_all('dd')
-    parse_date = dateutil.parser.parse(content.h3.text.split(' (')[0].replace('New submissions for ', ''))
+    parse_date = dateutil.parser.parse(content.h3.text.replace('Showing new listings for ', ''))
 
     assert len(dts) == len(dds)
 
