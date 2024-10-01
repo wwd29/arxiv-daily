@@ -1,5 +1,5 @@
 # arxiv-daily
-updated on 2024-09-30 06:30:09
+updated on 2024-10-01 06:30:06
 | name | count |
 | - | - |
 | user_2 | 29 |
