@@ -1,0 +1,678 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2024-12-13</h1>
+<h3>Title: In-Context Learning with Topological Information for Knowledge Graph Completion</h3>
+<ul>
+<li><strong>Authors: </strong>Udari Madhushani Sehwag, Kassiani Papasotiriou, Jared Vann, Sumitra Ganesh</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08742">https://arxiv.org/abs/2412.08742</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08742">https://arxiv.org/pdf/2412.08742</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08742]] In-Context Learning with Topological Information for Knowledge Graph Completion(https://arxiv.org/abs/2412.08742)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative, in-context</a></li>
+<li><strong>Abstract: </strong>Knowledge graphs (KGs) are crucial for representing and reasoning over structured information, supporting a wide range of applications such as information retrieval, question answering, and decision-making. However, their effectiveness is often hindered by incompleteness, limiting their potential for real-world impact. While knowledge graph completion (KGC) has been extensively studied in the literature, recent advances in generative AI models, particularly large language models (LLMs), have introduced new opportunities for innovation. In-context learning has recently emerged as a promising approach for leveraging pretrained knowledge of LLMs across a range of natural language processing tasks and has been widely adopted in both academia and industry. However, how to utilize in-context learning for effective KGC remains relatively underexplored. We develop a novel method that incorporates topological information through in-context learning to enhance KGC performance. By integrating ontological knowledge and graph structure into the context of LLMs, our approach achieves strong performance in the transductive setting i.e., nodes in the test graph dataset are present in the training graph dataset. Furthermore, we apply our approach to KGC in the more challenging inductive setting, i.e., nodes in the training graph dataset and test graph dataset are disjoint, leveraging the ontology to infer useful information about missing nodes which serve as contextual cues for the LLM during inference. Our method demonstrates superior performance compared to baselines on the ILPC-small and ILPC-large datasets.</li>
+</ul>
+
+<h3>Title: Generative Modeling with Explicit Memory</h3>
+<ul>
+<li><strong>Authors: </strong>Yi Tang, Peng Sun, Zhenglin Cheng, Tao Lin</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08781">https://arxiv.org/abs/2412.08781</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08781">https://arxiv.org/pdf/2412.08781</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08781]] Generative Modeling with Explicit Memory(https://arxiv.org/abs/2412.08781)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Recent studies indicate that the denoising process in deep generative diffusion models implicitly learns and memorizes semantic information from the data distribution. These findings suggest that capturing more complex data distributions requires larger neural networks, leading to a substantial increase in computational demands, which in turn become the primary bottleneck in both training and inference of diffusion models. To this end, we introduce \textbf{G}enerative \textbf{M}odeling with \textbf{E}xplicit \textbf{M}emory (GMem), leveraging an external memory bank in both training and sampling phases of diffusion models. This approach preserves semantic information from data distributions, reducing reliance on neural network capacity for learning and generalizing across diverse datasets. The results are significant: our GMem enhances both training, sampling efficiency, and generation quality. For instance, on ImageNet at $256 \times 256$ resolution, GMem accelerates SiT training by over $46.7\times$, achieving the performance of a SiT model trained for $7M$ steps in fewer than $150K$ steps. Compared to the most efficient existing method, REPA, GMem still offers a $16\times$ speedup, attaining an FID score of 5.75 within $250K$ steps, whereas REPA requires over $4M$ steps. Additionally, our method achieves state-of-the-art generation quality, with an FID score of {3.56} without classifier-free guidance on ImageNet $256\times256$. Our code is available at \url{this https URL}.</li>
+</ul>
+
+<h3>Title: Large Concept Models: Language Modeling in a Sentence Representation Space</h3>
+<ul>
+<li><strong>Authors: </strong>The LCM team, Loïc Barrault, Paul-Ambroise Duquenne, Maha Elbayad, Artyom Kozhevnikov, Belen Alastruey, Pierre Andrews, Mariano Coria, Guillaume Couairon, Marta R. Costa-jussà, David Dale, Hady Elsahar, Kevin Heffernan, João Maria Janeiro, Tuan Tran, Christophe Ropers, Eduardo Sánchez, Robin San Roman, Alexandre Mourachko, Safiyyah Saleem, Holger Schwenk</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08821">https://arxiv.org/abs/2412.08821</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08821">https://arxiv.org/pdf/2412.08821</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08821]] Large Concept Models: Language Modeling in a Sentence Representation Space(https://arxiv.org/abs/2412.08821)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>LLMs have revolutionized the field of artificial intelligence and have emerged as the de-facto tool for many tasks. The current established technology of LLMs is to process input and generate output at the token level. This is in sharp contrast to humans who operate at multiple levels of abstraction, well beyond single words, to analyze information and to generate creative content. In this paper, we present an attempt at an architecture which operates on an explicit higher-level semantic representation, which we name a concept. Concepts are language- and modality-agnostic and represent a higher level idea or action in a flow. Hence, we build a "Large Concept Model". In this study, as proof of feasibility, we assume that a concept corresponds to a sentence, and use an existing sentence embedding space, SONAR, which supports up to 200 languages in both text and speech modalities. The Large Concept Model is trained to perform autoregressive sentence prediction in an embedding space. We explore multiple approaches, namely MSE regression, variants of diffusion-based generation, and models operating in a quantized SONAR space. These explorations are performed using 1.6B parameter models and training data in the order of 1.3T tokens. We then scale one architecture to a model size of 7B parameters and training data of about 2.7T tokens. We perform an experimental evaluation on several generative tasks, namely summarization and a new task of summary expansion. Finally, we show that our model exhibits impressive zero-shot generalization performance to many languages, outperforming existing LLMs of the same size. The training code of our models is freely available.</li>
+</ul>
+
+<h3>Title: Inference-Time Diffusion Model Distillation</h3>
+<ul>
+<li><strong>Authors: </strong>Geon Yeong Park, Sang Wan Lee, Jong Chul Ye</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08871">https://arxiv.org/abs/2412.08871</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08871">https://arxiv.org/pdf/2412.08871</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08871]] Inference-Time Diffusion Model Distillation(https://arxiv.org/abs/2412.08871)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion distillation models effectively accelerate reverse sampling by compressing the process into fewer steps. However, these models still exhibit a performance gap compared to their pre-trained diffusion model counterparts, exacerbated by distribution shifts and accumulated errors during multi-step sampling. To address this, we introduce Distillation++, a novel inference-time distillation framework that reduces this gap by incorporating teacher-guided refinement during sampling. Inspired by recent advances in conditional sampling, our approach recasts student model sampling as a proximal optimization problem with a score distillation sampling loss (SDS). To this end, we integrate distillation optimization during reverse sampling, which can be viewed as teacher guidance that drives student sampling trajectory towards the clean manifold using pre-trained diffusion models. Thus, Distillation++ improves the denoising process in real-time without additional source data or fine-tuning. Distillation++ demonstrates substantial improvements over state-of-the-art distillation baselines, particularly in early sampling stages, positioning itself as a robust guided sampling process crafted for diffusion distillation models. Code: this https URL.</li>
+</ul>
+
+<h3>Title: Federated Foundation Models on Heterogeneous Time Series</h3>
+<ul>
+<li><strong>Authors: </strong>Shengchao Chen, Guodong Long, Jing Jiang, Chengqi Zhang</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08906">https://arxiv.org/abs/2412.08906</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08906">https://arxiv.org/pdf/2412.08906</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08906]] Federated Foundation Models on Heterogeneous Time Series(https://arxiv.org/abs/2412.08906)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model, anomaly</a></li>
+<li><strong>Abstract: </strong>Training a general-purpose time series foundation models with robust generalization capabilities across diverse applications from scratch is still an open challenge. Efforts are primarily focused on fusing cross-domain time series datasets to extract shared subsequences as tokens for training models on Transformer architecture. However, due to significant statistical heterogeneity across domains, this cross-domain fusing approach doesn't work effectively as the same as fusing texts and images. To tackle this challenge, this paper proposes a novel federated learning approach to address the heterogeneity in time series foundation models training, namely FFTS. Specifically, each data-holding organization is treated as an independent client in a collaborative learning framework with federated settings, and then many client-specific local models will be trained to preserve the unique characteristics per dataset. Moreover, a new regularization mechanism will be applied to both client-side and server-side, thus to align the shared knowledge across heterogeneous datasets from different domains. Extensive experiments on benchmark datasets demonstrate the effectiveness of the proposed federated learning approach. The newly learned time series foundation models achieve superior generalization capabilities on cross-domain time series analysis tasks, including forecasting, imputation, and anomaly detection.</li>
+</ul>
+
+<h3>Title: Reversing the Damage: A QP-Aware Transformer-Diffusion Approach for 8K Video Restoration under Codec Compression</h3>
+<ul>
+<li><strong>Authors: </strong>Ali Mollaahmadi Dehaghi, Reza Razavi, Mohammad Moshirpour</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.MM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08912">https://arxiv.org/abs/2412.08912</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08912">https://arxiv.org/pdf/2412.08912</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08912]] Reversing the Damage: A QP-Aware Transformer-Diffusion Approach for 8K Video Restoration under Codec Compression(https://arxiv.org/abs/2412.08912)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>In this paper, we introduce DiQP; a novel Transformer-Diffusion model for restoring 8K video quality degraded by codec compression. To the best of our knowledge, our model is the first to consider restoring the artifacts introduced by various codecs (AV1, HEVC) by Denoising Diffusion without considering additional noise. This approach allows us to model the complex, non-Gaussian nature of compression artifacts, effectively learning to reverse the degradation. Our architecture combines the power of Transformers to capture long-range dependencies with an enhanced windowed mechanism that preserves spatiotemporal context within groups of pixels across frames. To further enhance restoration, the model incorporates auxiliary "Look Ahead" and "Look Around" modules, providing both future and surrounding frame information to aid in reconstructing fine details and enhancing overall visual quality. Extensive experiments on different datasets demonstrate that our model outperforms state-of-the-art methods, particularly for high-resolution videos such as 4K and 8K, showcasing its effectiveness in restoring perceptually pleasing videos from highly compressed sources.</li>
+</ul>
+
+<h3>Title: Mojito: Motion Trajectory and Intensity Control for Video Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Xuehai He, Shuohang Wang, Jianwei Yang, Xiaoxia Wu, Yiping Wang, Kuan Wang, Zheng Zhan, Olatunji Ruwase, Yelong Shen, Xin Eric Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08948">https://arxiv.org/abs/2412.08948</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08948">https://arxiv.org/pdf/2412.08948</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08948]] Mojito: Motion Trajectory and Intensity Control for Video Generation(https://arxiv.org/abs/2412.08948)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recent advancements in diffusion models have shown great promise in producing high-quality video content. However, efficiently training diffusion models capable of integrating directional guidance and controllable motion intensity remains a challenging and under-explored area. This paper introduces Mojito, a diffusion model that incorporates both \textbf{Mo}tion tra\textbf{j}ectory and \textbf{i}ntensi\textbf{t}y contr\textbf{o}l for text to video generation. Specifically, Mojito features a Directional Motion Control module that leverages cross-attention to efficiently direct the generated object's motion without additional training, alongside a Motion Intensity Modulator that uses optical flow maps generated from videos to guide varying levels of motion intensity. Extensive experiments demonstrate Mojito's effectiveness in achieving precise trajectory and intensity control with high computational efficiency, generating motion patterns that closely match specified directions and intensities, providing realistic dynamics that align well with natural motion in real-world scenarios.</li>
+</ul>
+
+<h3>Title: Multimodal Industrial Anomaly Detection by Crossmodal Reverse Distillation</h3>
+<ul>
+<li><strong>Authors: </strong>Xinyue Liu, Jianyuan Wang, Biao Leng, Shuo Zhang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08949">https://arxiv.org/abs/2412.08949</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08949">https://arxiv.org/pdf/2412.08949</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08949]] Multimodal Industrial Anomaly Detection by Crossmodal Reverse Distillation(https://arxiv.org/abs/2412.08949)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Knowledge distillation (KD) has been widely studied in unsupervised Industrial Image Anomaly Detection (AD), but its application to unsupervised multimodal AD remains underexplored. Existing KD-based methods for multimodal AD that use fused multimodal features to obtain teacher representations face challenges. Anomalies in one modality may not be effectively captured in the fused teacher features, leading to detection failures. Besides, these methods do not fully leverage the rich intra- and inter-modality information. In this paper, we propose Crossmodal Reverse Distillation (CRD) based on Multi-branch design to realize Multimodal Industrial AD. By assigning independent branches to each modality, our method enables finer detection of anomalies within each modality. Furthermore, we enhance the interaction between modalities during the distillation process by designing Crossmodal Filter and Amplifier. With the idea of crossmodal mapping, the student network is allowed to better learn normal features while anomalies in all modalities are ensured to be effectively detected. Experimental verifications on the MVTec 3D-AD dataset demonstrate that our method achieves state-of-the-art performance in multimodal anomaly detection and localization.</li>
+</ul>
+
+<h3>Title: Align, Generate, Learn: A Novel Closed-Loop Framework for Cross-Lingual In-Context Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Mateo Alejandro Rojas, Rafael Carranza</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08955">https://arxiv.org/abs/2412.08955</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08955">https://arxiv.org/pdf/2412.08955</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08955]] Align, Generate, Learn: A Novel Closed-Loop Framework for Cross-Lingual In-Context Learning(https://arxiv.org/abs/2412.08955)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised, generative, in-context</a></li>
+<li><strong>Abstract: </strong>Cross-lingual in-context learning (XICL) has emerged as a transformative paradigm for leveraging large language models (LLMs) to tackle multilingual tasks, especially for low-resource languages. However, existing approaches often rely on external retrievers or task-specific fine-tuning, limiting their scalability and generalizability. In this paper, we propose a novel self-supervised framework that harnesses the generative capabilities of LLMs to internally select and utilize task-relevant examples. Our method introduces two key objectives: a retrieval-generation alignment loss to optimize the quality of selected examples and a semantic coherence loss to ensure cross-lingual consistency. Through extensive experiments on multilingual benchmarks, our approach achieves state-of-the-art performance, significantly outperforming existing baselines. Further analysis highlights its robustness across diverse language families and its ability to generalize to unseen tasks. Human evaluations confirm the superior fluency, relevance, and semantic correctness of outputs generated by our method. This work provides a scalable, effective, and generalizable solution for cross-lingual in-context learning.</li>
+</ul>
+
+<h3>Title: Deep Learning Model Security: Threats and Defenses</h3>
+<ul>
+<li><strong>Authors: </strong>Tianyang Wang, Ziqian Bi, Yichao Zhang, Ming Liu, Weiche Hsieh, Pohsun Feng, Lawrence K.Q. Yan, Yizhu Wen, Benji Peng, Junyu Liu, Keyu Chen, Sen Zhang, Ming Li, Chuanqi Jiang, Xinyuan Song, Junjie Yang, Bowen Jing, Jintao Ren, Junhao Song, Hong-Ming Tseng, Silin Chen, Yunze Wang, Chia Xin Liang, Jiawei Xu, Xuanhe Pan, Jinlang Wang, Qian Niu</a></li>
+<li><strong>Subjects: </strong>cs.CR, cs.LG, cs.SE</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08969">https://arxiv.org/abs/2412.08969</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08969">https://arxiv.org/pdf/2412.08969</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08969]] Deep Learning Model Security: Threats and Defenses(https://arxiv.org/abs/2412.08969)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Deep learning has transformed AI applications but faces critical security challenges, including adversarial attacks, data poisoning, model theft, and privacy leakage. This survey examines these vulnerabilities, detailing their mechanisms and impact on model integrity and confidentiality. Practical implementations, including adversarial examples, label flipping, and backdoor attacks, are explored alongside defenses such as adversarial training, differential privacy, and federated learning, highlighting their strengths and limitations. Advanced methods like contrastive and self-supervised learning are presented for enhancing robustness. The survey concludes with future directions, emphasizing automated defenses, zero-trust architectures, and the security challenges of large AI models. A balanced approach to performance and security is essential for developing reliable deep learning systems.</li>
+</ul>
+
+<h3>Title: Reasoning-Aware Query-Focused Summarization over Multi-Table Data</h3>
+<ul>
+<li><strong>Authors: </strong>Xiaochuan Lin, Xiangyong Chen</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08970">https://arxiv.org/abs/2412.08970</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08970">https://arxiv.org/pdf/2412.08970</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08970]] Reasoning-Aware Query-Focused Summarization over Multi-Table Data(https://arxiv.org/abs/2412.08970)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Query-focused summarization over multi-table data is a challenging yet critical task for extracting precise and relevant information from structured data. Existing methods often rely on complex preprocessing steps and struggle to generalize across domains or handle the logical reasoning required for multi-table queries. In this paper, we propose QueryTableSummarizer++, an end-to-end generative framework leveraging large language models (LLMs) enhanced with table-aware pre-training, query-aligned fine-tuning, and reinforcement learning with feedback. Our method eliminates the need for intermediate serialization steps and directly generates query-relevant summaries. Experiments on a benchmark dataset demonstrate that QueryTableSummarizer++ significantly outperforms state-of-the-art baselines in terms of BLEU, ROUGE, and F1-score. Additional analyses highlight its scalability, generalization across domains, and robust handling of complex queries. Human evaluation further validates the superior quality and practical applicability of the generated summaries, establishing QueryTableSummarizer++ as a highly effective solution for multi-table summarization tasks.</li>
+</ul>
+
+<h3>Title: Elevating Flow-Guided Video Inpainting with Reference Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Suhwan Cho, Seoung Wug Oh, Sangyoun Lee, Joon-Young Lee</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.08975">https://arxiv.org/abs/2412.08975</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.08975">https://arxiv.org/pdf/2412.08975</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.08975]] Elevating Flow-Guided Video Inpainting with Reference Generation(https://arxiv.org/abs/2412.08975)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Video inpainting (VI) is a challenging task that requires effective propagation of observable content across frames while simultaneously generating new content not present in the original video. In this study, we propose a robust and practical VI framework that leverages a large generative model for reference generation in combination with an advanced pixel propagation algorithm. Powered by a strong generative model, our method not only significantly enhances frame-level quality for object removal but also synthesizes new content in the missing areas based on user-provided text prompts. For pixel propagation, we introduce a one-shot pixel pulling method that effectively avoids error accumulation from repeated sampling while maintaining sub-pixel precision. To evaluate various VI methods in realistic scenarios, we also propose a high-quality VI benchmark, HQVI, comprising carefully generated videos using alpha matte composition. On public benchmarks and the HQVI dataset, our method demonstrates significantly higher visual quality and metric scores compared to existing solutions. Furthermore, it can process high-resolution videos exceeding 2K resolution with ease, underscoring its superiority for real-world applications.</li>
+</ul>
+
+<h3>Title: MS2Mesh-XR: Multi-modal Sketch-to-Mesh Generation in XR Environments</h3>
+<ul>
+<li><strong>Authors: </strong>Yuqi Tong, Yue Qiu, Ruiyang Li, Shi Qiu, Pheng-Ann Heng</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.HC, cs.MM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09008">https://arxiv.org/abs/2412.09008</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09008">https://arxiv.org/pdf/2412.09008</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09008]] MS2Mesh-XR: Multi-modal Sketch-to-Mesh Generation in XR Environments(https://arxiv.org/abs/2412.09008)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We present MS2Mesh-XR, a novel multi-modal sketch-to-mesh generation pipeline that enables users to create realistic 3D objects in extended reality (XR) environments using hand-drawn sketches assisted by voice inputs. In specific, users can intuitively sketch objects using natural hand movements in mid-air within a virtual environment. By integrating voice inputs, we devise ControlNet to infer realistic images based on the drawn sketches and interpreted text prompts. Users can then review and select their preferred image, which is subsequently reconstructed into a detailed 3D mesh using the Convolutional Reconstruction Model. In particular, our proposed pipeline can generate a high-quality 3D mesh in less than 20 seconds, allowing for immersive visualization and manipulation in run-time XR scenes. We demonstrate the practicability of our pipeline through two use cases in XR settings. By leveraging natural user inputs and cutting-edge generative AI capabilities, our approach can significantly facilitate XR-based creative production and enhance user experiences. Our code and demo will be available at: this https URL</li>
+</ul>
+
+<h3>Title: Arbitrary-steps Image Super-resolution via Diffusion Inversion</h3>
+<ul>
+<li><strong>Authors: </strong>Zongsheng Yue, Kang Liao, Chen Change Loy</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09013">https://arxiv.org/abs/2412.09013</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09013">https://arxiv.org/pdf/2412.09013</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09013]] Arbitrary-steps Image Super-resolution via Diffusion Inversion(https://arxiv.org/abs/2412.09013)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>This study presents a new image super-resolution (SR) technique based on diffusion inversion, aiming at harnessing the rich image priors encapsulated in large pre-trained diffusion models to improve SR performance. We design a Partial noise Prediction strategy to construct an intermediate state of the diffusion model, which serves as the starting sampling point. Central to our approach is a deep noise predictor to estimate the optimal noise maps for the forward diffusion process. Once trained, this noise predictor can be used to initialize the sampling process partially along the diffusion trajectory, generating the desirable high-resolution result. Compared to existing approaches, our method offers a flexible and efficient sampling mechanism that supports an arbitrary number of sampling steps, ranging from one to five. Even with a single sampling step, our method demonstrates superior or comparable performance to recent state-of-the-art approaches. The code and model are publicly available at this https URL.</li>
+</ul>
+
+<h3>Title: Video Anomaly Detection with Motion and Appearance Guided Patch Diffusion Model</h3>
+<ul>
+<li><strong>Authors: </strong>Hang Zhou, Jiale Cai, Yuteng Ye, Yonghui Feng, Chenxing Gao, Junqing Yu, Zikai Song, Wei Yang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09026">https://arxiv.org/abs/2412.09026</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09026">https://arxiv.org/pdf/2412.09026</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09026]] Video Anomaly Detection with Motion and Appearance Guided Patch Diffusion Model(https://arxiv.org/abs/2412.09026)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, anomaly</a></li>
+<li><strong>Abstract: </strong>A recent endeavor in one class of video anomaly detection is to leverage diffusion models and posit the task as a generation problem, where the diffusion model is trained to recover normal patterns exclusively, thus reporting abnormal patterns as outliers. Yet, existing attempts neglect the various formations of anomaly and predict normal samples at the feature level regardless that abnormal objects in surveillance videos are often relatively small. To address this, a novel patch-based diffusion model is proposed, specifically engineered to capture fine-grained local information. We further observe that anomalies in videos manifest themselves as deviations in both appearance and motion. Therefore, we argue that a comprehensive solution must consider both of these aspects simultaneously to achieve accurate frame prediction. To address this, we introduce innovative motion and appearance conditions that are seamlessly integrated into our patch diffusion model. These conditions are designed to guide the model in generating coherent and contextually appropriate predictions for both semantic content and motion relations. Experimental results in four challenging video anomaly detection datasets empirically substantiate the efficacy of our proposed approach, demonstrating that it consistently outperforms most existing methods in detecting abnormal behaviors.</li>
+</ul>
+
+<h3>Title: Dialogue Language Model with Large-Scale Persona Data Engineering</h3>
+<ul>
+<li><strong>Authors: </strong>Mengze Hong, Chen Zhang, Chaotao Chen, Rongzhong Lian, Di Jiang</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.HC</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09034">https://arxiv.org/abs/2412.09034</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09034">https://arxiv.org/pdf/2412.09034</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09034]] Dialogue Language Model with Large-Scale Persona Data Engineering(https://arxiv.org/abs/2412.09034)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Maintaining persona consistency is paramount in the application of open-domain dialogue systems, as exemplified by models like ChatGPT. Despite significant advancements, the limited scale and diversity of current persona dialogue datasets remain challenges to achieving robust persona-consistent dialogue models. In this study, drawing inspiration from the success of large-scale pre-training, we introduce PPDS, an open-domain persona dialogue system that employs extensive generative pre-training on a persona dialogue dataset to enhance persona consistency. Specifically, we present a persona extraction model designed to autonomously and precisely generate vast persona dialogue datasets. Additionally, we unveil a pioneering persona augmentation technique to address the invalid persona bias inherent in the constructed dataset. Both quantitative and human evaluations consistently highlight the superior response quality and persona consistency of our proposed model, underscoring its effectiveness.</li>
+</ul>
+
+<h3>Title: Multi-Task Learning with LLMs for Implicit Sentiment Analysis: Data-level and Task-level Automatic Weight Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Wenna Lai, Haoran Xie, Guandong Xu, Qing Li</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09046">https://arxiv.org/abs/2412.09046</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09046">https://arxiv.org/pdf/2412.09046</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09046]] Multi-Task Learning with LLMs for Implicit Sentiment Analysis: Data-level and Task-level Automatic Weight Learning(https://arxiv.org/abs/2412.09046)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Implicit sentiment analysis (ISA) presents significant challenges due to the absence of salient cue words. Previous methods have struggled with insufficient data and limited reasoning capabilities to infer underlying opinions. Integrating multi-task learning (MTL) with large language models (LLMs) offers the potential to enable models of varying sizes to reliably perceive and recognize genuine opinions in ISA. However, existing MTL approaches are constrained by two sources of uncertainty: data-level uncertainty, arising from hallucination problems in LLM-generated contextual information, and task-level uncertainty, stemming from the varying capacities of models to process contextual information. To handle these uncertainties, we introduce MT-ISA, a novel MTL framework that enhances ISA by leveraging the generation and reasoning capabilities of LLMs through automatic MTL. Specifically, MT-ISA constructs auxiliary tasks using generative LLMs to supplement sentiment elements and incorporates automatic MTL to fully exploit auxiliary data. We introduce data-level and task-level automatic weight learning (AWL), which dynamically identifies relationships and prioritizes more reliable data and critical tasks, enabling models of varying sizes to adaptively learn fine-grained weights based on their reasoning capabilities. We investigate three strategies for data-level AWL, while also introducing homoscedastic uncertainty for task-level AWL. Extensive experiments reveal that models of varying sizes achieve an optimal balance between primary prediction and auxiliary tasks in MT-ISA. This underscores the effectiveness and adaptability of our approach.</li>
+</ul>
+
+<h3>Title: Go With the Flow: Fast Diffusion for Gaussian Mixture Models</h3>
+<ul>
+<li><strong>Authors: </strong>George Rapakoulias, Ali Reza Pedram, Panagiotis Tsiotras</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09059">https://arxiv.org/abs/2412.09059</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09059">https://arxiv.org/pdf/2412.09059</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09059]] Go With the Flow: Fast Diffusion for Gaussian Mixture Models(https://arxiv.org/abs/2412.09059)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Schrödinger Bridges (SB) are diffusion processes that steer, in finite time, a given initial distribution to another final one while minimizing a suitable cost functional. Although various methods for computing SBs have recently been proposed in the literature, most of these approaches require computationally expensive training schemes, even for solving low-dimensional problems. In this work, we propose an analytic parametrization of a set of feasible policies for steering the distribution of a dynamical system from one Gaussian Mixture Model (GMM) to another. Instead of relying on standard non-convex optimization techniques, the optimal policy within the set can be approximated as the solution of a low-dimensional linear program whose dimension scales linearly with the number of components in each mixture. Furthermore, our method generalizes naturally to more general classes of dynamical systems such as controllable Linear Time-Varying systems that cannot currently be solved using traditional neural SB approaches. We showcase the potential of this approach in low-to-moderate dimensional problems such as image-to-image translation in the latent space of an autoencoder, and various other examples. We also benchmark our approach on an Entropic Optimal Transport (EOT) problem and show that it outperforms state-of-the-art methods in cases where the boundary distributions are mixture models while requiring virtually no training.</li>
+</ul>
+
+<h3>Title: An Efficient Framework for Enhancing Discriminative Models via Diffusion Techniques</h3>
+<ul>
+<li><strong>Authors: </strong>Chunxiao Li, Xiaoxiao Wang, Boming Miao, Chuanlong Xie, Zizhe Wang, Yao Zhu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09063">https://arxiv.org/abs/2412.09063</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09063">https://arxiv.org/pdf/2412.09063</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09063]] An Efficient Framework for Enhancing Discriminative Models via Diffusion Techniques(https://arxiv.org/abs/2412.09063)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Image classification serves as the cornerstone of computer vision, traditionally achieved through discriminative models based on deep neural networks. Recent advancements have introduced classification methods derived from generative models, which offer the advantage of zero-shot classification. However, these methods suffer from two main drawbacks: high computational overhead and inferior performance compared to discriminative models. Inspired by the coordinated cognitive processes of rapid-slow pathway interactions in the human brain during visual signal recognition, we propose the Diffusion-Based Discriminative Model Enhancement Framework (DBMEF). This framework seamlessly integrates discriminative and generative models in a training-free manner, leveraging discriminative models for initial predictions and endowing deep neural networks with rethinking capabilities via diffusion models. Consequently, DBMEF can effectively enhance the classification accuracy and generalization capability of discriminative models in a plug-and-play manner. We have conducted extensive experiments across 17 prevalent deep model architectures with different training methods, including both CNN-based models such as ResNet and Transformer-based models like ViT, to demonstrate the effectiveness of the proposed DBMEF. Specifically, the framework yields a 1.51\% performance improvement for ResNet-50 on the ImageNet dataset and 3.02\% on the ImageNet-A dataset. In conclusion, our research introduces a novel paradigm for image classification, demonstrating stable improvements across different datasets and neural networks.</li>
+</ul>
+
+<h3>Title: Cross-View Completion Models are Zero-shot Correspondence Estimators</h3>
+<ul>
+<li><strong>Authors: </strong>Honggyu An, Jinhyeon Kim, Seonghoon Park, Jaewoo Jung, Jisang Han, Sunghwan Hong, Seungryong Kim</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09072">https://arxiv.org/abs/2412.09072</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09072">https://arxiv.org/pdf/2412.09072</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09072]] Cross-View Completion Models are Zero-shot Correspondence Estimators(https://arxiv.org/abs/2412.09072)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>In this work, we explore new perspectives on cross-view completion learning by drawing an analogy to self-supervised correspondence learning. Through our analysis, we demonstrate that the cross-attention map within cross-view completion models captures correspondence more effectively than other correlations derived from encoder or decoder features. We verify the effectiveness of the cross-attention map by evaluating on both zero-shot matching and learning-based geometric matching and multi-frame depth estimation. Project page is available at this https URL.</li>
+</ul>
+
+<h3>Title: DomCLP: Domain-wise Contrastive Learning with Prototype Mixup for Unsupervised Domain Generalization</h3>
+<ul>
+<li><strong>Authors: </strong>Jin-Seop Lee, Noo-ri Kim, Jee-Hyong Lee</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09074">https://arxiv.org/abs/2412.09074</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09074">https://arxiv.org/pdf/2412.09074</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09074]] DomCLP: Domain-wise Contrastive Learning with Prototype Mixup for Unsupervised Domain Generalization(https://arxiv.org/abs/2412.09074)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Self-supervised learning (SSL) methods based on the instance discrimination tasks with InfoNCE have achieved remarkable success. Despite their success, SSL models often struggle to generate effective representations for unseen-domain data. To address this issue, research on unsupervised domain generalization (UDG), which aims to develop SSL models that can generate domain-irrelevant features, has been conducted. Most UDG approaches utilize contrastive learning with InfoNCE to generate representations, and perform feature alignment based on strong assumptions to generalize domain-irrelevant common features from multi-source domains. However, existing methods that rely on instance discrimination tasks are not effective at extracting domain-irrelevant common features. This leads to the suppression of domain-irrelevant common features and the amplification of domain-relevant features, thereby hindering domain generalization. Furthermore, strong assumptions underlying feature alignment can lead to biased feature learning, reducing the diversity of common features. In this paper, we propose a novel approach, DomCLP, Domain-wise Contrastive Learning with Prototype Mixup. We explore how InfoNCE suppresses domain-irrelevant common features and amplifies domain-relevant features. Based on this analysis, we propose Domain-wise Contrastive Learning (DCon) to enhance domain-irrelevant common features. We also propose Prototype Mixup Learning (PMix) to generalize domain-irrelevant common features across multiple domains without relying on strong assumptions. The proposed method consistently outperforms state-of-the-art methods on the PACS and DomainNet datasets across various label fractions, showing significant improvements. Our code will be released. Our project page is available at this https URL.</li>
+</ul>
+
+<h3>Title: ResFlow: Fine-tuning Residual Optical Flow for Event-based High Temporal Resolution Motion Estimation</h3>
+<ul>
+<li><strong>Authors: </strong>Qianang Zhou, Zhiyu Zhu, Junhui Hou, Yongjian Deng, Youfu Li, Junlin Xiong</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09105">https://arxiv.org/abs/2412.09105</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09105">https://arxiv.org/pdf/2412.09105</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09105]] ResFlow: Fine-tuning Residual Optical Flow for Event-based High Temporal Resolution Motion Estimation(https://arxiv.org/abs/2412.09105)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Event cameras hold significant promise for high-temporal-resolution (HTR) motion estimation. However, estimating event-based HTR optical flow faces two key challenges: the absence of HTR ground-truth data and the intrinsic sparsity of event data. Most existing approaches rely on the flow accumulation paradigms to indirectly supervise intermediate flows, often resulting in accumulation errors and optimization difficulties. To address these challenges, we propose a residual-based paradigm for estimating HTR optical flow with event data. Our approach separates HTR flow estimation into two stages: global linear motion estimation and HTR residual flow refinement. The residual paradigm effectively mitigates the impacts of event sparsity on optimization and is compatible with any LTR algorithm. Next, to address the challenge posed by the absence of HTR ground truth, we incorporate novel learning strategies. Specifically, we initially employ a shared refiner to estimate the residual flows, enabling both LTR supervision and HTR inference. Subsequently, we introduce regional noise to simulate the residual patterns of intermediate flows, facilitating the adaptation from LTR supervision to HTR inference. Additionally, we show that the noise-based strategy supports in-domain self-supervised training. Comprehensive experimental results demonstrate that our approach achieves state-of-the-art accuracy in both LTR and HTR metrics, highlighting its effectiveness and superiority.</li>
+</ul>
+
+<h3>Title: LVMark: Robust Watermark for latent video diffusion models</h3>
+<ul>
+<li><strong>Authors: </strong>MinHyuk Jang, Youngdong Jang, JaeHyeok Lee, Kodai Kawamura, Feng Yang, Sangpil Kim</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09122">https://arxiv.org/abs/2412.09122</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09122">https://arxiv.org/pdf/2412.09122</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09122]] LVMark: Robust Watermark for latent video diffusion models(https://arxiv.org/abs/2412.09122)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Rapid advancements in generative models have made it possible to create hyper-realistic videos. As their applicability increases, their unauthorized use has raised significant concerns, leading to the growing demand for techniques to protect the ownership of the generative model itself. While existing watermarking methods effectively embed watermarks into image-generative models, they fail to account for temporal information, resulting in poor performance when applied to video-generative models. To address this issue, we introduce a novel watermarking method called LVMark, which embeds watermarks into video diffusion models. A key component of LVMark is a selective weight modulation strategy that efficiently embeds watermark messages into the video diffusion model while preserving the quality of the generated videos. To accurately decode messages in the presence of malicious attacks, we design a watermark decoder that leverages spatio-temporal information in the 3D wavelet domain through a cross-attention module. To the best of our knowledge, our approach is the first to highlight the potential of video-generative model watermarking as a valuable tool for enhancing the effectiveness of ownership protection in video-generative models.</li>
+</ul>
+
+<h3>Title: Pinpoint Counterfactuals: Reducing social bias in foundation models via localized counterfactual generation</h3>
+<ul>
+<li><strong>Authors: </strong>Kirill Sirotkin, Marcos Escudero-Viñolo, Pablo Carballeira, Mayug Maniparambil, Catarina Barata, Noel E. O'Connor</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09160">https://arxiv.org/abs/2412.09160</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09160">https://arxiv.org/pdf/2412.09160</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09160]] Pinpoint Counterfactuals: Reducing social bias in foundation models via localized counterfactual generation(https://arxiv.org/abs/2412.09160)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Foundation models trained on web-scraped datasets propagate societal biases to downstream tasks. While counterfactual generation enables bias analysis, existing methods introduce artifacts by modifying contextual elements like clothing and background. We present a localized counterfactual generation method that preserves image context by constraining counterfactual modifications to specific attribute-relevant regions through automated masking and guided inpainting. When applied to the Conceptual Captions dataset for creating gender counterfactuals, our method results in higher visual and semantic fidelity than state-of-the-art alternatives, while maintaining the performance of models trained using only real data on non-human-centric tasks. Models fine-tuned with our counterfactuals demonstrate measurable bias reduction across multiple metrics, including a decrease in gender classification disparity and balanced person preference scores, while preserving ImageNet zero-shot performance. The results establish a framework for creating balanced datasets that enable both accurate bias profiling and effective mitigation.</li>
+</ul>
+
+<h3>Title: When Text Embedding Meets Large Language Model: A Comprehensive Survey</h3>
+<ul>
+<li><strong>Authors: </strong>Zhijie Nie, Zhangchi Feng, Mingxin Li, Cunwang Zhang, Yanzhao Zhang, Dingkun Long, Richong Zhang</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.IR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09165">https://arxiv.org/abs/2412.09165</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09165">https://arxiv.org/pdf/2412.09165</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09165]] When Text Embedding Meets Large Language Model: A Comprehensive Survey(https://arxiv.org/abs/2412.09165)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Text embedding has become a foundational technology in natural language processing (NLP) during the deep learning era, driving advancements across a wide array of downstream tasks. While many natural language understanding challenges can now be modeled using generative paradigms and leverage the robust generative and comprehension capabilities of large language models (LLMs), numerous practical applications, such as semantic matching, clustering, and information retrieval, continue to rely on text embeddings for their efficiency and effectiveness. In this survey, we categorize the interplay between LLMs and text embeddings into three overarching themes: (1) LLM-augmented text embedding, enhancing traditional embedding methods with LLMs; (2) LLMs as text embedders, utilizing their innate capabilities for embedding generation; and (3) Text embedding understanding with LLMs, leveraging LLMs to analyze and interpret embeddings. By organizing these efforts based on interaction patterns rather than specific downstream applications, we offer a novel and systematic overview of contributions from various research and application domains in the era of LLMs. Furthermore, we highlight the unresolved challenges that persisted in the pre-LLM era with pre-trained language models (PLMs) and explore the emerging obstacles brought forth by LLMs. Building on this analysis, we outline prospective directions for the evolution of text embedding, addressing both theoretical and practical opportunities in the rapidly advancing landscape of NLP.</li>
+</ul>
+
+<h3>Title: DECOR:Decomposition and Projection of Text Embeddings for Text-to-Image Customization</h3>
+<ul>
+<li><strong>Authors: </strong>Geonhui Jang, Jin-Hwa Kim, Yong-Hyun Park, Junho Kim, Gayoung Lee, Yonghyun Jeong</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09169">https://arxiv.org/abs/2412.09169</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09169">https://arxiv.org/pdf/2412.09169</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09169]] DECOR:Decomposition and Projection of Text Embeddings for Text-to-Image Customization(https://arxiv.org/abs/2412.09169)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Text-to-image (T2I) models can effectively capture the content or style of reference images to perform high-quality customization. A representative technique for this is fine-tuning using low-rank adaptations (LoRA), which enables efficient model customization with reference images. However, fine-tuning with a limited number of reference images often leads to overfitting, resulting in issues such as prompt misalignment or content leakage. These issues prevent the model from accurately following the input prompt or generating undesired objects during inference. To address this problem, we examine the text embeddings that guide the diffusion model during inference. This study decomposes the text embedding matrix and conducts a component analysis to understand the embedding space geometry and identify the cause of overfitting. Based on this, we propose DECOR, which projects text embeddings onto a vector space orthogonal to undesired token vectors, thereby reducing the influence of unwanted semantics in the text embeddings. Experimental results demonstrate that DECOR outperforms state-of-the-art customization models and achieves Pareto frontier performance across text and visual alignment evaluation metrics. Furthermore, it generates images more faithful to the input prompts, showcasing its effectiveness in addressing overfitting and enhancing text-to-image customization.</li>
+</ul>
+
+<h3>Title: RAD: Region-Aware Diffusion Models for Image Inpainting</h3>
+<ul>
+<li><strong>Authors: </strong>Sora Kim, Sungho Suh, Minsik Lee</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09191">https://arxiv.org/abs/2412.09191</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09191">https://arxiv.org/pdf/2412.09191</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09191]] RAD: Region-Aware Diffusion Models for Image Inpainting(https://arxiv.org/abs/2412.09191)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion models have achieved remarkable success in image generation, with applications broadening across various domains. Inpainting is one such application that can benefit significantly from diffusion models. Existing methods either hijack the reverse process of a pretrained diffusion model or cast the problem into a larger framework, \ie, conditioned generation. However, these approaches often require nested loops in the generation process or additional components for conditioning. In this paper, we present region-aware diffusion models (RAD) for inpainting with a simple yet effective reformulation of the vanilla diffusion models. RAD utilizes a different noise schedule for each pixel, which allows local regions to be generated asynchronously while considering the global image context. A plain reverse process requires no additional components, enabling RAD to achieve inference time up to 100 times faster than the state-of-the-art approaches. Moreover, we employ low-rank adaptation (LoRA) to fine-tune RAD based on other pretrained diffusion models, reducing computational burdens in training as well. Experiments demonstrated that RAD provides state-of-the-art results both qualitatively and quantitatively, on the FFHQ, LSUN Bedroom, and ImageNet datasets.</li>
+</ul>
+
+<h3>Title: ExpRDiff: Short-exposure Guided Diffusion Model for Realistic Local Motion Deblurring</h3>
+<ul>
+<li><strong>Authors: </strong>Zhongbao Yang, Jiangxin Dong, Jinhui Tang, Jinshan Pan</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09193">https://arxiv.org/abs/2412.09193</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09193">https://arxiv.org/pdf/2412.09193</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09193]] ExpRDiff: Short-exposure Guided Diffusion Model for Realistic Local Motion Deblurring(https://arxiv.org/abs/2412.09193)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Removing blur caused by moving objects is challenging, as the moving objects are usually significantly blurry while the static background remains clear. Existing methods that rely on local blur detection often suffer from inaccuracies and cannot generate satisfactory results when focusing solely on blurred regions. To overcome these problems, we first design a context-based local blur detection module that incorporates additional contextual information to improve the identification of blurry regions. Considering that modern smartphones are equipped with cameras capable of providing short-exposure images, we develop a blur-aware guided image restoration method that utilizes sharp structural details from short-exposure images, facilitating accurate reconstruction of heavily blurred regions. Furthermore, to restore images realistically and visually-pleasant, we develop a short-exposure guided diffusion model that explores useful features from short-exposure images and blurred regions to better constrain the diffusion process. Finally, we formulate the above components into a simple yet effective network, named ExpRDiff. Experimental results show that ExpRDiff performs favorably against state-of-the-art methods.</li>
+</ul>
+
+<h3>Title: CleanComedy: Creating Friendly Humor through Generative Techniques</h3>
+<ul>
+<li><strong>Authors: </strong>Dmitry Vikhorev, Daria Galimzianova, Svetlana Gorovaia, Elizaveta Zhemchuzhina, Ivan P. Yamshchikov</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09203">https://arxiv.org/abs/2412.09203</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09203">https://arxiv.org/pdf/2412.09203</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09203]] CleanComedy: Creating Friendly Humor through Generative Techniques(https://arxiv.org/abs/2412.09203)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Humor generation is a challenging task in natural language processing due to limited resources and the quality of existing datasets. Available humor language resources often suffer from toxicity and duplication, limiting their effectiveness for training robust models. This paper proposes CleanComedy, a specialized, partially annotated toxicity-filtered corpus of English and Russian jokes collected from various sources. We study the effectiveness of our data filtering approach through a survey on humor and toxicity levels in various joke groups. In addition, we study advances in computer humor generation by comparing jokes written by humans with various groups of generative jokes, including our baseline models trained on the CleanComedy datasets.</li>
+</ul>
+
+<h3>Title: Foundation Models and Adaptive Feature Selection: A Synergistic Approach to Video Question Answering</h3>
+<ul>
+<li><strong>Authors: </strong>Sai Bhargav Rongali, Mohamad Hassan N C, Ankit Jha, Neha Bhargava, Saurabh Prasad, Biplab Banerjee</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09230">https://arxiv.org/abs/2412.09230</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09230">https://arxiv.org/pdf/2412.09230</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09230]] Foundation Models and Adaptive Feature Selection: A Synergistic Approach to Video Question Answering(https://arxiv.org/abs/2412.09230)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>This paper tackles the intricate challenge of video question-answering (VideoQA). Despite notable progress, current methods fall short of effectively integrating questions with video frames and semantic object-level abstractions to create question-aware video representations. We introduce Local-Global Question Aware Video Embedding (LGQAVE), which incorporates three major innovations to integrate multi-modal knowledge better and emphasize semantic visual concepts relevant to specific questions. LGQAVE moves beyond traditional ad-hoc frame sampling by utilizing a cross-attention mechanism that precisely identifies the most relevant frames concerning the questions. It captures the dynamics of objects within these frames using distinct graphs, grounding them in question semantics with the miniGPT model. These graphs are processed by a question-aware dynamic graph transformer (Q-DGT), which refines the outputs to develop nuanced global and local video representations. An additional cross-attention module integrates these local and global embeddings to generate the final video embeddings, which a language model uses to generate answers. Extensive evaluations across multiple benchmarks demonstrate that LGQAVE significantly outperforms existing models in delivering accurate multi-choice and open-ended answers.</li>
+</ul>
+
+<h3>Title: Make Satire Boring Again: Reducing Stylistic Bias of Satirical Corpus by Utilizing Generative LLMs</h3>
+<ul>
+<li><strong>Authors: </strong>Asli Umay Ozturk, Recep Firat Cekinel, Asli Umay Ozturk</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09247">https://arxiv.org/abs/2412.09247</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09247">https://arxiv.org/pdf/2412.09247</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09247]] Make Satire Boring Again: Reducing Stylistic Bias of Satirical Corpus by Utilizing Generative LLMs(https://arxiv.org/abs/2412.09247)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Satire detection is essential for accurately extracting opinions from textual data and combating misinformation online. However, the lack of diverse corpora for satire leads to the problem of stylistic bias which impacts the models' detection performances. This study proposes a debiasing approach for satire detection, focusing on reducing biases in training data by utilizing generative large language models. The approach is evaluated in both cross-domain (irony detection) and cross-lingual (English) settings. Results show that the debiasing method enhances the robustness and generalizability of the models for satire and irony detection tasks in Turkish and English. However, its impact on causal language models, such as Llama-3.1, is limited. Additionally, this work curates and presents the Turkish Satirical News Dataset with detailed human annotations, with case studies on classification, debiasing, and explainability.</li>
+</ul>
+
+<h3>Title: LatentSync: Audio Conditioned Latent Diffusion Models for Lip Sync</h3>
+<ul>
+<li><strong>Authors: </strong>Chunyu Li, Chao Zhang, Weikai Xu, Jinghui Xie, Weiguo Feng, Bingyue Peng, Weiwei Xing</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09262">https://arxiv.org/abs/2412.09262</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09262">https://arxiv.org/pdf/2412.09262</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09262]] LatentSync: Audio Conditioned Latent Diffusion Models for Lip Sync(https://arxiv.org/abs/2412.09262)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, self-supervised</a></li>
+<li><strong>Abstract: </strong>We present LatentSync, an end-to-end lip sync framework based on audio conditioned latent diffusion models without any intermediate motion representation, diverging from previous diffusion-based lip sync methods based on pixel space diffusion or two-stage generation. Our framework can leverage the powerful capabilities of Stable Diffusion to directly model complex audio-visual correlations. Additionally, we found that the diffusion-based lip sync methods exhibit inferior temporal consistency due to the inconsistency in the diffusion process across different frames. We propose Temporal REPresentation Alignment (TREPA) to enhance temporal consistency while preserving lip-sync accuracy. TREPA uses temporal representations extracted by large-scale self-supervised video models to align the generated frames with the ground truth frames. Furthermore, we observe the commonly encountered SyncNet convergence issue and conduct comprehensive empirical studies, identifying key factors affecting SyncNet convergence in terms of model architecture, training hyperparameters, and data preprocessing methods. We significantly improve the accuracy of SyncNet from 91% to 94% on the HDTF test set. Since we did not change the overall training framework of SyncNet, our experience can also be applied to other lip sync and audio-driven portrait animation methods that utilize SyncNet. Based on the above innovations, our method outperforms state-of-the-art lip sync methods across various metrics on the HDTF and VoxCeleb2 datasets.</li>
+</ul>
+
+<h3>Title: Transfer Learning of RSSI to Improve Indoor Localisation Performance</h3>
+<ul>
+<li><strong>Authors: </strong>Thanaphon Suwannaphong, Ryan McConville, Ian Craddock</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09292">https://arxiv.org/abs/2412.09292</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09292">https://arxiv.org/pdf/2412.09292</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09292]] Transfer Learning of RSSI to Improve Indoor Localisation Performance(https://arxiv.org/abs/2412.09292)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>With the growing demand for health monitoring systems, in-home localisation is essential for tracking patient conditions. The unique spatial characteristics of each house required annotated data for Bluetooth Low Energy (BLE) Received Signal Strength Indicator (RSSI)-based monitoring system. However, collecting annotated training data is time-consuming, particularly for patients with limited health conditions. To address this, we propose Conditional Generative Adversarial Networks (ConGAN)-based augmentation, combined with our transfer learning framework (T-ConGAN), to enable the transfer of generic RSSI information between different homes, even when data is collected using different experimental protocols. This enhances the performance and scalability of such intelligent systems by reducing the need for annotation in each home. We are the first to demonstrate that BLE RSSI data can be shared across different homes, and that shared information can improve the indoor localisation performance. Our T-ConGAN enhances the macro F1 score of room-level indoor localisation by up to 12.2%, with a remarkable 51% improvement in challenging areas such as stairways or outside spaces. This state-of-the-art RSSI augmentation model significantly enhances the robustness of in-home health monitoring systems.</li>
+</ul>
+
+<h3>Title: GoHD: Gaze-oriented and Highly Disentangled Portrait Animation with Rhythmic Poses and Realistic Expression</h3>
+<ul>
+<li><strong>Authors: </strong>Ziqi Zhou, Weize Quan, Hailin Shi, Wei Li, Lili Wang, Dong-ming Yan</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09296">https://arxiv.org/abs/2412.09296</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09296">https://arxiv.org/pdf/2412.09296</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09296]] GoHD: Gaze-oriented and Highly Disentangled Portrait Animation with Rhythmic Poses and Realistic Expression(https://arxiv.org/abs/2412.09296)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Audio-driven talking head generation necessitates seamless integration of audio and visual data amidst the challenges posed by diverse input portraits and intricate correlations between audio and facial motions. In response, we propose a robust framework GoHD designed to produce highly realistic, expressive, and controllable portrait videos from any reference identity with any motion. GoHD innovates with three key modules: Firstly, an animation module utilizing latent navigation is introduced to improve the generalization ability across unseen input styles. This module achieves high disentanglement of motion and identity, and it also incorporates gaze orientation to rectify unnatural eye movements that were previously overlooked. Secondly, a conformer-structured conditional diffusion model is designed to guarantee head poses that are aware of prosody. Thirdly, to estimate lip-synchronized and realistic expressions from the input audio within limited training data, a two-stage training strategy is devised to decouple frequent and frame-wise lip motion distillation from the generation of other more temporally dependent but less audio-related motions, e.g., blinks and frowns. Extensive experiments validate GoHD's advanced generalization capabilities, demonstrating its effectiveness in generating realistic talking face results on arbitrary subjects.</li>
+</ul>
+
+<h3>Title: Are Conditional Latent Diffusion Models Effective for Image Restoration?</h3>
+<ul>
+<li><strong>Authors: </strong>Yunchen Yuan, Junyuan Xiao, Xinjie Li</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09324">https://arxiv.org/abs/2412.09324</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09324">https://arxiv.org/pdf/2412.09324</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09324]] Are Conditional Latent Diffusion Models Effective for Image Restoration?(https://arxiv.org/abs/2412.09324)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recent advancements in image restoration increasingly employ conditional latent diffusion models (CLDMs). While these models have demonstrated notable performance improvements in recent years, this work questions their suitability for IR tasks. CLDMs excel in capturing high-level semantic correlations, making them effective for tasks like text-to-image generation with spatial conditioning. However, in IR, where the goal is to enhance image perceptual quality, these models face difficulty of modeling the relationship between degraded images and ground truth images using a low-level representation. To support our claims, we compare state-of-the-art CLDMs with traditional image restoration models through extensive experiments. Results reveal that despite the scaling advantages of CLDMs, they suffer from high distortion and semantic deviation, especially in cases with minimal degradation, where traditional methods outperform them. Additionally, we perform empirical studies to examine the impact of various CLDM design elements on their restoration performance. We hope this finding inspires a reexamination of current CLDM-based IR solutions, opening up more opportunities in this field.</li>
+</ul>
+
+<h3>Title: Auto-Regressive Moving Diffusion Models for Time Series Forecasting</h3>
+<ul>
+<li><strong>Authors: </strong>Jiaxin Gao, Qinglong Cao, Yuntian Chen</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, stat.AP</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09328">https://arxiv.org/abs/2412.09328</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09328">https://arxiv.org/pdf/2412.09328</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09328]] Auto-Regressive Moving Diffusion Models for Time Series Forecasting(https://arxiv.org/abs/2412.09328)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Time series forecasting (TSF) is essential in various domains, and recent advancements in diffusion-based TSF models have shown considerable promise. However, these models typically adopt traditional diffusion patterns, treating TSF as a noise-based conditional generation task. This approach neglects the inherent continuous sequential nature of time series, leading to a fundamental misalignment between diffusion mechanisms and the TSF objective, thereby severely impairing performance. To bridge this misalignment, and inspired by the classic Auto-Regressive Moving Average (ARMA) theory, which views time series as continuous sequential progressions evolving from previous data points, we propose a novel Auto-Regressive Moving Diffusion (ARMD) model to first achieve the continuous sequential diffusion-based TSF. Unlike previous methods that start from white Gaussian noise, our model employs chain-based diffusion with priors, accurately modeling the evolution of time series and leveraging intermediate state information to improve forecasting accuracy and stability. Specifically, our approach reinterprets the diffusion process by considering future series as the initial state and historical series as the final state, with intermediate series generated using a sliding-based technique during the forward process. This design aligns the diffusion model's sampling procedure with the forecasting objective, resulting in an unconditional, continuous sequential diffusion TSF model. Extensive experiments conducted on seven widely used datasets demonstrate that our model achieves state-of-the-art performance, significantly outperforming existing diffusion-based TSF models. Our code is available on GitHub: this https URL.</li>
+</ul>
+
+<h3>Title: MaskTerial: A Foundation Model for Automated 2D Material Flake Detection</h3>
+<ul>
+<li><strong>Authors: </strong>Jan-Lucas Uslu, Alexey Nekrasov, Alexander Hermans, Bernd Beschoten, Bastian Leibe, Lutz Waldecker, Christoph Stampfer</a></li>
+<li><strong>Subjects: </strong>cs.CV, cond-mat.mtrl-sci, eess.IV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09333">https://arxiv.org/abs/2412.09333</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09333">https://arxiv.org/pdf/2412.09333</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09333]] MaskTerial: A Foundation Model for Automated 2D Material Flake Detection(https://arxiv.org/abs/2412.09333)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>The detection and classification of exfoliated two-dimensional (2D) material flakes from optical microscope images can be automated using computer vision algorithms. This has the potential to increase the accuracy and objectivity of classification and the efficiency of sample fabrication, and it allows for large-scale data collection. Existing algorithms often exhibit challenges in identifying low-contrast materials and typically require large amounts of training data. Here, we present a deep learning model, called MaskTerial, that uses an instance segmentation network to reliably identify 2D material flakes. The model is extensively pre-trained using a synthetic data generator, that generates realistic microscopy images from unlabeled data. This results in a model that can to quickly adapt to new materials with as little as 5 to 10 images. Furthermore, an uncertainty estimation model is used to finally classify the predictions based on optical contrast. We evaluate our method on eight different datasets comprising five different 2D materials and demonstrate significant improvements over existing techniques in the detection of low-contrast materials such as hexagonal boron nitride.</li>
+</ul>
+
+<h3>Title: DisPose: Disentangling Pose Guidance for Controllable Human Image Animation</h3>
+<ul>
+<li><strong>Authors: </strong>Hongxiang Li, Yaowei Li, Yuhang Yang, Junjie Cao, Zhihong Zhu, Xuxin Cheng, Long Chen</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09349">https://arxiv.org/abs/2412.09349</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09349">https://arxiv.org/pdf/2412.09349</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09349]] DisPose: Disentangling Pose Guidance for Controllable Human Image Animation(https://arxiv.org/abs/2412.09349)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Controllable human image animation aims to generate videos from reference images using driving videos. Due to the limited control signals provided by sparse guidance (e.g., skeleton pose), recent works have attempted to introduce additional dense conditions (e.g., depth map) to ensure motion alignment. However, such strict dense guidance impairs the quality of the generated video when the body shape of the reference character differs significantly from that of the driving video. In this paper, we present DisPose to mine more generalizable and effective control signals without additional dense input, which disentangles the sparse skeleton pose in human image animation into motion field guidance and keypoint correspondence. Specifically, we generate a dense motion field from a sparse motion field and the reference image, which provides region-level dense guidance while maintaining the generalization of the sparse pose control. We also extract diffusion features corresponding to pose keypoints from the reference image, and then these point features are transferred to the target pose to provide distinct identity information. To seamlessly integrate into existing models, we propose a plug-and-play hybrid ControlNet that improves the quality and consistency of generated videos while freezing the existing model parameters. Extensive qualitative and quantitative experiments demonstrate the superiority of DisPose compared to current methods. Code: \hyperlink{this https URL}{this https URL}.</li>
+</ul>
+
+<h3>Title: Causal Graphical Models for Vision-Language Compositional Understanding</h3>
+<ul>
+<li><strong>Authors: </strong>Fiorenzo Parascandolo, Nicholas Moratelli, Enver Sangineto, Lorenzo Baraldi, Rita Cucchiara</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.CL, cs.MM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09353">https://arxiv.org/abs/2412.09353</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09353">https://arxiv.org/pdf/2412.09353</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09353]] Causal Graphical Models for Vision-Language Compositional Understanding(https://arxiv.org/abs/2412.09353)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Recent work has empirically shown that Vision-Language Models (VLMs) struggle to fully understand the compositional properties of the human language, usually modeling an image caption as a "bag of words". As a result, they perform poorly on compositional tasks, which require a deeper understanding of the different entities of a sentence (subject, verb, etc.) jointly with their mutual relationships in order to be solved. In this paper, we model the dependency relations among textual and visual tokens using a Causal Graphical Model (CGM), built using a dependency parser, and we train a decoder conditioned by the VLM visual encoder. Differently from standard autoregressive or parallel predictions, our decoder's generative process is partially-ordered following the CGM structure. This structure encourages the decoder to learn only the main causal dependencies in a sentence discarding spurious correlations. Using extensive experiments on five compositional benchmarks, we show that our method significantly outperforms all the state-of-the-art compositional approaches by a large margin, and it also improves over methods trained using much larger datasets.</li>
+</ul>
+
+<h3>Title: Diffusion Model with Representation Alignment for Protein Inverse Folding</h3>
+<ul>
+<li><strong>Authors: </strong>Chenglin Wang, Yucheng Zhou, Zijie Zhai, Jianbing Shen, Kai Zhang</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09380">https://arxiv.org/abs/2412.09380</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09380">https://arxiv.org/pdf/2412.09380</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09380]] Diffusion Model with Representation Alignment for Protein Inverse Folding(https://arxiv.org/abs/2412.09380)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Protein inverse folding is a fundamental problem in bioinformatics, aiming to recover the amino acid sequences from a given protein backbone structure. Despite the success of existing methods, they struggle to fully capture the intricate inter-residue relationships critical for accurate sequence prediction. We propose a novel method that leverages diffusion models with representation alignment (DMRA), which enhances diffusion-based inverse folding by (1) proposing a shared center that aggregates contextual information from the entire protein structure and selectively distributes it to each residue; and (2) aligning noisy hidden representations with clean semantic representations during the denoising process. This is achieved by predefined semantic representations for amino acid types and a representation alignment method that utilizes type embeddings as semantic feedback to normalize each residue. In experiments, we conduct extensive evaluations on the CATH4.2 dataset to demonstrate that DMRA outperforms leading methods, achieving state-of-the-art performance and exhibiting strong generalization capabilities on the TS50 and TS500 datasets.</li>
+</ul>
+
+<h3>Title: UFO: Enhancing Diffusion-Based Video Generation with a Uniform Frame Organizer</h3>
+<ul>
+<li><strong>Authors: </strong>Delong Liu, Zhaohui Hou, Mingjie Zhan, Shihao Han, Zhicheng Zhao, Fei Su</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09389">https://arxiv.org/abs/2412.09389</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09389">https://arxiv.org/pdf/2412.09389</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09389]] UFO: Enhancing Diffusion-Based Video Generation with a Uniform Frame Organizer(https://arxiv.org/abs/2412.09389)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recently, diffusion-based video generation models have achieved significant success. However, existing models often suffer from issues like weak consistency and declining image quality over time. To overcome these challenges, inspired by aesthetic principles, we propose a non-invasive plug-in called Uniform Frame Organizer (UFO), which is compatible with any diffusion-based video generation model. The UFO comprises a series of adaptive adapters with adjustable intensities, which can significantly enhance the consistency between the foreground and background of videos and improve image quality without altering the original model parameters when integrated. The training for UFO is simple, efficient, requires minimal resources, and supports stylized training. Its modular design allows for the combination of multiple UFOs, enabling the customization of personalized video generation models. Furthermore, the UFO also supports direct transferability across different models of the same specification without the need for specific retraining. The experimental results indicate that UFO effectively enhances video generation quality and demonstrates its superiority in public video generation benchmarks. The code will be publicly available at this https URL.</li>
+</ul>
+
+<h3>Title: Towards Robust and Fair Vision Learning in Open-World Environments</h3>
+<ul>
+<li><strong>Authors: </strong>Thanh-Dat Truong</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09439">https://arxiv.org/abs/2412.09439</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09439">https://arxiv.org/pdf/2412.09439</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09439]] Towards Robust and Fair Vision Learning in Open-World Environments(https://arxiv.org/abs/2412.09439)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>The dissertation presents four key contributions toward fairness and robustness in vision learning. First, to address the problem of large-scale data requirements, the dissertation presents a novel Fairness Domain Adaptation approach derived from two major novel research findings of Bijective Maximum Likelihood and Fairness Adaptation Learning. Second, to enable the capability of open-world modeling of vision learning, this dissertation presents a novel Open-world Fairness Continual Learning Framework. The success of this research direction is the result of two research lines, i.e., Fairness Continual Learning and Open-world Continual Learning. Third, since visual data are often captured from multiple camera views, robust vision learning methods should be capable of modeling invariant features across views. To achieve this desired goal, the research in this thesis will present a novel Geometry-based Cross-view Adaptation framework to learn robust feature representations across views. Finally, with the recent increase in large-scale videos and multimodal data, understanding the feature representations and improving the robustness of large-scale visual foundation models is critical. Therefore, this thesis will present novel Transformer-based approaches to improve the robust feature representations against multimodal and temporal data. Then, a novel Domain Generalization Approach will be presented to improve the robustness of visual foundation models. The research's theoretical analysis and experimental results have shown the effectiveness of the proposed approaches, demonstrating their superior performance compared to prior studies. The contributions in this dissertation have advanced the fairness and robustness of machine vision learning.</li>
+</ul>
+
+<h3>Title: The Impact of Copyrighted Material on Large Language Models: A Norwegian Perspective</h3>
+<ul>
+<li><strong>Authors: </strong>Javier de la Rosa, Vladislav Mikhailov, Lemei Zhang, Freddy Wetjen, David Samuel, Peng Liu, Rolv-Arild Braaten, Petter Mæhlum, Magnus Breder Birkenes, Andrey Kutuzov, Tita Enstad, Svein Arne Brygfjeld, Jon Atle Gulla, Stephan Oepen, Erik Velldal, Wilfred Østgulen, Liljia Øvrelid, Aslak Sira Myhre</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09460">https://arxiv.org/abs/2412.09460</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09460">https://arxiv.org/pdf/2412.09460</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09460]] The Impact of Copyrighted Material on Large Language Models: A Norwegian Perspective(https://arxiv.org/abs/2412.09460)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The use of copyrighted materials in training generative language models raises critical legal and ethical questions. This paper presents a framework for and the results of empirically assessing the impact of copyrighted materials on the performance of large language models (LLMs) for Norwegian. We found that both books and newspapers contribute positively when the models are evaluated on a diverse set of Norwegian benchmarks, while fiction works possibly lead to decreased performance. Our experiments could inform the creation of a compensation scheme for authors whose works contribute to AI development.</li>
+</ul>
+
+<h3>Title: OFTSR: One-Step Flow for Image Super-Resolution with Tunable Fidelity-Realism Trade-offs</h3>
+<ul>
+<li><strong>Authors: </strong>Yuanzhi Zhu, Ruiqing Wang, Shilin Lu, Junnan Li, Hanshu Yan, Kai Zhang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09465">https://arxiv.org/abs/2412.09465</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09465">https://arxiv.org/pdf/2412.09465</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09465]] OFTSR: One-Step Flow for Image Super-Resolution with Tunable Fidelity-Realism Trade-offs(https://arxiv.org/abs/2412.09465)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Recent advances in diffusion and flow-based generative models have demonstrated remarkable success in image restoration tasks, achieving superior perceptual quality compared to traditional deep learning approaches. However, these methods either require numerous sampling steps to generate high-quality images, resulting in significant computational overhead, or rely on model distillation, which usually imposes a fixed fidelity-realism trade-off and thus lacks flexibility. In this paper, we introduce OFTSR, a novel flow-based framework for one-step image super-resolution that can produce outputs with tunable levels of fidelity and realism. Our approach first trains a conditional flow-based super-resolution model to serve as a teacher model. We then distill this teacher model by applying a specialized constraint. Specifically, we force the predictions from our one-step student model for same input to lie on the same sampling ODE trajectory of the teacher model. This alignment ensures that the student model's single-step predictions from initial states match the teacher's predictions from a closer intermediate state. Through extensive experiments on challenging datasets including FFHQ (256$\times$256), DIV2K, and ImageNet (256$\times$256), we demonstrate that OFTSR achieves state-of-the-art performance for one-step image super-resolution, while having the ability to flexibly tune the fidelity-realism trade-off. Code and pre-trained models are available at this https URL and this https URL, respectively.</li>
+</ul>
+
+<h3>Title: Capturing the Temporal Dependence of Training Data Influence</h3>
+<ul>
+<li><strong>Authors: </strong>Jiachen T. Wang, Dawn Song, James Zou, Prateek Mittal, Ruoxi Jia</a></li>
+<li><strong>Subjects: </strong>cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09538">https://arxiv.org/abs/2412.09538</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09538">https://arxiv.org/pdf/2412.09538</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09538]] Capturing the Temporal Dependence of Training Data Influence(https://arxiv.org/abs/2412.09538)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Traditional data influence estimation methods, like influence function, assume that learning algorithms are permutation-invariant with respect to training data. However, modern training paradigms, especially for foundation models using stochastic algorithms and multi-stage curricula, are sensitive to data ordering, thus violating this assumption. This mismatch renders influence functions inadequate for answering a critical question in machine learning: How can we capture the dependence of data influence on the optimization trajectory during training? To address this gap, we formalize the concept of trajectory-specific leave-one-out (LOO) influence, which quantifies the impact of removing a data point from a specific iteration during training, accounting for the exact sequence of data encountered and the model's optimization trajectory. However, exactly evaluating the trajectory-specific LOO presents a significant computational challenge. To address this, we propose data value embedding, a novel technique enabling efficient approximation of trajectory-specific LOO. Specifically, we compute a training data embedding that encapsulates the cumulative interactions between data and the evolving model parameters. The LOO can then be efficiently approximated through a simple dot-product between the data value embedding and the gradient of the given test data. As data value embedding captures training data ordering, it offers valuable insights into model training dynamics. In particular, we uncover distinct phases of data influence, revealing that data points in the early and late stages of training exert a greater impact on the final model. These insights translate into actionable strategies for managing the computational overhead of data selection by strategically timing the selection process, potentially opening new avenues in data curation research.</li>
+</ul>
+
+<h3>Title: SimAvatar: Simulation-Ready Avatars with Layered Hair and Clothing</h3>
+<ul>
+<li><strong>Authors: </strong>Xueting Li, Ye Yuan, Shalini De Mello, Gilles Daviet, Jonathan Leaf, Miles Macklin, Jan Kautz, Umar Iqbal</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.GR, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09545">https://arxiv.org/abs/2412.09545</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09545">https://arxiv.org/pdf/2412.09545</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09545]] SimAvatar: Simulation-Ready Avatars with Layered Hair and Clothing(https://arxiv.org/abs/2412.09545)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>We introduce SimAvatar, a framework designed to generate simulation-ready clothed 3D human avatars from a text prompt. Current text-driven human avatar generation methods either model hair, clothing, and the human body using a unified geometry or produce hair and garments that are not easily adaptable for simulation within existing simulation pipelines. The primary challenge lies in representing the hair and garment geometry in a way that allows leveraging established prior knowledge from foundational image diffusion models (e.g., Stable Diffusion) while being simulation-ready using either physics or neural simulators. To address this task, we propose a two-stage framework that combines the flexibility of 3D Gaussians with simulation-ready hair strands and garment meshes. Specifically, we first employ three text-conditioned 3D generative models to generate garment mesh, body shape and hair strands from the given text prompt. To leverage prior knowledge from foundational diffusion models, we attach 3D Gaussians to the body mesh, garment mesh, as well as hair strands and learn the avatar appearance through optimization. To drive the avatar given a pose sequence, we first apply physics simulators onto the garment meshes and hair strands. We then transfer the motion onto 3D Gaussians through carefully designed mechanisms for each body part. As a result, our synthesized avatars have vivid texture and realistic dynamic motion. To the best of our knowledge, our method is the first to produce highly realistic, fully simulation-ready 3D avatars, surpassing the capabilities of current approaches.</li>
+</ul>
+
+<h3>Title: Video Creation by Demonstration</h3>
+<ul>
+<li><strong>Authors: </strong>Yihong Sun, Hao Zhou, Liangzhe Yuan, Jennifer J. Sun, Yandong Li, Xuhui Jia, Hartwig Adam, Bharath Hariharan, Long Zhao, Ting Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09551">https://arxiv.org/abs/2412.09551</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09551">https://arxiv.org/pdf/2412.09551</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09551]] Video Creation by Demonstration(https://arxiv.org/abs/2412.09551)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, self-supervised, foundation model</a></li>
+<li><strong>Abstract: </strong>We explore a novel video creation experience, namely Video Creation by Demonstration. Given a demonstration video and a context image from a different scene, we generate a physically plausible video that continues naturally from the context image and carries out the action concepts from the demonstration. To enable this capability, we present $\delta$-Diffusion, a self-supervised training approach that learns from unlabeled videos by conditional future frame prediction. Unlike most existing video generation controls that are based on explicit signals, we adopts the form of implicit latent control for maximal flexibility and expressiveness required by general videos. By leveraging a video foundation model with an appearance bottleneck design on top, we extract action latents from demonstration videos for conditioning the generation process with minimal appearance leakage. Empirically, $\delta$-Diffusion outperforms related baselines in terms of both human preference and large-scale machine evaluations, and demonstrates potentials towards interactive world simulation. Sampled video generation results are available at this https URL.</li>
+</ul>
+
+<h3>Title: JuStRank: Benchmarking LLM Judges for System Ranking</h3>
+<ul>
+<li><strong>Authors: </strong>Ariel Gera, Odellia Boni, Yotam Perlitz, Roy Bar-Haim, Lilach Eden, Asaf Yehudai</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09569">https://arxiv.org/abs/2412.09569</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09569">https://arxiv.org/pdf/2412.09569</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09569]] JuStRank: Benchmarking LLM Judges for System Ranking(https://arxiv.org/abs/2412.09569)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Given the rapid progress of generative AI, there is a pressing need to systematically compare and choose between the numerous models and configurations available. The scale and versatility of such evaluations make the use of LLM-based judges a compelling solution for this challenge. Crucially, this approach requires first to validate the quality of the LLM judge itself. Previous work has focused on instance-based assessment of LLM judges, where a judge is evaluated over a set of responses, or response pairs, while being agnostic to their source systems. We argue that this setting overlooks critical factors affecting system-level ranking, such as a judge's positive or negative bias towards certain systems. To address this gap, we conduct the first large-scale study of LLM judges as system rankers. System scores are generated by aggregating judgment scores over multiple system outputs, and the judge's quality is assessed by comparing the resulting system ranking to a human-based ranking. Beyond overall judge assessment, our analysis provides a fine-grained characterization of judge behavior, including their decisiveness and bias.</li>
+</ul>
+
+<h3>Title: Neural LightRig: Unlocking Accurate Object Normal and Material Estimation with Multi-Light Diffusion</h3>
+<ul>
+<li><strong>Authors: </strong>Zexin He, Tengfei Wang, Xin Huang, Xingang Pan, Ziwei Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09593">https://arxiv.org/abs/2412.09593</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09593">https://arxiv.org/pdf/2412.09593</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09593]] Neural LightRig: Unlocking Accurate Object Normal and Material Estimation with Multi-Light Diffusion(https://arxiv.org/abs/2412.09593)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recovering the geometry and materials of objects from a single image is challenging due to its under-constrained nature. In this paper, we present Neural LightRig, a novel framework that boosts intrinsic estimation by leveraging auxiliary multi-lighting conditions from 2D diffusion priors. Specifically, 1) we first leverage illumination priors from large-scale diffusion models to build our multi-light diffusion model on a synthetic relighting dataset with dedicated designs. This diffusion model generates multiple consistent images, each illuminated by point light sources in different directions. 2) By using these varied lighting images to reduce estimation uncertainty, we train a large G-buffer model with a U-Net backbone to accurately predict surface normals and materials. Extensive experiments validate that our approach significantly outperforms state-of-the-art methods, enabling accurate surface normal and PBR material estimation with vivid relighting effects. Code and dataset are available on our project page at this https URL.</li>
+</ul>
+
+<h3>Title: InternLM-XComposer2.5-OmniLive: A Comprehensive Multimodal System for Long-term Streaming Video and Audio Interactions</h3>
+<ul>
+<li><strong>Authors: </strong>Pan Zhang, Xiaoyi Dong, Yuhang Cao, Yuhang Zang, Rui Qian, Xilin Wei, Lin Chen, Yifei Li, Junbo Niu, Shuangrui Ding, Qipeng Guo, Haodong Duan, Xin Chen, Han Lv, Zheng Nie, Min Zhang, Bin Wang, Wenwei Zhang, Xinyue Zhang, Jiaye Ge, Wei Li, Jingwen Li, Zhongying Tu, Conghui He, Xingcheng Zhang, Kai Chen, Yu Qiao, Dahua Lin, Jiaqi Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09596">https://arxiv.org/abs/2412.09596</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09596">https://arxiv.org/pdf/2412.09596</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09596]] InternLM-XComposer2.5-OmniLive: A Comprehensive Multimodal System for Long-term Streaming Video and Audio Interactions(https://arxiv.org/abs/2412.09596)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Creating AI systems that can interact with environments over long periods, similar to human cognition, has been a longstanding research goal. Recent advancements in multimodal large language models (MLLMs) have made significant strides in open-world understanding. However, the challenge of continuous and simultaneous streaming perception, memory, and reasoning remains largely unexplored. Current MLLMs are constrained by their sequence-to-sequence architecture, which limits their ability to process inputs and generate responses simultaneously, akin to being unable to think while perceiving. Furthermore, relying on long contexts to store historical data is impractical for long-term interactions, as retaining all information becomes costly and inefficient. Therefore, rather than relying on a single foundation model to perform all functions, this project draws inspiration from the concept of the Specialized Generalist AI and introduces disentangled streaming perception, reasoning, and memory mechanisms, enabling real-time interaction with streaming video and audio input. The proposed framework InternLM-XComposer2.5-OmniLive (IXC2.5-OL) consists of three key modules: (1) Streaming Perception Module: Processes multimodal information in real-time, storing key details in memory and triggering reasoning in response to user queries. (2) Multi-modal Long Memory Module: Integrates short-term and long-term memory, compressing short-term memories into long-term ones for efficient retrieval and improved accuracy. (3) Reasoning Module: Responds to queries and executes reasoning tasks, coordinating with the perception and memory modules. This project simulates human-like cognition, enabling multimodal large language models to provide continuous and adaptive service over time.</li>
+</ul>
+
+<h3>Title: LiftImage3D: Lifting Any Single Image to 3D Gaussians with Video Generation Priors</h3>
+<ul>
+<li><strong>Authors: </strong>Yabo Chen, Chen Yang, Jiemin Fang, Xiaopeng Zhang, Lingxi Xie, Wei Shen, Wenrui Dai, Hongkai Xiong, Qi Tian</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.GR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09597">https://arxiv.org/abs/2412.09597</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09597">https://arxiv.org/pdf/2412.09597</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09597]] LiftImage3D: Lifting Any Single Image to 3D Gaussians with Video Generation Priors(https://arxiv.org/abs/2412.09597)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Single-image 3D reconstruction remains a fundamental challenge in computer vision due to inherent geometric ambiguities and limited viewpoint information. Recent advances in Latent Video Diffusion Models (LVDMs) offer promising 3D priors learned from large-scale video data. However, leveraging these priors effectively faces three key challenges: (1) degradation in quality across large camera motions, (2) difficulties in achieving precise camera control, and (3) geometric distortions inherent to the diffusion process that damage 3D consistency. We address these challenges by proposing LiftImage3D, a framework that effectively releases LVDMs' generative priors while ensuring 3D consistency. Specifically, we design an articulated trajectory strategy to generate video frames, which decomposes video sequences with large camera motions into ones with controllable small motions. Then we use robust neural matching models, i.e. MASt3R, to calibrate the camera poses of generated frames and produce corresponding point clouds. Finally, we propose a distortion-aware 3D Gaussian splatting representation, which can learn independent distortions between frames and output undistorted canonical Gaussians. Extensive experiments demonstrate that LiftImage3D achieves state-of-the-art performance on two challenging datasets, i.e. LLFF, DL3DV, and Tanks and Temples, and generalizes well to diverse in-the-wild images, from cartoon illustrations to complex real-world scenes.</li>
+</ul>
+
+<h3>Title: Feat2GS: Probing Visual Foundation Models with Gaussian Splatting</h3>
+<ul>
+<li><strong>Authors: </strong>Yue Chen, Xingyu Chen, Anpei Chen, Gerard Pons-Moll, Yuliang Xiu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09606">https://arxiv.org/abs/2412.09606</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09606">https://arxiv.org/pdf/2412.09606</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09606]] Feat2GS: Probing Visual Foundation Models with Gaussian Splatting(https://arxiv.org/abs/2412.09606)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Given that visual foundation models (VFMs) are trained on extensive datasets but often limited to 2D images, a natural question arises: how well do they understand the 3D world? With the differences in architecture and training protocols (i.e., objectives, proxy tasks), a unified framework to fairly and comprehensively probe their 3D awareness is urgently needed. Existing works on 3D probing suggest single-view 2.5D estimation (e.g., depth and normal) or two-view sparse 2D correspondence (e.g., matching and tracking). Unfortunately, these tasks ignore texture awareness, and require 3D data as ground-truth, which limits the scale and diversity of their evaluation set. To address these issues, we introduce Feat2GS, which readout 3D Gaussians attributes from VFM features extracted from unposed images. This allows us to probe 3D awareness for geometry and texture via novel view synthesis, without requiring 3D data. Additionally, the disentanglement of 3DGS parameters - geometry ($\boldsymbol{x}, \alpha, \Sigma$) and texture ($\boldsymbol{c}$) - enables separate analysis of texture and geometry awareness. Under Feat2GS, we conduct extensive experiments to probe the 3D awareness of several VFMs, and investigate the ingredients that lead to a 3D aware VFM. Building on these findings, we develop several variants that achieve state-of-the-art across diverse datasets. This makes Feat2GS useful for probing VFMs, and as a simple-yet-effective baseline for novel-view synthesis. Code and data will be made available at this https URL.</li>
+</ul>
+
+<h3>Title: Olympus: A Universal Task Router for Computer Vision Tasks</h3>
+<ul>
+<li><strong>Authors: </strong>Yuanze Lin, Yunsheng Li, Dongdong Chen, Weijian Xu, Ronald Clark, Philip H. S. Torr</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09612">https://arxiv.org/abs/2412.09612</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09612">https://arxiv.org/pdf/2412.09612</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09612]] Olympus: A Universal Task Router for Computer Vision Tasks(https://arxiv.org/abs/2412.09612)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We introduce Olympus, a new approach that transforms Multimodal Large Language Models (MLLMs) into a unified framework capable of handling a wide array of computer vision tasks. Utilizing a controller MLLM, Olympus delegates over 20 specialized tasks across images, videos, and 3D objects to dedicated modules. This instruction-based routing enables complex workflows through chained actions without the need for training heavy generative models. Olympus easily integrates with existing MLLMs, expanding their capabilities with comparable performance. Experimental results demonstrate that Olympus achieves an average routing accuracy of 94.75% across 20 tasks and precision of 91.82% in chained action scenarios, showcasing its effectiveness as a universal task router that can solve a diverse range of computer vision tasks. Project page: this https URL</li>
+</ul>
+
+<h3>Title: Context Canvas: Enhancing Text-to-Image Diffusion Models with Knowledge Graph-Based RAG</h3>
+<ul>
+<li><strong>Authors: </strong>Kavana Venkatesh, Yusuf Dalva, Ismini Lourentzou, Pinar Yanardag</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09614">https://arxiv.org/abs/2412.09614</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09614">https://arxiv.org/pdf/2412.09614</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09614]] Context Canvas: Enhancing Text-to-Image Diffusion Models with Knowledge Graph-Based RAG(https://arxiv.org/abs/2412.09614)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>We introduce a novel approach to enhance the capabilities of text-to-image models by incorporating a graph-based RAG. Our system dynamically retrieves detailed character information and relational data from the knowledge graph, enabling the generation of visually accurate and contextually rich images. This capability significantly improves upon the limitations of existing T2I models, which often struggle with the accurate depiction of complex or culturally specific subjects due to dataset constraints. Furthermore, we propose a novel self-correcting mechanism for text-to-image models to ensure consistency and fidelity in visual outputs, leveraging the rich context from the graph to guide corrections. Our qualitative and quantitative experiments demonstrate that Context Canvas significantly enhances the capabilities of popular models such as Flux, Stable Diffusion, and DALL-E, and improves the functionality of ControlNet for fine-grained image editing tasks. To our knowledge, Context Canvas represents the first application of graph-based RAG in enhancing T2I models, representing a significant advancement for producing high-fidelity, context-aware multi-faceted images.</li>
+</ul>
+
+<h3>Title: EasyRef: Omni-Generalized Group Image Reference for Diffusion Models via Multimodal LLM</h3>
+<ul>
+<li><strong>Authors: </strong>Zhuofan Zong, Dongzhi Jiang, Bingqi Ma, Guanglu Song, Hao Shao, Dazhong Shen, Yu Liu, Hongsheng Li</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09618">https://arxiv.org/abs/2412.09618</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09618">https://arxiv.org/pdf/2412.09618</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09618]] EasyRef: Omni-Generalized Group Image Reference for Diffusion Models via Multimodal LLM(https://arxiv.org/abs/2412.09618)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Significant achievements in personalization of diffusion models have been witnessed. Conventional tuning-free methods mostly encode multiple reference images by averaging their image embeddings as the injection condition, but such an image-independent operation cannot perform interaction among images to capture consistent visual elements within multiple references. Although the tuning-based Low-Rank Adaptation (LoRA) can effectively extract consistent elements within multiple images through the training process, it necessitates specific finetuning for each distinct image group. This paper introduces EasyRef, a novel plug-and-play adaptation method that enables diffusion models to be conditioned on multiple reference images and the text prompt. To effectively exploit consistent visual elements within multiple images, we leverage the multi-image comprehension and instruction-following capabilities of the multimodal large language model (MLLM), prompting it to capture consistent visual elements based on the instruction. Besides, injecting the MLLM's representations into the diffusion process through adapters can easily generalize to unseen domains, mining the consistent visual elements within unseen data. To mitigate computational costs and enhance fine-grained detail preservation, we introduce an efficient reference aggregation strategy and a progressive training scheme. Finally, we introduce MRBench, a new multi-reference image generation benchmark. Experimental results demonstrate EasyRef surpasses both tuning-free methods like IP-Adapter and tuning-based methods like LoRA, achieving superior aesthetic quality and robust zero-shot generalization across diverse domains.</li>
+</ul>
+
+<h3>Title: SnapGen: Taming High-Resolution Text-to-Image Models for Mobile Devices with Efficient Architectures and Training</h3>
+<ul>
+<li><strong>Authors: </strong>Dongting Hu, Jierun Chen, Xijie Huang, Huseyin Coskun, Arpit Sahni, Aarush Gupta, Anujraaj Goyal, Dishani Lahiri, Rajesh Singh, Yerlan Idelbayev, Junli Cao, Yanyu Li, Kwang-Ting Cheng, S.-H. Gary Chan, Mingming Gong, Sergey Tulyakov, Anil Kag, Yanwu Xu, Jian Ren</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09619">https://arxiv.org/abs/2412.09619</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09619">https://arxiv.org/pdf/2412.09619</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09619]] SnapGen: Taming High-Resolution Text-to-Image Models for Mobile Devices with Efficient Architectures and Training(https://arxiv.org/abs/2412.09619)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Existing text-to-image (T2I) diffusion models face several limitations, including large model sizes, slow runtime, and low-quality generation on mobile devices. This paper aims to address all of these challenges by developing an extremely small and fast T2I model that generates high-resolution and high-quality images on mobile platforms. We propose several techniques to achieve this goal. First, we systematically examine the design choices of the network architecture to reduce model parameters and latency, while ensuring high-quality generation. Second, to further improve generation quality, we employ cross-architecture knowledge distillation from a much larger model, using a multi-level approach to guide the training of our model from scratch. Third, we enable a few-step generation by integrating adversarial guidance with knowledge distillation. For the first time, our model SnapGen, demonstrates the generation of 1024x1024 px images on a mobile device around 1.4 seconds. On ImageNet-1K, our model, with only 372M parameters, achieves an FID of 2.06 for 256x256 px generation. On T2I benchmarks (i.e., GenEval and DPG-Bench), our model with merely 379M parameters, surpasses large-scale models with billions of parameters at a significantly smaller size (e.g., 7x smaller than SDXL, 14x smaller than IF-XL).</li>
+</ul>
+
+<h3>Title: LoRACLR: Contrastive Adaptation for Customization of Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Enis Simsar, Thomas Hofmann, Federico Tombari, Pinar Yanardag</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09622">https://arxiv.org/abs/2412.09622</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09622">https://arxiv.org/pdf/2412.09622</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09622]] LoRACLR: Contrastive Adaptation for Customization of Diffusion Models(https://arxiv.org/abs/2412.09622)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recent advances in text-to-image customization have enabled high-fidelity, context-rich generation of personalized images, allowing specific concepts to appear in a variety of scenarios. However, current methods struggle with combining multiple personalized models, often leading to attribute entanglement or requiring separate training to preserve concept distinctiveness. We present LoRACLR, a novel approach for multi-concept image generation that merges multiple LoRA models, each fine-tuned for a distinct concept, into a single, unified model without additional individual fine-tuning. LoRACLR uses a contrastive objective to align and merge the weight spaces of these models, ensuring compatibility while minimizing interference. By enforcing distinct yet cohesive representations for each concept, LoRACLR enables efficient, scalable model composition for high-quality, multi-concept image synthesis. Our results highlight the effectiveness of LoRACLR in accurately merging multiple concepts, advancing the capabilities of personalized image generation.</li>
+</ul>
+
+<h3>Title: OmniDrag: Enabling Motion Control for Omnidirectional Image-to-Video Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Weiqi Li, Shijie Zhao, Chong Mou, Xuhan Sheng, Zhenyu Zhang, Qian Wang, Junlin Li, Li Zhang, Jian Zhang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09623">https://arxiv.org/abs/2412.09623</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09623">https://arxiv.org/pdf/2412.09623</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09623]] OmniDrag: Enabling Motion Control for Omnidirectional Image-to-Video Generation(https://arxiv.org/abs/2412.09623)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>As virtual reality gains popularity, the demand for controllable creation of immersive and dynamic omnidirectional videos (ODVs) is increasing. While previous text-to-ODV generation methods achieve impressive results, they struggle with content inaccuracies and inconsistencies due to reliance solely on textual inputs. Although recent motion control techniques provide fine-grained control for video generation, directly applying these methods to ODVs often results in spatial distortion and unsatisfactory performance, especially with complex spherical motions. To tackle these challenges, we propose OmniDrag, the first approach enabling both scene- and object-level motion control for accurate, high-quality omnidirectional image-to-video generation. Building on pretrained video diffusion models, we introduce an omnidirectional control module, which is jointly fine-tuned with temporal attention layers to effectively handle complex spherical motion. In addition, we develop a novel spherical motion estimator that accurately extracts motion-control signals and allows users to perform drag-style ODV generation by simply drawing handle and target points. We also present a new dataset, named Move360, addressing the scarcity of ODV data with large scene and object motions. Experiments demonstrate the significant superiority of OmniDrag in achieving holistic scene-level and fine-grained object-level control for ODV generation. The project page is available at this https URL.</li>
+</ul>
+
+<h3>Title: GenEx: Generating an Explorable World</h3>
+<ul>
+<li><strong>Authors: </strong>Taiming Lu, Tianmin Shu, Junfei Xiao, Luoxin Ye, Jiahao Wang, Cheng Peng, Chen Wei, Daniel Khashabi, Rama Chellappa, Alan Yuille, Jieneng Chen</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.RO</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09624">https://arxiv.org/abs/2412.09624</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09624">https://arxiv.org/pdf/2412.09624</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09624]] GenEx: Generating an Explorable World(https://arxiv.org/abs/2412.09624)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Understanding, navigating, and exploring the 3D physical real world has long been a central challenge in the development of artificial intelligence. In this work, we take a step toward this goal by introducing GenEx, a system capable of planning complex embodied world exploration, guided by its generative imagination that forms priors (expectations) about the surrounding environments. GenEx generates an entire 3D-consistent imaginative environment from as little as a single RGB image, bringing it to life through panoramic video streams. Leveraging scalable 3D world data curated from Unreal Engine, our generative model is rounded in the physical world. It captures a continuous 360-degree environment with little effort, offering a boundless landscape for AI agents to explore and interact with. GenEx achieves high-quality world generation, robust loop consistency over long trajectories, and demonstrates strong 3D capabilities such as consistency and active 3D mapping. Powered by generative imagination of the world, GPT-assisted agents are equipped to perform complex embodied tasks, including both goal-agnostic exploration and goal-driven navigation. These agents utilize predictive expectation regarding unseen parts of the physical world to refine their beliefs, simulate different outcomes based on potential decisions, and make more informed choices. In summary, we demonstrate that GenEx provides a transformative platform for advancing embodied AI in imaginative spaces and brings potential for extending these capabilities to real-world exploration.</li>
+</ul>
+
+<h3>Title: Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors</h3>
+<ul>
+<li><strong>Authors: </strong>Yue Feng, Vaibhav Sanjay, Spencer Lutz, Badour AlBahar, Songwei Ge, Jia-Bin Huang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09625">https://arxiv.org/abs/2412.09625</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09625">https://arxiv.org/pdf/2412.09625</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09625]] Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors(https://arxiv.org/abs/2412.09625)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Automatically generating multiview illusions is a compelling challenge, where a single piece of visual content offers distinct interpretations from different viewing perspectives. Traditional methods, such as shadow art and wire art, create interesting 3D illusions but are limited to simple visual outputs (i.e., figure-ground or line drawing), restricting their artistic expressiveness and practical versatility. Recent diffusion-based illusion generation methods can generate more intricate designs but are confined to 2D images. In this work, we present a simple yet effective approach for creating 3D multiview illusions based on user-provided text prompts or images. Our method leverages a pre-trained text-to-image diffusion model to optimize the textures and geometry of neural 3D representations through differentiable rendering. When viewed from multiple angles, this produces different interpretations. We develop several techniques to improve the quality of the generated 3D multiview illusions. We demonstrate the effectiveness of our approach through extensive experiments and showcase illusion generation with diverse 3D forms.</li>
+</ul>
+
+<h3>Title: FreeScale: Unleashing the Resolution of Diffusion Models via Tuning-Free Scale Fusion</h3>
+<ul>
+<li><strong>Authors: </strong>Haonan Qiu, Shiwei Zhang, Yujie Wei, Ruihang Chu, Hangjie Yuan, Xiang Wang, Yingya Zhang, Ziwei Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2412.09626">https://arxiv.org/abs/2412.09626</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2412.09626">https://arxiv.org/pdf/2412.09626</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2412.09626]] FreeScale: Unleashing the Resolution of Diffusion Models via Tuning-Free Scale Fusion(https://arxiv.org/abs/2412.09626)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Visual diffusion models achieve remarkable progress, yet they are typically trained at limited resolutions due to the lack of high-resolution data and constrained computation resources, hampering their ability to generate high-fidelity images or videos at higher resolutions. Recent efforts have explored tuning-free strategies to exhibit the untapped potential higher-resolution visual generation of pre-trained models. However, these methods are still prone to producing low-quality visual content with repetitive patterns. The key obstacle lies in the inevitable increase in high-frequency information when the model generates visual content exceeding its training resolution, leading to undesirable repetitive patterns deriving from the accumulated errors. To tackle this challenge, we propose FreeScale, a tuning-free inference paradigm to enable higher-resolution visual generation via scale fusion. Specifically, FreeScale processes information from different receptive scales and then fuses it by extracting desired frequency components. Extensive experiments validate the superiority of our paradigm in extending the capabilities of higher-resolution visual generation for both image and video models. Notably, compared with the previous best-performing method, FreeScale unlocks the generation of 8k-resolution images for the first time.</li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="../../javascript/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
