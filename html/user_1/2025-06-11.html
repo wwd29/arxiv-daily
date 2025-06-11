@@ -1,0 +1,766 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2025-06-11</h1>
+<h3>Title: ReCogDrive: A Reinforced Cognitive Framework for End-to-End Autonomous Driving</h3>
+<ul>
+<li><strong>Authors: </strong>Yongkang Li, Kaixin Xiong, Xiangyu Guo, Fang Li, Sixu Yan, Gangwei Xu, Lijun Zhou, Long Chen, Haiyang Sun, Bing Wang, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.RO</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08052">https://arxiv.org/abs/2506.08052</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08052">https://arxiv.org/pdf/2506.08052</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08052]] ReCogDrive: A Reinforced Cognitive Framework for End-to-End Autonomous Driving(https://arxiv.org/abs/2506.08052)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Although end-to-end autonomous driving has made remarkable progress, its performance degrades significantly in rare and long-tail scenarios. Recent approaches attempt to address this challenge by leveraging the rich world knowledge of Vision-Language Models (VLMs), but these methods suffer from several limitations: (1) a significant domain gap between the pre-training data of VLMs and real-world driving data, (2) a dimensionality mismatch between the discrete language space and the continuous action space, and (3) imitation learning tends to capture the average behavior present in the dataset, which may be suboptimal even dangerous. In this paper, we propose ReCogDrive, an autonomous driving system that integrates VLMs with diffusion planner, which adopts a three-stage paradigm for training. In the first stage, we use a large-scale driving question-answering datasets to train the VLMs, mitigating the domain discrepancy between generic content and real-world driving scenarios. In the second stage, we employ a diffusion-based planner to perform imitation learning, mapping representations from the latent language space to continuous driving actions. Finally, we fine-tune the diffusion planner using reinforcement learning with NAVSIM non-reactive simulator, enabling the model to generate safer, more human-like driving trajectories. We evaluate our approach on the planning-oriented NAVSIM benchmark, achieving a PDMS of 89.6 and setting a new state-of-the-art that surpasses the previous vision-only SOTA by 5.6 PDMS.</li>
+</ul>
+
+<h3>Title: Eliciting Fine-Tuned Transformer Capabilities via Inference-Time Techniques</h3>
+<ul>
+<li><strong>Authors: </strong>Asankhaya Sharma</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08060">https://arxiv.org/abs/2506.08060</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08060">https://arxiv.org/pdf/2506.08060</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08060]] Eliciting Fine-Tuned Transformer Capabilities via Inference-Time Techniques(https://arxiv.org/abs/2506.08060)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Large language models have transformed natural language processing, yet supervised fine-tuning (SFT) remains computationally intensive. This paper formally proves that capabilities acquired through SFT can be approximated by a base transformer model using inference-time techniques, specifically in-context learning (ICL), without altering model parameters, under idealized assumptions including unbounded computational resources and access to the fine-tuning dataset. We extend these results to practical scenarios with finite context lengths and partial dataset access. For text generation tasks with fixed output length $l$, datasets of size $\mathrm{O}\left( \frac{m V}{\varepsilon^2} \log \frac{m}{\delta} \right)$ or, with bounded context, $\mathrm{O}\left( \frac{l \log V}{\varepsilon^2} \log \frac{1}{\delta} \right)$ suffice to approximate fine-tuned behavior across $m$ contexts within error $\varepsilon$, where $V$ is the vocabulary size and $\delta$ is the failure probability. For linear classification, datasets of size $\mathrm{O}\left( \frac{d}{\varepsilon} \right)$ or, with fixed context, $\mathrm{O}\left( \frac{1}{\varepsilon^2} \log \frac{1}{\delta} \right)$ are sufficient, where $d$ is the input dimension. Grounded in the Turing completeness of transformers, these results provide a theoretical foundation for resource-efficient deployment of large language models, with practical techniques like retrieval-augmented generation bridging theory to real-world applications.</li>
+</ul>
+
+<h3>Title: CuRe: Cultural Gaps in the Long Tail of Text-to-Image Systems</h3>
+<ul>
+<li><strong>Authors: </strong>Aniket Rege, Zinnia Nie, Mahesh Ramesh, Unmesh Raskar, Zhuoran Yu, Aditya Kusupati, Yong Jae Lee, Ramya Korlakai Vinayak</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08071">https://arxiv.org/abs/2506.08071</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08071">https://arxiv.org/pdf/2506.08071</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08071]] CuRe: Cultural Gaps in the Long Tail of Text-to-Image Systems(https://arxiv.org/abs/2506.08071)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Popular text-to-image (T2I) systems are trained on web-scraped data, which is heavily Amero and Euro-centric, underrepresenting the cultures of the Global South. To analyze these biases, we introduce CuRe, a novel and scalable benchmarking and scoring suite for cultural representativeness that leverages the marginal utility of attribute specification to T2I systems as a proxy for human judgments. Our CuRe benchmark dataset has a novel categorical hierarchy built from the crowdsourced Wikimedia knowledge graph, with 300 cultural artifacts across 32 cultural subcategories grouped into six broad cultural axes (food, art, fashion, architecture, celebrations, and people). Our dataset's categorical hierarchy enables CuRe scorers to evaluate T2I systems by analyzing their response to increasing the informativeness of text conditioning, enabling fine-grained cultural comparisons. We empirically observe much stronger correlations of our class of scorers to human judgments of perceptual similarity, image-text alignment, and cultural diversity across image encoders (SigLIP 2, AIMV2 and DINOv2), vision-language models (OpenCLIP, SigLIP 2, Gemini 2.0 Flash) and state-of-the-art text-to-image systems, including three variants of Stable Diffusion (1.5, XL, 3.5 Large), FLUX.1 [dev], Ideogram 2.0, and DALL-E 3. The code and dataset is open-sourced and available at this https URL.</li>
+</ul>
+
+<h3>Title: Benchmarking Pre-Trained Time Series Models for Electricity Price Forecasting</h3>
+<ul>
+<li><strong>Authors: </strong>Timothée Hornek Amir Sartipi, Igor Tchappi, Gilbert Fridgen</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08113">https://arxiv.org/abs/2506.08113</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08113">https://arxiv.org/pdf/2506.08113</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08113]] Benchmarking Pre-Trained Time Series Models for Electricity Price Forecasting(https://arxiv.org/abs/2506.08113)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model, generative</a></li>
+<li><strong>Abstract: </strong>Accurate electricity price forecasting (EPF) is crucial for effective decision-making in power trading on the spot market. While recent advances in generative artificial intelligence (GenAI) and pre-trained large language models (LLMs) have inspired the development of numerous time series foundation models (TSFMs) for time series forecasting, their effectiveness in EPF remains uncertain. To address this gap, we benchmark several state-of-the-art pretrained models--Chronos-Bolt, Chronos-T5, TimesFM, Moirai, Time-MoE, and TimeGPT--against established statistical and machine learning (ML) methods for EPF. Using 2024 day-ahead auction (DAA) electricity prices from Germany, France, the Netherlands, Austria, and Belgium, we generate daily forecasts with a one-day horizon. Chronos-Bolt and Time-MoE emerge as the strongest among the TSFMs, performing on par with traditional models. However, the biseasonal MSTL model, which captures daily and weekly seasonality, stands out for its consistent performance across countries and evaluation metrics, with no TSFM statistically outperforming it.</li>
+</ul>
+
+<h3>Title: BLUR: A Bi-Level Optimization Approach for LLM Unlearning</h3>
+<ul>
+<li><strong>Authors: </strong>Hadi Reisizadeh, Jinghan Jia, Zhiqi Bu, Bhanukiran Vinzamuri, Anil Ramakrishna, Kai-Wei Chang, Volkan Cevher, Sijia Liu, Mingyi Hong</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08164">https://arxiv.org/abs/2506.08164</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08164">https://arxiv.org/pdf/2506.08164</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08164]] BLUR: A Bi-Level Optimization Approach for LLM Unlearning(https://arxiv.org/abs/2506.08164)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Enabling large language models (LLMs) to unlearn knowledge and capabilities acquired during training has proven vital for ensuring compliance with data regulations and promoting ethical practices in generative AI. Although there are growing interests in developing various unlearning algorithms, it remains unclear how to best formulate the unlearning problem. The most popular formulation uses a weighted sum of forget and retain loss, but it often leads to performance degradation due to the inherent trade-off between forget and retain losses. In this work, we argue that it is important to model the hierarchical structure of the unlearning problem, where the forget problem (which \textit{unlearns} certain knowledge and/or capabilities) takes priority over the retain problem (which preserves model utility). This hierarchical structure naturally leads to a bi-level optimization formulation where the lower-level objective focuses on minimizing the forget loss, while the upper-level objective aims to maintain the model's utility. Based on this new formulation, we propose a novel algorithm, termed Bi-Level UnleaRning (\texttt{BLUR}), which not only possesses strong theoretical guarantees but more importantly, delivers superior performance. In particular, our extensive experiments demonstrate that \texttt{BLUR} consistently outperforms all the state-of-the-art algorithms across various unlearning tasks, models, and metrics. Codes are available at this https URL.</li>
+</ul>
+
+<h3>Title: Surgeon Style Fingerprinting and Privacy Risk Quantification via Discrete Diffusion Models in a Vision-Language-Action Framework</h3>
+<ul>
+<li><strong>Authors: </strong>Huixin Zhan, Jason H. Moore</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08185">https://arxiv.org/abs/2506.08185</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08185">https://arxiv.org/pdf/2506.08185</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08185]] Surgeon Style Fingerprinting and Privacy Risk Quantification via Discrete Diffusion Models in a Vision-Language-Action Framework(https://arxiv.org/abs/2506.08185)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Surgeons exhibit distinct operating styles due to differences in training, experience, and motor behavior - yet current AI systems often ignore this personalization signal. We propose a novel approach to model fine-grained, surgeon-specific fingerprinting in robotic surgery using a discrete diffusion framework integrated with a vision-language-action (VLA) pipeline. Our method formulates gesture prediction as a structured sequence denoising task, conditioned on multimodal inputs including endoscopic video, surgical intent language, and a privacy-aware embedding of surgeon identity and skill. Personalized surgeon fingerprinting is encoded through natural language prompts using third-party language models, allowing the model to retain individual behavioral style without exposing explicit identity. We evaluate our method on the JIGSAWS dataset and demonstrate that it accurately reconstructs gesture sequences while learning meaningful motion fingerprints unique to each surgeon. To quantify the privacy implications of personalization, we perform membership inference attacks and find that more expressive embeddings improve task performance but simultaneously increase susceptibility to identity leakage. These findings demonstrate that while personalized embeddings improve performance, they also increase vulnerability to identity leakage, revealing the importance of balancing personalization with privacy risk in surgical modeling. Code is available at: this https URL.</li>
+</ul>
+
+<h3>Title: Generative Learning of Differentiable Object Models for Compositional Interpretation of Complex Scenes</h3>
+<ul>
+<li><strong>Authors: </strong>Antoni Nowinowski, Krzysztof Krawiec</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08191">https://arxiv.org/abs/2506.08191</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08191">https://arxiv.org/pdf/2506.08191</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08191]] Generative Learning of Differentiable Object Models for Compositional Interpretation of Complex Scenes(https://arxiv.org/abs/2506.08191)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>This study builds on the architecture of the Disentangler of Visual Priors (DVP), a type of autoencoder that learns to interpret scenes by decomposing the perceived objects into independent visual aspects of shape, size, orientation, and color appearance. These aspects are expressed as latent parameters which control a differentiable renderer that performs image reconstruction, so that the model can be trained end-to-end with gradient using reconstruction loss. In this study, we extend the original DVP so that it can handle multiple objects in a scene. We also exploit the interpretability of its latent by using the decoder to sample additional training examples and devising alternative training modes that rely on loss functions defined not only in the image space, but also in the latent space. This significantly facilitates training, which is otherwise challenging due to the presence of extensive plateaus in the image-space reconstruction loss. To examine the performance of this approach, we propose a new benchmark featuring multiple 2D objects, which subsumes the previously proposed Multi-dSprites dataset while being more parameterizable. We compare the DVP extended in these ways with two baselines (MONet and LIVE) and demonstrate its superiority in terms of reconstruction quality and capacity to decompose overlapping objects. We also analyze the gradients induced by the considered loss functions, explain how they impact the efficacy of training, and discuss the limitations of differentiable rendering in autoencoders and the ways in which they can be addressed.</li>
+</ul>
+
+<h3>Title: GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra</h3>
+<ul>
+<li><strong>Authors: </strong>Mateusz Michalkiewicz, Anekha Sokhal, Tadeusz Michalkiewicz, Piotr Pawlikowski, Mahsa Baktashmotlagh, Varun Jampani, Guha Balakrishnan</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08194">https://arxiv.org/abs/2506.08194</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08194">https://arxiv.org/pdf/2506.08194</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08194]] GIQ: Benchmarking 3D Geometric Reasoning of Vision Foundation Models with Simulated and Real Polyhedra(https://arxiv.org/abs/2506.08194)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Monocular 3D reconstruction methods and vision-language models (VLMs) demonstrate impressive results on standard benchmarks, yet their true understanding of geometric properties remains unclear. We introduce GIQ , a comprehensive benchmark specifically designed to evaluate the geometric reasoning capabilities of vision and vision-language foundation models. GIQ comprises synthetic and real-world images of 224 diverse polyhedra - including Platonic, Archimedean, Johnson, and Catalan solids, as well as stellations and compound shapes - covering varying levels of complexity and symmetry. Through systematic experiments involving monocular 3D reconstruction, 3D symmetry detection, mental rotation tests, and zero-shot shape classification tasks, we reveal significant shortcomings in current models. State-of-the-art reconstruction algorithms trained on extensive 3D datasets struggle to reconstruct even basic geometric forms accurately. While foundation models effectively detect specific 3D symmetry elements via linear probing, they falter significantly in tasks requiring detailed geometric differentiation, such as mental rotation. Moreover, advanced vision-language assistants exhibit remarkably low accuracy on complex polyhedra, systematically misinterpreting basic properties like face geometry, convexity, and compound structures. GIQ is publicly available, providing a structured platform to highlight and address critical gaps in geometric intelligence, facilitating future progress in robust, geometry-aware representation learning.</li>
+</ul>
+
+<h3>Title: A Comprehensive Study of Decoder-Only LLMs for Text-to-Image Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Andrew Z. Wang, Songwei Ge, Tero Karras, Ming-Yu Liu, Yogesh Balaji</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.CL, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08210">https://arxiv.org/abs/2506.08210</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08210">https://arxiv.org/pdf/2506.08210</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08210]] A Comprehensive Study of Decoder-Only LLMs for Text-to-Image Generation(https://arxiv.org/abs/2506.08210)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Both text-to-image generation and large language models (LLMs) have made significant advancements. However, many text-to-image models still employ the somewhat outdated T5 and CLIP as their text encoders. In this work, we investigate the effectiveness of using modern decoder-only LLMs as text encoders for text-to-image diffusion models. We build a standardized training and evaluation pipeline that allows us to isolate and evaluate the effect of different text embeddings. We train a total of 27 text-to-image models with 12 different text encoders to analyze the critical aspects of LLMs that could impact text-to-image generation, including the approaches to extract embeddings, different LLMs variants, and model sizes. Our experiments reveal that the de facto way of using last-layer embeddings as conditioning leads to inferior performance. Instead, we explore embeddings from various layers and find that using layer-normalized averaging across all layers significantly improves alignment with complex prompts. Most LLMs with this conditioning outperform the baseline T5 model, showing enhanced performance in advanced visio-linguistic reasoning skills.</li>
+</ul>
+
+<h3>Title: Using Satellite Images And Self-supervised Machine Learning Networks To Detect Water Hidden Under Vegetation</h3>
+<ul>
+<li><strong>Authors: </strong>Ioannis Iakovidis, Zahra Kalantari, Amir Hossein Payberah, Fernando Jaramillo, Francisco Pena Escobar</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08214">https://arxiv.org/abs/2506.08214</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08214">https://arxiv.org/pdf/2506.08214</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08214]] Using Satellite Images And Self-supervised Machine Learning Networks To Detect Water Hidden Under Vegetation(https://arxiv.org/abs/2506.08214)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>In recent years the wide availability of high-resolution radar satellite images along with the advancement of computer vision models have enabled the remote monitoring of the surface area of wetlands. However, these models require large amounts of manually annotated satellite images, which are slow and expensive to produce. To overcome this problem, self-supervised training methods have been deployed to train models without using annotated data. In this paper we use a combination of deep clustering and negative sampling to train a model to segment radar satellite images into areas that separate water from land without the use of any manual annotations. Furthermore, we implement an ensemble version of the model to reduce variance and improve performance. Compared to a single fully-supervised model using the same architecture, our ensemble of self-supervised models achieves a 0.02 improvement in the Intersection Over Union metric over our test dataset.</li>
+</ul>
+
+<h3>Title: Highly Compressed Tokenizer Can Generate Without Training</h3>
+<ul>
+<li><strong>Authors: </strong>L. Lao Beyer, T. Li, X. Chen, S. Karaman, K. He</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08257">https://arxiv.org/abs/2506.08257</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08257">https://arxiv.org/pdf/2506.08257</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08257]] Highly Compressed Tokenizer Can Generate Without Training(https://arxiv.org/abs/2506.08257)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Commonly used image tokenizers produce a 2D grid of spatially arranged tokens. In contrast, so-called 1D image tokenizers represent images as highly compressed one-dimensional sequences of as few as 32 discrete tokens. We find that the high degree of compression achieved by a 1D tokenizer with vector quantization enables image editing and generative capabilities through heuristic manipulation of tokens, demonstrating that even very crude manipulations -- such as copying and replacing tokens between latent representations of images -- enable fine-grained image editing by transferring appearance and semantic attributes. Motivated by the expressivity of the 1D tokenizer's latent space, we construct an image generation pipeline leveraging gradient-based test-time optimization of tokens with plug-and-play loss functions such as reconstruction or CLIP similarity. Our approach is demonstrated for inpainting and text-guided image editing use cases, and can generate diverse and realistic samples without requiring training of any generative model.</li>
+</ul>
+
+<h3>Title: Seeing Voices: Generating A-Roll Video from Audio with Mirage</h3>
+<ul>
+<li><strong>Authors: </strong>Aditi Sundararaman, Amogh Adishesha, Andrew Jaegle, Dan Bigioi, Hyoung-Kyu Song, Jon Kyl, Justin Mao, Kevin Lan, Mojtaba Komeili, ShahRukh Athar, Sheila Babayan, Stanislau Beliasau, William Buchwalter</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08279">https://arxiv.org/abs/2506.08279</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08279">https://arxiv.org/pdf/2506.08279</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08279]] Seeing Voices: Generating A-Roll Video from Audio with Mirage(https://arxiv.org/abs/2506.08279)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>From professional filmmaking to user-generated content, creators and consumers have long recognized that the power of video depends on the harmonious integration of what we hear (the video's audio track) with what we see (the video's image sequence). Current approaches to video generation either ignore sound to focus on general-purpose but silent image sequence generation or address both visual and audio elements but focus on restricted application domains such as re-dubbing. We introduce Mirage, an audio-to-video foundation model that excels at generating realistic, expressive output imagery from scratch given an audio input. When integrated with existing methods for speech synthesis (text-to-speech, or TTS), Mirage results in compelling multimodal video. When trained on audio-video footage of people talking (A-roll) and conditioned on audio containing speech, Mirage generates video of people delivering a believable interpretation of the performance implicit in input audio. Our central technical contribution is a unified method for training self-attention-based audio-to-video generation models, either from scratch or given existing weights. This methodology allows Mirage to retain generality as an approach to audio-to-video generation while producing outputs of superior subjective quality to methods that incorporate audio-specific architectures or loss components specific to people, speech, or details of how images or audio are captured. We encourage readers to watch and listen to the results of Mirage for themselves (see paper and comments for links).</li>
+</ul>
+
+<h3>Title: H$^2$GFM: Towards unifying Homogeneity and Heterogeneity on Text-Attributed Graphs</h3>
+<ul>
+<li><strong>Authors: </strong>Trung-Kien Nguyen, Heng Ping, Shixuan Li, Peiyu Zhang, Nikos Kanakaris, Nicholas Kotov, Paul Bogdan</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08298">https://arxiv.org/abs/2506.08298</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08298">https://arxiv.org/pdf/2506.08298</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08298]] H$^2$GFM: Towards unifying Homogeneity and Heterogeneity on Text-Attributed Graphs(https://arxiv.org/abs/2506.08298)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>The growing interests and applications of graph learning in diverse domains have propelled the development of a unified model generalizing well across different graphs and tasks, known as the Graph Foundation Model (GFM). Existing research has leveraged text-attributed graphs (TAGs) to tackle the heterogeneity in node features among graphs. However, they primarily focus on homogeneous TAGs (HoTAGs), leaving heterogeneous TAGs (HeTAGs), where multiple types of nodes/edges reside, underexplored. To enhance the capabilities and applications of GFM, we introduce H$^2$GFM, a novel framework designed to generalize across both HoTAGs and HeTAGs. Our model projects diverse meta-relations among graphs under a unified textual space, and employs a context encoding to capture spatial and higher-order semantic relationships. To achieve robust node representations, we propose a novel context-adaptive graph transformer (CGT), effectively capturing information from both context neighbors and their relationships. Furthermore, we employ a mixture of CGT experts to capture the heterogeneity in structural patterns among graph types. Comprehensive experiments on a wide range of HoTAGs and HeTAGs as well as learning scenarios demonstrate the effectiveness of our model.</li>
+</ul>
+
+<h3>Title: Why Masking Diffusion Works: Condition on the Jump Schedule for Improved Discrete Diffusion</h3>
+<ul>
+<li><strong>Authors: </strong>Alan N. Amin, Nate Gruver, Andrew Gordon Wilson</a></li>
+<li><strong>Subjects: </strong>cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08316">https://arxiv.org/abs/2506.08316</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08316">https://arxiv.org/pdf/2506.08316</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08316]] Why Masking Diffusion Works: Condition on the Jump Schedule for Improved Discrete Diffusion(https://arxiv.org/abs/2506.08316)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Discrete diffusion models, like continuous diffusion models, generate high-quality samples by gradually undoing noise applied to datapoints with a Markov process. Gradual generation in theory comes with many conceptual benefits; for example, inductive biases can be incorporated into the noising Markov process, and access to improved sampling algorithms. In practice, however, the consistently best performing discrete diffusion model is, surprisingly, masking diffusion, which does not denoise gradually. Here we explain the superior performance of masking diffusion by noting that it makes use of a fundamental difference between continuous and discrete Markov processes: discrete Markov processes evolve by discontinuous jumps at a fixed rate and, unlike other discrete diffusion models, masking diffusion builds in the known distribution of jump times and only learns where to jump to. We show that we can similarly bake in the known distribution of jump times into any discrete diffusion model. The resulting models - schedule-conditioned discrete diffusion (SCUD) - generalize classical discrete diffusion and masking diffusion. By applying SCUD to models with noising processes that incorporate inductive biases on images, text, and protein data, we build models that outperform masking.</li>
+</ul>
+
+<h3>Title: How Good LLM-Generated Password Policies Are?</h3>
+<ul>
+<li><strong>Authors: </strong>Vivek Vaidya, Aditya Patwardhan, Ashish Kundu</a></li>
+<li><strong>Subjects: </strong>cs.CR, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08320">https://arxiv.org/abs/2506.08320</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08320">https://arxiv.org/pdf/2506.08320</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08320]] How Good LLM-Generated Password Policies Are?(https://arxiv.org/abs/2506.08320)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Generative AI technologies, particularly Large Language Models (LLMs), are rapidly being adopted across industry, academia, and government sectors, owing to their remarkable capabilities in natural language processing. However, despite their strengths, the inconsistency and unpredictability of LLM outputs present substantial challenges, especially in security-critical domains such as access control. One critical issue that emerges prominently is the consistency of LLM-generated responses, which is paramount for ensuring secure and reliable operations. In this paper, we study the application of LLMs within the context of Cybersecurity Access Control Systems. Specifically, we investigate the consistency and accuracy of LLM-generated password policies, translating natural language prompts into executable this http URL configuration files. Our experimental methodology adopts two distinct approaches: firstly, we utilize pre-trained LLMs to generate configuration files purely from natural language prompts without additional guidance. Secondly, we provide these models with official this http URL documentation to serve as an informative baseline. We systematically assess the soundness, accuracy, and consistency of these AI-generated configurations. Our findings underscore significant challenges in the current generation of LLMs and contribute valuable insights into refining the deployment of LLMs in Access Control Systems.</li>
+</ul>
+
+<h3>Title: Graph Prompting for Graph Learning Models: Recent Advances and Future Directions</h3>
+<ul>
+<li><strong>Authors: </strong>Xingbo Fu, Zehong Wang, Zihan Chen, Jiazheng Li, Yaochen Zhu, Zhenyu Lei, Cong Shen, Yanfang Ye, Chuxu Zhang, Jundong Li</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08326">https://arxiv.org/abs/2506.08326</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08326">https://arxiv.org/pdf/2506.08326</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08326]] Graph Prompting for Graph Learning Models: Recent Advances and Future Directions(https://arxiv.org/abs/2506.08326)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Graph learning models have demonstrated great prowess in learning expressive representations from large-scale graph data in a wide variety of real-world scenarios. As a prevalent strategy for training powerful graph learning models, the "pre-training, adaptation" scheme first pre-trains graph learning models on unlabeled graph data in a self-supervised manner and then adapts them to specific downstream tasks. During the adaptation phase, graph prompting emerges as a promising approach that learns trainable prompts while keeping the pre-trained graph learning models unchanged. In this paper, we present a systematic review of recent advancements in graph prompting. First, we introduce representative graph pre-training methods that serve as the foundation step of graph prompting. Next, we review mainstream techniques in graph prompting and elaborate on how they design learnable prompts for graph prompting. Furthermore, we summarize the real-world applications of graph prompting from different domains. Finally, we discuss several open challenges in existing studies with promising future directions in this field.</li>
+</ul>
+
+<h3>Title: A Simple Analysis of Discretization Error in Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Juhyeok Choi, Chenglin Fan</a></li>
+<li><strong>Subjects: </strong>cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08337">https://arxiv.org/abs/2506.08337</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08337">https://arxiv.org/pdf/2506.08337</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08337]] A Simple Analysis of Discretization Error in Diffusion Models(https://arxiv.org/abs/2506.08337)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Diffusion models, formulated as discretizations of stochastic differential equations (SDEs), achieve state-of-the-art generative performance. However, existing analyses of their discretization error often rely on complex probabilistic tools. In this work, we present a simplified theoretical framework for analyzing the Euler--Maruyama discretization of variance-preserving SDEs (VP-SDEs) in Denoising Diffusion Probabilistic Models (DDPMs), where $ T $ denotes the number of denoising steps in the diffusion process. Our approach leverages Grönwall's inequality to derive a convergence rate of $ \mathcal{O}(1/T^{1/2}) $ under Lipschitz assumptions, significantly streamlining prior proofs. Furthermore, we demonstrate that the Gaussian noise in the discretization can be replaced by a discrete random variable (e.g., Rademacher or uniform noise) without sacrificing convergence guarantees-an insight with practical implications for efficient sampling. Experiments validate our theory, showing that (1) the error scales as predicted, (2) discrete noise achieves comparable sample quality to Gaussian noise, and (3) incorrect noise scaling degrades performance. By unifying simplified analysis and discrete noise substitution, our work bridges theoretical rigor with practical efficiency in diffusion-based generative modeling.</li>
+</ul>
+
+<h3>Title: Dynamical System Optimization</h3>
+<ul>
+<li><strong>Authors: </strong>Emo Todorov</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08340">https://arxiv.org/abs/2506.08340</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08340">https://arxiv.org/pdf/2506.08340</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08340]] Dynamical System Optimization(https://arxiv.org/abs/2506.08340)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We develop an optimization framework centered around a core idea: once a (parametric) policy is specified, control authority is transferred to the policy, resulting in an autonomous dynamical system. Thus we should be able to optimize policy parameters without further reference to controls or actions, and without directly using the machinery of approximate Dynamic Programming and Reinforcement Learning. Here we derive simpler algorithms at the autonomous system level, and show that they compute the same quantities as policy gradients and Hessians, natural gradients, proximal methods. Analogs to approximate policy iteration and off-policy learning are also available. Since policy parameters and other system parameters are treated uniformly, the same algorithms apply to behavioral cloning, mechanism design, system identification, learning of state estimators. Tuning of generative AI models is not only possible, but is conceptually closer to the present framework than to Reinforcement Learning.</li>
+</ul>
+
+<h3>Title: How Much To Guide: Revisiting Adaptive Guidance in Classifier-Free Guidance Text-to-Vision Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Huixuan Zhang, Junzhe Zhang, Xiaojun Wan</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08351">https://arxiv.org/abs/2506.08351</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08351">https://arxiv.org/pdf/2506.08351</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08351]] How Much To Guide: Revisiting Adaptive Guidance in Classifier-Free Guidance Text-to-Vision Diffusion Models(https://arxiv.org/abs/2506.08351)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>With the rapid development of text-to-vision generation diffusion models, classifier-free guidance has emerged as the most prevalent method for conditioning. However, this approach inherently requires twice as many steps for model forwarding compared to unconditional generation, resulting in significantly higher costs. While previous study has introduced the concept of adaptive guidance, it lacks solid analysis and empirical results, making previous method unable to be applied to general diffusion models. In this work, we present another perspective of applying adaptive guidance and propose Step AG, which is a simple, universally applicable adaptive guidance strategy. Our evaluations focus on both image quality and image-text alignment. whose results indicate that restricting classifier-free guidance to the first several denoising steps is sufficient for generating high-quality, well-conditioned images, achieving an average speedup of 20% to 30%. Such improvement is consistent across different settings such as inference steps, and various models including video generation models, highlighting the superiority of our method.</li>
+</ul>
+
+<h3>Title: Learning to Hear Broken Motors: Signature-Guided Data Augmentation for Induction-Motor Diagnostics</h3>
+<ul>
+<li><strong>Authors: </strong>Saraa Ali, Aleksandr Khizhik, Stepan Svirin, Artem Ryzhikov, Denis Derkach</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08412">https://arxiv.org/abs/2506.08412</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08412">https://arxiv.org/pdf/2506.08412</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08412]] Learning to Hear Broken Motors: Signature-Guided Data Augmentation for Induction-Motor Diagnostics(https://arxiv.org/abs/2506.08412)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>The application of machine learning (ML) algorithms in the intelligent diagnosis of three-phase engines has the potential to significantly enhance diagnostic performance and accuracy. Traditional methods largely rely on signature analysis, which, despite being a standard practice, can benefit from the integration of advanced ML techniques. In our study, we innovate by combining ML algorithms with a novel unsupervised anomaly generation methodology that takes into account the engine physics model. We propose Signature-Guided Data Augmentation (SGDA), an unsupervised framework that synthesizes physically plausible faults directly in the frequency domain of healthy current signals. Guided by Motor Current Signature Analysis, SGDA creates diverse and realistic anomalies without resorting to computationally intensive simulations. This hybrid approach leverages the strengths of both supervised ML and unsupervised signature analysis, achieving superior diagnostic accuracy and reliability along with wide industrial application. The findings highlight the potential of our approach to contribute significantly to the field of engine diagnostics, offering a robust and efficient solution for real-world applications.</li>
+</ul>
+
+<h3>Title: MARMOT: Masked Autoencoder for Modeling Transient Imaging</h3>
+<ul>
+<li><strong>Authors: </strong>Siyuan Shen, Ziheng Wang, Xingyue Peng, Suan Xia, Ruiqian Li, Shiying Li, Jingyi Yu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08470">https://arxiv.org/abs/2506.08470</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08470">https://arxiv.org/pdf/2506.08470</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08470]] MARMOT: Masked Autoencoder for Modeling Transient Imaging(https://arxiv.org/abs/2506.08470)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Pretrained models have demonstrated impressive success in many modalities such as language and vision. Recent works facilitate the pretraining paradigm in imaging research. Transients are a novel modality, which are captured for an object as photon counts versus arrival times using a precisely time-resolved sensor. In particular for non-line-of-sight (NLOS) scenarios, transients of hidden objects are measured beyond the sensor's direct line of sight. Using NLOS transients, the majority of previous works optimize volume density or surfaces to reconstruct the hidden objects and do not transfer priors learned from datasets. In this work, we present a masked autoencoder for modeling transient imaging, or MARMOT, to facilitate NLOS applications. Our MARMOT is a self-supervised model pretrianed on massive and diverse NLOS transient datasets. Using a Transformer-based encoder-decoder, MARMOT learns features from partially masked transients via a scanning pattern mask (SPM), where the unmasked subset is functionally equivalent to arbitrary sampling, and predicts full measurements. Pretrained on TransVerse-a synthesized transient dataset of 500K 3D models-MARMOT adapts to downstream imaging tasks using direct feature transfer or decoder finetuning. Comprehensive experiments are carried out in comparisons with state-of-the-art methods. Quantitative and qualitative results demonstrate the efficiency of our MARMOT.</li>
+</ul>
+
+<h3>Title: Context-aware TFL: A Universal Context-aware Contrastive Learning Framework for Temporal Forgery Localization</h3>
+<ul>
+<li><strong>Authors: </strong>Qilin Yin, Wei Lu, Xiangyang Luo, Xiaochun Cao</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.MM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08493">https://arxiv.org/abs/2506.08493</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08493">https://arxiv.org/pdf/2506.08493</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08493]] Context-aware TFL: A Universal Context-aware Contrastive Learning Framework for Temporal Forgery Localization(https://arxiv.org/abs/2506.08493)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Most research efforts in the multimedia forensics domain have focused on detecting forgery audio-visual content and reached sound achievements. However, these works only consider deepfake detection as a classification task and ignore the case where partial segments of the video are tampered with. Temporal forgery localization (TFL) of small fake audio-visual clips embedded in real videos is still challenging and more in line with realistic application scenarios. To resolve this issue, we propose a universal context-aware contrastive learning framework (UniCaCLF) for TFL. Our approach leverages supervised contrastive learning to discover and identify forged instants by means of anomaly detection, allowing for the precise localization of temporal forged segments. To this end, we propose a novel context-aware perception layer that utilizes a heterogeneous activation operation and an adaptive context updater to construct a context-aware contrastive objective, which enhances the discriminability of forged instant features by contrasting them with genuine instant features in terms of their distances to the global context. An efficient context-aware contrastive coding is introduced to further push the limit of instant feature distinguishability between genuine and forged instants in a supervised sample-by-sample manner, suppressing the cross-sample influence to improve temporal forgery localization performance. Extensive experimental results over five public datasets demonstrate that our proposed UniCaCLF significantly outperforms the state-of-the-art competing algorithms.</li>
+</ul>
+
+<h3>Title: LiftVSR: Lifting Image Diffusion to Video Super-Resolution via Hybrid Temporal Modeling with Only 4$\times$RTX 4090s</h3>
+<ul>
+<li><strong>Authors: </strong>Xijun Wang, Xin Li, Bingchen Li, Zhibo Chen</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08529">https://arxiv.org/abs/2506.08529</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08529">https://arxiv.org/pdf/2506.08529</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08529]] LiftVSR: Lifting Image Diffusion to Video Super-Resolution via Hybrid Temporal Modeling with Only 4$\times$RTX 4090s(https://arxiv.org/abs/2506.08529)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion models have significantly advanced video super-resolution (VSR) by enhancing perceptual quality, largely through elaborately designed temporal modeling to ensure inter-frame consistency. However, existing methods usually suffer from limited temporal coherence and prohibitively high computational costs (e.g., typically requiring over 8 NVIDIA A100-80G GPUs), especially for long videos. In this work, we propose LiftVSR, an efficient VSR framework that leverages and elevates the image-wise diffusion prior from PixArt-$\alpha$, achieving state-of-the-art results using only 4$\times$RTX 4090 GPUs. To balance long-term consistency and efficiency, we introduce a hybrid temporal modeling mechanism that decomposes temporal learning into two complementary components: (i) Dynamic Temporal Attention (DTA) for fine-grained temporal modeling within short frame segment ($\textit{i.e.}$, low complexity), and (ii) Attention Memory Cache (AMC) for long-term temporal modeling across segments ($\textit{i.e.}$, consistency). Specifically, DTA identifies multiple token flows across frames within multi-head query and key tokens to warp inter-frame contexts in the value tokens. AMC adaptively aggregates historical segment information via a cache unit, ensuring long-term coherence with minimal overhead. To further stabilize the cache interaction during inference, we introduce an asymmetric sampling strategy that mitigates feature mismatches arising from different diffusion sampling steps. Extensive experiments on several typical VSR benchmarks have demonstrated that LiftVSR achieves impressive performance with significantly lower computational costs.</li>
+</ul>
+
+<h3>Title: TrajFlow: Multi-modal Motion Prediction via Flow Matching</h3>
+<ul>
+<li><strong>Authors: </strong>Qi Yan, Brian Zhang, Yutong Zhang, Daniel Yang, Joshua White, Di Chen, Jiachao Liu, Langechuan Liu, Binnan Zhuang, Shaoshuai Shi, Renjie Liao</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08541">https://arxiv.org/abs/2506.08541</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08541">https://arxiv.org/pdf/2506.08541</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08541]] TrajFlow: Multi-modal Motion Prediction via Flow Matching(https://arxiv.org/abs/2506.08541)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Efficient and accurate motion prediction is crucial for ensuring safety and informed decision-making in autonomous driving, particularly under dynamic real-world conditions that necessitate multi-modal forecasts. We introduce TrajFlow, a novel flow matching-based motion prediction framework that addresses the scalability and efficiency challenges of existing generative trajectory prediction methods. Unlike conventional generative approaches that employ i.i.d. sampling and require multiple inference passes to capture diverse outcomes, TrajFlow predicts multiple plausible future trajectories in a single pass, significantly reducing computational overhead while maintaining coherence across predictions. Moreover, we propose a ranking loss based on the Plackett-Luce distribution to improve uncertainty estimation of predicted trajectories. Additionally, we design a self-conditioning training technique that reuses the model's own predictions to construct noisy inputs during a second forward pass, thereby improving generalization and accelerating inference. Extensive experiments on the large-scale Waymo Open Motion Dataset (WOMD) demonstrate that TrajFlow achieves state-of-the-art performance across various key metrics, underscoring its effectiveness for safety-critical autonomous driving applications. The code and other details are available on the project website this https URL.</li>
+</ul>
+
+<h3>Title: Neighbors and relatives: How do speech embeddings reflect linguistic connections across the world?</h3>
+<ul>
+<li><strong>Authors: </strong>Tuukka Törö, Antti Suni, Juraj Šimko</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.SD</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08564">https://arxiv.org/abs/2506.08564</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08564">https://arxiv.org/pdf/2506.08564</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08564]] Neighbors and relatives: How do speech embeddings reflect linguistic connections across the world?(https://arxiv.org/abs/2506.08564)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Investigating linguistic relationships on a global scale requires analyzing diverse features such as syntax, phonology and prosody, which evolve at varying rates influenced by internal diversification, language contact, and sociolinguistic factors. Recent advances in machine learning (ML) offer complementary alternatives to traditional historical and typological approaches. Instead of relying on expert labor in analyzing specific linguistic features, these new methods enable the exploration of linguistic variation through embeddings derived directly from speech, opening new avenues for large-scale, data-driven analyses. This study employs embeddings from the fine-tuned XLS-R self-supervised language identification model voxlingua107-xls-r-300m-wav2vec, to analyze relationships between 106 world languages based on speech recordings. Using linear discriminant analysis (LDA), language embeddings are clustered and compared with genealogical, lexical, and geographical distances. The results demonstrate that embedding-based distances align closely with traditional measures, effectively capturing both global and local typological patterns. Challenges in visualizing relationships, particularly with hierarchical clustering and network-based methods, highlight the dynamic nature of language change. The findings show potential for scalable analyses of language variation based on speech embeddings, providing new perspectives on relationships among languages. By addressing methodological considerations such as corpus size and latent space dimensionality, this approach opens avenues for studying low-resource languages and bridging macro- and micro-level linguistic variation. Future work aims to extend these methods to underrepresented languages and integrate sociolinguistic variation for a more comprehensive understanding of linguistic diversity.</li>
+</ul>
+
+<h3>Title: Generating Vision-Language Navigation Instructions Incorporated Fine-Grained Alignment Annotations</h3>
+<ul>
+<li><strong>Authors: </strong>Yibo Cui, Liang Xie, Yu Zhao, Jiawei Sun, Erwei Yin</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08566">https://arxiv.org/abs/2506.08566</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08566">https://arxiv.org/pdf/2506.08566</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08566]] Generating Vision-Language Navigation Instructions Incorporated Fine-Grained Alignment Annotations(https://arxiv.org/abs/2506.08566)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Vision-Language Navigation (VLN) enables intelligent agents to navigate environments by integrating visual perception and natural language instructions, yet faces significant challenges due to the scarcity of fine-grained cross-modal alignment annotations. Existing datasets primarily focus on global instruction-trajectory matching, neglecting sub-instruction-level and entity-level alignments critical for accurate navigation action decision-making. To address this limitation, we propose FCA-NIG, a generative framework that automatically constructs navigation instructions with dual-level fine-grained cross-modal annotations. In this framework, an augmented trajectory is first divided into sub-trajectories, which are then processed through GLIP-based landmark detection, crafted instruction construction, OFA-Speaker based R2R-like instruction generation, and CLIP-powered entity selection, generating sub-instruction-trajectory pairs with entity-landmark annotations. Finally, these sub-pairs are aggregated to form a complete instruction-trajectory pair. The framework generates the FCA-R2R dataset, the first large-scale augmentation dataset featuring precise sub-instruction-sub-trajectory and entity-landmark alignments. Extensive experiments demonstrate that training with FCA-R2R significantly improves the performance of multiple state-of-the-art VLN agents, including SF, EnvDrop, RecBERT, and HAMT. Incorporating sub-instruction-trajectory alignment enhances agents' state awareness and decision accuracy, while entity-landmark alignment further boosts navigation performance and generalization. These results highlight the effectiveness of FCA-NIG in generating high-quality, scalable training data without manual annotation, advancing fine-grained cross-modal learning in complex navigation tasks.</li>
+</ul>
+
+<h3>Title: Diffusion-based Time Series Forecasting for Sewerage Systems</h3>
+<ul>
+<li><strong>Authors: </strong>Nicholas A. Pearson, Francesca Cairoli, Luca Bortolussi, Davide Russo, Francesca Zanello</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08577">https://arxiv.org/abs/2506.08577</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08577">https://arxiv.org/pdf/2506.08577</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08577]] Diffusion-based Time Series Forecasting for Sewerage Systems(https://arxiv.org/abs/2506.08577)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>We introduce a novel deep learning approach that harnesses the power of generative artificial intelligence to enhance the accuracy of contextual forecasting in sewerage systems. By developing a diffusion-based model that processes multivariate time series data, our system excels at capturing complex correlations across diverse environmental signals, enabling robust predictions even during extreme weather events. To strengthen the model's reliability, we further calibrate its predictions with a conformal inference technique, tailored for probabilistic time series data, ensuring that the resulting prediction intervals are statistically reliable and cover the true target values with a desired confidence level. Our empirical tests on real sewerage system data confirm the model's exceptional capability to deliver reliable contextual predictions, maintaining accuracy even under severe weather conditions.</li>
+</ul>
+
+<h3>Title: Flow Matching Meets PDEs: A Unified Framework for Physics-Constrained Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Giacomo Baldan, Qiang Liu, Alberto Guardone, Nils Thuerey</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CE, math.NA</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08604">https://arxiv.org/abs/2506.08604</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08604">https://arxiv.org/pdf/2506.08604</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08604]] Flow Matching Meets PDEs: A Unified Framework for Physics-Constrained Generation(https://arxiv.org/abs/2506.08604)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Generative machine learning methods, such as diffusion models and flow matching, have shown great potential in modeling complex system behaviors and building efficient surrogate models. However, these methods typically learn the underlying physics implicitly from data. We propose Physics-Based Flow Matching (PBFM), a novel generative framework that explicitly embeds physical constraints, both PDE residuals and algebraic relations, into the flow matching objective. We also introduce temporal unrolling at training time that improves the accuracy of the final, noise-free sample prediction. Our method jointly minimizes the flow matching loss and the physics-based residual loss without requiring hyperparameter tuning of their relative weights. Additionally, we analyze the role of the minimum noise level, $\sigma_{\min}$, in the context of physical constraints and evaluate a stochastic sampling strategy that helps to reduce physical residuals. Through extensive benchmarks on three representative PDE problems, we show that our approach yields up to an $8\times$ more accurate physical residuals compared to FM, while clearly outperforming existing algorithms in terms of distributional accuracy. PBFM thus provides a principled and efficient framework for surrogate modeling, uncertainty quantification, and accelerated simulation in physics and engineering applications.</li>
+</ul>
+
+<h3>Title: Sample Efficient Demonstration Selection for In-Context Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Kiran Purohit, V Venktesh, Sourangshu Bhattacharya, Avishek Anand</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08607">https://arxiv.org/abs/2506.08607</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08607">https://arxiv.org/pdf/2506.08607</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08607]] Sample Efficient Demonstration Selection for In-Context Learning(https://arxiv.org/abs/2506.08607)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>The in-context learning paradigm with LLMs has been instrumental in advancing a wide range of natural language processing tasks. The selection of few-shot examples (exemplars / demonstration samples) is essential for constructing effective prompts under context-length budget constraints. In this paper, we formulate the exemplar selection task as a top-m best arms identification problem. A key challenge in this setup is the exponentially large number of arms that need to be evaluated to identify the m-best arms. We propose CASE (Challenger Arm Sampling for Exemplar selection), a novel sample-efficient selective exploration strategy that maintains a shortlist of "challenger" arms, which are current candidates for the top-m arms. In each iteration, only one of the arms from this shortlist or the current topm set is pulled, thereby reducing sample complexity and, consequently, the number of LLM evaluations. Furthermore, we model the scores of exemplar subsets (arms) using a parameterized linear scoring function, leading to stochastic linear bandits setting. CASE achieves remarkable efficiency gains of up to 7x speedup in runtime while requiring 7x fewer LLM calls (87% reduction) without sacrificing performance compared to state-of-the-art exemplar selection methods. We release our code and data at this https URL</li>
+</ul>
+
+<h3>Title: RoboSwap: A GAN-driven Video Diffusion Framework For Unsupervised Robot Arm Swapping</h3>
+<ul>
+<li><strong>Authors: </strong>Yang Bai, Liudi Yang, George Eskandar, Fengyi Shen, Dong Chen, Mohammad Altillawi, Ziyuan Liu, Gitta Kutyniok</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08632">https://arxiv.org/abs/2506.08632</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08632">https://arxiv.org/pdf/2506.08632</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08632]] RoboSwap: A GAN-driven Video Diffusion Framework For Unsupervised Robot Arm Swapping(https://arxiv.org/abs/2506.08632)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Recent advancements in generative models have revolutionized video synthesis and editing. However, the scarcity of diverse, high-quality datasets continues to hinder video-conditioned robotic learning, limiting cross-platform generalization. In this work, we address the challenge of swapping a robotic arm in one video with another: a key step for crossembodiment learning. Unlike previous methods that depend on paired video demonstrations in the same environmental settings, our proposed framework, RoboSwap, operates on unpaired data from diverse environments, alleviating the data collection needs. RoboSwap introduces a novel video editing pipeline integrating both GANs and diffusion models, combining their isolated advantages. Specifically, we segment robotic arms from their backgrounds and train an unpaired GAN model to translate one robotic arm to another. The translated arm is blended with the original video background and refined with a diffusion model to enhance coherence, motion realism and object interaction. The GAN and diffusion stages are trained independently. Our experiments demonstrate that RoboSwap outperforms state-of-the-art video and image editing models on three benchmarks in terms of both structural coherence and motion consistency, thereby offering a robust solution for generating reliable, cross-embodiment data in robotic learning.</li>
+</ul>
+
+<h3>Title: Orientation Matters: Making 3D Generative Models Orientation-Aligned</h3>
+<ul>
+<li><strong>Authors: </strong>Yichong Lu, Yuzhuo Tian, Zijin Jiang, Yikun Zhao, Yuanbo Yang, Hao Ouyang, Haoji Hu, Huimin Yu, Yujun Shen, Yiyi Liao</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08640">https://arxiv.org/abs/2506.08640</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08640">https://arxiv.org/pdf/2506.08640</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08640]] Orientation Matters: Making 3D Generative Models Orientation-Aligned(https://arxiv.org/abs/2506.08640)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Humans intuitively perceive object shape and orientation from a single image, guided by strong priors about canonical poses. However, existing 3D generative models often produce misaligned results due to inconsistent training data, limiting their usability in downstream tasks. To address this gap, we introduce the task of orientation-aligned 3D object generation: producing 3D objects from single images with consistent orientations across categories. To facilitate this, we construct Objaverse-OA, a dataset of 14,832 orientation-aligned 3D models spanning 1,008 categories. Leveraging Objaverse-OA, we fine-tune two representative 3D generative models based on multi-view diffusion and 3D variational autoencoder frameworks to produce aligned objects that generalize well to unseen objects across various categories. Experimental results demonstrate the superiority of our method over post-hoc alignment approaches. Furthermore, we showcase downstream applications enabled by our aligned object generation, including zero-shot object orientation estimation via analysis-by-synthesis and efficient arrow-based object rotation manipulation.</li>
+</ul>
+
+<h3>Title: Time Series Representations for Classification Lie Hidden in Pretrained Vision Transformers</h3>
+<ul>
+<li><strong>Authors: </strong>Simon Roschmann, Quentin Bouniot, Vasilii Feofanov, Ievgen Redko, Zeynep Akata</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08641">https://arxiv.org/abs/2506.08641</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08641">https://arxiv.org/pdf/2506.08641</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08641]] Time Series Representations for Classification Lie Hidden in Pretrained Vision Transformers(https://arxiv.org/abs/2506.08641)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Time series classification is a fundamental task in healthcare and industry, yet the development of time series foundation models (TSFMs) remains limited by the scarcity of publicly available time series datasets. In this work, we propose Time Vision Transformer (TiViT), a framework that converts time series into images to leverage the representational power of frozen Vision Transformers (ViTs) pretrained on large-scale image datasets. First, we theoretically motivate our approach by analyzing the 2D patching of ViTs for time series, showing that it can increase the number of label-relevant tokens and reduce the sample complexity. Second, we empirically demonstrate that TiViT achieves state-of-the-art performance on standard time series classification benchmarks by utilizing the hidden representations of large OpenCLIP models. We explore the structure of TiViT representations and find that intermediate layers with high intrinsic dimension are the most effective for time series classification. Finally, we assess the alignment between TiViT and TSFM representation spaces and identify a strong complementarity, with further performance gains achieved by combining their features. Our findings reveal yet another direction for reusing vision representations in a non-visual domain.</li>
+</ul>
+
+<h3>Title: Summarization for Generative Relation Extraction in the Microbiome Domain</h3>
+<ul>
+<li><strong>Authors: </strong>Oumaima El Khettari, Solen Quiniou, Samuel Chaffron</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08647">https://arxiv.org/abs/2506.08647</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08647">https://arxiv.org/pdf/2506.08647</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08647]] Summarization for Generative Relation Extraction in the Microbiome Domain(https://arxiv.org/abs/2506.08647)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We explore a generative relation extraction (RE) pipeline tailored to the study of interactions in the intestinal microbiome, a complex and low-resource biomedical domain. Our method leverages summarization with large language models (LLMs) to refine context before extracting relations via instruction-tuned generation. Preliminary results on a dedicated corpus show that summarization improves generative RE performance by reducing noise and guiding the model. However, BERT-based RE approaches still outperform generative models. This ongoing work demonstrates the potential of generative methods to support the study of specialized domains in low-resources setting.</li>
+</ul>
+
+<h3>Title: MoSiC: Optimal-Transport Motion Trajectory for Dense Self-Supervised Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Mohammadreza Salehi, Shashanka Venkataramanan, Ioana Simion, Efstratios Gavves, Cees G. M. Snoek, Yuki M Asano</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08694">https://arxiv.org/abs/2506.08694</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08694">https://arxiv.org/pdf/2506.08694</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08694]] MoSiC: Optimal-Transport Motion Trajectory for Dense Self-Supervised Learning(https://arxiv.org/abs/2506.08694)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Dense self-supervised learning has shown great promise for learning pixel- and patch-level representations, but extending it to videos remains challenging due to the complexity of motion dynamics. Existing approaches struggle as they rely on static augmentations that fail under object deformations, occlusions, and camera movement, leading to inconsistent feature learning over time. We propose a motion-guided self-supervised learning framework that clusters dense point tracks to learn spatiotemporally consistent representations. By leveraging an off-the-shelf point tracker, we extract long-range motion trajectories and optimize feature clustering through a momentum-encoder-based optimal transport mechanism. To ensure temporal coherence, we propagate cluster assignments along tracked points, enforcing feature consistency across views despite viewpoint changes. Integrating motion as an implicit supervisory signal, our method learns representations that generalize across frames, improving robustness in dynamic scenes and challenging occlusion scenarios. By initializing from strong image-pretrained models and leveraging video data for training, we improve state-of-the-art by 1% to 6% on six image and video datasets and four evaluation benchmarks. The implementation is publicly available at our GitHub repository: this https URL</li>
+</ul>
+
+<h3>Title: Breaking the ICE: Exploring promises and challenges of benchmarks for Inference Carbon & Energy estimation for LLMs</h3>
+<ul>
+<li><strong>Authors: </strong>Samarth Sikand, Rohit Mehra, Priyavanshi Pathania, Nikhil Bamby, Vibhu Saujanya Sharma, Vikrant Kaulgud, Sanjay Podder, Adam P. Burden</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CY, cs.SE</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08727">https://arxiv.org/abs/2506.08727</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08727">https://arxiv.org/pdf/2506.08727</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08727]] Breaking the ICE: Exploring promises and challenges of benchmarks for Inference Carbon & Energy estimation for LLMs(https://arxiv.org/abs/2506.08727)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>While Generative AI stands to be one of the fastest adopted technologies ever, studies have made evident that the usage of Large Language Models (LLMs) puts significant burden on energy grids and our environment. It may prove a hindrance to the Sustainability goals of any organization. A crucial step in any Sustainability strategy is monitoring or estimating the energy consumption of various components. While there exist multiple tools for monitoring energy consumption, there is a dearth of tools/frameworks for estimating the consumption or carbon emissions. Current drawbacks of both monitoring and estimation tools include high input data points, intrusive nature, high error margin, etc. We posit that leveraging emerging LLM benchmarks and related data points can help overcome aforementioned challenges while balancing accuracy of the emission estimations. To that extent, we discuss the challenges of current approaches and present our evolving framework, R-ICE, which estimates prompt level inference carbon emissions by leveraging existing state-of-the-art(SOTA) benchmark. This direction provides a more practical and non-intrusive way to enable emerging use-cases like dynamic LLM routing, carbon accounting, etc. Our promising validation results suggest that benchmark-based modelling holds great potential for inference emission estimation and warrants further exploration from the scientific community.</li>
+</ul>
+
+<h3>Title: Factors affecting the in-context learning abilities of LLMs for dialogue state tracking</h3>
+<ul>
+<li><strong>Authors: </strong>Pradyoth Hegde, Santosh Kesiraju, Jan Švec, Šimon Sedláček, Bolaji Yusuf, Oldřich Plchot, Deepak K T, Jan Černocký</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08753">https://arxiv.org/abs/2506.08753</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08753">https://arxiv.org/pdf/2506.08753</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08753]] Factors affecting the in-context learning abilities of LLMs for dialogue state tracking(https://arxiv.org/abs/2506.08753)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>This study explores the application of in-context learning (ICL) to the dialogue state tracking (DST) problem and investigates the factors that influence its effectiveness. We use a sentence embedding based k-nearest neighbour method to retrieve the suitable demonstrations for ICL. The selected demonstrations, along with the test samples, are structured within a template as input to the LLM. We then conduct a systematic study to analyse the impact of factors related to demonstration selection and prompt context on DST performance. This work is conducted using the MultiWoZ2.4 dataset and focuses primarily on the OLMo-7B-instruct, Mistral-7B-Instruct-v0.3, and Llama3.2-3B-Instruct models. Our findings provide several useful insights on in-context learning abilities of LLMs for dialogue state tracking.</li>
+</ul>
+
+<h3>Title: AraReasoner: Evaluating Reasoning-Based LLMs for Arabic NLP</h3>
+<ul>
+<li><strong>Authors: </strong>Ahmed Hasanaath, Aisha Alansari, Ahmed Ashraf, Chafik Salmane, Hamzah Luqman, Saad Ezzini</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08768">https://arxiv.org/abs/2506.08768</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08768">https://arxiv.org/pdf/2506.08768</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08768]] AraReasoner: Evaluating Reasoning-Based LLMs for Arabic NLP(https://arxiv.org/abs/2506.08768)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Large language models (LLMs) have shown remarkable progress in reasoning abilities and general natural language processing (NLP) tasks, yet their performance on Arabic data, characterized by rich morphology, diverse dialects, and complex script, remains underexplored. This paper presents a comprehensive benchmarking study of multiple reasoning-focused LLMs, with a special emphasis on the newly introduced DeepSeek models, across a suite of fifteen Arabic NLP tasks. We experiment with various strategies, including zero-shot, few-shot, and fine-tuning. This allows us to systematically evaluate performance on datasets covering a range of applications to examine their capacity for linguistic reasoning under different levels of complexity. Our experiments reveal several key findings. First, carefully selecting just three in-context examples delivers an average uplift of over 13 F1 points on classification tasks-boosting sentiment analysis from 35.3% to 87.5% and paraphrase detection from 56.1% to 87.0%. Second, reasoning-focused DeepSeek architectures outperform a strong GPT o4-mini baseline by an average of 12 F1 points on complex inference tasks in the zero-shot setting. Third, LoRA-based fine-tuning yields up to an additional 8 points in F1 and BLEU compared to equivalent increases in model scale. The code is available at this https URL</li>
+</ul>
+
+<h3>Title: RS-MTDF: Multi-Teacher Distillation and Fusion for Remote Sensing Semi-Supervised Semantic Segmentation</h3>
+<ul>
+<li><strong>Authors: </strong>Jiayi Song, Kaiyu Li, Xiangyong Cao, Deyu Meng</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08772">https://arxiv.org/abs/2506.08772</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08772">https://arxiv.org/pdf/2506.08772</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08772]] RS-MTDF: Multi-Teacher Distillation and Fusion for Remote Sensing Semi-Supervised Semantic Segmentation(https://arxiv.org/abs/2506.08772)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Semantic segmentation in remote sensing images is crucial for various applications, yet its performance is heavily reliant on large-scale, high-quality pixel-wise annotations, which are notoriously expensive and time-consuming to acquire. Semi-supervised semantic segmentation (SSS) offers a promising alternative to mitigate this data dependency. However, existing SSS methods often struggle with the inherent distribution mismatch between limited labeled data and abundant unlabeled data, leading to suboptimal generalization. We propose that Vision Foundation Models (VFMs), pre-trained on vast and diverse datasets, possess robust generalization capabilities that can effectively bridge this distribution gap and provide strong semantic priors for SSS. Inspired by this, we introduce RS-MTDF (Multi-Teacher Distillation and Fusion), a novel framework that leverages the powerful semantic knowledge embedded in VFMs to guide semi-supervised learning in remote sensing. Specifically, RS-MTDF employs multiple frozen VFMs (\textit{e.g.}, DINOv2 and CLIP) as expert teachers, utilizing feature-level distillation to align student features with their robust representations. To further enhance discriminative power, the distilled knowledge is seamlessly fused into the student decoder. Extensive experiments on three challenging remote sensing datasets (ISPRS Potsdam, LoveDA, and DeepGlobe) demonstrate that RS-MTDF consistently achieves state-of-the-art performance. Notably, our method outperforms existing approaches across various label ratios on LoveDA and secures the highest IoU in the majority of semantic categories. These results underscore the efficacy of multi-teacher VFM guidance in significantly enhancing both generalization and semantic understanding for remote sensing segmentation. Ablation studies further validate the contribution of each proposed module.</li>
+</ul>
+
+<h3>Title: Gaussian2Scene: 3D Scene Representation Learning via Self-supervised Learning with 3D Gaussian Splatting</h3>
+<ul>
+<li><strong>Authors: </strong>Keyi Liu, Weidong Yang, Ben Fei, Ying He</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08777">https://arxiv.org/abs/2506.08777</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08777">https://arxiv.org/pdf/2506.08777</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08777]] Gaussian2Scene: 3D Scene Representation Learning via Self-supervised Learning with 3D Gaussian Splatting(https://arxiv.org/abs/2506.08777)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Self-supervised learning (SSL) for point cloud pre-training has become a cornerstone for many 3D vision tasks, enabling effective learning from large-scale unannotated data. At the scene level, existing SSL methods often incorporate volume rendering into the pre-training framework, using RGB-D images as reconstruction signals to facilitate cross-modal learning. This strategy promotes alignment between 2D and 3D modalities and enables the model to benefit from rich visual cues in the RGB-D inputs. However, these approaches are limited by their reliance on implicit scene representations and high memory demands. Furthermore, since their reconstruction objectives are applied only in 2D space, they often fail to capture underlying 3D geometric structures. To address these challenges, we propose Gaussian2Scene, a novel scene-level SSL framework that leverages the efficiency and explicit nature of 3D Gaussian Splatting (3DGS) for pre-training. The use of 3DGS not only alleviates the computational burden associated with volume rendering but also supports direct 3D scene reconstruction, thereby enhancing the geometric understanding of the backbone network. Our approach follows a progressive two-stage training strategy. In the first stage, a dual-branch masked autoencoder learns both 2D and 3D scene representations. In the second stage, we initialize training with reconstructed point clouds and further supervise learning using the geometric locations of Gaussian primitives and rendered RGB images. This process reinforces both geometric and cross-modal learning. We demonstrate the effectiveness of Gaussian2Scene across several downstream 3D object detection tasks, showing consistent improvements over existing pre-training methods.</li>
+</ul>
+
+<h3>Title: Landsat-Bench: Datasets and Benchmarks for Landsat Foundation Models</h3>
+<ul>
+<li><strong>Authors: </strong>Isaac Corley, Lakshay Sharma, Ruth Crasto</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08780">https://arxiv.org/abs/2506.08780</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08780">https://arxiv.org/pdf/2506.08780</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08780]] Landsat-Bench: Datasets and Benchmarks for Landsat Foundation Models(https://arxiv.org/abs/2506.08780)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>The Landsat program offers over 50 years of globally consistent Earth imagery. However, the lack of benchmarks for this data constrains progress towards Landsat-based Geospatial Foundation Models (GFM). In this paper, we introduce Landsat-Bench, a suite of three benchmarks with Landsat imagery that adapt from existing remote sensing datasets -- EuroSAT-L, BigEarthNet-L, and LC100-L. We establish baseline and standardized evaluation methods across both common architectures and Landsat foundation models pretrained on the SSL4EO-L dataset. Notably, we provide evidence that SSL4EO-L pretrained GFMs extract better representations for downstream tasks in comparison to ImageNet, including performance gains of +4% OA and +5.1% mAP on EuroSAT-L and BigEarthNet-L.</li>
+</ul>
+
+<h3>Title: HomographyAD: Deep Anomaly Detection Using Self Homography Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Jongyub Seok, Chanjin Kang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08784">https://arxiv.org/abs/2506.08784</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08784">https://arxiv.org/pdf/2506.08784</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08784]] HomographyAD: Deep Anomaly Detection Using Self Homography Learning(https://arxiv.org/abs/2506.08784)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Anomaly detection (AD) is a task that distinguishes normal and abnormal data, which is important for applying automation technologies of the manufacturing facilities. For MVTec dataset that is a representative AD dataset for industrial environment, many recent works have shown remarkable performances. However, the existing anomaly detection works have a limitation of showing good performance for fully-aligned datasets only, unlike real-world industrial environments. To solve this limitation, we propose HomographyAD, a novel deep anomaly detection methodology based on the ImageNet-pretrained network, which is specially designed for actual industrial dataset. Specifically, we first suggest input foreground alignment using the deep homography estimation method. In addition, we fine-tune the model by self homography learning to learn additional shape information from normal samples. Finally, we conduct anomaly detection based on the measure of how far the feature of test sample is from the distribution of the extracted normal features. By applying our proposed method to various existing AD approaches, we show performance enhancement through extensive experiments.</li>
+</ul>
+
+<h3>Title: A PDE-Based Image Dehazing Method via Atmospheric Scattering Theory</h3>
+<ul>
+<li><strong>Authors: </strong>Zhuoran Zheng</a></li>
+<li><strong>Subjects: </strong>cs.CV, eess.IV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08793">https://arxiv.org/abs/2506.08793</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08793">https://arxiv.org/pdf/2506.08793</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08793]] A PDE-Based Image Dehazing Method via Atmospheric Scattering Theory(https://arxiv.org/abs/2506.08793)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>This paper presents a novel partial differential equation (PDE) framework for single-image dehazing. By integrating the atmospheric scattering model with nonlocal regularization and dark channel prior, we propose the improved PDE: \[ -\text{div}\left(D(\nabla u)\nabla u\right) + \lambda(t) G(u) = \Phi(I,t,A) \] where $D(\nabla u) = (|\nabla u| + \epsilon)^{-1}$ is the edge-preserving diffusion coefficient, $G(u)$ is the Gaussian convolution operator, and $\lambda(t)$ is the adaptive regularization parameter based on transmission map $t$. We prove the existence and uniqueness of weak solutions in $H_0^1(\Omega)$ using Lax-Milgram theorem, and implement an efficient fixed-point iteration scheme accelerated by PyTorch GPU computation. The experimental results demonstrate that this method is a promising deghazing solution that can be generalized to the deep model paradigm.</li>
+</ul>
+
+<h3>Title: Flow Diverse and Efficient: Learning Momentum Flow Matching via Stochastic Velocity Field Sampling</h3>
+<ul>
+<li><strong>Authors: </strong>Zhiyuan Ma, Ruixun Liu, Sixian Liu, Jianjun Li, Bowen Zhou</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08796">https://arxiv.org/abs/2506.08796</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08796">https://arxiv.org/pdf/2506.08796</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08796]] Flow Diverse and Efficient: Learning Momentum Flow Matching via Stochastic Velocity Field Sampling(https://arxiv.org/abs/2506.08796)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Recently, the rectified flow (RF) has emerged as the new state-of-the-art among flow-based diffusion models due to its high efficiency advantage in straight path sampling, especially with the amazing images generated by a series of RF models such as Flux 1.0 and SD 3.0. Although a straight-line connection between the noisy and natural data distributions is intuitive, fast, and easy to optimize, it still inevitably leads to: 1) Diversity concerns, which arise since straight-line paths only cover a fairly restricted sampling space. 2) Multi-scale noise modeling concerns, since the straight line flow only needs to optimize the constant velocity field $\bm v$ between the two distributions $\bm\pi_0$ and $\bm\pi_1$. In this work, we present Discretized-RF, a new family of rectified flow (also called momentum flow models since they refer to the previous velocity component and the random velocity component in each diffusion step), which discretizes the straight path into a series of variable velocity field sub-paths (namely ``momentum fields'') to expand the search space, especially when close to the distribution $p_\text{noise}$. Different from the previous case where noise is directly superimposed on $\bm x$, we introduce noise on the velocity $\bm v$ of the sub-path to change its direction in order to improve the diversity and multi-scale noise modeling abilities. Experimental results on several representative datasets demonstrate that learning momentum flow matching by sampling random velocity fields will produce trajectories that are both diverse and efficient, and can consistently generate high-quality and diverse results. Code is available at this https URL.</li>
+</ul>
+
+<h3>Title: HunyuanVideo-HOMA: Generic Human-Object Interaction in Multimodal Driven Human Animation</h3>
+<ul>
+<li><strong>Authors: </strong>Ziyao Huang, Zixiang Zhou, Juan Cao, Yifeng Ma, Yi Chen, Zejing Rao, Zhiyong Xu, Hongmei Wang, Qin Lin, Yuan Zhou, Qinglin Lu, Fan Tang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08797">https://arxiv.org/abs/2506.08797</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08797">https://arxiv.org/pdf/2506.08797</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08797]] HunyuanVideo-HOMA: Generic Human-Object Interaction in Multimodal Driven Human Animation(https://arxiv.org/abs/2506.08797)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>To address key limitations in human-object interaction (HOI) video generation -- specifically the reliance on curated motion data, limited generalization to novel objects/scenarios, and restricted accessibility -- we introduce HunyuanVideo-HOMA, a weakly conditioned multimodal-driven framework. HunyuanVideo-HOMA enhances controllability and reduces dependency on precise inputs through sparse, decoupled motion guidance. It encodes appearance and motion signals into the dual input space of a multimodal diffusion transformer (MMDiT), fusing them within a shared context space to synthesize temporally consistent and physically plausible interactions. To optimize training, we integrate a parameter-space HOI adapter initialized from pretrained MMDiT weights, preserving prior knowledge while enabling efficient adaptation, and a facial cross-attention adapter for anatomically accurate audio-driven lip synchronization. Extensive experiments confirm state-of-the-art performance in interaction naturalness and generalization under weak supervision. Finally, HunyuanVideo-HOMA demonstrates versatility in text-conditioned generation and interactive object manipulation, supported by a user-friendly demo interface. The project page is at this https URL.</li>
+</ul>
+
+<h3>Title: HiSin: Efficient High-Resolution Sinogram Inpainting via Resolution-Guided Progressive Inference</h3>
+<ul>
+<li><strong>Authors: </strong>Jiaze E, Srutarshi Banerjee, Tekin Bicer, Guannan Wang, Yanfu Zhang, Bin Ren</a></li>
+<li><strong>Subjects: </strong>cs.CV, eess.IV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08809">https://arxiv.org/abs/2506.08809</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08809">https://arxiv.org/pdf/2506.08809</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08809]] HiSin: Efficient High-Resolution Sinogram Inpainting via Resolution-Guided Progressive Inference(https://arxiv.org/abs/2506.08809)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>High-resolution sinogram inpainting is essential for computed tomography reconstruction, as missing high-frequency projections can lead to visible artifacts and diagnostic errors. Diffusion models are well-suited for this task due to their robustness and detail-preserving capabilities, but their application to high-resolution inputs is limited by excessive memory and computational demands. To address this limitation, we propose HiSin, a novel diffusion based framework for efficient sinogram inpainting via resolution-guided progressive inference. It progressively extracts global structure at low resolution and defers high-resolution inference to small patches, enabling memory-efficient inpainting. It further incorporates frequency-aware patch skipping and structure-adaptive step allocation to reduce redundant computation. Experimental results show that HiSin reduces peak memory usage by up to 31.25% and inference time by up to 18.15%, and maintains inpainting accuracy across datasets, resolutions, and mask conditions.</li>
+</ul>
+
+<h3>Title: IMAGIC-500: IMputation benchmark on A Generative Imaginary Country (500k samples)</h3>
+<ul>
+<li><strong>Authors: </strong>Siyi Sun, David Antony Selby, Yunchuan Huang, Sebastian Vollmer, Seth Flaxman, Anisoara Calinescu</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CE</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08844">https://arxiv.org/abs/2506.08844</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08844">https://arxiv.org/pdf/2506.08844</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08844]] IMAGIC-500: IMputation benchmark on A Generative Imaginary Country (500k samples)(https://arxiv.org/abs/2506.08844)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Missing data imputation in tabular datasets remains a pivotal challenge in data science and machine learning, particularly within socioeconomic research. However, real-world socioeconomic datasets are typically subject to strict data protection protocols, which often prohibit public sharing, even for synthetic derivatives. This severely limits the reproducibility and accessibility of benchmark studies in such settings. Further, there are very few publicly available synthetic datasets. Thus, there is limited availability of benchmarks for systematic evaluation of imputation methods on socioeconomic datasets, whether real or synthetic. In this study, we utilize the World Bank's publicly available synthetic dataset, Synthetic Data for an Imaginary Country, which closely mimics a real World Bank household survey while being fully public, enabling broad access for methodological research. With this as a starting point, we derived the IMAGIC-500 dataset: we select a subset of 500k individuals across approximately 100k households with 19 socioeconomic features, designed to reflect the hierarchical structure of real-world household surveys. This paper introduces a comprehensive missing data imputation benchmark on IMAGIC-500 under various missing mechanisms (MCAR, MAR, MNAR) and missingness ratios (10\%, 20\%, 30\%, 40\%, 50\%). Our evaluation considers the imputation accuracy for continuous and categorical variables, computational efficiency, and impact on downstream predictive tasks, such as estimating educational attainment at the individual level. The results highlight the strengths and weaknesses of statistical, traditional machine learning, and deep learning imputation techniques, including recent diffusion-based methods. The IMAGIC-500 dataset and benchmark aim to facilitate the development of robust imputation algorithms and foster reproducible social science research.</li>
+</ul>
+
+<h3>Title: Adapting Vision-Language Foundation Model for Next Generation Medical Ultrasound Image Analysis</h3>
+<ul>
+<li><strong>Authors: </strong>Jingguo Qu, Xinyang Han, Tonghuan Xiao, Jia Ai, Juan Wu, Tong Zhao, Jing Qin, Ann Dorothy King, Winnie Chiu-Wing Chu, Jing Cai, Michael Tin-Cheung Yingınst</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08849">https://arxiv.org/abs/2506.08849</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08849">https://arxiv.org/pdf/2506.08849</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08849]] Adapting Vision-Language Foundation Model for Next Generation Medical Ultrasound Image Analysis(https://arxiv.org/abs/2506.08849)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Medical ultrasonography is an essential imaging technique for examining superficial organs and tissues, including lymph nodes, breast, and thyroid. It employs high-frequency ultrasound waves to generate detailed images of the internal structures of the human body. However, manually contouring regions of interest in these images is a labor-intensive task that demands expertise and often results in inconsistent interpretations among individuals. Vision-language foundation models, which have excelled in various computer vision applications, present new opportunities for enhancing ultrasound image analysis. Yet, their performance is hindered by the significant differences between natural and medical imaging domains. This research seeks to overcome these challenges by developing domain adaptation methods for vision-language foundation models. In this study, we explore the fine-tuning pipeline for vision-language foundation models by utilizing large language model as text refiner with special-designed adaptation strategies and task-driven heads. Our approach has been extensively evaluated on six ultrasound datasets and two tasks: segmentation and classification. The experimental results show that our method can effectively improve the performance of vision-language foundation models for ultrasound image analysis, and outperform the existing state-of-the-art vision-language and pure foundation models. The source code of this study is available at \href{this https URL}{GitHub}.</li>
+</ul>
+
+<h3>Title: InfoDPCCA: Information-Theoretic Dynamic Probabilistic Canonical Correlation Analysis</h3>
+<ul>
+<li><strong>Authors: </strong>Shiqin Tang, Shujian Yu</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.IT</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08884">https://arxiv.org/abs/2506.08884</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08884">https://arxiv.org/pdf/2506.08884</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08884]] InfoDPCCA: Information-Theoretic Dynamic Probabilistic Canonical Correlation Analysis(https://arxiv.org/abs/2506.08884)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Extracting meaningful latent representations from high-dimensional sequential data is a crucial challenge in machine learning, with applications spanning natural science and engineering. We introduce InfoDPCCA, a dynamic probabilistic Canonical Correlation Analysis (CCA) framework designed to model two interdependent sequences of observations. InfoDPCCA leverages a novel information-theoretic objective to extract a shared latent representation that captures the mutual structure between the data streams and balances representation compression and predictive sufficiency while also learning separate latent components that encode information specific to each sequence. Unlike prior dynamic CCA models, such as DPCCA, our approach explicitly enforces the shared latent space to encode only the mutual information between the sequences, improving interpretability and robustness. We further introduce a two-step training scheme to bridge the gap between information-theoretic representation learning and generative modeling, along with a residual connection mechanism to enhance training stability. Through experiments on synthetic and medical fMRI data, we demonstrate that InfoDPCCA excels as a tool for representation learning. Code of InfoDPCCA is available at this https URL.</li>
+</ul>
+
+<h3>Title: Product of Experts for Visual Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Yunzhi Zhang, Carson Murtuza-Lanier, Zizhang Li, Yilun Du, Jiajun Wu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08894">https://arxiv.org/abs/2506.08894</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08894">https://arxiv.org/pdf/2506.08894</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08894]] Product of Experts for Visual Generation(https://arxiv.org/abs/2506.08894)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Modern neural models capture rich priors and have complementary knowledge over shared data domains, e.g., images and videos. Integrating diverse knowledge from multiple sources -- including visual generative models, visual language models, and sources with human-crafted knowledge such as graphics engines and physics simulators -- remains under-explored. We propose a Product of Experts (PoE) framework that performs inference-time knowledge composition from heterogeneous models. This training-free approach samples from the product distribution across experts via Annealed Importance Sampling (AIS). Our framework shows practical benefits in image and video synthesis tasks, yielding better controllability than monolithic methods and additionally providing flexible user interfaces for specifying visual generation goals.</li>
+</ul>
+
+<h3>Title: MIRAGE: Multimodal foundation model and benchmark for comprehensive retinal OCT image analysis</h3>
+<ul>
+<li><strong>Authors: </strong>José Morano, Botond Fazekas, Emese Sükei, Ronald Fecso, Taha Emre, Markus Gumpinger, Georg Faustmann, Marzieh Oghbaie, Ursula Schmidt-Erfurth, Hrvoje Bogunović</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08900">https://arxiv.org/abs/2506.08900</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08900">https://arxiv.org/pdf/2506.08900</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08900]] MIRAGE: Multimodal foundation model and benchmark for comprehensive retinal OCT image analysis(https://arxiv.org/abs/2506.08900)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Artificial intelligence (AI) has become a fundamental tool for assisting clinicians in analyzing ophthalmic images, such as optical coherence tomography (OCT). However, developing AI models often requires extensive annotation, and existing models tend to underperform on independent, unseen data. Foundation models (FMs), large AI models trained on vast unlabeled datasets, have shown promise in overcoming these challenges. Nonetheless, available FMs for ophthalmology lack extensive validation, especially for segmentation tasks, and focus on a single imaging modality. In this context, we propose MIRAGE, a novel multimodal FM for the analysis of OCT and scanning laser ophthalmoscopy (SLO) images. Additionally, we propose a new evaluation benchmark with OCT/SLO classification and segmentation tasks. The comparison with general and specialized FMs and segmentation methods shows the superiority of MIRAGE in both types of tasks, highlighting its suitability as a basis for the development of robust AI systems for retinal OCT image analysis. Both MIRAGE and the evaluation benchmark are publicly available: this https URL.</li>
+</ul>
+
+<h3>Title: Intention-Conditioned Flow Occupancy Models</h3>
+<ul>
+<li><strong>Authors: </strong>Chongyi Zheng, Seohong Park, Sergey Levine, Benjamin Eysenbach</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08902">https://arxiv.org/abs/2506.08902</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08902">https://arxiv.org/pdf/2506.08902</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08902]] Intention-Conditioned Flow Occupancy Models(https://arxiv.org/abs/2506.08902)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model, generative</a></li>
+<li><strong>Abstract: </strong>Large-scale pre-training has fundamentally changed how machine learning research is done today: large foundation models are trained once, and then can be used by anyone in the community (including those without data or compute resources to train a model from scratch) to adapt and fine-tune to specific tasks. Applying this same framework to reinforcement learning (RL) is appealing because it offers compelling avenues for addressing core challenges in RL, including sample efficiency and robustness. However, there remains a fundamental challenge to pre-train large models in the context of RL: actions have long-term dependencies, so training a foundation model that reasons across time is important. Recent advances in generative AI have provided new tools for modeling highly complex distributions. In this paper, we build a probabilistic model to predict which states an agent will visit in the temporally distant future (i.e., an occupancy measure) using flow matching. As large datasets are often constructed by many distinct users performing distinct tasks, we include in our model a latent variable capturing the user intention. This intention increases the expressivity of our model, and enables adaptation with generalized policy improvement. We call our proposed method intention-conditioned flow occupancy models (InFOM). Comparing with alternative methods for pre-training, our experiments on $36$ state-based and $4$ image-based benchmark tasks demonstrate that the proposed method achieves $1.8 \times$ median improvement in returns and increases success rates by $36\%$. Website: this https URL Code: this https URL</li>
+</ul>
+
+<h3>Title: Quantifying Mix Network Privacy Erosion with Generative Models</h3>
+<ul>
+<li><strong>Authors: </strong>Vasilios Mavroudis, Tariq Elahi</a></li>
+<li><strong>Subjects: </strong>cs.CR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08918">https://arxiv.org/abs/2506.08918</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08918">https://arxiv.org/pdf/2506.08918</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08918]] Quantifying Mix Network Privacy Erosion with Generative Models(https://arxiv.org/abs/2506.08918)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Modern mix networks improve over Tor and provide stronger privacy guarantees by robustly obfuscating metadata. As long as a message is routed through at least one honest mixnode, the privacy of the users involved is safeguarded. However, the complexity of the mixing mechanisms makes it difficult to estimate the cumulative privacy erosion occurring over time. This work uses a generative model trained on mixnet traffic to estimate the loss of privacy when users communicate persistently over a period of time. We train our large-language model from scratch on our specialized network traffic ``language'' and then use it to measure the sender-message unlinkability in various settings (e.g. mixing strategies, security parameters, observation window). Our findings reveal notable differences in privacy levels among mix strategies, even when they have similar mean latencies. In comparison, we demonstrate the limitations of traditional privacy metrics, such as entropy and log-likelihood, in fully capturing an adversary's potential to synthesize information from multiple observations. Finally, we show that larger models exhibit greater sample efficiency and superior capabilities implying that further advancements in transformers will consequently enhance the accuracy of model-based privacy estimates.</li>
+</ul>
+
+<h3>Title: BioLangFusion: Multimodal Fusion of DNA, mRNA, and Protein Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Amina Mollaysa, Artem Moskale, Pushpak Pati, Tommaso Mansi, Mangal Prakash, Rui Liao</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08936">https://arxiv.org/abs/2506.08936</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08936">https://arxiv.org/pdf/2506.08936</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08936]] BioLangFusion: Multimodal Fusion of DNA, mRNA, and Protein Language Models(https://arxiv.org/abs/2506.08936)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>We present BioLangFusion, a simple approach for integrating pre-trained DNA, mRNA, and protein language models into unified molecular representations. Motivated by the central dogma of molecular biology (information flow from gene to transcript to protein), we align per-modality embeddings at the biologically meaningful codon level (three nucleotides encoding one amino acid) to ensure direct cross-modal correspondence. BioLangFusion studies three standard fusion techniques: (i) codon-level embedding concatenation, (ii) entropy-regularized attention pooling inspired by multiple-instance learning, and (iii) cross-modal multi-head attention -- each technique providing a different inductive bias for combining modality-specific signals. These methods require no additional pre-training or modification of the base models, allowing straightforward integration with existing sequence-based foundation models. Across five molecular property prediction tasks, BioLangFusion outperforms strong unimodal baselines, showing that even simple fusion of pre-trained models can capture complementary multi-omic information with minimal overhead.</li>
+</ul>
+
+<h3>Title: SSS: Semi-Supervised SAM-2 with Efficient Prompting for Medical Imaging Segmentation</h3>
+<ul>
+<li><strong>Authors: </strong>Hongjie Zhu, Xiwei Liu, Rundong Xue, Zeyu Zhang, Yong Xu, Daji Ergu, Ying Cai, Yang Zhao</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08949">https://arxiv.org/abs/2506.08949</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08949">https://arxiv.org/pdf/2506.08949</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08949]] SSS: Semi-Supervised SAM-2 with Efficient Prompting for Medical Imaging Segmentation(https://arxiv.org/abs/2506.08949)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>In the era of information explosion, efficiently leveraging large-scale unlabeled data while minimizing the reliance on high-quality pixel-level annotations remains a critical challenge in the field of medical imaging. Semi-supervised learning (SSL) enhances the utilization of unlabeled data by facilitating knowledge transfer, significantly improving the performance of fully supervised models and emerging as a highly promising research direction in medical image analysis. Inspired by the ability of Vision Foundation Models (e.g., SAM-2) to provide rich prior knowledge, we propose SSS (Semi-Supervised SAM-2), a novel approach that leverages SAM-2's robust feature extraction capabilities to uncover latent knowledge in unlabeled medical images, thus effectively enhancing feature support for fully supervised medical image segmentation. Specifically, building upon the single-stream "weak-to-strong" consistency regularization framework, this paper introduces a Discriminative Feature Enhancement (DFE) mechanism to further explore the feature discrepancies introduced by various data augmentation strategies across multiple views. By leveraging feature similarity and dissimilarity across multi-scale augmentation techniques, the method reconstructs and models the features, thereby effectively optimizing the salient regions. Furthermore, a prompt generator is developed that integrates Physical Constraints with a Sliding Window (PCSW) mechanism to generate input prompts for unlabeled data, fulfilling SAM-2's requirement for additional prompts. Extensive experiments demonstrate the superiority of the proposed method for semi-supervised medical image segmentation on two multi-label datasets, i.e., ACDC and BHSD. Notably, SSS achieves an average Dice score of 53.15 on BHSD, surpassing the previous state-of-the-art method by +3.65 Dice. Code will be available at this https URL.</li>
+</ul>
+
+<h3>Title: Segment Concealed Objects with Incomplete Supervision</h3>
+<ul>
+<li><strong>Authors: </strong>Chunming He, Kai Li, Yachao Zhang, Ziyun Yang, Youwei Pang, Longxiang Tang, Chengyu Fang, Yulun Zhang, Linghe Kong, Xiu Li, Sina Farsiu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08955">https://arxiv.org/abs/2506.08955</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08955">https://arxiv.org/pdf/2506.08955</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08955]] Segment Concealed Objects with Incomplete Supervision(https://arxiv.org/abs/2506.08955)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Incompletely-Supervised Concealed Object Segmentation (ISCOS) involves segmenting objects that seamlessly blend into their surrounding environments, utilizing incompletely annotated data, such as weak and semi-annotations, for model training. This task remains highly challenging due to (1) the limited supervision provided by the incompletely annotated training data, and (2) the difficulty of distinguishing concealed objects from the background, which arises from the intrinsic similarities in concealed scenarios. In this paper, we introduce the first unified method for ISCOS to address these challenges. To tackle the issue of incomplete supervision, we propose a unified mean-teacher framework, SEE, that leverages the vision foundation model, ``\emph{Segment Anything Model (SAM)}'', to generate pseudo-labels using coarse masks produced by the teacher model as prompts. To mitigate the effect of low-quality segmentation masks, we introduce a series of strategies for pseudo-label generation, storage, and supervision. These strategies aim to produce informative pseudo-labels, store the best pseudo-labels generated, and select the most reliable components to guide the student model, thereby ensuring robust network training. Additionally, to tackle the issue of intrinsic similarity, we design a hybrid-granularity feature grouping module that groups features at different granularities and aggregates these results. By clustering similar features, this module promotes segmentation coherence, facilitating more complete segmentation for both single-object and multiple-object images. We validate the effectiveness of our approach across multiple ISCOS tasks, and experimental results demonstrate that our method achieves state-of-the-art performance. Furthermore, SEE can serve as a plug-and-play solution, enhancing the performance of existing models.</li>
+</ul>
+
+<h3>Title: ORIDa: Object-centric Real-world Image Composition Dataset</h3>
+<ul>
+<li><strong>Authors: </strong>Jinwoo Kim, Sangmin Han, Jinho Jeong, Jiwoo Choi, Dongyoung Kim, Seon Joo Kim</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08964">https://arxiv.org/abs/2506.08964</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08964">https://arxiv.org/pdf/2506.08964</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08964]] ORIDa: Object-centric Real-world Image Composition Dataset(https://arxiv.org/abs/2506.08964)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Object compositing, the task of placing and harmonizing objects in images of diverse visual scenes, has become an important task in computer vision with the rise of generative models. However, existing datasets lack the diversity and scale required to comprehensively explore real-world scenarios. We introduce ORIDa (Object-centric Real-world Image Composition Dataset), a large-scale, real-captured dataset containing over 30,000 images featuring 200 unique objects, each of which is presented across varied positions and scenes. ORIDa has two types of data: factual-counterfactual sets and factual-only scenes. The factual-counterfactual sets consist of four factual images showing an object in different positions within a scene and a single counterfactual (or background) image of the scene without the object, resulting in five images per scene. The factual-only scenes include a single image containing an object in a specific context, expanding the variety of environments. To our knowledge, ORIDa is the first publicly available dataset with its scale and complexity for real-world image composition. Extensive analysis and experiments highlight the value of ORIDa as a resource for advancing further research in object compositing.</li>
+</ul>
+
+<h3>Title: GFRIEND: Generative Few-shot Reward Inference through EfficieNt DPO</h3>
+<ul>
+<li><strong>Authors: </strong>Yiyang Zhao, Huiyu Bai, Xuejiao Zhao</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08965">https://arxiv.org/abs/2506.08965</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08965">https://arxiv.org/pdf/2506.08965</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08965]] GFRIEND: Generative Few-shot Reward Inference through EfficieNt DPO(https://arxiv.org/abs/2506.08965)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The ability to train high-performing reward models with few-shot data is critical for enhancing the efficiency and scalability of Reinforcement Learning from Human Feedback (RLHF). We propose a data augmentation and expansion framework that enables generative reward models trained on small datasets to achieve comparable performance to those trained on large-scale datasets. Traditional methods to train a generative reward model, such as Direct Preference Optimization (DPO), are constrained by inefficiencies in sample pairing and limited data diversity. This work introduces preference refinement, which employs Chain-of-Thought (CoT) sampling to uncover diverse and high-quality preference relationships. It also incorporates a perplexity-based scoring mechanism to assign nuanced preference levels and utilizes Multi-level Direct Preference Optimization (M-DPO) to enable the model to capture finer-grained preference differences between samples. Experimental results demonstrate that the proposed method significantly enhances data efficiency and model performance, enabling reward models trained in a few-shot setting to achieve results on par with those trained on large-scale datasets. This study underscores the potential of data-efficient strategies in advancing reward model optimization, offering a robust solution for low-resource RLHF applications.</li>
+</ul>
+
+<h3>Title: On Finetuning Tabular Foundation Models</h3>
+<ul>
+<li><strong>Authors: </strong>Ivan Rubachev, Akim Kotelnikov, Nikolay Kartashev</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08982">https://arxiv.org/abs/2506.08982</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08982">https://arxiv.org/pdf/2506.08982</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08982]] On Finetuning Tabular Foundation Models(https://arxiv.org/abs/2506.08982)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model, in-context</a></li>
+<li><strong>Abstract: </strong>Foundation models are an emerging research direction in tabular deep learning. Notably, TabPFNv2 recently claimed superior performance over traditional GBDT-based methods on small-scale datasets using an in-context learning paradigm, which does not adapt model parameters to target datasets. However, the optimal finetuning approach for adapting tabular foundational models, and how this adaptation reshapes their internal mechanisms, remains underexplored. While prior works studied finetuning for earlier foundational models, inconsistent findings and TabPFNv2's unique architecture necessitate fresh investigation. To address these questions, we first systematically evaluate various finetuning strategies on diverse datasets. Our findings establish full finetuning as the most practical solution for TabPFNv2 in terms of time-efficiency and effectiveness. We then investigate how finetuning alters TabPFNv2's inner mechanisms, drawing an analogy to retrieval-augmented models. We reveal that the success of finetuning stems from the fact that after gradient-based adaptation, the dot products of the query-representations of test objects and the key-representations of in-context training objects more accurately reflect their target similarity. This improved similarity allows finetuned TabPFNv2 to better approximate target dependency by appropriately weighting relevant in-context samples, improving the retrieval-based prediction logic. From the practical perspective, we managed to finetune TabPFNv2 on datasets with up to 50K objects, observing performance improvements on almost all tasks. More precisely, on academic datasets with I.I.D. splits, finetuning allows TabPFNv2 to achieve state-of-the-art results, while on datasets with gradual temporal shifts and rich feature sets, TabPFNv2 is less stable and prior methods remain better.</li>
+</ul>
+
+<h3>Title: Do Concept Replacement Techniques Really Erase Unacceptable Concepts?</h3>
+<ul>
+<li><strong>Authors: </strong>Anudeep Das, Gurjot Singh, Prach Chantasantitam, N. Asokan</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.CR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08991">https://arxiv.org/abs/2506.08991</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08991">https://arxiv.org/pdf/2506.08991</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08991]] Do Concept Replacement Techniques Really Erase Unacceptable Concepts?(https://arxiv.org/abs/2506.08991)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Generative models, particularly diffusion-based text-to-image (T2I) models, have demonstrated astounding success. However, aligning them to avoid generating content with unacceptable concepts (e.g., offensive or copyrighted content, or celebrity likenesses) remains a significant challenge. Concept replacement techniques (CRTs) aim to address this challenge, often by trying to "erase" unacceptable concepts from models. Recently, model providers have started offering image editing services which accept an image and a text prompt as input, to produce an image altered as specified by the prompt. These are known as image-to-image (I2I) models. In this paper, we first use an I2I model to empirically demonstrate that today's state-of-the-art CRTs do not in fact erase unacceptable concepts. Existing CRTs are thus likely to be ineffective in emerging I2I scenarios, despite their proven ability to remove unwanted concepts in T2I pipelines, highlighting the need to understand this discrepancy between T2I and I2I settings. Next, we argue that a good CRT, while replacing unacceptable concepts, should preserve other concepts specified in the inputs to generative models. We call this fidelity. Prior work on CRTs have neglected fidelity in the case of unacceptable concepts. Finally, we propose the use of targeted image-editing techniques to achieve both effectiveness and fidelity. We present such a technique, AntiMirror, and demonstrate its viability.</li>
+</ul>
+
+<h3>Title: Employing self-supervised learning models for cross-linguistic child speech maturity classification</h3>
+<ul>
+<li><strong>Authors: </strong>Theo Zhang, Madurya Suresh, Anne S. Warlaumont, Kasia Hitczenko, Alejandrina Cristia, Margaret Cychosz</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.08999">https://arxiv.org/abs/2506.08999</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.08999">https://arxiv.org/pdf/2506.08999</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.08999]] Employing self-supervised learning models for cross-linguistic child speech maturity classification(https://arxiv.org/abs/2506.08999)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Speech technology systems struggle with many downstream tasks for child speech due to small training corpora and the difficulties that child speech pose. We apply a novel dataset, SpeechMaturity, to state-of-the-art transformer models to address a fundamental classification task: identifying child vocalizations. Unlike previous corpora, our dataset captures maximally ecologically-valid child vocalizations across an unprecedented sample, comprising children acquiring 25+ languages in the U.S., Bolivia, Vanuatu, Papua New Guinea, Solomon Islands, and France. The dataset contains 242,004 labeled vocalizations, magnitudes larger than previous work. Models were trained to distinguish between cry, laughter, mature (consonant+vowel), and immature speech (just consonant or vowel). Models trained on the dataset outperform state-of-the-art models trained on previous datasets, achieved classification accuracy comparable to humans, and were robust across rural and urban settings.</li>
+</ul>
+
+<h3>Title: Branched Schrödinger Bridge Matching</h3>
+<ul>
+<li><strong>Authors: </strong>Sophia Tang, Yinuo Zhang, Alexander Tong, Pranam Chatterjee</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09007">https://arxiv.org/abs/2506.09007</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09007">https://arxiv.org/pdf/2506.09007</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09007]] Branched Schrödinger Bridge Matching(https://arxiv.org/abs/2506.09007)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Predicting the intermediate trajectories between an initial and target distribution is a central problem in generative modeling. Existing approaches, such as flow matching and Schrödinger Bridge Matching, effectively learn mappings between two distributions by modeling a single stochastic path. However, these methods are inherently limited to unimodal transitions and cannot capture branched or divergent evolution from a common origin to multiple distinct outcomes. To address this, we introduce Branched Schrödinger Bridge Matching (BranchSBM), a novel framework that learns branched Schrödinger bridges. BranchSBM parameterizes multiple time-dependent velocity fields and growth processes, enabling the representation of population-level divergence into multiple terminal distributions. We show that BranchSBM is not only more expressive but also essential for tasks involving multi-path surface navigation, modeling cell fate bifurcations from homogeneous progenitor states, and simulating diverging cellular responses to perturbations.</li>
+</ul>
+
+<h3>Title: Edit Flows: Flow Matching with Edit Operations</h3>
+<ul>
+<li><strong>Authors: </strong>Marton Havasi, Brian Karrer, Itai Gat, Ricky T. Q. Chen</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09018">https://arxiv.org/abs/2506.09018</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09018">https://arxiv.org/pdf/2506.09018</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09018]] Edit Flows: Flow Matching with Edit Operations(https://arxiv.org/abs/2506.09018)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Autoregressive generative models naturally generate variable-length sequences, while non-autoregressive models struggle, often imposing rigid, token-wise structures. We propose Edit Flows, a non-autoregressive model that overcomes these limitations by defining a discrete flow over sequences through edit operations-insertions, deletions, and substitutions. By modeling these operations within a Continuous-time Markov Chain over the sequence space, Edit Flows enable flexible, position-relative generation that aligns more closely with the structure of sequence data. Our training method leverages an expanded state space with auxiliary variables, making the learning process efficient and tractable. Empirical results show that Edit Flows outperforms both autoregressive and mask models on image captioning and significantly outperforms the mask construction in text and code generation.</li>
+</ul>
+
+<h3>Title: Comparing human and LLM proofreading in L2 writing: Impact on lexical and syntactic features</h3>
+<ul>
+<li><strong>Authors: </strong>Hakyung Sung, Karla Csuros, Min-Chang Sung</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09021">https://arxiv.org/abs/2506.09021</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09021">https://arxiv.org/pdf/2506.09021</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09021]] Comparing human and LLM proofreading in L2 writing: Impact on lexical and syntactic features(https://arxiv.org/abs/2506.09021)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>This study examines the lexical and syntactic interventions of human and LLM proofreading aimed at improving overall intelligibility in identical second language writings, and evaluates the consistency of outcomes across three LLMs (ChatGPT-4o, Llama3.1-8b, Deepseek-r1-8b). Findings show that both human and LLM proofreading enhance bigram lexical features, which may contribute to better coherence and contextual connectedness between adjacent words. However, LLM proofreading exhibits a more generative approach, extensively reworking vocabulary and sentence structures, such as employing more diverse and sophisticated vocabulary and incorporating a greater number of adjective modifiers in noun phrases. The proofreading outcomes are highly consistent in major lexical and syntactic features across the three models.</li>
+</ul>
+
+<h3>Title: Do MIL Models Transfer?</h3>
+<ul>
+<li><strong>Authors: </strong>Daniel Shao, Richard J. Chen, Andrew H. Song, Joel Runevic, Ming Y. Lu, Tong Ding, Faisal Mahmood</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09022">https://arxiv.org/abs/2506.09022</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09022">https://arxiv.org/pdf/2506.09022</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09022]] Do MIL Models Transfer?(https://arxiv.org/abs/2506.09022)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Multiple Instance Learning (MIL) is a cornerstone approach in computational pathology (CPath) for generating clinically meaningful slide-level embeddings from gigapixel tissue images. However, MIL often struggles with small, weakly supervised clinical datasets. In contrast to fields such as NLP and conventional computer vision, where transfer learning is widely used to address data scarcity, the transferability of MIL models remains poorly understood. In this study, we systematically evaluate the transfer learning capabilities of pretrained MIL models by assessing 11 models across 21 pretraining tasks for morphological and molecular subtype prediction. Our results show that pretrained MIL models, even when trained on different organs than the target task, consistently outperform models trained from scratch. Moreover, pretraining on pancancer datasets enables strong generalization across organs and tasks, outperforming slide foundation models while using substantially less pretraining data. These findings highlight the robust adaptability of MIL models and demonstrate the benefits of leveraging transfer learning to boost performance in CPath. Lastly, we provide a resource which standardizes the implementation of MIL models and collection of pretrained model weights on popular CPath tasks, available at this https URL</li>
+</ul>
+
+<h3>Title: e3: Learning to Explore Enables Extrapolation of Test-Time Compute for LLMs</h3>
+<ul>
+<li><strong>Authors: </strong>Amrith Setlur, Matthew Y. R. Yang, Charlie Snell, Jeremy Greer, Ian Wu, Virginia Smith, Max Simchowitz, Aviral Kumar</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09026">https://arxiv.org/abs/2506.09026</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09026">https://arxiv.org/pdf/2506.09026</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09026]] e3: Learning to Explore Enables Extrapolation of Test-Time Compute for LLMs(https://arxiv.org/abs/2506.09026)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Test-time scaling offers a promising path to improve LLM reasoning by utilizing more compute at inference time; however, the true promise of this paradigm lies in extrapolation (i.e., improvement in performance on hard problems as LLMs keep "thinking" for longer, beyond the maximum token budget they were trained on). Surprisingly, we find that most existing reasoning models do not extrapolate well. We show that one way to enable extrapolation is by training the LLM to perform in-context exploration: training the LLM to effectively spend its test time budget by chaining operations (such as generation, verification, refinement, etc.), or testing multiple hypotheses before it commits to an answer. To enable in-context exploration, we identify three key ingredients as part of our recipe e3: (1) chaining skills that the base LLM has asymmetric competence in, e.g., chaining verification (easy) with generation (hard), as a way to implement in-context search; (2) leveraging "negative" gradients from incorrect traces to amplify exploration during RL, resulting in longer search traces that chains additional asymmetries; and (3) coupling task difficulty with training token budget during training via a specifically-designed curriculum to structure in-context exploration. Our recipe e3 produces the best known 1.7B model according to AIME'25 and HMMT'25 scores, and extrapolates to 2x the training token budget. Our e3-1.7B model not only attains high pass@1 scores, but also improves pass@k over the base model.</li>
+</ul>
+
+<h3>Title: Diffuse and Disperse: Image Generation with Representation Regularization</h3>
+<ul>
+<li><strong>Authors: </strong>Runqian Wang, Kaiming He</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09027">https://arxiv.org/abs/2506.09027</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09027">https://arxiv.org/pdf/2506.09027</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09027]] Diffuse and Disperse: Image Generation with Representation Regularization(https://arxiv.org/abs/2506.09027)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, self-supervised, generative</a></li>
+<li><strong>Abstract: </strong>The development of diffusion-based generative models over the past decade has largely proceeded independently of progress in representation learning. These diffusion models typically rely on regression-based objectives and generally lack explicit regularization. In this work, we propose \textit{Dispersive Loss}, a simple plug-and-play regularizer that effectively improves diffusion-based generative models. Our loss function encourages internal representations to disperse in the hidden space, analogous to contrastive self-supervised learning, with the key distinction that it requires no positive sample pairs and therefore does not interfere with the sampling process used for regression. Compared to the recent method of representation alignment (REPA), our approach is self-contained and minimalist, requiring no pre-training, no additional parameters, and no external data. We evaluate Dispersive Loss on the ImageNet dataset across a range of models and report consistent improvements over widely used and strong baselines. We hope our work will help bridge the gap between generative modeling and representation learning.</li>
+</ul>
+
+<h3>Title: Cosmos-Drive-Dreams: Scalable Synthetic Driving Data Generation with World Foundation Models</h3>
+<ul>
+<li><strong>Authors: </strong>Xuanchi Ren, Yifan Lu, Tianshi Cao, Ruiyuan Gao, Shengyu Huang, Amirmojtaba Sabour, Tianchang Shen, Tobias Pfaff, Jay Zhangjie Wu, Runjian Chen, Seung Wook Kim, Jun Gao, Laura Leal-Taixe, Mike Chen, Sanja Fidler, Huan Ling</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09042">https://arxiv.org/abs/2506.09042</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09042">https://arxiv.org/pdf/2506.09042</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09042]] Cosmos-Drive-Dreams: Scalable Synthetic Driving Data Generation with World Foundation Models(https://arxiv.org/abs/2506.09042)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Collecting and annotating real-world data for safety-critical physical AI systems, such as Autonomous Vehicle (AV), is time-consuming and costly. It is especially challenging to capture rare edge cases, which play a critical role in training and testing of an AV system. To address this challenge, we introduce the Cosmos-Drive-Dreams - a synthetic data generation (SDG) pipeline that aims to generate challenging scenarios to facilitate downstream tasks such as perception and driving policy training. Powering this pipeline is Cosmos-Drive, a suite of models specialized from NVIDIA Cosmos world foundation model for the driving domain and are capable of controllable, high-fidelity, multi-view, and spatiotemporally consistent driving video generation. We showcase the utility of these models by applying Cosmos-Drive-Dreams to scale the quantity and diversity of driving datasets with high-fidelity and challenging scenarios. Experimentally, we demonstrate that our generated data helps in mitigating long-tail distribution problems and enhances generalization in downstream tasks such as 3D lane detection, 3D object detection and driving policy learning. We open source our pipeline toolkit, dataset and model weights through the NVIDIA's Cosmos platform. Project page: this https URL</li>
+</ul>
+
+<h3>Title: MagCache: Fast Video Generation with Magnitude-Aware Cache</h3>
+<ul>
+<li><strong>Authors: </strong>Zehong Ma, Longhui Wei, Feng Wang, Shiliang Zhang, Qi Tian</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09045">https://arxiv.org/abs/2506.09045</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09045">https://arxiv.org/pdf/2506.09045</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09045]] MagCache: Fast Video Generation with Magnitude-Aware Cache(https://arxiv.org/abs/2506.09045)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Existing acceleration techniques for video diffusion models often rely on uniform heuristics or time-embedding variants to skip timesteps and reuse cached features. These approaches typically require extensive calibration with curated prompts and risk inconsistent outputs due to prompt-specific overfitting. In this paper, we introduce a novel and robust discovery: a unified magnitude law observed across different models and prompts. Specifically, the magnitude ratio of successive residual outputs decreases monotonically and steadily in most timesteps while rapidly in the last several steps. Leveraging this insight, we introduce a Magnitude-aware Cache (MagCache) that adaptively skips unimportant timesteps using an error modeling mechanism and adaptive caching strategy. Unlike existing methods requiring dozens of curated samples for calibration, MagCache only requires a single sample for calibration. Experimental results show that MagCache achieves 2.1x and 2.68x speedups on Open-Sora and Wan 2.1, respectively, while preserving superior visual fidelity. It significantly outperforms existing methods in LPIPS, SSIM, and PSNR, under comparable computational budgets.</li>
+</ul>
+
+<h3>Title: Understanding Task Vectors in In-Context Learning: Emergence, Functionality, and Limitations</h3>
+<ul>
+<li><strong>Authors: </strong>Yuxin Dong, Jiachen Jiang, Zhihui Zhu, Xia Ning</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2506.09048">https://arxiv.org/abs/2506.09048</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2506.09048">https://arxiv.org/pdf/2506.09048</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2506.09048]] Understanding Task Vectors in In-Context Learning: Emergence, Functionality, and Limitations(https://arxiv.org/abs/2506.09048)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Task vectors offer a compelling mechanism for accelerating inference in in-context learning (ICL) by distilling task-specific information into a single, reusable representation. Despite their empirical success, the underlying principles governing their emergence and functionality remain unclear. This work proposes the Linear Combination Conjecture, positing that task vectors act as single in-context demonstrations formed through linear combinations of the original ones. We provide both theoretical and empirical support for this conjecture. First, we show that task vectors naturally emerge in linear transformers trained on triplet-formatted prompts through loss landscape analysis. Next, we predict the failure of task vectors on representing high-rank mappings and confirm this on practical LLMs. Our findings are further validated through saliency analyses and parameter visualization, suggesting an enhancement of task vectors by injecting multiple ones into few-shot prompts. Together, our results advance the understanding of task vectors and shed light on the mechanisms underlying ICL in transformer-based models.</li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="../../javascript/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
