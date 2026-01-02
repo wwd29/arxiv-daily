@@ -1,5 +1,5 @@
 # arxiv-daily
-updated on 2026-01-01 06:43:02
+updated on 2026-01-02 06:42:08
 | name | count |
 | - | - |
 | user_2 | 54 |
