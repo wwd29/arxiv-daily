@@ -1,8 +1,8 @@
 # arxiv-daily
-updated on 2026-01-22 06:43:40
+updated on 2026-01-23 06:42:53
 | name | count |
 | - | - |
-| user_2 | 43 |
-| user_3 | 47 |
-| user_0 | 173 |
-| user_1 | 48 |
+| user_2 | 39 |
+| user_3 | 37 |
+| user_0 | 115 |
+| user_1 | 38 |
