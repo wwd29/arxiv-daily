@@ -1,0 +1,480 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2026-02-16</h1>
+<h3>Title: Synthetic Image Detection with CLIP: Understanding and Assessing Predictive Cues</h3>
+<ul>
+<li><strong>Authors: </strong>Marco Willi, Melanie Mathys, Michael Graber</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12381">https://arxiv.org/abs/2602.12381</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12381">https://arxiv.org/pdf/2602.12381</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12381]] Synthetic Image Detection with CLIP: Understanding and Assessing Predictive Cues(https://arxiv.org/abs/2602.12381)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Recent generative models produce near-photorealistic images, challenging the trustworthiness of photographs. Synthetic image detection (SID) has thus become an important area of research. Prior work has highlighted how synthetic images differ from real photographs--unfortunately, SID methods often struggle to generalize to novel generative models and often perform poorly in practical settings. CLIP, a foundational vision-language model which yields semantically rich image-text embeddings, shows strong accuracy and generalization for SID. Yet, the underlying relevant cues embedded in CLIP-features remain unknown. It is unclear, whether CLIP-based detectors simply detect strong visual artifacts or exploit subtle semantic biases, both of which would render them useless in practical settings or on generative models of high quality. We introduce SynthCLIC, a paired dataset of real photographs and high-quality synthetic counterparts from recent diffusion models, designed to reduce semantic bias in SID. Using an interpretable linear head with de-correlated activations and a text-grounded concept-model, we analyze what CLIP-based detectors learn. CLIP-based linear detectors reach 0.96 mAP on a GAN-based benchmark but only 0.92 on our high-quality diffusion dataset SynthCLIC, and generalization across generator families drops to as low as 0.37 mAP. We find that the detectors primarily rely on high-level photographic attributes (e.g., minimalist style, lens flare, or depth layering), rather than overt generator-specific artifacts. CLIP-based detectors perform well overall but generalize unevenly across diverse generative architectures. This highlights the need for continual model updates and broader training exposure, while reinforcing CLIP-based approaches as a strong foundation for more universal, robust SID.</li>
+</ul>
+
+<h3>Title: Reproducing DragDiffusion: Interactive Point-Based Editing with Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Ali Subhan, Ashir Raza</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12393">https://arxiv.org/abs/2602.12393</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12393">https://arxiv.org/pdf/2602.12393</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12393]] Reproducing DragDiffusion: Interactive Point-Based Editing with Diffusion Models(https://arxiv.org/abs/2602.12393)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>DragDiffusion is a diffusion-based method for interactive point-based image editing that enables users to manipulate images by directly dragging selected points. The method claims that accurate spatial control can be achieved by optimizing a single diffusion latent at an intermediate timestep, together with identity-preserving fine-tuning and spatial regularization. This work presents a reproducibility study of DragDiffusion using the authors' released implementation and the DragBench benchmark. We reproduce the main ablation studies on diffusion timestep selection, LoRA-based fine-tuning, mask regularization strength, and UNet feature supervision, and observe close agreement with the qualitative and quantitative trends reported in the original work. At the same time, our experiments show that performance is sensitive to a small number of hyperparameter assumptions, particularly the optimized timestep and the feature level used for motion supervision, while other components admit broader operating ranges. We further evaluate a multi-timestep latent optimization variant and find that it does not improve spatial accuracy while substantially increasing computational cost. Overall, our findings support the central claims of DragDiffusion while clarifying the conditions under which they are reliably reproducible. Code is available at this https URL.</li>
+</ul>
+
+<h3>Title: ZeroDiff++: Substantial Unseen Visual-semantic Correlation in Zero-shot Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Zihan Ye, Shreyank N Gowda, Kaile Du, Weijian Luo, Ling Shao</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12401">https://arxiv.org/abs/2602.12401</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12401">https://arxiv.org/pdf/2602.12401</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12401]] ZeroDiff++: Substantial Unseen Visual-semantic Correlation in Zero-shot Learning(https://arxiv.org/abs/2602.12401)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Zero-shot Learning (ZSL) enables classifiers to recognize classes unseen during training, commonly via generative two stage methods: (1) learn visual semantic correlations from seen classes; (2) synthesize unseen class features from semantics to train classifiers. In this paper, we identify spurious visual semantic correlations in existing generative ZSL worsened by scarce seen class samples and introduce two metrics to quantify spuriousness for seen and unseen classes. Furthermore, we point out a more critical bottleneck: existing unadaptive fully noised generators produce features disconnected from real test samples, which also leads to the spurious correlation. To enhance the visual-semantic correlations on both seen and unseen classes, we propose ZeroDiff++, a diffusion-based generative framework. In training, ZeroDiff++ uses (i) diffusion augmentation to produce diverse noised samples, (ii) supervised contrastive (SC) representations for instance level semantics, and (iii) multi view discriminators with Wasserstein mutual learning to assess generated features. At generation time, we introduce (iv) Diffusion-based Test time Adaptation (DiffTTA) to adapt the generator using pseudo label reconstruction, and (v) Diffusion-based Test time Generation (DiffGen) to trace the diffusion denoising path and produce partially synthesized features that connect real and generated data, and mitigates data scarcity further. Extensive experiments on three ZSL benchmarks demonstrate that ZeroDiff++ not only achieves significant improvements over existing ZSL methods but also maintains robust performance even with scarce training data. Code would be available.</li>
+</ul>
+
+<h3>Title: Stabilizing Native Low-Rank LLM Pretraining</h3>
+<ul>
+<li><strong>Authors: </strong>Paul Janson, Edouard Oyallon, Eugene Belilovsky</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12429">https://arxiv.org/abs/2602.12429</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12429">https://arxiv.org/pdf/2602.12429</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12429]] Stabilizing Native Low-Rank LLM Pretraining(https://arxiv.org/abs/2602.12429)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Foundation models have achieved remarkable success, yet their growing parameter counts pose significant computational and memory challenges. Low-rank factorization offers a promising route to reduce training and inference costs, but the community lacks a stable recipe for training models from scratch using exclusively low-rank weights while matching the performance of the dense model. We demonstrate that Large Language Models (LLMs) can be trained from scratch using exclusively low-rank factorized weights for all non-embedding matrices without auxiliary "full-rank" guidance required by prior methods. While native low-rank training often suffers from instability and loss spikes, we identify uncontrolled growth in the spectral norm (largest singular value) of the weight matrix update as the dominant factor. To address this, we introduce Spectron: Spectral renormalization with orthogonalization, which dynamically bounds the resultant weight updates based on the current spectral norms of the factors. Our method enables stable, end-to-end factorized training with negligible overhead. Finally, we establish compute-optimal scaling laws for natively low-rank transformers, demonstrating predictable power-law behavior and improved inference efficiency relative to dense models.</li>
+</ul>
+
+<h3>Title: Semantic-aware Adversarial Fine-tuning for CLIP</h3>
+<ul>
+<li><strong>Authors: </strong>Jiacheng Zhang, Jinhao Li, Hanxun Huang, Sarah M. Erfani, Benjamin I.P. Rubinstein, Feng Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12461">https://arxiv.org/abs/2602.12461</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12461">https://arxiv.org/pdf/2602.12461</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12461]] Semantic-aware Adversarial Fine-tuning for CLIP(https://arxiv.org/abs/2602.12461)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Recent studies have shown that CLIP model's adversarial robustness in zero-shot classification tasks can be enhanced by adversarially fine-tuning its image encoder with adversarial examples (AEs), which are generated by minimizing the cosine similarity between images and a hand-crafted template (e.g., ''A photo of a {label}''). However, it has been shown that the cosine similarity between a single image and a single hand-crafted template is insufficient to measure the similarity for image-text pairs. Building on this, in this paper, we find that the AEs generated using cosine similarity may fail to fool CLIP when the similarity metric is replaced with semantically enriched alternatives, making the image encoder fine-tuned with these AEs less robust. To overcome this issue, we first propose a semantic-ensemble attack to generate semantic-aware AEs by minimizing the average similarity between the original image and an ensemble of refined textual descriptions. These descriptions are initially generated by a foundation model to capture core semantic features beyond hand-crafted templates and are then refined to reduce hallucinations. To this end, we propose Semantic-aware Adversarial Fine-Tuning (SAFT), which fine-tunes CLIP's image encoder with semantic-aware AEs. Extensive experiments show that SAFT outperforms current methods, achieving substantial improvements in zero-shot adversarial robustness across 16 datasets. Our code is available at: this https URL.</li>
+</ul>
+
+<h3>Title: Continuous Diffusion Models Can Obey Formal Syntax</h3>
+<ul>
+<li><strong>Authors: </strong>Jinwoo Kim, Taylor Berg-Kirkpatrick, Loris D'Antoni</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.FL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12468">https://arxiv.org/abs/2602.12468</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12468">https://arxiv.org/pdf/2602.12468</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12468]] Continuous Diffusion Models Can Obey Formal Syntax(https://arxiv.org/abs/2602.12468)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion language models offer a promising alternative to autoregressive models due to their global, non-causal generation process, but their continuous latent dynamics make discrete constraints -- e.g., the output should be a JSON file that matches a given schema -- difficult to impose. We introduce a training-free guidance method for steering continuous diffusion language models to satisfy formal syntactic constraints expressed using regular expressions. Our approach constructs an analytic score estimating the probability that a latent state decodes to a valid string accepted by a given regular expression, and uses its gradient to guide sampling, without training auxiliary classifiers. The denoising process targets the base model conditioned on syntactic validity. We implement our method in Diffinity on top of the PLAID diffusion model and evaluate it on 180 regular-expression constraints over JSON and natural-language benchmarks. Diffinity achieves 68-96\% constraint satisfaction while incurring only a small perplexity cost relative to unconstrained sampling, outperforming autoregressive constrained decoding in both constraint satisfaction and output quality.</li>
+</ul>
+
+<h3>Title: LiDAR-Anchored Collaborative Distillation for Robust 2D Representations</h3>
+<ul>
+<li><strong>Authors: </strong>Wonjun Jo, Hyunwoo Ha, Kim Ji-Yeon, Hawook Jeong, Tae-Hyun Oh</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12524">https://arxiv.org/abs/2602.12524</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12524">https://arxiv.org/pdf/2602.12524</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12524]] LiDAR-Anchored Collaborative Distillation for Robust 2D Representations(https://arxiv.org/abs/2602.12524)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>As deep learning continues to advance, self-supervised learning has made considerable strides. It allows 2D image encoders to extract useful features for various downstream tasks, including those related to vision-based systems. Nevertheless, pre-trained 2D image encoders fall short in conducting the task under noisy and adverse weather conditions beyond clear daytime scenes, which require for robust visual perception. To address these issues, we propose a novel self-supervised approach, \textbf{Collaborative Distillation}, which leverages 3D LiDAR as self-supervision to improve robustness to noisy and adverse weather conditions in 2D image encoders while retaining their original capabilities. Our method outperforms competing methods in various downstream tasks across diverse conditions and exhibits strong generalization ability. In addition, our method also improves 3D awareness stemming from LiDAR's characteristics. This advancement highlights our method's practicality and adaptability in real-world scenarios.</li>
+</ul>
+
+<h3>Title: Flow-Factory: A Unified Framework for Reinforcement Learning in Flow-Matching Models</h3>
+<ul>
+<li><strong>Authors: </strong>Bowen Ping, Chengyou Jia, Minnan Luo, Hangwei Qian, Ivor Tsang</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12529">https://arxiv.org/abs/2602.12529</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12529">https://arxiv.org/pdf/2602.12529</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12529]] Flow-Factory: A Unified Framework for Reinforcement Learning in Flow-Matching Models(https://arxiv.org/abs/2602.12529)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Reinforcement learning has emerged as a promising paradigm for aligning diffusion and flow-matching models with human preferences, yet practitioners face fragmented codebases, model-specific implementations, and engineering complexity. We introduce Flow-Factory, a unified framework that decouples algorithms, models, and rewards through through a modular, registry-based architecture. This design enables seamless integration of new algorithms and architectures, as demonstrated by our support for GRPO, DiffusionNFT, and AWM across Flux, Qwen-Image, and WAN video models. By minimizing implementation overhead, Flow-Factory empowers researchers to rapidly prototype and scale future innovations with ease. Flow-Factory provides production-ready memory optimization, flexible multi-reward training, and seamless distributed training support. The codebase is available at this https URL.</li>
+</ul>
+
+<h3>Title: Self-Supervised JEPA-based World Models for LiDAR Occupancy Completion and Forecasting</h3>
+<ul>
+<li><strong>Authors: </strong>Haoran Zhu, Anna Choromanska</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.RO</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12540">https://arxiv.org/abs/2602.12540</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12540">https://arxiv.org/pdf/2602.12540</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12540]] Self-Supervised JEPA-based World Models for LiDAR Occupancy Completion and Forecasting(https://arxiv.org/abs/2602.12540)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Autonomous driving, as an agent operating in the physical world, requires the fundamental capability to build \textit{world models} that capture how the environment evolves spatiotemporally in order to support long-term planning. At the same time, scalability demands learning such models in a self-supervised manner; \textit{joint-embedding predictive architecture (JEPA)} enables learning world models via leveraging large volumes of unlabeled data without relying on expensive human annotations. In this paper, we propose \textbf{AD-LiST-JEPA}, a self-supervised world model for autonomous driving that predicts future spatiotemporal evolution from LiDAR data using a JEPA framework. We evaluate the quality of the learned representations through a downstream LiDAR-based occupancy completion and forecasting (OCF) task, which jointly assesses perception and prediction. Proof of concept experiments show better OCF performance with pretrained encoder after JEPA-based world model learning.</li>
+</ul>
+
+<h3>Title: The Constant Eye: Benchmarking and Bridging Appearance Robustness in Autonomous Driving</h3>
+<ul>
+<li><strong>Authors: </strong>Jiabao Wang, Hongyu Zhou, Yuanbo Yang, Jiahao Shao, Yiyi Liao</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12563">https://arxiv.org/abs/2602.12563</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12563">https://arxiv.org/pdf/2602.12563</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12563]] The Constant Eye: Benchmarking and Bridging Appearance Robustness in Autonomous Driving(https://arxiv.org/abs/2602.12563)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, foundation model, generative</a></li>
+<li><strong>Abstract: </strong>Despite rapid progress, autonomous driving algorithms remain notoriously fragile under Out-of-Distribution (OOD) conditions. We identify a critical decoupling failure in current research: the lack of distinction between appearance-based shifts, such as weather and lighting, and structural scene changes. This leaves a fundamental question unanswered: Is the planner failing because of complex road geometry, or simply because it is raining? To resolve this, we establish navdream, a high-fidelity robustness benchmark leveraging generative pixel-aligned style transfer. By creating a visual stress test with negligible geometric deviation, we isolate the impact of appearance on driving performance. Our evaluation reveals that existing planning algorithms often show significant degradation under OOD appearance conditions, even when the underlying scene structure remains consistent. To bridge this gap, we propose a universal perception interface leveraging a frozen visual foundation model (DINOv3). By extracting appearance-invariant features as a stable interface for the planner, we achieve exceptional zero-shot generalization across diverse planning paradigms, including regression-based, diffusion-based, and scoring-based models. Our plug-and-play solution maintains consistent performance across extreme appearance shifts without requiring further fine-tuning. The benchmark and code will be made available.</li>
+</ul>
+
+<h3>Title: Unbiased Gradient Estimation for Event Binning via Functional Backpropagation</h3>
+<ul>
+<li><strong>Authors: </strong>Jinze Chen, Wei Zhai, Han Han, Tiankai Ma, Yang Cao, Bin Li, Zheng-Jun Zha</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12590">https://arxiv.org/abs/2602.12590</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12590">https://arxiv.org/pdf/2602.12590</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12590]] Unbiased Gradient Estimation for Event Binning via Functional Backpropagation(https://arxiv.org/abs/2602.12590)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Event-based vision encodes dynamic scenes as asynchronous spatio-temporal spikes called events. To leverage conventional image processing pipelines, events are typically binned into frames. However, binning functions are discontinuous, which truncates gradients at the frame level and forces most event-based algorithms to rely solely on frame-based features. Attempts to directly learn from raw events avoid this restriction but instead suffer from biased gradient estimation due to the discontinuities of the binning operation, ultimately limiting their learning efficiency. To address this challenge, we propose a novel framework for unbiased gradient estimation of arbitrary binning functions by synthesizing weak derivatives during backpropagation while keeping the forward output unchanged. The key idea is to exploit integration by parts: lifting the target functions to functionals yields an integral form of the derivative of the binning function during backpropagation, where the cotangent function naturally arises. By reconstructing this cotangent function from the sampled cotangent vector, we compute weak derivatives that provably match long-range finite differences of both smooth and non-smooth targets. Experimentally, our method improves simple optimization-based egomotion estimation with 3.2\% lower RMS error and 1.57$\times$ faster convergence. On complex downstream tasks, we achieve 9.4\% lower EPE in self-supervised optical flow, and 5.1\% lower RMS error in SLAM, demonstrating broad benefits for event-based visual perception. Source code can be found at this https URL.</li>
+</ul>
+
+<h3>Title: Power Interpretable Causal ODE Networks: A Unified Model for Explainable Anomaly Detection and Root Cause Analysis in Power Systems</h3>
+<ul>
+<li><strong>Authors: </strong>Yue Sun, Likai Wang, Rick S. Blum, Parv Venkitasubramaniam</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12592">https://arxiv.org/abs/2602.12592</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12592">https://arxiv.org/pdf/2602.12592</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12592]] Power Interpretable Causal ODE Networks: A Unified Model for Explainable Anomaly Detection and Root Cause Analysis in Power Systems(https://arxiv.org/abs/2602.12592)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Anomaly detection and root cause analysis (RCA) are critical for ensuring the safety and resilience of cyber-physical systems such as power grids. However, existing machine learning models for time series anomaly detection often operate as black boxes, offering only binary outputs without any explanation, such as identifying anomaly type and origin. To address this challenge, we propose Power Interpretable Causality Ordinary Differential Equation (PICODE) Networks, a unified, causality-informed architecture that jointly performs anomaly detection along with the explanation why it is detected as an anomaly, including root cause localization, anomaly type classification, and anomaly shape characterization. Experimental results in power systems demonstrate that PICODE achieves competitive detection performance while offering improved interpretability and reduced reliance on labeled data or external causal graphs. We provide theoretical results demonstrating the alignment between the shape of anomaly functions and the changes in the weights of the extracted causal graphs.</li>
+</ul>
+
+<h3>Title: RelBench v2: A Large-Scale Benchmark and Repository for Relational Data</h3>
+<ul>
+<li><strong>Authors: </strong>Justin Gu, Rishabh Ranjan, Charilaos Kanatsoulis, Haiming Tang, Martin Jurkovic, Valter Hudovernik, Mark Znidar, Pranshu Chaturvedi, Parth Shroff, Fengyu Li, Jure Leskovec</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12606">https://arxiv.org/abs/2602.12606</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12606">https://arxiv.org/pdf/2602.12606</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12606]] RelBench v2: A Large-Scale Benchmark and Repository for Relational Data(https://arxiv.org/abs/2602.12606)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>Relational deep learning (RDL) has emerged as a powerful paradigm for learning directly on relational databases by modeling entities and their relationships across multiple interconnected tables. As this paradigm evolves toward larger models and relational foundation models, scalable and realistic benchmarks are essential for enabling systematic evaluation and progress. In this paper, we introduce RelBench v2, a major expansion of the RelBench benchmark for RDL. RelBench v2 adds four large-scale relational datasets spanning scholarly publications, enterprise resource planning, consumer platforms, and clinical records, increasing the benchmark to 11 datasets comprising over 22 million rows across 29 tables. We further introduce autocomplete tasks, a new class of predictive objectives that require models to infer missing attribute values directly within relational tables while respecting temporal constraints, expanding beyond traditional forecasting tasks constructed via SQL queries. In addition, RelBench v2 expands beyond its native datasets by integrating external benchmarks and evaluation frameworks: we translate event streams from the Temporal Graph Benchmark into relational schemas for unified relational-temporal evaluation, interface with ReDeLEx to provide uniform access to 70+ real-world databases suitable for pretraining, and incorporate 4DBInfer datasets and tasks to broaden multi-table prediction coverage. Experimental results demonstrate that RDL models consistently outperform single-table baselines across autocomplete, forecasting, and recommendation tasks, highlighting the importance of modeling relational structure explicitly.</li>
+</ul>
+
+<h3>Title: Efficient Personalized Federated PCA with Manifold Optimization for IoT Anomaly Detection</h3>
+<ul>
+<li><strong>Authors: </strong>Xianchao Xiu, Chenyi Huang, Wei Zhang, Wanquan Liu</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12622">https://arxiv.org/abs/2602.12622</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12622">https://arxiv.org/pdf/2602.12622</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12622]] Efficient Personalized Federated PCA with Manifold Optimization for IoT Anomaly Detection(https://arxiv.org/abs/2602.12622)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Internet of things (IoT) networks face increasing security threats due to their distributed nature and resource constraints. Although federated learning (FL) has gained prominence as a privacy-preserving framework for distributed IoT environments, current federated principal component analysis (PCA) methods lack the integration of personalization and robustness, which are critical for effective anomaly detection. To address these limitations, we propose an efficient personalized federated PCA (FedEP) method for anomaly detection in IoT networks. The proposed model achieves personalization through introducing local representations with the $\ell_1$-norm for element-wise sparsity, while maintaining robustness via enforcing local models with the $\ell_{2,1}$-norm for row-wise sparsity. To solve this non-convex problem, we develop a manifold optimization algorithm based on the alternating direction method of multipliers (ADMM) with rigorous theoretical convergence guarantees. Experimental results confirm that the proposed FedEP outperforms the state-of-the-art FedPG, achieving excellent F1-scores and accuracy in various IoT security scenarios. Our code will be available at \href{this https URL}{this https URL}.</li>
+</ul>
+
+<h3>Title: Formalizing the Sampling Design Space of Diffusion-Based Generative Models via Adaptive Solvers and Wasserstein-Bounded Timesteps</h3>
+<ul>
+<li><strong>Authors: </strong>Sangwoo Jo, Sungjoon Choi</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12624">https://arxiv.org/abs/2602.12624</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12624">https://arxiv.org/pdf/2602.12624</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12624]] Formalizing the Sampling Design Space of Diffusion-Based Generative Models via Adaptive Solvers and Wasserstein-Bounded Timesteps(https://arxiv.org/abs/2602.12624)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Diffusion-based generative models have achieved remarkable performance across various domains, yet their practical deployment is often limited by high sampling costs. While prior work focuses on training objectives or individual solvers, the holistic design of sampling, specifically solver selection and scheduling, remains dominated by static heuristics. In this work, we revisit this challenge through a geometric lens, proposing SDM, a principled framework that aligns the numerical solver with the intrinsic properties of the diffusion trajectory. By analyzing the ODE dynamics, we show that efficient low-order solvers suffice in early high-noise stages while higher-order solvers can be progressively deployed to handle the increasing non-linearity of later stages. Furthermore, we formalize the scheduling by introducing a Wasserstein-bounded optimization framework. This method systematically derives adaptive timesteps that explicitly bound the local discretization error, ensuring the sampling process remains faithful to the underlying continuous dynamics. Without requiring additional training or architectural modifications, SDM achieves state-of-the-art performance across standard benchmarks, including an FID of 1.93 on CIFAR-10, 2.41 on FFHQ, and 1.98 on AFHQv2, with a reduced number of function evaluations compared to existing samplers. Our code is available at this https URL.</li>
+</ul>
+
+<h3>Title: Dual-Granularity Contrastive Reward via Generated Episodic Guidance for Efficient Embodied RL</h3>
+<ul>
+<li><strong>Authors: </strong>Xin Liu, Yixuan Li, Yuhui Chen, Yuxing Qin, Haoran Li, Dongbin Zhao</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.RO</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12636">https://arxiv.org/abs/2602.12636</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12636">https://arxiv.org/pdf/2602.12636</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12636]] Dual-Granularity Contrastive Reward via Generated Episodic Guidance for Efficient Embodied RL(https://arxiv.org/abs/2602.12636)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Designing suitable rewards poses a significant challenge in reinforcement learning (RL), especially for embodied manipulation. Trajectory success rewards are suitable for human judges or model fitting, but the sparsity severely limits RL sample efficiency. While recent methods have effectively improved RL via dense rewards, they rely heavily on high-quality human-annotated data or abundant expert supervision. To tackle these issues, this paper proposes Dual-granularity contrastive reward via generated Episodic Guidance (DEG), a novel framework to seek sample-efficient dense rewards without requiring human annotations or extensive supervision. Leveraging the prior knowledge of large video generation models, DEG only needs a small number of expert videos for domain adaptation to generate dedicated task guidance for each RL episode. Then, the proposed dual-granularity reward that balances coarse-grained exploration and fine-grained matching, will guide the agent to efficiently approximate the generated guidance video sequentially in the contrastive self-supervised latent space, and finally complete the target task. Extensive experiments on 18 diverse tasks across both simulation and real-world settings show that DEG can not only serve as an efficient exploration stimulus to help the agent quickly discover sparse success rewards, but also guide effective RL and stable policy convergence independently.</li>
+</ul>
+
+<h3>Title: ImageRAGTurbo: Towards One-step Text-to-Image Generation with Retrieval-Augmented Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Peijie Qiu, Hariharan Ramshankar, Arnau Ramisa, René Vidal, Amit Kumar K C, Vamsi Salaka, Rahul Bhagat</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12640">https://arxiv.org/abs/2602.12640</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12640">https://arxiv.org/pdf/2602.12640</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12640]] ImageRAGTurbo: Towards One-step Text-to-Image Generation with Retrieval-Augmented Diffusion Models(https://arxiv.org/abs/2602.12640)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion models have emerged as the leading approach for text-to-image generation. However, their iterative sampling process, which gradually morphs random noise into coherent images, introduces significant latency that limits their applicability. While recent few-step diffusion models reduce the number of sampling steps to as few as one to four steps, they often compromise image quality and prompt alignment, especially in one-step generation. Additionally, these models require computationally expensive training procedures. To address these limitations, we propose ImageRAGTurbo, a novel approach to efficiently finetune few-step diffusion models via retrieval augmentation. Given a text prompt, we retrieve relevant text-image pairs from a database and use them to condition the generation process. We argue that such retrieved examples provide rich contextual information to the UNet denoiser that helps reduce the number of denoising steps without compromising image quality. Indeed, our initial investigations show that using the retrieved content to edit the denoiser's latent space ($\mathcal{H}$-space) without additional finetuning already improves prompt fidelity. To further improve the quality of the generated images, we augment the UNet denoiser with a trainable adapter in the $\mathcal{H}$-space, which efficiently blends the retrieved content with the target prompt using a cross-attention mechanism. Experimental results on fast text-to-image generation demonstrate that our approach produces high-fidelity images without compromising latency compared to existing methods.</li>
+</ul>
+
+<h3>Title: Learning Ordinal Probabilistic Reward from Preferences</h3>
+<ul>
+<li><strong>Authors: </strong>Longze Chen, Lu Wang, Renke Shan, Ze Gong, Run Luo, Jiaming Li, Jing Luo, Qiyao Wang, Min Yang</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12660">https://arxiv.org/abs/2602.12660</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12660">https://arxiv.org/pdf/2602.12660</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12660]] Learning Ordinal Probabilistic Reward from Preferences(https://arxiv.org/abs/2602.12660)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Reward models are crucial for aligning large language models (LLMs) with human values and intentions. Existing approaches follow either Generative (GRMs) or Discriminative (DRMs) paradigms, yet both suffer from limitations: GRMs typically demand costly point-wise supervision, while DRMs produce uncalibrated relative scores that lack probabilistic interpretation. To address these challenges, we introduce a novel reward modeling paradigm: Probabilistic Reward Model (PRM). Instead of modeling reward as a deterministic scalar, our approach treats it as a random variable, learning a full probability distribution for the quality of each response. To make this paradigm practical, we present its closed-form, discrete realization: the Ordinal Probabilistic Reward Model (OPRM), which discretizes the quality score into a finite set of ordinal ratings. Building on OPRM, we propose a data-efficient training strategy called Region Flooding Tuning (RgFT). It enables rewards to better reflect absolute text quality by incorporating quality-level annotations, which guide the model to concentrate the probability mass within corresponding rating sub-regions. Experiments on various reward model benchmarks show that our method improves accuracy by $\textbf{2.9%}\sim\textbf{7.4%}$ compared to prior reward models, demonstrating strong performance and data efficiency. Analysis of the score distribution provides evidence that our method captures not only relative rankings but also absolute quality.</li>
+</ul>
+
+<h3>Title: SLA2: Sparse-Linear Attention with Learnable Routing and QAT</h3>
+<ul>
+<li><strong>Authors: </strong>Jintao Zhang, Haoxu Wang, Kai Jiang, Kaiwen Zheng, Youhe Jiang, Ion Stoica, Jianfei Chen, Jun Zhu, Joseph E. Gonzalez</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12675">https://arxiv.org/abs/2602.12675</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12675">https://arxiv.org/pdf/2602.12675</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12675]] SLA2: Sparse-Linear Attention with Learnable Routing and QAT(https://arxiv.org/abs/2602.12675)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Sparse-Linear Attention (SLA) combines sparse and linear attention to accelerate diffusion models and has shown strong performance in video generation. However, (i) SLA relies on a heuristic split that assigns computations to the sparse or linear branch based on attention-weight magnitude, which can be suboptimal. Additionally, (ii) after formally analyzing the attention error in SLA, we identify a mismatch between SLA and a direct decomposition into sparse and linear attention. We propose SLA2, which introduces (I) a learnable router that dynamically selects whether each attention computation should use sparse or linear attention, (II) a more faithful and direct sparse-linear attention formulation that uses a learnable ratio to combine the sparse and linear attention branches, and (III) a sparse + low-bit attention design, where low-bit attention is introduced via quantization-aware fine-tuning to reduce quantization error. Experiments show that on video diffusion models, SLA2 can achieve 97% attention sparsity and deliver an 18.6x attention speedup while preserving generation quality.</li>
+</ul>
+
+<h3>Title: Motion Prior Distillation in Time Reversal Sampling for Generative Inbetweening</h3>
+<ul>
+<li><strong>Authors: </strong>Wooseok Jeon, Seunghyun Shin, Dongmin Shin, Hae-Gon Jeon</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12679">https://arxiv.org/abs/2602.12679</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12679">https://arxiv.org/pdf/2602.12679</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12679]] Motion Prior Distillation in Time Reversal Sampling for Generative Inbetweening(https://arxiv.org/abs/2602.12679)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Recent progress in image-to-video (I2V) diffusion models has significantly advanced the field of generative inbetweening, which aims to generate semantically plausible frames between two keyframes. In particular, inference-time sampling strategies, which leverage the generative priors of large-scale pre-trained I2V models without additional training, have become increasingly popular. However, existing inference-time sampling, either fusing forward and backward paths in parallel or alternating them sequentially, often suffers from temporal discontinuities and undesirable visual artifacts due to the misalignment between the two generated paths. This is because each path follows the motion prior induced by its own conditioning frame. In this work, we propose Motion Prior Distillation (MPD), a simple yet effective inference-time distillation technique that suppresses bidirectional mismatch by distilling the motion residual of the forward path into the backward path. Our method can deliberately avoid denoising the end-conditioned path which causes the ambiguity of the path, and yield more temporally coherent inbetweening results with the forward motion prior. We not only perform quantitative evaluations on standard benchmarks, but also conduct extensive user studies to demonstrate the effectiveness of our approach in practical scenarios.</li>
+</ul>
+
+<h3>Title: Flow Matching from Viewpoint of Proximal Operators</h3>
+<ul>
+<li><strong>Authors: </strong>Kenji Fukumizu, Wei Huang, Han Bao, Shuntuo Xu, Nisha Chandramoothy</a></li>
+<li><strong>Subjects: </strong>cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12683">https://arxiv.org/abs/2602.12683</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12683">https://arxiv.org/pdf/2602.12683</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12683]] Flow Matching from Viewpoint of Proximal Operators(https://arxiv.org/abs/2602.12683)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We reformulate Optimal Transport Conditional Flow Matching (OT-CFM), a class of dynamical generative models, showing that it admits an exact proximal formulation via an extended Brenier potential, without assuming that the target distribution has a density. In particular, the mapping to recover the target point is exactly given by a proximal operator, which yields an explicit proximal expression of the vector field. We also discuss the convergence of minibatch OT-CFM to the population formulation as the batch size increases. Finally, using second epi-derivatives of convex potentials, we prove that, for manifold-supported targets, OT-CFM is terminally normally hyperbolic: after time rescaling, the dynamics contracts exponentially in directions normal to the data manifold while remaining neutral along tangential directions.</li>
+</ul>
+
+<h3>Title: QTabGAN: A Hybrid Quantum-Classical GAN for Tabular Data Synthesis</h3>
+<ul>
+<li><strong>Authors: </strong>Subhangi Kumari, Rakesh Achutha, Vignesh Sivaraman</a></li>
+<li><strong>Subjects: </strong>cs.LG, quant-ph</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12704">https://arxiv.org/abs/2602.12704</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12704">https://arxiv.org/pdf/2602.12704</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12704]] QTabGAN: A Hybrid Quantum-Classical GAN for Tabular Data Synthesis(https://arxiv.org/abs/2602.12704)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Synthesizing realistic tabular data is challenging due to heterogeneous feature types and high dimensionality. We introduce QTabGAN, a hybrid quantum-classical generative adversarial framework for tabular data synthesis. QTabGAN is especially designed for settings where real data are scarce or restricted by privacy constraints. The model exploits the expressive power of quantum circuits to learn complex data distributions, which are then mapped to tabular features using classical neural networks. We evaluate QTabGAN on multiple classification and regression datasets and benchmark it against leading state-of-the-art generative models. Experiments show that QTabGAN achieves up to 54.07% improvement across various classification datasets and evaluation metrics, thus establishing a scalable quantum approach to tabular data synthesis and highlighting its potential for quantum-assisted generative modelling.</li>
+</ul>
+
+<h3>Title: MedXIAOHE: A Comprehensive Recipe for Building Medical MLLMs</h3>
+<ul>
+<li><strong>Authors: </strong>Baorong Shi, Bo Cui, Boyuan Jiang, Deli Yu, Fang Qian, Haihua Yang, Huichao Wang, Jiale Chen, Jianfei Pan, Jieqiong Cao, Jinghao Lin, Kai Wu, Lin Yang, Shengsheng Yao, Tao Chen, Xiaojun Xiao, Xiaozhong Ji, Xu Wang, Yijun He, Zhixiong Yang</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.CV, eess.IV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12705">https://arxiv.org/abs/2602.12705</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12705">https://arxiv.org/pdf/2602.12705</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12705]] MedXIAOHE: A Comprehensive Recipe for Building Medical MLLMs(https://arxiv.org/abs/2602.12705)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model</a></li>
+<li><strong>Abstract: </strong>We present MedXIAOHE, a medical vision-language foundation model designed to advance general-purpose medical understanding and reasoning in real-world clinical applications. MedXIAOHE achieves state-of-the-art performance across diverse medical benchmarks and surpasses leading closed-source multimodal systems on multiple capabilities. To achieve this, we propose an entity-aware continual pretraining framework that organizes heterogeneous medical corpora to broaden knowledge coverage and reduce long-tail gaps (e.g., rare diseases). For medical expert-level reasoning and interaction, MedXIAOHE incorporates diverse medical reasoning patterns via reinforcement learning and tool-augmented agentic training, enabling multi-step diagnostic reasoning with verifiable decision traces. To improve reliability in real-world use, MedXIAOHE integrates user-preference rubrics, evidence-grounded reasoning, and low-hallucination long-form report generation, with improved adherence to medical instructions. We release this report to document our practical design choices, scaling insights, and evaluation framework, hoping to inspire further research.</li>
+</ul>
+
+<h3>Title: Physics-Informed Laplace Neural Operator for Solving Partial Differential Equations</h3>
+<ul>
+<li><strong>Authors: </strong>Heechang Kim, Qianying Cao, Hyomin Shin, Seungchul Lee, George Em Karniadakis, Minseok Choi</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12706">https://arxiv.org/abs/2602.12706</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12706">https://arxiv.org/pdf/2602.12706</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12706]] Physics-Informed Laplace Neural Operator for Solving Partial Differential Equations(https://arxiv.org/abs/2602.12706)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Neural operators have emerged as fast surrogate solvers for parametric partial differential equations (PDEs). However, purely data-driven models often require extensive training data and can generalize poorly, especially in small-data regimes and under unseen (out-of-distribution) input functions that are not represented in the training data. To address these limitations, we propose the Physics-Informed Laplace Neural Operator (PILNO), which enhances the Laplace Neural Operator (LNO) by embedding governing physics into training through PDE, boundary condition, and initial condition residuals. To improve expressivity, we first introduce an Advanced LNO (ALNO) backbone that retains a pole-residue transient representation while replacing the steady-state branch with an FNO-style Fourier multiplier. To make physics-informed training both data-efficient and robust, PILNO further leverages (i) virtual inputs: an unlabeled ensemble of input functions spanning a broad spectral range that provides abundant physics-only supervision and explicitly targets out-of-distribution (OOD) regimes; and (ii) temporal-causality weighting: a time-decaying reweighting of the physics residual that prioritizes early-time dynamics and stabilizes optimization for time-dependent PDEs. Across four representative benchmarks -- Burgers' equation, Darcy flow, a reaction-diffusion system, and a forced KdV equation -- PILNO consistently improves accuracy in small-data settings (e.g., N_train <= 27), reduces run-to-run variability across random seeds, and achieves stronger OOD generalization than purely data-driven baselines.</li>
+</ul>
+
+<h3>Title: ADEPT: RL-Aligned Agentic Decoding of Emotion via Evidence Probing Tools -- From Consensus Learning to Ambiguity-Driven Emotion Reasoning</h3>
+<ul>
+<li><strong>Authors: </strong>Esther Sun, Bo-Hao Su, Abinay Reddy Naini, Shinji Watanabe, Carlos Busso</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12714">https://arxiv.org/abs/2602.12714</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12714">https://arxiv.org/pdf/2602.12714</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12714]] ADEPT: RL-Aligned Agentic Decoding of Emotion via Evidence Probing Tools -- From Consensus Learning to Ambiguity-Driven Emotion Reasoning(https://arxiv.org/abs/2602.12714)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Speech Large Language Models (SLLMs) enable high-level emotion reasoning but often produce ungrounded, text-biased judgments without verifiable acoustic evidence. In contrast, self-supervised speech encoders such as WavLM provide strong acoustic representations yet remain opaque discriminative models with limited interpretability. To bridge this gap, we introduce ADEPT (Agentic Decoding of Emotion via Evidence Probing Tools), a framework that reframes emotion recognition as a multi-turn inquiry process rather than a single-pass prediction. ADEPT transforms an SLLM into an agent that maintains an evolving candidate emotion set and adaptively invokes dedicated semantic and acoustic probing tools within a structured pipeline of candidate generation, evidence collection, and adjudication. Crucially, ADEPT enables a paradigm shift from consensus learning to ambiguity-driven emotion reasoning. Since human affect exhibits inherent complexity and frequent co-occurrence of emotions, we treat minority annotations as informative perceptual signals rather than discarding them as noise. Finally, we integrate Group Relative Policy Optimization (GRPO) with an Evidence Trust Gate to explicitly couple tool-usage behaviors with prediction quality and enforce evidence-grounded reasoning. Experiments show that ADEPT improves primary emotion accuracy in most settings while substantially improving minor emotion characterization, producing explanations grounded in auditable acoustic and semantic evidence.</li>
+</ul>
+
+<h3>Title: SPRig: Self-Supervised Pose-Invariant Rigging from Mesh Sequences</h3>
+<ul>
+<li><strong>Authors: </strong>Ruipeng Wang, Langkun Zhong, Miaowei Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.GR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12740">https://arxiv.org/abs/2602.12740</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12740">https://arxiv.org/pdf/2602.12740</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12740]] SPRig: Self-Supervised Pose-Invariant Rigging from Mesh Sequences(https://arxiv.org/abs/2602.12740)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>State-of-the-art rigging methods assume a canonical rest pose--an assumption that fails for sequential data (e.g., animal motion capture or AIGC/video-derived mesh sequences) that lack the T-pose. Applied frame-by-frame, these methods are not pose-invariant and produce topological inconsistencies across frames. Thus We propose SPRig, a general fine-tuning framework that enforces cross-frame consistency losses to learn pose-invariant rigs on top of existing models. We validate our approach on rigging using a new permutation-invariant stability protocol. Experiments demonstrate SOTA temporal stability: our method produces coherent rigs from challenging sequences and dramatically reduces the artifacts that plague baseline methods. The code will be released publicly upon acceptance.</li>
+</ul>
+
+<h3>Title: Synthetic Craquelure Generation for Unsupervised Painting Restoration</h3>
+<ul>
+<li><strong>Authors: </strong>Jana Cuch-Guillén, Antonio Agudo, Raül Pérez-Gonzalo</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12742">https://arxiv.org/abs/2602.12742</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12742">https://arxiv.org/pdf/2602.12742</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12742]] Synthetic Craquelure Generation for Unsupervised Painting Restoration(https://arxiv.org/abs/2602.12742)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Cultural heritage preservation increasingly demands non-invasive digital methods for painting restoration, yet identifying and restoring fine craquelure patterns from complex brushstrokes remains challenging due to scarce pixel-level annotations. We propose a fully annotation-free framework driven by a domain-specific synthetic craquelure generator, which simulates realistic branching and tapered fissure geometry using Bézier trajectories. Our approach couples a classical morphological detector with a learning-based refinement module: a SegFormer backbone adapted via Low-Rank Adaptation (LoRA). Uniquely, we employ a detector-guided strategy, injecting the morphological map as an input spatial prior, while a masked hybrid loss and logit adjustment constrain the training to focus specifically on refining candidate crack regions. The refined masks subsequently guide an Anisotropic Diffusion inpainting stage to reconstruct missing content. Experimental results demonstrate that our pipeline significantly outperforms state-of-the-art photographic restoration models in zero-shot settings, while faithfully preserving the original paint brushwork.</li>
+</ul>
+
+<h3>Title: Lamer-SSL: Layer-aware Mixture of LoRA Experts for Continual Multilingual Expansion of Self-supervised Models without Forgetting</h3>
+<ul>
+<li><strong>Authors: </strong>Jing Xu, Minglin Wu, Xueyuan Chen, Xixin Wu, Helen Meng</a></li>
+<li><strong>Subjects: </strong>cs.CL, eess.AS</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12746">https://arxiv.org/abs/2602.12746</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12746">https://arxiv.org/pdf/2602.12746</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12746]] Lamer-SSL: Layer-aware Mixture of LoRA Experts for Continual Multilingual Expansion of Self-supervised Models without Forgetting(https://arxiv.org/abs/2602.12746)</code><input type="text"></li>
+<li><strong>Keywords: </strong>self-supervised</a></li>
+<li><strong>Abstract: </strong>Despite their impressive performance, self-supervised speech models often struggle to generalize to new languages and tend to forget previously acquired knowledge during continual training. To address this, we propose Lamer-SSL, a parameter-efficient framework that integrates a Layer-Aware MixturE of LoRA Experts (Lamer) module with a replay strategy. The Lamer module enables flexible balancing between shared and language-specific representations, while layer-aware expert allocation assigns more experts to deeper layers where semantic information is richer. Meanwhile, the replay strategy retains prior knowledge using minimal data, mitigating forgetting during continual training. Experiments on automatic speech recognition (ASR) and language identification (LID) demonstrate that Lamer-SSL extends self-supervised models to new languages effectively while maintaining strong performance on previously learned languages with only 2.14% parameters being trainable.</li>
+</ul>
+
+<h3>Title: Hierarchical Successor Representation for Robust Transfer</h3>
+<ul>
+<li><strong>Authors: </strong>Changmin Yu, Máté Lengyel</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12753">https://arxiv.org/abs/2602.12753</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12753">https://arxiv.org/pdf/2602.12753</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12753]] Hierarchical Successor Representation for Robust Transfer(https://arxiv.org/abs/2602.12753)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>The successor representation (SR) provides a powerful framework for decoupling predictive dynamics from rewards, enabling rapid generalisation across reward configurations. However, the classical SR is limited by its inherent policy dependence: policies change due to ongoing learning, environmental non-stationarities, and changes in task demands, making established predictive representations obsolete. Furthermore, in topologically complex environments, SRs suffer from spectral diffusion, leading to dense and overlapping features that scale poorly. Here we propose the Hierarchical Successor Representation (HSR) for overcoming these limitations. By incorporating temporal abstractions into the construction of predictive representations, HSR learns stable state features which are robust to task-induced policy changes. Applying non-negative matrix factorisation (NMF) to the HSR yields a sparse, low-rank state representation that facilitates highly sample-efficient transfer to novel tasks in multi-compartmental environments. Further analysis reveals that HSR-NMF discovers interpretable topological structures, providing a policy-agnostic hierarchical map that effectively bridges model-free optimality and model-based flexibility. Beyond providing a useful basis for task-transfer, we show that HSR's temporally extended predictive structure can also be leveraged to drive efficient exploration, effectively scaling to large, procedurally generated environments.</li>
+</ul>
+
+<h3>Title: Towards reconstructing experimental sparse-view X-ray CT data with diffusion models</h3>
+<ul>
+<li><strong>Authors: </strong>Nelas J. Thomsen, Xinyuan Wang, Felix Lucka, Ezgi Demircan-Tureyen</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12755">https://arxiv.org/abs/2602.12755</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12755">https://arxiv.org/pdf/2602.12755</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12755]] Towards reconstructing experimental sparse-view X-ray CT data with diffusion models(https://arxiv.org/abs/2602.12755)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Diffusion-based image generators are promising priors for ill-posed inverse problems like sparse-view X-ray Computed Tomography (CT). As most studies consider synthetic data, it is not clear whether training data mismatch (``domain shift'') or forward model mismatch complicate their successful application to experimental data. We measured CT data from a physical phantom resembling the synthetic Shepp-Logan phantom and trained diffusion priors on synthetic image data sets with different degrees of domain shift towards it. Then, we employed the priors in a Decomposed Diffusion Sampling scheme on sparse-view CT data sets with increasing difficulty leading to the experimental data. Our results reveal that domain shift plays a nuanced role: while severe mismatch causes model collapse and hallucinations, diverse priors outperform well-matched but narrow priors. Forward model mismatch pulls the image samples away from the prior manifold, which causes artifacts but can be mitigated with annealed likelihood schedules that also increase computational efficiency. Overall, we demonstrate that performance gains do not immediately translate from synthetic to experimental data, and future development must validate against real-world benchmarks.</li>
+</ul>
+
+<h3>Title: PixelRush: Ultra-Fast, Training-Free High-Resolution Image Generation via One-step Diffusion</h3>
+<ul>
+<li><strong>Authors: </strong>Hong-Phuc Lai, Phong Nguyen, Anh Tran</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12769">https://arxiv.org/abs/2602.12769</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12769">https://arxiv.org/pdf/2602.12769</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12769]] PixelRush: Ultra-Fast, Training-Free High-Resolution Image Generation via One-step Diffusion(https://arxiv.org/abs/2602.12769)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Pre-trained diffusion models excel at generating high-quality images but remain inherently limited by their native training resolution. Recent training-free approaches have attempted to overcome this constraint by introducing interventions during the denoising process; however, these methods incur substantial computational overhead, often requiring more than five minutes to produce a single 4K image. In this paper, we present PixelRush, the first tuning-free framework for practical high-resolution text-to-image generation. Our method builds upon the established patch-based inference paradigm but eliminates the need for multiple inversion and regeneration cycles. Instead, PixelRush enables efficient patch-based denoising within a low-step regime. To address artifacts introduced by patch blending in few-step generation, we propose a seamless blending strategy. Furthermore, we mitigate over-smoothing effects through a noise injection mechanism. PixelRush delivers exceptional efficiency, generating 4K images in approximately 20 seconds representing a 10$\times$ to 35$\times$ speedup over state-of-the-art methods while maintaining superior visual fidelity. Extensive experiments validate both the performance gains and the quality of outputs achieved by our approach.</li>
+</ul>
+
+<h3>Title: FLAC: Maximum Entropy RL via Kinetic Energy Regularized Bridge Matching</h3>
+<ul>
+<li><strong>Authors: </strong>Lei Lv, Yunfei Li, Yu Luo, Fuchun Sun, Xiao Ma</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12829">https://arxiv.org/abs/2602.12829</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12829">https://arxiv.org/pdf/2602.12829</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12829]] FLAC: Maximum Entropy RL via Kinetic Energy Regularized Bridge Matching(https://arxiv.org/abs/2602.12829)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, generative</a></li>
+<li><strong>Abstract: </strong>Iterative generative policies, such as diffusion models and flow matching, offer superior expressivity for continuous control but complicate Maximum Entropy Reinforcement Learning because their action log-densities are not directly accessible. To address this, we propose Field Least-Energy Actor-Critic (FLAC), a likelihood-free framework that regulates policy stochasticity by penalizing the kinetic energy of the velocity field. Our key insight is to formulate policy optimization as a Generalized Schrödinger Bridge (GSB) problem relative to a high-entropy reference process (e.g., uniform). Under this view, the maximum-entropy principle emerges naturally as staying close to a high-entropy reference while optimizing return, without requiring explicit action densities. In this framework, kinetic energy serves as a physically grounded proxy for divergence from the reference: minimizing path-space energy bounds the deviation of the induced terminal action distribution. Building on this view, we derive an energy-regularized policy iteration scheme and a practical off-policy algorithm that automatically tunes the kinetic energy via a Lagrangian dual mechanism. Empirically, FLAC achieves superior or comparable performance on high-dimensional benchmarks relative to strong baselines, while avoiding explicit density estimation.</li>
+</ul>
+
+<h3>Title: Amortized Reasoning Tree Search: Decoupling Proposal and Decision in Large Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Zesheng Hong, Jiadong Yu, Hui Pan</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12846">https://arxiv.org/abs/2602.12846</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12846">https://arxiv.org/pdf/2602.12846</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12846]] Amortized Reasoning Tree Search: Decoupling Proposal and Decision in Large Language Models(https://arxiv.org/abs/2602.12846)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Reinforcement Learning with Verifiable Rewards (RLVR) has established itself as the dominant paradigm for instilling rigorous reasoning capabilities in Large Language Models. While effective at amplifying dominant behaviors, we identify a critical pathology in this alignment process: the systematic suppression of valid but rare (low-likelihood under the base model distribution) reasoning paths. We theoretically characterize this phenomenon as a "Normalization Squeeze," where the interplay between mode-seeking policy gradients and finite sampling acts as a high-pass likelihood filter, driving the probability of rare correct traces to statistical extinction. To counteract this collapse without discarding the base model's latent diversity, we propose Amortized Reasoning Tree Search (ARTS). Unlike standard approaches that force internalization via parameter updates, ARTS prioritizes deliberation by decoupling generation from verification. We introduce a Flow Matching objective that repurposes the verifier to estimate the conservation of probability flow, enabling robust navigation through sparse, high-entropy search spaces where traditional discriminative objectives fail. Extensive experiments on the MATH-500 benchmark demonstrate that ARTS achieves a performance of 74.6% (BoN@16), effectively matching fully fine-tuned policies (74.7%) without modifying the generative backbone. Crucially, on the long-tail subset where coupled RL optimization collapses to 0% pass@k, ARTS uniquely recovers significant performance, suggesting that disentangling verification from generation offers a more robust pathway for solving complex reasoning tasks.</li>
+</ul>
+
+<h3>Title: Drift-Aware Variational Autoencoder-based Anomaly Detection with Two-level Ensembling</h3>
+<ul>
+<li><strong>Authors: </strong>Jin Li, Kleanthis Malialis, Christos G. Panayiotou, Marios M. Polycarpou</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12976">https://arxiv.org/abs/2602.12976</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12976">https://arxiv.org/pdf/2602.12976</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12976]] Drift-Aware Variational Autoencoder-based Anomaly Detection with Two-level Ensembling(https://arxiv.org/abs/2602.12976)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>In today's digital world, the generation of vast amounts of streaming data in various domains has become ubiquitous. However, many of these data are unlabeled, making it challenging to identify events, particularly anomalies. This task becomes even more formidable in nonstationary environments where model performance can deteriorate over time due to concept drift. To address these challenges, this paper presents a novel method, VAE++ESDD, which employs incremental learning and two-level ensembling: an ensemble of Variational AutoEncoder(VAEs) for anomaly prediction, along with an ensemble of concept drift detectors. Each drift detector utilizes a statistical-based concept drift mechanism. To evaluate the effectiveness of VAE++ESDD, we conduct a comprehensive experimental study using real-world and synthetic datasets characterized by severely or extremely low anomalous rates and various drift characteristics. Our study reveals that the proposed method significantly outperforms both strong baselines and state-of-the-art methods.</li>
+</ul>
+
+<h3>Title: Evaluating the Homogeneity of Keyphrase Prediction Models</h3>
+<ul>
+<li><strong>Authors: </strong>Maël Houbre, Florian Boudin, Beatrice Daille</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.12989">https://arxiv.org/abs/2602.12989</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.12989">https://arxiv.org/pdf/2602.12989</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.12989]] Evaluating the Homogeneity of Keyphrase Prediction Models(https://arxiv.org/abs/2602.12989)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Keyphrases which are useful in several NLP and IR applications are either extracted from text or predicted by generative models. Contrarily to keyphrase extraction approaches, keyphrase generation models can predict keyphrases that do not appear in a document's text called `absent keyphrases`. This ability means that keyphrase generation models can associate a document to a notion that is not explicitly mentioned in its text. Intuitively, this suggests that for two documents treating the same subjects, a keyphrase generation model is more likely to be homogeneous in their indexing i.e. predict the same keyphrase for both documents, regardless of those keyphrases appearing in their respective text or not; something a keyphrase extraction model would fail to do. Yet, homogeneity of keyphrase prediction models is not covered by current benchmarks. In this work, we introduce a method to evaluate the homogeneity of keyphrase prediction models and study if absent keyphrase generation capabilities actually help the model to be more homogeneous. To our surprise, we show that keyphrase extraction methods are competitive with generative models, and that the ability to generate absent keyphrases can actually have a negative impact on homogeneity. Our data, code and prompts are available on huggingface and github.</li>
+</ul>
+
+<h3>Title: Probabilistic Wind Power Forecasting with Tree-Based Machine Learning and Weather Ensembles</h3>
+<ul>
+<li><strong>Authors: </strong>Max Bruninx, Diederik van Binsbergen, Timothy Verstraeten, Ann Nowé, Jan Helsen</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.13010">https://arxiv.org/abs/2602.13010</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.13010">https://arxiv.org/pdf/2602.13010</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.13010]] Probabilistic Wind Power Forecasting with Tree-Based Machine Learning and Weather Ensembles(https://arxiv.org/abs/2602.13010)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Accurate production forecasts are essential to continue facilitating the integration of renewable energy sources into the power grid. This paper illustrates how to obtain probabilistic day-ahead forecasts of wind power generation via gradient boosting trees using an ensemble of weather forecasts. To this end, we perform a comparative analysis across three state-of-the-art probabilistic prediction methods-conformalised quantile regression, natural gradient boosting and conditional diffusion models-all of which can be combined with tree-based machine learning. The methods are validated using four years of data for all wind farms present within the Belgian offshore zone. Additionally, the point forecasts are benchmarked against deterministic engineering methods, using either the power curve or an advanced approach incorporating a calibrated analytical wake model. The experimental results show that the machine learning methods improve the mean absolute error by up to 53% and 33% compared to the power curve and the calibrated wake model. Considering the three probabilistic prediction methods, the conditional diffusion model is found to yield the best overall probabilistic and point estimate of wind power generation. Moreover, the findings suggest that the use of an ensemble of weather forecasts can improve point forecast accuracy by up to 23%.</li>
+</ul>
+
+<h3>Title: A Calibrated Memorization Index (MI) for Detecting Training Data Leakage in Generative MRI Models</h3>
+<ul>
+<li><strong>Authors: </strong>Yash Deo, Yan Jia, Toni Lassila, Victoria J Hodge, Alejandro F Frang, Chenghao Qian, Siyuan Kang, Ibrahim Habli</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.13066">https://arxiv.org/abs/2602.13066</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.13066">https://arxiv.org/pdf/2602.13066</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.13066]] A Calibrated Memorization Index (MI) for Detecting Training Data Leakage in Generative MRI Models(https://arxiv.org/abs/2602.13066)</code><input type="text"></li>
+<li><strong>Keywords: </strong>foundation model, generative</a></li>
+<li><strong>Abstract: </strong>Image generative models are known to duplicate images from the training data as part of their outputs, which can lead to privacy concerns when used for medical image generation. We propose a calibrated per-sample metric for detecting memorization and duplication of training data. Our metric uses image features extracted using an MRI foundation model, aggregates multi-layer whitened nearest-neighbor similarities, and maps them to a bounded \emph{Overfit/Novelty Index} (ONI) and \emph{Memorization Index} (MI) scores. Across three MRI datasets with controlled duplication percentages and typical image augmentations, our metric robustly detects duplication and provides more consistent metric values across datasets. At the sample level, our metric achieves near-perfect detection of duplicates.</li>
+</ul>
+
+<h3>Title: Universal Transformation of One-Class Classifiers for Unsupervised Anomaly Detection</h3>
+<ul>
+<li><strong>Authors: </strong>Declan McIntosh, Alexandra Branzan Albu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.13091">https://arxiv.org/abs/2602.13091</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.13091">https://arxiv.org/pdf/2602.13091</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.13091]] Universal Transformation of One-Class Classifiers for Unsupervised Anomaly Detection(https://arxiv.org/abs/2602.13091)</code><input type="text"></li>
+<li><strong>Keywords: </strong>anomaly</a></li>
+<li><strong>Abstract: </strong>Detecting anomalies in images and video is an essential task for multiple real-world problems, including industrial inspection, computer-assisted diagnosis, and environmental monitoring. Anomaly detection is typically formulated as a one-class classification problem, where the training data consists solely of nominal values, leaving methods built on this assumption susceptible to training label noise. We present a dataset folding method that transforms an arbitrary one-class classifier-based anomaly detector into a fully unsupervised method. This is achieved by making a set of key weak assumptions: that anomalies are uncommon in the training dataset and generally heterogeneous. These assumptions enable us to utilize multiple independently trained instances of a one-class classifier to filter the training dataset for anomalies. This transformation requires no modifications to the underlying anomaly detector; the only changes are algorithmically selected data subsets used for training. We demonstrate that our method can transform a wide variety of one-class classifier anomaly detectors for both images and videos into unsupervised ones. Our method creates the first unsupervised logical anomaly detectors by transforming existing methods. We also demonstrate that our method achieves state-of-the-art performance for unsupervised anomaly detection on the MVTec AD, ViSA, and MVTec Loco AD datasets. As improvements to one-class classifiers are made, our method directly transfers those improvements to the unsupervised domain, linking the domains.</li>
+</ul>
+
+<h3>Title: Order Matters in Retrosynthesis: Structure-aware Generation via Reaction-Center-Guided Discrete Flow Matching</h3>
+<ul>
+<li><strong>Authors: </strong>Chenguang Wang, Zihan Zhou, Lei Bai, Tianshu Yu</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.13136">https://arxiv.org/abs/2602.13136</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.13136">https://arxiv.org/pdf/2602.13136</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.13136]] Order Matters in Retrosynthesis: Structure-aware Generation via Reaction-Center-Guided Discrete Flow Matching(https://arxiv.org/abs/2602.13136)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion, foundation model</a></li>
+<li><strong>Abstract: </strong>Template-free retrosynthesis methods treat the task as black-box sequence generation, limiting learning efficiency, while semi-template approaches rely on rigid reaction libraries that constrain generalization. We address this gap with a key insight: atom ordering in neural representations matters. Building on this insight, we propose a structure-aware template-free framework that encodes the two-stage nature of chemical reactions as a positional inductive bias. By placing reaction center atoms at the sequence head, our method transforms implicit chemical knowledge into explicit positional patterns that the model can readily capture. The proposed RetroDiT backbone, a graph transformer with rotary position embeddings, exploits this ordering to prioritize chemically critical regions. Combined with discrete flow matching, our approach decouples training from sampling and enables generation in 20--50 steps versus 500 for prior diffusion methods. Our method achieves state-of-the-art performance on both USPTO-50k (61.2% top-1) and the large-scale USPTO-Full (51.3% top-1) with predicted reaction centers. With oracle centers, performance reaches 71.1% and 63.4% respectively, surpassing foundation models trained on 10 billion reactions while using orders of magnitude less data. Ablation studies further reveal that structural priors outperform brute-force scaling: a 280K-parameter model with proper ordering matches a 65M-parameter model without it.</li>
+</ul>
+
+<h3>Title: In-Context Autonomous Network Incident Response: An End-to-End Large Language Model Agent Approach</h3>
+<ul>
+<li><strong>Authors: </strong>Yiran Gao, Kim Hammar, Tao Li</a></li>
+<li><strong>Subjects: </strong>cs.CR, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.13156">https://arxiv.org/abs/2602.13156</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.13156">https://arxiv.org/pdf/2602.13156</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.13156]] In-Context Autonomous Network Incident Response: An End-to-End Large Language Model Agent Approach(https://arxiv.org/abs/2602.13156)</code><input type="text"></li>
+<li><strong>Keywords: </strong>in-context</a></li>
+<li><strong>Abstract: </strong>Rapidly evolving cyberattacks demand incident response systems that can autonomously learn and adapt to changing threats. Prior work has extensively explored the reinforcement learning approach, which involves learning response strategies through extensive simulation of the incident. While this approach can be effective, it requires handcrafted modeling of the simulator and suppresses useful semantics from raw system logs and alerts. To address these limitations, we propose to leverage large language models' (LLM) pre-trained security knowledge and in-context learning to create an end-to-end agentic solution for incident response planning. Specifically, our agent integrates four functionalities, perception, reasoning, planning, and action, into one lightweight LLM (14b model). Through fine-tuning and chain-of-thought reasoning, our LLM agent is capable of processing system logs and inferring the underlying network state (perception), updating its conjecture of attack models (reasoning), simulating consequences under different response strategies (planning), and generating an effective response (action). By comparing LLM-simulated outcomes with actual observations, the LLM agent repeatedly refines its attack conjecture and corresponding response, thereby demonstrating in-context adaptation. Our agentic approach is free of modeling and can run on commodity hardware. When evaluated on incident logs reported in the literature, our agent achieves recovery up to 23% faster than those of frontier LLMs.</li>
+</ul>
+
+<h3>Title: Realistic Face Reconstruction from Facial Embeddings via Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Dong Han, Yong Li, Joachim Denzler</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.13168">https://arxiv.org/abs/2602.13168</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.13168">https://arxiv.org/pdf/2602.13168</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.13168]] Realistic Face Reconstruction from Facial Embeddings via Diffusion Models(https://arxiv.org/abs/2602.13168)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>With the advancement of face recognition (FR) systems, privacy-preserving face recognition (PPFR) systems have gained popularity for their accurate recognition, enhanced facial privacy protection, and robustness to various attacks. However, there are limited studies to further verify privacy risks by reconstructing realistic high-resolution face images from embeddings of these systems, especially for PPFR. In this work, we propose the face embedding mapping (FEM), a general framework that explores Kolmogorov-Arnold Network (KAN) for conducting the embedding-to-face attack by leveraging pre-trained Identity-Preserving diffusion model against state-of-the-art (SOTA) FR and PPFR systems. Based on extensive experiments, we verify that reconstructed faces can be used for accessing other real-word FR systems. Besides, the proposed method shows the robustness in reconstructing faces from the partial and protected face embeddings. Moreover, FEM can be utilized as a tool for evaluating safety of FR and PPFR systems in terms of privacy leakage. All images used in this work are from public datasets.</li>
+</ul>
+
+<h3>Title: Learning functional components of PDEs from data using neural networks</h3>
+<ul>
+<li><strong>Authors: </strong>Torkel E. Loman, Yurij Salmaniw, Antonio Leon Villares, Jose A. Carrillo, Ruth E. Baker</a></li>
+<li><strong>Subjects: </strong>cs.LG, math.AP</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.13174">https://arxiv.org/abs/2602.13174</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.13174">https://arxiv.org/pdf/2602.13174</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.13174]] Learning functional components of PDEs from data using neural networks(https://arxiv.org/abs/2602.13174)</code><input type="text"></li>
+<li><strong>Keywords: </strong>diffusion</a></li>
+<li><strong>Abstract: </strong>Partial differential equations often contain unknown functions that are difficult or impossible to measure directly, hampering our ability to derive predictions from the model. Workflows for recovering scalar PDE parameters from data are well studied: here we show how similar workflows can be used to recover functions from data. Specifically, we embed neural networks into the PDE and show how, as they are trained on data, they can approximate unknown functions with arbitrary accuracy. Using nonlocal aggregation-diffusion equations as a case study, we recover interaction kernels and external potentials from steady state data. Specifically, we investigate how a wide range of factors, such as the number of available solutions, their properties, sampling density, and measurement noise, affect our ability to successfully recover functions. Our approach is advantageous because it can utilise standard parameter-fitting workflows, and in that the trained PDE can be treated as a normal PDE for purposes such as generating system predictions.</li>
+</ul>
+
+<h3>Title: FlexAM: Flexible Appearance-Motion Decomposition for Versatile Video Generation Control</h3>
+<ul>
+<li><strong>Authors: </strong>Mingzhi Sheng, Zekai Gu, Peng Li, Cheng Lin, Hao-Xiang Guo, Ying-Cong Chen, Yuan Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.GR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2602.13185">https://arxiv.org/abs/2602.13185</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2602.13185">https://arxiv.org/pdf/2602.13185</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2602.13185]] FlexAM: Flexible Appearance-Motion Decomposition for Versatile Video Generation Control(https://arxiv.org/abs/2602.13185)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Effective and generalizable control in video generation remains a significant challenge. While many methods rely on ambiguous or task-specific signals, we argue that a fundamental disentanglement of "appearance" and "motion" provides a more robust and scalable pathway. We propose FlexAM, a unified framework built upon a novel 3D control signal. This signal represents video dynamics as a point cloud, introducing three key enhancements: multi-frequency positional encoding to distinguish fine-grained motion, depth-aware positional encoding, and a flexible control signal for balancing precision and generative quality. This representation allows FlexAM to effectively disentangle appearance and motion, enabling a wide range of tasks including I2V/V2V editing, camera control, and spatial object editing. Extensive experiments demonstrate that FlexAM achieves superior performance across all evaluated tasks.</li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="../../javascript/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
