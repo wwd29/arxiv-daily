@@ -1,0 +1,535 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2026-09-28</h1>
+<h3>Title: HybridInfer: Thermal-Aware Reinforcement-Learning Tier Routing for On-Device, Edge, and Cloud LLM Inference</h3>
+<ul>
+<li><strong>Authors: </strong>Simran Koul</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30270">https://arxiv.org/abs/2609.30270</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30270">https://arxiv.org/pdf/2609.30270</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30270]] HybridInfer: Thermal-Aware Reinforcement-Learning Tier Routing for On-Device, Edge, and Cloud LLM Inference(https://arxiv.org/abs/2609.30270)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>On-device inference with small language models keeps user data local, works offline, and incurs no per-query cost, so the on-device tier is preferred when it is adequate. It is thermally constrained, however, and I find the constraint is sharper than a slowdown: on a flagship Snapdragon device, sustained on-device generation destabilizes the GPU inference runtime, which crashes or silently wedges after a few consecutive queries. The failure lies in the current toolchain (OpenCL kernel compilation and long-prompt prefill on the mobile GPU), recurs even when the device is cool, and is worst for long generations. Multi-tier routers across on-device, edge, and cloud models can relieve this pressure, but existing routers are thermal-blind and typically evaluated in simulation or on non-mobile hardware. I present HybridInfer, a thermal-aware reinforcement-learning router for a three-tier hierarchy (on-device Llama 3.2 3B, edge Llama 3.1 8B with retrieval, cloud GPT-4o) that uses the phone's thermal headroom and a query-complexity estimate as state and selects a tier by an offline-trained Q-learning policy. Its reward trades quality against latency, cost, and a thermal penalty, plus a locality bonus crediting on-device execution. I show this bonus is a precondition for thermal-aware routing: without it the optimal policy offloads every query. On a real Android benchmark of 210 prompts, the learned router attains significantly higher quality than two hand-tuned heuristics (paired Wilcoxon, p < 0.02) at the lowest cost of any adaptive condition. Always-on-device conditions match per-query quality on servable queries but are three to six times slower and fail on long queries, so routing wins on latency, reliability, and coverage rather than quality. To my knowledge this is the first use of on-device thermal headroom to select among LLM inference tiers of differing capability on real hardware.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Parameters vs. Context: TRACE Fine-Tuning for Robust Retrieval-Augmented Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Zhengchen Huang, Yundong Sun, Minrui Song, Shuanglong Yao, Ye Liu, Ji Chen, Xing Wang</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30337">https://arxiv.org/abs/2609.30337</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30337">https://arxiv.org/pdf/2609.30337</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30337]] Parameters vs. Context: TRACE Fine-Tuning for Robust Retrieval-Augmented Generation(https://arxiv.org/abs/2609.30337)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Retrieval-Augmented Generation (RAG) mitigates knowledge obsolescence and factual hallucination in large language models by introducing external context. However, when retrieved knowledge conflicts with the model's internal parametric knowledge, the model may either blindly follow misleading context or incorrectly rely on parametric knowledge, leading to unreliable responses. To address this issue, this paper proposes TRACE (Debate-TRace and Answer-Completeness rEgularized fine-tuning), a robust fine-tuning framework for RAG under knowledge conflicts. First, we propose a fine-tuning method that leverages multi-agent debate traces to extract correct candidates, incorrect candidates, and answer-shift patterns, providing fine-grained supervision for reliable knowledge-source selection. In addition, we design an answer completeness regularization mechanism to alleviate empty, overly short, and prematurely terminated responses via answer-tail token reinforcement and premature termination suppression. The fine-tuning objective combines correct-answer supervision, incorrect-candidate suppression, answer-tail token reinforcement, and premature termination suppression, enabling the model to use reliable external context, resist misleading or irrelevant retrieved content, and fall back to parametric knowledge when retrieved evidence is unreliable. Experiments across multiple knowledge-conflict scenarios and datasets show that TRACE improves robustness against misleading retrieved knowledge and reduces incomplete answers. These results demonstrate that multi-agent debate traces and answer completeness regularization jointly enhance knowledge-source selection, conflict robustness, and answer quality in RAG models. Our code is available at this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Auditing System-1 Models on Biosecurity-Relevant Benchmarks: Calibration, Selective Prediction, and Permutation Instability in a Non-Generative Model</h3>
+<ul>
+<li><strong>Authors: </strong>Kimon Antonios Provatas, Ilias Georgakopoulos-Soares</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30454">https://arxiv.org/abs/2609.30454</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30454">https://arxiv.org/pdf/2609.30454</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30454]] Auditing System-1 Models on Biosecurity-Relevant Benchmarks: Calibration, Selective Prediction, and Permutation Instability in a Non-Generative Model(https://arxiv.org/abs/2609.30454)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Non-generative "System-1" models return structured probabilistic decisions in a single forward pass, without autoregressive decoding, at a small fraction of the inference cost of a generative model. This makes them of interest as inexpensive components in larger pipelines, but their reliability on biosecurity-relevant tasks has not been systematically examined. We audit one commercial System-1 model on 6,020 multiple-choice items drawn from the Weapons of Mass Destruction Proxy (WMDP), a paraphrase-robust WMDP-Bio variant, and six LAB-Bench subtasks, measuring accuracy, calibration, error detection, selective prediction, and sensitivity to the order in which answer options are presented. Accuracy is strongly task-dependent. Once the vendor's uncertainty field is correctly interpreted, the model is reasonably well calibrated (pooled expected calibration error 0.034) and its top-1 probability separates correct from incorrect predictions (pooled AUROC 0.820), though both degrade substantially on the weaker tasks. Under four cyclic rotations of the answer options, 37.4% of WMDP-Cyber items receive different answers; a control using byte-identical repeated calls attributes most of this to option order rather than run-to-run variation. Averaging probabilities across rotations improves WMDP-Cyber accuracy by 3.8 percentage points, and applying it only to low-confidence items recovers most of that gain at well under the cost of averaging every item.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: RAZOR: Pruning Replaceable Experts in LLMs</h3>
+<ul>
+<li><strong>Authors: </strong>Mingyang Song, Mao Zheng</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30465">https://arxiv.org/abs/2609.30465</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30465">https://arxiv.org/pdf/2609.30465</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30465]] RAZOR: Pruning Replaceable Experts in LLMs(https://arxiv.org/abs/2609.30465)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Mixture-of-experts (MoE) models activate few experts per token but store the full expert pool. Expert pruning reduces this storage burden; at a fixed pruning budget, the goal is to preserve the original model's output distribution as closely as possible. Yet an expert's usage or contribution magnitude does not by itself determine the damage caused by its removal. What matters is whether the surviving computation can replace its function. We introduce RAZOR, a training-free expert pruning method that scores functional replaceability using consensus residuals: deviations of expert outputs from the original weighted mixture. An exact single-deletion identity at a fixed layer input accounts for survivor renormalization and router-selected refill, providing local scores aggregated over calibration tokens for budgeted pruning without gradients or recovery training. On GLM-4.7-Flash, Qwen3.6-35B-A3B, DeepSeek-V4-Flash-0731, and Hy3 at 25\% and 50\% expert removal, RAZOR achieves the highest nine-task macro average among the evaluated pruning methods in all eight settings. On the two backbones with matched REAP benchmark runs, it exceeds REAP by 2.12--5.59 points and wins all 36 paired task comparisons. It also lowers reverse KL relative to REAP in all four matched GLM-4.7-Flash and Qwen3.6-35B-A3B model--budget settings. Analysis of responses generated by Qwen3.6-35B-A3B nevertheless reveals changes in diversity, formatting, and termination, underscoring that task retention and predictive fidelity do not ensure generation stability.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: PolicyAttention: Softmax Attention Implements Policy Mirror Descent for Closed-Loop Control</h3>
+<ul>
+<li><strong>Authors: </strong>Yuhe Sui, Yingzhi Tang, Shufang Chen</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30500">https://arxiv.org/abs/2609.30500</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30500">https://arxiv.org/pdf/2609.30500</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30500]] PolicyAttention: Softmax Attention Implements Policy Mirror Descent for Closed-Loop Control(https://arxiv.org/abs/2609.30500)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Can causal softmax attention implement policy mirror descent as a repeated controller rather than a one-step algebraic identity? Negative-entropy policy mirror descent (PMD) has the statewise update $\operatorname{PMD}_\eta(\pi,Q)=\operatorname{softmax}(\log\pi+\eta Q)$. Building on the known Q-TD-PMD recursion, we construct one fixed causal-softmax actor--environment--one-step-critic protocol with explicit actor, routing, sampling, and normalization residuals, and propagate them to the policy actually returned. The construction states the finite-logit/full-support domain, the external tokenization and sampling boundary, and the mean-zero LayerNorm carrier conditions required by the normalized compilation. Separately trained pre-LN Transformers recover the target computation empirically. A frozen one-step audit model is closest to PMD among the tested fixed rules; in a preregistered five-run $S=4$ repeated-control test, the learned actor with an exact one-step critic reaches median returned-policy loss $1.052\times$ the Exact PMD oracle and retains the criterion across four no-retraining shifts. The same checkpoints with their learned critic give descriptive median $1.050\times$ the oracle (no registered margin). At $S=8$, replacing the exact critic by the learned critic raises median $T=20$ loss to $0.0225$ yet leaves the Liang--Lai and Algorithm Distillation adaptations $20.2$--$24.2\times$ higher-loss; this is a one-sided sampled-critic bound because PolicyAttention consumes 144 generative transitions per round versus 20 on-policy transitions for the adaptations. The strict 20-transition comparison remains open. At $S=8,16$, the exact-critic common-harness comparison remains $17.7$--$28.2\times$ lower-loss than those adaptations, with the information asymmetry stated locally.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Atlases Are Already Inside: Recovering Population Templates from Pretrained Diffusion Models</h3>
+<ul>
+<li><strong>Authors: </strong>Jian Shi, John Femiani, Peter Wonka</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30566">https://arxiv.org/abs/2609.30566</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30566">https://arxiv.org/pdf/2609.30566</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30566]] Atlases Are Already Inside: Recovering Population Templates from Pretrained Diffusion Models(https://arxiv.org/abs/2609.30566)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We present a new inference-time sampler for diffusion models that gives a pretrained model a capability it was never trained for: constructing the atlas of the population it synthesizes. The sampler converges from every random seed to the population's central anatomy, which we call the \emph{intrinsic atlas}. The advantage is threefold. (1) It requires no retraining. A diffusion model that has already learned a coherent population, including the released ones, yields its atlas in a single inference pass without involving deformable registration. (2) It applies to multiple domains, such as brain MRI, chest X-ray, faces, and 3D shapes. (3) It extends to subpopulations. One age-conditioned model gives an atlas at any age in its training range, and the resulting family reproduces the CSF expansion of healthy aging. Evaluated as a registration target, the intrinsic atlas is best or second-best on every dataset against classical and learned templates, and the most central template on held-out brain MRI cohorts. Atlas construction can be reframed as a byproduct of generative modeling: a diffusion model is a learned representation of population structure, and the atlas is what it already contains.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations</h3>
+<ul>
+<li><strong>Authors: </strong>Mihir Dhanakshirur, Adam Ousherovitch, Ambuj Tewari</a></li>
+<li><strong>Subjects: </strong>cs.LG, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30572">https://arxiv.org/abs/2609.30572</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30572">https://arxiv.org/pdf/2609.30572</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30572]] Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations(https://arxiv.org/abs/2609.30572)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Large language models are often post-trained on expert demonstrations using cross-entropy (CE), even when the downstream objective is not to imitate the demonstrated solution but to produce any output accepted by a verifier. This mismatch is seen in verifiable domains with multiple correct solutions, such as mathematical reasoning and code generation, where training data may contain only one expert solution per problem. We show that minimizing cross-entropy can be misaligned with minimizing verifier risk; two policies can assign identical likelihood to the observed demonstrations while placing different probability mass on incorrect outputs. This is formalized through a learning-theoretic counterexample in which CE minimization selects a suboptimal policy. We identify that controlling the support of the learned policy can solve this problem by preventing probability mass from spreading to unsupported outputs. Since support size is non-differentiable and computationally intractable, we propose entropy-regularized cross-entropy (ER-CE), using token-level Shannon entropy as a tractable proxy. Finally, across mathematical reasoning and code-generation benchmarks, we find that entropy-regularized training consistently improves verifier accuracy over standard cross-entropy. Our results identify a simple failure mode of imitation-based post-training in verifiable tasks and provide a practical objective that is better aligned with producing correct outputs.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Action Forcing: Training World Models on Unsupervised Video by Recovering Underlying Egomotion Bases</h3>
+<ul>
+<li><strong>Authors: </strong>Ashish Sundar, Tiankuo Hou, Zhong Fan, Chunbo Luo, Xiaoyang Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30595">https://arxiv.org/abs/2609.30595</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30595">https://arxiv.org/pdf/2609.30595</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30595]] Action Forcing: Training World Models on Unsupervised Video by Recovering Underlying Egomotion Bases(https://arxiv.org/abs/2609.30595)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Synchronised action annotations are needed to train controllable world models and these datasets remain elusive. Existing approaches make use of instrumented platforms with calibrated sensors, costly manual annotation, or latent-action models which lack grounding. We instead turn ordinary unlabelled video into action-supervised training data by recovering (without training) a data-derived egomotion basis. We track pixel displacements across frames and exploit the recurring coherent structure induced by egomotion to obtain grounded control signals directly. Using a method as simple as principal components analysis perform this, we find that the leading components provide signed, scalable, and composable throttle--yaw controls, although the method can recover only motion axes represented in the data. To prevent a high-capacity video DiT from exploiting pixel-level supervision, an online latent critic distils a frozen decoder--tracker--PCA (Principal Components Analysis) teacher without backpropagating through the decoder or tracker. Finally we critique the use of video generation metrics to evaluate WMs and introduce an example of an alternative, reference-free evaluation method. We measure \textit{controllability}, \textit{plausibility}, \textit{conjuring} (creating objects out of thin air) and \textit{geometric integrity}, revealing failures that conventional video metrics miss. We show that most baselines follow familiar action directions but struggle to reverse or remain stationary. Our model handles both while retaining compositional control and generation quality. Despite backwards actions being less than $1\%$ of our training data, we find that the model learns to reverse, scale its response linearly, and compose throttle with steering, all simply by learning through a grounded action space.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Probabilistic Robustness-driven Universal Adversarial Perturbations with Explainability against Deep Reinforcement Learning-based Intrusion Detection System</h3>
+<ul>
+<li><strong>Authors: </strong>Hongsen Zhang, Lu Zhang, Mingjing Xu, Yi Zhang, Gregory Epiphaniou, Carsten Maple</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30605">https://arxiv.org/abs/2609.30605</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30605">https://arxiv.org/pdf/2609.30605</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30605]] Probabilistic Robustness-driven Universal Adversarial Perturbations with Explainability against Deep Reinforcement Learning-based Intrusion Detection System(https://arxiv.org/abs/2609.30605)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Deep reinforcement learning (DRL) enables adaptive intrusion detection in dynamic network environments but also exposes intrusion detection systems (IDS) to adversarial threats such as universal adversarial perturbations (UAPs), which apply a single input-agnostic perturbation to degrade detection performance across traffic. Probabilistic Robustness (PR), as a post-hoc evaluation metric, provides a principled, population-level measure of adversarial impact that conceptually aligns with the universality objective of UAPs, i.e., PR quantifies the prevalence of misclassification in the input space, making it a natural signal for guiding UAP generation. Hence, we propose PR-based UAP, which represents the first integration of an explicit PR-driven objective into generating UAPs against DRL-based IDS. Building on this formulation, we introduce PX-UAP, which leverages explainable artificial intelligence (XAI) to guide perturbation shaping under realistic domain constraints, and provides a rigorous theoretical analysis of its design. Extensive experiments demonstrate that PX-UAP consistently outperforms state-of-the-art UAP methods in attack effectiveness.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: MVAgent: Multi-Agent Video Generation via Consistent Condition Construction and Shot-Level Policy Optimization</h3>
+<ul>
+<li><strong>Authors: </strong>Xiangyu Kong, Wenjie Zhou, Fengping Tian, Lihua Fang, Haoqin Sun, Chenyang Lyu, Longyue Wang, Weihua Luo</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30609">https://arxiv.org/abs/2609.30609</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30609">https://arxiv.org/pdf/2609.30609</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30609]] MVAgent: Multi-Agent Video Generation via Consistent Condition Construction and Shot-Level Policy Optimization(https://arxiv.org/abs/2609.30609)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Multi-shot agentic video generation requires consistent character appearance, stable spatial layout across camera angles, and continuous character state between shots. When every shot is a separate request to a frozen generator, repeated text does not determine appearance, layout or state. We therefore recast the problem as condition construction and present MVAgent, a multi-agent pipeline whose agents collaborate through typed conditioning inputs. Because an environment image shows one viewpoint, a Spatial Grounding agent samples views from generated camera-traversal clips and anchors each shot to the view matching its framing. As generated shots drift from the plan, an Observer records how each shot ends in a continuity memory, from which a Transition agent builds character action and spatial references for the next shot. An Orchestrator composes these inputs into each request. Since a request reveals its effect only after rendering, we train it by agentic reinforcement learning with Trunk-GDPO, which compares rendered candidates at every shot rather than once per video and continues the best as the trunk. With generator and judges frozen, MVAgent attains the highest cross-shot consistency and narrative-planning quality among the compared methods on ViMax-Bench and is preferred over the strongest agentic baseline in human evaluation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: LUMO (Lightweight Unified Multilingual Orchestrator): A Privacy Preserving Offline Voice Assistant</h3>
+<ul>
+<li><strong>Authors: </strong>Md. Mehedi Hasan Naeem, Mst. Kamrunnahar Ruma, Nafiza Anjum, Shakila Sultana, Md. Sujan Ali</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30692">https://arxiv.org/abs/2609.30692</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30692">https://arxiv.org/pdf/2609.30692</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30692]] LUMO (Lightweight Unified Multilingual Orchestrator): A Privacy Preserving Offline Voice Assistant(https://arxiv.org/abs/2609.30692)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Reliable voice interaction is essential in environments with limited internet connectivity and strong privacy. However, most existing voice assistants depend on cloud-based services, which leads to latency issues, dependency on internet access, and privacy vulnerabilities. This research presents LUMO (Lightweight Unified Multilingual Orchestrator), a privacy preserving offline voice assistant designed for edge computing environments. This system integrates local Automatic Speech Recognition (ASR), locally deployed quantized Large Language Model (LLM), and Text-to-Speech (TTS) synthesis into a fully offline pipeline running on a Raspberry Pi 5 with 8 GB RAM. To enable efficient operation on resource constrained hardware, the language model is compressed using 4-bit GGUF quantization, which reduces memory usage while preserving practical conversational capability. Existing edge based voice assistants Mycroft provides partial offline functionality without a generative LLM, with an approximate latency of ~5 s and power consumption of ~12 W, while Rhasspy supports full offline operation but lacks generative capabilities, with ~3 s latency and ~11 W power usage. In contrast, LUMO achieves a Word Error Rate (WER) of 6.8% for short English utterances in low noise conditions, an end-to-end response latency of 2.0-4.0 s, and a lower peak power consumption of approximately 9.0 W. The system also achieves effective offline recognition for Bangla speech, supporting multilingual accessibility in low resource settings. By operating entirely offline, LUMO provides strong data privacy, reduced need for cloud connectivity, and suitability for privacy sensitive edge execution such as rural healthcare, education, and disaster response scenarios.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: TrafficImag: A Benchmark for Counterfactual Roadside Traffic Video Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Xiangyu Li, Tianyi Wang, Zhihao Dou, Christian Claudel, Zhaomiao Guo</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30722">https://arxiv.org/abs/2609.30722</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30722">https://arxiv.org/pdf/2609.30722</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30722]] TrafficImag: A Benchmark for Counterfactual Roadside Traffic Video Generation(https://arxiv.org/abs/2609.30722)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Existing roadside traffic datasets support perception, forecasting, and visual question answering, but they do not evaluate counterfactual video generation, in which a selected actor is modified and the generated future should remain consistent with road topology and unrelated traffic. We introduce TrafficImag, the first benchmark for counterfactual roadside traffic video generation. TrafficImag combines a large-scale roadside dataset (9,022 annotated images, 7,043 deduplicated video clips, and 31,145 actor-centered history-future samples) with an executable protocol that supports behavior reasoning, intervention-aware image editing, and conditional video generation. Each intervention is represented as an actor-level program describing the target actor, intended behavior, legal route, interaction order, and temporal constraints, enabling a unified evaluation interface across heterogeneous foundation models. TrafficImag evaluates four complementary validity dimensions: initial-state correctness, route and behavior validity, interaction consistency, and non-target preservation, and considers an end-to-end counterfactual successful only when all four are satisfied. Across state-of-the-art foundation models, the strongest reasoner reaches 80.4% macro F1, the complete condition interface raises end-to-end success from 23.3% to 55.0% for the best generator. Oracle studies further show that conditional video execution is the primary remaining bottleneck. TrafficImag provides a reproducible benchmark for evaluating and diagnosing counterfactual traffic video generation beyond perceptual video quality.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Learning Polarization Image Restoration with General Restoration Priors</h3>
+<ul>
+<li><strong>Authors: </strong>Chenggong Li, Jinhao Liu, Caiyun Wu, Yidong Luo, Junchao Zhang, Degui Yang</a></li>
+<li><strong>Subjects: </strong>cs.CV, eess.IV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30728">https://arxiv.org/abs/2609.30728</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30728">https://arxiv.org/pdf/2609.30728</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30728]] Learning Polarization Image Restoration with General Restoration Priors(https://arxiv.org/abs/2609.30728)</code><input type="text"></li>
+<li><strong>Keywords: </strong>restoration</a></li>
+<li><strong>Abstract: </strong>Polarization imaging captures distinctive surface and geometric cues that benefit a wide range of vision tasks. However, real-world polarization acquisition is often affected by multiple coupled degradations, making image restoration essential for practical polarization vision. Existing methods are largely tailored to specific degradations and remain constrained by the limited scale and quality of polarization data. To address these limitations, we develop an all-in-one polarization restoration framework for diverse and composite degradations. We first study the impact of different polarization representations on restoration performance and identify the normalized Stokes representation as an effective choice for separating intensity and polarization information. Accordingly, we devise a dual-branch architecture that separates intensity and polarization modeling. To overcome the limitations of polarization-specific training, the intensity branch leverages pretrained general restoration priors and a mixture-of-experts extension for composite degradations, while its restoration knowledge is adaptively distilled into the symmetric polarization branch via a cross-domain feature transform. In addition, we establish a composite-degradation polarization benchmark to support all-in-one restoration research. Extensive experiments on public datasets and our proposed benchmark demonstrate the effectiveness of the proposed method.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Amplify What You Gaze At: Target Saliency Boosting in Text-to-Image Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Shengqi Dang, Zhengxi Yu, Feilin Han, Xingyu Lan, Nan Cao</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30733">https://arxiv.org/abs/2609.30733</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30733">https://arxiv.org/pdf/2609.30733</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30733]] Amplify What You Gaze At: Target Saliency Boosting in Text-to-Image Generation(https://arxiv.org/abs/2609.30733)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Text-to-image generation has advanced in controlling what, where, and how objects appear, yet how visual attention is distributed among objects remains largely unexplored. In this paper, we introduce Target Saliency Boosting, a new task aimed at boosting the visual saliency of a specific object during text-to-image generation without requiring any visual priors. Our key insight is that visual saliency is inherently relative: boosting the saliency of a target object also depends on the global saliency distribution across all objects in the scene. Based on this insight, we propose GazeME, a lightweight framework that uses saliency-marked prompts, inserting learnable marker tokens around object descriptions to indicate which objects to visually emphasize or suppress. To learn these markers, we construct a saliency-semantics dataset that associates objects in image--prompt pairs with object-level saliency scores, and propose Saliency Prior Marker Activation (SPMA), a saliency-aware stochastic marker activation strategy that exploits relative saliency relationships for robust training. During inference, GazeME automatically inserts appropriate markers into the prompt, thereby directly enhancing the visual saliency of the target object. Extensive experiments demonstrate that GazeME effectively boosts target saliency while preserving both semantic alignment and image quality.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Timo: $\textbf{T}$aming Mult$\textbf{i}$modal Diffusion Transformer for Human $\textbf{Mo}$tion Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Zhao Wang, Jiangtao Hu, Jack Yu, Tao Yu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30761">https://arxiv.org/abs/2609.30761</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30761">https://arxiv.org/pdf/2609.30761</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30761]] Timo: $\textbf{T}$aming Mult$\textbf{i}$modal Diffusion Transformer for Human $\textbf{Mo}$tion Generation(https://arxiv.org/abs/2609.30761)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Most existing human motion generation (HMG) methods use cross-attention modules to inject text semantics, but ignore the importance of bidirectional modeling between motion and text tokens, which limits text comprehension. A straightforward idea is introducing multimodal diffusion transformers (MMDiT), which have shown effective joint text--visual modeling in vision generation, into HMG. However, we find that articulated motion is temporally coherent but weakly correlated across joints, in which directly applying an MMDiT with flow matching produces poorly coordinated and jerky motion. In this work, we propose Timo, a novel kinematics-aware MMDiT framework tailored for HMG. Timo combines fully shared multimodal attention for bidirectional text--motion modeling with flow matching, geometric and rotational-kinematics supervision that compares actual rotations and their changes over time, and a two-stage curriculum progressing from broad motion learning to detailed caption alignment. Further, we construct a benchmark of $40{,}025$ held-out clips from six public datasets spanning diverse actions, assessing six complementary dimensions under a common evaluator and scoring protocol. Our model substantially outperforms state-of-the-art methods in both quantitative and qualitative evaluations. Remarkably, Timo surpasses Kimodo on five of six dimensions, achieving a $40.8$% relative improvement in the average benchmark score. Project page: this https URL. Demo page: this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Skip the Talk, Re-Focus on Vision: Latent Reasoning for Reasoning Segmentation in Multimodal Large Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Tianhang Guo, Yulin He, Wei Chen, Wenjuan Zhou, Yuhang Li, Xinbiao Gan</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30783">https://arxiv.org/abs/2609.30783</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30783">https://arxiv.org/pdf/2609.30783</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30783]] Skip the Talk, Re-Focus on Vision: Latent Reasoning for Reasoning Segmentation in Multimodal Large Language Models(https://arxiv.org/abs/2609.30783)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Reasoning segmentation aims to interpret implicit textual queries and enable fine-grained visual perception, which is critical for applications such as human-computer interaction and embodied agents. Existing methods typically generate explicit Chain-of-Thought (CoT) by multimodal large language models (MLLMs) before localizing the target. Although intuitive, such explicit verbal reasoning introduces substantial attention interference: redundant textual tokens disrupt attention during perception-token generation and also increase the effective distance between visual tokens. To address this issue, we propose LIRSeg, which fully replaces explicit CoT with a compact set of learnable latent tokens for reasoning segmentation. LIRSeg is trained in two stages: spatial alignment grounds the latent tokens in object-relevant visual evidence, and GRPO further optimizes them with segmentation rewards. To make these compact latent tokens more informative, we introduce three complementary mechanisms from an information perspective: extreme-advantage sampling for selecting informative training signals, decoupled exploration-stability updates for learning complementary representations, and latent diversity amplification for preventing representational collapse. Extensive experiments on benchmarks demonstrate that LIRSeg consistently improves both segmentation accuracy and reasoning efficiency. Compared with the VisionReasoner baseline, LIRSeg achieves absolute gIoU improvements of 4.9% on ReasonSeg, 7.1% on MUSE, and 4.7% on MMR, while achieving a approximately 16x reduction in reasoning tokens. Code is available in supplementary materials.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Motion Style Slider: Endpoint-Supervised Continuous Style Control for Human Motion Diffusion</h3>
+<ul>
+<li><strong>Authors: </strong>Chen-Chieh Liao, Yichen Peng, Yiyi Cai, Yûi Ono, Hiroki Hanaoka, Erwin Wu, Hideki Koike, Shuichi Kurabayashi</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30795">https://arxiv.org/abs/2609.30795</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30795">https://arxiv.org/pdf/2609.30795</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30795]] Motion Style Slider: Endpoint-Supervised Continuous Style Control for Human Motion Diffusion(https://arxiv.org/abs/2609.30795)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Existing human motion diffusion methods provide strong motion generation quality, and recent style transfer models can inject target style cues, but fine-grained continuous control of style intensity remains underexplored. In production, style intensity is subjective across artists and directors, so the practical requirement is not a universal absolute unit, but a reliable monotonic control axis. We propose Motion Style Slider, a motion-to-motion style transfer framework for endpoint-supervised continuous control. Given a content motion and a style motion, we construct a style direction in a learned motion-style embedding space and condition diffusion generation with a scalar intensity. The training objective combines diffusion denoising with latent intensity regularization to encourage smooth and monotonic style scaling without requiring intermediate-intensity ground-truth motions. Our framework is compatible with pretrained motion diffusion backbones and supports heterogeneous style datasets, including the multi-actor style motion dataset. To test out-of-range usability, we additionally introduce a small real-capture over-reaction extension and evaluate large-intensity behavior against these unseen targets. Experiments measure controllability, interpolation/extrapolation behavior, content preservation, and motion realism, with ablations on direction construction and loss design.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Aligning One-Step Generative Models with Reward-Weighted Transport Distillation</h3>
+<ul>
+<li><strong>Authors: </strong>Austin Wang, Ziheng Cheng, Lexing Ying</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30840">https://arxiv.org/abs/2609.30840</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30840">https://arxiv.org/pdf/2609.30840</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30840]] Aligning One-Step Generative Models with Reward-Weighted Transport Distillation(https://arxiv.org/abs/2609.30840)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>One-step generators enable high-quality visual generation with a single network evaluation, but their post-training is difficult: general implicit generators provide neither tractable likelihoods nor denoising trajectories, and many rewards are non-differentiable. We introduce Reward-Weighted Transport Distillation (RWTD), a post-training method that requires only generated samples and scalar reward evaluations. Rather than aligning solely to the conventional reward-tilted reference distribution, RWTD constructs an adaptive target that mixes separately tilted current and reference distributions. The current component incorporates improvements discovered during training, while the reference component anchors the target to the pretrained generator. RWTD realizes this target through feature-space optimal transport and fixed-point regression. Theoretical analysis shows that the fixed-point distributions of RWTD interpolate between off-policy reward tilting of the reference and on-policy tilting of the current model, providing a principled approach to balancing reward adaptation with retention of prior knowledge. Empirically, RWTD substantially improves the GenEval score of the one-step SANA Sprint 1.6B backbone from 0.73 to 0.80, while separate preference alignment experiments demonstrate strong cross-reward generalization that yields balanced improvements and preservation of compositional capabilities.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Robust to Which Model Change? A Unified Evaluation of Robust Counterfactual Explanations</h3>
+<ul>
+<li><strong>Authors: </strong>Marcin Kostrzewa, Maciej Zięba</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30918">https://arxiv.org/abs/2609.30918</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30918">https://arxiv.org/pdf/2609.30918</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30918]] Robust to Which Model Change? A Unified Evaluation of Robust Counterfactual Explanations(https://arxiv.org/abs/2609.30918)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Robust counterfactual explanations promise recourse that still works after the model behind it changes. Whether they keep that promise depends on what the change is. A small perturbation of the parameters, retraining on new data, and a new architecture are different events, and each existing method is evaluated against the one it was built for. Reported robustness scores, therefore, answer different questions and cannot be compared. We propose a unified cross-family evaluation protocol that holds factual instances and generated counterfactuals fixed while testing every method against the same eight types of model change. The benchmark compares six robust methods and two standard baselines on four tabular datasets. It characterizes every changed classifier through its outputs and reports empirical robustness together with coverage, base validity, and proximity. We find that relative performance and failure modes vary across change families. Bounded parameter perturbations change 0.95\% of test predictions on average, compared with 4.9\% for bootstrap retraining. Methods with guarantees for these perturbations do not necessarily transfer to other changes. RobX transfers most consistently in our experiments, although greater stability can require larger interventions. We argue that robust CFE methods should be evaluated through a common protocol that specifies the model changes, measures their realized behavioral magnitude, and keeps generation performance separate from robustness.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: UltraG-Bench: A Multi-task Benchmark for assessing Large Vision-Language Models on Pixel-level Evidence Grounding in Ultrasound</h3>
+<ul>
+<li><strong>Authors: </strong>Quanhao Zhu, Bo Xu, Rui Lin, Chenyuan Wang, Yu Shao, Boling Zhu, Jiuyan Sun, Liang Zhao, Hongfei Lin, Feng Xia</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30928">https://arxiv.org/abs/2609.30928</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30928">https://arxiv.org/pdf/2609.30928</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30928]] UltraG-Bench: A Multi-task Benchmark for assessing Large Vision-Language Models on Pixel-level Evidence Grounding in Ultrasound(https://arxiv.org/abs/2609.30928)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Ultrasound is one of the most widely used medical imaging modalities, and recent large vision-language models(VLMs) have shown increasing capabilities in ultrasound image understanding. However, these models fail to provide pixel-level visual evidence aligned with their semantic predictions, and their fine-grained grounding capability in ultrasound remains largely unclear. We introduce UltraG-Bench, a large-scale multi-task benchmark for evaluating pixel-level evidence grounding in ultrasound. UltraG-Bench is built by annotating 40 public ultrasound segmentation datasets spanning 13 anatomical categories, and comprises three progressive tasks: instruction-guided segmentation, evidence-grounded VQA, and evidence-grounded report generation, with 331125, 666779, and 138832 annotations, respectively. Comprehensive evaluation of 14 state-of-the-art models reveals a substantial gap between semantic understanding and fine-grained pixel-level localization. We further propose UltraG-Agent, which combines the semantic reasoning capabilities of a VLM with the ultrasound-specific segmentation capability of UltraSAM3. Experiments show that UltraG-Agent substantially improves both semantic prediction and pixel-level visual grounding. Our dataset and code are available at this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: ManiVid: Unified and Explainable Forensic Analysis of Manipulated Videos</h3>
+<ul>
+<li><strong>Authors: </strong>Hengrui Kang, Zhonghao Yan, Yuxuan Yang, Ruoyan Jing, Yuncheng Guo, Hao Chen, Kongming Liang, Zhanyu Ma, Conghui He, Weijia Li</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30934">https://arxiv.org/abs/2609.30934</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30934">https://arxiv.org/pdf/2609.30934</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30934]] ManiVid: Unified and Explainable Forensic Analysis of Manipulated Videos(https://arxiv.org/abs/2609.30934)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Rapid advances in AI-generated video (AIGV) have increased the risks posed by deceptive video manipulation. Unlike fully synthetic videos, manipulated videos retain most source content and alter only localized regions, making forensic analysis particularly challenging. Existing video forgery research faces two limitations in both data and methodology: (1) High-quality datasets and benchmarks tailored for manipulated videos remain scarce. (2) Multimodal large language models (MLLMs) extend forgery analysis beyond binary classification but struggle to use low-level forensic cues and provide precise pixel-level grounding. Specifically, we introduce ManiVid, a unified forensic analysis task covering forgery detection, artifact grounding, and anomaly explanation for manipulated videos. We construct ManiVid-38K, the first dataset to combine paired, open-vocabulary localized manipulations of general videos with authenticity labels, forgery masks, and anomaly explanations. It comprises about 19K manually verified real-fake video pairs, mostly at 1080P resolution, generated under 2 paradigms with 15 powerful generation models. We sample 1K pairs for ManiVidBench, balanced across six manipulation types and generation models for fair evaluation. We further propose ManiVidLens, a unified framework for explainable video forgery analysis. Its Forensic Evidence Router supplies shared low-level forensic evidence for multimodal reasoning and video segmentation. Its Prompt Distill Module converts grounding states into semantic and geometric prompts and distills spatial priors for mask decoding and full-video propagation. ManiVidLens achieves relative gains over the strongest comparison methods in artifact grounding (+21.1% mIoU; +21.3% J&F) and anomaly explanation (+131.3% ROUGE-L; +9.9% CSS). Its forgery detection remains comparable to dedicated classifiers (0.914 Acc; 0.913 F1).</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: OneWorld: Learning Consistent Physics Across Actions in World Models</h3>
+<ul>
+<li><strong>Authors: </strong>Ke He, Yichen Ding, Bin Yang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30946">https://arxiv.org/abs/2609.30946</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30946">https://arxiv.org/pdf/2609.30946</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30946]] OneWorld: Learning Consistent Physics Across Actions in World Models(https://arxiv.org/abs/2609.30946)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Action-conditioned video world models aim to predict scene evolution under different actions, a capability that is essential for reliable planning, decision-making, and interaction in dynamic environments. However, futures generated independently from the same initial scene may each appear plausible while implying incompatible physical properties, such as friction or mass. This inconsistency can lead to contradictory predictions across interventions, making it difficult for the model to maintain a coherent understanding of the underlying world and limiting its reliability for planning and decision-making. To address these issues, we propose OneWorld, a shared-mechanism counterfactual generation framework that jointly models multiple action-conditioned futures under a common latent physical mechanism. A physical mechanism interpreter first infers a distribution over latent mechanisms from each action-outcome branch. These distributions are then aggregated into shared-world evidence, which captures whether the branches admit a common physical explanation while accounting for uncertainty in less informative branches. This evidence constrains flow training and guides sampling, encouraging consistency in the underlying physical mechanism while preserving the distinct outcomes induced by different actions. We further introduce a multi-intervention evaluation protocol in controlled environments, following the interaction settings of ACWM-Phys, to assess whether generated futures can be jointly explained by the same physical parameters, alongside standard measures of single-rollout prediction quality. Experiments in these environments show that OneWorld improves cross-intervention physical consistency while maintaining competitive single-rollout prediction quality.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: IDM-Net: A Lightweight Illumination-Decoupled Modulation Network for Low-Light Image Enhancement</h3>
+<ul>
+<li><strong>Authors: </strong>Cheng-Yen Hsiao, Jing-Ming Guo</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30962">https://arxiv.org/abs/2609.30962</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30962">https://arxiv.org/pdf/2609.30962</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30962]] IDM-Net: A Lightweight Illumination-Decoupled Modulation Network for Low-Light Image Enhancement(https://arxiv.org/abs/2609.30962)</code><input type="text"></li>
+<li><strong>Keywords: </strong>restoration</a></li>
+<li><strong>Abstract: </strong>Low-light image enhancement (LLIE) remains challenging for lightweight models because illumination restoration and color fidelity are difficult to optimize simultaneously in the RGB color space. Although recent color-decoupled methods separate luminance and chrominance representations, they primarily optimize luminance as an enhancement target, leaving its potential as an explicit guidance prior largely unexplored during feature reconstruction. To address this limitation, we propose IDM-Net, a lightweight Illumination-Decoupled Modulation Network for low-light image enhancement. IDM-Net adopts a dual-encoder architecture consisting of a structure encoder that extracts multi-scale appearance features from the RGB image and a lightweight illumination encoder that learns illumination priors from the decoupled luminance (Y) channel. To effectively exploit these priors, we introduce an Illumination-Guided Modulation (IGM) module that injects multi-scale illumination cues into the decoder through spatially adaptive affine modulation, enabling accurate brightness restoration while preserving natural color consistency. Furthermore, we design a lightweight Feature Refinement Block (FRB) to progressively suppress degradation artifacts and recover fine-grained image details during reconstruction. Extensive experiments on multiple standard low-light image enhancement benchmarks demonstrate that IDM-Net achieves competitive performance among lightweight LLIE methods while maintaining an excellent balance between restoration quality and computational efficiency.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Where and When to Force: Routed Forcing for Streaming Avatars</h3>
+<ul>
+<li><strong>Authors: </strong>Zihan Su, Siwen Lu, Junhao Zhuang, Zeyue Xue, Haoyang Huang, Guanghao Li, Xiaofeng Tan, Chun Yuan, Nan Duan</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30963">https://arxiv.org/abs/2609.30963</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30963">https://arxiv.org/pdf/2609.30963</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30963]] Where and When to Force: Routed Forcing for Streaming Avatars(https://arxiv.org/abs/2609.30963)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Audio-driven streaming avatar generation requires real-time synthesis of speech-synchronized videos with dynamic and diverse motion. Self Forcing uses Distribution Matching Distillation (DMD) to distill bidirectional video diffusion models into causal, few-step generators for real-time streaming. However, DMD minimizes a reverse KL divergence, which is inherently mode-seeking: it causes the student to discard high-dynamic modes and collapse onto static outputs, compressing both dynamics and diversity of generated videos. We find that this collapse is region-heterogeneous: person regions involving pose and gesture variations suffer the largest diversity loss, the audio-driven mouth region shows a small loss, and the background remains nearly stable. Based on this observation, we propose Routed Forcing, which routes the distillation objective by semantic region and noise stage to improve dynamics and diversity while preserving visual quality. Specifically, (1) Where to Force: Semantic-Region Routing applies Data-Forcing Distillation (DFD), which supervises the student with real videos, to the person region where diversity collapse is most severe, while retaining DMD for the mouth and background to preserve lip synchronization and scene stability. (2) When to Force: Noise-Stage Routing activates DFD at high noise stages, where real video serves as effective supervision to inject diverse and dynamic motion patterns. At low noise stages, DMD is used to refine details, avoiding blur and artifacts from spatial differences between real video and student-generated video. Experiments show that Routed Forcing improves dynamics by up to 45% and diversity by 7-25% over Self Forcing, while preserving video quality and lip synchronization.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: PhoenixSR: Generative Heterogeneous Distillation Unleashes Efficient Models for Real-World Super-Resolution</h3>
+<ul>
+<li><strong>Authors: </strong>Xin Di, Mingyu Shi, Yuanfei Bao, Long Peng, Yue Zhao, Jiaming Guo, Renjing Pei, Xueyang Fu, Yang Cao, Zheng-Jun Zha</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.30988">https://arxiv.org/abs/2609.30988</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.30988">https://arxiv.org/pdf/2609.30988</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.30988]] PhoenixSR: Generative Heterogeneous Distillation Unleashes Efficient Models for Real-World Super-Resolution(https://arxiv.org/abs/2609.30988)</code><input type="text"></li>
+<li><strong>Keywords: </strong>super-resolution, generative</a></li>
+<li><strong>Abstract: </strong>Real-world image super-resolution (SR) requires recovering perceptually realistic high-resolution images from complex low-resolution observations while preserving faithful content. Diffusion-based SR benefits from strong generative priors but incurs substantial computational overhead, whereas feed-forward CNN and Transformer SR models are efficient yet often struggle to recover realistic high-frequency details. This motivates a natural question: can diffusion priors be transferred to existing diffusion-free SR networks without introducing diffusion components at inference time? To this end, we propose PhoenixSR, a generative heterogeneous distillation framework that transfers diffusion priors to independently designed feed-forward SR networks through score-based distribution matching. Rather than aligning heterogeneous features or imitating sampled diffusion outputs, PhoenixSR uses the pretrained diffusion model as distribution-level supervision, while paired SR supervision preserves reconstruction fidelity. To make distribution matching effective for fidelity-sensitive SR, we introduce Heterogeneous Distribution Adaptation, which adapts the target score to the SR domain, improves tracking of the evolving student distribution, and anchors training with paired supervision. We further employ Directional Reliability Weighting, a lightweight residual-consistency-based reweighting strategy that reduces unstable distributional guidance. All diffusion-related components are removed after training, leaving the original student architecture and inference cost unchanged. Experiments on three SR benchmarks and six feed-forward backbones, including SwinIR, HAT, Real-ESRGAN, and SeeMoRe, show consistent perceptual improvements with largely preserved reconstruction fidelity.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Where Compute Matters: Heterogeneous Attention for Efficient Video Diffusion</h3>
+<ul>
+<li><strong>Authors: </strong>Olga Zatsarynna, Denis Korzhenkov, Juergen Gall, Amir Habibian, Mohsen Ghafoorian</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31050">https://arxiv.org/abs/2609.31050</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31050">https://arxiv.org/pdf/2609.31050</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31050]] Where Compute Matters: Heterogeneous Attention for Efficient Video Diffusion(https://arxiv.org/abs/2609.31050)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Efficient video generation requires reducing the quadratic cost of self-attention over long spatio-temporal token sequences. Existing efficient-attention methods typically apply the same computation pattern to every token, even though denoising difficulty varies substantially across video regions and evolves throughout the generation process. We introduce HetA-DiT, a heterogeneous attention mechanism that adaptively allocates computation according to token difficulty. A lightweight uncertainty branch predicts a token-wise estimate of denoising difficulty, which is used to route uncertain tokens through dense global attention while processing more reliable tokens with efficient local attention. The resulting routing is content- and timestep-adaptive, retains global context where it matters most, and provides a single parameter for controlling the quality-efficiency trade-off. HetA-DiT is compatible with few-step distribution-matching distillation and introduces no additional Transformer evaluation at inference time by reusing uncertainty estimates from the preceding denoising step. We evaluate the method on DMD-distilled Wan2.2-5B and Wan2.1-1.3B models. Across VBench, VBench-2.0, and human preference evaluation, HetA-DiT maintains competitive generation quality while routing only approximately 20% of tokens through dense attention.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: DepthEvidence: Unifying Metric Depth Prediction and Geometric Reasoning in Multimodal Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Jiangning Wei, Yuan Yao, Miaomiao Cui, Mingsheng Li, Humen Zhong, Shuai Bai, Zhibo Yang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31103">https://arxiv.org/abs/2609.31103</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31103">https://arxiv.org/pdf/2609.31103</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31103]] DepthEvidence: Unifying Metric Depth Prediction and Geometric Reasoning in Multimodal Language Models(https://arxiv.org/abs/2609.31103)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Spatial reasoning with metric constraints requires linking objects to geometric measurements and preserving their numerical content during language reasoning. We present DepthEvidence, a 4B model that uses its own dense metric predictions as object-grounded evidence for language generation. A camera-conditioned decoder predicts full-resolution metric depth using multi-scale visual features and high-resolution RGB refinement. A dense-to-language interface converts predicted depths and decoder features into object-aligned continuous geometry tokens anchored to object identifiers. Geometric supervision encourages metric information to remain recoverable before and after language-context interaction, while instruction tuning supports object measurement and compositional reasoning. We introduce a Depth-VQA benchmark evaluating object-depth queries, relative comparisons, and decisions combining spatial and numerical constraints. Across nine datasets, DepthEvidence achieves the highest average dense $\delta_1$ among evaluated methods, competitive with specialized estimators. It also leads the evaluated methods in instance-level metric depth estimation and overall accuracy on both relative and metric reasoning tracks, while broadly preserving general VQA performance and improving spatial understanding relative to the base model.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Frame the adversary: a structure-aware attack methodology</h3>
+<ul>
+<li><strong>Authors: </strong>Vicky Kouni, Stelios Perrakis, Francis Bach, Pascal Frossard, Yann Chevaleyre</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31128">https://arxiv.org/abs/2609.31128</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31128">https://arxiv.org/pdf/2609.31128</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31128]] Frame the adversary: a structure-aware attack methodology(https://arxiv.org/abs/2609.31128)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Frequency-based adversarial attacks have recently grown popular by exploiting spectral sensitivities shared across neural architectures. Unlike spatial perturbations, frequency-based attacks expose deeper vulnerabilities, making them especially valuable for robust evaluation of safety-critical and security-sensitive applications. Yet, existing approaches are typically not derived as solutions to an optimization problem that explicitly captures transform-domain structure. In this paper, we propose a methodology for crafting principled frequency-based adversarial attacks, via a dedicated optimization framework. A cornerstone of our method hinges on the introduction of a perturbation constraint set, tied to highly structured non-orthogonal transforms, well-known for their flexible, non-predefined frequency handling. We prove that the attacks emerge as weighted $\ell_2$-projections onto this set, yielding a general and controlled attack generation mechanism. By this, we provide a clear geometric attack characterization, ensuring alignment between the optimization objective and the perturbation constraint. We assess our framework on standardized datasets, for pretrained and adversarially robust models. Results highlight that our attacks, being solutions to an optimization problem, over a structured perturbation set, are highly effective, even across different, unseen architectures. Our methodology could serve as a theoretical baseline for designing and analyzing transformed-based attacks, targeting fundamental model vulnerabilities, instead of mere architecture-specific artifacts typically studied in the robustness literature.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: CRNDiff: Count-Native Diffusion Framework via Chemical Reaction Networks</h3>
+<ul>
+<li><strong>Authors: </strong>Yuxuan Qiu, Praful Gagrani, Tetsuya J Kobayashi</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31149">https://arxiv.org/abs/2609.31149</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31149">https://arxiv.org/pdf/2609.31149</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31149]] CRNDiff: Count-Native Diffusion Framework via Chemical Reaction Networks(https://arxiv.org/abs/2609.31149)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Scientific measurements such as single-cell RNA (scRNA) sequencing often take the form of nonnegative integer counts, whereas continuous-state diffusion models approximate this discrete structure using continuous coordinates. Building on stochastic chemical reaction networks (CRNs), a class of count-native Markov jump processes, we introduce CRNDiff, a structured framework that combines count-space diffusion with inference-time conditioning on rare subpopulations. An independent birth--death instantiation yields a closed-form transition kernel for forward noising. This kernel enables reverse sampling via forward-filtering backward-sampling (FFBS) and supports data-driven selection of the terminal noising time, eliminating the need for a validation sweep. This tractability also lets us introduce tilted Feynman--Kac (FK) steering, a method for sampling target subpopulations from a frozen generator without retraining. By tilting posterior marginals before FK particle correction, steering mitigates importance-weight concentration when the target population is rare. Using scRNA-seq data from the human heart cell atlas, we test the ability of CRNDiff to generate cell-type-specific distributions. Across the three evaluated target populations, CRNDiff achieves the highest conditional fidelity among the evaluated generative models, with larger mean purity margins for rarer target populations. Generated cells preserve marker-level differential-expression structure. Replacing real training cells for the target classes with generated cells yields downstream classification performance approaching that of the real-data reference.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: HyperErase: Scale-Calibrated Hypernetwork for Multi-Concept Erasure in Text-to-Image Models</h3>
+<ul>
+<li><strong>Authors: </strong>Yi Sun, Xinhao Zhong, Zhiqi Zhang, Yimin Zhou, Junhao Li, Yuxia Qiao</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.CR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31154">https://arxiv.org/abs/2609.31154</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31154">https://arxiv.org/pdf/2609.31154</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31154]] HyperErase: Scale-Calibrated Hypernetwork for Multi-Concept Erasure in Text-to-Image Models(https://arxiv.org/abs/2609.31154)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Recent advances in text-to-image (T2I) generation have substantially improved visual synthesis, but have also raised increasing safety concerns due to their potential to generate harmful or undesirable content. Existing concept erasure methods predominantly follow a static weight paradigm, producing a single frozen adapter that struggles to adapt to diverse prompt variations and suffers from parameter interference when scaling to multiple concepts. We propose \textbf{HyperErase}, a framework for concept erasure based on hypernetwork-driven prompt-conditioned parameter synthesis. Our approach first reframes concept erasure as prompt-conditioned parameter amortization and trains a hypernetwork to map textual descriptions to prompt-specific LoRA updates, eliminating the need for per-prompt gradient optimization or manual LoRA merging. To further improve the stability and precision of synthesized adapters, we develop a decoupled rectification strategy, which disentangles LoRA tokens into pattern and scale subspaces, applies a square-root transform to curb multiplicative over-scaling, and leverages teacher-derived canonical priors for inference-time correction. Extensive experiments across major concept categories demonstrate that HyperErase consistently improves the trade-off between erasure effectiveness, image quality, and semantic alignment, achieving performance comparable to gold-standard single-concept baselines. Furthermore, the resulting models can provide specialized LoRAs for each input prompt variation in a single forward pass without requiring gradient updates during inference. These principled and flexible framework offers a new paradigm for concept erasure in T2I models.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: TaskIR: Task-Driven Image Restoration via Degradation Adaptation and Task Feedback</h3>
+<ul>
+<li><strong>Authors: </strong>Yanjie Tu, Qingsen Yan, Axi Niu, Wenxuan Cai, Tao Hu, Wei Dong, Haokui Zhang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31170">https://arxiv.org/abs/2609.31170</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31170">https://arxiv.org/pdf/2609.31170</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31170]] TaskIR: Task-Driven Image Restoration via Degradation Adaptation and Task Feedback(https://arxiv.org/abs/2609.31170)</code><input type="text"></li>
+<li><strong>Keywords: </strong>restoration, generation</a></li>
+<li><strong>Abstract: </strong>Task-driven image restoration aims to improve both image quality and downstream task performance. However, existing methods predominantly focus on single degradation type and struggle to handle the diverse degradations encountered in real-world scenarios. Different degradations impose distinct restoration demands, and insufficient restoration may leave residual degradations and artifacts that impair object boundaries and semantic cues, thereby compromising downstream task performance. To address these challenges, we propose TaskIR, a two-stage task-driven unified image restoration framework that integrates degradation-adaptive restoration with task feedback refinement. In Stage I, a Degradation Representation Module (DRM) extracts degradation representations, enabling a Degradation-Guided Transformer Block (DGTB) to dynamically modulate feature transformations for adaptive restoration. In Stage II, a Task-to-Restoration Feedback Generation module (TRFG) transforms heterogeneous task features into restoration feedback by modeling task-representation discrepancies associated with the current restoration. Subsequently, a Selective Task Feedback Refinement module (STFR) assesses feedback relevance and selectively refines intermediate restoration features to mitigate interference with well-restored content. Extensive experiments demonstrate that TaskIR achieves competitive restoration quality and downstream task performance across diverse degradations and tasks.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Budgeted Quotient-Residual Guidance for Frozen Pocket-Conditioned Molecular Diffusion</h3>
+<ul>
+<li><strong>Authors: </strong>Xinyu Wang, Jinbo Bi, Minghu Song</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31222">https://arxiv.org/abs/2609.31222</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31222">https://arxiv.org/pdf/2609.31222</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31222]] Budgeted Quotient-Residual Guidance for Frozen Pocket-Conditioned Molecular Diffusion(https://arxiv.org/abs/2609.31222)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Pocket-conditioned molecular diffusion updates ambient atom coordinates, but many lead-optimization objectives are expressed on quotient features such as distances, contacts, and anchored substructures. We introduce budgeted quotient-residual guidance (QRG), an inference-time correction that makes these quotient objectives active without retraining the molecular generator. QRG lifts quotient covectors to metric-horizontal ambient directions and delivers them through a trust budget set by the frozen sampler's own step norm: quotient geometry chooses the direction, while sampler motion bounds the scale. We derive the horizontal lift, closed-form sampler-budget update, KL/kinetic interpretation around a frozen reverse step, equivariance conditions, and a product-budget split for budget-capped section and residual controls. Controlled quotient tasks confirm that sampler-relative delivery activates signals that raw local quotient gradients leave dormant. On frozen TargetDiff backbones, official seed-0 CBGBench ligand-generation/editing sweeps show practical quality-runtime gains: Local-QRG improves validity from 0.815 to 0.864 on fragment growing, 0.664 to 0.707 on scaffold hopping, and 0.681 to 0.712 on linker design, while PredNext-QRG improves fragment/scaffold and remains near-neutral on linker. Novelty remains 1.000 and diversity is preserved in the matched multi-seed molecular slice, giving task-dependent improvements without sampler retraining or backbone modification. Overall, QRG provides a lightweight route to quotient-aware inference for frozen molecular samplers with explicit runtime accounting.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Softmax Reparameterization for Output-Head Quantization</h3>
+<ul>
+<li><strong>Authors: </strong>Asim Kadav, Christian Flores, Chirag Arora, Varun Kotte, Hongbo Zheng, Lan Yan, Priya Shanmugasundaram, Tracy Holloway King</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31291">https://arxiv.org/abs/2609.31291</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31291">https://arxiv.org/pdf/2609.31291</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31291]] Softmax Reparameterization for Output-Head Quantization(https://arxiv.org/abs/2609.31291)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Large vocabularies make output heads a substantial inference cost in small language models. We propose softmax reparameterization, a post-training method that selects a functionally equivalent output head before quantization. The method subtracts a scalar multiple of the vocabulary-row mean from every output row and selects the coefficient by validation KL separately for RTN, activation-weighted MSE, and full-Hessian GPTQ. This one-dimensional search includes the original head and fixed mean-centering, preserves the full-precision softmax distribution, and leaves the trained decoder unchanged; a rank-one correction handles nonlinear logit paths such as soft-capping. Across seven heads, W4 gains concentrate where baseline quantization substantially distorts predictions: on Phi-4-mini, AW-MSE KL falls from 0.936 to 0.256. The gains survive stronger GPTQ calibration and remain complementary to exact per-channel scaling and affine quantization. Across four heads and three W4 quantizers, frozen WikiText-selected coefficients also transfer to C4 and OpenWebMath, outperforming mean-centering in all 18 comparisons where the frozen coefficient differs from $1$ and matching it in the remaining six. At W2, used as a compression stress test, benefits broaden across nearly the full model--quantizer matrix. Matched residual analysis shows that improved fidelity can accompany greater logit reconstruction error while reducing the residual's Fisher-weighted cost. For shift-compatible heads, reparameterization adds no inference operation and preserves packed W4 execution: with the decoder held in BF16, quantizing the Phi output head reduces batch-one generation latency by 10.8% relative to the BF16-head baseline.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Benchmarking Attention for Tabular Foundation Models</h3>
+<ul>
+<li><strong>Authors: </strong>Maximilian Schambach, Clemens Biehl, Sam Thelin</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31306">https://arxiv.org/abs/2609.31306</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31306">https://arxiv.org/pdf/2609.31306</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31306]] Benchmarking Attention for Tabular Foundation Models(https://arxiv.org/abs/2609.31306)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Tabular in-context learners such as TabPFN, Mitra, or ConTextTab rely on alternating row and column attention over 2D sequences of latent embeddings. These attention patterns differ markedly from the one-dimensional case in language models: row attention involves longer sequences while column attention operates on much shorter ones, and the strided memory layout of tabular data makes producing contiguous tensors costly. Moreover, the hidden dimensions used in current models are small compared to recent language models. Yet efficient attention has been studied mostly for one-dimensional sequences, leaving the two-dimensional tabular setting unexplored. To this end, we create a reproducible benchmarking setup and study the unique characteristics of tabular attention across several backends -- Torch SDPA (efficient and cuDNN), FlashAttention-2/3/4, and the inference-only backends vLLM and SageAttention -- measuring forward and backward throughput across realistic tabular shapes on three GPU generations (A100, H100, B200). We find that the optimal backend choice differs between column and row attention and varies across hardware as well as model specifics: While the FlashAttention implementations tailored for each GPU generation perform overall best, they are at times outperformed by CuDNN in the case of column attention at longer sequences with cross-over points depending on the head dimension. Among inference-only backends, SageAttention performs well for row attention and large sequences beyond 16\,k rows. Our reproducible benchmark lays the foundation for future improvements to table-native attention. The self-contained benchmarking and evaluation code is openly available at: this https URL</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Bridging Body and Brain: Gene-Driven Morphology--Control Co-Design</h3>
+<ul>
+<li><strong>Authors: </strong>Fu Feng, Ruixiao Shi, Yucheng Xie, Jing Wang, Xin Geng</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31329">https://arxiv.org/abs/2609.31329</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31329">https://arxiv.org/pdf/2609.31329</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31329]] Bridging Body and Brain: Gene-Driven Morphology--Control Co-Design(https://arxiv.org/abs/2609.31329)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Morphology--control co-design jointly optimizes an agent's body structure and control policy as an integrated embodied system. However, existing methods typically model morphology design and control with separate networks coupled only indirectly through a shared task objective, limiting explicit high-level coordination. Inspired by natural genes that coordinate biological development, we introduce \textbf{Morphogene}, a compact latent blueprint that bridges an agent's body and brain. Through AdaConcat, Morphogene jointly conditions morphology and control generation at the limb level, allowing its variations to induce coordinated changes in both components. Building on this representation, we propose \textbf{GeCode}, which formulates co-design as exploration in the compact Morphogene space. Each Morphogene anchors a local design region in which nearby body--brain designs are explored, while performance-guided updates move these anchors toward promising regions for more efficient exploration of the broader design space. This process combines local refinement with global exploration while preserving body--brain compatibility. Extensive experiments across diverse 2D and 3D co-design tasks demonstrate that GeCode consistently outperforms existing state-of-the-art methods, achieving substantially faster convergence and higher final performance.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: DyMD: Preserving Interaction Dynamics through Distribution Matching Distillation in Few-Step Video World Models</h3>
+<ul>
+<li><strong>Authors: </strong>Haojun Xu, Jie Huang, Xin Lu, Mingchen Zhong, Zihao Fan, Linjiang Huang, Si Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31349">https://arxiv.org/abs/2609.31349</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31349">https://arxiv.org/pdf/2609.31349</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31349]] DyMD: Preserving Interaction Dynamics through Distribution Matching Distillation in Few-Step Video World Models(https://arxiv.org/abs/2609.31349)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Large video diffusion models offer expressive priors for embodied prediction and learning, yet their many-step sampling remains costly for interactive downstream use. Distribution Matching Distillation (DMD) enables few-step video generation, but can suppress robot--object motion while preserving visual quality. Examining DMD's teacher and fake-score signals, we find that weak re-noising keeps the teacher posterior concentrated near motion-deficient rollouts, limiting motion-restoring guidance. Meanwhile, stronger-motion rollouts tend to incur larger fake-score fitting errors, which can hinder the generator's learning of interaction dynamics. We propose DyMD, a DMD framework that adapts both teacher supervision and critic fitting to the evolving student. Temporal affinity--conditioned re-noise sampling adapts the timestep distribution to each rollout's current interaction fidelity by mixing the base schedule with a teacher prior motivated by local posterior variation, thereby balancing motion recovery and appearance refinement. To better track stronger-motion rollouts, dynamics-guided fake-score tracking uses a noise-conditioned predictor to estimate noise-relative fitting difficulty from latent temporal dynamics, then upweights predicted-hard rollouts in the critic loss. Using DyMD, we distill a 14B teacher into a four-step 1.3B student with no auxiliary modules at inference. On embodied-video benchmarks, the student improves R-Bench task adherence by $9.6$ percentage points and PAI-Bench-G Domain score by $5.1$ points over Base DMD while maintaining comparable visual quality. As a backbone for downstream action planning, our student achieves 34% mean success across two WorldArena tasks, compared with 16% for Base DMD.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: ContraFM-S2O: Flow Matching-Based One-step SAR-to-Optical Image Translation Model with Contrastive Learning</h3>
+<ul>
+<li><strong>Authors: </strong>Mingqian Yu, Wei-kuan Chiang, Qiurui Wang, Peilin Zhao</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31378">https://arxiv.org/abs/2609.31378</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31378">https://arxiv.org/pdf/2609.31378</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31378]] ContraFM-S2O: Flow Matching-Based One-step SAR-to-Optical Image Translation Model with Contrastive Learning(https://arxiv.org/abs/2609.31378)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>In recent years, diffusion models and GAN-based models have become the mainstream approaches for SAR-to-optical image translation, owing to their advantages, such as high-quality generation and stable training. However, they have shortcomings such as high inference latency and the generated optical images suffer from low detail fidelity, often resulting in blurred edges and loss of fine textures. Thus, we propose ContraFM-S2O, which is a flow matching-based model for SAR-to-optical image translation. Unlike conventional diffusion models, ContraFM-S2O learns to predict the velocity field in training and solves ODE instead of SDE during inference to improve the sampling efficiency. In addition, ContraFM-S2O replaces instantaneous velocity with average velocity along the interpolation path to realize one-step SAR-to-optical image translation and uses contrastive learning to improve the quality of the generated optical images. Experiments show our model achieves state-of-the-art on SAR2Opt and QXS datasets, outperforming baselines, and reduces inference latency via one-step generation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Evaluating the accuracy of KV cache reuse techniques</h3>
+<ul>
+<li><strong>Authors: </strong>Samuel Cestola, Tianxiang Xia, Pengfei Zheng, Weiyan Zheng, Bo Wang, Yi Zhao, Diego Didona</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31415">https://arxiv.org/abs/2609.31415</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31415">https://arxiv.org/pdf/2609.31415</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31415]] Evaluating the accuracy of KV cache reuse techniques(https://arxiv.org/abs/2609.31415)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Position-independent KV cache reuse aims to reduce latency in retrieval-augmented generation by reusing chunk-level KV caches across prompts. We show that current evaluations of KV cache reuse techniques rely on measurements that fail to faithfully capture the loss of accuracy attributable to reuse, often artificially inflating the reported effectiveness. We also show that existing datasets do not exhibit the reuse dynamics needed to thoroughly evaluate such techniques. To address these issues, we propose an evaluation methodology that measures this accuracy loss without ambiguity and we introduce Boxoffice, a tool that programmatically generates evaluation datasets that exercise challenging KV cache reuse patterns.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: From Reward Signal to Visual Utility: A Controlled Audit of Medical VLM Post-Training</h3>
+<ul>
+<li><strong>Authors: </strong>Wang Jingxin</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31450">https://arxiv.org/abs/2609.31450</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31450">https://arxiv.org/pdf/2609.31450</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31450]] From Reward Signal to Visual Utility: A Controlled Audit of Medical VLM Post-Training(https://arxiv.org/abs/2609.31450)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Medical vision-language model (VLM) post-training is commonly evaluated through answer accuracy. We examine how changes in accuracy and training objectives relate to image-conditioned decisions in a controlled Qwen2.5-VL-3B study on PMC-VQA. We compare supervised fine-tuning (SFT) with low-rank adaptation (LoRA) restricted to the language model, expanded multimodal adaptation scopes, standard answer-only Group Relative Policy Optimization (GRPO), and a counterfactual evidence objective. On 2,000 clean-test questions, language model LoRA SFT changes correct-image accuracy by +1.10 percentage points (95% paired bootstrap CI:-0.85 to +3.05), while visual-benefit events decrease by 2.40 points and image sensitivity decreases by 5.60 points. Paired records reveal 155 acquired and 203 lost visual-benefit events. Broader adaptation yields lower correct-image accuracy than language-model LoRA SFT. Standard GRPO produces mixed-reward groups and parameter updates, with an uncertain clean test accuracy change. A generation audit reveals that canonical option scores can follow a different token path from generated answers. With scores taken along the greedy generation path, the evidence target improves on the training set; its gains over standard GRPO remain inconsistent on validation data at matched training doses. Sample-level analyses trace how evidence scores, decision margins, and generated answers change during post-training. This empirical and measurement audit identifies gaps between optimization activity, target acquisition, and useful held-out visual behavior.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Different Corruptions, Different Signals: Uncertainty and Loss in Federated Data Quality</h3>
+<ul>
+<li><strong>Authors: </strong>Bradley Scott, Zeqi Luo, Edmond S. L. Ho</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31454">https://arxiv.org/abs/2609.31454</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31454">https://arxiv.org/pdf/2609.31454</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31454]] Different Corruptions, Different Signals: Uncertainty and Loss in Federated Data Quality(https://arxiv.org/abs/2609.31454)</code><input type="text"></li>
+<li><strong>Keywords: </strong>quality assessment</a></li>
+<li><strong>Abstract: </strong>Federated learning (FL) data corruption can affect either inputs or labels, but it remains unclear whether input-conditional uncertainty and prediction-label loss expose these corruption modes equally. This paper compares two corruption-detection signals in FL: input-conditional uncertainty and prediction-label loss. The uncertainty signal is characterised using a learned aleatoric variance estimate together with Monte Carlo (MC) dropout variance and entropy measures, while the loss is computed against the supplied label. We test these signals against additive image noise and persistent random label flips. On ResNet-20 with CIFAR-10 and SVHN under Dirichlet partitions with data that are not independent and identically distributed (non-IID), the two corruption types behave differently. For persistent random label flips, the within-client per-sample area under the receiver operating characteristic curve (AUC) is 0.85 on CIFAR-10 and 0.95 on SVHN for prediction-label loss, while every uncertainty estimator stays at chance (0.49--0.50). This pattern is consistent with the model remaining confident in the underlying image despite the supplied label being wrong. For image noise, expected-entropy uncertainty rises above chance (0.67 on CIFAR-10 and 0.66 on SVHN), while loss responds comparably (0.64 on both). Each signal is therefore the stronger detector for a different corruption: the prediction-label loss for persistent label flips, and expected-entropy uncertainty for image noise, with its advantage becoming apparent as federation-wide corruption prevalence increases. Robust FL data-quality assessment should match the signal to the corruption rather than rely on uncertainty alone across corruption types.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: ClearGS: Reliability-Aware Gaussian Splatting from Handheld Videos</h3>
+<ul>
+<li><strong>Authors: </strong>Xuanzhi Liu, Xinyi Wu, Hang Pan, Wensi Huang, Zhenyao Wu, Ruize Han, Song Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31509">https://arxiv.org/abs/2609.31509</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31509">https://arxiv.org/pdf/2609.31509</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31509]] ClearGS: Reliability-Aware Gaussian Splatting from Handheld Videos(https://arxiv.org/abs/2609.31509)</code><input type="text"></li>
+<li><strong>Keywords: </strong>restoration</a></li>
+<li><strong>Abstract: </strong>We present ClearGS for 3D Gaussian Splatting (3DGS) from handheld videos with uneven viewpoint coverage and mixed frame quality. Rather than selecting frames with binary decisions, ClearGS uses Reliability-aware View Allocation (RVA) to assign graded raw-supervision weights based on appearance reliability, degradation risk, and geometric utility, while weakly reactivating useful suppressed frames to maintain trajectory coverage. Since weighting cannot restore details lost to blur or distortion, ClearGS further introduces Render-Guided In-Video Restoration (RIVR). The current 3DGS render provides a pose-aligned structural candidate, a frozen no-reference restoration expert restores the corresponding raw video observation without any clean reference image, and no-reference perceptual scores select among the render, restored observation, and high-frequency fused candidate. ClearGS then applies Full-Trajectory Repair Consolidation to revisit accepted repairs and preserve details introduced early. On GS2E and GSOTM, ClearGS achieves state-of-the-art overall performance, with consistent CLIP-IQA and MUSIQ gains and LPIPS reductions in most degradation settings, without paired sharp supervision or matched clean references.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Forensic Twins: Self-Supervised Residual Learning for AI-Generated Image Forensics</h3>
+<ul>
+<li><strong>Authors: </strong>Javier Muñoz-Haro, Ruben Tolosana, Ruben Vera-Rodriguez, Aythami Morales, Julian Fierrez</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31514">https://arxiv.org/abs/2609.31514</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31514">https://arxiv.org/pdf/2609.31514</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31514]] Forensic Twins: Self-Supervised Residual Learning for AI-Generated Image Forensics(https://arxiv.org/abs/2609.31514)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Detectors of AI-generated images are typically trained using samples from all Generative AI architectures they must catch, and struggle as soon as a new architecture emerges. Recent approaches have explored self-supervised pre-training as an alternative solution, yet standard frameworks work against the forensic task, e.g., their augmentations overwrite the micro-statistics of image formation. This paper introduces Forensic Twins, a Self-Supervised Residual Learning (SSRL) framework whose pretext task suppresses macroscopic content availability. Each image is mapped through a frozen, off-the-shelf forensic residual extractor, from which two spatially disjoint crops are drawn. Sharing no pixel, the two views retain minimal semantic structure to align, leaving a redundancy-reduction objective with a predominant common signal: the stationary fingerprint of the image acquisition pipeline. Additionally, Forensic Twins is trained exclusively on real images; no AI-generated image is observed at any stage. Experiments show that Forensic Twins attributes AI generator sources with 56.61% accuracy, i.e., 6.13% above the previous state-of-the-art zero-shot method at 375x lower latency. We also demonstrate that fitting a Gaussian Mixture Model (GMM) offline using only the real image embeddings extracted from Forensic Twins turns it into a state-of-the-art zero-shot detector, reaching 97.99% AUC across 27 unseen AI generators, including GANs, diffusion models and commercial systems. Code, weights and exact splits will be made publicly available</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: GraphWrit3R: End-to-End 3D Scene Graph Writing</h3>
+<ul>
+<li><strong>Authors: </strong>Luka Milivojevic, Nikola Popovic, Sayan Deb Sarkar, Sebastian Koch, Iro Armeni, Luc Van Gool, Danda Pani Paudel</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31595">https://arxiv.org/abs/2609.31595</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31595">https://arxiv.org/pdf/2609.31595</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31595]] GraphWrit3R: End-to-End 3D Scene Graph Writing(https://arxiv.org/abs/2609.31595)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>3D scene graphs provide a structured representation of complex environments by encoding objects, their semantic attributes, and the spatial and functional relationships between them. Current approaches for 3D scene graph generation suffer from several fundamental limitations. They rely on complex multi-stage pipelines with explicit intermediate representations, making systems fragile and prone to error propagation. They assume access to ground-truth object annotations during inference, which deviates from real-world scenarios. They depend on proprietary models, hindering open-source deployment, or incur prohibitively slow inference. We present GraphWrit3R, a simple end-to-end method that takes a 3D point cloud, Gaussian Splats, or a combination of both as input, and directly outputs a complete scene graph as a structured JSON script. The graph lists all objects, their semantic attributes, and the relationships between them, while avoiding all of the above mentioned limitations. The choice of multiple input modalities is purely for versatility, allowing a single set of weights to handle diverse scenarios. Point cloud inputs are encoded via Sonata and Gaussian Splat inputs via Chorus, with both modalities projected onto a shared voxel grid and fused through a novel per-voxel contrastive alignment loss before being decoded by a large language model. As a natural consequence of the LLM, GraphWrit3R also supports open-vocabulary querying. On the 3DSSG benchmark, our method achieves state-of-the-art performance on object class, predicate, and triplet recall, outperforming methods that rely on ground-truth object annotations during inference. We further provide qualitative results and analyze different input modality configurations, contrastive loss formulations, and token fusion strategies.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders</h3>
+<ul>
+<li><strong>Authors: </strong>Hongyang Du, Yunfei Xie, Junjie Ye, Jiawei Yang, Xiaoyan Cong, Haodong Zhang, Yongchao Huang, Haiyu Wu, Zongxia Li, Shihang Gui, Dawei Liu, Runhao Li, Jingcheng Ni, Chen Wei, Randall Balestriero, Yue Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2609.31620">https://arxiv.org/abs/2609.31620</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2609.31620">https://arxiv.org/pdf/2609.31620</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2609.31620]] FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders(https://arxiv.org/abs/2609.31620)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Representation autoencoders (RAEs) reuse features from a pretrained visual encoder as reconstruction and diffusion latents, integrating strong visual representations into image generation. However, RAEs still need to decide which encoder layers form the shared latent space for the generator and pixel decoder. This choice involves a trade-off. Shallower layers tend to preserve fine pixel details better, while deeper layers tend to yield better generation metrics. A fixed heuristic layer fusion therefore couples two stages that benefit from different information. We introduce FuseReg, which replaces heuristic feature selection with training over random subsets of encoder layers. We theoretically analyze the underlying mechanism: subset sampling explicitly penalizes sensitivity to cross-layer disagreement. On ImageNet-256 with DINOv3-L, a single FuseReg decoder reconstructs from full, sparse, and single-layer fusions without retraining, achieving higher PSNR than decoders specialized to fixed fusions. This flexibility also benefits generation: decoder replacement alone reduces unguided gFID by 27% with an unchanged RAEv2 DiT-XL generator. The same regularization principle extends to diffusion training, with joint regularization of both stages reducing unguided gFID by 29% on DiT-Base. These results show that training downstream models for layer-fusion robustness narrows the reconstruction-generation gap without modifying the pretrained encoder.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="../../javascript/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
