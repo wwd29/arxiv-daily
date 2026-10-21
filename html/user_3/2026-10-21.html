@@ -1,0 +1,823 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2026-10-21</h1>
+<h3>Title: Beckmann World Models: Direct Terminal-Map Learning for One-Step Action-Conditioned Prediction</h3>
+<ul>
+<li><strong>Authors: </strong>Adam Lee, Shobhit Agarwal, June Pyo Suh</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.26903">https://arxiv.org/abs/2610.26903</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.26903">https://arxiv.org/pdf/2610.26903</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.26903]] Beckmann World Models: Direct Terminal-Map Learning for One-Step Action-Conditioned Prediction(https://arxiv.org/abs/2610.26903)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Action-conditioned world models support planning and policy evaluation by predicting future states. However, learning an accurate one-step predictor can require substantial training computation. We introduce Beckmann World Models (BWM), which learn a direct map from noise, visual history, and actions to future frames without a pretrained generative teacher. We adapt the terminal-map conservation law of Beckmann Transport Models to action-conditioned video prediction, training directly from noise-data pairs without conditional populations of generated samples required by DriftWorld. However, transport consistency on interpolated inputs does not ensure accurate prediction from the pure noise used at inference. We address this gap with endpoint-aligned training that directly supervises the source prediction, emphasizes motion and spatial structure, and teaches recovery from generated histories. All components train the same map and retain one network call per future chunk. On PushT and Robomimic Can, the final model reduces 64-frame prediction MSE by 68% and 57%, respectively, relative to same-backbone regression baseline. For policy evaluation, BWM achieves the lowest mean IoU error among the evaluated models, 0.0100, at 24.8 ms per four-frame PushT prediction. On Robomimic Can, the BWM stage trained with motion supervision and generated histories achieves 3.3 times higher throughput and 78% lower peak memory than local one-step DriftWorld. In a latent-space extension to RT-1 and Bridge-V2, equal-update controls show that feature supervision under generated histories improves perceptual prediction. These findings show how terminal-map learning can combine efficient training with accurate one-step visual prediction.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Controllable Multi-Object Insertion for Detection Data Augmentation</h3>
+<ul>
+<li><strong>Authors: </strong>Jiyang Huang, Tianwei Zhang, Xiaoqin Zhang, Ling Shao, Shijian Lu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.26922">https://arxiv.org/abs/2610.26922</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.26922">https://arxiv.org/pdf/2610.26922</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.26922]] Controllable Multi-Object Insertion for Detection Data Augmentation(https://arxiv.org/abs/2610.26922)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Controllable object insertion provides a targeted approach to augmenting object detection datasets that require category--count fidelity, annotation alignment, and source-content preservation beyond visual realism. Several approaches have been proposed to address this grand challenge, but most suffer from different constraints in precise category--count requests and visual consistency, limited coordination across categories and instances, and poor localization of multiple objects of specific category and count. We design SceneP2F, a two-stage trainable framework that connects scene-aware joint planning with layout-aligned generation leveraging explicit instance-level layouts. SceneP2F consists of two novel designs. The first is ScenePlan which allocates one class-labeled query per requested instance, jointly predicts scene-compatible object centers, and separately estimates box sizes conditioned on the planned centers and scene context. The second is SceneAlign-Fill which combines geometry- and appearance-aware conditioning, box--class-guided regional attention, and an annotation-region-weighted flow-matching objective to render the planned objects while limiting unintended changes to source content. Extensive experiments on three challenging benchmarks UAVDT, VisDrone, and BDD100K show that SceneP2F outperforms representative general-purpose editors and object-insertion methods consistently, demonstrating the value of coordinating instance-level planning and generation for category-targeted detection augmentation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: CaMeWM: A Causal Medical World Model for Generative Tumor Evolution and Treatment Planning</h3>
+<ul>
+<li><strong>Authors: </strong>Huanlong Gao, Xuelei He, Fengjun Zhao, Xiaowei He</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.26923">https://arxiv.org/abs/2610.26923</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.26923">https://arxiv.org/pdf/2610.26923</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.26923]] CaMeWM: A Causal Medical World Model for Generative Tumor Evolution and Treatment Planning(https://arxiv.org/abs/2610.26923)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Treatment planning is intrinsically counterfactual: clinicians must compare how a patient's tumor and survival would evolve under competing regimens, whereas a retrospective cohort records only the regimen received and one follow-up scan. A treatment-conditioned generator trained on such data can therefore reproduce historical treatment allocation rather than simulate the interventional disease dynamics needed to rank regimens. We introduce \textbf{CaMeWM}, a causal medical world model for supported post-TACE tumor evolution and treatment planning. CaMeWM implements one intervention-to-decision loop rather than three independent prediction tasks: it first admits a queried regimen only for clinically comparable histories with empirical treatment support; it then generates a distribution of lesion-local follow-up worlds through an action-conditioned response descriptor, deterministic anchor, and residual 3D diffusion transition; and it finally maps sampled worlds to restricted mean survival time (RMST) with a response-Cox utility model. Under pre-treatment adjustment and positivity, this loop estimates a prespecified, support-restricted g-formula target; all selection and nuisance estimation are fold-local, and the induced policy is evaluated by cross-fitted, censoring-adjusted doubly robust estimation. Across 79 paired out-of-fold episodes, CaMeWM achieves 0.618 SSIM and 0.528 change-map SSIM for follow-up CT transition, while its generated-world survival pathway attains a 0.615 C-index; factual-only AIPW estimates a 9.60-week RMST gain (95\% CI 0.61--18.13) for the frozen policy. CaMeWM provides an inspectable basis for retrospective, support-restricted treatment planning.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Beyond Policy Discrepancy: Capability-Aware Multi-Teacher On-Policy Distillation</h3>
+<ul>
+<li><strong>Authors: </strong>Xuanfeng Yang, Le Gui, Jiaming Wang, Xuan Zhang</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.26950">https://arxiv.org/abs/2610.26950</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.26950">https://arxiv.org/pdf/2610.26950</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.26950]] Beyond Policy Discrepancy: Capability-Aware Multi-Teacher On-Policy Distillation(https://arxiv.org/abs/2610.26950)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Multi-teacher on-policy distillation (MOPD) integrates domain specialists into a shared student, but determining how strongly each teacher should supervise remains challenging. Existing discrepancy-based allocation can assign strong supervision even when the student already matches or exceeds the teacher's task performance, since behavioral mismatch does not necessarily imply a remaining capability deficit. We propose Capability-Aware Multi-Teacher On-Policy Distillation (CA-MOPD), which combines specialist merging with capability-guided allocation to account for what the student has already learned. CA-MOPD first merges reinforcement-learning specialists into a strong student initialization, then uses verifier-estimated teacher--student capability gaps to adjust domain-level distillation strength. Supervision decreases as capability gaps close and increases when estimated student capability regresses, while dense token-level guidance remains provided by the teachers. Across six benchmarks spanning mathematics, code generation, and instruction following, CA-MOPD achieves an average score of 32.22, outperforming naive MOPD, Open-MOPD, and the merged initialization by 0.86, 0.83, and 0.74 points, respectively. Controlled comparisons further support the benefits of merged initialization and capability-gap guidance under matched training budgets.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: CorteXforge: Scenario-Based RF Dataset Generation on Real Testbeds</h3>
+<ul>
+<li><strong>Authors: </strong>Andréa Joly, Leonardo S Cardoso (CITI), Jean-Marie Gorce</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.IT</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.26999">https://arxiv.org/abs/2610.26999</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.26999">https://arxiv.org/pdf/2610.26999</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.26999]] CorteXforge: Scenario-Based RF Dataset Generation on Real Testbeds(https://arxiv.org/abs/2610.26999)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Deep learning for radio frequency (RF) signal analysis relies on large annotated datasets, yet synthetic datasets trade physical realism for controllability, while uncontrolled over-theair measurements offer realism but limited reproducibility. We present CorteXforge, a scenario-based framework for generating realistic and reproducible RF datasets on programmable software defined radio (SDR) testbeds. High-level RF scenarios are automatically translated into synchronized experiments executed on the SLICES-RI/CorteXlab platform, producing fully annotated Signal Metadata Format (SIGMF) datasets that capture hardware impairments and propagation effects. We validate CorteXforge through automatic modulation classification using ModForge, an over-the-air (OTA) dataset generated with the framework. Cross-domain experiments reveal a synthetic-to-real performance gap and show that synthetic pretraining remains beneficial for adaptation to OTA data. CorteXforge provides a practical foundation for reproducible RF dataset generation and future research on domain generalization.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: ORBIT: Autoregressive Time Series Generation via Next Frequency-Band Prediction</h3>
+<ul>
+<li><strong>Authors: </strong>Chunyi Hou, Xiangfei Qiu, Hanyin Cheng, Chenchen Sun, Yisheng An, Yang Shu, Jilin Hu, Bin Yang</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27000">https://arxiv.org/abs/2610.27000</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27000">https://arxiv.org/pdf/2610.27000</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27000]] ORBIT: Autoregressive Time Series Generation via Next Frequency-Band Prediction(https://arxiv.org/abs/2610.27000)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>Deep generative models provide an effective modern solution to alleviating the problem of data scarcity by synthesizing realistic time series. However, despite the considerable progress achieved by existing deep time series generators, two key challenges remain: (1) learning hierarchical representations for heterogeneous temporal patterns; and (2) coordinating the generation process of heterogeneous temporal dynamics. To address these key bottlenecks, in this work, we propose ORBIT, a unified deep generative framework for time series. Specifically, we develop two key components: the Frequency-Hierarchical VQ-VAE (FH-VQ-VAE) and the Frequency-Band Autoregressive Transformer (FBAR). The former learns hierarchical representations by decomposing latent temporal representations into different frequency bands and applying residual quantization with increasing token budgets. The latter establishes a novel low-to-high frequency autoregressive direction, yielding a time series generation process that first constructs global temporal structures and then incrementally incorporates fine-grained temporal details. These compact designs not only disentangle heterogeneous temporal patterns for more effective representation learning but also mitigate potential interference among different temporal dynamics during generation. Extensive experiments on multiple challenging real-world benchmarks demonstrate that ORBIT achieves state-of-the-art overall performance while exhibiting superior inference efficiency compared with advanced baselines.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: BUMP: Body-driven Unified Multi-object Physics for HOI Synthesis</h3>
+<ul>
+<li><strong>Authors: </strong>Wonjung Woo, Hyeonwoo Kim, Hanbyul Joo</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27066">https://arxiv.org/abs/2610.27066</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27066">https://arxiv.org/pdf/2610.27066</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27066]] BUMP: Body-driven Unified Multi-object Physics for HOI Synthesis(https://arxiv.org/abs/2610.27066)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Generating human-object interactions (HOIs) with multiple objects is challenging because the resulting motions arise from different underlying causes. Human motion reflects semantic intent, intentionally manipulated objects must remain coordinated with the human, while surrounding objects move primarily as physical consequences of contact and collision. We present BUMP, a text-driven framework for multi-object HOI generation based on a simple principle: learn intentional motion and simulate physical consequences. Our method first generates full-body human motion from text and scene context, then predicts trajectories for a small number of intentionally manipulated driver objects conditioned on the human motion. We then obtain responder object motions through physics simulation, allowing the framework to handle varying numbers and configurations of surrounding objects without expanding the learned trajectory output space. To address the scarcity of paired full-body multi-object HOI data, we combine heterogeneous supervision from human-only motion, full-body HOI, and hand-centric manipulation data augmented with plausible body motion. We further introduce outcome-conditioned interaction editing, which infers a local modification of the causal driver object trajectory from a desired responder object behavior without requiring an explicit target driver object trajectory. Experiments demonstrate strong performance on both single-object and multi-object HOI benchmarks. Qualitative results showcase diverse scenarios involving inter-object relationships and edits, highlighting the advantage of our unified model formulation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: ClockMark: Adaptive and Host-Dependent Watermarking for Large Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Yupeng Qiu, Han Fang, Ee-Chien Chang</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27079">https://arxiv.org/abs/2610.27079</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27079">https://arxiv.org/pdf/2610.27079</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27079]] ClockMark: Adaptive and Host-Dependent Watermarking for Large Language Models(https://arxiv.org/abs/2610.27079)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Large language model (LLM) watermarking operates on the next-token distribution that evolves during generation. In streaming generation, each sampled token becomes part of the text and affects subsequent distributions. Embedding therefore proceeds with a changing host, unlike classical watermarking, which adapts embedding to an existing host signal. To accommodate this difference, we formulate a novel embedding framework for LLM watermarking based on two principles. We first argue that embedding should be adaptive, retaining the state of previous sampling decisions to better guide subsequent choices. We further argue that embedding should be host-dependent, using the current LLM distribution to constrain both token selection and state updates. Guided by these principles and the two requirements of distribution preservation and robustness to text editing, we propose ClockMark. It combines adaptive and host-dependent embedding with message spreading, embedding the full payload in each watermarked token. Theoretically, we prove that ClockMark preserves the original LLM sequence distribution, thereby maintaining generation quality. Empirically, extensive experiments against 12 baselines demonstrate improved robustness to text editing, with gains of up to 16.08 percentage points in bit accuracy over the strongest tested baseline.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Reconstruction-Optimized Expert Pruning for Mixture-of-Experts Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Jelena Markovic-Voronov, Petros Prastakos, Kayhan Behdin, Jincheng Cao, Zhipeng Wang, Shayan Mohajer Hamidi, Yuanda Xu, Zhengze Zhou, Wenhui Zhu, Rahul Mazumder</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27123">https://arxiv.org/abs/2610.27123</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27123">https://arxiv.org/pdf/2610.27123</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27123]] Reconstruction-Optimized Expert Pruning for Mixture-of-Experts Language Models(https://arxiv.org/abs/2610.27123)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Mixture-of-Experts (MoE) models reduce computation through sparse expert activation, but deployment still requires storing a large number of expert parameters. We study post-training expert pruning using task-domain calibration data as a subset-selection problem: given a pretrained MoE layer, select a fixed number of experts that best reconstruct its original output. Exact subset search is combinatorial and becomes intractable for modern MoE models with many experts per layer. We develop OptEP, a scalable continuous relaxation that directly optimizes differentiable expert-selection variables, followed by a lightweight reconstruction-based update of the retained expert weights. Across multiple MoE architectures and tasks spanning mathematical reasoning and code generation, our approach improves over the strongest existing expert-pruning baselines, with absolute accuracy gains of up to 15.05% on Qwen3-30B-A3B, 14.55% on Qwen3-235B-A22B, 11.06% on GLM-4.5-Air, and 16.20% on Mixtral-8x7B. The improvements are particularly pronounced under aggressive pruning, demonstrating that reconstruction-driven expert selection and weight adaptation can preserve substantially more of the original model's performance while reducing the number of retained experts.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: PRIMFLOW: Learning Trajectory Primitives for Few-Step Distillation</h3>
+<ul>
+<li><strong>Authors: </strong>Hongyi Fang, Benjia Zhou</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27146">https://arxiv.org/abs/2610.27146</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27146">https://arxiv.org/pdf/2610.27146</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27146]] PRIMFLOW: Learning Trajectory Primitives for Few-Step Distillation(https://arxiv.org/abs/2610.27146)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Few-step trajectory distillation aims to learn accurate global updates from dense local supervision along a teacher's sampling trajectory. Existing approaches construct within-step dynamics using specific trajectory parameterizations or discrete interval predictions, tying the learned update to a prescribed temporal structure. We propose \method, which directly learns a continuous trajectory primitive representing cumulative displacement along the teacher trajectory. By supervising finite differences of the primitive with local teacher velocities, \method learns the accumulated motion directly, while obtaining global updates through endpoint differences. This formulation avoids prescribing a temporal basis or fixed query grid and instead learns the temporal evolution of cumulative displacement from local supervision. We further establish a local-to-global error bound to characterize how local regression errors affect full-interval displacement accuracy, and introduce endpoint absorption to eliminate the auxiliary primitive branch while preserving one-network-evaluation inference. Experiments on large-scale text-to-image generation show that \method achieves a T-FID of 20.92 and an HPSv2 score of 28.35 at one NFE, improving both metrics over a trajectory-distillation baseline. After endpoint absorption, it retains comparable performance, achieving a T-FID of 20.86 and an HPSv2 score of 28.33.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Steering Vision-Language Models for Visual-Contextual Privacy in Location Disclosure</h3>
+<ul>
+<li><strong>Authors: </strong>Wenyue Chen, Yuhan Cheng, Ruixin Yang, Ethan Mendes, Alan Ritter, Jingwei Sun, Hai Li, Yiran Chen</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27323">https://arxiv.org/abs/2610.27323</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27323">https://arxiv.org/pdf/2610.27323</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27323]] Steering Vision-Language Models for Visual-Contextual Privacy in Location Disclosure(https://arxiv.org/abs/2610.27323)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Vision-language models (VLMs) can infer sensitive information such as geolocation from subtle visual cues, creating privacy risks when responses disclose more detail than the visual context warrants. We study visual-contextual privacy in geolocation disclosure, where a VLM should reveal location information only at the granularity appropriate to the visual context depicted in the image. We first show that this contextually appropriate granularity is recoverable from pre-generation hidden states, even when generated responses are misaligned, with disclosure levels exhibiting an ordered structure along a common hidden-state direction. Motivated by this, we propose an inference-time route-and-steer framework: an ordinal granularity router maps visual-contextual privacy representations to a disclosure route, and a disclosure-level-conditioned steering module applies route-specific hidden-state interventions during decoding. Across four VLM backbones, our method improves visual-context-aware disclosure alignment, better balances over- and under-disclosure, and incurs only modest changes on general capability benchmarks. It further transfers to another dataset with a distinct data distribution and privacy-risk taxonomy.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Automated Brick Schema Knowledge Graph Completion Across Buildings</h3>
+<ul>
+<li><strong>Authors: </strong>Daniel Ma, Jalil Huseynov, Xinyi Pan, Shaked Shalev, Zhang Chi, Ai Yamamoto, Sohei Arisaka</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27339">https://arxiv.org/abs/2610.27339</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27339">https://arxiv.org/pdf/2610.27339</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27339]] Automated Brick Schema Knowledge Graph Completion Across Buildings(https://arxiv.org/abs/2610.27339)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>The Brick schema represents building equipment, sensors, spaces, and the relationships between them as typed, multi-relational graphs, providing machine-readable metadata that supports generalizable control applications. Current methods for producing complete Brick models require extensive manual examination of building schematics and point lists. We observe that as Brick models are knowledge graphs, inferring missing relations is naturally posed as a knowledge graph completion problem. To the best of our knowledge, this is the first application of knowledge graph completion to Brick model generation. We compare three methods, gradient-boosted trees, Pairwise Brick Relation Ranking, and CompGCN, on the relations feeds, hasPart, and hasPoint, which account for the majority of the schematic-reading work in building a Brick model by hand. Models are evaluated on held-out MORTAR buildings and out-of-distribution Kaggle and Building Time Series data. Although CompGCN is the strongest performer on held-out buildings under metrics resistant to class imbalance, leading macro-F1 and AUPRC, no method generalizes uniformly across datasets or relations.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: PerQ: Inverse Generative Modeling for Neural Image Compression via Quantization Error Compensation</h3>
+<ul>
+<li><strong>Authors: </strong>Tianhao Peng, Ho Man Kwan, Fan Zhang, Shan Liu, Dave Bull</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27374">https://arxiv.org/abs/2610.27374</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27374">https://arxiv.org/pdf/2610.27374</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27374]] PerQ: Inverse Generative Modeling for Neural Image Compression via Quantization Error Compensation(https://arxiv.org/abs/2610.27374)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Neural image codecs face a fundamental trade-off between pixel fidelity and perceptual quality. Distortion-optimized codecs preserve pixel-wise fidelity but produce blurred reconstructions at low bitrates, whereas generative codecs leverage learned priors to improve perceptual quality but tend to exhibit saturating PSNR at higher bitrates and require separate models for different bitrate targets. We propose PerQ, which reframes perceptual reconstruction as inverse generative modeling with bounded support. Specifically, we define the quantization cell as the set of latents that yield the same transmitted symbols and derive a transport bound showing that reconstructions from this cell remain within a rate-determined radius of the codec output. This motivates performing generative reconstruction within the codec-induced quantization cell, rather than sampling from an unconstrained image prior. PerQ implements this principle by attaching a rate-conditioned flow-matching compensator to a frozen, multi-rate distortion-optimized backbone, enabling perceptual enhancement while preserving the backbone's coding performance. Experiments on Kodak and CLIC2020 show that PerQ achieves perceptual performance comparable to generative codecs such as MS-ILLM in LPIPS and FID, while maintaining competitive PSNR relative to distortion-optimized codecs such as ELIC. A single model checkpoint supports a wide bitrate range with fast decoding, and the compensator provides consistent gains across three different backbones. The implementation is available at this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Sample-efficient learning with Dense Associative Memories</h3>
+<ul>
+<li><strong>Authors: </strong>Andrew Lucas, Dmitry Krotov</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27384">https://arxiv.org/abs/2610.27384</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27384">https://arxiv.org/pdf/2610.27384</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27384]] Sample-efficient learning with Dense Associative Memories(https://arxiv.org/abs/2610.27384)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>We analytically study the evolution of the energy function of Dense Associative Memories (DenseAMs) as they train on randomly sampled codewords of random expander low-density parity-check codes (a.k.a. solutions of random XORSAT problems). We identify two distinct regimes and a transition between them, reminiscent of grokking in neural networks. A regime of small training set size is where the model memorizes a few training examples but cannot discover the underlying rules of the entire codeword dictionary generative process. The opposite regime, corresponding to a larger training set size, is where the model has uncovered the sparse constraints that generated the entire data set after seeing only polynomially many patterns. We also design a novel class of DenseAMs with a thresholding learning rule, and show that any amount of thresholding enables the model to perform simplified sparse Hamiltonian learning, which exponentially reduces the number of training examples needed to learn the true underlying data set. In this regime, the model learns how to discover $\exp[\mathrm{O}(n)]$ solutions from only $\mathrm{O}(\log n)$ training samples, which is asymptotically optimal for any learning algorithm. When training on codewords of certain random codes, the model can even learn the underlying code when a small O(1) fraction of bits are latent variables. These latent variables are not shown to the model during learning, but will be discovered by sparsifying observed higher-order correlations. For certain random codes, we show that a simple and conservative algorithm learns a minimal latent representation for the data set. This provides a transparent, physics-motivated, and analytically tractable toy model for how deep latent representations emerge in an associative memory training.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: TokenFlow: Latent Token Rectified Flow Matching for 3D Point Cloud Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Linhao Wang, Dongjin Huang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27418">https://arxiv.org/abs/2610.27418</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27418">https://arxiv.org/pdf/2610.27418</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27418]] TokenFlow: Latent Token Rectified Flow Matching for 3D Point Cloud Generation(https://arxiv.org/abs/2610.27418)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>3D point clouds generation requires capturing both part-level layout and surface detail while preserving permutation equivariance. Existing latent generative models often encode an entire shape into a single vector, which limits their ability to retain part-level structure. We propose TokenFlow, a hierarchical flow matching framework that represents each shape as a set of latent tokens and couples a rectified flow over these tokens with a conditional flow over points. A bottleneck of $M \ll N$ learnable tokens aggregates global context through cross-attention at $O(NM)$ cost. On ShapeNet, TokenFlow achieves the best MMD and coverage across airplane, car, and chair, while obtaining 1-NNA comparable to the strongest baselines. On ModelNet, its learned latent set reaches the best reported linear-evaluation accuracy on ModelNet10. These results show that representing a shape as a set of latent tokens, aggregated at $O(NM)$ cost, provides an effective representation for 3D point cloud generation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: LoRASpace: A Pool-Wide Shared Substrate for Static and Dynamic Multi-LoRA Composition</h3>
+<ul>
+<li><strong>Authors: </strong>Thamirawaran Sathiyalogeswaran, Navindu De Silva, Chamikara Siriwardane, W. K. Alwis, Jason Mars, Udaya Sampath K. Perera Miriya Thanthrige, Ranga Rodrigo</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27444">https://arxiv.org/abs/2610.27444</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27444">https://arxiv.org/pdf/2610.27444</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27444]] LoRASpace: A Pool-Wide Shared Substrate for Static and Dynamic Multi-LoRA Composition(https://arxiv.org/abs/2610.27444)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Low-rank adaptation (LoRA) attaches small low-rank matrices to a frozen backbone, and public repositories host many LoRAs per backbone, each for a different concept or task. Combining several LoRAs in one generation forces a trade-off. Merging their weights into one update needs a single forward pass, but LoRAs trained for different concepts interfere and quality drops. Running each LoRA in its own forward pass (composite) preserves quality, but inference time grows linearly with the number of active LoRAs. We study a property of LoRA pools overlooked by prior multi-LoRA work. In real LoRA pools, the stacked low-rank factors need far fewer directions than their summed ranks. Using singular value decomposition, we find the minimal subspace that keeps 99% of the factor energy. On three diffusion pools, only 46% to 57% of the summed LoRA ranks is needed, and the subspace grows sub-linearly with pool size. A 48-LoRA sub-pool of LoRA-Hub on FLAN-T5 tasks shows comparable overlap (62%), while the diversity-curated LoRA-Retriever benchmark sits near the no-overlap baseline (96%), so pool composition rather than modality predicts where compression is large. We build on this overlap with LoRASpace, a training-free method that computes the subspace once per pool and reuses it in two inference modes, a static mode at merge cost and a dynamic mode for input-dependent routing. On the diffusion pools, static LoRASpace matches composite quality at merge cost, and dynamic LoRASpace is more than 6x faster than composite with six active LoRAs on a 17-LoRA pool, mainly because it runs one backbone pass instead of six. In an ablation, static variants at the same rank match LoRASpace, so the quality gain does not depend on the pool-wide basis. On the near-orthogonal LoRA-Retriever benchmark, compression is small and gains come from coupling with external retrieval.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Decision Sufficiency of Learned Representation Interfaces for Safe Generative Control</h3>
+<ul>
+<li><strong>Authors: </strong>Jipeng Li, Yanning Shen</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27446">https://arxiv.org/abs/2610.27446</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27446">https://arxiv.org/pdf/2610.27446</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27446]] Decision Sufficiency of Learned Representation Interfaces for Safe Generative Control(https://arxiv.org/abs/2610.27446)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>A controller can guide a language model toward safe and useful responses by choosing when to assist, ask for clarification, or refuse. When the controller uses selected internal features, poor performance alone cannot distinguish missing information from limitations of its decision rules or training. We study decision sufficiency: whether the best controller using a representation can match the minimum average loss attainable with full state information, under the same strategies and evaluation criteria. For interfaces with finitely many outputs, we compute the optimal loss exactly and separate the three sources of excess loss. Pairwise checks can miss information loss: states with the same controller input may share an optimal strategy in every pair but not across the whole group. We bound the number of states needed to reveal a conflict and characterize the fewest outputs an unrestricted interface needs to avoid all conflicts. We audit selected features from sparse autoencoders, which encode model activations using relatively few active features, in Qwen2.5, SmolLM2, and Phi. On SmolLM2 responses scored by two human raters, restricting the controller to two selected on/off features increases its minimum average loss by 0.0345--0.1166 relative to full state information, even with the governing policy supplied. Both independently trained autoencoders show the increase on both evaluation sets. The audit identifies decision failures that require changing the controller's input, not merely its architecture or training.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Projected Distillation: On Learning to Solve Hard Problems from Close, Correct Targets</h3>
+<ul>
+<li><strong>Authors: </strong>Shripad V. Deshmukh, Christian Bock, Kangrui Ruan, Abhijeet Awasthi, Vijay Lingam, Rein Houthooft, Manish Prajapat</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27467">https://arxiv.org/abs/2610.27467</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27467">https://arxiv.org/pdf/2610.27467</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27467]] Projected Distillation: On Learning to Solve Hard Problems from Close, Correct Targets(https://arxiv.org/abs/2610.27467)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>On-policy learning is central to post-training: training on a model's own generations limits distribution shift and helps preserve existing capabilities. On hard problems, however, on-policy RL provides no reward-based learning signal when all attempts fail. On-policy distillation provides next-token supervision from a teacher, but on hard problems, if a rollout goes wrong early, subsequent supervision is conditioned on prefixes that already contain the mistake. Correct behavior can instead come from a gold or teacher solution, but such off-policy targets can differ substantially from the model's generations and, as we show, may erode existing capabilities. We therefore treat on-policyness as a continuum and propose projected distillation, which minimally edits the student's failed attempts into correct targets. The method uses contrastive updates to favor corrections over failed attempts and refreshes these corrections as the student evolves, enabling near-on-policy learning even when all student attempts fail. Theoretically, we prove that the student's learning regret grows with the edit size: it scales linearly with the horizon under minimal correction, as in DAgger, and quadratically under full-answer replacement, as in behavior cloning. Empirically, across two students (Qwen3-8B and OLMo-2-7B) and five domains spanning math, code, science, and tool use, projected distillation gives the highest area under the specialization-retention frontier (best on 8 of 9 cells against GRPO and OPD, and 7 of 9 against SPOT and SODA). Our ablations highlight the importance of online corrections, the contrastive loss, and on-policyness: moving targets farther off-policy steadily worsens the specialization-retention trade-off, with retention falling from 0.916 to 0.744 when minimal corrections are replaced by student-agnostic gold solutions.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: HealBench: A Fine-Grained Benchmark for Evaluating Psychological Comfort in Text-to-Image Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Junjie Xu, Yuzhe Yang, Rui Yang, Luwei Xiao, Wenxin Wu, Xingjiao Wu, Liang He</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27516">https://arxiv.org/abs/2610.27516</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27516">https://arxiv.org/pdf/2610.27516</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27516]] HealBench: A Fine-Grained Benchmark for Evaluating Psychological Comfort in Text-to-Image Generation(https://arxiv.org/abs/2610.27516)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>Despite advances in photorealism, semantic fidelity, and aesthetics, text-to-image generation and image editing remain understudied in a human-centered dimension: whether their outputs feel psychologically comforting. Grounded in cognitive evaluation theory, we define psychological comfort as an affective response shaped by viewers' appraisal of restorative and emotionally supportive visual cues. We introduce HealBench, a fine-grained benchmark of 30,000 high-quality image-text pairs spanning 19 categories and 92 subcategories, selected from 100,000 candidates through a human- and expert-in-the-loop pipeline combining vision-language model matching, human preference models, expert filtering, and exemplar-guided augmentation. We also construct HealBench-Eval, a feature-clustered evaluation set of 1,095 instances. Using HealBench-Eval, we conduct objective and subjective evaluations of 14 representative image generation models and prompt-rewriting strategies. Results reveal a gap between conventional visual quality and perceived comfort: strong semantic alignment and aesthetics do not guarantee emotionally restorative images. Reinforcement learning experiments further show that HealScorer can serve as a reward signal for assessing and improving the emotional and restorative quality of generated images. These findings establish psychological comfort as a distinct dimension of human-centered image generation and position HealBench as a foundation for affect-aware generative models.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: SynCalib: Breaking Dataset Shortcuts in LiDAR-Camera Calibration via Extrinsic-Controllable Synthesis</h3>
+<ul>
+<li><strong>Authors: </strong>Huihua Zhu, Shuyang Zhang, Dongqing Chen, Zhuo Yu, Jianhao Jiao, Yilong Zhu, Siyu Teng, Xiaopin Zhong, Zongze Wu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.RO</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27547">https://arxiv.org/abs/2610.27547</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27547">https://arxiv.org/pdf/2610.27547</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27547]] SynCalib: Breaking Dataset Shortcuts in LiDAR-Camera Calibration via Extrinsic-Controllable Synthesis(https://arxiv.org/abs/2610.27547)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Online LiDAR-camera calibration remains a fundamental yet challenging task in the field of robotics. Recently, deep learning-based data-driven approaches have emerged, offering high-precision, targetless calibration capabilities. However, existing methods often suffer from a critical dataset shortcut phenomenon due to the lack of extrinsic diversity in their training data. Networks tend to overfit to fixed nominal extrinsic configurations, leading to severe performance degradation and poor generalization in real-world deployments. To address this limitation, we propose a highly generalizable data generation framework tailored for training LiDAR-camera calibration networks. Our framework leverages existing omnidirectional image datasets annotated with depth ground truth to synthesize multi-modal calibration data under rigorous extrinsic constraints. Extensive experiments demonstrate that the data generated by our pipeline significantly enhances the generalization and robustness of typical learning-based calibration networks. Furthermore, we conduct comprehensive real-world evaluations across various camera-LiDAR configurations, validating the zero-shot transfer capability of models trained exclusively on our synthetic data. To facilitate future research and community use, the code for data generation, the pre-trained models, and online benchmark datasets will be made publicly available.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: CityPaint: A Free Lunch from 2D Diffusion for City-Scale 3D Texturing</h3>
+<ul>
+<li><strong>Authors: </strong>Yuchen Zou, Lihuang Fang, Siyu Zhu, Xiao Hu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27564">https://arxiv.org/abs/2610.27564</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27564">https://arxiv.org/pdf/2610.27564</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27564]] CityPaint: A Free Lunch from 2D Diffusion for City-Scale 3D Texturing(https://arxiv.org/abs/2610.27564)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Generating high-fidelity, city-scale 3D environments plays a crucial role in applications such as virtual reality, gaming, and urban digital twins. However, the scarcity of real-world city-scale 3D training data forces existing methods to either stitch independently generated assets or learn from synthetic urban corpora, often sacrificing realism and global consistency. In contrast, 2D image data and their corresponding generative models are abundant and encode rich visual priors. To bridge this gap, we propose CityPaint, a novel framework that leverages 2D diffusion models to generate globally consistent city-scale 3D textures without relying on city-scale 3D training data. Specifically, CityPaint integrates geometric priors with the generative power of 2D diffusion models, introducing a robust top-$K$ camera baking strategy for iterative texture projection. To address the artifacts of 2D-to-3D projection, we further propose a decoupled refinement mechanism that separately optimizes terrain and building textures. Extensive experiments show that CityPaint produces globally coherent textures with fine local details and achieves favorable results against strong baselines in both visual quality and cross-view consistency.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: AnomalyJev: Towards Evaluating Image Anomaly Explanations via Claim-Level Verification</h3>
+<ul>
+<li><strong>Authors: </strong>Qizhou Wang, Jiawen Zhu, Guansong Pang, Christopher Leckie</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27565">https://arxiv.org/abs/2610.27565</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27565">https://arxiv.org/pdf/2610.27565</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27565]] AnomalyJev: Towards Evaluating Image Anomaly Explanations via Claim-Level Verification(https://arxiv.org/abs/2610.27565)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Recent multimodal LLM (MLLM)-based anomaly detection (AD) methods can generate textual explanations that help interpret their predictions. However, reliably and efficiently evaluating these explanations remains challenging. While LLM judges can assess explanations through structured rubrics, they often require substantial token generation, making evaluation costly and difficult to scale. We instead propose to anchor evaluation in the available ground truth by extracting verifiable claims from each explanation and verifying them against the corresponding annotations. We instantiate this idea as AnomalyJev, a lightweight framework that extracts verifiable claims from contextualised representations using ground-truth-defined queries and pointer based heads, without token generation. The claims are then verified against the ground truth to score faithfulness and completeness. For evaluation, we construct a human-annotated set of 640 explanations with over 1,600 expert ratings across in-domain and cross-dataset settings. Despite its compact design, AnomalyJev achieves stronger agreement with human annotators than most open MLLM judges and approaches that of flagship MLLM judges, at a fraction of their runtime and resources.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: BCT: Bayes-Consistent Tempering for Flow Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Daisuke Oba, Hiroki Furuta, Naoaki Okazaki</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27641">https://arxiv.org/abs/2610.27641</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27641">https://arxiv.org/pdf/2610.27641</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27641]] BCT: Bayes-Consistent Tempering for Flow Language Models(https://arxiv.org/abs/2610.27641)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>Temperature scaling is typically applied as a post-hoc transformation of model probabilities. In posterior-induced flow language models, this creates two mismatches. First, posterior tempering implicitly changes both the endpoint distribution and the distribution of intermediate noisy states, while the denoiser remains trained on the original states. Second, the tempered posterior weights are combined with transport dynamics derived for the untempered flow. These mismatches are reflected empirically: lowering temperature improves GSM8K performance much less reliably in flow LMs than in discrete diffusion LMs. We introduce Bayes-Consistent Tempering (BCT), which makes temperature explicit in both the distributions and dynamics of the generative flow. Its learned realization trains the denoiser on tempered intermediate states and tempers the endpoint distribution using the corresponding tempered dynamics. We also derive training-free variants for conventionally trained checkpoints. Across hyperspherical flow LMs with two denoiser architectures and a von Mises--Fisher flow LM, BCT improves GSM8K generation across broad temperature ranges and achieves the strongest tempering performance. The gains also extend to Sudoku, demonstrating benefits on tightly constrained generation. At very low temperatures, the learned realization is also markedly more robust than the training-free variants, supporting temperature as a property of the generative flow across training and inference rather than a post-hoc probability adjustment. Code and model weights are available at this https URL .</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: NeoWorld-3: From Pixels to Code-Defined Physical Worlds</h3>
+<ul>
+<li><strong>Authors: </strong>Eachen Soong, Zijian Niu, Haoran Xu, Yihong Dong, Yunbo Wang, Xiaokang Yang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27690">https://arxiv.org/abs/2610.27690</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27690">https://arxiv.org/pdf/2610.27690</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27690]] NeoWorld-3: From Pixels to Code-Defined Physical Worlds(https://arxiv.org/abs/2610.27690)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Simulation-ready world reconstruction demands physical interactivity beyond visual realism, which existing black-box 3D generation fails to deliver. We present NeoWorld-3, a coding-agent framework that reconstructs interactive 3D worlds from visual observations via tunable, executable programs. At its core, NeoSDK provides the underlying computational engine for low-level geometries, part composition, differentiable parameter refinement, and physics validation. At the same time, NeoMCP exposes these capabilities as structured, tool-callable APIs for vision-language agents to visually inspect, edit code, and iteratively refine programs. Through a hierarchical coordinator-worker architecture, the framework scales seamlessly from standalone articulated objects to complex compositional scenes. Evaluations across object-level and scene-level reconstruction benchmarks demonstrate that NeoWorld-3 achieves state-of-the-art geometric fidelity and physical readiness. Crucially, manipulation trajectories planned within our reconstructed twins achieve successful zero-shot execution on a physical dual-arm robot, completing the Real-Sim-Real loop.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Privacy Accounting for Empirical Denoisers</h3>
+<ul>
+<li><strong>Authors: </strong>William Cheng, Mijung Park, Dongjun Kim</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.CR, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27710">https://arxiv.org/abs/2610.27710</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27710">https://arxiv.org/pdf/2610.27710</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27710]] Privacy Accounting for Empirical Denoisers(https://arxiv.org/abs/2610.27710)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Diffusion models have emerged as the foundation of modern generative systems, yet their high memorization capacity raises privacy concerns. While differentially private (DP) training provides formal guarantees, it comes at a cost in sample quality. In this work, we study a complementary question: how much privacy loss is incurred during the sampling process itself? Directly analyzing modern neural denoisers is challenging because their sensitivity to a single training example is generally intractable. To overcome this challenge, we construct and analyze a clipped privacy-accountable empirical denoiser, a training-free estimator of the Bayes-optimal denoiser, whose per-step sensitivity can be computed explicitly, allowing each denoising step to be a Gaussian mechanism. This perspective enables privacy accounting under Gaussian DP when each training example contributes to each denoising step, and under $f$-DP trade-off functions when each generated sample uses a single randomly subsampled block of the training data. We report every $(\varepsilon, \delta)$ guarantee as a certified upper bound from a privacy loss distribution accountant, and use a cumulant-based Edgeworth approximation as a fast diagnostic, characterizing where it is reliable and where it becomes anti-conservative. We also analyze the privacy loss along the denoising trajectory and show that it grows steeply near the critical window in which semantic content is formed. This observation motivates hybrid samplers that use the private empirical denoiser through the formative steps where it remains a faithful proxy for the neural denoiser, then switch to a public neural denoiser for the remaining refinement. Our results on CIFAR-10 and CelebA-64 show that the privacy of diffusion models depends not only on the training procedure, but also on sampling-time design choices such as subsampling, stopping time, and hybrid denoising.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Push-Pull Attentional Anchoring for Diffusion Concept Erasure</h3>
+<ul>
+<li><strong>Authors: </strong>Nattanat Chatthee, Tagon Sompong, Ekapol Chuangsuwanich, Supasorn Suwajanakorn</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27719">https://arxiv.org/abs/2610.27719</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27719">https://arxiv.org/pdf/2610.27719</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27719]] Push-Pull Attentional Anchoring for Diffusion Concept Erasure(https://arxiv.org/abs/2610.27719)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Rapid advances in diffusion models have raised concerns about privacy, harmful content, and copyright violations. Concept erasure methods aim to address these risks by removing undesirable concepts from pretrained models without full retraining. However, existing approaches often degrade non-target generation quality through heuristic strength scaling (e.g., classifier-free guidance or negative prompt scaling), leading to uncontrolled and excessive semantic drift. To address this, we propose Push-Pull Attentional Anchoring (PPAA), a mechanism in the cross-attention space that displaces target representations while anchoring the scale of erasure via bounded cosine-similarity constraints. By using a relative similarity ratio instead of an absolute difference, our adaptive threshold represents a meaningful percentage of semantic retention, facilitating a single value to be applied uniformly across layers. We conduct extensive experiments across multiple concept categories, including celebrities, artistic styles, nudity, and intellectual property. Our method achieves favorable trade-offs against prior approaches on Stable Diffusion v1.4 and demonstrates its applicability to modern architectures such as FLUX.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: World2HOSI: A Multi-Expert Harness for Long-Horizon Human-Object-Scene Interaction Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Jiushu Li, Haoran Wang, Yumeng Liu, Zhiyang Dou, Yuan Liu, Yuexin Ma, Cheng Lin</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27725">https://arxiv.org/abs/2610.27725</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27725">https://arxiv.org/pdf/2610.27725</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27725]] World2HOSI: A Multi-Expert Harness for Long-Horizon Human-Object-Scene Interaction Generation(https://arxiv.org/abs/2610.27725)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Long-horizon human-object-scene interaction (HOSI) is central to embodied AI, animation, and game development. Existing human-object interaction (HOI) and human-scene interaction (HSI) models excel in their respective domains, but none alone covers tasks requiring multiple interaction skills. Training unified HOSI models is hindered by scarce and costly data. We introduce World2HOSI, a multi-expert orchestration harness that generates continuous HOSI data from 3D Gaussian Splatting (3DGS) scenes and natural language instructions. Our key insight is that long-horizon HOSI hinges not on a stronger single model but on orchestration. Given a shared, structured scene state and an orchestration harness grounded in it, existing experts can jointly accomplish tasks beyond the reach of any of them alone. World2HOSI realizes this insight as a closed loop around a persistent scene state built from decoupled background and object assets. A harness plans action stages over this state, invokes experts via their native conditioning interfaces, and writes each action's effects back, so that every invocation is grounded in the evolving world. To reduce physical artifacts, bounded residual optimization and contact-driven physics simulation further ensure the physical plausibility of human motion and object manipulation, respectively, while preserving interaction intent. Experiments and a perceptual user study show that World2HOSI achieves the best task completion and interaction quality on the evaluated HOSI tasks, while generating more diverse data.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: PixelSR: Pixel-Space Orthogonal Flow Decoupling for Real-World Image Super-Resolution</h3>
+<ul>
+<li><strong>Authors: </strong>Xiang Lv, Kai Zhao, Qiang Wang, Qiao Mo, Chao Zhou, Mingwen Shao</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27759">https://arxiv.org/abs/2610.27759</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27759">https://arxiv.org/pdf/2610.27759</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27759]] PixelSR: Pixel-Space Orthogonal Flow Decoupling for Real-World Image Super-Resolution(https://arxiv.org/abs/2610.27759)</code><input type="text"></li>
+<li><strong>Keywords: </strong>restoration, super-resolution</a></li>
+<li><strong>Abstract: </strong>Latent diffusion models have recently achieved remarkable progress in Real-world Image Super-Resolution (Real-SR). However, existing methods consistently exhibit a persistent seesaw effect: enhancing perceptual realism compromises structural fidelity. This effect, we argue, is not intrinsic to diffusion models, but largely stems from the architectural constraints of prevailing two-stage frameworks. To address this challenge, we propose PixelSR, a novel single-stage Pixel Diffusion Transformer for Real-SR that operates directly in pixel space. Specifically, PixelSR consists of two core designs: Pixel-space Conditional Diffusion and Orthogonal Flow Decoupling. The former establishes an effective pixel-space restoration framework by integrating spatially aligned LR conditioning, visual semantic guidance, and lightweight texture refinement, thereby bypassing VAE compression and enabling end-to-end optimization directly in RGB space. Complementarily, the latter decomposes the asymmetric flow target into a low-rank semantic component and a noise-free orthogonal texture component. By routing these components to specialized branches, it achieves decoupled optimization with reduced mutual interference. Benefiting from these designs, our PixelSR restores perceptually realistic details while faithfully preserving structural content. Extensive experiments across multiple benchmarks demonstrate that PixelSR not only achieves competitive performance, but also effectively mitigates the fidelity--realism seesaw effect.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Foundation-Style Pretraining for Scalable and Transferable Distributed PV Forecasting</h3>
+<ul>
+<li><strong>Authors: </strong>Dayin Chen, Xiaodan Shi, Xin Xu, Zhongyue Su, Shibo Zhu, Ruizhe Deng, Dongxiao Zhang, Yuntian Chen, Jinyue Yan</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27763">https://arxiv.org/abs/2610.27763</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27763">https://arxiv.org/pdf/2610.27763</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27763]] Foundation-Style Pretraining for Scalable and Transferable Distributed PV Forecasting(https://arxiv.org/abs/2610.27763)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>The rapid growth of distributed photovoltaic (PV) generation is increasing the demand for accurate forecasting across large numbers of geographically dispersed stations. Existing approaches are commonly developed for individual sites or specific forecasting horizons, requiring repeated training and maintenance as new stations are integrated and limiting direct reuse at previously unseen sites. To address this scalability gap, this paper presents a domain-specific foundation-style pretraining framework that learns a shared forecasting model from heterogeneous multi-site and multi-horizon PV data. NWP-assisted forecasting is formulated as a sequence-completion problem that unifies historical PV power, meteorological observations, future numerical weather prediction (NWP) forecasts, and time encodings. Three pretraining objectives are designed and systematically evaluated, including forecast-aligned reconstruction, generic reconstruction, and mixed reconstruction. The mixed objective combines the operational structure of PV forecasting with random sequence reconstruction and provides the most balanced performance across forecasting accuracy, degraded NWP conditions, and downstream adaptation. Experiments on 479 distributed PV stations use 340 stations for model development and 139 spatially held-out stations for zero-shot evaluation. Across horizons from 6 hours to 7 days, the multi-site pretrained MR model outperforms representative station-specific and shared baselines, as well as generalist time-series models, including a recent large-scale pretrained foundation model. The pretrained model can also be directly deployed at new PV stations and subsequently adapted to region-specific operational objectives when local data become available, providing a scalable forecasting paradigm for large distributed PV fleets.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Siyuan Ma, Yu Qi, Cheng Ye, Ruotian Peng, Xinyi Xu, Zitiantao Lin, Zedong Cai, Yijian Huang, Weiyang Liu, Siyuan Wang, Yandong Wen</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.RO</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27782">https://arxiv.org/abs/2610.27782</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27782">https://arxiv.org/pdf/2610.27782</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27782]] RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation(https://arxiv.org/abs/2610.27782)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Video generation models are promising foundations for embodied world models, but only if their generated rollouts are physically valid and faithful to task instructions. Multimodal large language models (MLLMs) are increasingly used to judge these properties, yet their agreement with human judgments on embodied videos has not been systematically evaluated. To address this gap, we introduce RoboJudge-Bench, a benchmark for evaluating MLLMs as judges of embodied video generation. The benchmark measures two fundamental dimensions, Physical Adherence and Instruction Alignment, across 800 human-annotated videos from 8 source corpora and 10 video generators, spanning grippers, human hands, and dexterous hands. Experiments reveal uneven alignment between existing judges and human ratings: general-purpose MLLMs show lower agreement on physical adherence, while specialized video judges designed for general-domain physical reasoning do not consistently transfer to embodied scenarios. Motivated by these findings, we construct RoboJudge-Train, comprising 12K videos annotated with 25K human-verified scores and model-assisted rationales for Physical Adherence and Instruction Alignment. We fine-tune a 9B MLLM on this dataset with supervised learning followed by reinforcement learning, yielding RoboJudge-9B. Among the model judges evaluated on RoboJudge-Bench, RoboJudge-9B achieves the highest overall agreement, reaching a Pearson correlation of 0.719 with a statistically significant 0.089 gain over Gemini-3.7-Flash, the best-performing proprietary baseline in our evaluation. Training on RoboJudge-Train also yields gains on external benchmarks, including VideoPhy2 and Physion-Eval. We further use RoboJudge-9B as a downstream evaluator to benchmark video generation models according to Physical Adherence and Instruction Alignment.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: GARRET: Generative Feedback for Region Retrieval in Visual Documents</h3>
+<ul>
+<li><strong>Authors: </strong>Weijian Jian, Siyang Chen, Yuguang Yang, Yajun Zhang, Chunyu Xie, Dawei Leng, Yuhui Yin</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.IR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27829">https://arxiv.org/abs/2610.27829</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27829">https://arxiv.org/pdf/2610.27829</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27829]] GARRET: Generative Feedback for Region Retrieval in Visual Documents(https://arxiv.org/abs/2610.27829)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>Multimodal retrieval-augmented generation over visually rich documents requires evidence at a finer granularity than entire pages. Existing visual retrievers typically index or return full pages, whereas training region-level retrievers often requires costly query-to-region annotations or noisy model-generated labels. We introduce GARRET, a region-retrieval framework trained from (page, question, answer) triplets through differentiable generative feedback. A shared context-preserving retriever produces page and region multi-vector representations. During training, their retrieval scores define a soft routing distribution over candidate region crops. An auxiliary vision-language model attends to each crop separately, aggregates crop-specific contexts using the routing weights, and predicts the question followed by the answer under a next-token prediction objective. Gradients through the routing distribution assign query-conditioned credit to the indexed region representations, without requiring query-to-region annotations. At inference, the auxiliary model is removed. GARRET also reuses the contextualized region representations, together with page summary tokens, to construct a compact page representation. We introduce ViDoRe-V3-Region, a corpus-wide benchmark containing 200,682 fixed candidate regions across eight domains. GARRET achieves a macro nDCG@10 of 0.4126, outperforming the strongest visual baseline by 2.94 points. On page retrieval, it remains comparable to ColQwen2.5-v0.2 while indexing 47.8% fewer vectors per page.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: LaLa-World: Scaling Latent World Models with Natural Language Actions</h3>
+<ul>
+<li><strong>Authors: </strong>Junha Song, Geonmo Gu, Jeongeun Park, Heejeong Nam, Lucas Maes, Byeongho Heo, Dongyoon Han, Sangdoo Yun</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27851">https://arxiv.org/abs/2610.27851</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27851">https://arxiv.org/pdf/2610.27851</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27851]] LaLa-World: Scaling Latent World Models with Natural Language Actions(https://arxiv.org/abs/2610.27851)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>This paper shows that JEPA-style latent world models (LWMs) can learn across diverse domains and data sources by adopting the language-conditioned interface of video generation models. We establish this approach as an effective and efficient basis for planning with imagination and downstream policy fine-tuning. To this end, we introduce LaLa-World, a Language-conditioned Latent World model that learns from simulation and robot trajectories together with broader image and video data. Two designs make this work. First, we describe both numerical actions and visual changes in language, enabling joint training of a single future predictor across heterogeneous datasets. Second, we build the predictor on a language model, allowing it to interpret language conditions while predicting future latent states. The resulting predictor achieves higher average MPC planning performance than existing LWMs trained separately for each domain or task. Adding image and video data further improves average planning performance and robustness to action phrasing. In a matched comparison with an RAEv2-based video generation model baseline, LaLa-World reaches comparable planning performance with $6\times$ less training cost and $13.9\times$ faster planning. Beyond planning, the pretrained LaLa-World serves as an initialization for LaLa-Policy, which jointly predicts actions and future visual representations. LaLa-Policy performs competitively with Cosmos Policy on LIBERO and RoboCasa, with up to $5.5\times$ faster inference.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Gaze2HOI: Gaze-Aware Intention Disambiguation for Egocentric Hand-Object Interaction Forecasting</h3>
+<ul>
+<li><strong>Authors: </strong>Chuanyang Ma, Chenye Wang, Yixuan Wang, Huiling Zhou, Xingqun Qi, Muyi Sun, Man Zhang, Caifeng Shan, Zhenan Sun</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27877">https://arxiv.org/abs/2610.27877</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27877">https://arxiv.org/pdf/2610.27877</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27877]] Gaze2HOI: Gaze-Aware Intention Disambiguation for Egocentric Hand-Object Interaction Forecasting(https://arxiv.org/abs/2610.27877)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Anticipating how users will interact with their surroundings is essential for proactive systems that provide timely assistance in AR, VR, and embodied applications. Prior work typically forecasts hand-object interactions directly from historical observations, leaving intention and contact geometry implicit. However, similar observation histories can precede semantically or geometrically distinct futures. Inspired by behavioral evidence that gaze can provide early cues for underlying intention, we propose Gaze2HOI, a gaze-aware framework that formulates hand-object interaction forecasting as a hierarchical problem comprising intention inference, contact grounding, and coupled hand-object motion generation. Specifically, Gaze2HOI first weights gaze cues by fixation strength and recency, and uses them to modulate the visual representations of a vision-language model (VLM) through Temporal Gaze Saliency Modulation (TGSM), thereby reducing semantic ambiguity in intention inference. Subsequently, an Anticipatory Contact Grounding (ACG) module maps these structured intentions into explicit contact, support, and placement fields, effectively mitigating geometric ambiguity. Driven by these explicit conditions, a diffusion-based model jointly generates the 6-DoF object trajectories and future articulated motion of both hands. To evaluate Gaze2HOI, we further introduce EgoAIM, a phase-aware benchmark that organizes egocentric hand-object interactions into four phases defined by evolving hand-object relations and provides fine-grained intention annotations. Extensive experiments demonstrate that Gaze2HOI achieves state-of-the-art performance in both intention inference and motion forecasting, even approaching oracle-level end-to-end performance in specific interaction phases. Project page: this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Near-Duplicate Image Selection Transfers Preferences in Vision-Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Jaeyoung Kim, Eunseok Kim, Dongsuk Jang, Seunghyun Kim</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27943">https://arxiv.org/abs/2610.27943</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27943">https://arxiv.org/pdf/2610.27943</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27943]] Near-Duplicate Image Selection Transfers Preferences in Vision-Language Models(https://arxiv.org/abs/2610.27943)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Subliminal learning is the phenomenon in which a model transmits its preferences to another model through data that do not explicitly express them. As models increasingly curate training data for other models, we ask whether this transfer can arise from choosing among near-duplicate images while keeping the source photographs and human-written captions fixed. For each photograph, a curator selects one of eight near-duplicate variants by caption likelihood, without target-specific prompts. Students trained on target-preferring curators' selections show higher mean target-versus-alternatives log-likelihood ratios in an image-free readout than students trained on neutral selections. Under a prespecified decision rule, this directional shift appears for an owl target in LLaVA-1.5, Qwen2.5-VL, Qwen3-VL, and Gemma 4, with curators and students initialized from the same base checkpoint, and target rotations move it toward camels, oak trees, and a political figure. The owl target-selected student also scores above all count-matched random-reselection students in three models and above 55 of 60 in LLaVA-1.5, and Qwen3-VL shows the shift again on a new source bank with newly trained curators. Its size depends on dataset size, learning rate, and training budget; greedy choices among the eight options move toward the target by 10.4 percentage points in Qwen3-VL and 0.5-1.3 points elsewhere. First-generation students also pass the owl preference to a second generation through captions without explicit owl mentions in LLaVA-1.5 and Qwen3-VL. Thus even a deduplication-style choice among near-identical copies can shift students' target-relative readouts with source photographs and captions fixed; the tested linear probes classify the selecting arm with accuracies up to 59.7% (chance 50%).</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Decoupling Action from Egocentric Observation for World Simulation</h3>
+<ul>
+<li><strong>Authors: </strong>Yue Ma, Pengjie Song, Xinyu Wang, Yi He, Zeqian Long, Fangneng Zhan, Kaichen Zhou, Hongyu Liu, Hongfa Wang, Peihao Li, Haoyang Huang, Nan Duan, Qifeng Chen</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27946">https://arxiv.org/abs/2610.27946</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27946">https://arxiv.org/pdf/2610.27946</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27946]] Decoupling Action from Egocentric Observation for World Simulation(https://arxiv.org/abs/2610.27946)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Egocentric action transfer aims to decouple the semantic action from egocentric observations and reproduce them in new visual contexts, enabling scalable world simulation, embodied policy learning, and robotic data generation. Existing approaches to transferring actions rely on condition-guided video generation, which converts the observation video into explicit geometric controls (e.g., hand poses or meshes) to drive synthesis. However, these methods introduce geometric estimation errors, making it difficult to preserve physically plausible interactions when transferred to new scenes. Alternatively, motion transfer methods directly extract motion patterns from the observation video, yet motion-level features alone cannot encode rich contact dynamics, frequently leading to severe hand structural collapse and implausible contact layout. To address both limitations, we present EgoACT, a test-time framework for egocentric action transfer that operates directly on the denoising process of video diffusion models without requiring additional geometric estimators. EgoACT uses Velocity-guided Structure Anchoring to stabilize reference-consistent hand-object structure in the early denoising stage, and Sparse Correspondence Calibration to refine reliable local correspondences in the mid-to-late denoising stages. Together, these two components preserve transferable action semantics while improving temporal coherence and interaction realism. We further establish EgoActionBench, a benchmark for evaluating action preservation, visual quality, and hand-object plausibility across diverse egocentric manipulation scenarios. Experiments show that EgoACT generates more coherent and physically plausible interaction videos than strong baselines.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Media Intelligence Platform: Multimodal Detection of Synthetic and Manipulated Content</h3>
+<ul>
+<li><strong>Authors: </strong>David Fischinger, Marcel Hasenbalg, Silvia Poletti, Davide Antonutti, Mina Schütz, Lam Pham, Justin Ilyes, Péter Rjabcsenkó, Simon Freitter, Martin Boyer</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.MM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27974">https://arxiv.org/abs/2610.27974</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27974">https://arxiv.org/pdf/2610.27974</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27974]] Media Intelligence Platform: Multimodal Detection of Synthetic and Manipulated Content(https://arxiv.org/abs/2610.27974)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>The rapid progress of generative artificial intelligence has led to a significant increase in manipulated multimedia content, including synthetic faces, forged videos, AI-generated images, fake audio, and locally edited images. Existing detection approaches are typically designed for a single manipulation type, limiting their applicability in real-world scenarios involving heterogeneous media sources. In this work, we present the Media Intelligence Platform (MIP), a unified web-based framework for multimodal media forensics integrating specialized modules for fake video detection, face morphing detection, AI-generated image detection, audio deepfake detection, localized image manipulation detection, and text analysis. Its modular architecture enables flexible integration of heterogeneous models and supports future extensions for emerging manipulation techniques. Experimental results on representative benchmark datasets demonstrate reliable detection performance across multiple media modalities while providing a practical and user-friendly interface for forensic investigations. The platform highlights the potential of unified multimodal systems for comprehensive deepfake detection in real-world environments, and is accompanied by a public demonstrator released with this workshop submission to support reproducibility and community evaluation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Recast the Past: Stable Long Video Generation with Full Context Memory</h3>
+<ul>
+<li><strong>Authors: </strong>Yukuo Ma, Cong Liu, Junke Wang, Junqi Liu, Haibin Huang, Zuxuan Wu, Xuelong Li</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27986">https://arxiv.org/abs/2610.27986</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27986">https://arxiv.org/pdf/2610.27986</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27986]] Recast the Past: Stable Long Video Generation with Full Context Memory(https://arxiv.org/abs/2610.27986)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Long-horizon video generation requires retaining an ever-expanding history, but conditioning on its growing token sequence is costly. Existing methods restrict or compress historical context, potentially losing information needed for future generation. This work proposes ReCam, which groups local spatiotemporal blocks of historical latents into vectors and projects them directly into the high-dimensional hidden space of a Diffusion Transformer. The model learns to use the resulting memory tokens through native self-attention, reducing token count while retaining block-level access to the full history. To mitigate temporal drift during autoregressive rollout, we further introduce dual-pointer denoising with separate noise schedules for recent context and target frames. Among the evaluated methods, ReCam achieves the highest VBench-Long overall score of 80.1 and competitive static-scene revisitation performance on R2M-Bench. It also leads on all four consistency metrics for off-screen subject reappearance, including clothing consistency of 4.09 versus 3.03 for the best baseline.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Matrix-Game 4.0: Harnessing Video Models for Real-Time Playable Game Worlds</h3>
+<ul>
+<li><strong>Authors: </strong>Jihai Zhang, Runjia Qian, Kaiqin Kong, Biao Jiang, Puyi Wang, Siru Chen, Tianle Li, Guanjie Chen, Junyi Wu, Chubin Chen, Yuanhang Li, Kaichen Huang, Haobo Zhang, Yangguang Li, Wei Yu, Guibin Chen, Yu Cheng, Yahui Zhou</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.GR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.27999">https://arxiv.org/abs/2610.27999</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.27999">https://arxiv.org/pdf/2610.27999</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.27999]] Matrix-Game 4.0: Harnessing Video Models for Real-Time Playable Game Worlds(https://arxiv.org/abs/2610.27999)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Moving from controllable videos to genuinely playable worlds requires persistent world state, executable game rules, and low-latency interaction. We outline a roadmap for the next generation of Matrix-Game that separates game execution from visual generation through an executable game harness, and introduce Matrix-Game 4.0 as the first system built on this design. A lightweight game engine maintains world state and executes interaction rules, a multimodal coding agent translates player ideas into game code and dynamic scene captions, and a renderer based on autoregressive video model transforms engine-rendered low-poly proxies into detailed visuals, conditioned on dynamic captions and memory references. This framework provides continuous guidance for visual generation and enables natural-language creation and modification of scenes and gameplay. Our renderer is trained on aligned low-poly and high-fidelity video pairs and distilled into a causal generator that generates in four-frame chunks with one or two denoising steps. Together with targeted inference optimizations, Matrix-Game 4.0 enables 480p, 60 FPS gameplay on a single NVIDIA RTX5090 with a key-press-to-display latency of 112ms. Single-step generation achieves 83FPS steady-state throughput with 18.2GiB of peak GPU memory usage. With fixed prompts, steady-state throughput also reaches 67FPS on an RTX5080 and 58FPS on an RTX5070Ti. We demonstrate customizable shooter and driving games with engine-enforced mechanics, and release code, model weights, and low-poly game assets to support research and creation of playable game worlds.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Spherical Geometry-Aware Panoptic Scene Graph Generation for Equirectangular Panoramas</h3>
+<ul>
+<li><strong>Authors: </strong>Zhe Wu, Xiaoyan Fei, Xinyi Jiang, Yanxu Wei, Junming Rao, Yihong Yan, Xuewei Li</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28033">https://arxiv.org/abs/2610.28033</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28033">https://arxiv.org/pdf/2610.28033</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28033]] Spherical Geometry-Aware Panoptic Scene Graph Generation for Equirectangular Panoramas(https://arxiv.org/abs/2610.28033)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Panoptic scene graph generation (PSGG) represents scene entities with segmentation masks and directed relations. Equirectangular projection (ERP) panoramas challenge PSGG through distortion, latitude-dependent pixel areas, and an artificial seam. We propose a two-stage spherical geometry-aware framework that fuses overlapping perspective-view predictions using observation reliability, spherical overlap, and angular proximity. Relation reasoning combines spherical-area-aware aggregation, weighted no-relation supervision, and dual-longitude score fusion. We also construct a dataset of 340 high-resolution panoramas with 10,571 nodes and 6,632 directed relations. Against corresponding baselines, spherical fusion improves PQ by 36.03% under matched views, while relation reasoning improves mR@50 by 11.20% under PredCls with ground-truth masks and object labels. The full framework improves mR@50 by 52.99% under SGDet with predicted panoptic segments. These results demonstrate the value of spherical geometry for panoramic PSGG.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Assessing Representation Semantics Under Language Pretraining in Fine-Grained Classification</h3>
+<ul>
+<li><strong>Authors: </strong>Md Raisul Kibria, Sébastien Lafond</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28051">https://arxiv.org/abs/2610.28051</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28051">https://arxiv.org/pdf/2610.28051</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28051]] Assessing Representation Semantics Under Language Pretraining in Fine-Grained Classification(https://arxiv.org/abs/2610.28051)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Understanding how supervision signals shape semantic visual representations remains challenging, particularly in fine-grained, low-data settings. Standard evaluations of vision models rely on downstream accuracy, which often fails to capture structural differences in learned representations. We propose a compact explainability-driven framework for comparing encoders trained with classification-only and caption-generation supervision on CUB-200. Using a controlled two-stage protocol in which both encoders are ultimately optimized for the same classification task, we enable a direct comparison of the resulting representations. Saliency maps are generated using attention rollout and gradient-weighted rollout and evaluated with five metrics covering faithfulness (positive and negative perturbation) and localization (keypoint emphasis, background attribution, and Earth Mover's Distance). Across random seeds and explanation methods, caption supervision yields representations that are more sensitive to the removal of salient regions, better aligned with annotated object parts, and less reliant on background regions, whereas classification supervision produces representations that are slightly more robust to the removal of low-saliency regions. An ablation study on the Oxford-IIIT Pet dataset shows consistent trends across key metrics. These results demonstrate that the proposed framework makes supervision-induced representational differences observable and quantifiable beyond downstream accuracy alone. More broadly, it provides a systematic basis for assessing learned representations and comparing alternative training and transfer-learning strategies.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: MoDDiT: Simple Token Routing in Diffusion Transformers</h3>
+<ul>
+<li><strong>Authors: </strong>Jarek Liesen, Matthew T. Jackson, Benjamin Ellis, Shimon Whiteson, Jakob N. Foerster</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28086">https://arxiv.org/abs/2610.28086</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28086">https://arxiv.org/pdf/2610.28086</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28086]] MoDDiT: Simple Token Routing in Diffusion Transformers(https://arxiv.org/abs/2610.28086)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Real-time video generation, interactive world models, and on-device image synthesis are almost a reality. Diffusion Transformers (DiT) achieve excellent sample quality, shifting the bottleneck to the throughput of the models themselves. Natural images are inherently sparse, as large portions of an image are often background, contribute little to the scene content, and are easy to denoise. DiTs fail to exploit this sparsity, as they process image tokens statically and uniformly. We propose MoDDiT, a simple architecture modification that learns to route tokens through both MLP and self-attention operations. By routing tokens through both blocks independently, MoDDiT allows for dynamic compute allocation in MLPs that varies across tokens, images, and denoising timesteps. Using MoDDiT to train image generation models from scratch significantly reduces computational costs of training and inference, processing as few as 12.5% of the tokens. By increasing sparsity and model depth, MoDDiT reduces costs and improves generation performance over unrouted baselines. The learned allocation is interpretable, revealing how computation varies with visual content and noise level. We also use MoDDiT to train video generation models, where allocation correlates with motion, and to distill a dense bidirectional video model into a sparse autoregressive student.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Curriculum Learning for Generative Flexible Docking</h3>
+<ul>
+<li><strong>Authors: </strong>Wenyin Zhou, Hossein Azizpour</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28145">https://arxiv.org/abs/2610.28145</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28145">https://arxiv.org/pdf/2610.28145</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28145]] Curriculum Learning for Generative Flexible Docking(https://arxiv.org/abs/2610.28145)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Flexible docking is a highly practical task, aiming to predict the joint configuration of a protein-ligand complex from a protein apo structure and a ligand SMILES string. Diffusion and flow-based generative models have made this task tractable by modeling the posterior distribution over the ligand pose and the protein conformation conditioned on the apo input. The central challenge, however, remains the long-tailed apo-to-holo structure shift, where a small fraction of protein undergo large conformational changes. In this work, motivated by the practical observation that downweighting large shift examples improves generalization, and by the mixed nature of the long tail consisting of genuinely difficult examples and noisy ones, we propose to use curriculum learning for this task, gradually incorporating large conformational change examples during training. With a linear pacing function, we show that an existing method can be strongly enhanced. On the PDBBind ESMFold apo benchmark, with relaxation and confidence-based pose selection, the resulting model GCLDock achieves a 46.52% top-1 success rate (ligand RMSD less than 2A) and 40.26% when additionally requiring PoseBusters validity, outperforming existing baselines.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Unified RAW Image Exposure Correction and Restoration via Linear Illumination and Frequency-Adaptive Enhancement</h3>
+<ul>
+<li><strong>Authors: </strong>Yingkai Zhang, Yunhao Zou, Ying Fu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28191">https://arxiv.org/abs/2610.28191</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28191">https://arxiv.org/pdf/2610.28191</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28191]] Unified RAW Image Exposure Correction and Restoration via Linear Illumination and Frequency-Adaptive Enhancement(https://arxiv.org/abs/2610.28191)</code><input type="text"></li>
+<li><strong>Keywords: </strong>restoration</a></li>
+<li><strong>Abstract: </strong>Incorrect exposure degrades both image brightness and recoverable scene detail. Existing sRGB-based correction methods are limited by the non-linear image signal processing pipeline, whereas RAW-based methods are usually developed for a single degradation type, such as low-light denoising or high-light recovery. In this paper, we focus on joint exposure correction and restoration directly in the RAW domain and propose a unified RAW Image Exposure Correction and Restoration (RIECR) framework for both under- and over-exposed images. RIECR decomposes the problem into two coupled sub-problems that follow the RAW imaging model: linear illumination correction and residual degradation restoration. First, a Linear Illumination Correction Network (LICN) estimates exposure-aware linear gains by using channel-specific RAW cues. It exploits the high signal-to-noise ratio of Green channels for robust brightening and the relatively unsaturated Red/Blue responses for high-light darkening. Second, a dual-branch Frequency-based Enhancement Network (FEN) restores the remaining degradation with a Frequency Dynamic Convolution (FDC) module. FDC decomposes convolutional responses into low- and high-frequency components and adaptively suppresses amplified noise or recovers clipped textures according to the exposure context. We further build a real paired RAW benchmark containing 223 scenes and 1,784 pairs covering complex multi-exposure errors. Experiments against sixteen state-of-the-art methods show that RIECR achieves state-of-the-art performance on real RAW exposure correction.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Offline Makes Online Better: Calibrated Cache Compression for Video Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Zhen Wang, Ning Lai, Qingtao Yu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28192">https://arxiv.org/abs/2610.28192</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28192">https://arxiv.org/pdf/2610.28192</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28192]] Offline Makes Online Better: Calibrated Cache Compression for Video Generation(https://arxiv.org/abs/2610.28192)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Token merging is an effective approach to reducing KV-cache memory consumption in autoregressive video generation by clustering temporally redundant tokens and retaining only a small set of representatives. Existing methods, however, typically apply a uniform merging ratio across all attention layers and heads. We observe that different layers and heads exhibit substantially different yet jointly correlated sensitivities to token merging, and that these sensitivity patterns remain consistent across prompts. Based on this observation, we introduce CALM, a Calibrated Allocation for Layer-Head Merging that uses offline calibration to improve online cache compression. Exhaustively evaluating all possible layer-head allocations is prohibitively expensive. To enable efficient calibration, we show that attention-output error strongly correlates with end-to-end video quality and can therefore serve as a lightweight proxy for allocation risk assessment. We evaluate different allocation strategies using this proxy and construct a fixed layer-head risk map offline. Given a cache budget at inference time, CALM uses dynamic programming to determine the best allocation of merging ratios. Experiments across three different autoregressive video models demonstrate that CALM consistently outperforms uniform token merging under the same memory budget, by reducing the LPIPS to original videos by around 21% with higher video-quality scores.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Adaptive Pullback: Reweighting Supervision at Penalty Jumps in On-Policy Distillation</h3>
+<ul>
+<li><strong>Authors: </strong>Guangyu Liu, Siyuan Gan, Shilong Zhou, Linjian Meng, Boyan Wang, Jing Huo</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28194">https://arxiv.org/abs/2610.28194</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28194">https://arxiv.org/pdf/2610.28194</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28194]] Adaptive Pullback: Reweighting Supervision at Penalty Jumps in On-Policy Distillation(https://arxiv.org/abs/2610.28194)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>On-policy distillation (OPD) supervises student-generated responses using sampled-token student-teacher log-ratios. A positive log-ratio penalizes a token that the student assigns higher probability to than the teacher, but its current value does not distinguish sustained high penalties from abrupt increases along a response. We examine these local changes by comparing consecutive blocks of tokens within the same response. Our diagnostic identifies penalty jumps, abrupt increases in average penalty that persist on held-out tokens. Across these jumps, penalties rise while teacher confidence decreases. We call this pattern penalty-confidence tension. Boundaries into high-penalty blocks do not exhibit comparable confidence changes, showing that local changes provide information beyond the current penalty value. Motivated by this observation, we propose Adaptive Pullback OPD (AP-OPD). At each detected jump, AP-OPD uses the preceding block as a local reference and uniformly scales all supervision coefficients in the following block so that its weighted average penalty matches the preceding block's original mean. This reference determines the scaling factor without an additional strength constant. AP-OPD improves performance on both mathematical reasoning and code generation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Attractive Faces Skew Text-to-Image Reward Models and Leaderboards</h3>
+<ul>
+<li><strong>Authors: </strong>Harvey Mannering, Zhiwu Huang, Adam Prügel-Bennett</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28195">https://arxiv.org/abs/2610.28195</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28195">https://arxiv.org/pdf/2610.28195</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28195]] Attractive Faces Skew Text-to-Image Reward Models and Leaderboards(https://arxiv.org/abs/2610.28195)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Human preference is now central to the evaluation, guidance, finetuning, and ranking of text-to-image models. However, the susceptibility of human preferences to bias in image generation remains underexplored. We identify a key observation: for human faces, perceived attractiveness overrides image quality in preference judgments, even when comparing real photographs of identical fidelity. In a controlled user study, annotators rank more attractive faces as higher quality, even when unattractive real faces are compared with attractive AI-generated ones. We examine the downstream consequences of this bias. Firstly, simulating Elo rankings from user study data shows attractiveness can invert a leaderboard's ranking, elevating synthetic attractive faces over real, unattractive ones. Secondly, the same bias reappears in the human preference models. Editing 40 annotated facial attributes in isolation, we find that attractiveness is the strongest correlate of score for four of five human preference models (PickScore, MPS, HPSv2.1, HPSv3), and the strongest predictor of score in regression analysis. We further show that preference aligned generation shifts faces toward younger, more feminine faces, and can override explicit prompts for unattractive faces, thereby limiting user control. Finally, we explore mitigation strategies, both for data collection and post training on human preference models. These findings highlight the need for preference models that disentangle image quality from human cognitive bias, enabling more reliable evaluation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Learn to Modify: Self-evolving Multi-agent Refinement Framework for Conversational Text-to-Motion Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Jianan Li, Jiawei Zhao, Yangtao Zhou, Zhifu Zhao, Shaoxin Wu, Yutao Wang, Dezhen Wang, Hua Chu, Fu Li</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28210">https://arxiv.org/abs/2610.28210</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28210">https://arxiv.org/pdf/2610.28210</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28210]] Learn to Modify: Self-evolving Multi-agent Refinement Framework for Conversational Text-to-Motion Generation(https://arxiv.org/abs/2610.28210)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, quality assessment</a></li>
+<li><strong>Abstract: </strong>Despite rapid progress in text-to-motion generation, existing methods are commonly designed for single-shot generation. When users are dissatisfied with specific motion details, they are often forced to regenerate the entire sequence from scratch, which is computationally inefficient and potentially destroys previously established kinematic context. A practical generation system should instead support iterative user feedback and refine only the affected spatio-temporal regions while preserving the remaining motion. Therefore, we introduce a conversational motion generation paradigm that requires the system to coordinate instruction understanding, motion generation, localized editing, and quality assessment. Recent advances in LLM-driven multi-agent systems provide a promising foundation for such role-specialized coordination. To tackle these challenges, a Self-evolving Multi-Agent RefinemenT Framework (SMART) is proposed for conversational motion generation. Within SMART, to preserve semantic consistency, we design a semantic-guided masked motion editing mechanism, which precisely grounds natural language feedback into spatiotemporal motion regions to enable localized refinements without altering unedited regions. To reduce redundant exploration, we propose a memory-based self-evolving strategy that dynamically accumulates motion editing knowledge from interaction history and reuses past successful experience. Extensive experiments demonstrate that SMART effectively supports multi-turn conversational motion generation and enables efficient motion refinement.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: SplatFlux: Feed-Forward 4D Gaussian Reconstruction and Generation from Video Latents</h3>
+<ul>
+<li><strong>Authors: </strong>Runmin Zhang, Binglin Ren, Zhu Yu, Fudong Wang, Jiangke Lin, Yichun Shentu, Si-Yuan Cao, Yi Yuan, Hui-Liang Shen</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28257">https://arxiv.org/abs/2610.28257</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28257">https://arxiv.org/pdf/2610.28257</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28257]] SplatFlux: Feed-Forward 4D Gaussian Reconstruction and Generation from Video Latents(https://arxiv.org/abs/2610.28257)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>This work presents SplatFlux, a feed-forward latent-to-4DGS framework for both video-based 4D reconstruction and conditional 4D generation. Our key observation is that observed videos and conditionally generated content can be represented in the same pretrained video latent space, allowing both tasks to be formulated as latent-to-4DGS decoding. To construct compact and temporally coherent 4D scenes, SplatFlux introduces a static-dynamic decoupled 4D Gaussian representation that explicitly predicts dynamic probabilities for Gaussian primitives. This representation separates static scene structures from moving regions, enabling complete 4D scene construction in a feed-forward manner through static aggregation and dynamic motion interpolation. To learn static-dynamic decomposition and dynamic Gaussian motion without costly annotations, we further develop an auxiliary distillation strategy that provides pseudo dynamic masks and optical-flow cues. Extensive experiments across 3D and 4D reconstruction and generation demonstrate that SplatFlux achieves state-of-the-art performance.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: VGL-stGen: Learning a shared multimodal model for lung histology and spatial transcriptomics</h3>
+<ul>
+<li><strong>Authors: </strong>Haenara Shin, Dongjoo Lee, Sungwoo Bae, Kwon Joong Na, Daeseung Lee, Hongyoon Choi</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, q-bio.QM</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28266">https://arxiv.org/abs/2610.28266</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28266">https://arxiv.org/pdf/2610.28266</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28266]] VGL-stGen: Learning a shared multimodal model for lung histology and spatial transcriptomics(https://arxiv.org/abs/2610.28266)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>VGL-stGen is a multimodal large language model adapted from a pretrained medical vision-language model using paired lung H&E and spatial transcriptomics with single-cell references. Training integrates image-expression and expression-cell-type pairs, and gene-conditioned pseudo-labels transfer transcriptomic cell-type supervision to histology images. One deployed checkpoint supports thirteen evaluated tasks spanning tissue and cell-type classification, gene prediction and conditional expression completion from combinations of histology, cell identity and observed gene expression. Task-specific decoding produces categorical labels, gene lists and structured expression levels. For conditional completion, fixing queried gene identities and predicting their levels autoregressively improves structured prediction. Controlled adaptation shows that restricting supervision to requested expression-level tokens can further improve image-conditioned completion. Image-permutation experiments indicate that correctly paired histology adds information beyond observed expression. External classification relies partly on computational references with shared annotation lineage, and some H&E sources were exposed during cancer training or model development. Within these conditions, VGL-stGen demonstrates how a medical vision-language backbone can learn from spatial transcriptomics and histology to connect tissue morphology and molecular states through shared generative modeling.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: CPVB-RG: Cross-Prior Visual Bridging for Prior-Aware Chest X-Ray Report Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Sike Xiang, Shuang Chen, Julie Cox, Amir Atapour-Abarghouei</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28289">https://arxiv.org/abs/2610.28289</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28289">https://arxiv.org/pdf/2610.28289</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28289]] CPVB-RG: Cross-Prior Visual Bridging for Prior-Aware Chest X-Ray Report Generation(https://arxiv.org/abs/2610.28289)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Radiologists interpret follow-up chest X-rays by comparing current and prior examinations to identify new, resolved or progressing findings. Most report generation systems either omit this longitudinal context or fuse prior features without distinguishing interval changes from anatomy that remains stable over time. We propose CPVB-RG, a prior-aware framework that combines current and prior radiographs with available clinical text. Its Cross-Prior Visual Bridge (CPVB) contains Progression-Guided Focus Attention (PGFA) and two Cross-Attention units. PGFA is designed to contrast progression-difference attention with shared-spatial attention, aiming to reduce invariant responses whilst retaining coarse spatial correspondence between examinations. The Cross-Attention units then connect the resulting longitudinal visual evidence with clinical semantics. CPVB-RG is trained in two stages, using prior-guided image-text alignment followed by autoregressive report generation with a lightweight language decoder. Experiments on MIMIC-CXR and IU X-Ray show consistent improvements across language and clinical metrics. On MIMIC-CXR, CPVB-RG achieves 0.2847 F1RadGraph and 0.6692 VLScore, with statistically significant gains over the closest decoder-matched prior-aware baseline. These results support the effectiveness of the proposed difference-aware and spatially guided fusion design for prior-aware chest X-ray report generation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Auto-Director: Leveraging Multi-Agent Collaboration for Autonomous Video Editing</h3>
+<ul>
+<li><strong>Authors: </strong>Yuxia Chen, Wenbo Zhu, Yangguang Ji, Zhenxiang Jiang, Teng Zhong, Yu Zhang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28346">https://arxiv.org/abs/2610.28346</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28346">https://arxiv.org/pdf/2610.28346</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28346]] Auto-Director: Leveraging Multi-Agent Collaboration for Autonomous Video Editing(https://arxiv.org/abs/2610.28346)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Autonomous video editing from open-world resources remains a challenging problem in multimedia content creation. Retrieval-based methods are constrained by fixed source material and lack creative flexibility, while generative models struggle with long-horizon coherence and often diverge from user intent. Both paradigms fail to replicate the structured, multi-stage reasoning that underlies professional post-production. To address these limitations, we present Auto-Director, a tool-augmented multi-agent framework that mirrors professional editorial workflows: a Planning Agent decomposes abstract topics into fact-grounded scripts via retrieval-augmented planning; a Material Agent indexes open-world footage through shot segmentation and visual tagging; an Editor Agent assembles semantically aligned clips with MLLM-driven spatial adaptation; and a Critic Agent governs an iterative Reflect-and-Revise loop that checks scene-level alignment and pacing. To rigorously evaluate this new paradigm, we introduce VEdit-Bench, a benchmark of 100 expert-curated topics with human-annotated Golden Scripts and a five-dimensional metric suite covering Narrative Logic, Factual Accuracy, Semantic Alignment, Compositional Quality, and Stylistic Cohesion. Extensive experiments demonstrate that Auto-Director significantly outperforms baseline methods in both automated metrics and human evaluation, effectively bridging the gap between amateurs and professional-grade video production.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding</h3>
+<ul>
+<li><strong>Authors: </strong>Tianyu Wu, Zhuohan Wang, Jonathan Geuter, Yu Yao, Weifan Jiang, Chengxi Zhang, Ju Li, Minlan Yu</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28355">https://arxiv.org/abs/2610.28355</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28355">https://arxiv.org/pdf/2610.28355</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28355]] Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding(https://arxiv.org/abs/2610.28355)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>In speculative decoding, a lightweight draft model proposes tokens that the target model verifies in parallel, speeding up generation without changing the target distribution. D-PACE (Wu et al., 2026) trains such drafters with a loss that weights each position by its contribution to the expected accepted length. Both its weights and its cross-entropy (CE) loss use only the draft's probability of the recorded target token, treating the target as a point mass. Under rejection sampling, however, a sampled draft token is accepted with probability equal to the overlap of the draft and target distributions, one minus their total variation (TV). We derive D-PAL (Dynamic Position-wise Acceptance Loss) from the exact expected accepted length, using this overlap as the acceptance signal. This yields overlap-based position weights with log acceptance (LA) as the per-position loss, and the objective reduces to D-PACE for a point-mass target. Since the weights are detached, any per-position loss can replace LA in practice. We show that forward KL divergence and Rényi divergence of order 1/2 match or exceed LA, and that Rényi-1/2 provably bounds the true acceptance rate from above and below. Replacing CE with Rényi-1/2 improves acceptance length under both D-PACE's weights and ours. On six benchmarks with a Qwen3-4B target, D-PAL raises mean acceptance length over D-PACE from 4.50 to 4.57 at T=0 and from 4.20 to 4.28 at T=1, and consistently achieves higher throughput at both temperatures.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: StreamEval: Evaluating Interactive Streaming Video Generation Models</h3>
+<ul>
+<li><strong>Authors: </strong>StreamEval Team</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28402">https://arxiv.org/abs/2610.28402</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28402">https://arxiv.org/pdf/2610.28402</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28402]] StreamEval: Evaluating Interactive Streaming Video Generation Models(https://arxiv.org/abs/2610.28402)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>As streaming video generation advances, enabling real-time interaction with generated video is becoming increasingly important. We introduce StreamEval, a unified benchmark for interactive streaming video generation spanning five tasks: avatar dialogue, avatar performance, world generation, instruction editing, and reference editing. StreamEval comprises 300 scripted test cases lasting 15-300s, each specifying initial assets, incrementally arriving multimodal requests, and explicit requirements for state changes and content preservation. Performance is assessed along four evaluation dimensions: task execution, state consistency, visual fidelity, and audiovisual coordination, instantiated through ten task-specific metrics on a 0-100 scale. Evaluating 37 distinct models across 300 test cases, we find that high visual quality and identity retention do not necessarily coincide with reliable request execution or sustained state consistency. In particular, request execution remains challenging: the highest task-specific scores are 36.90 for Following among seven avatar-performance models, 25.93 for Following in text-conditioned world generation, and 15.00 for Edit Success among three reported reference-editing models. These findings identify reliable request execution under timing and preservation constraints as a central challenge for advancing omni-modal real-time interactive systems. The leaderboard is available at this https URL</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Code2Video-Compass: A Comprehensive Benchmark for General-Purpose Code-Based Video Generation across T2V, I2V, and V2V</h3>
+<ul>
+<li><strong>Authors: </strong>Zhenghan Chen, Zekai Shao, Xin Lin, Leting Cheng, Siming Chen</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28416">https://arxiv.org/abs/2610.28416</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28416">https://arxiv.org/pdf/2610.28416</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28416]] Code2Video-Compass: A Comprehensive Benchmark for General-Purpose Code-Based Video Generation across T2V, I2V, and V2V(https://arxiv.org/abs/2610.28416)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Code-based video generation offers fine-grained control, targeted editing, and component reuse compared with direct video generation. This approach requires multimodal large language models (MLLMs) to translate visual and temporal requirements into executable programs that produce complete videos. However, existing code-based benchmarks primarily target specialized tasks, leaving complete video creation across diverse creative categories and input modalities insufficiently evaluated. We introduce Code2Video-Compass, a general-purpose benchmark for code-based video generation across text-to-video (T2V), image-to-video (I2V), and video-to-video (V2V) settings. Code2Video-Compass comprises 2,104 tasks spanning 10 categories, 24 subtypes, and three complexity dimensions covering construction, dynamic animation, and state dependency. It combines tasks curated from textual instructions and visual references with corresponding T2V, I2V, and V2V tasks derived from complete professional and user-created videos. We propose a dual-level evaluation framework combining 12 objective metrics and five subjective metrics. Objective evaluation covers operational performance, video quality, text-video alignment, and reference fidelity, while subjective evaluation uses an MLLM judge to evaluate instruction following and holistic video quality. Extensive evaluation of 15 recent proprietary and open-weight MLLMs from nine families reveals that even leading models face challenges in reliably generating high-quality complete videos aligned with textual and visual requirements, with performance generally declining as construction, dynamic animation, and state-dependency complexity increases. We anticipate that Code2Video-Compass will advance reliable, coherent, and controllable code-based video generation and inspire broader progress in programmatic visual creation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: WorldSR: Harnessing World Knowledge Search for Grounded Image Super-Resolution</h3>
+<ul>
+<li><strong>Authors: </strong>Junyuan Deng, Xinyi Wu, Zhenyao Wu, Song Wang, Yu Wang, Congchao Zhu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28423">https://arxiv.org/abs/2610.28423</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28423">https://arxiv.org/pdf/2610.28423</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28423]] WorldSR: Harnessing World Knowledge Search for Grounded Image Super-Resolution(https://arxiv.org/abs/2610.28423)</code><input type="text"></li>
+<li><strong>Keywords: </strong>super-resolution, generation, generative</a></li>
+<li><strong>Abstract: </strong>Generative-prior-based super-resolution (SR) methods leverage implicit knowledge learned from large-scale models to enhance low-resolution inputs. However, such priors are inherently stochastic and optimized for diverse generation, conflicting with the deterministic, high-fidelity reconstruction required for SR. It is also tied to the base model, costly to update, and prone to hallucinations as real-world data evolves. To address these limitations, we introduce WorldSR, a novel framework that augments SR with explicit, entity-aligned visual world knowledge. WorldSR automatically decomposes the input into semantic entities and performs entity-wise retrieval of structurally and semantically aligned images from a large-scale external corpus. For efficiency and reliability, we incorporate a memory mechanism to reuse previously retrieved results and a multi-step filtering process to refine candidate references. The selected references as world knowledge are then integrated through a novel multi-reference super-resolution model, which provides fine-grained constraints for detail synthesis and structural recovery. Experiments on real-world SR benchmarks show that WorldSR consistently improves structural fidelity and visual quality, outperforming existing generative super-resolution methods. Our results suggest that entity-level grounding in external visual world knowledge provides a simple and effective complement to model-bound generative priors.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Deep Learning-Based Road Lane Quality Assessment from Egocentric Dashcam Video</h3>
+<ul>
+<li><strong>Authors: </strong>Shaif Chowdhury, Akhila Yeruvasu, Moshiur Rahman Tonmoy, Ayush Goyal, Dunren Che</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28508">https://arxiv.org/abs/2610.28508</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28508">https://arxiv.org/pdf/2610.28508</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28508]] Deep Learning-Based Road Lane Quality Assessment from Egocentric Dashcam Video(https://arxiv.org/abs/2610.28508)</code><input type="text"></li>
+<li><strong>Keywords: </strong>quality assessment</a></li>
+<li><strong>Abstract: </strong>Reliable lane markings are important for both human drivers and automated driving systems, but their condition is still commonly assessed through manual inspection. Existing autonomous-driving datasets primarily support lane detection and scene understanding and usually lack maintenance-oriented labels for lane-marking visibility, continuity, or degradation. In this study, we present a geo-referenced smartphone dashcam dataset and baseline framework for lane-marking quality assessment. The dataset contains 63,839 road-facing frames collected across South Texas using a GPS-enabled dashcam application. A subset of 3,339 frames is matched with OpenStreetMap-derived lane-count labels, which are used as weak supervision for lane-count regression and map-consistency evaluation. We propose three lane-quality measures: Contrast Stability Index (CSI), which captures lane-background contrast using Laplacian responses; Line Continuity Ratio (LCR), which estimates structural continuity using edge and Hough-line evidence; and Regression Lane Confidence Score (RLCS), which measures agreement between predicted and map-derived lane counts on matched frames. The baseline prediction models attained strong performance, with CSI (MAE $0.039$, $R^2=0.97$) and LCR (MAE $0.093$, $R^2=0.84$). Notably, CSI and LCR are no-reference, segmentation-derived quality metrics that can be computed without dense human labels. In a pilot validation using 50 human-ranked images, these proposed lane-specific metrics show stronger rank agreement with human lane-quality ordering (e.g., Spearman's $\rho=0.7316$ and Kendall's $\tau=0.5472$ for LCR) than general image-quality measures such as PSNR, SSIM, BRISQUE, NIQE, and LPIPS. We believe the dataset, metrics, and baseline provide an initial step toward scalable, low-cost, location-aware lane-marking quality assessment. Data and code: this https URL</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Latent Bridge: From Video Latents to 3D Geometry via Feature Alignment</h3>
+<ul>
+<li><strong>Authors: </strong>Shuai Zhang, Zhanpeng Ouyang, Zhengqing Chen, Ruohong Mei, Shaoyu Chen, Weiqiang Ren, Hui Sun, Qian Zhang, Wenyu Liu, Xinggang Wang</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28521">https://arxiv.org/abs/2610.28521</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28521">https://arxiv.org/pdf/2610.28521</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28521]] Latent Bridge: From Video Latents to 3D Geometry via Feature Alignment(https://arxiv.org/abs/2610.28521)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>Video generation and feed-forward 3D reconstruction typically use separate representations, requiring RGB decoding and visual re-encoding to recover geometry from generated latents. We propose Latent Bridge, which connects video generative latent spaces with geometric feature spaces to directly predict 3D geometry from video latents. We develop representation-specific bridges for Wan2.1 and V-RAE, enabling feed-forward prediction of cameras, depth, and 3D point clouds without the intermediate RGB pathway. Each bridge is trained on RGB videos through feature distillation, while the video encoder and geometry model remain frozen. Training requires neither ground-truth geometry nor execution of the downstream geometric aggregator or prediction heads. At inference, the same video latents support both RGB decoding and geometry prediction. The same trained bridge can be reused for image-to-video and text-to-video generation within the same video latent space, without bridge retraining. Experiments on Co3Dv2 and WildRGB-D demonstrate competitive geometric reconstruction quality, efficient end-to-end generation and reconstruction, and faster latent-to-geometry decoding, highlighting latent alignment as a practical and reusable interface between video generation and 3D reconstruction. Our code is available at: this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Copyright Leakage Detection in AI Generated Videos</h3>
+<ul>
+<li><strong>Authors: </strong>Shaif Chowdhury, Moshiur Rahman Tonmoy</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28524">https://arxiv.org/abs/2610.28524</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28524">https://arxiv.org/pdf/2610.28524</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28524]] Copyright Leakage Detection in AI Generated Videos(https://arxiv.org/abs/2610.28524)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Video generation models can create realistic-looking video footage from images and text prompts. Some of the recent advances have raised concerns about the reproduction of copyrighted visual content. However, copyright leakage detection in generated videos remains largely unexplored. In this paper, we introduce a new benchmark data set for copyright leakage detection, comprising 50 copyrighted concepts, each with 5 images. For each concept, we have 5 videos created using the image+prompt video generation model and the prompt-only video generation model. Following that, we develop an AI toolset based on a contrastive retrieval framework that formulates copyright leakage detection as a video-to-image retrieval problem by matching aggregated video frame embeddings against a database of copyrighted image embeddings. Our method uses a single similarity threshold and retrieves the most similar copyrighted reference as supporting evidence. We conducted experiments showing strong retrieval and detection performance, achieving 99.6\% detection accuracy with only a single false negative. These results show the effectiveness of the retrieval-based method for scalable and explainable copyright leakage detection in AI-generated videos. Data can be accessed publicly from this https URL and the source code for this project is publicly available at this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Binary Discrete Diffusion: Candidate-Set Diffusion for Logic and Planning Tasks</h3>
+<ul>
+<li><strong>Authors: </strong>Rodrigo Casado Noguerales, Dimitri von Rütte, Bernhard Schölkopf, Thomas Hofmann, Aran Raoufi</a></li>
+<li><strong>Subjects: </strong>cs.LG, cs.AI, cs.CL, stat.ML</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28543">https://arxiv.org/abs/2610.28543</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28543">https://arxiv.org/pdf/2610.28543</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28543]] Binary Discrete Diffusion: Candidate-Set Diffusion for Logic and Planning Tasks(https://arxiv.org/abs/2610.28543)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Discrete diffusion models iteratively denoise a noisy sequence of categorical data such as text, enabling any-order generation with self-correction and in-filling capabilities. This makes them promising candidates for reasoning, planning, and constrained-generation tasks like coding and math. Yet masked and uniform diffusion erase a token's identity in a single corruption event, so their noisy states cannot explicitly represent partially resolved uncertainty in which several alternatives remain plausible. We close this gap with Binary Discrete Diffusion, a family of continuous-time discrete-diffusion processes whose noisy state is a set of candidate tokens per position, represented as a binary membership vector. Binary diffusion changes candidate sets through additions and removals, allowing information to be lost and recovered gradually while the diffusion state itself represents partial uncertainty. On Sudoku-Extreme, Boxoban, and graph coloring, the symmetric formulation of binary diffusion consistently outperforms strong, well-tuned masked and uniform baselines under matched architectures and controlled training, sampling, and tuning budgets, with its largest gains on the hardest instances, while remaining competitive on language modeling (Text8, TinyStories, OpenWebText). These results support candidate sets as an effective intermediate representation for iterative reasoning and show that the corruption kernel can materially change the computation learned by the reverse model.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: OverSeer: Multi-Agent World Models Beyond What Agents See</h3>
+<ul>
+<li><strong>Authors: </strong>Runjia Li, Kam Woh Ng, Minghao Chen, Junlin Han, Jianyuan Wang, Zhaochong An, Juan-Manuel Perez-Rua, Andrea Vedaldi, Shikun Liu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28554">https://arxiv.org/abs/2610.28554</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28554">https://arxiv.org/pdf/2610.28554</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28554]] OverSeer: Multi-Agent World Models Beyond What Agents See(https://arxiv.org/abs/2610.28554)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Despite the success of video world models, extending them to multiple agents is difficult because it requires generating several agent-specific video streams that are consistent in time and between agents. To address this gap, we introduce OverSeer, a multi-agent world model that augments egocentric agent views with auxiliary camera views. We suggest that, by fixing the auxiliary views in space, they act as a proxy for a world-centric representation: Unlike the agents' views, which can change entirely due to a simple change in agent position, changes in the auxiliary views directly map to localized changes in the world state. We show that these fixed views substantially help the model to maintain consistency. We also show that, due to their redundant and semi-static nature, the auxiliary views can be efficiently compressed with a delta-VAE that encodes only the changes relative to a static reference image, reducing the number of tokens required to process them. Experiments in Minecraft and Doom demonstrate improved world and agent consistency, with qualitative results on real-world multi-camera captures indicating that the approach is not tied to game engines. Our compression analysis further shows that delta-VAE substantially reduces the computational overhead of auxiliary-view generation. We conclude that these fixed views provide a simple and efficient way to improve multi-agent world models.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Can a Display Be Used for Rapid LiDAR-Camera Extrinsic Calibration?</h3>
+<ul>
+<li><strong>Authors: </strong>Zuhao Zou, Xiangcheng Hu, Jianhao Jiao, Jin Wu</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28571">https://arxiv.org/abs/2610.28571</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28571">https://arxiv.org/pdf/2610.28571</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28571]] Can a Display Be Used for Rapid LiDAR-Camera Extrinsic Calibration?(https://arxiv.org/abs/2610.28571)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>ScreenCalib enables light detection and ranging (LiDAR)--camera extrinsic calibration using an ordinary programmable display, providing known visual markers and controlled geometry while reducing dedicated target preparation. The camera observes displayed AprilTags, whereas the LiDAR measures the physical screen surface and boundary, requiring indirect cross-modal association. Display geometry introduces association ambiguities, while indoor clutter complicates extraction. ScreenCalib addresses these challenges through tag-guided display extraction, geometric hypothesis generation and refinement, and surrounding scene edges for ambiguity resolution. The single-pose mode requires only one static placement. The joint multi-pose mode combines independent static observations through cross-pose consensus and jointly refines the shared extrinsics and tag scale, reducing sensitivity to tag-size measurement errors without requiring continuous motion or inter-pose trajectory estimation. Experiments in simulation and on three different sensor platforms cover mechanical and nonrepetitive LiDARs in clean and cluttered environments. Benchmark results show that ScreenCalib outperforms competitive calibration-board-based methods in translation accuracy. Joint multi-pose refinement further reduces mean rotation and translation errors across the three platforms and improves rendered-map alignment. Evaluation across readily available displays, including cell phones, tablets, laptops, computer monitors, and televisions, further examines ScreenCalib's versatility as a practical alternative to dedicated calibration targets. The source code is available at this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: WildMAE: Structure-Aware Masked Autoencoding for Wildlife Image Reconstruction</h3>
+<ul>
+<li><strong>Authors: </strong>Yicheng Zhang, Yujie Jin, Ke Zhang, Jiaxin Wu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28590">https://arxiv.org/abs/2610.28590</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28590">https://arxiv.org/pdf/2610.28590</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28590]] WildMAE: Structure-Aware Masked Autoencoding for Wildlife Image Reconstruction(https://arxiv.org/abs/2610.28590)</code><input type="text"></li>
+<li><strong>Keywords: </strong>restoration</a></li>
+<li><strong>Abstract: </strong>Camera-trap imagery presents substantial variation in animal appearance, illumination, background clutter, and visual degradation. Masked autoencoders (MAEs) offer a label-free framework for modeling such data through reconstruction of randomly hidden image patches. We present WildMAE, a decoder-side extension of MAE that combines local structure-aware refinement with masked-to-visible cross-attention. A zero-gated convolutional residual path introduces a two-dimensional neighborhood prior, while gated cross-attention allows masked positions to retrieve contextual information from visible-position features without replacing the original Transformer decoder. The associated training recipe progressively introduces normalized-pixel, Sobel-edge, and perceptual objectives. In the original Snapshot Serengeti study, covering 4,744 test images at 75% masking, the reported reconstruction scores were 27.90 versus 24.33 dB PSNR, 0.840 versus 0.780 SSIM, and 0.160 versus 0.320 LPIPS for WildMAE and vanilla MAE, respectively. Additional historical records document favorable average differences under four synthetic degradation conditions and describe component variants. We present the method, experimental observations, and their scope together: the retained metrics are historical protocol-dependent results, rather than a newly reproduced, harmonized comparison or a validation of restoration from genuinely unavailable pixels. WildMAE provides a practical architectural case study for combining global token mixing with spatial and targeted contextual refinement in wildlife masked-image modeling.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Learning the 4D World through Point Trajectory Forecasting</h3>
+<ul>
+<li><strong>Authors: </strong>Byungwoo Jeon, Sunghwan Hong, Dohyeon Kim, Jonghoon Lee, Jungwoo Park, Inhee Lee, Doosan Baek, Jinil Kim, Taehyun Lim, Hanbyul Joo, Marc Pollefeys, Saining Xie, Jinwoo Shin</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28594">https://arxiv.org/abs/2610.28594</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28594">https://arxiv.org/pdf/2610.28594</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28594]] Learning the 4D World through Point Trajectory Forecasting(https://arxiv.org/abs/2610.28594)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation</a></li>
+<li><strong>Abstract: </strong>Reliable multi-view forecasting requires videos from different cameras to describe the same evolving 3D scene. To this end, we introduce Video-Point Model (VPM), a world model that conditions on multi-view video histories and a language instruction to jointly forecast future videos from arbitrary viewpoints and the 3D trajectories of persistent scene points. We extend a pretrained world model with camera-conditioned multi-view processing that integrates complementary observations across cameras, and add a trajectory head that predicts how physical points move through time. Each trajectory tracks a single point across all views, and supervising these trajectories alongside video generation therefore anchors appearance changes in every camera to a shared description of 3D motion. To support training and evaluation, we build VPM-Data, a simulation corpus pairing synchronized multi-view videos with persistent point trajectories, and VP-WorldBench, a forecasting benchmark spanning simulated and real environments. We further extend VPM to robot control by adding robot actions as a token modality in the generator. Action tokens share the point-supervised backbone and are denoised jointly with future videos, thereby grounding the policy in the same 3D-aware representation. On VP-WorldBench and existing 4D generation benchmarks, point supervision improves both video fidelity and 3D motion accuracy over a video-only counterpart, and in simulated and real-robot experiments, it also raises the manipulation success of the action-enabled model.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Efficient Edge-aware Attention Network for Graph Generation</h3>
+<ul>
+<li><strong>Authors: </strong>Vincent Jung, Alba Carballo-Castro, Yiming Qin, Lonneke van der Plas, Pascal Frossard</a></li>
+<li><strong>Subjects: </strong>cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28618">https://arxiv.org/abs/2610.28618</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28618">https://arxiv.org/pdf/2610.28618</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28618]] Efficient Edge-aware Attention Network for Graph Generation(https://arxiv.org/abs/2610.28618)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>Graph generative models commonly use graph-specific Transformer architectures to jointly update node and edge features. However, these architectures do not directly benefit from recent hardware-aware attention implementations, limiting their scalability. The adaptation is, however, non-trivial: edge and graph-level features must be injected into pairwise attention scores, graph masks must be respected, and dynamic edge updates remain a major source of quadratic memory usage. We propose an edge-aware attention layer for graph generation that incorporates structural information through head-wise score modulation, while updating edge representations with a lightweight residual mechanism that retains attention-score dependent edge updates. This layer can be effectively implemented using PyTorch's FlexAttention. We achieve similar generation quality to our baseline while reducing peak GPU memory by around 65% and substantially improving training and sampling throughput. These results suggest that the proposed architecture is a practical step toward scalable graph foundation models.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: MindView: Benchmarking Generative Multi-View Spatial Intelligence</h3>
+<ul>
+<li><strong>Authors: </strong>Yanbo Wang, Siqi Luo, Siyu Zhang, Chenming Zhu, Wenzhao Zheng, Qian Yu, Juncheng Yan, Bin Fu, Tai Wang, Yu Qiao, Yihao Liu, Jiwen Lu</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28622">https://arxiv.org/abs/2610.28622</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28622">https://arxiv.org/pdf/2610.28622</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28622]] MindView: Benchmarking Generative Multi-View Spatial Intelligence(https://arxiv.org/abs/2610.28622)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>Spatial intelligence has recently been assessed through generative tasks such as spatially grounded image editing, yet language-guided generation of spatially consistent views from partial multi-view observations remains underexplored. We introduce MindView, a benchmark for generative multi-view spatial intelligence with 1,500 samples from 513 scenes across three indoor datasets. Its seven tasks form two families: geometry-dominant tasks specify changes in camera position and orientation, while semantics-dominant tasks require inferring target viewpoints by grounding referred objects and interpreting spatial relations and reference-frame cues. Evaluation of eleven generators reveals substantial room for improvement on MindView. A paired context analysis further shows that all eleven generators obtain lower overall scores under the expanded context setting. These findings motivate us to investigate whether task-specific supervision can improve target-view generation and whether models can use additional multi-view evidence effectively. We therefore fine-tune BAGEL on the MindView training dataset, improving its overall score by 24.3 points and yielding gains across all seven MindView tasks. Beyond these generation gains, the fine-tuned model also yields higher scores on three spatial-understanding benchmarks without training on their annotations, suggesting that learning to generate spatially grounded views may benefit spatial understanding. To improve evidence utilization under expanded context, we propose MindCue, a training-free spatial evidence selector guided by a target-view hypothesis. MindCue reverses the drop in overall score under expanded context and outperforms the standard-context baseline. Overall, MindView provides a concrete testbed for generative multi-view spatial intelligence.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: SolarRenderer: Few-Step Generative Reference Rendering</h3>
+<ul>
+<li><strong>Authors: </strong>Guian Fang, Shengju Qian, Dongyue Lu, Junchao Huang, Lutao Jiang, Xin Wang, Yiren Song, Li Jiang, Mike Zheng Shou</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28630">https://arxiv.org/abs/2610.28630</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28630">https://arxiv.org/pdf/2610.28630</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28630]] SolarRenderer: Few-Step Generative Reference Rendering(https://arxiv.org/abs/2610.28630)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Game engines and coding agents can specify the layout, motion, and camera of a scene, yet turning such coarse structure into realistic video requires a renderer that follows the structure and completes the appearance it leaves open. Existing renderers are tied to the representation of one engine, need tens of denoising steps or a costly distillation of their own, and learn from conditions that are not aligned with their target videos. We present SolarRenderer, a structure-conditioned video renderer that adapts a frozen MiniMax-H3 33B backbone with two lightweight LoRAs. Structural videos enter the native reference pathway of the backbone at the positions of the frames they describe, without a type identifier and described only in plain text, so that a single control LoRA follows arbitrary structural representations. Starting from a pretrained four-step LoRA, structure-guided distribution matching renders in four steps, 12.3 times faster than 50-step sampling, while preserving the learned control. A block-causal variant extends the same design to streaming and renders 768p video in real time. To train the model, we build a frame-aligned corpus of 136K clips from game engines, simulators, and YouTube videos. Experiments on an in-distribution test set and a generalization benchmark of 16 structural representations show that SolarRenderer achieves state-of-the-art results across both, and generalizes to 11 unseen representations, including pose skeletons, drawings, and point clouds.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: AEON: Unifying Video and 3D World Models</h3>
+<ul>
+<li><strong>Authors: </strong>Weiqi Zhang, Wenyuan Zhang, Yu-Shen Liu, Junsheng Zhou</a></li>
+<li><strong>Subjects: </strong>cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28631">https://arxiv.org/abs/2610.28631</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28631">https://arxiv.org/pdf/2610.28631</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28631]] AEON: Unifying Video and 3D World Models(https://arxiv.org/abs/2610.28631)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generative</a></li>
+<li><strong>Abstract: </strong>Current world models for explicit world simulation typically follow two distinct pathways: (1) video generative models (e.g., Sora), which simulate realistic appearances but fail to preserve 3D consistency; and (2) 3D generative models (e.g., Marble), which generate geometrically consistent scenes but often yield static, less realistic observations. We present AEON, a unified framework that bridges video-based and 3D-based world models and combines the benefits of both. The key insight of AEON lies in a generative model that operates within the text- or image-conditioned video latent space while producing renderable 4D graphics primitives---specifically, 4D Gaussian Splatting (4DGS)---as the explicit world representation. We train a 4D reconstruction model to predict both 4DGS and camera poses from monocular videos, serving as our initialized 4D decoder. Furthermore, we design a domain adapter that translates generative video latents into reconstructive 4D latents through a distillation process on the video VAE. AEON naturally supports video-based world modeling by rendering 4DGS at predicted camera trajectories, and constructs a persistent 4D environment with scene dynamics for realistic world simulation. Consequently, AEON empowers a diverse range of world modeling applications and achieves state-of-the-art performance on standard benchmarks. Project Page: this https URL</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Joints, Camera, Action! Co-Generating 3D Motion and Video for Arbitrary Rigs</h3>
+<ul>
+<li><strong>Authors: </strong>Noam Rotstein, Yoad Tewel, Chen Tessler, Haggai Maron, Gal Chechik, Or Litany, Yoni Kasten, Yuval Atzmon</a></li>
+<li><strong>Subjects: </strong>cs.CV, cs.AI, cs.GR, cs.LG, cs.RO</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2610.28632">https://arxiv.org/abs/2610.28632</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2610.28632">https://arxiv.org/pdf/2610.28632</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2610.28632]] Joints, Camera, Action! Co-Generating 3D Motion and Video for Arbitrary Rigs(https://arxiv.org/abs/2610.28632)</code><input type="text"></li>
+<li><strong>Keywords: </strong>generation, generative</a></li>
+<li><strong>Abstract: </strong>Video generation models can now depict remarkably realistic motion. Yet it is unclear how to use this motion beyond pixels: to animate a specific 3D asset and replay the animation in its 3D scene. For instance, a video model can show a monkey jumping over a crossbar, but it cannot return that jump as replayable 3D motion placed in the 3D scene. Here we present a model that directly co-generates the video and 3D motion for any supplied rig, along with a camera that registers this motion to the scene. Prior video-motion models either handle only human skeletons, often adding billions of parameters, or triangulate 3D motion from generated 2D pose maps. We instead keep 3D motion in a separate model that supports arbitrary skeletons, and connect it to a pretrained video model through a small set of cross-attention layers. This separation lets the motion model first learn how skeletons move from motion-only data, which is easier to obtain and augment than paired video. Additionally, our model learns to locate each joint in the video frames, which lets us recover the camera and place the 3D motion in the scene. To train across many skeletons, we use a generative video editor to place animated 3D assets in scenes suited to their actions, curating the edits so their known motion remains valid. Together with human and robot video, this yields nearly 200K training pairs. Our evaluations demonstrate that our model animates diverse rigs from text more faithfully than video-first pipelines, and its motion responds to the surrounding scene. It also turns video into rig motion, rig motion into video, and enables keyframe-based control of the 3D motion. Videos and additional results are available on our project page: this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="../../javascript/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
