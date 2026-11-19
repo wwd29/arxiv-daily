@@ -1,0 +1,439 @@
+<link rel="stylesheet" href="../../css/markdown.css" />
+<article class="markdown-body">
+<h1>2026-11-19</h1>
+<h3>Title: Prioritize, Don't Decide: What We Learned Auditing a Deployed Human-in-the-Loop CV Sorter</h3>
+<ul>
+<li><strong>Authors: </strong>Hadi Mohammadi, Jeroen Sparla, Alexandros Paliouras, Georg Krempl, Robert A. Bagheri</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.IR, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23359">https://arxiv.org/abs/2611.23359</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23359">https://arxiv.org/pdf/2611.23359</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23359]] Prioritize, Don't Decide: What We Learned Auditing a Deployed Human-in-the-Loop CV Sorter(https://arxiv.org/abs/2611.23359)</code><input type="text"></li>
+<li><strong>Keywords: </strong>llm</a></li>
+<li><strong>Abstract: </strong>A single academic vacancy can draw hundreds of applications, and the first screening round consumes most of a committee's time. We describe a CV Priority Sorter deployed at a national platform for academic vacancies and integrated with its vacancy database. It proposes a reading order for a pile of CVs and leaves every decision to the committee, pairing a frozen multilingual transformer encoder with a per-session linear model that retrains after each label and is discarded when the session ends. It works: on a pool of 300 synthetic CVs, a committee reading in the tool's order reaches 95% of the relevant candidates after half the pile, where an arbitrary order needs almost all of it. This paper is about what we found when we audited that claim, rather than about the system itself. Three findings changed the product. The pool turned out to be sortable by document length alone, which makes precision-style metrics on it uninformative; regenerating it under a shared length budget removes that shortcut and leaves the reading-depth result standing. The four-level agreement score such systems report, ours included, is a binary probability cut at fixed thresholds, so it follows the classifier's confidence rather than its ranking and falls as labels accumulate. And uncertainty sampling, the obvious way to implement a "suggest the next CV" button, leaves model quality intact but raises the committee's total reading load above the no-label baseline, because the CVs it asks about are the ones that would otherwise be skipped. A fourth result shows where to look next: a hosted LLM embedding model lifts zero-label ordinal discrimination from 0.66 to 0.80 under length control, then stops mattering once the session model has two dozen labels; a local cross-encoder matches that cold-start gain without sending data out. We report the fixes each finding forced.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Chorus: Shared N-gram Embeddings with Layer-wise Adaptation</h3>
+<ul>
+<li><strong>Authors: </strong>Stephen Chung, Wenyu Du</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23386">https://arxiv.org/abs/2611.23386</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23386">https://arxiv.org/pdf/2611.23386</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23386]] Chorus: Shared N-gram Embeddings with Layer-wise Adaptation(https://arxiv.org/abs/2611.23386)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model</a></li>
+<li><strong>Abstract: </strong>Language models can gain capacity at little computational cost from n-gram embedding tables: large tables of learned vectors for short sequences of consecutive tokens, which are looked up and added to the model's input or to its intermediate layers. Recent designs commonly use a separate n-gram embedding table for each layer, which makes the tables costly in memory and prevents layers from sharing what they learn. Sharing a single table, however, gives every layer the same embedding and leaves no room for layer-wise preferences, and it performs poorly in practice. We propose Chorus, in which one set of n-gram embedding tables serves the whole network and every layer reads it in its own way. Each layer maps the refined embedding through its own projection layer, after rescaling its components by factors computed from its current hidden state. Chorus matches the quality of existing n-gram methods with 87% smaller tables: with 1.2B table parameters it predicts text better than FactorEngram and DeepSeek's Engram do with 9.6B. It outperforms Engram, TN-gram and FactorEngram in every setting where we compared them, across table sizes from 20M to 9.6B parameters. We also show that the recently proposed memory-efficient optimizer Ember works well with Chorus, saving 99.2% of table-optimizer memory compared with AdamW without degrading training performance. These results enable further scaling of n-gram embedding tables along the table-size axis by reducing memory use and allowing shared knowledge to be reused across layers.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Tracking Representations in LLM Reasoning Traces for Iterated Games</h3>
+<ul>
+<li><strong>Authors: </strong>Chaipat Tirapongprasert, Rajarshi Das, Parijat Dube</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.GT</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23403">https://arxiv.org/abs/2611.23403</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23403">https://arxiv.org/pdf/2611.23403</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23403]] Tracking Representations in LLM Reasoning Traces for Iterated Games(https://arxiv.org/abs/2611.23403)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm, chain-of-thought, agent</a></li>
+<li><strong>Abstract: </strong>Large language model (LLM) agents achieve state-of-the-art performance across domains through chain-of-thought (CoT) reasoning. Despite their ubiquitous use, little is understood about the relationship between the externalized trace and the model's actual computation. We address this by investigating how LLM agents make decisions in iterative games with incomplete information. Using a series of mechanistic interpretability techniques, we find that the model forms and iteratively revises an internal representation of the game throughout the CoT. Once the model prematurely commits to an incorrect belief, it rarely recovers. This failure is manifested in both the literal trace and the layer activations. Ultimately, as multi-agent systems are more prevalent, our work opens the door to a more focused diagnosis of their strategic reasoning errors. For illustrative purposes, we offer an interactive visualizer of our methodology on selected sample traces at this https URL</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Formal Adequacy Index (based on Polish-language material)</h3>
+<ul>
+<li><strong>Authors: </strong>Paweł Patreucha</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23482">https://arxiv.org/abs/2611.23482</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23482">https://arxiv.org/pdf/2611.23482</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23482]] Formal Adequacy Index (based on Polish-language material)(https://arxiv.org/abs/2611.23482)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model</a></li>
+<li><strong>Abstract: </strong>Linguistic formality is one of the dimensions of stylistic variation in speech; however, simply measuring its level does not allow us to determine whether the chosen mode of communication is appropriate in a given situation. The aim of this article is to present the concept of a formal adequacy index (based on Polish-language material), which enables a quantitative assessment of how well the formality of a text matches the expectations arising from the communicative context. The proposed approach is based on the separate modelling of observed formality, determined on the basis of the linguistic features of the text, and expected formality, determined on the basis of the characteristics of the communicative situation. Adequacy is assessed by comparing these two measures, taking into account contextual tolerance thresholds, which may differ for a lack of formality and an excess of formality. The potential applications of the index are illustrated by an analysis of Polish-language emails containing apologies for being late, written by human language users or generated by a large language model. The implementation presented here is preliminary in nature and requires further calibration and empirical validation. The main contribution of this article is the proposal of a general methodological framework for the quantitative study of formal adequacy in various communicative contexts.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Dreaming Up Authors: Factual Prevalence and LLM Hallucinations in Academic Authorship Attribution</h3>
+<ul>
+<li><strong>Authors: </strong>Sijia Zhong, Tamir Yirga, Yijia Ma, Thai Le, Yifan Hu</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23530">https://arxiv.org/abs/2611.23530</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23530">https://arxiv.org/pdf/2611.23530</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23530]] Dreaming Up Authors: Factual Prevalence and LLM Hallucinations in Academic Authorship Attribution(https://arxiv.org/abs/2611.23530)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm, hallucination</a></li>
+<li><strong>Abstract: </strong>Large Language Models (LLMs) are widely used for question answering but are prone to hallucinations, yet the underlying causes, particularly the role of factual prevalence in training data, remain underexplored. In this work, we study this through academic authorship attribution, hypothesizing that hallucinations are more likely for less prevalent papers. Using citation count as a proxy for factual prevalence, we curate a dataset of 1.92 million papers across eight scientific disciplines with stratified samples by citation level. Experiments on three state-of-the-art LLMs confirm our hypothesis, revealing a robust inverse relationship between hallucination rate and citation count across all models and disciplines, with hallucination rates exceeding 98% for rarely cited papers and falling below 37% for highly cited ones. Our in-depth analysis further shows that these failures primarily reflect retrieval limitations rather than knowledge absence, and hidden-state probing of open-source models shows that factual prevalence is encoded in pre-generation representations, providing convergent mechanistic evidence for the prevalence-hallucination relationship. The code and data are available at this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Can LLMs Understand What They Predict? Evaluating Latent Causal Structure Inference in Financial Markets</h3>
+<ul>
+<li><strong>Authors: </strong>Yixiang Zheng, Yuechen Jiang, Zhiwei Liu, Jimin Huang, Yuyan Wang, Sophia Ananiadou</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23533">https://arxiv.org/abs/2611.23533</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23533">https://arxiv.org/pdf/2611.23533</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23533]] Can LLMs Understand What They Predict? Evaluating Latent Causal Structure Inference in Financial Markets(https://arxiv.org/abs/2611.23533)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm</a></li>
+<li><strong>Abstract: </strong>Large language models (LLMs) are increasingly evaluated through their ability to predict future outcomes, implicitly assuming that predictive success reflects an understanding of the underlying system. However, accurate predictions can often be achieved without recovering the latent mechanisms that generate observable outcomes. To examine this assumption, we introduce LUCID, a benchmark that evaluates whether models can infer latent market structures from event descriptions and historical financial observations. Models generate event-induced causal graphs representing inferred market structure and are evaluated through a reconstruction-based framework. Our evaluation of 6 open-weight and proprietary LLMs shows that adding their generated graphs generally reduces reconstruction quality compared with using historical observations alone, although a few metrics improve. These findings suggest that inferring informative, event-specific market structures from observable evidence remains challenging for the evaluated LLMs.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Language Models Make New Research Sound Old</h3>
+<ul>
+<li><strong>Authors: </strong>Guy Zyskind</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23546">https://arxiv.org/abs/2611.23546</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23546">https://arxiv.org/pdf/2611.23546</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23546]] Language Models Make New Research Sound Old(https://arxiv.org/abs/2611.23546)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, gpt, llm</a></li>
+<li><strong>Abstract: </strong>Researchers are increasingly using large language models (LLMs) to validate research questions. We find that LLMs make open research questions sound partly studied and overstate what related papers establish. Models recognize most of these overstatements when asked to check the papers' full texts separately. On 40 questions drawn from newly accepted papers, GPT-6-Astra correctly judges 98% to be unstudied, but states that status plainly in only 8% of ordinary answers. All six frontier systems show reporting gaps of 30-90 percentage points. Across 22 models given identical papers, higher capability is associated with more accurate judgments and larger reporting gaps. This reporting failure is asymmetric: models correctly identify studied questions in 88-100% of ordinary answers when we supply the answering papers. To correct this, we build a fixed answer from each model's judgment and separate checks of cited papers. This raises Astra's clear reporting of open status from 8% to 95%, with improvements in all six systems. Finally, we predict reviewers' novelty grades by combining several models' written ratings with a rule learned from graded examples, reaching the performance range reported by Think-Probe-Respond. Unlike TPR, our approach needs no access to model weights or internal activations, so it also works with closed-weight frontier models.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: FutureBench: A Renewable Framework for Evaluating Knowledge-Context Conflict in LLMs</h3>
+<ul>
+<li><strong>Authors: </strong>Yi-Cheng Lai, Hen-Hsen Huang</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23601">https://arxiv.org/abs/2611.23601</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23601">https://arxiv.org/pdf/2611.23601</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23601]] FutureBench: A Renewable Framework for Evaluating Knowledge-Context Conflict in LLMs(https://arxiv.org/abs/2611.23601)</code><input type="text"></li>
+<li><strong>Keywords: </strong>llm, prompt</a></li>
+<li><strong>Abstract: </strong>Asking a model to check retrieved text can also tell it which source to trust. We introduce FutureBench, a renewable framework for evaluating knowledge-context conflict using timestamped questions, controlled passage triplets, and no-context probes. Across 3,629 questions and six models, Verify (a prompt combining checking with passage priority) raises false-answer adoption in all five models tested on pre-cutoff events, mainly by displacing answers that were correct under Baseline, which allows both passage evidence and model knowledge. On post-cutoff events, only o4-mini increases adoption (+13.7 percentage points). A four-prompt comparison on 902 post-cutoff questions finds that passage priority without checking raises adoption, while moving to Verify lowers it in all five models. Adversarial-Aware, which warns of misleading passages and prioritizes model knowledge, restores 82.5-98.9% of displaced pre-cutoff answers with under one point of change in true-passage accuracy. FutureBench supports repeated evaluation on fixed cohorts and extension to new events as models change.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Localizing Text Anonymization for Trustworthy AI: Extending RAT-Bench to Malaysian Microdata and PII</h3>
+<ul>
+<li><strong>Authors: </strong>David Hong Liang Chew, Zexi Yao, Nataša Krčo, Matthieu Meeus, Waqas Khalid Obeidy, Yves-Alexandre de Montjoye</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23704">https://arxiv.org/abs/2611.23704</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23704">https://arxiv.org/pdf/2611.23704</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23704]] Localizing Text Anonymization for Trustworthy AI: Extending RAT-Bench to Malaysian Microdata and PII(https://arxiv.org/abs/2611.23704)</code><input type="text"></li>
+<li><strong>Keywords: </strong>llm</a></li>
+<li><strong>Abstract: </strong>As governments and organizations adopt foundation models for public services and workplace productivity, sensitive citizen, employee, and administrative text may enter LLM workflows through inference, retrieval, fine-tuning, or local model development. We examine whether text anonymizers transfer to new deployment settings by extending RAT-Bench to Malaysia using local microdata, Malaysian PII formats, and culturally grounded transcripts in Malaysian English and Bahasa Malaysia. We evaluate NER- and LLM-based anonymizers using an LLM attacker that infers attributes from anonymized text, measuring both re-identification success and text utility. Across Malaysian English and Bahasa Malaysia, the two LLM anonymizers provide the strongest explicit privacy-utility trade-offs, reducing Easy/Hard re-identification risk to 23-29% while preserving BLEU scores of 0.77-0.94. Non-LLM tools show sharper failure modes, either preserving utility while leaving high residual risk or reducing risk through severe over-redaction, especially in Bahasa Malaysia. These findings suggest that anonymizers should be evaluated against deployment-relevant languages, identifier formats, and cultural contexts before being relied on in public-sector, workplace, or local AI pipelines.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Beyond Replacement: Levenshtein Editing for Diffusion Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Shuaidi Wang, Zhuocheng Gong, Xuejie Liu, Jianguo Li, Yu Zhang</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23750">https://arxiv.org/abs/2611.23750</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23750">https://arxiv.org/pdf/2611.23750</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23750]] Beyond Replacement: Levenshtein Editing for Diffusion Language Models(https://arxiv.org/abs/2611.23750)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model</a></li>
+<li><strong>Abstract: </strong>Diffusion language models (DLMs) offer a flexible alternative to autoregressive models, enabling any-order infilling. While most existing decoding methods treat decoded tokens as fixed, some recent models allow previously decoded tokens to be revised only by replacing them with alternative tokens, a paradigm we refer to as replacement-only editing (ROE). Although ROE can correct individual tokens, it is inefficient for sequence shifts caused by missing or extra tokens and struggles when errors occur across many positions. To address these limitations, we propose LED (Levenshtein Editing for Diffusion Language Models), a post-training framework that extends ROE with insertion and deletion, enabling Levenshtein-style refinement of generated sequences. It uses two training designs. First, it reconstructs edit supervision on the fly during supervised fine-tuning using longest-common-subsequence alignment, enabling insertion and deletion learning without manually annotated labels. Second, it adopts multi-stage training, where the state from one stage becomes the input to the next, exposing the model to its earlier errors and enabling it to correct them. When applied to the 16B-parameter LLaDA2.1-Mini Base, LED raises the average score across twelve benchmarks from 54.86 to 57.10 under confidence-guided decoding while increasing tokens per forward from 6.14 to 7.05, whereas under confidence-free decoding it raises the average score from 27.52 to 47.19. We further show that LED achieves higher pass@k at large k than thresholded decoding without editing, demonstrating improved generation diversity and revealing the diversity potential of DLMs without confidence guidance. LED also improves robustness to large block sizes, raising the average score from 36.97 to 51.34 at block size 128. Together, these results suggest that LED supports more robust self-correction in DLMs.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding</h3>
+<ul>
+<li><strong>Authors: </strong>Alagappan Valliappan, Ankit More, Dheevatsa Mudigere, Jatin Mitra</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.LG, cs.PF</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23835">https://arxiv.org/abs/2611.23835</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23835">https://arxiv.org/pdf/2611.23835</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23835]] NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding(https://arxiv.org/abs/2611.23835)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, gpt, llm</a></li>
+<li><strong>Abstract: </strong>Speculative decoding is widely used to speed up generation in large language models (LLMs), with a small draft model proposing tokens that one forward pass of the target model verifies. Draft models that read the target's hidden states, such as DFlash and EAGLE-3, typically inherit the target's hidden width. We show that the draft's whole residual stream can run at half or a quarter of that width while largely preserving acceptance. For DFlash, which borrows the target's vocabulary projection, the trained output adapter folds into it, giving one narrower projection with logits unchanged up to floating-point rounding. We test two drafter families, DFlash and EAGLE-3, on two targets, Qwen3-8B (NVFP4) and GPT-OSS-20B (MXFP4), in SGLang on a B200 and a DGX Spark (GB10). At batch size 1 and temperature 0, narrowing the draft to half or a quarter width speeds up end-to-end decoding by 1.06-1.12x on B200 and 1.13-1.44x on GB10. The speedup holds at larger batch sizes. From batch 32 to the largest batch each GPU fits, narrowing reaches up to 1.21x on both GPUs, and no narrow draft is slower than full width.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: ReflectRec: Cycle-Consistency Preference Verification for LLM-based Recommendation</h3>
+<ul>
+<li><strong>Authors: </strong>Dae Kyoo Kim, Heejung Cho, Sungmoo Hong, Eunil Park</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.IR</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.23969">https://arxiv.org/abs/2611.23969</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.23969">https://arxiv.org/pdf/2611.23969</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.23969]] ReflectRec: Cycle-Consistency Preference Verification for LLM-based Recommendation(https://arxiv.org/abs/2611.23969)</code><input type="text"></li>
+<li><strong>Keywords: </strong>llm, prompt, chain-of-thought</a></li>
+<li><strong>Abstract: </strong>CoT-style LLM recommenders generate a natural-language preference note as a chain-of-thought prefix to ranking, but the note is trusted without verification, and the ranker never consults behaviorally similar users. We propose ReflectRec, organized around a preference-to-history round-trip verifier whose recall score serves as an operational signal of preference-to-history recoverability, enabling conditional regeneration for low-recoverability preferences and selection among regeneration attempts. Around this verifier, we wire a semantic Stage-1 prompt, conditional regeneration, and Forward-Look retrieval that injects future watches of behaviorally similar users as a collaborative hint. On MovieLens-100K and MovieLens-1M, the full pipeline outperforms CoT4Rec-ICL by +16.25 / +4.46 pp Hit@10, with positive gains across all ValScore buckets and three LLM backbones (Qwen3-30B, Qwen2.5-72B, and Llama-3.3-70B). We also observe a similar verifier-guided regeneration pattern on Amazon Electronics.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: A Mechanistic Analysis of In-Context Learning and Out-of-Context Hallucination</h3>
+<ul>
+<li><strong>Authors: </strong>Tianxiang Chen, Jingyuan Zhou, Guoyao Yang, Kaidi Yang</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24000">https://arxiv.org/abs/2611.24000</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24000">https://arxiv.org/pdf/2611.24000</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24000]] A Mechanistic Analysis of In-Context Learning and Out-of-Context Hallucination(https://arxiv.org/abs/2611.24000)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, hallucination</a></li>
+<li><strong>Abstract: </strong>Large language models can infer and follow specific rules through in-context learning (ICL), yet may fail to remain faithful to provided evidence, giving rise to out-of-context (OOC) hallucination. Existing work has largely investigated the underlying mechanisms of ICL and OOC hallucination along separate lines. However, this separation obscures the mechanistic basis for these seemingly opposing outcomes. In this work, we study this contrast through the unified view of functional roles in dynamic context. The key observation is that role information can be internally represented without reliably constraining output. We derive a first-order decomposition to characterize the role effect, showing that its substantial influence depends on two necessary conditions, namely sufficient contribution magnitude and coherent signed aggregation. Causal analysis further shows that role span contributions affect key token choices involving response structure, content selection, and factual values. We further show that role-consistent choices depend on sufficient role span support at these key decisions, while failing choices can be reversed when this support overcomes the deficit. These findings support a common mechanistic view of ICL and OOC hallucination: each functional role defines the pattern of output decisions over which role span contributions must remain effective, and differences in this organization account for the seemingly opposing outcomes.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Compression Effects on Low-Resource Multilingual Translation</h3>
+<ul>
+<li><strong>Authors: </strong>Abbas Sani</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24043">https://arxiv.org/abs/2611.24043</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24043">https://arxiv.org/pdf/2611.24043</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24043]] Compression Effects on Low-Resource Multilingual Translation(https://arxiv.org/abs/2611.24043)</code><input type="text"></li>
+<li><strong>Keywords: </strong>llm</a></li>
+<li><strong>Abstract: </strong>We present a pilot study characterising the effect of post-training quantisation on multilingual machine translation quality and inference cost for three African languages - Hausa, Swahili, and Yoruba - across three model families: a small general-purpose LLM (Qwen2.5-1.5B), a larger multilingual instruction-tuned LLM (Aya-23-8B), and a dedicated multilingual MT model (NLLB-200-distilled-1.3B). Evaluating on the FLORES-200 devtest set (1,012 sentences per direction) under FP16, bitsandbytes INT8, and NF4 INT4 precisions on consumer-grade NVIDIA T4 GPUs, we find: (i) the specialised MT model outperforms both LLMs by 32.7-43.3 chrF on the Hausa and Swahili directions, and by 12.9-24.7 chrF on Yoruba, despite being roughly a sixth the size of the 8B instruction-tuned LLM; (ii) post-training quantisation preserves aggregate translation quality within approximately 1 chrF across all model families and language directions, with a single worst case of 2.19 chrF; (iii) on consumer GPUs, INT8 and INT4 quantisation provide substantial memory savings (49-61% at INT4) but do not reduce inference latency relative to FP16 - in fact, latency increases by 1.3x to 5.3x; (iv) a clear performance gradient tracking training-resource availability is visible across languages (Swahili > Hausa > Yoruba). These findings motivate a research agenda focused on hardware-aware compression and error-type analysis beyond aggregate metrics for low-resource deployment.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: A Hybrid RAG Framework for Deceptive Review Detection: Integrating RoBERTa-LoRA, FAISS-Based Retrieval, and LLM Reasoning</h3>
+<ul>
+<li><strong>Authors: </strong>Andrei Kostin, José Ángel Diaz-Garcia, Karel Gutiérrez-Batista</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24049">https://arxiv.org/abs/2611.24049</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24049">https://arxiv.org/pdf/2611.24049</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24049]] A Hybrid RAG Framework for Deceptive Review Detection: Integrating RoBERTa-LoRA, FAISS-Based Retrieval, and LLM Reasoning(https://arxiv.org/abs/2611.24049)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm, retrieval-augmented generation</a></li>
+<li><strong>Abstract: </strong>The growth of deceptive online opinions poses a critical risk of misinformation and fraud. This paper proposes a Retrieval-Augmented Generation (RAG) system to automatically distinguish spam reviews. The architecture integrates RoBERTa with Low-Rank Adaptation (LoRA) classification, FAISS semantic vector retrieval, and a Large Language Model (LLM) for final reasoning. The system was evaluated across balanced and severely imbalanced real-world scenarios. Results demonstrate that five epochs of fine-tuning enable robust domain transfer, achieving an F1-score of 0.90 in cross-domain evaluation, outperforming baselines (OpenAI Detector,F1 = 0.82) and demonstrating competitive performance against specialized in-domain SOTA models (fakeRoBERTa,F1 = 0.97). The proposed architecture provides evidence-backed explainability and statistically significant precision gains while maintaining comparable overall detection performance.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Grading Executable Legal Rules Against Independent Records: Transitional Provisions and Korean SME Status</h3>
+<ul>
+<li><strong>Authors: </strong>Jinhyung Bae</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24055">https://arxiv.org/abs/2611.24055</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24055">https://arxiv.org/pdf/2611.24055</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24055]] Grading Executable Legal Rules Against Independent Records: Transitional Provisions and Korean SME Status(https://arxiv.org/abs/2611.24055)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm</a></li>
+<li><strong>Abstract: </strong>Laws are increasingly turned into programs that decide cases, such as whether a firm was a small or medium enterprise (SME) on a given date, and large language models (LLMs) now write them. The programs are usually graded against answers written by someone who read the same law, so a program can score well by sharing the grader's reading rather than by getting the law right. LexTemporis grades them instead against records of what actually happened: 10,901 firm-years of SME status disclosed by Korean listed companies, with every version of the governing rules. An appendix adds comparison cases from US income tax and German hospital minimum volumes. The date changes outcomes mainly through provisions outside the main statutory text: one transitional provision raises agreement with the disclosures from 83-86% to 89-90%. The disclosures also test the author's reading of a contested provision, favouring it in 130 of 189 firm-years where readings diverge. Four LLMs wrote the rules, given different selections of the law. A pre-registered comparison finds no condition better across all four models. In exploratory analyses, supplying the right provisions looks better graded against the author's reading than against the records: the advantage shrinks for three models (for one, to between a quarter and three-fifths of its size), and per firm-year it is several times larger where the author's reading is wrong, partly by construction, since there reproducing that reading more faithfully must lose. Grading legal programs against the grader's own reading can overstate how well they work.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: MIRAGE: A Framework for Multi-hop Reasoning under Dynamic Knowledge Injection</h3>
+<ul>
+<li><strong>Authors: </strong>Heyang Xu, HanWen Hao, Haifeng Wang, Haoyi Zhou, Jianxin Li</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24058">https://arxiv.org/abs/2611.24058</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24058">https://arxiv.org/pdf/2611.24058</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24058]] MIRAGE: A Framework for Multi-hop Reasoning under Dynamic Knowledge Injection(https://arxiv.org/abs/2611.24058)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm</a></li>
+<li><strong>Abstract: </strong>Multi-hop Question Answering (MQA) requires large language models (LLMs) to retrieve and synthesize multiple pieces of evidence into a coherent reasoning path, which is essential for complex tasks. However, prior work on knowledge updating for MQA has largely focused on simple fact edits, overlooking a more challenging and realistic setting---\emph{Knowledge Injection}---in which the model must simultaneously accommodate both conflicting updates and entirely novel information. Under this setting, a hop-level answer is often wrong simply because the model trusts the wrong knowledge source: it clings to outdated parametric memory when the injected knowledge conflicts with it (K2), and it cannot answer when the required fact is entirely new (K3). To investigate this, we introduce NEXUS, the first benchmark tailored for multi-hop reasoning under Knowledge Injection, which explicitly covers both conflicting (K2) and incremental (K3) knowledge. We further propose MIRAGE, an efficient, training-free framework whose core component, the Correlation-aware Dual-path Reasoner (CDR), resolves such per-hop source-trust errors via P(True)-based confidence routing, complemented by a lightweight template-guided corrector for residual structural deviations. Extensive experiments across four LLM families and two benchmarks demonstrate that MIRAGE consistently improves both final-answer accuracy and hop-level reasoning accuracy, establishing a new state of the art in this challenging setting.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Once Upon a Bias: Gender Stereotyping in LLM-Generated Children's Stories</h3>
+<ul>
+<li><strong>Authors: </strong>Sayumi Muthukumarana, Roshan Godaliyadda, Parakrama Ekanayake, Roshan Ragel</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24156">https://arxiv.org/abs/2611.24156</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24156">https://arxiv.org/pdf/2611.24156</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24156]] Once Upon a Bias: Gender Stereotyping in LLM-Generated Children's Stories(https://arxiv.org/abs/2611.24156)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm, prompt</a></li>
+<li><strong>Abstract: </strong>Large language models are increasingly used to create stories for children. Since bedtime stories can shape children's perceptions of social roles, this raises concerns about whether LLMs adapt narrative portrayals according to the intended recipient's gender. We conducted a large-scale study to examine gender stereotyping in LLM-generated bedtime stories. Using matched daughter/son prompts and a five-generation design, we analyze 62,873 retained stories from 16 LLMs across 35 country settings and 12 narrator roles. We introduce a multi-level evaluation framework combining context-adjusted lexical rate contrasts, relative stereotype alignment, narrator-recipient interaction analysis, human evaluation, and representation-level interventions to examine both the consistency and interpretability of these differences. Our results reveal systematic differences in narrative framing: son-directed stories emphasize higher agency and lower communion compared to daughter-directed stories. While narrator gender expresses limited moderation on these patterns, high sociability exhibits a more pronounced interaction. Human evaluations demonstrate consistent agreement, although correspondence with lexical measures varies across narrative dimensions. Additionally, hidden-state analyses reveal decodable recipient-gender information. These findings demonstrate persistent yet context-dependent representational disparities in LLM-generated children's stories and motivate narrative-specific bias evaluation beyond short-form benchmarks.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: CounselTraj: Synthesizing Process-Aware Psychological Counseling Dialogues via Dialogue-Act Trajectory Planning</h3>
+<ul>
+<li><strong>Authors: </strong>Zhiyang Qi, Michimasa Inaba</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24168">https://arxiv.org/abs/2611.24168</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24168">https://arxiv.org/pdf/2611.24168</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24168]] CounselTraj: Synthesizing Process-Aware Psychological Counseling Dialogues via Dialogue-Act Trajectory Planning(https://arxiv.org/abs/2611.24168)</code><input type="text"></li>
+<li><strong>Keywords: </strong>llm</a></li>
+<li><strong>Abstract: </strong>The growing demand for psychological counseling has motivated the development of LLM-based systems that support human counselors, but training such systems requires large-scale, high-quality dialogue data. Authentic counseling transcripts are difficult to collect and share because of privacy concerns, making synthetic dialogues an important alternative. However, existing synthetic datasets, despite covering diverse scenarios and client profiles, often consist of brief exchanges and fail to capture session-level counseling processes. We propose CounselTraj, a dialogue-act trajectory planning framework for expanding brief synthetic dialogues into process-aware, session-level psychological counseling dialogues. CounselTraj learns dialogue-act patterns from role-play counseling dialogues produced by human counselors, plans coordinated trajectories for clients and counselors, and uses them as flexible guidance for long-form dialogue generation. Experiments across three Chinese synthetic counseling datasets show that CounselTraj produces more complete and coherent sessions with higher-quality counselor interventions than both direct expansion and expansion with randomly sampled trajectories. Based on CounselTraj, we construct CounselTrajD, a dataset containing over 10K process-guided Chinese psychological counseling dialogues, and use it to train CounselTrajLM for counseling response generation. Evaluations at both the response and session levels show that CounselTrajLM outperforms publicly available Chinese counseling models in response quality, therapeutic understanding and intervention, and counseling-process coherence and progress. Our code and model are publicly available at this https URL.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: What Majority Labels Hide: Annotator Disagreement and Model Errors in Multi-Dialect Arabic Sexism Detection</h3>
+<ul>
+<li><strong>Authors: </strong>Alaa Bazaid, Arkaitz Zubiaga</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.CY, cs.SI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24383">https://arxiv.org/abs/2611.24383</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24383">https://arxiv.org/pdf/2611.24383</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24383]] What Majority Labels Hide: Annotator Disagreement and Model Errors in Multi-Dialect Arabic Sexism Detection(https://arxiv.org/abs/2611.24383)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, gpt</a></li>
+<li><strong>Abstract: </strong>Judgements of sexism are subjective and may vary across communities, yet sexism detection datasets usually reduce annotator judgements to a single majority label, obscuring disagreement and how models behave on contested cases. We introduce MuDAS, a dataset of YouTube comments in Saudi, Egyptian and Moroccan Arabic, each labelled by three native speakers of its dialect, with the individual annotations preserved. We use it to evaluate Arabic encoders fine-tuned with hard-label, soft-label and perspectivist objectives, GPT-5.6 Terra, and four Arabic-centric large language models. Model errors are more frequent on comments with annotator disagreement. Despite relatively close Macro-F1 scores, GPT-5.6 Terra and the fine-tuned encoders exhibit contrasting error patterns: GPT-5.6 Terra, even with the annotators' definition of sexism, over-classifies gender-related content such as religious advice on modesty, whereas the encoders miss implicit and prescriptive sexism. The Arabic-centric models also over-predict sexism and remain below the encoders. Disagreement-aware learning preserves Macro-F1, but soft labels improve alignment with annotators on contested comments at the expense of unanimous ones, and neither paradigm reliably identifies contested comments. Lower performance on Egyptian Arabic, clearest for the large language models, is not fully explained by the examined measures of test-set composition and dialectness. Majority-label scores can therefore hide contrasting error patterns that matter for content moderation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Nothing to Declare: Steering a single neuron increases concealment in AI teams</h3>
+<ul>
+<li><strong>Authors: </strong>Edoardo Chidichimo, Felix P. S. Wallis</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24475">https://arxiv.org/abs/2611.24475</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24475">https://arxiv.org/pdf/2611.24475</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24475]] Nothing to Declare: Steering a single neuron increases concealment in AI teams(https://arxiv.org/abs/2611.24475)</code><input type="text"></li>
+<li><strong>Keywords: </strong>agent</a></li>
+<li><strong>Abstract: </strong>Recent research suggests that individual neurons can have interpretable roles in AI behaviour. In Qwen3.5-4B, steering along one neuron's output direction increased decisions to conceal information more in teams than alone across five scenarios, even when teammates provided no messages. When all members participated and received steering, collective concealment increased in four scenarios, while inter-agent messaging helped temper concealment under steering. Moreover, removing the neuron's contribution had negligible effects. Collective settings can therefore change how an internal intervention affects AI behaviour.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: MECI: Multi-Element Collaborative Interaction for Multimodal Entity Linking</h3>
+<ul>
+<li><strong>Authors: </strong>Jie Peng, Yongxue Shan, Yongfu Zha, Xiaodong Wang</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24522">https://arxiv.org/abs/2611.24522</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24522">https://arxiv.org/pdf/2611.24522</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24522]] MECI: Multi-Element Collaborative Interaction for Multimodal Entity Linking(https://arxiv.org/abs/2611.24522)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model</a></li>
+<li><strong>Abstract: </strong>Multimodal Entity Linking (MEL) aims to disambiguate mentions in multimodal contexts by grounding them to specific entities in a knowledge base. A pivotal challenge in MEL is capturing multi-level correspondences: the semantic consistency between mention-entity pairs and the complementary correlations across modalities. However, existing methods often suffer from element dominance due to their reliance on coupled interactions or coarse global aggregations. In response, we propose the Multi-Element Collaborative Interaction (MECI) framework. First, to capture multi-element mention-entity correspondences, we develop a Multi-view Experts Network that leverages a "divide-and-conquer" strategy for decoupled feature learning to mitigate element dominance, supported by a KL-guided routing mechanism that governs expert specialization and collaboration. Furthermore, to model cross-modal complementary correlations, we propose a Hierarchical Multimodal Interaction Module, where a dynamic modality-aware weighting network refines interactions across hierarchical semantic levels, thereby integrating multi-granular evidence to counteract element dominance. Finally, we incorporate a generative semantic refinement stage that utilizes large language models for zero-shot re-ranking. Extensive experiments on WikiDiverse, RichpediaMEL, and WikiMEL show that MECI consistently outperforms state-of-the-art baselines, improving Hits@1 by 1.95%, 7.30%, and 2.31%, respectively.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: ProbMedTOD: A Bayesian Network Guided Task-Oriented Dialogue System for Patient History Taking</h3>
+<ul>
+<li><strong>Authors: </strong>Vishal Vivek Saley, Bhavesh Gurnani, Dinesh Raghu, Mausam</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24535">https://arxiv.org/abs/2611.24535</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24535">https://arxiv.org/pdf/2611.24535</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24535]] ProbMedTOD: A Bayesian Network Guided Task-Oriented Dialogue System for Patient History Taking(https://arxiv.org/abs/2611.24535)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm, agent</a></li>
+<li><strong>Abstract: </strong>Patient history taking is a strategic, multi-turn process that refines diagnostic hypotheses through iterative questioning, mirroring clinical reasoning where each inquiry updates beliefs over candidate diagnoses. Deploying AI in this setting is constrained by privacy, cost, and latency, making Small Language Models (SLMs) a more desirable backbone compared to larger LLMs. However, SLMs capture only the fast, intuitive "System 1" side of this process and lack explicit mechanisms for the deliberative "System 2" reasoning needed to maintain and update diagnostic uncertainty over time. Bayesian Networks (BayesNets) offer a natural complement, providing an interpretable framework for auditable probabilistic belief tracking. Yet, clinical BayesNets are difficult to construct due to their reliance on expert curated structure, dependencies, and parameters. We introduce ProbMedTOD, which automatically synthesizes a clinical BayesNet from a small number of clinical notes in three stages: ontology building, structure prediction, and parameter estimation. ProbMedTOD then integrates the resulting BayesNet with SLMs, enabling probabilistic reasoning in multi-turn dialogues. A BayesNet Agent maintains real-time posterior distributions over diagnoses, while a Policy Agent picks diagnostically informative questions. Experiments on DDXPlus and MIMIC-IV Notes show that ProbMedTOD outperforms LLM-only and retrieval-based baselines, with especially strong gains for smaller models.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Do Frontier Model Ingredients Add Up? A Replicated Factorial Study of Small Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Biswa Sengupta</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24540">https://arxiv.org/abs/2611.24540</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24540">https://arxiv.org/pdf/2611.24540</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24540]] Do Frontier Model Ingredients Add Up? A Replicated Factorial Study of Small Language Models(https://arxiv.org/abs/2611.24540)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model</a></li>
+<li><strong>Abstract: </strong>Building a small language model requires choosing which published improvements to combine. We compare five changes in the same model, using the same data and training budget. We test selected combinations and repeat each one with a second random seed. Mixture-of-experts layers, Muon optimisation and a Gated DeltaNet hybrid give the largest gains. Extra normalisation also helps, while an attention gate with a matched parameter budget adds little on average. The gains mostly combine, but small interactions between changes appear again in the repeated runs. Repetition also reveals benefits that an initial statistical estimate treated as noise. These findings apply to our small-model training setting; the expert models also have greater total capacity. The practical lesson is to test promising components together and repeat the comparisons before deciding which ones to keep.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Late Entry in Looped Language Models</h3>
+<ul>
+<li><strong>Authors: </strong>Ziqi Jin, Jiaxi Li, Weiwen Xu, Aixin Sun</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24576">https://arxiv.org/abs/2611.24576</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24576">https://arxiv.org/pdf/2611.24576</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24576]] Late Entry in Looped Language Models(https://arxiv.org/abs/2611.24576)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model</a></li>
+<li><strong>Abstract: </strong>Looped language models deepen reasoning at a compact parameter count by iterating a shared layer stack T times per token, turning recurrence depth directly into sequential decoding latency. Conventional early-exit decoding halts after initial passes without cache completion, truncating cached key-value states of past tokens to shallow depth. We study the opposite strategy, late entry, where new tokens skip initial passes and enter directly into the final K < T passes over a deep context cache. Once lightweight fine-tuning resolves hidden-state norm mismatch at the entry boundary, deep cached context substitutes for skipped token-local passes, allowing late entry to outperform matched early exit across model families and pass budgets. To turn this asymmetry into wall-clock speedups without stalling to build deep caches, candidate blocks verify through only the final K passes on the critical path while previously committed tokens complete passes 1 -> T alongside subsequent steps at zero extra serial calls. Projecting these finished T-pass wake states inside the existing output GEMM (Wake verification, governed by logit-margin tolerance tau in [0, inf]) unifies greedy-exact T-pass decoding (tau = 0, matching K = T block decoding within bf16 reduction order), margin-gated verification (tau > 0), and non-rollback lossy late entry (tau = inf) inside a single static CUDA graph. On Ouro-2.6B (T = 4), K = 2 Wake reaches 5.2x greedy-exact speedup at tau = 0 (+26% over K = 4 block decoding on GSM8K) and 6.8x at tau = inf (+16.9 points over trained early exit at matched speed). Scaling test-time recurrence across T in {8, 16, 32, 64} on Huginn-3.5B cuts K = T/4 rollbacks 21.5x with depth, driving greedy-exact (tau = 0) speedups to 6.1x (T = 32) and 8.4x (T = 64, +153% over K = 64 block) and tau = inf speedups to 10.6 to 12.5x.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Large Language Models or AI Agents for English to Arabic Translation? An assessment on WikiEn-Ar190</h3>
+<ul>
+<li><strong>Authors: </strong>Fatima Zahra Iguenfer, Yousra Chtouki</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24588">https://arxiv.org/abs/2611.24588</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24588">https://arxiv.org/pdf/2611.24588</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24588]] Large Language Models or AI Agents for English to Arabic Translation? An assessment on WikiEn-Ar190(https://arxiv.org/abs/2611.24588)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, gpt, agent</a></li>
+<li><strong>Abstract: </strong>This research investigates whether a large language model or an autonomous AI Agent performs better at translating from English to Arabic, which is considered a low-resource language. The authors introduce WikiEn-Ar190, a new dataset of 190 carefully selected Wikipedia articles from 18 different areas, which were created and verified by two native Arabic speakers to ensure that they accurately reflect both meaning and style. Using this dataset, the study evaluates the translation quality of GPT-5-mini both as an independent neural translator and when used within a more complex process that includes self-assessment and improvement. As a standalone model, GPT-5-mini produced very fluent translations , achieving a COMET score of 0.8649 and receiving high human scores for adequacy, fluency, and style (averaging 4.53 out of 5). When used in a system that combined translation with self-assessment, it improved lexical accuracy by 28.76% (BLEU score of 22.83) while maintaining a similar level of semantic quality. These findings show that methods involving autonomous reasoning can improve translation consistency for language pairs with limited resources. Beyond the results, the approach offers a framework for evaluating and improving translations, potentially using them as assisting tools to expand the representation of low resource languages, such as Arabic, on the web.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Chain-of-Thought Hidden States Reveal Task-Solving Directions for Direct Answers</h3>
+<ul>
+<li><strong>Authors: </strong>Houman Mehrafarin, Ioannis Konstas</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24598">https://arxiv.org/abs/2611.24598</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24598">https://arxiv.org/pdf/2611.24598</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24598]] Chain-of-Thought Hidden States Reveal Task-Solving Directions for Direct Answers(https://arxiv.org/abs/2611.24598)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, prompt, chain-of-thought</a></li>
+<li><strong>Abstract: </strong>Chain-of-Thought (CoT) prompting improves the performance of Large Language Models by eliciting intermediate reasoning steps. However, CoT is far from perfect: on some tasks, models perform worse than with direct-answer prompting, and on others they generate a few hundred tokens to reach the correct answer. We start by labelling each CoT hidden state as recovering if patching it into the direct prompt yields the correct answer, and failed otherwise. A linear probe shows that the model encodes these two classes differently. We then show that the representation space of the direct prompt holds a direction for each question that leads the model, in a short generation, to the correct answer more often than CoT does. Specifically, we rotate the direct prompt's last hidden state once, before generation, towards a direction built for each question from its own recovering and failed states. Across 25 tasks, these directions raise the direct prompt's mean accuracy from $46\%$ to $85\%$ on LLaMA 3.1 8B (CoT: $69\%$) and from $52\%$ to $86\%$ on Qwen 2.5 7B (CoT: $77\%$), with a tenth of CoT's tokens. CoT is thus not the shortest route to this accuracy, and these directions can be used in future work to train models to align their states with them.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Clover-35B-A3B-Preview Technical Report</h3>
+<ul>
+<li><strong>Authors: </strong>DiffuSpace Technical Team</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24636">https://arxiv.org/abs/2611.24636</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24636">https://arxiv.org/pdf/2611.24636</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24636]] Clover-35B-A3B-Preview Technical Report(https://arxiv.org/abs/2611.24636)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, agent</a></li>
+<li><strong>Abstract: </strong>We introduce Clover-35B-A3B-Preview (Clover), a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters, supporting thinking-mode generation. Clover adapts Gated Delta Networks to block diffusion by combining recurrent memory of previously generated context with bidirectional softmax attention inside the current block. Historical memory readout competes with current-block tokens in a shared softmax, with learnable block-size calibration and a separate, zero-initialized right-context convolution branch. Clover leads the seven evaluated agent metrics, including 73.6 on SWE-bench Verified and 51.7 on Terminal-Bench 2.1. On internal agent workloads, it reaches a reported generation speed of 680 tokens/s using one NVIDIA GB300 GPU at BF16 precision and batch size one. We organize the evaluation around model quality, drafting and verification costs, and deployment under constrained memory. We also describe a decision-model variant that generates answers to related questions in one denoising pass. On an internal set of 500 groups, joint prediction raises question accuracy from 90.37% to 93.88% and all-correct group accuracy from 65.4% to 77.0%.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Piccolo: Co-Evolving Decision Models and Data through Recursive Self-Improvement</h3>
+<ul>
+<li><strong>Authors: </strong>Zhenqing Ling, Qirui Jiao, Daoyuan Chen, Cheng Chen, Xinji Mai, Haowen Gao, Zhuo Zhang, Xuchen Pan, Mengsu Ding, Jiaji Deng, Yuexiang Xie, Xiaoming Qin, Weirui Kuang, Zhaoyang Liu, Yaliang Li, Bolin Ding, Jingren Zhou</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.CV</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24651">https://arxiv.org/abs/2611.24651</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24651">https://arxiv.org/pdf/2611.24651</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24651]] Piccolo: Co-Evolving Decision Models and Data through Recursive Self-Improvement(https://arxiv.org/abs/2611.24651)</code><input type="text"></li>
+<li><strong>Keywords: </strong>agent</a></li>
+<li><strong>Abstract: </strong>We present Piccolo, a family of multimodal decision models (0.8B to 27B) that coevolves model capabilities and training data via Agentic Data Engineering and recursive self-improvement (RSI). The models predict probabilities over candidate answers for general-purpose text and visual judgments, agent harnesses, data workflows, and interactive games. Piccolo-27B tops the Decision Index Vision Full leaderboard with a score of 75.59, while Piccolo-9B and Piccolo-4B achieve 68.35 and 67.46, respectively. All three rank first on the Private benchmark in their respective model-size categories. Research agents analyze model behavior, construct training data, conduct experiments, and use the results to refine subsequent proposals. Semantic slices and a shared research memory connect these actions across the model family's development. With training recipes comprising hundreds of thousands of examples, data selection and feedback-driven refinement are central to the self-improvement process. Our large-scale RSI exploration yields three counter-intuitive insights for decision-model development: (1) Backbone-recipe co-adaptation outweighs raw model recency: earlier backbones can surpass newer generations on visual tasks under identical recipes; (2) Targeted data curation enables 4B-9B models to rival 27B baselines on specialized workflows; and (3) Continuous loss reduction can decouple from and even degrade discrete decision accuracy. Together with the released weights and tools from the Data-Juicer and AgentScope ecosystems, Piccolo provides an actionable blueprint for building frontier decision models and scaling data-driven RSI.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: CurvDelta: Low-Curvature Delta Modeling For Surgical Learning and Unlearning</h3>
+<ul>
+<li><strong>Authors: </strong>Zeguan Xiao, Zhuocheng Liang, Yun Chen, Yong Wang, Guanhua Chen, Pinyan Lu</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24654">https://arxiv.org/abs/2611.24654</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24654">https://arxiv.org/pdf/2611.24654</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24654]] CurvDelta: Low-Curvature Delta Modeling For Surgical Learning and Unlearning(https://arxiv.org/abs/2611.24654)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm</a></li>
+<li><strong>Abstract: </strong>A central challenge in adapting large language models (LLMs) is capability preservation: an adaptation can achieve its target while degrading general capabilities. We introduce CurvDelta, a scalable framework that incorporates the preservation constraint into the parameterization of the model update. By analyzing the local geometry of the preservation constraint around the pre-adaptation model, CurvDelta constructs a low-curvature space in which parameter updates leave the preservation loss nearly invariant. We make its construction practical for LLMs through Kronecker-factored approximate curvature (K-FAC) and a factorized projection. We also introduce CurvLoRA, a low-rank variant within the same preservation geometry, designed for more efficient adaptation. Both methods apply to preservation-constrained adaptation tasks such as capability learning and selective unlearning. We evaluate our methods on mathematical reasoning, code generation, and knowledge unlearning. For mathematical reasoning and code generation, our approaches achieve competitive downstream performance while better preserving general capabilities, offering a favorable acquisition--retention trade-off relative to the baselines. For knowledge unlearning, our main results on TOFU and MUSE show a better balance between targeted forgetting and knowledge retention than the baselines, with retention performance close to the from-scratch retraining reference.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: When Does Continual Pre-Training Help? A Controlled Study of Dialectal Adaptation for Québec French</h3>
+<ul>
+<li><strong>Authors: </strong>Eeham Khan, Richard Khoury, Leila Kosseim</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.LG</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24699">https://arxiv.org/abs/2611.24699</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24699">https://arxiv.org/pdf/2611.24699</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24699]] When Does Continual Pre-Training Help? A Controlled Study of Dialectal Adaptation for Québec French(https://arxiv.org/abs/2611.24699)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm</a></li>
+<li><strong>Abstract: </strong>Continual pre-training (CPT) is widely used to adapt pretrained language models to dialectal and non-standard language varieties, yet it remains unclear when this additional training is necessary, what drives its benefits, and whether aggregate evaluation scores adequately capture its effects. In this paper, we present a controlled study of CPT for Québec French language understanding across nine LLMs spanning different families and scales. Using a budget-matched protocol of 30M tokens per experiment, our results show that the benefit of CPT depends strongly on the starting model's existing competence in the target variety. When CPT is beneficial, the improvements are driven more by corpus composition than by data volume, with literary text accounting for most of the gain. Paired Québec and standard French evaluations further show that CPT primarily improves expression comprehension rather than grammatical competence, and that corpus register determines which regional expressions are acquired. These gains also involve capability-specific trade-offs, including declines in reading comprehension that aggregate scores can conceal. Overall, these findings show that CPT for dialectal adaptation should not be treated as a uniformly beneficial default. Instead, adaptation strategies should begin with a careful assessment of the base model's existing competence, accompanied by source-level data analysis and task-level evaluation.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Induction Head Origins of SLAM-ASR Speech Recognition Models</h3>
+<ul>
+<li><strong>Authors: </strong>Artem Fedorchenko, Tanel Alumäe</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24721">https://arxiv.org/abs/2611.24721</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24721">https://arxiv.org/pdf/2611.24721</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24721]] Induction Head Origins of SLAM-ASR Speech Recognition Models(https://arxiv.org/abs/2611.24721)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model</a></li>
+<li><strong>Abstract: </strong>What makes a small trained map from encoder states to the embedding space of a frozen language model sufficient for competitive speech recognition? The premise of the SLAM-ASR architecture is that a frozen language model possesses linguistic knowledge rich enough to perform the recognition task. This assumption, while reasonable, provides little insight into the mechanisms underlying these models. We therefore seek the concrete internal structures on which they rely. This work shows that SLAM-ASR models rely on induction heads of the frozen language model: the same heads that copy repeated token sequences in text are also important for mapping speech embeddings to transcript tokens. Moreover, we find pairs of heads that behave as a constrained form of differential attention, cancelling attention noise and sharpening attention onto the previously generated word. Finally, we show how induction heads could be used to improve transcription quality under noisy audio.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: A Foundation Model to Measure and Predict Human Behaviour</h3>
+<ul>
+<li><strong>Authors: </strong>Haoran Ye, Tianrui Huo, Hangzhen Li, Xin Zhang, Guojie Song</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI, cs.HC</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24830">https://arxiv.org/abs/2611.24830</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24830">https://arxiv.org/pdf/2611.24830</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24830]] A Foundation Model to Measure and Predict Human Behaviour(https://arxiv.org/abs/2611.24830)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, llm</a></li>
+<li><strong>Abstract: </strong>Large language models (LLMs) are increasingly used to infer psychological attributes, predict individual behaviour, and simulate human populations. However, despite generating plausible responses, they often misrepresent individuals and distort population statistics. Here we introduce Chiron, a foundation model to measure and predict human behaviour. We jointly fine-tune an LLM to represent psychological constructs, predict individual behaviour, and align population response distributions with human statistics. The training and evaluation data span 36 behavioural domains and 78 social science experiments, comprising 288,307 person records, 1,411,750 atomic behavioural decisions, and 99,953 psychometric assessments over 109 psychological constructs. In our evaluations, Chiron's psychological measurements agree more closely with human self-reports and exhibit fewer biases that undermine psychometric validity. It predicts individual behaviour more accurately than frontier LLMs (up to 28.4% relative improvement). In simulations of social science experiments, it more accurately captures the direction and magnitude of human experimental effects (82.2--94.3% lower effect-size estimation error). Together, these results establish Chiron as a unified computational instrument for measuring and predicting human behaviour.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: General progress substitutes for specific training data in language models</h3>
+<ul>
+<li><strong>Authors: </strong>Mark Marosi, Peter Antal</a></li>
+<li><strong>Subjects: </strong>cs.CL, cs.AI</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24844">https://arxiv.org/abs/2611.24844</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24844">https://arxiv.org/pdf/2611.24844</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24844]] General progress substitutes for specific training data in language models(https://arxiv.org/abs/2611.24844)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model</a></li>
+<li><strong>Abstract: </strong>Language models acquire their capabilities from training data, and developers withhold data during training to keep models from learning capabilities that could be misused. How long this delays a capability, and how much data is needed to acquire it later, is unknown. Here we show that the general progress a model makes on the rest of its training data substitutes for the data that was withheld. We withheld the training signal for individual skills in models of chess, Othello, molecular strings, bracket languages and web text. The delay of a withheld skill in larger models was predicted from smaller ones. A chess model never explicitly trained to respond to check ranked the legal responses almost as well as a model that was. When models were then trained on the withheld data, they acquired the skill with a small fraction of the data needed from initialization, and this fraction decreased as the models progressed. A control rule of equal difficulty was learned much more slowly. A programming language withheld from the training text of a 7-billion-parameter model was regained in the same way. Data filtering therefore delays a capability, and the data required to regain it decreases as models improve.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Ground, Iterate, Trace: Decomposing AI Research Ideation</h3>
+<ul>
+<li><strong>Authors: </strong>Samson Yu, Qiran Zou, Jing Yu Lim, Rushi Shah, Anirudh Goyal, Dianbo Liu</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24887">https://arxiv.org/abs/2611.24887</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24887">https://arxiv.org/pdf/2611.24887</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24887]] Ground, Iterate, Trace: Decomposing AI Research Ideation(https://arxiv.org/abs/2611.24887)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, prompt, agent</a></li>
+<li><strong>Abstract: </strong>Large language models have been widely used to generate plausible research ideas, yet it remains unclear what makes automated ideation effective and how generated novel proposals arise from prior scientific work. We introduce the Creative AI Researcher (CAR), an agentic framework combining literature grounding, iterative development and explicit conceptual operators. CAR constructs a semantic knowledge graph from retrieved literature and equips an ideation agent with graph-retrieval tools and four operators: bisociation, analogy, exploration and elaboration. Each operator call is checked against structural acceptance conditions and recorded, producing a trace of intermediate transformations and declared literature sources. We evaluate CAR with two language-model backbones across 40 LiveIdeaBench research topics and two execution benchmarks. CAR achieves significantly higher methodological novelty (MN) than single-shot prompting and The AI Scientist. Its methodological novelty does not differ significantly from the Research Ideation Agent, while its feasibility scores are higher on both backbones. With a shared experiment executor, CAR achieves the highest pairwise win rate among the evaluated AI methods on FML-bench-Lite and BioXArena. In a ten-condition ablation study, MN point estimates favor CAR over one-step proposal on both backbones, but no MN contrast survives correction for multiple comparisons. The results do not establish a consistent quality benefit from explicit operators beyond free-form iteration. CAR makes the sequence of operations and declared literature sources inspectable, separating judged idea quality from procedural traceability.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<h3>Title: Jailbreak Detection on Large Language Models via Contrastive Prototype Structures</h3>
+<ul>
+<li><strong>Authors: </strong>Yan Qiu, Yuanyuan Li</a></li>
+<li><strong>Subjects: </strong>cs.CL</a></li>
+<li><strong>Abstract URL: </strong><a href="https://arxiv.org/abs/2611.24936">https://arxiv.org/abs/2611.24936</a></li>
+<li><strong>Pdf URL: </strong><a href="https://arxiv.org/pdf/2611.24936">https://arxiv.org/pdf/2611.24936</a></li>
+<li><strong>Copy Paste: </strong><code><input type="checkbox">[[2611.24936]] Jailbreak Detection on Large Language Models via Contrastive Prototype Structures(https://arxiv.org/abs/2611.24936)</code><input type="text"></li>
+<li><strong>Keywords: </strong>language model, prompt</a></li>
+<li><strong>Abstract: </strong>Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier. We propose Jailbreak Detection with Prototype Inference (JDPI), which uses binary safety labels to construct harmful and benign prototypes and makes predictions from relative prototype distances. JDPI uses only binary safety labels for encoder adaptation, prototype construction, and validation. In our setup, it uses fewer labeled examples than the classifier baseline (Method A) by avoiding the separate split used to train the downstream classifier. Across four benchmarks covering different input formats, contrastive fine-tuning improves JDPI's detection accuracy by 9.1-18.0 percentage points. Using the same encoder, JDPI achieves slightly higher ROC-AUC on one benchmark and stays within 0.017 of the baseline across all four. With dataset-specific adaptation, JDPI exceeds the released Llama Guard 3-8B baseline by 0.173-0.310 in ROC-AUC across the four benchmarks. In multi-turn replay on TomGibbs, JDPI uses accumulated user history as the conversation unfolds, achieving higher conversation-level accuracy than when it uses the current turn alone. Across 12 directed transfers, JDPI outperforms the classifier by an average of 1.59 percentage points in accuracy, demonstrating stronger cross-dataset robustness.</li>
+<li><strong>摘要：</strong></li>
+</ul>
+
+<button id="copy">Copy All</button>
+</article>
+<script src="../../javascript/clipboard.min.js"></script>
+<script src="../../javascript/clipboard.js"></script>
